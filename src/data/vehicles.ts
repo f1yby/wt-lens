@@ -1,6 +1,4 @@
 import type { Vehicle, VehicleDetail, DistributionData } from '../types';
-import statsData from '../../data/processed/stats.json';
-import datamineData from '../../data/processed/datamine.json';
 
 // Raw data types from JSON
 interface StatSharkEntry {
@@ -50,18 +48,38 @@ interface DatamineEntry {
   source: string;
 }
 
-// Type assertions for imported JSON
-const typedStatsData = statsData as StatSharkEntry[];
-const typedDatamineData = datamineData as DatamineEntry[];
+// Cache for loaded data
+let statsData: StatSharkEntry[] | null = null;
+let datamineData: DatamineEntry[] | null = null;
+let mergedVehicles: Vehicle[] | null = null;
+
+/**
+ * Load stats data from JSON
+ */
+async function loadStatsData(): Promise<StatSharkEntry[]> {
+  if (statsData) return statsData;
+  const response = await fetch('/wt-lens/data/stats.json');
+  statsData = await response.json();
+  return statsData!;
+}
+
+/**
+ * Load datamine data from JSON
+ */
+async function loadDatamineData(): Promise<DatamineEntry[]> {
+  if (datamineData) return datamineData;
+  const response = await fetch('/wt-lens/data/datamine.json');
+  datamineData = await response.json();
+  return datamineData!;
+}
 
 /**
  * Build StatShark stats map, only use historical mode (历史模式)
- * 不显示街机/全真数据，保持数据一致性
  */
-function buildStatsMap(): Map<string, StatSharkEntry> {
+function buildStatsMap(stats: StatSharkEntry[]): Map<string, StatSharkEntry> {
   const statsMap = new Map<string, StatSharkEntry>();
 
-  for (const entry of typedStatsData) {
+  for (const entry of stats) {
     // 只使用历史模式数据 (StatShark uses 'historical' not 'realistic')
     if (entry.mode === 'historical') {
       statsMap.set(entry.id, entry);
@@ -74,10 +92,10 @@ function buildStatsMap(): Map<string, StatSharkEntry> {
 /**
  * Build Datamine performance map
  */
-function buildDatamineMap(): Map<string, DatamineEntry> {
+function buildDatamineMap(datamine: DatamineEntry[]): Map<string, DatamineEntry> {
   const datamineMap = new Map<string, DatamineEntry>();
   
-  for (const entry of typedDatamineData) {
+  for (const entry of datamine) {
     datamineMap.set(entry.id, entry);
   }
   
@@ -87,9 +105,9 @@ function buildDatamineMap(): Map<string, DatamineEntry> {
 /**
  * Merge StatShark and Datamine data by vehicle ID
  */
-function mergeVehicleData(): Vehicle[] {
-  const statsMap = buildStatsMap();
-  const datamineMap = buildDatamineMap();
+function mergeVehicleData(stats: StatSharkEntry[], datamine: DatamineEntry[]): Vehicle[] {
+  const statsMap = buildStatsMap(stats);
+  const datamineMap = buildDatamineMap(datamine);
   
   // Get all unique vehicle IDs
   const allIds = new Set([...statsMap.keys(), ...datamineMap.keys()]);
@@ -97,50 +115,50 @@ function mergeVehicleData(): Vehicle[] {
   const vehicles: Vehicle[] = [];
   
   for (const id of allIds) {
-    const stats = statsMap.get(id);
-    const datamine = datamineMap.get(id);
+    const statsEntry = statsMap.get(id);
+    const datamineEntry = datamineMap.get(id);
     
     // Skip if no datamine data (we need performance data)
-    if (!datamine) continue;
+    if (!datamineEntry) continue;
     
     const vehicle: Vehicle = {
       id,
-      name: datamine.name,
-      localizedName: datamine.localizedName,
-      nation: datamine.nation as any,
-      rank: stats?.rank ?? datamine.rank ?? 1,
-      battleRating: stats?.br ?? datamine.battle_rating ?? 1.0,
-      vehicleType: datamine.vehicle_type as any,
-      economicType: (datamine.economic_type as any) ?? 'regular',
+      name: datamineEntry.name,
+      localizedName: datamineEntry.localizedName,
+      nation: datamineEntry.nation as any,
+      rank: statsEntry?.rank ?? datamineEntry.rank ?? 1,
+      battleRating: statsEntry?.br ?? datamineEntry.battle_rating ?? 1.0,
+      vehicleType: datamineEntry.vehicle_type as any,
+      economicType: (datamineEntry.economic_type as any) ?? 'regular',
       performance: {
-        horsepower: datamine.performance.horsepower ?? 0,
-        weight: datamine.performance.weight ?? 0,
-        powerToWeight: datamine.performance.power_to_weight ?? 0,
-        maxReverseSpeed: datamine.performance.max_reverse_speed ?? 0,
-        reloadTime: datamine.performance.reload_time ?? 0,
-        penetration: datamine.performance.penetration ?? 0,
-        maxSpeed: datamine.performance.max_speed ?? 0,
-        crewCount: datamine.performance.crew_count ?? 0,
-        elevationSpeed: datamine.performance.elevation_speed ?? 0,
-        traverseSpeed: datamine.performance.traverse_speed ?? 0,
-        hasStabilizer: datamine.performance.has_stabilizer ?? false,
-        stabilizerType: (datamine.performance.stabilizer_type as 'none' | 'horizontal' | 'vertical' | 'both') ?? 'none',
-        elevationRange: (datamine.performance.elevation_range as [number, number]) ?? [0, 0],
-        traverseRange: (datamine.performance.traverse_range as [number, number]) ?? [0, 0],
-        gunnerThermalResolution: (datamine.performance.gunner_thermal_resolution as [number, number]) ?? [0, 0],
-        commanderThermalResolution: (datamine.performance.commander_thermal_resolution as [number, number]) ?? [0, 0],
+        horsepower: datamineEntry.performance.horsepower ?? 0,
+        weight: datamineEntry.performance.weight ?? 0,
+        powerToWeight: datamineEntry.performance.power_to_weight ?? 0,
+        maxReverseSpeed: datamineEntry.performance.max_reverse_speed ?? 0,
+        reloadTime: datamineEntry.performance.reload_time ?? 0,
+        penetration: datamineEntry.performance.penetration ?? 0,
+        maxSpeed: datamineEntry.performance.max_speed ?? 0,
+        crewCount: datamineEntry.performance.crew_count ?? 0,
+        elevationSpeed: datamineEntry.performance.elevation_speed ?? 0,
+        traverseSpeed: datamineEntry.performance.traverse_speed ?? 0,
+        hasStabilizer: datamineEntry.performance.has_stabilizer ?? false,
+        stabilizerType: (datamineEntry.performance.stabilizer_type as 'none' | 'horizontal' | 'vertical' | 'both') ?? 'none',
+        elevationRange: (datamineEntry.performance.elevation_range as [number, number]) ?? [0, 0],
+        traverseRange: (datamineEntry.performance.traverse_range as [number, number]) ?? [0, 0],
+        gunnerThermalResolution: (datamineEntry.performance.gunner_thermal_resolution as [number, number]) ?? [0, 0],
+        commanderThermalResolution: (datamineEntry.performance.commander_thermal_resolution as [number, number]) ?? [0, 0],
         // Calculated metrics
-        gunnerThermalDiagonal: datamine.performance.gunner_thermal_diagonal ?? 0,
-        commanderThermalDiagonal: datamine.performance.commander_thermal_diagonal ?? 0,
-        stabilizerValue: datamine.performance.stabilizer_value ?? 0,
-        elevationRangeValue: datamine.performance.elevation_range_value ?? 0,
+        gunnerThermalDiagonal: datamineEntry.performance.gunner_thermal_diagonal ?? 0,
+        commanderThermalDiagonal: datamineEntry.performance.commander_thermal_diagonal ?? 0,
+        stabilizerValue: datamineEntry.performance.stabilizer_value ?? 0,
+        elevationRangeValue: datamineEntry.performance.elevation_range_value ?? 0,
       },
-      stats: stats ? {
-        battles: stats.battles,
-        winRate: stats.win_rate,
-        avgKills: stats.avg_kills_per_battle,
+      stats: statsEntry ? {
+        battles: statsEntry.battles,
+        winRate: statsEntry.win_rate,
+        avgKills: statsEntry.avg_kills_per_battle,
       } : undefined,
-      imageUrl: datamine.imageUrl,
+      imageUrl: datamineEntry.imageUrl,
     };
     
     vehicles.push(vehicle);
@@ -149,32 +167,88 @@ function mergeVehicleData(): Vehicle[] {
   return vehicles;
 }
 
-// Export merged vehicle data
-export const allVehicles: Vehicle[] = mergeVehicleData();
+/**
+ * Load all vehicles data (async)
+ */
+export async function loadVehicles(): Promise<Vehicle[]> {
+  if (mergedVehicles) return mergedVehicles;
+  
+  const [stats, datamine] = await Promise.all([
+    loadStatsData(),
+    loadDatamineData(),
+  ]);
+  
+  mergedVehicles = mergeVehicleData(stats, datamine);
+  return mergedVehicles;
+}
+
+/**
+ * Get all vehicles (sync version - returns empty array if not loaded)
+ * @deprecated Use loadVehicles() instead
+ */
+export const allVehicles: Vehicle[] = [];
 
 // Sample subset for development/demo
-export const sampleVehicles: Vehicle[] = allVehicles.slice(0, 8);
+export const sampleVehicles: Vehicle[] = [];
 
-// Helper functions
-export function getVehicleById(id: string): Vehicle | undefined {
-  return allVehicles.find(v => v.id === id);
+// Helper functions (async versions)
+export async function getVehicleById(id: string): Promise<Vehicle | undefined> {
+  const vehicles = await loadVehicles();
+  return vehicles.find(v => v.id === id);
 }
 
-export function getVehiclesByNation(nation: string): Vehicle[] {
-  return allVehicles.filter(v => v.nation === nation);
+export async function getVehiclesByNation(nation: string): Promise<Vehicle[]> {
+  const vehicles = await loadVehicles();
+  return vehicles.filter(v => v.nation === nation);
 }
 
-export function getVehiclesByType(type: string): Vehicle[] {
-  return allVehicles.filter(v => v.vehicleType === type);
+export async function getVehiclesByType(type: string): Promise<Vehicle[]> {
+  const vehicles = await loadVehicles();
+  return vehicles.filter(v => v.vehicleType === type);
 }
 
-export function getVehiclesByBattleRating(min: number, max: number): Vehicle[] {
-  return allVehicles.filter(v => v.battleRating >= min && v.battleRating <= max);
+export async function getVehiclesByBattleRating(min: number, max: number): Promise<Vehicle[]> {
+  const vehicles = await loadVehicles();
+  return vehicles.filter(v => v.battleRating >= min && v.battleRating <= max);
 }
 
 export const sampleVehicleDetail: VehicleDetail = {
-  ...sampleVehicles[0],
+  id: 'ussr_t_34_1942',
+  name: 'ussr_t_34_1942',
+  localizedName: 'T-34 (1942)',
+  nation: 'ussr',
+  rank: 3,
+  battleRating: 4.0,
+  vehicleType: 'medium_tank',
   economicType: 'regular',
+  performance: {
+    horsepower: 500,
+    weight: 30.5,
+    powerToWeight: 16.4,
+    maxReverseSpeed: 7,
+    reloadTime: 6.5,
+    penetration: 135,
+    maxSpeed: 55,
+    crewCount: 4,
+    elevationSpeed: 10,
+    traverseSpeed: 14,
+    hasStabilizer: false,
+    stabilizerType: 'none',
+    elevationRange: [-5, 30],
+    traverseRange: [-180, 180],
+    gunnerThermalResolution: [0, 0],
+    commanderThermalResolution: [0, 0],
+    gunnerThermalDiagonal: 0,
+    commanderThermalDiagonal: 0,
+    stabilizerValue: 0,
+    elevationRangeValue: 35,
+  },
+  stats: {
+    battles: 125000,
+    winRate: 52.3,
+    avgKills: 1.2,
+  },
+  imageUrl: 'https://encyclopedia.warthunder.com/images/ussr_t_34_1942.png',
   commonOpponents: [
     { vehicleId: 'germany_panzer_iv_h', encounterRate: 35, battles: 43750 },
     { vehicleId: 'usa_m4a3e8_sherman', encounterRate: 28, battles: 35000 },

@@ -1,4 +1,5 @@
 import { useParams, useNavigate } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 import {
   Container,
   Typography,
@@ -8,12 +9,13 @@ import {
   Chip,
   Button,
   LinearProgress,
+  CircularProgress,
 } from '@mui/material';
 import { ArrowBack, Speed, AccessTime, ExpandLess, SyncAlt, GpsFixed, Visibility, FastForward, FastRewind, RotateRight, SvgIconComponent } from '@mui/icons-material';
 import Navbar from '../components/Navbar';
 import DistributionChart from '../components/DistributionChart';
 import StabilizerScatterChart from '../components/StabilizerScatterChart';
-import { allVehicles, sampleVehicleDetail, sampleDistributions } from '../data/vehicles';
+import { loadVehicles, sampleVehicleDetail, sampleDistributions } from '../data/vehicles';
 import { NATIONS, VEHICLE_TYPE_LABELS, ECONOMIC_TYPE_GRADIENTS, Nation } from '../types';
 import type { Vehicle, MetricType } from '../types';
 
@@ -49,7 +51,7 @@ function getMetricValue(vehicle: Vehicle, metric: MetricType): number {
 }
 
 /** Generates scatter data for vehicle comparison charts */
-function generateVehicleComparisonData(vehicleId: string, metric: MetricType) {
+function generateVehicleComparisonData(vehicleId: string, metric: MetricType, allVehicles: Vehicle[]) {
   const vehicle = allVehicles.find(v => v.id === vehicleId);
   if (!vehicle) return null;
 
@@ -185,13 +187,33 @@ function RangeStatCard({ icon: Icon, range, speed, label }: RangeStatCardProps) 
 export default function VehicleDetailPage() {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
-  
-  const vehicle = allVehicles.find(v => v.id === id);
+  const [vehicles, setVehicles] = useState<Vehicle[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    loadVehicles().then(data => {
+      setVehicles(data);
+      setLoading(false);
+    });
+  }, []);
+
+  const vehicle = vehicles.find(v => v.id === id);
   const nation = vehicle ? NATIONS.find(n => n.id === vehicle.nation) : null;
+
+  if (loading) {
+    return (
+      <Box sx={{ minHeight: '100vh', backgroundColor: '#f5f5f5' }}>
+        <Navbar />
+        <Container maxWidth="xl" sx={{ pt: 12, display: 'flex', justifyContent: 'center' }}>
+          <CircularProgress />
+        </Container>
+      </Box>
+    );
+  }
 
   if (!vehicle) {
     return (
-      <Box sx={{ minHeight: '100vh', backgroundColor: '#0a0a0a' }}>
+      <Box sx={{ minHeight: '100vh', backgroundColor: '#f5f5f5' }}>
         <Navbar />
         <Container maxWidth="xl" sx={{ pt: 12, textAlign: 'center' }}>
           <Typography variant="h5" sx={{ color: '#171717' }}>
@@ -200,7 +222,7 @@ export default function VehicleDetailPage() {
           <Button
             variant="outlined"
             onClick={() => navigate('/')}
-            sx={{ mt: 2, color: '#4ade80', borderColor: '#4ade80' }}
+            sx={{ mt: 2, color: '#16a34a', borderColor: '#16a34a' }}
           >
             返回首页
           </Button>
@@ -210,21 +232,21 @@ export default function VehicleDetailPage() {
   }
 
   const comparisons = {
-    powerToWeight: generateVehicleComparisonData(vehicle.id, 'powerToWeight'),
-    maxSpeed: generateVehicleComparisonData(vehicle.id, 'maxSpeed'),
-    maxReverseSpeed: generateVehicleComparisonData(vehicle.id, 'maxReverseSpeed'),
-    reloadTime: generateVehicleComparisonData(vehicle.id, 'reloadTime'),
-    penetration: generateVehicleComparisonData(vehicle.id, 'penetration'),
-    traverseSpeed: generateVehicleComparisonData(vehicle.id, 'traverseSpeed'),
-    elevationSpeed: generateVehicleComparisonData(vehicle.id, 'elevationSpeed'),
-    elevationMin: generateVehicleComparisonData(vehicle.id, 'elevationMin'),
-    gunnerThermal: generateVehicleComparisonData(vehicle.id, 'gunnerThermal'),
-    commanderThermal: generateVehicleComparisonData(vehicle.id, 'commanderThermal'),
+    powerToWeight: generateVehicleComparisonData(vehicle.id, 'powerToWeight', vehicles),
+    maxSpeed: generateVehicleComparisonData(vehicle.id, 'maxSpeed', vehicles),
+    maxReverseSpeed: generateVehicleComparisonData(vehicle.id, 'maxReverseSpeed', vehicles),
+    reloadTime: generateVehicleComparisonData(vehicle.id, 'reloadTime', vehicles),
+    penetration: generateVehicleComparisonData(vehicle.id, 'penetration', vehicles),
+    traverseSpeed: generateVehicleComparisonData(vehicle.id, 'traverseSpeed', vehicles),
+    elevationSpeed: generateVehicleComparisonData(vehicle.id, 'elevationSpeed', vehicles),
+    elevationMin: generateVehicleComparisonData(vehicle.id, 'elevationMin', vehicles),
+    gunnerThermal: generateVehicleComparisonData(vehicle.id, 'gunnerThermal', vehicles),
+    commanderThermal: generateVehicleComparisonData(vehicle.id, 'commanderThermal', vehicles),
   };
 
   // Get vehicles in same BR range for stabilizer comparison
   const targetBR = vehicle.battleRating;
-  const stabilizerComparisonVehicles = allVehicles.filter(v => 
+  const stabilizerComparisonVehicles = vehicles.filter(v =>
     v.battleRating >= targetBR - 1.0 && v.battleRating <= targetBR + 1.0
   );
 

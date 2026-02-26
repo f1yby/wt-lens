@@ -1,25 +1,34 @@
-import { useState, useMemo } from 'react';
-import { Container, Typography, Box } from '@mui/material';
+import { useState, useMemo, useEffect } from 'react';
+import { Container, Typography, Box, CircularProgress } from '@mui/material';
 import Navbar from '../components/Navbar';
 import VehicleFilter from '../components/VehicleFilter';
 import VehicleTechTree from '../components/VehicleTechTree';
-import { allVehicles } from '../data/vehicles';
-import type { Nation, VehicleType } from '../types';
+import { loadVehicles } from '../data/vehicles';
+import type { Nation, VehicleType, Vehicle } from '../types';
 import { NATIONS } from '../types';
 
 export default function HomePage() {
+  const [vehicles, setVehicles] = useState<Vehicle[]>([]);
+  const [loading, setLoading] = useState(true);
   const [selectedNations, setSelectedNations] = useState<Nation[]>(NATIONS.map(n => n.id));
   const [brRange, setBrRange] = useState<[number, number]>([1.0, 12.7]);
   const [selectedType, setSelectedType] = useState<VehicleType | 'all'>('all');
 
+  useEffect(() => {
+    loadVehicles().then(data => {
+      setVehicles(data);
+      setLoading(false);
+    });
+  }, []);
+
   const filteredVehicles = useMemo(() => {
-    return allVehicles.filter(vehicle => {
+    return vehicles.filter(vehicle => {
       const nationMatch = selectedNations.includes(vehicle.nation);
       const brMatch = vehicle.battleRating >= brRange[0] && vehicle.battleRating <= brRange[1];
       const typeMatch = selectedType === 'all' || vehicle.vehicleType === selectedType;
       return nationMatch && brMatch && typeMatch;
     });
-  }, [selectedNations, brRange, selectedType]);
+  }, [vehicles, selectedNations, brRange, selectedType]);
 
   return (
     <Box sx={{ minHeight: '100vh', backgroundColor: '#f5f5f5' }}>
@@ -85,12 +94,18 @@ export default function HomePage() {
         {/* Results Count */}
         <Box sx={{ mb: 2, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <Typography variant="body2" sx={{ color: '#737373' }}>
-            显示 {filteredVehicles.length} 个载具
+            {loading ? '加载中...' : `显示 ${filteredVehicles.length} 个载具`}
           </Typography>
         </Box>
 
         {/* Tech Tree Grid */}
-        <VehicleTechTree vehicles={filteredVehicles} />
+        {loading ? (
+          <Box sx={{ display: 'flex', justifyContent: 'center', py: 8 }}>
+            <CircularProgress />
+          </Box>
+        ) : (
+          <VehicleTechTree vehicles={filteredVehicles} />
+        )}
       </Container>
 
       {/* Footer */}

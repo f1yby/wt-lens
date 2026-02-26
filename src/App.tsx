@@ -1,9 +1,22 @@
+import { Suspense, lazy } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import HomePage from './pages/HomePage';
-import VehicleDetailPage from './pages/VehicleDetailPage';
+import { Box, CircularProgress } from '@mui/material';
+
+// 懒加载页面组件
+const HomePage = lazy(() => import('./pages/HomePage'));
+const VehicleDetailPage = lazy(() => import('./pages/VehicleDetailPage'));
+
+// 加载状态组件
+function PageLoader() {
+  return (
+    <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+      <CircularProgress />
+    </Box>
+  );
+}
 
 const darkTheme = createTheme({
   palette: {
@@ -77,10 +90,12 @@ function App() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <BrowserRouter basename="/wt-lens">
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/vehicle/:id" element={<VehicleDetailPage />} />
-        </Routes>
+        <Suspense fallback={<PageLoader />}>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/vehicle/:id" element={<VehicleDetailPage />} />
+          </Routes>
+        </Suspense>
       </BrowserRouter>
     </ThemeProvider>
   );
