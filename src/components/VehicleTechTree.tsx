@@ -3,6 +3,12 @@ import { useNavigate } from 'react-router-dom';
 import type { Vehicle } from '../types';
 import { NATIONS, VEHICLE_TYPE_LABELS, BATTLE_RATINGS } from '../types';
 
+// Get base URL from Vite env for subpath deployment
+const BASE_URL = import.meta.env.BASE_URL || '/';
+
+// Nation flag image mapping
+const getFlagImagePath = (nation: string): string => `${BASE_URL}images/flags/unit_tooltip/country_${nation}.png`;
+
 interface VehicleTechTreeProps {
   vehicles: Vehicle[];
 }
@@ -99,6 +105,25 @@ export default function VehicleTechTree({ vehicles }: VehicleTechTreeProps) {
                       },
                     }}
                   >
+                    {/* 国旗背景 */}
+                    <Box
+                      component="img"
+                      src={getFlagImagePath(vehicle.nation)}
+                      alt=""
+                      sx={{
+                        position: 'absolute',
+                        top: '-20%',
+                        left: '-20%',
+                        width: '140%',
+                        height: '140%',
+                        objectFit: 'cover',
+                        opacity: 0.15,
+                        maskImage: 'linear-gradient(135deg, rgba(0,0,0,0.6) 0%, transparent 70%)',
+                        WebkitMaskImage: 'linear-gradient(135deg, rgba(0,0,0,0.6) 0%, transparent 70%)',
+                        zIndex: 0,
+                      }}
+                    />
+
                     {/* 载具图片 */}
                     <Box
                       component="img"
@@ -108,6 +133,8 @@ export default function VehicleTechTree({ vehicles }: VehicleTechTreeProps) {
                         width: '100%',
                         height: '70%',
                         objectFit: 'cover',
+                        position: 'relative',
+                        zIndex: 1,
                       }}
                       onError={(e) => {
                         (e.target as HTMLImageElement).src = `https://placehold.co/120x90/e5e5e5/666?text=${vehicle.localizedName.slice(0, 10)}`;
@@ -127,6 +154,7 @@ export default function VehicleTechTree({ vehicles }: VehicleTechTreeProps) {
                         flexDirection: 'column',
                         justifyContent: 'flex-end',
                         p: 0.5,
+                        zIndex: 2,
                       }}
                     >
                       <Typography
@@ -140,7 +168,7 @@ export default function VehicleTechTree({ vehicles }: VehicleTechTreeProps) {
                           textOverflow: 'ellipsis',
                         }}
                       >
-                        {nation?.flagIcon} {vehicle.localizedName}
+                        {vehicle.localizedName}
                       </Typography>
 
                       {/* 胜率指示 */}
@@ -156,24 +184,6 @@ export default function VehicleTechTree({ vehicles }: VehicleTechTreeProps) {
                         </Typography>
                       )}
                     </Box>
-
-                    {/* 载具类型标记 */}
-                    <Box
-                      sx={{
-                        position: 'absolute',
-                        top: 2,
-                        right: 2,
-                        width: 6,
-                        height: 6,
-                        borderRadius: '50%',
-                        backgroundColor:
-                          vehicle.vehicleType === 'light_tank' ? '#3b82f6' :
-                          vehicle.vehicleType === 'medium_tank' ? '#22c55e' :
-                          vehicle.vehicleType === 'heavy_tank' ? '#ef4444' :
-                          vehicle.vehicleType === 'tank_destroyer' ? '#f97316' :
-                          '#a855f7',
-                      }}
-                    />
                   </Box>
                 );
               })}
