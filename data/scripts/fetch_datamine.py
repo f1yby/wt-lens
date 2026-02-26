@@ -529,9 +529,9 @@ def fetch_vehicle_performance(vehicle_id: str, copy_images: bool = True) -> Vehi
     if copy_images:
         image_url = copy_vehicle_image(vehicle_id)
     
-    # Fallback image URL if copy failed
+    # Fallback image URL if copy failed (use relative path for base URL compatibility)
     if not image_url:
-        image_url = f"/vehicles/{vehicle_id}.png"
+        image_url = f"vehicles/{vehicle_id}.png"
 
     return VehicleData(
         id=vehicle_id,
