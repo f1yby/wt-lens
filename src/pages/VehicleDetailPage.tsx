@@ -9,26 +9,47 @@ import {
   Button,
   LinearProgress,
 } from '@mui/material';
-import { ArrowBack, Speed, AccessTime, ExpandLess, SyncAlt, GpsFixed, Visibility } from '@mui/icons-material';
+import { ArrowBack, Speed, AccessTime, ExpandLess, SyncAlt, GpsFixed, Visibility, FastForward, FastRewind, RotateRight, SvgIconComponent } from '@mui/icons-material';
 import Navbar from '../components/Navbar';
 import DistributionChart from '../components/DistributionChart';
+import StabilizerScatterChart from '../components/StabilizerScatterChart';
 import { allVehicles, sampleVehicleDetail, sampleDistributions } from '../data/vehicles';
-import { NATIONS, VEHICLE_TYPE_LABELS, Nation } from '../types';
+import { NATIONS, VEHICLE_TYPE_LABELS, ECONOMIC_TYPE_GRADIENTS, Nation } from '../types';
+import type { Vehicle, MetricType } from '../types';
 
 // Get base URL from Vite env
 const BASE_URL = import.meta.env.BASE_URL || '/';
 
-// Nation flag image mapping
-const getFlagImagePath = (nation: Nation): string => `${BASE_URL}images/flags/unit_tooltip/country_${nation}.png`;
+/** Gets the flag image path for a nation */
+const getFlagImagePath = (nation: Nation): string => 
+  `${BASE_URL}images/flags/unit_tooltip/country_${nation}.png`;
 
-// Vehicle image path helper
-const getVehicleImagePath = (vehicleId: string): string => `${BASE_URL}vehicles/${vehicleId}.png`;
+/** Gets the vehicle image path */
+const getVehicleImagePath = (vehicleId: string): string => 
+  `${BASE_URL}vehicles/${vehicleId}.png`;
 
-// Generate scatter data: x=metric value, y=battles, color based on BR distance
-function generateVehicleComparisonData(
-  vehicleId: string,
-  metric: 'powerToWeight' | 'maxReverseSpeed' | 'reloadTime' | 'penetration'
-) {
+/** Gets the numeric value for a given metric from vehicle performance data */
+function getMetricValue(vehicle: Vehicle, metric: MetricType): number {
+  const { performance } = vehicle;
+  
+  switch (metric) {
+    case 'powerToWeight': return performance.powerToWeight;
+    case 'maxReverseSpeed': return performance.maxReverseSpeed;
+    case 'reloadTime': return performance.reloadTime;
+    case 'penetration': return performance.penetration;
+    case 'maxSpeed': return performance.maxSpeed;
+    case 'traverseSpeed': return performance.traverseSpeed;
+    case 'elevationSpeed': return performance.elevationSpeed;
+    case 'elevationMin': return performance.elevationRange[0] ?? 0;
+    case 'gunnerThermal': return performance.gunnerThermalDiagonal ?? 0;
+    case 'commanderThermal': return performance.commanderThermalDiagonal ?? 0;
+    case 'stabilizer': return performance.stabilizerValue ?? 0;
+    default: return 0;
+  }
+}
+
+/** Generates scatter data for vehicle comparison charts */
+function generateVehicleComparisonData(vehicleId: string, metric: MetricType) {
   const vehicle = allVehicles.find(v => v.id === vehicleId);
   if (!vehicle) return null;
 
@@ -36,74 +57,129 @@ function generateVehicleComparisonData(
   const brMin = targetBR - 1.0;
   const brMax = targetBR + 1.0;
 
-  let value: number;
-
-  switch (metric) {
-    case 'powerToWeight':
-      value = vehicle.performance.powerToWeight;
-      break;
-    case 'maxReverseSpeed':
-      value = vehicle.performance.maxReverseSpeed;
-      break;
-    case 'reloadTime':
-      value = vehicle.performance.reloadTime;
-      break;
-    case 'penetration':
-      value = vehicle.performance.penetration;
-      break;
-  }
+  const value = getMetricValue(vehicle, metric);
 
   // Filter vehicles within BR ±1.0 range with valid metric
   const filteredVehicles = allVehicles.filter(v => {
-    const metricValue = v.performance[metric];
-    return (
-      v.battleRating >= brMin &&
-      v.battleRating <= brMax &&
-      metricValue &&
-      metricValue > 0
-    );
+    const metricValue = getMetricValue(v, metric);
+    return v.battleRating >= brMin && v.battleRating <= brMax && metricValue > 0;
   });
 
   if (filteredVehicles.length === 0) return null;
 
-  // Create data points for scatter chart with continuous BR gradient color
-  // Gradient: BR-1.0 (blue, 240°) -> BR 0 (green, 120°) -> BR+1.0 (red, 0°)
+  // Calculate BR gradient color: BR-1.0 (blue, 240°) -> BR 0 (green, 120°) -> BR+1.0 (red, 0°)
   const getBRGradientColor = (brDiff: number): string => {
-    // Clamp brDiff to [-1.0, 1.0]
     const clampedDiff = Math.max(-1.0, Math.min(1.0, brDiff));
-    // Map -1..1 to 240..0 (blue -> green -> red)
     const hue = 120 - (clampedDiff * 120);
     return `hsl(${hue}, 75%, 50%)`;
   };
 
   const bins = filteredVehicles.map((v) => {
     const brDiff = parseFloat((v.battleRating - targetBR).toFixed(2));
-    const dotColor = v.id === vehicleId ? '#f97316' : getBRGradientColor(brDiff);
+    const isCurrent = v.id === vehicleId;
 
     return {
       range: v.localizedName,
-      metricValue: v.performance[metric] || 0,
-      battles: v.stats?.battles || 0,
-      isCurrent: v.id === vehicleId,
+      metricValue: getMetricValue(v, metric),
+      battles: v.stats?.battles ?? 0,
+      isCurrent,
       vehicleId: v.id,
       brDiff,
-      dotColor,
+      dotColor: isCurrent ? '#f97316' : getBRGradientColor(brDiff),
     };
   });
 
-  // Find current vehicle index
   const currentVehicleBin = bins.findIndex(b => b.isCurrent);
 
   return {
     metric,
     bins,
-    currentVehicleBin: currentVehicleBin >= 0 ? currentVehicleBin : 0,
+    currentVehicleBin: Math.max(0, currentVehicleBin),
     currentVehicleValue: value,
     allValues: filteredVehicles.map(v => ({
       vehicleId: v.id,
-      value: v.performance[metric] || 0,
+      value: getMetricValue(v, metric),
     })),
   };
+}
+
+/** Props for the StatCard component */
+interface StatCardProps {
+  icon: SvgIconComponent;
+  value: string | number;
+  label: string;
+}
+
+/** Color constants - white with shadow works on all backgrounds */
+const COLOR_HAS_VALUE = '#ffffff'; // White
+const COLOR_NO_VALUE = 'rgba(255,255,255,0.4)'; // Gray
+
+/** Check if value represents "no data" */
+function hasNoValue(value: string | number): boolean {
+  return value === '-' || value === '0' || value === '0.0' || value === '0s' || value === '';
+}
+
+/** Reusable stat card component for vehicle header */
+function StatCard({ icon: Icon, value, label }: StatCardProps) {
+  const isEmpty = hasNoValue(value);
+  const color = isEmpty ? COLOR_NO_VALUE : COLOR_HAS_VALUE;
+  
+  return (
+    <Box sx={{ 
+      textAlign: 'center', 
+      minWidth: 80, 
+      height: 72, 
+      display: 'flex', 
+      flexDirection: 'column', 
+      justifyContent: 'space-between' 
+    }}>
+      <Icon sx={{ color, fontSize: 20, display: 'block', mx: 'auto' }} />
+      <Typography variant="h5" sx={{ color, fontWeight: 700, fontSize: '1.1rem', textShadow: '0 1px 2px rgba(0,0,0,0.3)' }}>
+        {value}
+      </Typography>
+      <Typography variant="caption" sx={{ color: 'rgba(255,255,255,0.95)', fontSize: '0.7rem', fontWeight: 500, textShadow: '0 1px 2px rgba(0,0,0,0.3)' }}>
+        {label}
+      </Typography>
+    </Box>
+  );
+}
+
+/** Props for the RangeStatCard component */
+interface RangeStatCardProps {
+  icon: SvgIconComponent;
+  range: string;
+  speed: string;
+  label: string;
+}
+
+/** Stat card for range-based stats (elevation/traverse) */
+function RangeStatCard({ icon: Icon, range, speed, label }: RangeStatCardProps) {
+  const isEmpty = hasNoValue(range);
+  const color = isEmpty ? COLOR_NO_VALUE : COLOR_HAS_VALUE;
+  
+  return (
+    <Box sx={{ 
+      textAlign: 'center', 
+      minWidth: 90, 
+      height: 72, 
+      display: 'flex', 
+      flexDirection: 'column', 
+      justifyContent: 'space-between' 
+    }}>
+      <Icon sx={{ color, fontSize: 20, display: 'block', mx: 'auto' }} />
+      <Box>
+        <Typography variant="h5" sx={{ color, fontWeight: 700, fontSize: '0.85rem', textShadow: '0 1px 2px rgba(0,0,0,0.3)' }}>
+          {range}
+        </Typography>
+        <Typography variant="body2" sx={{ color, fontSize: '0.65rem', textShadow: '0 1px 2px rgba(0,0,0,0.3)' }}>
+          {speed}
+        </Typography>
+      </Box>
+      <Typography variant="caption" sx={{ color: 'rgba(255,255,255,0.95)', fontSize: '0.65rem', fontWeight: 500, textShadow: '0 1px 2px rgba(0,0,0,0.3)' }}>
+        {label}
+      </Typography>
+    </Box>
+  );
 }
 
 export default function VehicleDetailPage() {
@@ -135,10 +211,22 @@ export default function VehicleDetailPage() {
 
   const comparisons = {
     powerToWeight: generateVehicleComparisonData(vehicle.id, 'powerToWeight'),
+    maxSpeed: generateVehicleComparisonData(vehicle.id, 'maxSpeed'),
     maxReverseSpeed: generateVehicleComparisonData(vehicle.id, 'maxReverseSpeed'),
     reloadTime: generateVehicleComparisonData(vehicle.id, 'reloadTime'),
     penetration: generateVehicleComparisonData(vehicle.id, 'penetration'),
+    traverseSpeed: generateVehicleComparisonData(vehicle.id, 'traverseSpeed'),
+    elevationSpeed: generateVehicleComparisonData(vehicle.id, 'elevationSpeed'),
+    elevationMin: generateVehicleComparisonData(vehicle.id, 'elevationMin'),
+    gunnerThermal: generateVehicleComparisonData(vehicle.id, 'gunnerThermal'),
+    commanderThermal: generateVehicleComparisonData(vehicle.id, 'commanderThermal'),
   };
+
+  // Get vehicles in same BR range for stabilizer comparison
+  const targetBR = vehicle.battleRating;
+  const stabilizerComparisonVehicles = allVehicles.filter(v => 
+    v.battleRating >= targetBR - 1.0 && v.battleRating <= targetBR + 1.0
+  );
 
   return (
     <Box sx={{ minHeight: '100vh', backgroundColor: '#f5f5f5' }}>
@@ -162,7 +250,7 @@ export default function VehicleDetailPage() {
         <Paper
           elevation={1}
           sx={{
-            background: 'linear-gradient(135deg, #93c5fd 0%, #60a5fa 100%)',
+            background: ECONOMIC_TYPE_GRADIENTS[vehicle.economicType],
             border: '1px solid #d4d4d4',
             borderRadius: 2,
             mb: 3,
@@ -258,15 +346,15 @@ export default function VehicleDetailPage() {
             {vehicle.stats && (
               <Box sx={{ display: 'flex', gap: 4, mt: 1 }}>
                 <Box>
-                  <Typography variant="caption" sx={{ color: 'rgba(255,255,255,0.7)', display: 'block', mb: 0.5 }}>
+                  <Typography variant="caption" sx={{ color: 'rgba(255,255,255,0.95)', display: 'block', mb: 0.5, fontWeight: 500, textShadow: '0 1px 2px rgba(0,0,0,0.3)' }}>
                     总对局数
                   </Typography>
-                  <Typography variant="h6" sx={{ color: '#fff', fontWeight: 700 }}>
+                  <Typography variant="h6" sx={{ color: '#fff', fontWeight: 700, textShadow: '0 1px 2px rgba(0,0,0,0.3)' }}>
                     {vehicle.stats.battles.toLocaleString()}
                   </Typography>
                 </Box>
                 <Box>
-                  <Typography variant="caption" sx={{ color: 'rgba(255,255,255,0.7)', display: 'block', mb: 0.5 }}>
+                  <Typography variant="caption" sx={{ color: 'rgba(255,255,255,0.95)', display: 'block', mb: 0.5, fontWeight: 500, textShadow: '0 1px 2px rgba(0,0,0,0.3)' }}>
                     胜率
                   </Typography>
                   <Typography
@@ -274,24 +362,25 @@ export default function VehicleDetailPage() {
                     sx={{
                       color: vehicle.stats.winRate > 50 ? '#86efac' : vehicle.stats.winRate < 48 ? '#fca5a5' : '#fde047',
                       fontWeight: 700,
+                      textShadow: '0 1px 2px rgba(0,0,0,0.3)',
                     }}
                   >
                     {vehicle.stats.winRate.toFixed(1)}%
                   </Typography>
                 </Box>
                 <Box>
-                  <Typography variant="caption" sx={{ color: 'rgba(255,255,255,0.7)', display: 'block', mb: 0.5 }}>
+                  <Typography variant="caption" sx={{ color: 'rgba(255,255,255,0.95)', display: 'block', mb: 0.5, fontWeight: 500, textShadow: '0 1px 2px rgba(0,0,0,0.3)' }}>
                     场均击毁
                   </Typography>
-                  <Typography variant="h6" sx={{ color: '#fff', fontWeight: 700 }}>
+                  <Typography variant="h6" sx={{ color: '#fff', fontWeight: 700, textShadow: '0 1px 2px rgba(0,0,0,0.3)' }}>
                     {vehicle.stats.avgKills.toFixed(1)}
                   </Typography>
                 </Box>
                 <Box>
-                  <Typography variant="caption" sx={{ color: 'rgba(255,255,255,0.7)', display: 'block', mb: 0.5 }}>
+                  <Typography variant="caption" sx={{ color: 'rgba(255,255,255,0.95)', display: 'block', mb: 0.5, fontWeight: 500, textShadow: '0 1px 2px rgba(0,0,0,0.3)' }}>
                     BR
                   </Typography>
-                  <Typography variant="h6" sx={{ color: '#86efac', fontWeight: 700 }}>
+                  <Typography variant="h6" sx={{ color: '#86efac', fontWeight: 700, textShadow: '0 1px 2px rgba(0,0,0,0.3)' }}>
                     {vehicle.battleRating.toFixed(1)}
                   </Typography>
                 </Box>
@@ -299,86 +388,92 @@ export default function VehicleDetailPage() {
             )}
             </Box>
 
+            {/* Gradient overlay for right side readability - fades from transparent to slightly dark */}
+            <Box
+              sx={{
+                position: 'absolute',
+                top: 0,
+                bottom: 0,
+                left: '30%',
+                right: 0,
+                background: 'linear-gradient(to right, transparent 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.5) 100%)',
+                zIndex: 1,
+              }}
+            />
+
             {/* Right side - Performance stats */}
-            <Box sx={{ display: 'flex', gap: 3, ml: 4, alignItems: 'flex-end' }}>
-              <Box sx={{ textAlign: 'center', minWidth: 80, height: 72, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
-                <Speed sx={{ color: '#86efac', fontSize: 20, display: 'block', mx: 'auto' }} />
-                <Typography variant="h5" sx={{ color: '#fff', fontWeight: 700, fontSize: '1.1rem' }}>
-                  {vehicle.performance.powerToWeight.toFixed(1)}
+            <Box sx={{ display: 'flex', gap: 3, ml: 4, alignItems: 'flex-end', position: 'relative', zIndex: 2 }}>
+              <StatCard 
+                icon={Speed} 
+                value={vehicle.performance.powerToWeight.toFixed(1)} 
+                label="功重比" 
+              />
+              <StatCard 
+                icon={FastForward} 
+                value={vehicle.performance.maxSpeed > 0 ? Math.round(vehicle.performance.maxSpeed) : '-'} 
+                label="前进极速" 
+              />
+              <StatCard 
+                icon={FastRewind} 
+                value={vehicle.performance.maxReverseSpeed > 0 ? Math.round(vehicle.performance.maxReverseSpeed) : '-'} 
+                label="倒退极速" 
+              />
+              <StatCard 
+                icon={RotateRight} 
+                value={vehicle.performance.traverseSpeed > 0 ? vehicle.performance.traverseSpeed.toFixed(1) : '-'} 
+                label="转向速度" 
+              />
+              <StatCard 
+                icon={AccessTime} 
+                value={`${vehicle.performance.reloadTime.toFixed(1)}s`} 
+                label="装填时间" 
+              />
+              <RangeStatCard 
+                icon={ExpandLess}
+                range={vehicle.performance.elevationRange[1] > vehicle.performance.elevationRange[0] 
+                  ? `${vehicle.performance.elevationRange[0].toFixed(0)}°~${vehicle.performance.elevationRange[1].toFixed(0)}°` 
+                  : '-'}
+                speed={vehicle.performance.elevationSpeed > 0 ? `${vehicle.performance.elevationSpeed.toFixed(1)}°/s` : '-'}
+                label="俯仰角/速度"
+              />
+              <RangeStatCard 
+                icon={SyncAlt}
+                range={vehicle.performance.traverseRange[1] > vehicle.performance.traverseRange[0] 
+                  ? `${vehicle.performance.traverseRange[0].toFixed(0)}°~${vehicle.performance.traverseRange[1].toFixed(0)}°` 
+                  : '-'}
+                speed={vehicle.performance.traverseSpeed > 0 ? `${vehicle.performance.traverseSpeed.toFixed(1)}°/s` : '-'}
+                label="射界/速度"
+              />
+              <Box sx={{ textAlign: 'center', minWidth: 70, height: 72, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+                <GpsFixed sx={{ color: vehicle.performance.stabilizerType !== 'none' ? COLOR_HAS_VALUE : COLOR_NO_VALUE, fontSize: 20, display: 'block', mx: 'auto' }} />
+                <Typography variant="h5" sx={{ color: vehicle.performance.stabilizerType !== 'none' ? COLOR_HAS_VALUE : COLOR_NO_VALUE, fontWeight: 700, fontSize: '0.9rem', textShadow: '0 1px 2px rgba(0,0,0,0.3)' }}>
+                  {vehicle.performance.stabilizerType === 'both' ? '双向' : 
+                   vehicle.performance.stabilizerType === 'horizontal' ? '水平' :
+                   vehicle.performance.stabilizerType === 'vertical' ? '垂直' : '无'}
                 </Typography>
-                <Typography variant="caption" sx={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.7rem' }}>
-                  功重比
-                </Typography>
-              </Box>
-              <Box sx={{ textAlign: 'center', minWidth: 80, height: 72, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
-                <AccessTime sx={{ color: '#fdba74', fontSize: 20, display: 'block', mx: 'auto' }} />
-                <Typography variant="h5" sx={{ color: '#fff', fontWeight: 700, fontSize: '1.1rem' }}>
-                  {vehicle.performance.reloadTime.toFixed(1)}s
-                </Typography>
-                <Typography variant="caption" sx={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.7rem' }}>
-                  装填时间
-                </Typography>
-              </Box>
-              <Box sx={{ textAlign: 'center', minWidth: 90, height: 72, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
-                <ExpandLess sx={{ color: '#93c5fd', fontSize: 20, display: 'block', mx: 'auto' }} />
-                <Box>
-                  <Typography variant="h5" sx={{ color: '#fff', fontWeight: 700, fontSize: '0.85rem' }}>
-                    {vehicle.performance.elevationRange[1] > vehicle.performance.elevationRange[0] 
-                      ? `${vehicle.performance.elevationRange[0].toFixed(0)}°~${vehicle.performance.elevationRange[1].toFixed(0)}°` 
-                      : '-'}
-                  </Typography>
-                  <Typography variant="body2" sx={{ color: 'rgba(255,255,255,0.8)', fontSize: '0.65rem' }}>
-                    {vehicle.performance.elevationSpeed > 0 ? `${vehicle.performance.elevationSpeed.toFixed(1)}°/s` : '-'}
-                  </Typography>
-                </Box>
-                <Typography variant="caption" sx={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.65rem' }}>
-                  俯仰角/速度
-                </Typography>
-              </Box>
-              <Box sx={{ textAlign: 'center', minWidth: 100, height: 72, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
-                <SyncAlt sx={{ color: '#93c5fd', fontSize: 20, display: 'block', mx: 'auto' }} />
-                <Box>
-                  <Typography variant="h5" sx={{ color: '#fff', fontWeight: 700, fontSize: '0.85rem' }}>
-                    {vehicle.performance.traverseRange[1] > vehicle.performance.traverseRange[0] 
-                      ? `${vehicle.performance.traverseRange[0].toFixed(0)}°~${vehicle.performance.traverseRange[1].toFixed(0)}°` 
-                      : '-'}
-                  </Typography>
-                  <Typography variant="body2" sx={{ color: 'rgba(255,255,255,0.8)', fontSize: '0.65rem' }}>
-                    {vehicle.performance.traverseSpeed > 0 ? `${vehicle.performance.traverseSpeed.toFixed(1)}°/s` : '-'}
-                  </Typography>
-                </Box>
-                <Typography variant="caption" sx={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.65rem' }}>
-                  射界/速度
-                </Typography>
-              </Box>
-              <Box sx={{ textAlign: 'center', minWidth: 60, height: 72, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
-                <GpsFixed sx={{ color: vehicle.performance.hasStabilizer ? '#86efac' : '#fca5a5', fontSize: 20, display: 'block', mx: 'auto' }} />
-                <Typography variant="h5" sx={{ color: vehicle.performance.hasStabilizer ? '#86efac' : '#fca5a5', fontWeight: 700, fontSize: '1.1rem' }}>
-                  {vehicle.performance.hasStabilizer ? '有' : '无'}
-                </Typography>
-                <Typography variant="caption" sx={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.7rem' }}>
+                <Typography variant="caption" sx={{ color: 'rgba(255,255,255,0.95)', fontSize: '0.7rem', fontWeight: 500, textShadow: '0 1px 2px rgba(0,0,0,0.3)' }}>
                   稳定器
                 </Typography>
               </Box>
               <Box sx={{ textAlign: 'center', minWidth: 90, height: 72, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
-                <Visibility sx={{ color: vehicle.performance.gunnerThermalResolution[0] > 0 ? '#fbbf24' : 'rgba(255,255,255,0.5)', fontSize: 20, display: 'block', mx: 'auto' }} />
-                <Typography variant="h5" sx={{ color: vehicle.performance.gunnerThermalResolution[0] > 0 ? '#fff' : 'rgba(255,255,255,0.5)', fontWeight: 700, fontSize: '0.9rem' }}>
+                <Visibility sx={{ color: vehicle.performance.gunnerThermalResolution[0] > 0 ? COLOR_HAS_VALUE : COLOR_NO_VALUE, fontSize: 20, display: 'block', mx: 'auto' }} />
+                <Typography variant="h5" sx={{ color: vehicle.performance.gunnerThermalResolution[0] > 0 ? COLOR_HAS_VALUE : COLOR_NO_VALUE, fontWeight: 700, fontSize: '0.9rem', textShadow: '0 1px 2px rgba(0,0,0,0.3)' }}>
                   {vehicle.performance.gunnerThermalResolution[0] > 0 
                     ? `${vehicle.performance.gunnerThermalResolution[0]}×${vehicle.performance.gunnerThermalResolution[1]}` 
                     : '-'}
                 </Typography>
-                <Typography variant="caption" sx={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.7rem' }}>
+                <Typography variant="caption" sx={{ color: 'rgba(255,255,255,0.95)', fontSize: '0.7rem', fontWeight: 500, textShadow: '0 1px 2px rgba(0,0,0,0.3)' }}>
                   炮手热成像
                 </Typography>
               </Box>
               <Box sx={{ textAlign: 'center', minWidth: 90, height: 72, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
-                <Visibility sx={{ color: vehicle.performance.commanderThermalResolution[0] > 0 ? '#fbbf24' : 'rgba(255,255,255,0.5)', fontSize: 20, display: 'block', mx: 'auto' }} />
-                <Typography variant="h5" sx={{ color: vehicle.performance.commanderThermalResolution[0] > 0 ? '#fff' : 'rgba(255,255,255,0.5)', fontWeight: 700, fontSize: '0.9rem' }}>
+                <Visibility sx={{ color: vehicle.performance.commanderThermalResolution[0] > 0 ? COLOR_HAS_VALUE : COLOR_NO_VALUE, fontSize: 20, display: 'block', mx: 'auto' }} />
+                <Typography variant="h5" sx={{ color: vehicle.performance.commanderThermalResolution[0] > 0 ? COLOR_HAS_VALUE : COLOR_NO_VALUE, fontWeight: 700, fontSize: '0.9rem', textShadow: '0 1px 2px rgba(0,0,0,0.3)' }}>
                   {vehicle.performance.commanderThermalResolution[0] > 0 
                     ? `${vehicle.performance.commanderThermalResolution[0]}×${vehicle.performance.commanderThermalResolution[1]}` 
                     : '-'}
                 </Typography>
-                <Typography variant="caption" sx={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.7rem' }}>
+                <Typography variant="caption" sx={{ color: 'rgba(255,255,255,0.95)', fontSize: '0.7rem', fontWeight: 500, textShadow: '0 1px 2px rgba(0,0,0,0.3)' }}>
                   车长热成像
                 </Typography>
               </Box>
@@ -395,41 +490,34 @@ export default function VehicleDetailPage() {
         </Typography>
 
         <Grid container spacing={2}>
-          {comparisons.powerToWeight && (
-            <Grid item xs={12} md={6}>
-              <DistributionChart
-                data={comparisons.powerToWeight}
-                title="功重比对比"
-                unit="hp/t"
-              />
-            </Grid>
-          )}
-          {comparisons.maxReverseSpeed && (
-            <Grid item xs={12} md={6}>
-              <DistributionChart
-                data={comparisons.maxReverseSpeed}
-                title="倒车速度对比"
-                unit="km/h"
-              />
-            </Grid>
-          )}
-          {comparisons.reloadTime && (
-            <Grid item xs={12} md={6}>
-              <DistributionChart
-                data={comparisons.reloadTime}
-                title="装填时间对比"
-                unit="s"
-              />
-            </Grid>
-          )}
-          {comparisons.penetration && (
-            <Grid item xs={12} md={6}>
-              <DistributionChart
-                data={comparisons.penetration}
-                title="穿深对比"
-                unit="mm"
-              />
-            </Grid>
+          {/* Stabilizer Chart - always show */}
+          <Grid item xs={12} md={6}>
+            <StabilizerScatterChart 
+              vehicles={stabilizerComparisonVehicles}
+              currentVehicleId={vehicle.id}
+              currentStabilizerType={vehicle.performance.stabilizerType}
+            />
+          </Grid>
+          
+          {(
+            [
+              { key: 'powerToWeight', title: '功重比对比', unit: 'hp/t' },
+              { key: 'maxSpeed', title: '前进极速对比', unit: 'km/h' },
+              { key: 'maxReverseSpeed', title: '倒车速度对比', unit: 'km/h' },
+              { key: 'traverseSpeed', title: '方向机速度对比', unit: '°/s' },
+              { key: 'reloadTime', title: '装填时间对比', unit: 's' },
+              { key: 'elevationSpeed', title: '高低机速度对比', unit: '°/s' },
+              { key: 'elevationMin', title: '俯角对比', unit: '°' },
+              { key: 'penetration', title: '穿深对比', unit: 'mm' },
+              { key: 'gunnerThermal', title: '炮手热成像对比', unit: '像素' },
+              { key: 'commanderThermal', title: '车长热成像对比', unit: '像素' },
+            ] as const
+          ).map(({ key, title, unit }) => 
+            comparisons[key] && (
+              <Grid item xs={12} md={6} key={key}>
+                <DistributionChart data={comparisons[key]} title={title} unit={unit} />
+              </Grid>
+            )
           )}
         </Grid>
 

@@ -10,7 +10,7 @@ import {
   ZAxis,
 } from 'recharts';
 import { useState, useCallback, useMemo } from 'react';
-import type { DistributionData } from '../types';
+import type { DistributionData, MetricType } from '../types';
 
 interface DistributionChartProps {
   data: DistributionData;
@@ -18,18 +18,32 @@ interface DistributionChartProps {
   unit: string;
 }
 
-const METRIC_COLORS = {
+/** Color mapping for each metric type */
+const METRIC_COLORS: Record<MetricType, string> = {
   powerToWeight: '#4ade80',
+  maxSpeed: '#60a5fa',
   maxReverseSpeed: '#3b82f6',
+  traverseSpeed: '#a78bfa',
   reloadTime: '#f97316',
+  elevationSpeed: '#fbbf24',
+  elevationMin: '#f472b6',
   penetration: '#ef4444',
+  gunnerThermal: '#fbbf24',
+  commanderThermal: '#fbbf24',
 };
 
-const METRIC_NAMES: Record<string, string> = {
+/** Display name mapping for each metric type */
+const METRIC_NAMES: Record<MetricType, string> = {
   powerToWeight: '功重比',
+  maxSpeed: '前进极速',
   maxReverseSpeed: '倒车速度',
+  traverseSpeed: '方向机速度',
   reloadTime: '装填时间',
+  elevationSpeed: '高低机速度',
+  elevationMin: '俯角',
   penetration: '穿深',
+  gunnerThermal: '炮手热成像',
+  commanderThermal: '车长热成像',
 };
 
 // Distance threshold for clustering (in data units)
@@ -96,6 +110,14 @@ export default function DistributionChart({ data, title, unit }: DistributionCha
     });
   }, [scatterData, getDistance]);
 
+  // Calculate weighted percentile by battles for a given metric value
+  const calculatePercentile = useCallback((value: number): number => {
+    const totalBattles = scatterData.reduce((sum, d) => sum + d.y, 0);
+    if (totalBattles === 0) return 0;
+    const battlesLessOrEqual = scatterData.filter(d => d.x <= value).reduce((sum, d) => sum + d.y, 0);
+    return Math.round((battlesLessOrEqual / totalBattles) * 100);
+  }, [scatterData]);
+
   // Custom Tooltip that shows clustered vehicles
   const CustomTooltip = ({ active, payload }: any) => {
     // Get the hovered point from payload or use the tracked state
@@ -136,43 +158,54 @@ export default function DistributionChart({ data, title, unit }: DistributionCha
           </Box>
         )}
         
-        {nearbyPoints.map((p, index) => (
-          <Box key={p.vehicleId}>
-            {index > 0 && <Divider sx={{ my: 1, borderColor: '#333' }} />}
-            <Box sx={{ 
-              p: 0.5, 
-              borderRadius: 0.5,
-              backgroundColor: p.isCurrent ? 'rgba(249, 115, 22, 0.15)' : 'transparent',
-            }}>
-              <Typography 
-                variant="body2" 
-                sx={{ 
-                  color: p.isCurrent ? '#f97316' : '#171717', 
-                  fontWeight: p.isCurrent ? 600 : 500,
-                  fontSize: '0.8rem',
-                }}
-              >
-                {p.isCurrent ? '⭐ ' : ''}{p.name}
-              </Typography>
-              <Box sx={{ display: 'flex', justifyContent: 'space-between', mt: 0.5 }}>
-                <Typography variant="caption" sx={{ color: '#737373', fontSize: '0.7rem' }}>
-                  {METRIC_NAMES[data.metric]}:
+        {nearbyPoints.map((p, index) => {
+          const percentile = calculatePercentile(p.x);
+          return (
+            <Box key={p.vehicleId}>
+              {index > 0 && <Divider sx={{ my: 1, borderColor: '#333' }} />}
+              <Box sx={{ 
+                p: 0.5, 
+                borderRadius: 0.5,
+                backgroundColor: p.isCurrent ? 'rgba(249, 115, 22, 0.15)' : 'transparent',
+              }}>
+                <Typography 
+                  variant="body2" 
+                  sx={{ 
+                    color: p.isCurrent ? '#f97316' : '#171717', 
+                    fontWeight: p.isCurrent ? 600 : 500,
+                    fontSize: '0.8rem',
+                  }}
+                >
+                  {p.isCurrent ? '⭐ ' : ''}{p.name}
                 </Typography>
-                <Typography variant="caption" sx={{ color: '#171717', fontSize: '0.7rem', fontWeight: 500 }}>
-                  {p.x.toFixed(1)} {unit}
-                </Typography>
-              </Box>
-              <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
-                <Typography variant="caption" sx={{ color: '#737373', fontSize: '0.7rem' }}>
-                  出场数:
-                </Typography>
-                <Typography variant="caption" sx={{ color: '#171717', fontSize: '0.7rem', fontWeight: 500 }}>
-                  {p.y.toLocaleString()}
-                </Typography>
+                <Box sx={{ display: 'flex', justifyContent: 'space-between', mt: 0.5 }}>
+                  <Typography variant="caption" sx={{ color: '#737373', fontSize: '0.7rem' }}>
+                    {METRIC_NAMES[data.metric]}:
+                  </Typography>
+                  <Typography variant="caption" sx={{ color: '#171717', fontSize: '0.7rem', fontWeight: 500 }}>
+                    {p.x.toFixed(1)} {unit}
+                  </Typography>
+                </Box>
+                <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
+                  <Typography variant="caption" sx={{ color: '#737373', fontSize: '0.7rem' }}>
+                    出场数:
+                  </Typography>
+                  <Typography variant="caption" sx={{ color: '#171717', fontSize: '0.7rem', fontWeight: 500 }}>
+                    {p.y.toLocaleString()}
+                  </Typography>
+                </Box>
+                <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
+                  <Typography variant="caption" sx={{ color: '#737373', fontSize: '0.7rem' }}>
+                    出场占比 (≤该值):
+                  </Typography>
+                  <Typography variant="caption" sx={{ color: '#171717', fontSize: '0.7rem', fontWeight: 600 }}>
+                    {percentile}%
+                  </Typography>
+                </Box>
               </Box>
             </Box>
-          </Box>
-        ))}
+          );
+        })}
       </Box>
     );
   };

@@ -22,6 +22,7 @@ interface DatamineEntry {
   rank: number;
   battle_rating: number;
   vehicle_type: string;
+  economic_type: string;
   performance: {
     horsepower?: number | null;
     weight?: number | null;
@@ -34,10 +35,16 @@ interface DatamineEntry {
     elevation_speed?: number | null;
     traverse_speed?: number | null;
     has_stabilizer?: boolean | null;
+    stabilizer_type?: string | null;
     elevation_range?: number[] | null;
     traverse_range?: number[] | null;
     gunner_thermal_resolution?: number[] | null;
     commander_thermal_resolution?: number[] | null;
+    // Calculated metrics
+    gunner_thermal_diagonal?: number | null;
+    commander_thermal_diagonal?: number | null;
+    stabilizer_value?: number | null;
+    elevation_range_value?: number | null;
   };
   imageUrl: string;
   source: string;
@@ -104,6 +111,7 @@ function mergeVehicleData(): Vehicle[] {
       rank: stats?.rank ?? datamine.rank ?? 1,
       battleRating: stats?.br ?? datamine.battle_rating ?? 1.0,
       vehicleType: datamine.vehicle_type as any,
+      economicType: (datamine.economic_type as any) ?? 'regular',
       performance: {
         horsepower: datamine.performance.horsepower ?? 0,
         weight: datamine.performance.weight ?? 0,
@@ -116,10 +124,16 @@ function mergeVehicleData(): Vehicle[] {
         elevationSpeed: datamine.performance.elevation_speed ?? 0,
         traverseSpeed: datamine.performance.traverse_speed ?? 0,
         hasStabilizer: datamine.performance.has_stabilizer ?? false,
+        stabilizerType: (datamine.performance.stabilizer_type as 'none' | 'horizontal' | 'vertical' | 'both') ?? 'none',
         elevationRange: (datamine.performance.elevation_range as [number, number]) ?? [0, 0],
         traverseRange: (datamine.performance.traverse_range as [number, number]) ?? [0, 0],
         gunnerThermalResolution: (datamine.performance.gunner_thermal_resolution as [number, number]) ?? [0, 0],
         commanderThermalResolution: (datamine.performance.commander_thermal_resolution as [number, number]) ?? [0, 0],
+        // Calculated metrics
+        gunnerThermalDiagonal: datamine.performance.gunner_thermal_diagonal ?? 0,
+        commanderThermalDiagonal: datamine.performance.commander_thermal_diagonal ?? 0,
+        stabilizerValue: datamine.performance.stabilizer_value ?? 0,
+        elevationRangeValue: datamine.performance.elevation_range_value ?? 0,
       },
       stats: stats ? {
         battles: stats.battles,
@@ -160,6 +174,7 @@ export function getVehiclesByBattleRating(min: number, max: number): Vehicle[] {
 
 export const sampleVehicleDetail: VehicleDetail = {
   ...sampleVehicles[0],
+  economicType: 'regular',
   commonOpponents: [
     { vehicleId: 'germany_panzer_iv_h', encounterRate: 35, battles: 43750 },
     { vehicleId: 'usa_m4a3e8_sherman', encounterRate: 28, battles: 35000 },

@@ -9,6 +9,13 @@ const BASE_URL = import.meta.env.BASE_URL || '/';
 // Nation flag image mapping
 const getFlagImagePath = (nation: string): string => `${BASE_URL}images/flags/unit_tooltip/country_${nation}.png`;
 
+// Vehicle image path with base URL
+const getVehicleImagePath = (imageUrl: string | undefined): string => {
+  if (!imageUrl) return '';
+  const cleanPath = imageUrl.startsWith('/') ? imageUrl.slice(1) : imageUrl;
+  return `${BASE_URL}${cleanPath}`;
+};
+
 interface VehicleTechTreeProps {
   vehicles: Vehicle[];
 }
@@ -85,6 +92,18 @@ export default function VehicleTechTree({ vehicles }: VehicleTechTreeProps) {
                 const nation = NATIONS.find(n => n.id === vehicle.nation);
                 const hasStats = vehicle.stats && vehicle.stats.battles > 100;
 
+                // 根据经济类型设置柔和的背景色
+                const getEconomicBgColor = () => {
+                  switch (vehicle.economicType) {
+                    case 'premium':
+                      return '#fef9c3'; // 柔和金色
+                    case 'clan':
+                      return '#dcfce7'; // 柔和绿色
+                    default:
+                      return '#dbeafe'; // 柔和蓝色
+                  }
+                };
+
                 return (
                   <Box
                     key={vehicle.id}
@@ -92,7 +111,7 @@ export default function VehicleTechTree({ vehicles }: VehicleTechTreeProps) {
                     sx={{
                       position: 'relative',
                       aspectRatio: '4/3',
-                      backgroundColor: '#f5f5f5',
+                      backgroundColor: getEconomicBgColor(),
                       borderRadius: 1,
                       border: '1px solid #d4d4d4',
                       overflow: 'hidden',
@@ -110,16 +129,17 @@ export default function VehicleTechTree({ vehicles }: VehicleTechTreeProps) {
                       component="img"
                       src={getFlagImagePath(vehicle.nation)}
                       alt=""
+                      onError={(e) => {
+                        (e.target as HTMLImageElement).style.display = 'none';
+                      }}
                       sx={{
                         position: 'absolute',
-                        top: '-20%',
-                        left: '-20%',
-                        width: '140%',
-                        height: '140%',
+                        top: 0,
+                        left: 0,
+                        width: '100%',
+                        height: '100%',
                         objectFit: 'cover',
-                        opacity: 0.15,
-                        maskImage: 'linear-gradient(135deg, rgba(0,0,0,0.6) 0%, transparent 70%)',
-                        WebkitMaskImage: 'linear-gradient(135deg, rgba(0,0,0,0.6) 0%, transparent 70%)',
+                        opacity: 0.25,
                         zIndex: 0,
                       }}
                     />
@@ -127,13 +147,15 @@ export default function VehicleTechTree({ vehicles }: VehicleTechTreeProps) {
                     {/* 载具图片 */}
                     <Box
                       component="img"
-                      src={vehicle.imageUrl || `https://placehold.co/120x90/e5e5e5/666?text=${vehicle.localizedName.slice(0, 10)}`}
+                      src={getVehicleImagePath(vehicle.imageUrl) || `https://placehold.co/120x90/e5e5e5/666?text=${vehicle.localizedName.slice(0, 10)}`}
                       alt={vehicle.localizedName}
                       sx={{
-                        width: '100%',
-                        height: '70%',
-                        objectFit: 'cover',
-                        position: 'relative',
+                        width: '80%',
+                        height: '50%',
+                        objectFit: 'contain',
+                        position: 'absolute',
+                        top: '8%',
+                        left: '10%',
                         zIndex: 1,
                       }}
                       onError={(e) => {
@@ -148,7 +170,7 @@ export default function VehicleTechTree({ vehicles }: VehicleTechTreeProps) {
                         bottom: 0,
                         left: 0,
                         right: 0,
-                        height: '40%',
+                        height: '45%',
                         background: 'linear-gradient(to top, rgba(0,0,0,0.9) 0%, transparent 100%)',
                         display: 'flex',
                         flexDirection: 'column',

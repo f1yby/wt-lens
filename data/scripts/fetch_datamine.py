@@ -7,6 +7,7 @@ Reads from data/datamine/aces.vromfs.bin_u/gamedata/units/tankmodels/
 
 import csv
 import json
+import math
 import shutil
 from pathlib import Path
 from dataclasses import dataclass
@@ -44,6 +45,86 @@ _wpcost_cache = None
 # Cache for localization data
 _localization_cache = None
 
+def _calculate_wheel_speed(
+    engine_rpm: float,
+    tire_radius: float,
+    gear_ratio: float,
+    side_ratio: float,
+    main_ratio: float
+) -> float:
+    """
+    Calculate vehicle speed from drivetrain parameters.
+    
+    Formula: speed(m/s) = (engine_rpm / total_ratio) * 2π * tire_radius / 60
+    where total_ratio = gear_ratio * side_ratio * main_ratio
+    
+    Args:
+        engine_rpm: Maximum engine RPM
+        tire_radius: Drive gear (tire) radius in meters
+        gear_ratio: Selected gear ratio
+        side_ratio: Side gear ratio (final drive)
+        main_ratio: Main gear ratio
+    
+    Returns:
+        Vehicle speed in km/h
+    """
+    total_ratio = gear_ratio * side_ratio * main_ratio
+    wheel_rpm = engine_rpm / total_ratio
+    speed_ms = wheel_rpm * 2 * math.pi * tire_radius / 60
+    return round(speed_ms * 3.6, 1)
+
+
+def calculate_speed_from_gearbox(
+    max_rpm: float,
+    drive_gear_radius: float,
+    main_gear_ratio: float,
+    side_gear_ratio: float,
+    gear_ratios: list[float]
+) -> tuple[float | None, float | None]:
+    """
+    Calculate max forward and reverse speed from gearbox data.
+    
+    Uses the highest gear (smallest ratio) for forward and lowest gear 
+    (most negative ratio) for reverse.
+    
+    Args:
+        max_rpm: Maximum engine RPM
+        drive_gear_radius: Tire radius in meters
+        main_gear_ratio: Main gear ratio
+        side_gear_ratio: Side gear ratio (final drive)
+        gear_ratios: List of gear ratios including 0 (neutral) and negative (reverse)
+    
+    Returns:
+        Tuple of (max_forward_speed, max_reverse_speed) in km/h, or None if calculation fails
+    """
+    if not all([max_rpm > 0, drive_gear_radius > 0, side_gear_ratio > 0]):
+        return None, None
+    
+    # Separate forward (positive) and reverse (negative) gears
+    forward_ratios = [g for g in gear_ratios if g > 0]
+    reverse_ratios = [g for g in gear_ratios if g < 0]
+    
+    # Calculate max forward speed using highest gear (smallest ratio)
+    max_forward = (
+        _calculate_wheel_speed(
+            max_rpm, drive_gear_radius, min(forward_ratios), 
+            side_gear_ratio, main_gear_ratio
+        )
+        if forward_ratios else None
+    )
+    
+    # Calculate max reverse speed using highest reverse gear (smallest absolute ratio)
+    max_reverse = (
+        _calculate_wheel_speed(
+            max_rpm, drive_gear_radius, abs(min(reverse_ratios, key=abs)),
+            side_gear_ratio, main_gear_ratio
+        )
+        if reverse_ratios else None
+    )
+    
+    return max_forward, max_reverse
+
+
 def economic_rank_to_br(economic_rank: int | None) -> float:
     """
     Convert economicRank to Battle Rating using formula:
@@ -76,12 +157,18 @@ class VehiclePerformance:
     elevation_speed: float | None = None
     traverse_speed: float | None = None
     has_stabilizer: bool | None = None
+    stabilizer_type: str | None = None  # 'none', 'horizontal', 'vertical', 'both'
     # Gun limits
     elevation_range: list[float] | None = None
     traverse_range: list[float] | None = None
     # Thermal vision
     gunner_thermal_resolution: list[int] | None = None
     commander_thermal_resolution: list[int] | None = None
+    # Calculated metrics for charts
+    gunner_thermal_diagonal: float | None = None  # sqrt(width^2 + height^2)
+    commander_thermal_diagonal: float | None = None
+    stabilizer_value: int | None = None  # 1 if has stabilizer, 0 otherwise
+    elevation_range_value: float | None = None  # max - min elevation
 
 
 @dataclass
@@ -94,6 +181,7 @@ class VehicleData:
     rank: int
     battle_rating: float
     vehicle_type: str
+    economic_type: str
     performance: VehiclePerformance
     image_url: str
     source: str = "datamine"
@@ -246,16 +334,45 @@ def copy_nation_flags() -> int:
     return copied
 
 
-def get_vehicle_br(vehicle_id: str) -> tuple[float, int]:
+def get_vehicle_economic_type(vehicle_data: dict[str, Any] | None) -> str:
     """
-    Get vehicle BR and rank from wpcost.blkx.
-    Returns (battle_rating, rank)
+    Determine vehicle economic type from wpcost data.
+    
+    Rules:
+    - 'clan': researchType === "clanVehicle" (联队载具)
+    - 'premium': value === 0 and no researchType (金币载具)
+    - 'regular': everything else (普通载具)
+    
+    Returns economic type string: 'regular', 'clan', or 'premium'
+    """
+    if not vehicle_data:
+        return 'regular'
+    
+    # Check for clan vehicle (联队载具)
+    research_type = vehicle_data.get('researchType')
+    if research_type == 'clanVehicle':
+        return 'clan'
+    
+    # Check for premium/gift vehicle (金币载具)
+    # Premium vehicles have value === 0 and are not clan vehicles
+    value = vehicle_data.get('value')
+    if value == 0:
+        return 'premium'
+    
+    # Default to regular (普通载具)
+    return 'regular'
+
+
+def get_vehicle_br_and_type(vehicle_id: str) -> tuple[float, int, str]:
+    """
+    Get vehicle BR, rank, and economic type from wpcost.blkx.
+    Returns (battle_rating, rank, economic_type)
     """
     wpcost = load_wpcost_data()
     vehicle_data = wpcost.get(vehicle_id)
 
     if not vehicle_data:
-        return 4.0, 3  # defaults
+        return 4.0, 3, 'regular'  # defaults
 
     # Get economicRank for historical/realistic mode
     economic_rank = vehicle_data.get('economicRankHistorical')
@@ -270,6 +387,19 @@ def get_vehicle_br(vehicle_id: str) -> tuple[float, int]:
     if not isinstance(rank, int):
         rank = 3
 
+    # Get economic type
+    economic_type = get_vehicle_economic_type(vehicle_data)
+
+    return br, rank, economic_type
+
+
+# Keep for backward compatibility
+def get_vehicle_br(vehicle_id: str) -> tuple[float, int]:
+    """
+    Get vehicle BR and rank from wpcost.blkx.
+    Returns (battle_rating, rank)
+    """
+    br, rank, _ = get_vehicle_br_and_type(vehicle_id)
     return br, rank
 
 
@@ -373,6 +503,43 @@ def parse_tankmodel_data(data: dict[str, Any]) -> VehiclePerformance | None:
     if perf.horsepower and perf.weight and perf.weight > 0:
         perf.power_to_weight = round(perf.horsepower / perf.weight, 2)
 
+    # Calculate speed from gearbox data (more accurate than maxFwdSpeed/maxRevSpeed)
+    vehicle_phys = data.get('VehiclePhys', {})
+    mechanics = vehicle_phys.get('mechanics', {})
+    engine_data = vehicle_phys.get('engine', {})
+    
+    if mechanics and engine_data:
+        max_rpm = engine_data.get('maxRPM', 0)
+        drive_gear_radius = mechanics.get('driveGearRadius', 0)
+        main_gear_ratio = mechanics.get('mainGearRatio', 1)
+        side_gear_ratio = mechanics.get('sideGearRatio', 1)
+        
+        gear_ratios_data = mechanics.get('gearRatios', {})
+        if isinstance(gear_ratios_data, dict):
+            gear_ratios = gear_ratios_data.get('ratio', [])
+        else:
+            gear_ratios = []
+        
+        if all([max_rpm > 0, drive_gear_radius > 0, side_gear_ratio > 0, gear_ratios]):
+            calc_fwd, calc_rev = calculate_speed_from_gearbox(
+                max_rpm, drive_gear_radius, main_gear_ratio, side_gear_ratio, gear_ratios
+            )
+            if calc_fwd:
+                perf.max_speed = calc_fwd
+            if calc_rev:
+                perf.max_reverse_speed = calc_rev
+    
+    # Fallback to file values if calculation failed
+    if perf.max_speed is None:
+        max_fwd_speed = data.get('maxFwdSpeed')
+        if isinstance(max_fwd_speed, (int, float)):
+            perf.max_speed = round(max_fwd_speed, 1)
+    
+    if perf.max_reverse_speed is None:
+        max_rev_speed = data.get('maxRevSpeed')
+        if isinstance(max_rev_speed, (int, float)):
+            perf.max_reverse_speed = round(max_rev_speed, 1)
+
     # Extract gun/turret stats from commonWeapons
     common_weapons = data.get('commonWeapons', {})
     weapons = common_weapons.get('Weapon', [])
@@ -411,13 +578,28 @@ def parse_tankmodel_data(data: dict[str, Any]) -> VehiclePerformance | None:
         if isinstance(speed_yaw, (int, float)):
             perf.traverse_speed = round(speed_yaw, 1)
         
-        # Stabilizer info
+        # Stabilizer info - track horizontal/vertical separately
         stabilizer = main_weapon.get('gunStabilizer', {})
         if isinstance(stabilizer, dict):
             has_horizontal = stabilizer.get('hasHorizontal', False)
             has_vertical = stabilizer.get('hasVertical', False)
-            # Consider stabilizer present if either horizontal or vertical is true
+            
+            # Determine stabilizer type
+            if has_horizontal and has_vertical:
+                perf.stabilizer_type = 'both'
+            elif has_horizontal:
+                perf.stabilizer_type = 'horizontal'
+            elif has_vertical:
+                perf.stabilizer_type = 'vertical'
+            else:
+                perf.stabilizer_type = 'none'
+            
+            # Legacy field for backward compatibility
             perf.has_stabilizer = bool(has_horizontal or has_vertical)
+        else:
+            # No stabilizer data found
+            perf.stabilizer_type = 'none'
+            perf.has_stabilizer = False
         
         # Gun limits
         limits = main_weapon.get('limits', {})
@@ -463,6 +645,25 @@ def parse_tankmodel_data(data: dict[str, Any]) -> VehiclePerformance | None:
             resolution = commander_thermal.get('resolution', [])
             if isinstance(resolution, list) and len(resolution) >= 2:
                 perf.commander_thermal_resolution = [int(resolution[0]), int(resolution[1])]
+
+    def _calc_diagonal(resolution: list[int] | None) -> float | None:
+        """Calculate diagonal pixel count from resolution [width, height]."""
+        if resolution and len(resolution) >= 2:
+            w, h = resolution
+            return round(math.sqrt(w * w + h * h), 1)
+        return None
+
+    # Ensure stabilizer_type has a default value
+    if perf.stabilizer_type is None:
+        perf.stabilizer_type = 'none'
+
+    # Calculate derived metrics for charts
+    perf.gunner_thermal_diagonal = _calc_diagonal(perf.gunner_thermal_resolution)
+    perf.commander_thermal_diagonal = _calc_diagonal(perf.commander_thermal_resolution)
+    perf.stabilizer_value = 1 if perf.has_stabilizer else 0
+    
+    if perf.elevation_range and len(perf.elevation_range) >= 2:
+        perf.elevation_range_value = round(abs(perf.elevation_range[1] - perf.elevation_range[0]), 1)
 
     return perf
 
@@ -518,8 +719,8 @@ def fetch_vehicle_performance(vehicle_id: str, copy_images: bool = True) -> Vehi
     nation = extract_nation_from_id(vehicle_id)
     vehicle_type = detect_vehicle_type(data)
 
-    # Get BR and rank from wpcost.blkx
-    br, rank = get_vehicle_br(vehicle_id)
+    # Get BR, rank, and economic type from wpcost.blkx
+    br, rank, economic_type = get_vehicle_br_and_type(vehicle_id)
     
     # Get localized name from units.csv
     localized_name = get_vehicle_localized_name(vehicle_id)
@@ -541,6 +742,7 @@ def fetch_vehicle_performance(vehicle_id: str, copy_images: bool = True) -> Vehi
         rank=rank,
         battle_rating=br,
         vehicle_type=vehicle_type,
+        economic_type=economic_type,
         performance=perf,
         image_url=image_url,
         source="datamine_tankmodel"
@@ -612,6 +814,7 @@ def vehicle_data_to_dict(v: VehicleData) -> dict[str, Any]:
         "rank": v.rank,
         "battle_rating": v.battle_rating,
         "vehicle_type": v.vehicle_type,
+        "economic_type": v.economic_type,
         "performance": {
             "horsepower": v.performance.horsepower,
             "weight": v.performance.weight,
@@ -624,10 +827,15 @@ def vehicle_data_to_dict(v: VehicleData) -> dict[str, Any]:
             "elevation_speed": v.performance.elevation_speed,
             "traverse_speed": v.performance.traverse_speed,
             "has_stabilizer": v.performance.has_stabilizer,
+            "stabilizer_type": v.performance.stabilizer_type,
             "elevation_range": v.performance.elevation_range,
             "traverse_range": v.performance.traverse_range,
             "gunner_thermal_resolution": v.performance.gunner_thermal_resolution,
             "commander_thermal_resolution": v.performance.commander_thermal_resolution,
+            "gunner_thermal_diagonal": v.performance.gunner_thermal_diagonal,
+            "commander_thermal_diagonal": v.performance.commander_thermal_diagonal,
+            "stabilizer_value": v.performance.stabilizer_value,
+            "elevation_range_value": v.performance.elevation_range_value,
         },
         "imageUrl": v.image_url,
         "source": v.source,
@@ -663,10 +871,15 @@ def save_performance_cache(vehicles: list[VehicleData], output_path: Path):
             "elevation_speed": v.performance.elevation_speed,
             "traverse_speed": v.performance.traverse_speed,
             "has_stabilizer": v.performance.has_stabilizer,
+            "stabilizer_type": v.performance.stabilizer_type,
             "elevation_range": v.performance.elevation_range,
             "traverse_range": v.performance.traverse_range,
             "gunner_thermal_resolution": v.performance.gunner_thermal_resolution,
             "commander_thermal_resolution": v.performance.commander_thermal_resolution,
+            "gunner_thermal_diagonal": v.performance.gunner_thermal_diagonal,
+            "commander_thermal_diagonal": v.performance.commander_thermal_diagonal,
+            "stabilizer_value": v.performance.stabilizer_value,
+            "elevation_range_value": v.performance.elevation_range_value,
         }
         for v in vehicles
     }

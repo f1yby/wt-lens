@@ -1,6 +1,41 @@
 // Vehicle types for Ground RB
 export type VehicleType = 'light_tank' | 'medium_tank' | 'heavy_tank' | 'tank_destroyer' | 'spaa';
 
+// Economic types for vehicles
+export type EconomicType = 'regular' | 'clan' | 'premium';
+
+/** Available metric types for vehicle performance comparison */
+export type MetricType = 
+  | 'powerToWeight' 
+  | 'maxSpeed' 
+  | 'maxReverseSpeed' 
+  | 'reloadTime' 
+  | 'penetration' 
+  | 'traverseSpeed' 
+  | 'elevationSpeed' 
+  | 'elevationMin' 
+  | 'gunnerThermal' 
+  | 'commanderThermal' 
+  | 'stabilizer';
+
+export const ECONOMIC_TYPE_COLORS: Record<EconomicType, string> = {
+  regular: '#3b82f6',  // Blue - 普通载具
+  clan: '#22c55e',     // Green - 联队载具
+  premium: '#f59e0b',  // Amber/Gold - 金币载具
+};
+
+export const ECONOMIC_TYPE_GRADIENTS: Record<EconomicType, string> = {
+  regular: 'linear-gradient(135deg, #93c5fd 0%, #60a5fa 100%)',  // Blue gradient
+  clan: 'linear-gradient(135deg, #86efac 0%, #22c55e 100%)',     // Green gradient
+  premium: 'linear-gradient(135deg, #fcd34d 0%, #f59e0b 100%)',  // Gold gradient
+};
+
+export const ECONOMIC_TYPE_LABELS: Record<EconomicType, string> = {
+  regular: '普通载具',
+  clan: '联队载具',
+  premium: '金币载具',
+};
+
 export type Nation = 
   | 'usa' 
   | 'germany' 
@@ -21,6 +56,7 @@ export interface Vehicle {
   rank: number;
   battleRating: number;
   vehicleType: VehicleType;
+  economicType: EconomicType;
   // Performance metrics from datamine (some fields may be missing)
   performance: {
     horsepower: number;
@@ -35,12 +71,18 @@ export interface Vehicle {
     elevationSpeed: number;
     traverseSpeed: number;
     hasStabilizer: boolean;
+    stabilizerType: 'none' | 'horizontal' | 'vertical' | 'both';
     // Gun limits
     elevationRange: [number, number];
     traverseRange: [number, number];
     // Thermal vision
     gunnerThermalResolution: [number, number];
     commanderThermalResolution: [number, number];
+    // Calculated metrics for charts
+    gunnerThermalDiagonal?: number;
+    commanderThermalDiagonal?: number;
+    stabilizerValue?: number;
+    elevationRangeValue?: number;
   };
   // Matchmaking stats from StatShark (may be missing if no stats available)
   stats?: {
@@ -69,7 +111,7 @@ export interface VehicleDetail extends Vehicle {
 }
 
 export interface DistributionData {
-  metric: 'powerToWeight' | 'maxReverseSpeed' | 'reloadTime' | 'penetration';
+  metric: MetricType;
   bins: {
     range: string;
     min?: number;
