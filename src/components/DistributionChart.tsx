@@ -30,6 +30,7 @@ const METRIC_COLORS: Record<MetricType, string> = {
   penetration: '#ef4444',
   gunnerThermal: '#fbbf24',
   commanderThermal: '#fbbf24',
+  stabilizer: '#8b5cf6',
 };
 
 /** Display name mapping for each metric type */
@@ -44,6 +45,7 @@ const METRIC_NAMES: Record<MetricType, string> = {
   penetration: '穿深',
   gunnerThermal: '炮手热成像',
   commanderThermal: '车长热成像',
+  stabilizer: '稳定器',
 };
 
 // Distance threshold for clustering (in data units)
@@ -55,8 +57,8 @@ interface ScatterPoint {
   x: number;
   y: number;
   name: string;
-  isCurrent: boolean;
-  vehicleId: string;
+  isCurrent?: boolean;
+  vehicleId?: string;
   dotColor?: string;
 }
 
@@ -71,7 +73,7 @@ export default function DistributionChart({ data, title, unit }: DistributionCha
     name: bin.range,
     isCurrent: bin.isCurrent,
     vehicleId: bin.vehicleId,
-    dotColor: bin.dotColor,
+    dotColor: (bin as any).dotColor,
   })), [data.bins]);
 
   // Separate current vehicle from others
