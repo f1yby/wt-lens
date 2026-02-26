@@ -1,0 +1,7 @@
+[submodule "datamine"]
+	path = data/datamine
+	url = https://github.com/gszabi99/War-Thunder-Datamine.git
+	shallow = true
+[submodule "data/scripts/data/datamine"]
+	path = data/scripts/data/datamine
+	url = https://github.com/gszabi99/War-Thunder-Datamine.git
