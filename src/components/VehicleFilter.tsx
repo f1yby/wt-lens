@@ -33,12 +33,27 @@ export default function VehicleFilter({
   selectedType,
   onTypeChange,
 }: VehicleFilterProps) {
-  const handleNationToggle = (nation: Nation) => {
-    if (selectedNations.includes(nation)) {
-      onNationsChange(selectedNations.filter(n => n !== nation));
-    } else {
-      onNationsChange([...selectedNations, nation]);
+  const handleNationClick = (nationId: Nation) => {
+    // 未选择任何国家时 -> 单选该国家
+    if (selectedNations.length === 0) {
+      onNationsChange([nationId]);
+      return;
     }
+    
+    // 已选择该国家且是唯一选择 -> 全选（清空选择）
+    if (selectedNations.length === 1 && selectedNations[0] === nationId) {
+      onNationsChange([]);
+      return;
+    }
+    
+    // 已选择该国家但不是唯一选择 -> 取消选择
+    if (selectedNations.includes(nationId)) {
+      onNationsChange(selectedNations.filter(n => n !== nationId));
+      return;
+    }
+    
+    // 未选择该国家 -> 添加到选择
+    onNationsChange([...selectedNations, nationId]);
   };
 
   const handleSelectAllNations = () => {
@@ -86,34 +101,28 @@ export default function VehicleFilter({
                 key={nation.id}
                 value={nation.id}
                 selected={isSelected}
-                onChange={() => handleNationToggle(nation.id)}
+                onChange={() => handleNationClick(nation.id)}
                 sx={{
                   minWidth: 0,
-                  width: 44,
-                  height: 32,
+                  width: 48,
+                  height: 36,
                   borderRadius: 1,
-                  border: '1px solid #d4d4d4',
-                  backgroundColor: isSelected ? 'rgba(22, 163, 74, 0.2)' : '#ffffff',
+                  border: isSelected ? '3px solid #16a34a' : '1px solid #d4d4d4',
                   backgroundImage: `url(${nation.flagImage})`,
                   backgroundSize: 'cover',
                   backgroundPosition: 'center',
                   textTransform: 'none',
                   position: 'relative',
                   overflow: 'hidden',
+                  boxShadow: isSelected ? '0 2px 8px rgba(22, 163, 74, 0.4)' : '0 1px 3px rgba(0,0,0,0.1)',
+                  transition: 'all 0.15s ease',
                   '&:hover': {
-                    backgroundColor: isSelected ? 'rgba(22, 163, 74, 0.3)' : 'rgba(0, 0, 0, 0.1)',
+                    transform: 'translateY(-1px)',
+                    boxShadow: isSelected ? '0 2px 8px rgba(22, 163, 74, 0.5)' : '0 4px 12px rgba(0,0,0,0.2)',
                   },
                   '&.Mui-selected': {
-                    backgroundColor: 'rgba(22, 163, 74, 0.2)',
-                    borderColor: '#16a34a',
-                    borderWidth: 2,
-                  },
-                  '&::after': {
-                    content: '""',
-                    position: 'absolute',
-                    inset: 0,
-                    backgroundColor: isSelected ? 'rgba(22, 163, 74, 0.3)' : 'transparent',
-                    transition: 'background-color 0.2s',
+                    border: '3px solid #16a34a',
+                    boxShadow: '0 2px 8px rgba(22, 163, 74, 0.4)',
                   },
                 }}
               >
@@ -124,11 +133,11 @@ export default function VehicleFilter({
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    backgroundColor: 'rgba(0, 0, 0, 0.4)',
-                    opacity: isSelected ? 1 : 0,
-                    transition: 'opacity 0.2s',
+                    backgroundColor: isSelected ? 'rgba(22, 163, 74, 0.15)' : 'rgba(0, 0, 0, 0.35)',
+                    opacity: 1,
+                    transition: 'all 0.2s',
                     '&:hover': {
-                      opacity: 1,
+                      backgroundColor: isSelected ? 'rgba(22, 163, 74, 0.1)' : 'rgba(0, 0, 0, 0.25)',
                     },
                   }}
                 >
@@ -137,7 +146,7 @@ export default function VehicleFilter({
                       color: '#ffffff',
                       fontSize: '0.75rem',
                       fontWeight: 600,
-                      textShadow: '0 1px 2px rgba(0,0,0,0.8)',
+                      textShadow: '0 1px 3px rgba(0,0,0,0.9)',
                     }}
                   >
                     {nation.nameZh}

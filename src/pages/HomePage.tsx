@@ -10,7 +10,7 @@ import { NATIONS } from '../types';
 export default function HomePage() {
   const [vehicles, setVehicles] = useState<Vehicle[]>([]);
   const [loading, setLoading] = useState(true);
-  const [selectedNations, setSelectedNations] = useState<Nation[]>(NATIONS.map(n => n.id));
+  const [selectedNations, setSelectedNations] = useState<Nation[]>([]);
   const [brRange, setBrRange] = useState<[number, number]>([1.0, 12.7]);
   const [selectedType, setSelectedType] = useState<VehicleType | 'all'>('all');
 
@@ -23,7 +23,8 @@ export default function HomePage() {
 
   const filteredVehicles = useMemo(() => {
     return vehicles.filter(vehicle => {
-      const nationMatch = selectedNations.includes(vehicle.nation);
+      // 未选择任何国家 = 显示所有国家
+      const nationMatch = selectedNations.length === 0 || selectedNations.includes(vehicle.nation);
       const brMatch = vehicle.battleRating >= brRange[0] && vehicle.battleRating <= brRange[1];
       const typeMatch = selectedType === 'all' || vehicle.vehicleType === selectedType;
       return nationMatch && brMatch && typeMatch;
