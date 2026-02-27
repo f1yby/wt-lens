@@ -62,7 +62,7 @@ let mergedVehicles: Vehicle[] | null = null;
  */
 async function loadStatsData(): Promise<StatSharkEntry[]> {
   if (statsData) return statsData;
-  const response = await fetch('/wt-lens/data/processed/stats.json');
+  const response = await fetch('/wt-lens/data/stats.json');
   statsData = await response.json();
   return statsData!;
 }
@@ -72,7 +72,7 @@ async function loadStatsData(): Promise<StatSharkEntry[]> {
  */
 async function loadDatamineData(): Promise<DatamineEntry[]> {
   if (datamineData) return datamineData;
-  const response = await fetch('/wt-lens/data/processed/datamine.json');
+  const response = await fetch('/wt-lens/data/datamine.json');
   datamineData = await response.json();
   return datamineData!;
 }
