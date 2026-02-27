@@ -9,7 +9,8 @@ import {
   ResponsiveContainer,
   ZAxis,
 } from 'recharts';
-import { useState, useCallback, useMemo } from 'react';
+import { useState, useCallback, useMemo, useRef, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import type { DistributionData, MetricType } from '../types';
 
 interface DistributionChartProps {
@@ -64,7 +65,12 @@ interface ScatterPoint {
 
 export default function DistributionChart({ data, title, unit }: DistributionChartProps) {
   const color = METRIC_COLORS[data.metric] || '#4ade80';
+  const navigate = useNavigate();
   const [hoveredPoint, setHoveredPoint] = useState<ScatterPoint | null>(null);
+  const [lockedPoint, setLockedPoint] = useState<ScatterPoint | null>(null);
+  const [lockedTooltipPos, setLockedTooltipPos] = useState<{ x: number; y: number } | null>(null);
+  const chartRef = useRef<HTMLDivElement>(null);
+  const chartAreaRef = useRef<HTMLDivElement>(null);
 
   // Transform data for scatter chart: x=metric value, y=battles
   const scatterData = useMemo(() => data.bins.map((bin) => ({
@@ -120,13 +126,62 @@ export default function DistributionChart({ data, title, unit }: DistributionCha
     return Math.round((battlesLessOrEqual / totalBattles) * 100);
   }, [scatterData]);
 
-  // Custom Tooltip that shows clustered vehicles
-  const CustomTooltip = ({ active, payload }: any) => {
-    // Get the hovered point from payload or use the tracked state
-    const point = payload && payload[0]?.payload as ScatterPoint;
-    const targetPoint = point || hoveredPoint;
+  // Handle point click to lock/unlock tooltip
+  // recharts Scatter onClick signature: (data, index, event)
+  const handlePointClick = useCallback((point: ScatterPoint, _index: number, event: any) => {
+    // event from recharts can be a React SyntheticEvent or native MouseEvent
+    const nativeEvent = event?.nativeEvent || event;
+    nativeEvent?.stopPropagation?.();
     
-    if (!active || !targetPoint) return null;
+    setLockedPoint(prev => {
+      if (prev?.vehicleId === point.vehicleId) {
+        setLockedTooltipPos(null);
+        return null;
+      }
+      // Calculate tooltip position relative to chart area
+      if (chartAreaRef.current) {
+        const rect = chartAreaRef.current.getBoundingClientRect();
+        const clientX = nativeEvent?.clientX ?? 0;
+        const clientY = nativeEvent?.clientY ?? 0;
+        setLockedTooltipPos({
+          x: clientX - rect.left,
+          y: clientY - rect.top,
+        });
+      }
+      return point;
+    });
+  }, []);
+
+  // Handle click outside to unlock
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (chartRef.current && !chartRef.current.contains(event.target as Node)) {
+        setLockedPoint(null);
+        setLockedTooltipPos(null);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+
+  // Handle vehicle name click to navigate
+  const handleVehicleClick = useCallback((vehicleId: string) => {
+    navigate(`/vehicle/${vehicleId}`);
+  }, [navigate]);
+
+  // Custom Tooltip that shows clustered vehicles (only for hover, not locked)
+  const CustomTooltip = ({ active, payload }: any) => {
+    // When locked, don't render here - the overlay handles it
+    if (lockedPoint) return null;
+    
+    const pointFromPayload = payload && payload[0]?.payload as ScatterPoint;
+    const targetPoint = hoveredPoint || pointFromPayload;
+    
+    if (!targetPoint) return null;
+    if (!active) return null;
     
     const nearbyPoints = findNearbyPoints(targetPoint);
     const hasMultiple = nearbyPoints.length > 1;
@@ -149,7 +204,7 @@ export default function DistributionChart({ data, title, unit }: DistributionCha
           <Box sx={{ mb: 1 }}>
             <Chip 
               size="small" 
-              label={`该区域有 ${nearbyPoints.length} 个载具`}
+              label={`该区域有 ${nearbyPoints.length} 个载具 (点击固定)`}
               sx={{ 
                 backgroundColor: 'rgba(249, 115, 22, 0.2)', 
                 color: '#f97316',
@@ -164,11 +219,11 @@ export default function DistributionChart({ data, title, unit }: DistributionCha
           const percentile = calculatePercentile(p.x);
           return (
             <Box key={p.vehicleId}>
-              {index > 0 && <Divider sx={{ my: 1, borderColor: '#333' }} />}
+              {index > 0 && <Divider sx={{ my: 1, borderColor: '#e5e5e5' }} />}
               <Box sx={{ 
                 p: 0.5, 
                 borderRadius: 0.5,
-                backgroundColor: p.isCurrent ? 'rgba(249, 115, 22, 0.15)' : 'transparent',
+                backgroundColor: p.isCurrent ? 'rgba(249, 115, 22, 0.1)' : 'transparent',
               }}>
                 <Typography 
                   variant="body2" 
@@ -212,15 +267,119 @@ export default function DistributionChart({ data, title, unit }: DistributionCha
     );
   };
 
+  // Locked tooltip overlay content (rendered outside recharts)
+  const LockedTooltipOverlay = () => {
+    if (!lockedPoint || !lockedTooltipPos) return null;
+    
+    const nearbyPoints = findNearbyPoints(lockedPoint);
+    
+    return (
+      <Box
+        onMouseDown={(e) => e.stopPropagation()}
+        onClick={(e) => e.stopPropagation()}
+        sx={{
+          position: 'absolute',
+          left: lockedTooltipPos.x + 15,
+          top: lockedTooltipPos.y - 10,
+          zIndex: 1000,
+          pointerEvents: 'auto',
+          backgroundColor: '#ffffff',
+          border: '2px solid #f97316',
+          borderRadius: 1,
+          p: 1.5,
+          minWidth: 220,
+          maxWidth: 320,
+          maxHeight: 280,
+          overflow: 'auto',
+          boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
+        }}
+      >
+        <Box sx={{ mb: 1 }}>
+          <Chip 
+            size="small" 
+            label="已固定 - 点击外部解锁"
+            sx={{ 
+              backgroundColor: 'rgba(249, 115, 22, 0.15)', 
+              color: '#f97316',
+              fontSize: '0.7rem',
+              height: 20,
+              fontWeight: 500,
+            }}
+          />
+        </Box>
+        
+        {nearbyPoints.map((p, index) => {
+          const percentile = calculatePercentile(p.x);
+          return (
+            <Box key={p.vehicleId}>
+              {index > 0 && <Divider sx={{ my: 1, borderColor: '#e5e5e5' }} />}
+              <Box sx={{ 
+                p: 0.5, 
+                borderRadius: 0.5,
+                backgroundColor: p.isCurrent ? 'rgba(249, 115, 22, 0.1)' : 'transparent',
+              }}>
+                <Typography 
+                  variant="body2" 
+                  onClick={() => handleVehicleClick(p.vehicleId!)}
+                  sx={{ 
+                    color: p.isCurrent ? '#f97316' : '#171717', 
+                    fontWeight: p.isCurrent ? 600 : 500,
+                    fontSize: '0.8rem',
+                    cursor: 'pointer',
+                    textDecoration: 'underline',
+                    textDecorationColor: 'transparent',
+                    transition: 'all 0.2s',
+                    '&:hover': {
+                      textDecorationColor: p.isCurrent ? '#f97316' : '#171717',
+                    },
+                  }}
+                >
+                  {p.isCurrent ? '⭐ ' : ''}{p.name}
+                </Typography>
+                <Box sx={{ display: 'flex', justifyContent: 'space-between', mt: 0.5 }}>
+                  <Typography variant="caption" sx={{ color: '#737373', fontSize: '0.7rem' }}>
+                    {METRIC_NAMES[data.metric]}:
+                  </Typography>
+                  <Typography variant="caption" sx={{ color: '#171717', fontSize: '0.7rem', fontWeight: 500 }}>
+                    {p.x.toFixed(1)} {unit}
+                  </Typography>
+                </Box>
+                <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
+                  <Typography variant="caption" sx={{ color: '#737373', fontSize: '0.7rem' }}>
+                    出场数:
+                  </Typography>
+                  <Typography variant="caption" sx={{ color: '#171717', fontSize: '0.7rem', fontWeight: 500 }}>
+                    {p.y.toLocaleString()}
+                  </Typography>
+                </Box>
+                <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
+                  <Typography variant="caption" sx={{ color: '#737373', fontSize: '0.7rem' }}>
+                    出场占比 (≤该值):
+                  </Typography>
+                  <Typography variant="caption" sx={{ color: '#171717', fontSize: '0.7rem', fontWeight: 600 }}>
+                    {percentile}%
+                  </Typography>
+                </Box>
+              </Box>
+            </Box>
+          );
+        })}
+      </Box>
+    );
+  };
+
   return (
     <Paper
+      ref={chartRef}
       elevation={1}
+      onClick={() => { setLockedPoint(null); setLockedTooltipPos(null); }}
       sx={{
         backgroundColor: '#ffffff',
         border: '1px solid #e5e5e5',
         borderRadius: 2,
         p: 2,
         height: '100%',
+        cursor: 'default',
       }}
     >
       <Box sx={{ mb: 2 }}>
@@ -232,7 +391,7 @@ export default function DistributionChart({ data, title, unit }: DistributionCha
         </Typography>
       </Box>
       
-      <Box sx={{ height: 200 }}>
+      <Box sx={{ height: 200, position: 'relative' }} ref={chartAreaRef} onClick={(e) => e.stopPropagation()}>
         <ResponsiveContainer width="100%" height="100%">
           <ScatterChart margin={{ top: 10, right: 10, left: 0, bottom: 20 }}>
             <CartesianGrid strokeDasharray="3 3" stroke="#333" />
@@ -265,15 +424,20 @@ export default function DistributionChart({ data, title, unit }: DistributionCha
               data={otherVehicles}
               onMouseEnter={(data) => setHoveredPoint(data as ScatterPoint)}
               onMouseLeave={() => setHoveredPoint(null)}
+              onClick={(data: any, index: any, event: any) => handlePointClick(data as ScatterPoint, index, event)}
               shape={(props: any) => {
                 const { cx, cy, payload } = props;
                 const dotColor = payload?.dotColor || color;
+                const isLocked = lockedPoint?.vehicleId === payload?.vehicleId;
                 return (
                   <circle
                     cx={cx}
                     cy={cy}
-                    r={4}
+                    r={isLocked ? 6 : 4}
                     fill={dotColor}
+                    stroke={isLocked ? '#f97316' : 'transparent'}
+                    strokeWidth={isLocked ? 2 : 0}
+                    style={{ cursor: 'pointer' }}
                   />
                 );
               }}
@@ -285,9 +449,11 @@ export default function DistributionChart({ data, title, unit }: DistributionCha
                 data={[currentVehicle]}
                 onMouseEnter={(data) => setHoveredPoint(data as ScatterPoint)}
                 onMouseLeave={() => setHoveredPoint(null)}
+                onClick={(data: any, index: any, event: any) => handlePointClick(data as ScatterPoint, index, event)}
                 shape={(props: any) => {
-                  const { cx, cy } = props;
-                  const size = 8; // Star size
+                  const { cx, cy, payload } = props;
+                  const size = lockedPoint?.vehicleId === payload?.vehicleId ? 10 : 8;
+                  const strokeWidth = lockedPoint?.vehicleId === payload?.vehicleId ? 2 : 1;
                   // Calculate 5-point star coordinates
                   const starPoints = [];
                   for (let i = 0; i < 10; i++) {
@@ -300,7 +466,8 @@ export default function DistributionChart({ data, title, unit }: DistributionCha
                       points={starPoints.join(' ')}
                       fill="#f97316"
                       stroke="#fff"
-                      strokeWidth={1}
+                      strokeWidth={strokeWidth}
+                      style={{ cursor: 'pointer' }}
                     />
                   );
                 }}
@@ -308,6 +475,7 @@ export default function DistributionChart({ data, title, unit }: DistributionCha
             )}
           </ScatterChart>
         </ResponsiveContainer>
+        <LockedTooltipOverlay />
       </Box>
       
       {/* Gradient legend */}
