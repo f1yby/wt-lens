@@ -152,12 +152,12 @@ export default function VehicleFilter({
 }
 
 // BR 网格选择器组件
-interface BRGridSelectorProps {
+export interface BRGridSelectorProps {
   brRange: [number, number];
   onBrRangeChange: (range: [number, number]) => void;
 }
 
-function BRGridSelector({ brRange, onBrRangeChange }: BRGridSelectorProps) {
+export function BRGridSelector({ brRange, onBrRangeChange }: BRGridSelectorProps) {
   const [isDragging, setIsDragging] = useState(false);
   const [dragStart, setDragStart] = useState<number | null>(null);
   const [dragEnd, setDragEnd] = useState<number | null>(null);

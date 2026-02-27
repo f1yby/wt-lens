@@ -1,5 +1,5 @@
 import { useParams, useNavigate } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import {
   Container,
   Typography,
@@ -8,14 +8,17 @@ import {
   Paper,
   Button,
   CircularProgress,
+  ToggleButton,
+  Stack,
 } from '@mui/material';
-import { ArrowBack, Speed, AccessTime, ExpandLess, SyncAlt, GpsFixed, Visibility, FastForward, FastRewind, RotateRight, FlashOn, SvgIconComponent } from '@mui/icons-material';
+import { ArrowBack, Speed, AccessTime, ExpandLess, SyncAlt, GpsFixed, Visibility, FastForward, FastRewind, RotateRight, FlashOn, OpenInNew, SvgIconComponent } from '@mui/icons-material';
 import Navbar from '../components/Navbar';
 import DistributionChart from '../components/DistributionChart';
 import StabilizerScatterChart from '../components/StabilizerScatterChart';
+import { BRGridSelector } from '../components/VehicleFilter';
 import { loadVehicles, sampleVehicleDetail, sampleDistributions } from '../data/vehicles';
-import { NATIONS, VEHICLE_TYPE_LABELS, ECONOMIC_TYPE_GRADIENTS, Nation } from '../types';
-import type { Vehicle, MetricType } from '../types';
+import { NATIONS, VEHICLE_TYPE_LABELS, BATTLE_RATINGS, ECONOMIC_TYPE_GRADIENTS, Nation } from '../types';
+import type { Vehicle, MetricType, VehicleType } from '../types';
 
 // Get base URL from Vite env
 const BASE_URL = import.meta.env.BASE_URL || '/';
@@ -48,29 +51,46 @@ function getMetricValue(vehicle: Vehicle, metric: MetricType): number {
   }
 }
 
+/** Filter options for comparison charts */
+interface ComparisonFilter {
+  vehicleTypes?: VehicleType[];
+  brMin?: number;
+  brMax?: number;
+}
+
 /** Generates scatter data for vehicle comparison charts */
-function generateVehicleComparisonData(vehicleId: string, metric: MetricType, allVehicles: Vehicle[]) {
+function generateVehicleComparisonData(vehicleId: string, metric: MetricType, allVehicles: Vehicle[], filter?: ComparisonFilter) {
   const vehicle = allVehicles.find(v => v.id === vehicleId);
   if (!vehicle) return null;
 
   const targetBR = vehicle.battleRating;
-  const brMin = targetBR - 1.0;
-  const brMax = targetBR + 1.0;
+  const brMin = filter?.brMin ?? (targetBR - 1.0);
+  const brMax = filter?.brMax ?? (targetBR + 1.0);
+  const brSpan = Math.max(brMax - brMin, 0.1);
 
   const value = getMetricValue(vehicle, metric);
 
-  // Filter vehicles within BR ±1.0 range with valid metric
+  // Filter vehicles within BR range with valid metric (always include current vehicle)
   const filteredVehicles = allVehicles.filter(v => {
+    // Always include current vehicle regardless of filters
+    if (v.id === vehicleId) {
+      return getMetricValue(v, metric) > 0;
+    }
     const metricValue = getMetricValue(v, metric);
-    return v.battleRating >= brMin && v.battleRating <= brMax && metricValue > 0;
+    if (metricValue <= 0) return false;
+    if (v.battleRating < brMin || v.battleRating > brMax) return false;
+    if (filter?.vehicleTypes && filter.vehicleTypes.length > 0 && !filter.vehicleTypes.includes(v.vehicleType)) return false;
+    return true;
   });
 
   if (filteredVehicles.length === 0) return null;
 
-  // Calculate BR gradient color: BR-1.0 (blue, 240°) -> BR 0 (green, 120°) -> BR+1.0 (red, 0°)
+  // Calculate BR gradient color based on distance from center of range
+  const brCenter = (brMin + brMax) / 2;
   const getBRGradientColor = (brDiff: number): string => {
-    const clampedDiff = Math.max(-1.0, Math.min(1.0, brDiff));
-    const hue = 120 - (clampedDiff * 120);
+    const halfSpan = brSpan / 2;
+    const clampedDiff = Math.max(-halfSpan, Math.min(halfSpan, brDiff));
+    const hue = halfSpan > 0 ? 120 - ((clampedDiff / halfSpan) * 120) : 120;
     return `hsl(${hue}, 75%, 50%)`;
   };
 
@@ -121,33 +141,39 @@ function getStatsMetricValue(vehicle: Vehicle, metric: StatsMetricType): number 
 function generateStatsComparisonData(
   vehicleId: string, 
   metric: StatsMetricType, 
-  allVehicles: Vehicle[]
+  allVehicles: Vehicle[],
+  filter?: ComparisonFilter,
 ) {
   const vehicle = allVehicles.find(v => v.id === vehicleId);
   if (!vehicle) return null;
 
   const targetBR = vehicle.battleRating;
-  const brMin = targetBR - 1.0;
-  const brMax = targetBR + 1.0;
+  const brMin = filter?.brMin ?? (targetBR - 1.0);
+  const brMax = filter?.brMax ?? (targetBR + 1.0);
+  const brSpan = Math.max(brMax - brMin, 0.1);
 
   const value = getStatsMetricValue(vehicle, metric);
 
-  // Filter vehicles within BR ±1.0 range with valid stats data
+  // Filter vehicles within BR range with valid stats data (always include current vehicle)
   const filteredVehicles = allVehicles.filter(v => {
+    // Always include current vehicle regardless of filters
+    if (v.id === vehicleId) {
+      return v.stats && v.stats.battles > 0 && getStatsMetricValue(v, metric) > 0;
+    }
     const metricValue = getStatsMetricValue(v, metric);
-    return v.battleRating >= brMin && 
-           v.battleRating <= brMax && 
-           v.stats && 
-           v.stats.battles > 0 &&
-           metricValue > 0;
+    if (v.battleRating < brMin || v.battleRating > brMax) return false;
+    if (!v.stats || v.stats.battles <= 0 || metricValue <= 0) return false;
+    if (filter?.vehicleTypes && filter.vehicleTypes.length > 0 && !filter.vehicleTypes.includes(v.vehicleType)) return false;
+    return true;
   });
 
   if (filteredVehicles.length === 0) return null;
 
-  // Calculate BR gradient color: BR-1.0 (blue, 240°) -> BR 0 (green, 120°) -> BR+1.0 (red, 0°)
+  // Calculate BR gradient color
+  const halfSpan = brSpan / 2;
   const getBRGradientColor = (brDiff: number): string => {
-    const clampedDiff = Math.max(-1.0, Math.min(1.0, brDiff));
-    const hue = 120 - (clampedDiff * 120);
+    const clampedDiff = Math.max(-halfSpan, Math.min(halfSpan, brDiff));
+    const hue = halfSpan > 0 ? 120 - ((clampedDiff / halfSpan) * 120) : 120;
     return `hsl(${hue}, 75%, 50%)`;
   };
 
@@ -442,6 +468,9 @@ export default function VehicleDetailPage() {
   const navigate = useNavigate();
   const [vehicles, setVehicles] = useState<Vehicle[]>([]);
   const [loading, setLoading] = useState(true);
+  const [selectedTypes, setSelectedTypes] = useState<VehicleType[]>([]);
+  const [brRange, setBrRange] = useState<[number, number] | null>(null);
+  const [typesInitialized, setTypesInitialized] = useState(false);
 
   useEffect(() => {
     loadVehicles().then(data => {
@@ -452,6 +481,71 @@ export default function VehicleDetailPage() {
 
   const vehicle = vehicles.find(v => v.id === id);
   const nation = vehicle ? NATIONS.find(n => n.id === vehicle.nation) : null;
+
+  // Default selectedTypes to current vehicle's type
+  useEffect(() => {
+    if (vehicle && !typesInitialized) {
+      setSelectedTypes([vehicle.vehicleType]);
+      setTypesInitialized(true);
+    }
+  }, [vehicle, typesInitialized]);
+
+  // Reset filter state when vehicle ID changes
+  useEffect(() => {
+    setTypesInitialized(false);
+    setBrRange(null);
+  }, [id]);
+
+  // Default BR range: vehicle BR ± 1.0, snapped to BATTLE_RATINGS
+  const effectiveBrRange: [number, number] = useMemo(() => {
+    if (brRange) return brRange;
+    if (!vehicle) return [1.0, 12.7];
+    const br = vehicle.battleRating;
+    const lo = BATTLE_RATINGS.filter(b => b >= br - 1.0)[0] ?? 1.0;
+    const hi = [...BATTLE_RATINGS].reverse().find(b => b <= br + 1.0) ?? 12.7;
+    return [lo, hi];
+  }, [brRange, vehicle]);
+
+  const filter: ComparisonFilter = useMemo(() => ({
+    vehicleTypes: selectedTypes,
+    brMin: effectiveBrRange[0],
+    brMax: effectiveBrRange[1],
+  }), [selectedTypes, effectiveBrRange]);
+
+  const comparisons = useMemo(() => {
+    if (!vehicle) return null;
+    return {
+      powerToWeight: generateVehicleComparisonData(vehicle.id, 'powerToWeight', vehicles, filter),
+      maxSpeed: generateVehicleComparisonData(vehicle.id, 'maxSpeed', vehicles, filter),
+      maxReverseSpeed: generateVehicleComparisonData(vehicle.id, 'maxReverseSpeed', vehicles, filter),
+      reloadTime: generateVehicleComparisonData(vehicle.id, 'reloadTime', vehicles, filter),
+      penetration: generateVehicleComparisonData(vehicle.id, 'penetration', vehicles, filter),
+      traverseSpeed: generateVehicleComparisonData(vehicle.id, 'traverseSpeed', vehicles, filter),
+      elevationSpeed: generateVehicleComparisonData(vehicle.id, 'elevationSpeed', vehicles, filter),
+      elevationMin: generateVehicleComparisonData(vehicle.id, 'elevationMin', vehicles, filter),
+      gunnerThermal: generateVehicleComparisonData(vehicle.id, 'gunnerThermal', vehicles, filter),
+      commanderThermal: generateVehicleComparisonData(vehicle.id, 'commanderThermal', vehicles, filter),
+    };
+  }, [vehicle, vehicles, filter]);
+
+  const statsComparisons = useMemo(() => {
+    if (!vehicle) return null;
+    return {
+      avgKills: generateStatsComparisonData(vehicle.id, 'avgKills', vehicles, filter),
+      winRate: generateStatsComparisonData(vehicle.id, 'winRate', vehicles, filter),
+    };
+  }, [vehicle, vehicles, filter]);
+
+  const stabilizerComparisonVehicles = useMemo(() => {
+    if (!vehicle) return [];
+    return vehicles.filter(v => {
+      // Always include current vehicle
+      if (v.id === vehicle.id) return true;
+      if (v.battleRating < effectiveBrRange[0] || v.battleRating > effectiveBrRange[1]) return false;
+      if (selectedTypes.length > 0 && !selectedTypes.includes(v.vehicleType)) return false;
+      return true;
+    });
+  }, [vehicle, vehicles, effectiveBrRange, selectedTypes]);
 
   if (loading) {
     return (
@@ -483,31 +577,6 @@ export default function VehicleDetailPage() {
       </Box>
     );
   }
-
-  const comparisons = {
-    powerToWeight: generateVehicleComparisonData(vehicle.id, 'powerToWeight', vehicles),
-    maxSpeed: generateVehicleComparisonData(vehicle.id, 'maxSpeed', vehicles),
-    maxReverseSpeed: generateVehicleComparisonData(vehicle.id, 'maxReverseSpeed', vehicles),
-    reloadTime: generateVehicleComparisonData(vehicle.id, 'reloadTime', vehicles),
-    penetration: generateVehicleComparisonData(vehicle.id, 'penetration', vehicles),
-    traverseSpeed: generateVehicleComparisonData(vehicle.id, 'traverseSpeed', vehicles),
-    elevationSpeed: generateVehicleComparisonData(vehicle.id, 'elevationSpeed', vehicles),
-    elevationMin: generateVehicleComparisonData(vehicle.id, 'elevationMin', vehicles),
-    gunnerThermal: generateVehicleComparisonData(vehicle.id, 'gunnerThermal', vehicles),
-    commanderThermal: generateVehicleComparisonData(vehicle.id, 'commanderThermal', vehicles),
-  };
-
-  // Generate stats comparison data (KR and winRate)
-  const statsComparisons = {
-    avgKills: generateStatsComparisonData(vehicle.id, 'avgKills', vehicles),
-    winRate: generateStatsComparisonData(vehicle.id, 'winRate', vehicles),
-  };
-
-  // Get vehicles in same BR range for stabilizer comparison
-  const targetBR = vehicle.battleRating;
-  const stabilizerComparisonVehicles = vehicles.filter(v =>
-    v.battleRating >= targetBR - 1.0 && v.battleRating <= targetBR + 1.0
-  );
 
   return (
     <Box sx={{ minHeight: '100vh', backgroundColor: '#f5f5f5' }}>
@@ -612,16 +681,33 @@ export default function VehicleDetailPage() {
                 {VEHICLE_TYPE_LABELS[vehicle.vehicleType]}
               </Typography>
 
-              <Typography sx={{
-                color: '#fff',
-                fontWeight: 700,
-                fontSize: { xs: '1.4rem', sm: '1.8rem', md: '2.2rem', lg: '2.6rem' },
-                lineHeight: 1.1,
-                mb: { xs: 1, md: 1.5 },
-                textShadow: '0 2px 12px rgba(0,0,0,0.3)',
-              }}>
-                {vehicle.localizedName}
-              </Typography>
+              <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, justifyContent: { xs: 'center', md: 'flex-start' }, mb: { xs: 1, md: 1.5 } }}>
+                <Typography sx={{
+                  color: '#fff',
+                  fontWeight: 700,
+                  fontSize: { xs: '1.4rem', sm: '1.8rem', md: '2.2rem', lg: '2.6rem' },
+                  lineHeight: 1.1,
+                  textShadow: '0 2px 12px rgba(0,0,0,0.3)',
+                }}>
+                  {vehicle.localizedName}
+                </Typography>
+                <Box
+                  component="a"
+                  href={`https://wiki.warthunder.com/unit/${vehicle.id}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  sx={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    color: 'rgba(255,255,255,0.7)',
+                    transition: 'color 0.2s',
+                    '&:hover': { color: '#fff' },
+                    flexShrink: 0,
+                  }}
+                >
+                  <OpenInNew sx={{ fontSize: { xs: 16, sm: 18, md: 22 } }} />
+                </Box>
+              </Box>
 
               {/* Battle Stats */}
               {vehicle.stats && (
@@ -638,7 +724,7 @@ export default function VehicleDetailPage() {
                       value: `${vehicle.stats.winRate.toFixed(1)}%`,
                       color: vehicle.stats.winRate > 50 ? '#86efac' : vehicle.stats.winRate < 48 ? '#fca5a5' : '#fde047',
                     },
-                    { label: '场均击毁', value: vehicle.stats.avgKills.toFixed(1), color: '#fff' },
+                    { label: 'KR', value: vehicle.stats.avgKills.toFixed(1), color: '#fff' },
                     { label: 'BR', value: vehicle.battleRating.toFixed(1), color: '#86efac' },
                   ].map((stat) => (
                     <Box key={stat.label}>
@@ -761,25 +847,93 @@ export default function VehicleDetailPage() {
         <Typography variant="h5" sx={{ color: '#171717', fontWeight: 600, mb: 2 }}>
           同权重载具对比
         </Typography>
+
+        {/* Filter Controls */}
+        <Paper elevation={0} sx={{ p: 2, mb: 2, border: '1px solid #e5e5e5', borderRadius: 2 }}>
+          <Stack spacing={2}>
+            {/* Vehicle Type Filter */}
+            <Box>
+              <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 1 }}>
+                <Typography variant="subtitle1" sx={{ color: '#171717', fontWeight: 600 }}>
+                  载具类型
+                </Typography>
+                <Typography
+                  variant="caption"
+                  sx={{
+                    color: '#16a34a',
+                    cursor: 'pointer',
+                    '&:hover': { textDecoration: 'underline' },
+                  }}
+                  onClick={() => setSelectedTypes([])}
+                >
+                  {selectedTypes.length === 0 ? '已全选' : '全选'}
+                </Typography>
+              </Box>
+              <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
+                {(Object.entries(VEHICLE_TYPE_LABELS) as [VehicleType, string][]).map(([type, label]) => {
+                  const isSelected = selectedTypes.includes(type);
+                  return (
+                    <ToggleButton
+                      key={type}
+                      value={type}
+                      selected={isSelected}
+                      onChange={() => {
+                        setSelectedTypes(prev =>
+                          isSelected ? prev.filter(t => t !== type) : [...prev, type]
+                        );
+                      }}
+                      sx={{
+                        px: 2,
+                        py: 0.5,
+                        borderRadius: 1,
+                        border: '1px solid #d4d4d4',
+                        backgroundColor: isSelected ? 'rgba(37, 99, 235, 0.1)' : '#ffffff',
+                        color: isSelected ? '#2563eb' : '#525252',
+                        textTransform: 'none',
+                        fontSize: '0.85rem',
+                        '&:hover': {
+                          backgroundColor: isSelected ? 'rgba(37, 99, 235, 0.2)' : '#f5f5f5',
+                        },
+                        '&.Mui-selected': {
+                          backgroundColor: 'rgba(37, 99, 235, 0.1)',
+                          color: '#2563eb',
+                        },
+                      }}
+                    >
+                      {label}
+                    </ToggleButton>
+                  );
+                })}
+              </Box>
+            </Box>
+
+            {/* BR Range Grid Selector */}
+            <BRGridSelector
+              brRange={effectiveBrRange}
+              onBrRangeChange={(range) => setBrRange(range)}
+            />
+          </Stack>
+        </Paper>
+
         <Typography variant="body2" sx={{ color: '#737373', mb: 2 }}>
-          展示同BR±1.0范围内该指标的全部载具，橙色星形标记当前载具位置
+          展示 BR {effectiveBrRange[0].toFixed(1)} - {effectiveBrRange[1].toFixed(1)} 范围内{selectedTypes.length > 0 ? selectedTypes.map(t => VEHICLE_TYPE_LABELS[t]).join('、') : '全部载具'}的指标对比，橙色星形标记当前载具位置
         </Typography>
 
         <Grid container spacing={2}>
           {/* Stats Charts - KR and WinRate (Most Important) */}
-          {statsComparisons.avgKills && (
+          {statsComparisons?.avgKills && (
             <Grid item xs={12} md={4}>
-              <DistributionChart data={statsComparisons.avgKills} title="场均击杀" unit="击杀/场" />
+              <DistributionChart data={statsComparisons.avgKills} title="KR (每重生击毁)" unit="" />
             </Grid>
           )}
-          {statsComparisons.winRate && (
+          {statsComparisons?.winRate && (
             <Grid item xs={12} md={4}>
               <DistributionChart data={statsComparisons.winRate} title="胜率" unit="%" />
             </Grid>
           )}
           
           {/* Penetration Chart (High Importance) */}
-          {comparisons.penetration && (
+          {comparisons?.penetration && (
             <Grid item xs={12} md={4}>
               <DistributionChart data={comparisons.penetration} title="穿深" unit="mm" />
             </Grid>
@@ -795,7 +949,7 @@ export default function VehicleDetailPage() {
           </Grid>
           
           {/* Performance Charts - Ordered by Importance */}
-          {(
+          {comparisons && (
             [
               { key: 'traverseSpeed', title: '方向机速度', unit: '°/s' },
               { key: 'reloadTime', title: '装填时间', unit: 's' },

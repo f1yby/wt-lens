@@ -1,7 +1,8 @@
 import { Paper, Typography, Box, Chip, Divider } from '@mui/material';
 import {
-  ScatterChart,
+  ComposedChart,
   Scatter,
+  Line,
   XAxis,
   YAxis,
   CartesianGrid,
@@ -52,7 +53,7 @@ const METRIC_NAMES: Record<ExtendedMetricType, string> = {
   gunnerThermal: '炮手热成像',
   commanderThermal: '车长热成像',
   stabilizer: '稳定器',
-  avgKills: '场均击杀',
+  avgKills: 'KR',
   winRate: '胜率',
 };
 
@@ -92,6 +93,18 @@ export default function DistributionChart({ data, title, unit }: DistributionCha
   // Separate current vehicle from others
   const currentVehicle = scatterData.find(d => d.isCurrent);
   const otherVehicles = scatterData.filter(d => !d.isCurrent);
+
+  // Compute cumulative percentile line data (sorted by x, cumulative battles percentage)
+  const percentileLine = useMemo(() => {
+    const sorted = [...scatterData].sort((a, b) => a.x - b.x);
+    const totalBattles = sorted.reduce((sum, d) => sum + d.y, 0);
+    if (totalBattles === 0) return [];
+    let cumBattles = 0;
+    return sorted.map(d => {
+      cumBattles += d.y;
+      return { x: d.x, pct: Math.round((cumBattles / totalBattles) * 100) };
+    });
+  }, [scatterData]);
 
   // Calculate Euclidean distance between two points (normalized)
   const getDistance = useCallback((p1: ScatterPoint, p2: ScatterPoint): number => {
@@ -187,7 +200,8 @@ export default function DistributionChart({ data, title, unit }: DistributionCha
     const pointFromPayload = payload && payload[0]?.payload as ScatterPoint;
     const targetPoint = hoveredPoint || pointFromPayload;
     
-    if (!targetPoint) return null;
+    // Don't render tooltip for Line data (percentile line) - it has no vehicleId/name
+    if (!targetPoint || !targetPoint.name) return null;
     if (!active) return null;
     
     const nearbyPoints = findNearbyPoints(targetPoint);
@@ -398,9 +412,9 @@ export default function DistributionChart({ data, title, unit }: DistributionCha
         </Typography>
       </Box>
       
-      <Box sx={{ height: 200, position: 'relative' }} ref={chartAreaRef} onClick={(e) => e.stopPropagation()}>
+      <Box sx={{ height: 240, position: 'relative' }} ref={chartAreaRef} onClick={(e) => e.stopPropagation()}>
         <ResponsiveContainer width="100%" height="100%">
-          <ScatterChart margin={{ top: 10, right: 10, left: 0, bottom: 20 }}>
+          <ComposedChart margin={{ top: 10, right: 35, left: 5, bottom: 20 }}>
             <CartesianGrid strokeDasharray="3 3" stroke="#333" />
             <XAxis
               type="number"
@@ -409,15 +423,34 @@ export default function DistributionChart({ data, title, unit }: DistributionCha
               axisLine={{ stroke: '#333' }}
               tickLine={{ stroke: '#333' }}
               label={{ value: unit, position: 'bottom', fill: '#737373', fontSize: 10 }}
+              allowDuplicatedCategory={false}
             />
             <YAxis
+              yAxisId="left"
               type="number"
               dataKey="y"
               tick={{ fill: '#737373', fontSize: 10 }}
               axisLine={{ stroke: '#333' }}
               tickLine={{ stroke: '#333' }}
-              tickFormatter={(value) => value.toLocaleString()}
+              tickFormatter={(value) => {
+                if (value >= 1000000) return `${(value / 1000000).toFixed(1)}M`;
+                if (value >= 1000) return `${(value / 1000).toFixed(0)}K`;
+                return value.toString();
+              }}
+              width={40}
               label={{ value: '出场数', angle: -90, position: 'insideLeft', fill: '#737373', fontSize: 10 }}
+            />
+            <YAxis
+              yAxisId="right"
+              orientation="right"
+              type="number"
+              domain={[0, 100]}
+              ticks={[0, 25, 50, 75, 100]}
+              tick={{ fill: '#f97316', fontSize: 9 }}
+              axisLine={{ stroke: '#f97316' }}
+              tickLine={{ stroke: '#f97316' }}
+              tickFormatter={(v) => `${v}%`}
+              width={35}
             />
             <ZAxis type="number" range={[60, 60]} />
             <Tooltip 
@@ -426,8 +459,23 @@ export default function DistributionChart({ data, title, unit }: DistributionCha
               isAnimationActive={false}
             />
             
+            {/* Cumulative percentile line */}
+            <Line
+              key={`pct-${percentileLine.length}-${percentileLine[0]?.x ?? 0}-${percentileLine[percentileLine.length - 1]?.x ?? 0}`}
+              yAxisId="right"
+              data={percentileLine}
+              dataKey="pct"
+              stroke="#f97316"
+              strokeWidth={1.5}
+              dot={false}
+              strokeOpacity={0.6}
+              isAnimationActive={false}
+              tooltipType="none"
+            />
+            
             {/* Other vehicles - colored by BR distance using shape renderer */}
             <Scatter
+              yAxisId="left"
               data={otherVehicles}
               onMouseEnter={(data) => setHoveredPoint(data as ScatterPoint)}
               onMouseLeave={() => setHoveredPoint(null)}
@@ -453,6 +501,7 @@ export default function DistributionChart({ data, title, unit }: DistributionCha
             {/* Current vehicle - highlighted with star shape */}
             {currentVehicle && (
               <Scatter
+                yAxisId="left"
                 data={[currentVehicle]}
                 onMouseEnter={(data) => setHoveredPoint(data as ScatterPoint)}
                 onMouseLeave={() => setHoveredPoint(null)}
@@ -480,7 +529,7 @@ export default function DistributionChart({ data, title, unit }: DistributionCha
                 }}
               />
             )}
-          </ScatterChart>
+          </ComposedChart>
         </ResponsiveContainer>
         <LockedTooltipOverlay />
       </Box>

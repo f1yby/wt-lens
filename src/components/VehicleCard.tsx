@@ -164,7 +164,7 @@ export default function VehicleCard({ vehicle }: VehicleCardProps) {
               </Box>
               <Box>
                 <Typography variant="caption" sx={{ color: '#737373', display: 'block' }}>
-                  场均击毁
+                  KR
                 </Typography>
                 <Typography variant="body2" sx={{ color: '#171717', fontWeight: 600 }}>
                   {vehicle.stats.avgKills.toFixed(1)}
