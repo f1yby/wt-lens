@@ -45,6 +45,328 @@ _wpcost_cache = None
 # Cache for localization data
 _localization_cache = None
 
+# Cache for weapon data
+_weapons_cache: dict[str, dict] = {}
+
+# Path to weapons
+WEAPONS_PATH = DATAMINE_BASE / "weapons" / "groundmodels_weapons"
+
+# Target density for RHA (kg/m³)
+RHA_DENSITY = 7850
+
+# RHA Brinell Hardness (WT uses ~260 BHN for standard RHA)
+RHA_BHN = 260
+
+# ============================================================
+# Lanz-Odermatt constants (from Lanz & Odermatt 2000 paper)
+# Source: longrods.ch / perfcalc.php
+# ============================================================
+
+# L/D efficiency constants
+LO_B0 = 0.283
+LO_B1 = 0.0656
+
+# Obliquity exponent
+LO_M = -0.224
+
+# Perforation coefficients by material
+LO_A_TUNGSTEN = 0.994
+LO_A_DU = 0.825
+
+# Velocity/resistance term constants (perforation mode)
+LO_C0_TUNGSTEN = 134.5;  LO_C1_TUNGSTEN = -0.148
+LO_C0_DU = 90.0;         LO_C1_DU = -0.0849
+
+# Semi-infinite target (penetration mode, tungsten only)
+LO_A_SIT = 0.921
+LO_C0_SIT = 138;  LO_C1_SIT = -0.100
+
+
+def calculate_lanz_odermatt_penetration(
+    working_length_mm: float,
+    diameter_mm: float,
+    penetrator_density: float,
+    target_density: float,
+    velocity_ms: float,
+    material: str = 'tungsten',
+    target_bhn: float = RHA_BHN,
+    nato_angle: float = 0,
+) -> float:
+    """
+    Calculate perforation limit using the real Lanz-Odermatt equation.
+    
+    Based on Lanz & Odermatt (2000) paper and longrods.ch implementation.
+    WT's datamine `lanzOdermattWorkingLength` IS the working length Lw.
+    
+    Formula: P = a * Lw * f_LD * f_obliquity * f_density * f_velocity
+    
+    Where:
+      f_LD       = 1 / tanh(b0 + b1 * Lw/d)
+      f_obliquity = cos(nato)^m
+      f_density  = (rho_p / rho_t)^0.5
+      f_velocity = exp(-(c0 + c1*BHN_t)*BHN_t / rho_p / v^2)
+    
+    Verified against WT Wiki values:
+      DM53:   623.6 vs 623 (+0.1%)
+      3BM60:  580.3 vs 580 (+0.1%)
+      M829A2: 629.1 vs 629 (+0.0%)
+    
+    Args:
+        working_length_mm: L-O working length (Lw) in mm
+        diameter_mm: Penetrator diameter (damageCaliber) in mm
+        penetrator_density: Penetrator density in kg/m³
+        target_density: Target density in kg/m³ (RHA = 7850)
+        velocity_ms: Impact velocity in m/s
+        material: 'tungsten' or 'depletedUranium'
+        target_bhn: Target Brinell hardness (RHA ≈ 260)
+        nato_angle: NATO obliquity angle in degrees (0° = normal)
+    
+    Returns:
+        Perforation limit in mm
+    """
+    Lw = working_length_mm  # mm — already working length from WT datamine
+    d = diameter_mm         # mm
+
+    # L/D ratio
+    lwd = Lw / d if d > 0 else 30
+
+    # L/D efficiency factor: 1 / tanh(b0 + b1 * L/D)
+    f_ld = 1.0 / math.tanh(LO_B0 + LO_B1 * lwd)
+
+    # Obliquity factor: cos(nato)^m
+    if nato_angle < 85:
+        f_obliquity = math.cos(math.radians(nato_angle)) ** LO_M
+    else:
+        return 0.0
+
+    # Density ratio factor: (rho_p / rho_t)^0.5
+    f_density = (penetrator_density / target_density) ** 0.5
+
+    # Velocity in km/s (formula requires km/s)
+    v_kms = velocity_ms / 1000.0
+
+    # Material-dependent coefficients and velocity term
+    if material == 'depletedUranium':
+        a = LO_A_DU
+        c0, c1 = LO_C0_DU, LO_C1_DU
+    else:
+        # Default to tungsten for tungsten and any unknown material
+        a = LO_A_TUNGSTEN
+        c0, c1 = LO_C0_TUNGSTEN, LO_C1_TUNGSTEN
+
+    # Velocity/resistance term: exp(-(c0 + c1*BHN_t)*BHN_t / rho_p / v^2)
+    f_velocity = math.exp(-(c0 + c1 * target_bhn) * target_bhn / penetrator_density / (v_kms ** 2))
+
+    # Perforation limit
+    P = a * Lw * f_ld * f_obliquity * f_density * f_velocity
+
+    return round(P, 1)
+
+
+def calculate_penetration_at_angle(penetration_0deg: float, angle_deg: float) -> float:
+    """
+    Calculate perforation limit at an oblique angle using Lanz-Odermatt
+    obliquity factor: cos(nato)^m where m = -0.224.
+    
+    This is more accurate than simple cosine rule for long rod penetrators.
+    """
+    if angle_deg >= 85:
+        return 0.0
+    # L-O obliquity: P(theta) = P(0) * cos(theta)^m / cos(0)^m = P(0) * cos(theta)^m
+    # Since cos(0)^m = 1
+    f_obliquity = math.cos(math.radians(angle_deg)) ** LO_M
+    # But this gives the perforation limit of an angled plate
+    # The "effective penetration" at angle = P(0) * cos(theta) (LOS thickness)
+    # We'll just return P * cos(theta) for the LOS equivalent
+    return round(penetration_0deg * math.cos(math.radians(angle_deg)), 1)
+
+
+def parse_ammunition_data(bullet_data: dict, weapon_caliber_mm: float) -> dict | None:
+    """
+    Parse ammunition data from weapon file bullet entry.
+    
+    Returns ammunition info with penetration data if available.
+    """
+    if not bullet_data or not isinstance(bullet_data, dict):
+        return None
+    
+    bullet_name = bullet_data.get('bulletName', 'unknown')
+    bullet_type = bullet_data.get('bulletType', 'unknown')
+    
+    # Get basic parameters
+    mass = bullet_data.get('mass', 0)
+    speed = bullet_data.get('speed', 0)
+    damage_caliber = bullet_data.get('damageCaliber', 0)
+    caliber_mm_from_data = damage_caliber * 1000 if damage_caliber else weapon_caliber_mm
+    
+    ammo_info = {
+        'name': bullet_name,
+        'type': bullet_type,
+        'caliber': round(caliber_mm_from_data, 1),
+        'mass': round(mass, 3),
+        'muzzleVelocity': round(speed, 1),
+    }
+    
+    # Check for Lanz-Odermatt parameters
+    damage = bullet_data.get('damage', {})
+    kinetic = damage.get('kinetic', {}) if isinstance(damage, dict) else {}
+    
+    lanz_odermatt_working_length = kinetic.get('lanzOdermattWorkingLength')
+    lanz_odermatt_density = kinetic.get('lanzOdermattDensity')
+    lanz_odermatt_material = kinetic.get('lanzOdermattMaterial', 'tungsten')
+    
+    if lanz_odermatt_working_length and lanz_odermatt_density:
+        # Calculate perforation limit using real Lanz-Odermatt equation
+        pen_0m_0deg = calculate_lanz_odermatt_penetration(
+            working_length_mm=lanz_odermatt_working_length,
+            diameter_mm=caliber_mm_from_data,
+            penetrator_density=lanz_odermatt_density,
+            target_density=RHA_DENSITY,
+            velocity_ms=speed,
+            material=lanz_odermatt_material,
+        )
+        
+        ammo_info['lanzOdermatt'] = {
+            'workingLength': lanz_odermatt_working_length,
+            'density': lanz_odermatt_density,
+            'material': lanz_odermatt_material,
+        }
+        ammo_info['penetration0m'] = round(pen_0m_0deg, 1)
+        
+        # Calculate penetration at angles using L-O obliquity model
+        ammo_info['penetrationData'] = {
+            'at0m': {
+                'angle0': round(pen_0m_0deg, 1),
+                'angle30': round(calculate_penetration_at_angle(pen_0m_0deg, 30), 1),
+                'angle60': round(calculate_penetration_at_angle(pen_0m_0deg, 60), 1),
+            },
+        }
+    
+    # Check for direct armorPower data in the bullet or kinetic section
+    # Format in datamine: dict like {'ArmorPower0m': [pen, dist], 'ArmorPower100m': [pen, dist], ...}
+    # OR sometimes a simple numeric value
+    armor_power_source = bullet_data.get('armorpower', kinetic)
+    
+    if not ammo_info.get('penetration0m'):
+        # Try to extract ArmorPower table from kinetic section
+        armor_power_entries = []
+        source = kinetic if isinstance(kinetic, dict) else {}
+        
+        for key, val in source.items():
+            if key.startswith('ArmorPower') and isinstance(val, list) and len(val) >= 2:
+                armor_power_entries.append({
+                    'penetration': val[0],
+                    'distance': val[1],
+                })
+        
+        if armor_power_entries:
+            # Sort by distance
+            armor_power_entries.sort(key=lambda x: x['distance'])
+            ammo_info['armorPowerTable'] = armor_power_entries
+            # Use the closest distance entry as penetration0m
+            ammo_info['penetration0m'] = armor_power_entries[0]['penetration']
+        
+        # Fallback: check bullet-level armorpower
+        elif 'armorpower' in bullet_data:
+            ap = bullet_data['armorpower']
+            if isinstance(ap, (int, float)):
+                ammo_info['armorPower'] = ap
+                ammo_info['penetration0m'] = ap
+            elif isinstance(ap, dict):
+                entries = []
+                for key, val in ap.items():
+                    if key.startswith('ArmorPower') and isinstance(val, list) and len(val) >= 2:
+                        entries.append({'penetration': val[0], 'distance': val[1]})
+                if entries:
+                    entries.sort(key=lambda x: x['distance'])
+                    ammo_info['armorPowerTable'] = entries
+                    ammo_info['penetration0m'] = entries[0]['penetration']
+    
+    return ammo_info
+
+
+def load_weapon_data(weapon_blk_path: str) -> dict | None:
+    """
+    Load weapon data from groundmodels_weapons directory.
+    
+    Args:
+        weapon_blk_path: Path like 'gamedata/weapons/groundmodels_weapons/...'
+    
+    Returns:
+        Weapon data dict or None if not found
+    """
+    # Check cache first
+    if weapon_blk_path in _weapons_cache:
+        return _weapons_cache[weapon_blk_path]
+    
+    # Extract filename from path
+    # Path format: gamedata/weapons/groundmodels_weapons/filename.blk
+    if 'groundmodels_weapons/' in weapon_blk_path:
+        filename = weapon_blk_path.split('groundmodels_weapons/')[-1].replace('.blk', '') + '.blkx'
+    else:
+        filename = weapon_blk_path.split('/')[-1].replace('.blk', '') + '.blkx'
+    
+    filepath = WEAPONS_PATH / filename
+    
+    if not filepath.exists():
+        return None
+    
+    try:
+        with open(filepath, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+            _weapons_cache[weapon_blk_path] = data
+            return data
+    except (json.JSONDecodeError, IOError) as e:
+        print(f"Error loading weapon {filename}: {e}")
+        return None
+
+
+def extract_weapon_ammunition(weapon_data: dict) -> list[dict]:
+    """
+    Extract all ammunition data from a weapon file.
+    
+    Returns list of ammo info dicts.
+    """
+    if not weapon_data:
+        return []
+    
+    ammunitions = []
+    
+    # Get weapon caliber
+    weapon_caliber_mm = 0
+    if 'Weapon' in weapon_data:
+        weapon_info = weapon_data['Weapon']
+        if isinstance(weapon_info, dict):
+            caliber = weapon_info.get('caliber', 0)
+            weapon_caliber_mm = caliber * 1000 if caliber else 0
+    
+    # Find all bullet entries in the weapon data
+    for key, value in weapon_data.items():
+        if isinstance(value, dict) and 'bullet' in value:
+            bullet_data = value['bullet']
+            if isinstance(bullet_data, dict):
+                # Check for ammo rack clusters
+                if 'ammoRack' in bullet_data:
+                    ammo_rack = bullet_data['ammoRack']
+                    if isinstance(ammo_rack, dict) and 'clusters' in ammo_rack:
+                        clusters = ammo_rack['clusters']
+                        if isinstance(clusters, dict):
+                            # Each cluster represents a different ammo type
+                            for cluster_key, cluster_data in clusters.items():
+                                if isinstance(cluster_data, dict) and 'shell' in cluster_data:
+                                    shell_data = cluster_data['shell']
+                                    if isinstance(shell_data, dict):
+                                        ammo_info = parse_ammunition_data(shell_data, weapon_caliber_mm)
+                                        if ammo_info:
+                                            ammunitions.append(ammo_info)
+                else:
+                    # Direct bullet definition
+                    ammo_info = parse_ammunition_data(bullet_data, weapon_caliber_mm)
+                    if ammo_info:
+                        ammunitions.append(ammo_info)
+    
+    return ammunitions
+
 def _calculate_wheel_speed(
     engine_rpm: float,
     tire_radius: float,
@@ -150,7 +472,7 @@ class VehiclePerformance:
     power_to_weight: float | None = None
     max_reverse_speed: float | None = None
     reload_time: float | None = None
-    penetration: float | None = None
+    penetration: float | None = None  # Best APFSDS penetration @ 0m/0°
     max_speed: float | None = None
     crew_count: int | None = None
     # Gun and turret stats
@@ -169,6 +491,10 @@ class VehiclePerformance:
     commander_thermal_diagonal: float | None = None
     stabilizer_value: int | None = None  # 1 if has stabilizer, 0 otherwise
     elevation_range_value: float | None = None  # max - min elevation
+    # Main gun and ammunition data (new)
+    main_gun: dict | None = None  # {name, caliber, reloadTime}
+    ammunitions: list[dict] | None = None  # List of ammo data
+    penetration_data: dict | None = None  # {at0m: {angle0, angle30, angle60}, at500m: {...}}
 
 
 @dataclass
@@ -665,6 +991,57 @@ def parse_tankmodel_data(data: dict[str, Any]) -> VehiclePerformance | None:
     if perf.elevation_range and len(perf.elevation_range) >= 2:
         perf.elevation_range_value = round(abs(perf.elevation_range[1] - perf.elevation_range[0]), 1)
 
+    # Extract weapon and ammunition data
+    if main_weapon:
+        weapon_blk = main_weapon.get('blk', '')
+        if weapon_blk:
+            # Load weapon data and extract ammunition
+            weapon_data = load_weapon_data(weapon_blk)
+            if weapon_data:
+                ammunitions = extract_weapon_ammunition(weapon_data)
+                if ammunitions:
+                    perf.ammunitions = ammunitions
+                    
+                    # Find main gun info
+                    weapon_info = weapon_data.get('Weapon', {})
+                    if isinstance(weapon_info, dict):
+                        weapon_caliber_m = weapon_info.get('caliber', 0)
+                        weapon_caliber_mm = weapon_caliber_m * 1000 if weapon_caliber_m else 0
+                    else:
+                        weapon_caliber_mm = 0
+                    
+                    perf.main_gun = {
+                        'name': weapon_blk.split('/')[-1].replace('.blk', '').replace('_user_cannon', ''),
+                        'caliber': round(weapon_caliber_mm, 1),
+                        'reloadTime': perf.reload_time,
+                    }
+                    
+                    # Find best APFSDS penetration
+                    best_apfsds = None
+                    best_penetration = 0
+                    
+                    for ammo in ammunitions:
+                        ammo_type = ammo.get('type', '')
+                        # APDS_FS types are kinetic penetrators
+                        if 'apds_fs' in ammo_type.lower():
+                            pen = ammo.get('penetration0m', 0)
+                            if pen > best_penetration:
+                                best_penetration = pen
+                                best_apfsds = ammo
+                    
+                    if best_apfsds:
+                        perf.penetration = best_penetration
+                        perf.penetration_data = best_apfsds.get('penetrationData', {})
+                    else:
+                        # Fallback: use any ammo with penetration data
+                        for ammo in ammunitions:
+                            pen = ammo.get('penetration0m', 0)
+                            if pen > best_penetration:
+                                best_penetration = pen
+                        
+                        if best_penetration > 0:
+                            perf.penetration = best_penetration
+
     return perf
 
 
@@ -806,7 +1183,7 @@ def fetch_all_vehicles(max_vehicles: int | None = None, copy_images: bool = True
 
 def vehicle_data_to_dict(v: VehicleData) -> dict[str, Any]:
     """Convert VehicleData to dictionary for JSON serialization"""
-    return {
+    result = {
         "id": v.id,
         "name": v.name,
         "localizedName": v.localized_name,
@@ -836,10 +1213,14 @@ def vehicle_data_to_dict(v: VehicleData) -> dict[str, Any]:
             "commander_thermal_diagonal": v.performance.commander_thermal_diagonal,
             "stabilizer_value": v.performance.stabilizer_value,
             "elevation_range_value": v.performance.elevation_range_value,
+            "mainGun": v.performance.main_gun,
+            "ammunitions": v.performance.ammunitions,
+            "penetrationData": v.performance.penetration_data,
         },
         "imageUrl": v.image_url,
         "source": v.source,
     }
+    return result
 
 
 def save_vehicles(vehicles: list[VehicleData], output_path: Path):

@@ -4,6 +4,37 @@ export type VehicleType = 'light_tank' | 'medium_tank' | 'heavy_tank' | 'tank_de
 // Economic types for vehicles
 export type EconomicType = 'regular' | 'clan' | 'premium';
 
+// Ammunition types
+export type AmmoType = 'apds_fs' | 'apds_fs_long' | 'heat' | 'heat_fs' | 'he' | 'apcbc' | 'ap' | 'apcr' | 'hesh' | 'atgm' | 'other';
+
+// Penetrator materials
+export type PenetratorMaterial = 'tungsten' | 'depletedUranium' | 'steel';
+
+/** Ammunition data with penetration info */
+export interface Ammunition {
+  name: string;
+  localizedName?: string;
+  type: AmmoType;
+  caliber: number;           // damageCaliber in mm
+  mass: number;              // kg
+  muzzleVelocity: number;    // m/s
+  // Lanz-Odermatt parameters (if available)
+  lanzOdermatt?: {
+    workingLength: number;   // mm
+    density: number;         // kg/m³
+    material: PenetratorMaterial;
+  };
+  // Direct armorpower data (for non-APFSDS or older rounds)
+  armorPower?: number;       // mm @ 0° (direct value from datamine)
+  armorPowerTable?: {        // Distance-based penetration table
+    distance: number;        // meters
+    penetration: number;     // mm
+  }[];
+  // Calculated penetration
+  penetration0m?: number;    // mm @ 0° NATO @ 0m
+  penetration500m?: number;  // mm @ 0° NATO @ 500m
+}
+
 /** Available metric types for vehicle performance comparison */
 export type MetricType = 
   | 'powerToWeight' 
@@ -48,6 +79,33 @@ export type Nation =
   | 'sweden' 
   | 'israel';
 
+/** Main gun information */
+export interface MainGun {
+  name: string;
+  caliber: number;           // mm
+  reloadTime?: number;       // seconds
+  ammoCount?: number;        // total ammo capacity
+}
+
+/** Penetration data at different angles */
+export interface PenetrationData {
+  at0m: {
+    angle0: number;    // mm @ 0°
+    angle30?: number;  // mm @ 30°
+    angle60?: number;  // mm @ 60°
+  };
+  at500m?: {
+    angle0: number;
+    angle30?: number;
+    angle60?: number;
+  };
+  at1000m?: {
+    angle0: number;
+    angle30?: number;
+    angle60?: number;
+  };
+}
+
 export interface Vehicle {
   id: string;
   name: string;
@@ -83,6 +141,10 @@ export interface Vehicle {
     commanderThermalDiagonal?: number;
     stabilizerValue?: number;
     elevationRangeValue?: number;
+    // Main gun and ammunition data (new)
+    mainGun?: MainGun;
+    ammunitions?: Ammunition[];
+    penetrationData?: PenetrationData;
   };
   // Matchmaking stats from StatShark (may be missing if no stats available)
   stats?: {

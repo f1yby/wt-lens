@@ -43,6 +43,10 @@ interface DatamineEntry {
     commander_thermal_diagonal?: number | null;
     stabilizer_value?: number | null;
     elevation_range_value?: number | null;
+    // Ammunition data
+    mainGun?: any | null;
+    ammunitions?: any[] | null;
+    penetrationData?: any | null;
   };
   imageUrl: string;
   source: string;
@@ -152,6 +156,10 @@ function mergeVehicleData(stats: StatSharkEntry[], datamine: DatamineEntry[]): V
         commanderThermalDiagonal: datamineEntry.performance.commander_thermal_diagonal ?? 0,
         stabilizerValue: datamineEntry.performance.stabilizer_value ?? 0,
         elevationRangeValue: datamineEntry.performance.elevation_range_value ?? 0,
+        // Ammunition data
+        mainGun: datamineEntry.performance.mainGun ?? undefined,
+        ammunitions: datamineEntry.performance.ammunitions ?? undefined,
+        penetrationData: datamineEntry.performance.penetrationData ?? undefined,
       },
       stats: statsEntry ? {
         battles: statsEntry.battles,

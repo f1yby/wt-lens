@@ -1,5 +1,5 @@
-import { Card, CardContent, CardMedia, Typography, Chip, Box } from '@mui/material';
-import { GpsFixed } from '@mui/icons-material';
+import { Card, CardContent, CardMedia, Typography, Chip, Box, Tooltip } from '@mui/material';
+import { GpsFixed, Bolt } from '@mui/icons-material';
 import { useNavigate } from 'react-router-dom';
 import type { Vehicle } from '../types';
 import { NATIONS, VEHICLE_TYPE_LABELS } from '../types';
@@ -12,6 +12,24 @@ function getStabilizerInfo(type: Vehicle['performance']['stabilizerType']) {
     case 'vertical': return { label: '垂直', color: '#8b5cf6' };
     default: return { label: '无', color: '#9ca3af' };
   }
+}
+
+/** Get best APFSDS ammo name for display */
+function getBestAmmoName(vehicle: Vehicle): string | null {
+  if (!vehicle.performance.ammunitions) return null;
+  
+  const apfsds = vehicle.performance.ammunitions.filter(a => 
+    a.type.includes('apds_fs')
+  );
+  
+  if (apfsds.length === 0) return null;
+  
+  // Return the one with highest penetration
+  const best = apfsds.reduce((prev, curr) => 
+    (curr.penetration0m || 0) > (prev.penetration0m || 0) ? curr : prev
+  );
+  
+  return best.name.replace(/^\d+mm_/, '').replace(/_/g, '-').toUpperCase();
 }
 
 interface VehicleCardProps {
@@ -154,6 +172,24 @@ export default function VehicleCard({ vehicle }: VehicleCardProps) {
               </Box>
             </>
           )}
+          
+          {/* Penetration Data */}
+          {vehicle.performance.penetration > 0 && (
+            <Tooltip title={getBestAmmoName(vehicle) || '穿甲弹'} arrow>
+              <Box>
+                <Typography variant="caption" sx={{ color: '#737373', display: 'block' }}>
+                  穿深
+                </Typography>
+                <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.5 }}>
+                  <Bolt sx={{ fontSize: 12, color: '#f59e0b' }} />
+                  <Typography variant="body2" sx={{ color: '#171717', fontWeight: 600 }}>
+                    {Math.round(vehicle.performance.penetration)}mm
+                  </Typography>
+                </Box>
+              </Box>
+            </Tooltip>
+          )}
+          
           <Box sx={{ ml: 'auto', display: 'flex', alignItems: 'center', gap: 0.5 }}>
             <GpsFixed sx={{ 
               fontSize: 14, 
