@@ -24,6 +24,9 @@ WPCOST_PATH = Path(__file__).parent.parent / "datamine" / "char.vromfs.bin_u" / 
 # Path to units.csv for localization data
 UNITS_CSV_PATH = Path(__file__).parent.parent / "datamine" / "lang.vromfs.bin_u" / "lang" / "units.csv"
 
+# Path to units_weaponry.csv for ammo localization data
+WEAPONRY_CSV_PATH = Path(__file__).parent.parent / "datamine" / "lang.vromfs.bin_u" / "lang" / "units_weaponry.csv"
+
 # Path to tank images in datamine
 TANK_IMAGES_PATH = Path(__file__).parent.parent / "datamine" / "tex.vromfs.bin_u" / "tanks"
 
@@ -44,6 +47,9 @@ _wpcost_cache = None
 
 # Cache for localization data
 _localization_cache = None
+
+# Cache for ammo localization data
+_weaponry_localization_cache = None
 
 # Cache for weapon data
 _weapons_cache: dict[str, dict] = {}
@@ -201,6 +207,7 @@ def parse_ammunition_data(bullet_data: dict, weapon_caliber_mm: float) -> dict |
     
     ammo_info = {
         'name': bullet_name,
+        'localizedName': get_ammo_localized_name(bullet_name) or bullet_name,
         'type': bullet_type,
         'caliber': round(caliber_mm_from_data, 1),
         'mass': round(mass, 3),
@@ -226,10 +233,14 @@ def parse_ammunition_data(bullet_data: dict, weapon_caliber_mm: float) -> dict |
             material=lanz_odermatt_material,
         )
         
+        # Extract drag coefficient (Cx) for ballistic velocity decay model
+        cx_drag = bullet_data.get('Cx', 0)
+        
         ammo_info['lanzOdermatt'] = {
             'workingLength': lanz_odermatt_working_length,
             'density': lanz_odermatt_density,
             'material': lanz_odermatt_material,
+            'Cx': round(cx_drag, 4) if cx_drag else None,
         }
         ammo_info['penetration0m'] = round(pen_0m_0deg, 1)
         
@@ -321,9 +332,13 @@ def load_weapon_data(weapon_blk_path: str) -> dict | None:
         return None
 
 
-def extract_weapon_ammunition(weapon_data: dict) -> list[dict]:
+def extract_weapon_ammunition(weapon_data: dict, vehicle_modifications: dict | None = None) -> list[dict]:
     """
-    Extract all ammunition data from a weapon file.
+    Extract ammunition data from a weapon file.
+    
+    If vehicle_modifications is provided, only extract ammo types that the vehicle
+    actually has access to (listed in its modifications or as default bullet).
+    Otherwise extracts all ammunition.
     
     Returns list of ammo info dicts.
     """
@@ -340,9 +355,30 @@ def extract_weapon_ammunition(weapon_data: dict) -> list[dict]:
             caliber = weapon_info.get('caliber', 0)
             weapon_caliber_mm = caliber * 1000 if caliber else 0
     
+    # Build set of allowed ammo keys from vehicle modifications
+    allowed_keys: set[str] | None = None
+    if vehicle_modifications is not None:
+        allowed_keys = set()
+        for mod_key in vehicle_modifications:
+            # Strip _ammo_pack suffix to get the base ammo key
+            base = mod_key.removesuffix('_ammo_pack')
+            allowed_keys.add(base)
+    
     # Find all bullet entries in the weapon data
     for key, value in weapon_data.items():
+        # Always include default bullet
+        if key == 'bullet':
+            if isinstance(value, dict):
+                ammo_info = parse_ammunition_data(value, weapon_caliber_mm)
+                if ammo_info:
+                    ammunitions.append(ammo_info)
+            continue
+        
         if isinstance(value, dict) and 'bullet' in value:
+            # If we have a filter, skip ammo not in modifications
+            if allowed_keys is not None and key not in allowed_keys:
+                continue
+            
             bullet_data = value['bullet']
             if isinstance(bullet_data, dict):
                 # Check for ammo rack clusters
@@ -605,6 +641,53 @@ def get_vehicle_localized_name(vehicle_id: str) -> str:
     
     # Final fallback: format the ID nicely
     return vehicle_id.replace('_', ' ').replace('-', ' ').title()
+
+
+def load_weaponry_localization() -> dict[str, str]:
+    """Load units_weaponry.csv for ammo localization names (cached).
+    
+    Returns a dict mapping bulletName (e.g. '105mm_dm23') to its English display name (e.g. 'DM23').
+    """
+    global _weaponry_localization_cache
+    if _weaponry_localization_cache is not None:
+        return _weaponry_localization_cache
+
+    if not WEAPONRY_CSV_PATH.exists():
+        print(f"Warning: units_weaponry.csv not found at {WEAPONRY_CSV_PATH}")
+        _weaponry_localization_cache = {}
+        return _weaponry_localization_cache
+
+    try:
+        loc_map: dict[str, str] = {}
+        with open(WEAPONRY_CSV_PATH, 'r', encoding='utf-8') as f:
+            reader = csv.reader(f, delimiter=';', quotechar='"')
+            next(reader, None)  # Skip header
+
+            for row in reader:
+                if len(row) < 2:
+                    continue
+                key = row[0]   # e.g. "105mm_dm23" or "apds_fs_long_l30_tank/name"
+                english = row[1]
+                if key and english:
+                    loc_map[key] = english
+
+        _weaponry_localization_cache = loc_map
+        print(f"Loaded units_weaponry.csv with {len(loc_map)} entries")
+        return _weaponry_localization_cache
+    except (IOError, csv.Error) as e:
+        print(f"Error loading units_weaponry.csv: {e}")
+        _weaponry_localization_cache = {}
+        return _weaponry_localization_cache
+
+
+def get_ammo_localized_name(bullet_name: str) -> str | None:
+    """Get human-readable name for a bullet from units_weaponry.csv.
+    
+    Tries the bulletName directly (e.g. '105mm_dm23' -> 'DM23').
+    Returns None if not found.
+    """
+    loc = load_weaponry_localization()
+    return loc.get(bullet_name)
 
 
 def copy_vehicle_image(vehicle_id: str) -> str | None:
@@ -995,10 +1078,13 @@ def parse_tankmodel_data(data: dict[str, Any]) -> VehiclePerformance | None:
     if main_weapon:
         weapon_blk = main_weapon.get('blk', '')
         if weapon_blk:
-            # Load weapon data and extract ammunition
+            # Load weapon data and extract ammunition (filtered by vehicle modifications)
             weapon_data = load_weapon_data(weapon_blk)
             if weapon_data:
-                ammunitions = extract_weapon_ammunition(weapon_data)
+                vehicle_mods = data.get('modifications', {})
+                if not isinstance(vehicle_mods, dict):
+                    vehicle_mods = {}
+                ammunitions = extract_weapon_ammunition(weapon_data, vehicle_mods)
                 if ammunitions:
                     perf.ammunitions = ammunitions
                     

@@ -7,7 +7,7 @@ interface StatSharkEntry {
   mode: 'arcade' | 'historical' | 'simulation';
   battles: number;
   win_rate: number;
-  avg_kills_per_battle: number;
+  avg_kills_per_spawn: number;
   rank?: number;
   br?: number;
 }
@@ -62,7 +62,7 @@ let mergedVehicles: Vehicle[] | null = null;
  */
 async function loadStatsData(): Promise<StatSharkEntry[]> {
   if (statsData) return statsData;
-  const response = await fetch('/wt-lens/data/stats.json');
+  const response = await fetch('/wt-lens/data/processed/stats.json');
   statsData = await response.json();
   return statsData!;
 }
@@ -72,7 +72,7 @@ async function loadStatsData(): Promise<StatSharkEntry[]> {
  */
 async function loadDatamineData(): Promise<DatamineEntry[]> {
   if (datamineData) return datamineData;
-  const response = await fetch('/wt-lens/data/datamine.json');
+  const response = await fetch('/wt-lens/data/processed/datamine.json');
   datamineData = await response.json();
   return datamineData!;
 }
@@ -164,7 +164,7 @@ function mergeVehicleData(stats: StatSharkEntry[], datamine: DatamineEntry[]): V
       stats: statsEntry ? {
         battles: statsEntry.battles,
         winRate: statsEntry.win_rate,
-        avgKills: statsEntry.avg_kills_per_battle,
+        avgKills: statsEntry.avg_kills_per_spawn,
       } : undefined,
       imageUrl: datamineEntry.imageUrl,
     };

@@ -203,7 +203,7 @@ export default function VehicleTechTree({ vehicles }: VehicleTechTreeProps) {
                             color: vehicle.stats!.winRate > 50 ? '#4ade80' : vehicle.stats!.winRate < 48 ? '#ef4444' : '#facc15',
                           }}
                         >
-                          {vehicle.stats!.winRate.toFixed(1)}% · {vehicle.stats!.avgKills.toFixed(1)}K
+                          {vehicle.stats!.winRate.toFixed(1)}% · {vehicle.stats!.battles >= 1000 ? (vehicle.stats!.battles / 1000).toFixed(1) + 'k' : vehicle.stats!.battles}场
                         </Typography>
                       )}
                     </Box>

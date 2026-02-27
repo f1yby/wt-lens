@@ -103,33 +103,16 @@ def parse_vehicle_stats(data: dict) -> list:
             win_rate = (victories / total_battles * 100) if total_battles > 0 else 0
             
             total_kills = air_kills + ground_kills + naval_kills
-            kd_ratio = (total_kills / deaths) if deaths > 0 else total_kills
             
-            avg_kills_per_battle = (total_kills / games) if games > 0 else 0
-            avg_rp_per_battle = (rp / games) if games > 0 else 0
-            avg_sl_per_battle = (sl / games) if games > 0 else 0
+            # Kill/Response = kills per spawn (每次重生击杀数)
+            avg_kills_per_spawn = (total_kills / spawns) if spawns > 0 else 0
             
             vehicles.append({
                 "id": name,
-                "name": name,
                 "mode": mode,  # arcade, realistic, simulator
-                "games": games,
-                "spawns": spawns,
                 "battles": total_battles,
-                "victories": victories,
-                "defeats": defeats,
-                "deaths": deaths,
                 "win_rate": round(win_rate, 2),
-                "kd_ratio": round(kd_ratio, 2),
-                "air_kills": air_kills,
-                "ground_kills": ground_kills,
-                "naval_kills": naval_kills,
-                "total_kills": total_kills,
-                "avg_kills_per_battle": round(avg_kills_per_battle, 3),
-                "rp": rp,
-                "sl": sl,
-                "avg_rp_per_battle": round(avg_rp_per_battle, 0),
-                "avg_sl_per_battle": round(avg_sl_per_battle, 0),
+                "avg_kills_per_spawn": round(avg_kills_per_spawn, 3),
             })
     
     return vehicles

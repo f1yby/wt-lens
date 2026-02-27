@@ -8,6 +8,7 @@ import { Box, CircularProgress } from '@mui/material';
 // 懒加载页面组件
 const HomePage = lazy(() => import('./pages/HomePage'));
 const VehicleDetailPage = lazy(() => import('./pages/VehicleDetailPage'));
+const LanzOdermattPage = lazy(() => import('./pages/LanzOdermattPage'));
 
 // 加载状态组件
 function PageLoader() {
@@ -112,6 +113,7 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/vehicle/:id" element={<VehicleDetailPage />} />
+            <Route path="/lo-calculator" element={<LanzOdermattPage />} />
           </Routes>
         </Suspense>
       </BrowserRouter>

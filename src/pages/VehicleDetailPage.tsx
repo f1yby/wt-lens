@@ -9,7 +9,7 @@ import {
   Button,
   CircularProgress,
 } from '@mui/material';
-import { ArrowBack, Speed, AccessTime, ExpandLess, SyncAlt, GpsFixed, Visibility, FastForward, FastRewind, RotateRight, SvgIconComponent } from '@mui/icons-material';
+import { ArrowBack, Speed, AccessTime, ExpandLess, SyncAlt, GpsFixed, Visibility, FastForward, FastRewind, RotateRight, FlashOn, SvgIconComponent } from '@mui/icons-material';
 import Navbar from '../components/Navbar';
 import DistributionChart from '../components/DistributionChart';
 import StabilizerScatterChart from '../components/StabilizerScatterChart';
@@ -103,6 +103,83 @@ function generateVehicleComparisonData(vehicleId: string, metric: MetricType, al
   };
 }
 
+/** Stats metric types for comparison */
+type StatsMetricType = 'avgKills' | 'winRate';
+
+/** Gets the numeric value for a given stats metric */
+function getStatsMetricValue(vehicle: Vehicle, metric: StatsMetricType): number {
+  if (!vehicle.stats) return 0;
+  
+  switch (metric) {
+    case 'avgKills': return vehicle.stats.avgKills;
+    case 'winRate': return vehicle.stats.winRate;
+    default: return 0;
+  }
+}
+
+/** Generates scatter data for stats comparison charts (KR, winRate) */
+function generateStatsComparisonData(
+  vehicleId: string, 
+  metric: StatsMetricType, 
+  allVehicles: Vehicle[]
+) {
+  const vehicle = allVehicles.find(v => v.id === vehicleId);
+  if (!vehicle) return null;
+
+  const targetBR = vehicle.battleRating;
+  const brMin = targetBR - 1.0;
+  const brMax = targetBR + 1.0;
+
+  const value = getStatsMetricValue(vehicle, metric);
+
+  // Filter vehicles within BR ±1.0 range with valid stats data
+  const filteredVehicles = allVehicles.filter(v => {
+    const metricValue = getStatsMetricValue(v, metric);
+    return v.battleRating >= brMin && 
+           v.battleRating <= brMax && 
+           v.stats && 
+           v.stats.battles > 0 &&
+           metricValue > 0;
+  });
+
+  if (filteredVehicles.length === 0) return null;
+
+  // Calculate BR gradient color: BR-1.0 (blue, 240°) -> BR 0 (green, 120°) -> BR+1.0 (red, 0°)
+  const getBRGradientColor = (brDiff: number): string => {
+    const clampedDiff = Math.max(-1.0, Math.min(1.0, brDiff));
+    const hue = 120 - (clampedDiff * 120);
+    return `hsl(${hue}, 75%, 50%)`;
+  };
+
+  const bins = filteredVehicles.map((v) => {
+    const brDiff = parseFloat((v.battleRating - targetBR).toFixed(2));
+    const isCurrent = v.id === vehicleId;
+
+    return {
+      range: v.localizedName,
+      metricValue: getStatsMetricValue(v, metric),
+      battles: v.stats?.battles ?? 0,
+      isCurrent,
+      vehicleId: v.id,
+      brDiff,
+      dotColor: isCurrent ? '#f97316' : getBRGradientColor(brDiff),
+    };
+  });
+
+  const currentVehicleBin = bins.findIndex(b => b.isCurrent);
+
+  return {
+    metric: metric as MetricType, // Cast for compatibility with DistributionChart
+    bins,
+    currentVehicleBin: Math.max(0, currentVehicleBin),
+    currentVehicleValue: value,
+    allValues: filteredVehicles.map(v => ({
+      vehicleId: v.id,
+      value: getStatsMetricValue(v, metric),
+    })),
+  };
+}
+
 /** Color constants - white with shadow works on all backgrounds */
 const COLOR_HAS_VALUE = '#ffffff';
 const COLOR_NO_VALUE = 'rgba(255,255,255,0.4)';
@@ -159,6 +236,202 @@ function StatItem({ icon: Icon, value, subValue, label }: {
         lineHeight: 1.2,
       }}>
         {label}
+      </Typography>
+    </Box>
+  );
+}
+
+/** Ammo type labels */
+const AMMO_TYPE_LABELS: Record<string, string> = {
+  'apds_fs_tank': 'APFSDS',
+  'apds_fs_long_tank': '长杆APFSDS',
+  'apds_fs_long_l30_tank': 'L30长杆APFSDS',
+  'apds_fs_tungsten_l10_l15_tank': '钨芯APFSDS',
+  'apds_fs_tungsten_l10_l15_tank_navy': '钨芯APFSDS',
+  'apds_fs_tungsten_l10_l15_navy': '钨芯APFSDS',
+  'apds_fs_tungsten_caliber_fins_tank': '尾翼钨芯APFSDS',
+  'apds_fs_tungsten_small_core_tank': '细钨芯APFSDS',
+  'apds_early_tank': '早期APDS',
+  'apds_tank': 'APDS',
+  'apcbc_tank': 'APCBC',
+  'apcbc_solid_medium_caliber_tank': 'APCBC',
+  'apcr_tank': 'APCR',
+  'ap_tank': 'AP',
+  'ap_he_tank': 'APHE',
+  'aphe_tank': 'APHE',
+  'aphebc_tank': 'APHEBC',
+  'apbc_usa_tank': 'APBC',
+  'apc_solid_medium_caliber_tank': 'APC',
+  'heat_tank': 'HEAT',
+  'heat_fs_tank': 'HEAT-FS',
+  'he_frag_tank': 'HE',
+  'he_frag_fs_tank': 'HE-FS',
+  'he_frag_radio_fuse': 'HE-VT',
+  'he_frag_dist_fuse': 'HE-TF',
+  'hesh_tank': 'HESH',
+  'smoke_tank': '烟雾弹',
+  'atgm_tank': '反坦克导弹',
+  'atgm_tandem_tank': '串联反坦克导弹',
+  'sam_tank': '防空导弹',
+  'sap_hei_tank': '半穿甲弹',
+  'shrapnel_tank': '榴霰弹',
+  'practice_tank': '训练弹',
+};
+
+/** Get the best kinetic round info from ammunitions */
+function getBestKineticRound(ammunitions?: any[]): {
+  type: string;
+  name: string;
+  penetration: number;
+  isLO: boolean;
+  loParams?: { workingLength: number; density: number; caliber: number; mass: number; velocity: number; Cx: number };
+} | null {
+  if (!ammunitions || ammunitions.length === 0) return null;
+
+  // Find the round with the highest penetration
+  let bestRound: any = null;
+  let bestPen = 0;
+
+  for (const a of ammunitions) {
+    const pen = a.penetration0m || a.armorPower || 0;
+    if (pen > bestPen) {
+      bestPen = pen;
+      bestRound = a;
+    }
+  }
+
+  if (!bestRound) return null;
+
+  return {
+    type: AMMO_TYPE_LABELS[bestRound.type] || bestRound.type || 'Unknown',
+    name: bestRound.localizedName || bestRound.name || 'Unknown',
+    penetration: bestPen,
+    isLO: !!bestRound.lanzOdermatt,
+    loParams: bestRound.lanzOdermatt ? {
+      workingLength: bestRound.lanzOdermatt.workingLength,
+      density: bestRound.lanzOdermatt.density,
+      caliber: bestRound.caliber,
+      mass: bestRound.mass,
+      velocity: bestRound.muzzleVelocity,
+      Cx: bestRound.lanzOdermatt.Cx || 0,
+    } : undefined,
+  };
+}
+
+/** Generate Lanz-Odermatt calculator internal URL with parameters */
+function generateLOCalculatorUrl(loParams: { workingLength: number; density: number; caliber: number; mass: number; velocity: number; Cx: number }, roundName: string, penetration: number, vehicleName: string): string {
+  const params = new URLSearchParams({
+    wl: loParams.workingLength.toString(),
+    density: loParams.density.toString(),
+    caliber: loParams.caliber.toString(),
+    mass: loParams.mass.toString(),
+    cx: loParams.Cx.toString(),
+    velocity: (loParams.velocity / 1000).toFixed(3), // m/s -> km/s
+    gamePen: penetration.toString(),
+    vehicle: vehicleName,
+    ammo: roundName,
+  });
+  return `/lo-calculator?${params.toString()}`;
+}
+
+/** Penetration stat item with ammo details */
+function PenetrationStatItem({ penetration, ammunitions, vehicleName, onNavigate }: {
+  penetration: number;
+  ammunitions?: any[];
+  vehicleName: string;
+  onNavigate: (url: string) => void;
+}) {
+  const color = penetration > 0 ? COLOR_HAS_VALUE : COLOR_NO_VALUE;
+  const roundInfo = getBestKineticRound(ammunitions);
+
+  const handleLOClick = () => {
+    if (roundInfo?.isLO && roundInfo.loParams) {
+      const url = generateLOCalculatorUrl(roundInfo.loParams, roundInfo.name, penetration, vehicleName);
+      onNavigate(url);
+    }
+  };
+
+  return (
+    <Box sx={{
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      gap: 0.25,
+      py: { xs: 0.75, sm: 1 },
+    }}>
+      <FlashOn sx={{ color, fontSize: { xs: 18, sm: 20, md: 22 }, mb: 0.25 }} />
+      <Typography sx={{
+        color,
+        fontWeight: 700,
+        fontSize: { xs: '0.8rem', sm: '0.9rem', md: '1rem' },
+        textShadow: '0 1px 3px rgba(0,0,0,0.4)',
+        lineHeight: 1.2,
+      }}>
+        {penetration > 0 ? `${penetration.toFixed(0)}mm` : '-'}
+      </Typography>
+      {roundInfo && (
+        <>
+          <Typography sx={{
+            color: 'rgba(255,255,255,0.9)',
+            fontSize: { xs: '0.5rem', sm: '0.55rem', md: '0.6rem' },
+            textShadow: '0 1px 2px rgba(0,0,0,0.3)',
+            lineHeight: 1,
+            fontWeight: 500,
+          }}>
+            {roundInfo.type}
+          </Typography>
+          {roundInfo.isLO && roundInfo.loParams ? (
+            <>
+              <Typography sx={{
+                color: 'rgba(255,255,255,0.7)',
+                fontSize: { xs: '0.5rem', sm: '0.55rem', md: '0.6rem' },
+                textShadow: '0 1px 2px rgba(0,0,0,0.3)',
+                lineHeight: 1,
+                fontWeight: 400,
+              }}>
+                {roundInfo.name}
+              </Typography>
+              <Typography
+                onClick={handleLOClick}
+                sx={{
+                  color: '#4ade80',
+                  fontSize: { xs: '0.5rem', sm: '0.55rem', md: '0.6rem' },
+                  textShadow: '0 1px 2px rgba(0,0,0,0.3)',
+                  lineHeight: 1,
+                  fontWeight: 600,
+                  cursor: 'pointer',
+                  textDecoration: 'underline',
+                  textDecorationColor: 'rgba(74, 222, 128, 0.5)',
+                  '&:hover': {
+                    textDecorationColor: '#4ade80',
+                  },
+                }}
+              >
+                Lanz-Odermatt
+              </Typography>
+            </>
+          ) : (
+            <Typography sx={{
+              color: 'rgba(255,255,255,0.7)',
+              fontSize: { xs: '0.5rem', sm: '0.55rem', md: '0.6rem' },
+              textShadow: '0 1px 2px rgba(0,0,0,0.3)',
+              lineHeight: 1,
+              fontWeight: 400,
+            }}>
+              {roundInfo.name}
+            </Typography>
+          )}
+        </>
+      )}
+      <Typography sx={{
+        color: 'rgba(255,255,255,0.85)',
+        fontSize: { xs: '0.6rem', sm: '0.65rem', md: '0.7rem' },
+        fontWeight: 500,
+        textShadow: '0 1px 2px rgba(0,0,0,0.3)',
+        whiteSpace: 'nowrap',
+        lineHeight: 1.2,
+      }}>
+        穿深
       </Typography>
     </Box>
   );
@@ -222,6 +495,12 @@ export default function VehicleDetailPage() {
     elevationMin: generateVehicleComparisonData(vehicle.id, 'elevationMin', vehicles),
     gunnerThermal: generateVehicleComparisonData(vehicle.id, 'gunnerThermal', vehicles),
     commanderThermal: generateVehicleComparisonData(vehicle.id, 'commanderThermal', vehicles),
+  };
+
+  // Generate stats comparison data (KR and winRate)
+  const statsComparisons = {
+    avgKills: generateStatsComparisonData(vehicle.id, 'avgKills', vehicles),
+    winRate: generateStatsComparisonData(vehicle.id, 'winRate', vehicles),
   };
 
   // Get vehicles in same BR range for stabilizer comparison
@@ -402,7 +681,7 @@ export default function VehicleDetailPage() {
                 xs: 'repeat(4, 1fr)',
                 sm: 'repeat(5, 1fr)',
                 md: 'repeat(5, 1fr)',
-                lg: 'repeat(10, 1fr)',
+                lg: 'repeat(11, 1fr)',
               },
               gap: { xs: 0.5, sm: 1 },
             }}>
@@ -430,6 +709,12 @@ export default function VehicleDetailPage() {
                 icon={AccessTime}
                 value={`${vehicle.performance.reloadTime.toFixed(1)}s`}
                 label="装填时间"
+              />
+              <PenetrationStatItem
+                penetration={vehicle.performance.penetration}
+                ammunitions={vehicle.performance.ammunitions}
+                vehicleName={vehicle.localizedName}
+                onNavigate={(url) => navigate(url)}
               />
               <StatItem
                 icon={ExpandLess}
@@ -477,12 +762,31 @@ export default function VehicleDetailPage() {
           同权重载具对比
         </Typography>
         <Typography variant="body2" sx={{ color: '#737373', mb: 2 }}>
-          展示同BR±1.0范围内该指标前12的载具，橙色标记当前载具位置
+          展示同BR±1.0范围内该指标的全部载具，橙色星形标记当前载具位置
         </Typography>
 
         <Grid container spacing={2}>
-          {/* Stabilizer Chart - always show */}
-          <Grid item xs={12} md={6}>
+          {/* Stats Charts - KR and WinRate (Most Important) */}
+          {statsComparisons.avgKills && (
+            <Grid item xs={12} md={4}>
+              <DistributionChart data={statsComparisons.avgKills} title="场均击杀" unit="击杀/场" />
+            </Grid>
+          )}
+          {statsComparisons.winRate && (
+            <Grid item xs={12} md={4}>
+              <DistributionChart data={statsComparisons.winRate} title="胜率" unit="%" />
+            </Grid>
+          )}
+          
+          {/* Penetration Chart (High Importance) */}
+          {comparisons.penetration && (
+            <Grid item xs={12} md={4}>
+              <DistributionChart data={comparisons.penetration} title="穿深" unit="mm" />
+            </Grid>
+          )}
+          
+          {/* Stabilizer Chart */}
+          <Grid item xs={12} md={4}>
             <StabilizerScatterChart 
               vehicles={stabilizerComparisonVehicles}
               currentVehicleId={vehicle.id}
@@ -490,22 +794,22 @@ export default function VehicleDetailPage() {
             />
           </Grid>
           
+          {/* Performance Charts - Ordered by Importance */}
           {(
             [
-              { key: 'powerToWeight', title: '功重比对比', unit: 'hp/t' },
-              { key: 'maxSpeed', title: '前进极速对比', unit: 'km/h' },
-              { key: 'maxReverseSpeed', title: '倒车速度对比', unit: 'km/h' },
-              { key: 'traverseSpeed', title: '方向机速度对比', unit: '°/s' },
-              { key: 'reloadTime', title: '装填时间对比', unit: 's' },
-              { key: 'elevationSpeed', title: '高低机速度对比', unit: '°/s' },
-              { key: 'elevationMin', title: '俯角对比', unit: '°' },
-              { key: 'penetration', title: '穿深对比', unit: 'mm' },
-              { key: 'gunnerThermal', title: '炮手热成像对比', unit: '像素' },
-              { key: 'commanderThermal', title: '车长热成像对比', unit: '像素' },
+              { key: 'traverseSpeed', title: '方向机速度', unit: '°/s' },
+              { key: 'reloadTime', title: '装填时间', unit: 's' },
+              { key: 'powerToWeight', title: '功重比', unit: 'hp/t' },
+              { key: 'maxSpeed', title: '前进极速', unit: 'km/h' },
+              { key: 'elevationMin', title: '俯角', unit: '°' },
+              { key: 'maxReverseSpeed', title: '倒车速度', unit: 'km/h' },
+              { key: 'elevationSpeed', title: '高低机速度', unit: '°/s' },
+              { key: 'gunnerThermal', title: '炮手热成像', unit: '像素' },
+              { key: 'commanderThermal', title: '车长热成像', unit: '像素' },
             ] as const
           ).map(({ key, title, unit }) => 
             comparisons[key] && (
-              <Grid item xs={12} md={6} key={key}>
+              <Grid item xs={12} md={4} key={key}>
                 <DistributionChart data={comparisons[key]} title={title} unit={unit} />
               </Grid>
             )

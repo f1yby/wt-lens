@@ -19,8 +19,11 @@ interface DistributionChartProps {
   unit: string;
 }
 
+/** Extended metric type including stats metrics */
+type ExtendedMetricType = MetricType | 'avgKills' | 'winRate';
+
 /** Color mapping for each metric type */
-const METRIC_COLORS: Record<MetricType, string> = {
+const METRIC_COLORS: Record<ExtendedMetricType, string> = {
   powerToWeight: '#4ade80',
   maxSpeed: '#60a5fa',
   maxReverseSpeed: '#3b82f6',
@@ -32,10 +35,12 @@ const METRIC_COLORS: Record<MetricType, string> = {
   gunnerThermal: '#fbbf24',
   commanderThermal: '#fbbf24',
   stabilizer: '#8b5cf6',
+  avgKills: '#f97316',
+  winRate: '#4ade80',
 };
 
 /** Display name mapping for each metric type */
-const METRIC_NAMES: Record<MetricType, string> = {
+const METRIC_NAMES: Record<ExtendedMetricType, string> = {
   powerToWeight: '功重比',
   maxSpeed: '前进极速',
   maxReverseSpeed: '倒车速度',
@@ -47,6 +52,8 @@ const METRIC_NAMES: Record<MetricType, string> = {
   gunnerThermal: '炮手热成像',
   commanderThermal: '车长热成像',
   stabilizer: '稳定器',
+  avgKills: '场均击杀',
+  winRate: '胜率',
 };
 
 // Distance threshold for clustering (in data units)
@@ -64,7 +71,7 @@ interface ScatterPoint {
 }
 
 export default function DistributionChart({ data, title, unit }: DistributionChartProps) {
-  const color = METRIC_COLORS[data.metric] || '#4ade80';
+  const color = METRIC_COLORS[data.metric as ExtendedMetricType] || '#4ade80';
   const navigate = useNavigate();
   const [hoveredPoint, setHoveredPoint] = useState<ScatterPoint | null>(null);
   const [lockedPoint, setLockedPoint] = useState<ScatterPoint | null>(null);
@@ -237,7 +244,7 @@ export default function DistributionChart({ data, title, unit }: DistributionCha
                 </Typography>
                 <Box sx={{ display: 'flex', justifyContent: 'space-between', mt: 0.5 }}>
                   <Typography variant="caption" sx={{ color: '#737373', fontSize: '0.7rem' }}>
-                    {METRIC_NAMES[data.metric]}:
+                    {METRIC_NAMES[data.metric as ExtendedMetricType]}:
                   </Typography>
                   <Typography variant="caption" sx={{ color: '#171717', fontSize: '0.7rem', fontWeight: 500 }}>
                     {p.x.toFixed(1)} {unit}
@@ -338,7 +345,7 @@ export default function DistributionChart({ data, title, unit }: DistributionCha
                 </Typography>
                 <Box sx={{ display: 'flex', justifyContent: 'space-between', mt: 0.5 }}>
                   <Typography variant="caption" sx={{ color: '#737373', fontSize: '0.7rem' }}>
-                    {METRIC_NAMES[data.metric]}:
+                    {METRIC_NAMES[data.metric as ExtendedMetricType]}:
                   </Typography>
                   <Typography variant="caption" sx={{ color: '#171717', fontSize: '0.7rem', fontWeight: 500 }}>
                     {p.x.toFixed(1)} {unit}
