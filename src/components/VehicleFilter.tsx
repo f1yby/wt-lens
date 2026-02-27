@@ -279,17 +279,15 @@ function BRGridSelector({ brRange, onBrRangeChange }: BRGridSelectorProps) {
       </Box>
       
       {/* BR 网格 */}
-      <Box sx={{ overflowX: 'auto', mx: -0.5, px: 0.5 }}>
-        <Box
-          ref={containerRef}
-          sx={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(36, minmax(32px, 1fr))',
-            gap: 0.25,
-            userSelect: 'none',
-            minWidth: 36 * 34,
-          }}
-        >
+      <Box
+        ref={containerRef}
+        sx={{
+          display: 'flex',
+          flexWrap: 'wrap',
+          gap: 0.25,
+          userSelect: 'none',
+        }}
+      >
         {BATTLE_RATINGS.map((br, index) => {
           const selected = isBrSelected(br);
           const inPreview = isInDragPreview(index);
@@ -301,7 +299,9 @@ function BRGridSelector({ brRange, onBrRangeChange }: BRGridSelectorProps) {
               onMouseDown={() => handleMouseDown(index)}
               onMouseEnter={() => handleMouseEnter(index)}
               sx={{
-                height: 22,
+                height: 26,
+                minWidth: 36,
+                px: 0.5,
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
@@ -318,12 +318,11 @@ function BRGridSelector({ brRange, onBrRangeChange }: BRGridSelectorProps) {
                     ? 'rgba(22, 163, 74, 0.1)'
                     : '#ffffff',
                 color: selected || isPreviewActive ? '#16a34a' : '#525252',
-                fontSize: '0.6rem',
+                fontSize: '0.65rem',
                 fontWeight: 500,
                 cursor: 'pointer',
                 transition: 'all 0.08s ease',
                 transform: isDragging && dragStart === index ? 'scale(0.96)' : 'scale(1)',
-                overflow: 'hidden',
                 '&:hover': {
                   backgroundColor: isPreviewActive || selected
                     ? undefined
@@ -335,7 +334,6 @@ function BRGridSelector({ brRange, onBrRangeChange }: BRGridSelectorProps) {
             </Box>
           );
         })}
-      </Box>
       </Box>
       
       {/* 提示文字 */}
