@@ -37,8 +37,8 @@ export default function VehicleTechTree({ vehicles }: VehicleTechTreeProps) {
     .sort((a, b) => a - b);
 
   return (
-    <Box sx={{ overflowX: 'auto', mx: { xs: -1, sm: 0 }, px: { xs: 1, sm: 0 } }}>
-      <Box sx={{ minWidth: 600 }}>
+    <Box>
+      <Box>
         {brList.map(br => (
           <Paper
             key={br}
@@ -86,7 +86,6 @@ export default function VehicleTechTree({ vehicles }: VehicleTechTreeProps) {
                 backgroundColor: '#ffffff',
                 borderRadius: '0 4px 4px 0',
                 border: '1px solid #d4d4d4',
-                overflow: 'visible',
                 minWidth: 0,
               }}
             >
