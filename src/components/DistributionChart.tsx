@@ -538,24 +538,43 @@ export default function DistributionChart({ data, title, unit, brInfo }: Distrib
       
       {/* Gradient legend */}
       <Box sx={{ mt: 1, px: 2 }}>
-        <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 0.5 }}>
-          <Typography variant="caption" sx={{ color: '#737373', fontSize: '0.65rem' }}>
-            {brInfo ? `BR ${brInfo.brMin.toFixed(1)}` : 'BR-1.0'}
-          </Typography>
-          <Typography variant="caption" sx={{ color: '#737373', fontSize: '0.65rem' }}>
-            {brInfo ? `BR ${brInfo.vehicleBR.toFixed(1)}` : '同BR'}
-          </Typography>
-          <Typography variant="caption" sx={{ color: '#737373', fontSize: '0.65rem' }}>
-            {brInfo ? `BR ${brInfo.brMax.toFixed(1)}` : 'BR+1.0'}
-          </Typography>
-        </Box>
-        <Box
-          sx={{
-            height: 8,
-            borderRadius: 1,
-            background: 'linear-gradient(90deg, hsl(240, 75%, 50%) 0%, hsl(120, 75%, 50%) 50%, hsl(0, 75%, 50%) 100%)',
-          }}
-        />
+        {(() => {
+          const midPct = brInfo
+            ? ((brInfo.vehicleBR - brInfo.brMin) / Math.max(brInfo.brMax - brInfo.brMin, 0.1)) * 100
+            : 50;
+          const clampedMidPct = Math.max(5, Math.min(95, midPct));
+          return (
+            <>
+              <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 0.5, position: 'relative' }}>
+                <Typography variant="caption" sx={{ color: '#737373', fontSize: '0.65rem' }}>
+                  {brInfo ? `BR ${brInfo.brMin.toFixed(1)}` : 'BR-1.0'}
+                </Typography>
+                <Typography
+                  variant="caption"
+                  sx={{
+                    color: '#737373',
+                    fontSize: '0.65rem',
+                    position: 'absolute',
+                    left: `${clampedMidPct}%`,
+                    transform: 'translateX(-50%)',
+                  }}
+                >
+                  {brInfo ? `BR ${brInfo.vehicleBR.toFixed(1)}` : '同BR'}
+                </Typography>
+                <Typography variant="caption" sx={{ color: '#737373', fontSize: '0.65rem' }}>
+                  {brInfo ? `BR ${brInfo.brMax.toFixed(1)}` : 'BR+1.0'}
+                </Typography>
+              </Box>
+              <Box
+                sx={{
+                  height: 8,
+                  borderRadius: 1,
+                  background: `linear-gradient(90deg, hsl(240, 75%, 50%) 0%, hsl(120, 75%, 50%) ${clampedMidPct}%, hsl(0, 75%, 50%) 100%)`,
+                }}
+              />
+            </>
+          );
+        })()}
       </Box>
     </Paper>
   );

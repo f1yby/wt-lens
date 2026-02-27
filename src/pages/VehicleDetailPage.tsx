@@ -85,12 +85,19 @@ function generateVehicleComparisonData(vehicleId: string, metric: MetricType, al
 
   if (filteredVehicles.length === 0) return null;
 
-  // Calculate BR gradient color based on distance from center of range
-  const brCenter = (brMin + brMax) / 2;
+  // Calculate BR gradient color based on distance from current vehicle BR
+  // Negative brDiff (lower BR) -> blue (hue 240), zero -> green (hue 120), positive (higher BR) -> red (hue 0)
+  const lowerSpan = Math.max(targetBR - brMin, 0.1);
+  const upperSpan = Math.max(brMax - targetBR, 0.1);
   const getBRGradientColor = (brDiff: number): string => {
-    const halfSpan = brSpan / 2;
-    const clampedDiff = Math.max(-halfSpan, Math.min(halfSpan, brDiff));
-    const hue = halfSpan > 0 ? 120 - ((clampedDiff / halfSpan) * 120) : 120;
+    let normalized: number; // -1 to +1, where -1=lowest BR, 0=same BR, +1=highest BR
+    if (brDiff <= 0) {
+      normalized = Math.max(brDiff / lowerSpan, -1);
+    } else {
+      normalized = Math.min(brDiff / upperSpan, 1);
+    }
+    // Map: -1 -> hue 240 (blue), 0 -> hue 120 (green), +1 -> hue 0 (red)
+    const hue = 120 - normalized * 120;
     return `hsl(${hue}, 75%, 50%)`;
   };
 
@@ -169,11 +176,17 @@ function generateStatsComparisonData(
 
   if (filteredVehicles.length === 0) return null;
 
-  // Calculate BR gradient color
-  const halfSpan = brSpan / 2;
+  // Calculate BR gradient color based on distance from current vehicle BR
+  const lowerSpan = Math.max(targetBR - brMin, 0.1);
+  const upperSpan = Math.max(brMax - targetBR, 0.1);
   const getBRGradientColor = (brDiff: number): string => {
-    const clampedDiff = Math.max(-halfSpan, Math.min(halfSpan, brDiff));
-    const hue = halfSpan > 0 ? 120 - ((clampedDiff / halfSpan) * 120) : 120;
+    let normalized: number;
+    if (brDiff <= 0) {
+      normalized = Math.max(brDiff / lowerSpan, -1);
+    } else {
+      normalized = Math.min(brDiff / upperSpan, 1);
+    }
+    const hue = 120 - normalized * 120;
     return `hsl(${hue}, 75%, 50%)`;
   };
 
