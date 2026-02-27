@@ -26,6 +26,10 @@ dist-ssr
 # Data raw files (keep only processed)
 data/raw/*.json
 
+# Reference files
+*.pdf
+perfcalc.php.html
+
 # CodeBuddy cache
 .codebuddy/
 
