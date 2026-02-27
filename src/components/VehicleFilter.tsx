@@ -89,24 +89,60 @@ export default function VehicleFilter({
                 onChange={() => handleNationToggle(nation.id)}
                 sx={{
                   minWidth: 0,
-                  px: 1.5,
-                  py: 0.5,
+                  width: 44,
+                  height: 32,
                   borderRadius: 1,
                   border: '1px solid #d4d4d4',
-                  backgroundColor: isSelected ? 'rgba(22, 163, 74, 0.1)' : '#ffffff',
-                  color: isSelected ? '#16a34a' : '#525252',
+                  backgroundColor: isSelected ? 'rgba(22, 163, 74, 0.2)' : '#ffffff',
+                  backgroundImage: `url(${nation.flagImage})`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
                   textTransform: 'none',
-                  fontSize: '0.85rem',
+                  position: 'relative',
+                  overflow: 'hidden',
                   '&:hover': {
-                    backgroundColor: isSelected ? 'rgba(22, 163, 74, 0.2)' : '#f5f5f5',
+                    backgroundColor: isSelected ? 'rgba(22, 163, 74, 0.3)' : 'rgba(0, 0, 0, 0.1)',
                   },
                   '&.Mui-selected': {
-                    backgroundColor: 'rgba(22, 163, 74, 0.1)',
-                    color: '#16a34a',
+                    backgroundColor: 'rgba(22, 163, 74, 0.2)',
+                    borderColor: '#16a34a',
+                    borderWidth: 2,
+                  },
+                  '&::after': {
+                    content: '""',
+                    position: 'absolute',
+                    inset: 0,
+                    backgroundColor: isSelected ? 'rgba(22, 163, 74, 0.3)' : 'transparent',
+                    transition: 'background-color 0.2s',
                   },
                 }}
               >
-                {nation.flagIcon} {nation.nameZh}
+                <Box
+                  sx={{
+                    position: 'absolute',
+                    inset: 0,
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    backgroundColor: 'rgba(0, 0, 0, 0.4)',
+                    opacity: isSelected ? 1 : 0,
+                    transition: 'opacity 0.2s',
+                    '&:hover': {
+                      opacity: 1,
+                    },
+                  }}
+                >
+                  <Typography
+                    sx={{
+                      color: '#ffffff',
+                      fontSize: '0.75rem',
+                      fontWeight: 600,
+                      textShadow: '0 1px 2px rgba(0,0,0,0.8)',
+                    }}
+                  >
+                    {nation.nameZh}
+                  </Typography>
+                </Box>
               </ToggleButton>
             );
           })}
