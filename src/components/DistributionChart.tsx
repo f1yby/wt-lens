@@ -18,6 +18,8 @@ interface DistributionChartProps {
   data: DistributionData;
   title: string;
   unit: string;
+  /** Current vehicle BR and filter BR range for gradient legend labels */
+  brInfo?: { vehicleBR: number; brMin: number; brMax: number };
 }
 
 /** Extended metric type including stats metrics */
@@ -71,7 +73,7 @@ interface ScatterPoint {
   dotColor?: string;
 }
 
-export default function DistributionChart({ data, title, unit }: DistributionChartProps) {
+export default function DistributionChart({ data, title, unit, brInfo }: DistributionChartProps) {
   const color = METRIC_COLORS[data.metric as ExtendedMetricType] || '#4ade80';
   const navigate = useNavigate();
   const [hoveredPoint, setHoveredPoint] = useState<ScatterPoint | null>(null);
@@ -537,9 +539,15 @@ export default function DistributionChart({ data, title, unit }: DistributionCha
       {/* Gradient legend */}
       <Box sx={{ mt: 1, px: 2 }}>
         <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 0.5 }}>
-          <Typography variant="caption" sx={{ color: '#737373', fontSize: '0.65rem' }}>BR-1.0</Typography>
-          <Typography variant="caption" sx={{ color: '#737373', fontSize: '0.65rem' }}>同BR</Typography>
-          <Typography variant="caption" sx={{ color: '#737373', fontSize: '0.65rem' }}>BR+1.0</Typography>
+          <Typography variant="caption" sx={{ color: '#737373', fontSize: '0.65rem' }}>
+            {brInfo ? `BR ${brInfo.brMin.toFixed(1)}` : 'BR-1.0'}
+          </Typography>
+          <Typography variant="caption" sx={{ color: '#737373', fontSize: '0.65rem' }}>
+            {brInfo ? `BR ${brInfo.vehicleBR.toFixed(1)}` : '同BR'}
+          </Typography>
+          <Typography variant="caption" sx={{ color: '#737373', fontSize: '0.65rem' }}>
+            {brInfo ? `BR ${brInfo.brMax.toFixed(1)}` : 'BR+1.0'}
+          </Typography>
         </Box>
         <Box
           sx={{

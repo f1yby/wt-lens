@@ -923,19 +923,19 @@ export default function VehicleDetailPage() {
           {/* Stats Charts - KR and WinRate (Most Important) */}
           {statsComparisons?.avgKills && (
             <Grid item xs={12} md={4}>
-              <DistributionChart data={statsComparisons.avgKills} title="KR (每重生击毁)" unit="" />
+              <DistributionChart data={statsComparisons.avgKills} title="KR (每重生击毁)" unit="" brInfo={{ vehicleBR: vehicle.battleRating, brMin: effectiveBrRange[0], brMax: effectiveBrRange[1] }} />
             </Grid>
           )}
           {statsComparisons?.winRate && (
             <Grid item xs={12} md={4}>
-              <DistributionChart data={statsComparisons.winRate} title="胜率" unit="%" />
+              <DistributionChart data={statsComparisons.winRate} title="胜率" unit="%" brInfo={{ vehicleBR: vehicle.battleRating, brMin: effectiveBrRange[0], brMax: effectiveBrRange[1] }} />
             </Grid>
           )}
           
           {/* Penetration Chart (High Importance) */}
           {comparisons?.penetration && (
             <Grid item xs={12} md={4}>
-              <DistributionChart data={comparisons.penetration} title="穿深" unit="mm" />
+              <DistributionChart data={comparisons.penetration} title="穿深" unit="mm" brInfo={{ vehicleBR: vehicle.battleRating, brMin: effectiveBrRange[0], brMax: effectiveBrRange[1] }} />
             </Grid>
           )}
           
@@ -964,7 +964,7 @@ export default function VehicleDetailPage() {
           ).map(({ key, title, unit }) => 
             comparisons[key] && (
               <Grid item xs={12} md={4} key={key}>
-                <DistributionChart data={comparisons[key]} title={title} unit={unit} />
+                <DistributionChart data={comparisons[key]} title={title} unit={unit} brInfo={{ vehicleBR: vehicle.battleRating, brMin: effectiveBrRange[0], brMax: effectiveBrRange[1] }} />
               </Grid>
             )
           )}
