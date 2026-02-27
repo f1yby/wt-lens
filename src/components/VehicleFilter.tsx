@@ -279,15 +279,17 @@ function BRGridSelector({ brRange, onBrRangeChange }: BRGridSelectorProps) {
       </Box>
       
       {/* BR 网格 */}
-      <Box
-        ref={containerRef}
-        sx={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(36, minmax(22px, 1fr))',
-          gap: 0.25,
-          userSelect: 'none',
-        }}
-      >
+      <Box sx={{ overflowX: 'auto', mx: -0.5, px: 0.5 }}>
+        <Box
+          ref={containerRef}
+          sx={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(36, minmax(32px, 1fr))',
+            gap: 0.25,
+            userSelect: 'none',
+            minWidth: 36 * 34,
+          }}
+        >
         {BATTLE_RATINGS.map((br, index) => {
           const selected = isBrSelected(br);
           const inPreview = isInDragPreview(index);
@@ -333,6 +335,7 @@ function BRGridSelector({ brRange, onBrRangeChange }: BRGridSelectorProps) {
             </Box>
           );
         })}
+      </Box>
       </Box>
       
       {/* 提示文字 */}
