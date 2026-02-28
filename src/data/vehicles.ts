@@ -1,4 +1,4 @@
-import type { Vehicle, VehicleDetail, DistributionData } from '../types';
+import type { Vehicle, Ammunition, MainGun, PenetrationData } from '../types';
 
 /**
  * Clean vehicle name: only remove zero-width spaces.
@@ -54,9 +54,9 @@ interface DatamineEntry {
     stabilizer_value?: number | null;
     elevation_range_value?: number | null;
     // Ammunition data
-    mainGun?: any | null;
-    ammunitions?: any[] | null;
-    penetrationData?: any | null;
+    mainGun?: MainGun | null;
+    ammunitions?: Ammunition[] | null;
+    penetrationData?: PenetrationData | null;
     autoLoader?: boolean | null;
   };
   imageUrl: string;
@@ -140,11 +140,11 @@ function mergeVehicleData(stats: StatSharkEntry[], datamine: DatamineEntry[]): V
       id,
       name: datamineEntry.name,
       localizedName: cleanVehicleName(datamineEntry.localizedName),
-      nation: datamineEntry.nation as any,
+      nation: datamineEntry.nation as Vehicle['nation'],
       rank: statsEntry?.rank ?? datamineEntry.rank ?? 1,
       battleRating: statsEntry?.br ?? datamineEntry.battle_rating ?? 1.0,
-      vehicleType: datamineEntry.vehicle_type as any,
-      economicType: (datamineEntry.economic_type as any) ?? 'regular',
+      vehicleType: datamineEntry.vehicle_type as Vehicle['vehicleType'],
+      economicType: (datamineEntry.economic_type as Vehicle['economicType']) ?? 'regular',
       performance: {
         horsepower: datamineEntry.performance.horsepower ?? 0,
         weight: datamineEntry.performance.weight ?? 0,
@@ -203,97 +203,3 @@ export async function loadVehicles(): Promise<Vehicle[]> {
   return mergedVehicles;
 }
 
-/**
- * Get all vehicles (sync version - returns empty array if not loaded)
- * @deprecated Use loadVehicles() instead
- */
-export const allVehicles: Vehicle[] = [];
-
-// Sample subset for development/demo
-export const sampleVehicles: Vehicle[] = [];
-
-// Helper functions (async versions)
-export async function getVehicleById(id: string): Promise<Vehicle | undefined> {
-  const vehicles = await loadVehicles();
-  return vehicles.find(v => v.id === id);
-}
-
-export async function getVehiclesByNation(nation: string): Promise<Vehicle[]> {
-  const vehicles = await loadVehicles();
-  return vehicles.filter(v => v.nation === nation);
-}
-
-export async function getVehiclesByType(type: string): Promise<Vehicle[]> {
-  const vehicles = await loadVehicles();
-  return vehicles.filter(v => v.vehicleType === type);
-}
-
-export async function getVehiclesByBattleRating(min: number, max: number): Promise<Vehicle[]> {
-  const vehicles = await loadVehicles();
-  return vehicles.filter(v => v.battleRating >= min && v.battleRating <= max);
-}
-
-export const sampleVehicleDetail: VehicleDetail = {
-  id: 'ussr_t_34_1942',
-  name: 'ussr_t_34_1942',
-  localizedName: 'T-34 (1942)',
-  nation: 'ussr',
-  rank: 3,
-  battleRating: 4.0,
-  vehicleType: 'medium_tank',
-  economicType: 'regular',
-  performance: {
-    horsepower: 500,
-    weight: 30.5,
-    powerToWeight: 16.4,
-    maxReverseSpeed: 7,
-    reloadTime: 6.5,
-    penetration: 135,
-    maxSpeed: 55,
-    crewCount: 4,
-    elevationSpeed: 10,
-    traverseSpeed: 14,
-    hasStabilizer: false,
-    stabilizerType: 'none',
-    elevationRange: [-5, 30],
-    traverseRange: [-180, 180],
-    gunnerThermalResolution: [0, 0],
-    commanderThermalResolution: [0, 0],
-    gunnerThermalDiagonal: 0,
-    commanderThermalDiagonal: 0,
-    stabilizerValue: 0,
-    elevationRangeValue: 35,
-  },
-  stats: {
-    battles: 125000,
-    winRate: 52.3,
-    avgKills: 1.2,
-  },
-  imageUrl: 'https://encyclopedia.warthunder.com/images/ussr_t_34_1942.png',
-  commonOpponents: [
-    { vehicleId: 'germany_panzer_iv_h', encounterRate: 35, battles: 43750 },
-    { vehicleId: 'usa_m4a3e8_sherman', encounterRate: 28, battles: 35000 },
-    { vehicleId: 'germany_tiger_h1', encounterRate: 15, battles: 18750 },
-  ],
-  teammateComposition: [
-    { nation: 'ussr', percentage: 65 },
-    { nation: 'china', percentage: 20 },
-    { nation: 'britain', percentage: 15 },
-  ],
-};
-
-export const sampleDistributions: Record<string, DistributionData> = {
-  'ussr_t_34_1942': {
-    metric: 'powerToWeight',
-    bins: [
-      { range: '0-10', min: 0, max: 10, count: 15, vehicles: [] },
-      { range: '10-15', min: 10, max: 15, count: 45, vehicles: [] },
-      { range: '15-20', min: 15, max: 20, count: 35, vehicles: ['ussr_t_34_1942'] },
-      { range: '20-25', min: 20, max: 25, count: 20, vehicles: [] },
-      { range: '25-30', min: 25, max: 30, count: 10, vehicles: [] },
-    ],
-    currentVehicleBin: 2,
-    currentVehicleValue: 16.18,
-    allValues: [],
-  },
-};

@@ -5,7 +5,6 @@ import VehicleFilter from '../components/VehicleFilter';
 import VehicleTechTree from '../components/VehicleTechTree';
 import { loadVehicles } from '../data/vehicles';
 import type { Nation, VehicleType, Vehicle } from '../types';
-import { NATIONS } from '../types';
 
 export default function HomePage() {
   const [vehicles, setVehicles] = useState<Vehicle[]>([]);

@@ -11,26 +11,17 @@ import {
   ToggleButton,
   Stack,
 } from '@mui/material';
-import { ArrowBack, Speed, AccessTime, ExpandLess, SyncAlt, GpsFixed, Visibility, FastForward, FastRewind, RotateRight, FlashOn, OpenInNew, School, SvgIconComponent } from '@mui/icons-material';
+import { ArrowBack, Speed, AccessTime, ExpandLess, SyncAlt, GpsFixed, Visibility, FastForward, FastRewind, RotateRight, FlashOn, OpenInNew, School, type SvgIconComponent } from '@mui/icons-material';
 import Navbar from '../components/Navbar';
 import DistributionChart from '../components/DistributionChart';
 import StabilizerScatterChart from '../components/StabilizerScatterChart';
 import { BRGridSelector } from '../components/VehicleFilter';
 
-import { loadVehicles, sampleVehicleDetail, sampleDistributions } from '../data/vehicles';
-import { NATIONS, VEHICLE_TYPE_LABELS, BATTLE_RATINGS, ECONOMIC_TYPE_GRADIENTS, Nation } from '../types';
-import type { Vehicle, MetricType, VehicleType } from '../types';
-
-// Get base URL from Vite env
-const BASE_URL = import.meta.env.BASE_URL || '/';
-
-/** Gets the flag image path for a nation */
-const getFlagImagePath = (nation: Nation): string => 
-  `${BASE_URL}images/flags/unit_tooltip/country_${nation}.webp`;
-
-/** Gets the vehicle image path */
-const getVehicleImagePath = (vehicleId: string): string => 
-  `${BASE_URL}vehicles/${vehicleId}.webp`;
+import { loadVehicles } from '../data/vehicles';
+import { VEHICLE_TYPE_LABELS, BATTLE_RATINGS, ECONOMIC_TYPE_GRADIENTS } from '../types';
+import type { Vehicle, MetricType, VehicleType, Ammunition } from '../types';
+import { getVehicleImagePath, getFlagImagePath } from '../utils/paths';
+import { getBRGradientColor } from '../utils/chart';
 
 /** Gets the numeric value for a given metric from vehicle performance data */
 function getMetricValue(vehicle: Vehicle, metric: MetricType): number {
@@ -67,7 +58,6 @@ function generateVehicleComparisonData(vehicleId: string, metric: MetricType, al
   const targetBR = vehicle.battleRating;
   const brMin = filter?.brMin ?? (targetBR - 1.0);
   const brMax = filter?.brMax ?? (targetBR + 1.0);
-  const brSpan = Math.max(brMax - brMin, 0.1);
 
   const value = getMetricValue(vehicle, metric);
 
@@ -86,21 +76,8 @@ function generateVehicleComparisonData(vehicleId: string, metric: MetricType, al
 
   if (filteredVehicles.length === 0) return null;
 
-  // Calculate BR gradient color based on distance from current vehicle BR
-  // Negative brDiff (lower BR) -> blue (hue 240), zero -> green (hue 120), positive (higher BR) -> red (hue 0)
   const lowerSpan = Math.max(targetBR - brMin, 0.1);
   const upperSpan = Math.max(brMax - targetBR, 0.1);
-  const getBRGradientColor = (brDiff: number): string => {
-    let normalized: number; // -1 to +1, where -1=lowest BR, 0=same BR, +1=highest BR
-    if (brDiff <= 0) {
-      normalized = Math.max(brDiff / lowerSpan, -1);
-    } else {
-      normalized = Math.min(brDiff / upperSpan, 1);
-    }
-    // Map: -1 -> hue 240 (blue), 0 -> hue 120 (green), +1 -> hue 0 (red)
-    const hue = 120 - normalized * 120;
-    return `hsl(${hue}, 75%, 50%)`;
-  };
 
   const bins = filteredVehicles.map((v) => {
     const brDiff = parseFloat((v.battleRating - targetBR).toFixed(2));
@@ -113,7 +90,7 @@ function generateVehicleComparisonData(vehicleId: string, metric: MetricType, al
       isCurrent,
       vehicleId: v.id,
       brDiff,
-      dotColor: isCurrent ? '#f97316' : getBRGradientColor(brDiff),
+      dotColor: isCurrent ? '#f97316' : getBRGradientColor(brDiff, lowerSpan, upperSpan),
     };
   });
 
@@ -159,7 +136,6 @@ function generateStatsComparisonData(
   const targetBR = vehicle.battleRating;
   const brMin = filter?.brMin ?? (targetBR - 1.0);
   const brMax = filter?.brMax ?? (targetBR + 1.0);
-  const brSpan = Math.max(brMax - brMin, 0.1);
 
   const value = getStatsMetricValue(vehicle, metric);
 
@@ -178,19 +154,8 @@ function generateStatsComparisonData(
 
   if (filteredVehicles.length === 0) return null;
 
-  // Calculate BR gradient color based on distance from current vehicle BR
   const lowerSpan = Math.max(targetBR - brMin, 0.1);
   const upperSpan = Math.max(brMax - targetBR, 0.1);
-  const getBRGradientColor = (brDiff: number): string => {
-    let normalized: number;
-    if (brDiff <= 0) {
-      normalized = Math.max(brDiff / lowerSpan, -1);
-    } else {
-      normalized = Math.min(brDiff / upperSpan, 1);
-    }
-    const hue = 120 - normalized * 120;
-    return `hsl(${hue}, 75%, 50%)`;
-  };
 
   const bins = filteredVehicles.map((v) => {
     const brDiff = parseFloat((v.battleRating - targetBR).toFixed(2));
@@ -203,7 +168,7 @@ function generateStatsComparisonData(
       isCurrent,
       vehicleId: v.id,
       brDiff,
-      dotColor: isCurrent ? '#f97316' : getBRGradientColor(brDiff),
+      dotColor: isCurrent ? '#f97316' : getBRGradientColor(brDiff, lowerSpan, upperSpan),
     };
   });
 
@@ -388,7 +353,7 @@ const AMMO_TYPE_LABELS: Record<string, string> = {
 };
 
 /** Get the best kinetic round info from ammunitions */
-function getBestKineticRound(ammunitions?: any[]): {
+function getBestKineticRound(ammunitions?: Ammunition[]): {
   type: string;
   name: string;
   penetration: number;
@@ -398,7 +363,7 @@ function getBestKineticRound(ammunitions?: any[]): {
   if (!ammunitions || ammunitions.length === 0) return null;
 
   // Find the round with the highest penetration
-  let bestRound: any = null;
+  let bestRound: Ammunition | null = null;
   let bestPen = 0;
 
   for (const a of ammunitions) {
@@ -446,7 +411,7 @@ function generateLOCalculatorUrl(loParams: { workingLength: number; density: num
 /** Penetration stat item with ammo details */
 function PenetrationStatItem({ penetration, ammunitions, vehicleName, onNavigate }: {
   penetration: number;
-  ammunitions?: any[];
+  ammunitions?: Ammunition[];
   vehicleName: string;
   onNavigate: (url: string) => void;
 }) {
@@ -558,20 +523,15 @@ export default function VehicleDetailPage() {
   useEffect(() => {
     loadVehicles()
       .then(data => {
-        console.log('[VehicleDetailPage] Loaded vehicles:', data.length);
         setVehicles(data);
         setLoading(false);
       })
-      .catch(err => {
-        console.error('[VehicleDetailPage] Failed to load vehicles:', err);
+      .catch(() => {
         setLoading(false);
       });
   }, []);
 
   const vehicle = vehicles.find(v => v.id === id);
-  console.log('[VehicleDetailPage] URL id:', id, 'Found vehicle:', vehicle?.id || 'NOT FOUND');
-  const nation = vehicle ? NATIONS.find(n => n.id === vehicle.nation) : null;
-
   // Default selectedTypes to current vehicle's type
   useEffect(() => {
     if (vehicle && !typesInitialized) {

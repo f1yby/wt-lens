@@ -12,6 +12,7 @@ import {
 import { useState, useMemo, useCallback, useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import type { Vehicle } from '../types';
+import { getBRGradientColor, starPolygonPoints } from '../utils/chart';
 
 interface StabilizerScatterChartProps {
   vehicles: Vehicle[];
@@ -47,6 +48,13 @@ interface ScatterPoint {
   dotColor: string;
 }
 
+/** Shape props passed by recharts Scatter component */
+interface ScatterShapeProps {
+  cx?: number;
+  cy?: number;
+  payload?: ScatterPoint;
+}
+
 export default function StabilizerScatterChart({ 
   vehicles, 
   currentVehicleId, 
@@ -58,13 +66,6 @@ export default function StabilizerScatterChart({
   const [lockedTooltipPos, setLockedTooltipPos] = useState<{ x: number; y: number } | null>(null);
   const chartRef = useRef<HTMLDivElement>(null);
   const chartAreaRef = useRef<HTMLDivElement>(null);
-
-  // Calculate BR gradient color: BR-1.0 (blue, 240°) -> BR 0 (green, 120°) -> BR+1.0 (red, 0°)
-  const getBRGradientColor = (brDiff: number): string => {
-    const clampedDiff = Math.max(-1.0, Math.min(1.0, brDiff));
-    const hue = 120 - (clampedDiff * 120);
-    return `hsl(${hue}, 75%, 50%)`;
-  };
 
   // Get current vehicle BR for comparison
   const currentVehicle = vehicles.find(v => v.id === currentVehicleId);
@@ -112,7 +113,7 @@ export default function StabilizerScatterChart({
 
   // Handle point click to lock/unlock tooltip
   // recharts Scatter onClick signature: (data, index, event)
-  const handlePointClick = useCallback((point: ScatterPoint, _index: number, event: any) => {
+  const handlePointClick = useCallback((point: ScatterPoint, _index: number, event: React.MouseEvent) => {
     const nativeEvent = event?.nativeEvent || event;
     nativeEvent?.stopPropagation?.();
     
@@ -156,7 +157,7 @@ export default function StabilizerScatterChart({
   }, [navigate]);
 
   // Custom Tooltip (only for hover, not locked)
-  const CustomTooltip = ({ active, payload }: any) => {
+  const CustomTooltip = ({ active, payload }: { active?: boolean; payload?: { payload: ScatterPoint }[] }) => {
     // When locked, don't render here - the overlay handles it
     if (lockedPoint) return null;
     
@@ -329,12 +330,6 @@ export default function StabilizerScatterChart({
     );
   };
 
-  // Calculate counts for each type
-  const counts = vehicles.reduce((acc, v) => {
-    acc[v.performance.stabilizerType] = (acc[v.performance.stabilizerType] || 0) + 1;
-    return acc;
-  }, {} as Record<Vehicle['performance']['stabilizerType'], number>);
-
   return (
     <Paper
       ref={chartRef}
@@ -393,9 +388,10 @@ export default function StabilizerScatterChart({
               data={otherVehicles}
               onMouseEnter={(data) => setHoveredPoint(data as ScatterPoint)}
               onMouseLeave={() => setHoveredPoint(null)}
-              onClick={(data: any, index: any, event: any) => handlePointClick(data as ScatterPoint, index, event)}
-              shape={(props: any) => {
+              onClick={(_data: unknown, index: number, event: React.MouseEvent) => handlePointClick(_data as ScatterPoint, index, event)}
+              shape={(props: ScatterShapeProps) => {
                 const { cx, cy, payload } = props;
+                if (cx == null || cy == null) return null;
                 const dotColor = payload?.dotColor || '#737373';
                 const isLocked = lockedPoint?.vehicleId === payload?.vehicleId;
                 return (
@@ -418,20 +414,15 @@ export default function StabilizerScatterChart({
                 data={[currentVehiclePoint]}
                 onMouseEnter={(data) => setHoveredPoint(data as ScatterPoint)}
                 onMouseLeave={() => setHoveredPoint(null)}
-                onClick={(data: any, index: any, event: any) => handlePointClick(data as ScatterPoint, index, event)}
-                shape={(props: any) => {
+                onClick={(_data: unknown, index: number, event: React.MouseEvent) => handlePointClick(_data as ScatterPoint, index, event)}
+                shape={(props: ScatterShapeProps) => {
                   const { cx, cy, payload } = props;
+                  if (cx == null || cy == null) return null;
                   const size = lockedPoint?.vehicleId === payload?.vehicleId ? 10 : 8;
                   const strokeWidth = lockedPoint?.vehicleId === payload?.vehicleId ? 2 : 1;
-                  const starPoints = [];
-                  for (let i = 0; i < 10; i++) {
-                    const angle = (i * Math.PI) / 5 - Math.PI / 2;
-                    const radius = i % 2 === 0 ? size : size / 2.5;
-                    starPoints.push(`${cx + radius * Math.cos(angle)},${cy + radius * Math.sin(angle)}`);
-                  }
                   return (
                     <polygon
-                      points={starPoints.join(' ')}
+                      points={starPolygonPoints(cx, cy, size)}
                       fill="#f97316"
                       stroke="#fff"
                       strokeWidth={strokeWidth}

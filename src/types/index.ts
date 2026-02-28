@@ -23,6 +23,7 @@ export interface Ammunition {
     workingLength: number;   // mm
     density: number;         // kg/m³
     material: PenetratorMaterial;
+    Cx?: number;             // drag coefficient
   };
   // Direct armorpower data (for non-APFSDS or older rounds)
   armorPower?: number;       // mm @ 0° (direct value from datamine)

@@ -55,21 +55,6 @@ body {
   background: #737373;
 }
 
-/* Military theme utility classes */
-@layer utilities {
-  .glass-card {
-    @apply bg-white/80 backdrop-blur-sm border border-gray-200;
-  }
-  
-  .military-gradient {
-    @apply bg-gradient-to-br from-green-600/20 to-green-800/10;
-  }
-  
-  .text-glow {
-    text-shadow: 0 0 10px rgba(74, 222, 128, 0.3);
-  }
-}
-
 /* Chart container styles */
 .recharts-wrapper {
   filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.1));

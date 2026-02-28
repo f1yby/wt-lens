@@ -1,18 +1,8 @@
 import { Box, Typography, Paper } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import type { Vehicle } from '../types';
-import { NATIONS, VEHICLE_TYPE_LABELS, BATTLE_RATINGS } from '../types';
-
-// Get base URL from Vite env for subpath deployment
-const BASE_URL = import.meta.env.BASE_URL || '/';
-
-// Nation flag image mapping
-const getFlagImagePath = (nation: string): string => `${BASE_URL}images/flags/unit_tooltip/country_${nation}.webp`;
-
-// Vehicle image path - use local webp images
-const getVehicleImagePath = (vehicleId: string): string => {
-  return `${BASE_URL}vehicles/${vehicleId}.webp`;
-};
+import { BATTLE_RATINGS } from '../types';
+import { getVehicleImagePath, getFlagImagePath } from '../utils/paths';
 
 interface VehicleTechTreeProps {
   vehicles: Vehicle[];
@@ -88,7 +78,6 @@ export default function VehicleTechTree({ vehicles }: VehicleTechTreeProps) {
               }}
             >
               {vehiclesByBR[br].map(vehicle => {
-                const nation = NATIONS.find(n => n.id === vehicle.nation);
                 const hasStats = vehicle.stats && vehicle.stats.battles > 100;
 
                 // 根据经济类型设置柔和的背景色

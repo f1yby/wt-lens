@@ -209,9 +209,6 @@ export function BRGridSelector({ brRange, onBrRangeChange }: BRGridSelectorProps
   const containerRef = useRef<HTMLDivElement>(null);
   const hasDragged = useRef(false);
 
-  // 获取 BR 对应的索引
-  const getBrIndex = useCallback((br: number) => BATTLE_RATINGS.indexOf(br), []);
-  
   // 获取索引对应的 BR
   const getBrByIndex = useCallback((index: number) => BATTLE_RATINGS[index], []);
 

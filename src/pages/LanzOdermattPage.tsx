@@ -335,24 +335,24 @@ export default function LanzOdermattPage() {
   const [mode, setMode] = useState<CalculationMode>('Perforation');
   const [material, setMaterial] = useState<PenetratorMaterial>('Tungsten');
 
-  const params: LOParams = { pLen, dia, fLen, df, rhop, bhnp, velocity, rhot, bhnt, nato };
+  const params: LOParams = useMemo(() => ({ pLen, dia, fLen, df, rhop, bhnp, velocity, rhot, bhnt, nato }), [pLen, dia, fLen, df, rhop, bhnp, velocity, rhot, bhnt, nato]);
 
   // Always compute L-O at 0° for base penetration; slopeEffect handles obliquity
   const result = useMemo(() => calculateLO({ ...params, nato: 0 }, mode, material), [
-    pLen, dia, fLen, df, rhop, bhnp, velocity, rhot, bhnt, mode, material,
+    params, mode, material,
   ]);
 
   // Distance-penetration curve (shows equivalent vertical penetration)
   const distanceCurve = useMemo(() => {
     const v0_ms = velocity * 1000; // km/s -> m/s
     return generateDistanceCurve(params, mode, material, v0_ms, projectileMass, dia, dragCx);
-  }, [pLen, dia, fLen, df, rhop, bhnp, velocity, rhot, bhnt, nato, mode, material, projectileMass, dragCx]);
+  }, [params, velocity, mode, material, projectileMass, dia, dragCx]);
 
   // Multi-angle penetration table (like game stat card)
   const angleTable = useMemo(() => {
     const v0_ms = velocity * 1000;
     return generateAngleTable(params, mode, material, v0_ms, projectileMass, dia, dragCx);
-  }, [pLen, dia, fLen, df, rhop, bhnp, velocity, rhot, bhnt, nato, mode, material, projectileMass, dragCx]);
+  }, [params, velocity, mode, material, projectileMass, dia, dragCx]);
 
   // Chart dimensions
   const chartWidth = 600;
@@ -396,7 +396,7 @@ export default function LanzOdermattPage() {
       };
     }
     return null;
-  }, [selectedDistance, pLen, dia, fLen, df, rhop, bhnp, velocity, rhot, bhnt, nato, mode, material, projectileMass, dragCx]);
+  }, [selectedDistance, params, velocity, nato, mode, material, projectileMass, dia, dragCx, distanceCurve.length]);
 
   // Y-axis ticks
   const yTicks = 5;

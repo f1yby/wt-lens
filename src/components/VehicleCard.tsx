@@ -1,8 +1,9 @@
-import { Card, CardContent, CardMedia, Typography, Chip, Box, Tooltip } from '@mui/material';
+import { Card, CardContent, Typography, Chip, Box, Tooltip } from '@mui/material';
 import { GpsFixed, Bolt } from '@mui/icons-material';
 import { useNavigate } from 'react-router-dom';
 import type { Vehicle } from '../types';
 import { NATIONS, VEHICLE_TYPE_LABELS } from '../types';
+import { getVehicleImagePath } from '../utils/paths';
 
 /** Get stabilizer display info */
 function getStabilizerInfo(type: Vehicle['performance']['stabilizerType']) {
@@ -35,14 +36,6 @@ function getBestAmmoName(vehicle: Vehicle): string | null {
 interface VehicleCardProps {
   vehicle: Vehicle;
 }
-
-// Get base URL from Vite env for subpath deployment
-const BASE_URL = import.meta.env.BASE_URL || '/';
-
-// Vehicle image path helper - use local webp images
-const getVehicleImagePath = (vehicleId: string): string => {
-  return `${BASE_URL}vehicles/${vehicleId}.webp`;
-};
 
 export default function VehicleCard({ vehicle }: VehicleCardProps) {
   const navigate = useNavigate();

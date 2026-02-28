@@ -1,5 +1,5 @@
-import { Paper, Typography, Box, Chip, Divider, IconButton } from '@mui/material';
-import { Add, Remove, Refresh } from '@mui/icons-material';
+import { Paper, Typography, Box, IconButton } from '@mui/material';
+import { Add, Refresh } from '@mui/icons-material';
 import {
   ComposedChart,
   Scatter,
@@ -14,6 +14,7 @@ import {
 import { useState, useCallback, useMemo, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import type { DistributionData, MetricType } from '../types';
+import { starPolygonPoints } from '../utils/chart';
 
 interface DistributionChartProps {
   data: DistributionData;
@@ -71,6 +72,13 @@ interface ScatterPoint {
   dotColor?: string;
 }
 
+/** Shape props passed by recharts Scatter component */
+interface ScatterShapeProps {
+  cx?: number;
+  cy?: number;
+  payload?: ScatterPoint;
+}
+
 export default function DistributionChart({ data, title, unit, brInfo }: DistributionChartProps) {
   const color = METRIC_COLORS[data.metric as ExtendedMetricType] || '#4ade80';
   const navigate = useNavigate();
@@ -89,7 +97,7 @@ export default function DistributionChart({ data, title, unit, brInfo }: Distrib
     name: cleanString(bin.range),
     isCurrent: bin.isCurrent,
     vehicleId: bin.vehicleId,
-    dotColor: (bin as any).dotColor,
+    dotColor: (bin as { dotColor?: string }).dotColor,
   })), [data.bins]);
 
   // Separate current vehicle from others
@@ -214,7 +222,7 @@ export default function DistributionChart({ data, title, unit, brInfo }: Distrib
   }, [scatterData]);
 
   // Custom Tooltip
-  const CustomTooltip = ({ active, payload }: any) => {
+  const CustomTooltip = ({ active, payload }: { active?: boolean; payload?: { payload: ScatterPoint }[] }) => {
     const pointFromPayload = payload && payload[0]?.payload as ScatterPoint;
     const targetPoint = hoveredPoint || pointFromPayload;
     
@@ -407,8 +415,8 @@ export default function DistributionChart({ data, title, unit, brInfo }: Distrib
               data={otherVehicles}
               onMouseEnter={(data) => setHoveredPoint(data as ScatterPoint)}
               onMouseLeave={() => setHoveredPoint(null)}
-              onClick={(data: any) => handlePointClick(data as ScatterPoint)}
-              shape={(props: any) => {
+              onClick={(data: unknown) => handlePointClick(data as ScatterPoint)}
+              shape={(props: ScatterShapeProps) => {
                 const { cx, cy, payload } = props;
                 if (cx == null || cy == null) return null;
                 const dotColor = payload?.dotColor || color;
@@ -431,20 +439,13 @@ export default function DistributionChart({ data, title, unit, brInfo }: Distrib
                 data={[currentVehicle]}
                 onMouseEnter={(data) => setHoveredPoint(data as ScatterPoint)}
                 onMouseLeave={() => setHoveredPoint(null)}
-                onClick={(data: any) => handlePointClick(data as ScatterPoint)}
-                shape={(props: any) => {
+                onClick={(data: unknown) => handlePointClick(data as ScatterPoint)}
+                shape={(props: ScatterShapeProps) => {
                   const { cx, cy } = props;
                   if (cx == null || cy == null) return null;
-                  const size = 8;
-                  const starPoints = [];
-                  for (let i = 0; i < 10; i++) {
-                    const angle = (i * Math.PI) / 5 - Math.PI / 2;
-                    const radius = i % 2 === 0 ? size : size / 2.5;
-                    starPoints.push(`${cx + radius * Math.cos(angle)},${cy + radius * Math.sin(angle)}`);
-                  }
                   return (
                     <polygon
-                      points={starPoints.join(' ')}
+                      points={starPolygonPoints(cx, cy, 8)}
                       fill="#f97316"
                       stroke="#fff"
                       strokeWidth={1}
