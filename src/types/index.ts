@@ -204,16 +204,16 @@ export interface NationConfig {
 }
 
 export const NATIONS: NationConfig[] = [
-  { id: 'usa', name: 'USA', nameZh: '美国', color: '#3b82f6', flagIcon: '🇺🇸', flagImage: '/wt-lens/images/flags/unit_tooltip/country_usa.png' },
-  { id: 'germany', name: 'Germany', nameZh: '德国', color: '#eab308', flagIcon: '🇩🇪', flagImage: '/wt-lens/images/flags/unit_tooltip/country_germany.png' },
-  { id: 'ussr', name: 'USSR', nameZh: '苏联', color: '#ef4444', flagIcon: '🇷🇺', flagImage: '/wt-lens/images/flags/unit_tooltip/country_ussr.png' },
-  { id: 'britain', name: 'Britain', nameZh: '英国', color: '#22c55e', flagIcon: '🇬🇧', flagImage: '/wt-lens/images/flags/unit_tooltip/country_britain.png' },
-  { id: 'japan', name: 'Japan', nameZh: '日本', color: '#f97316', flagIcon: '🇯🇵', flagImage: '/wt-lens/images/flags/unit_tooltip/country_japan.png' },
-  { id: 'china', name: 'China', nameZh: '中国', color: '#dc2626', flagIcon: '🇨🇳', flagImage: '/wt-lens/images/flags/unit_tooltip/country_china.png' },
-  { id: 'italy', name: 'Italy', nameZh: '意大利', color: '#14b8a6', flagIcon: '🇮🇹', flagImage: '/wt-lens/images/flags/unit_tooltip/country_italy.png' },
-  { id: 'france', name: 'France', nameZh: '法国', color: '#6366f1', flagIcon: '🇫🇷', flagImage: '/wt-lens/images/flags/unit_tooltip/country_france.png' },
-  { id: 'sweden', name: 'Sweden', nameZh: '瑞典', color: '#06b6d4', flagIcon: '🇸🇪', flagImage: '/wt-lens/images/flags/unit_tooltip/country_sweden.png' },
-  { id: 'israel', name: 'Israel', nameZh: '以色列', color: '#84cc16', flagIcon: '🇮🇱', flagImage: '/wt-lens/images/flags/unit_tooltip/country_israel.png' },
+  { id: 'usa', name: 'USA', nameZh: '美国', color: '#3b82f6', flagIcon: '🇺🇸', flagImage: '/wt-lens/images/flags/unit_tooltip/country_usa.webp' },
+  { id: 'germany', name: 'Germany', nameZh: '德国', color: '#eab308', flagIcon: '🇩🇪', flagImage: '/wt-lens/images/flags/unit_tooltip/country_germany.webp' },
+  { id: 'ussr', name: 'USSR', nameZh: '苏联', color: '#ef4444', flagIcon: '🇷🇺', flagImage: '/wt-lens/images/flags/unit_tooltip/country_ussr.webp' },
+  { id: 'britain', name: 'Britain', nameZh: '英国', color: '#22c55e', flagIcon: '🇬🇧', flagImage: '/wt-lens/images/flags/unit_tooltip/country_britain.webp' },
+  { id: 'japan', name: 'Japan', nameZh: '日本', color: '#f97316', flagIcon: '🇯🇵', flagImage: '/wt-lens/images/flags/unit_tooltip/country_japan.webp' },
+  { id: 'china', name: 'China', nameZh: '中国', color: '#dc2626', flagIcon: '🇨🇳', flagImage: '/wt-lens/images/flags/unit_tooltip/country_china.webp' },
+  { id: 'italy', name: 'Italy', nameZh: '意大利', color: '#14b8a6', flagIcon: '🇮🇹', flagImage: '/wt-lens/images/flags/unit_tooltip/country_italy.webp' },
+  { id: 'france', name: 'France', nameZh: '法国', color: '#6366f1', flagIcon: '🇫🇷', flagImage: '/wt-lens/images/flags/unit_tooltip/country_france.webp' },
+  { id: 'sweden', name: 'Sweden', nameZh: '瑞典', color: '#06b6d4', flagIcon: '🇸🇪', flagImage: '/wt-lens/images/flags/unit_tooltip/country_sweden.webp' },
+  { id: 'israel', name: 'Israel', nameZh: '以色列', color: '#84cc16', flagIcon: '🇮🇱', flagImage: '/wt-lens/images/flags/unit_tooltip/country_israel.webp' },
 ];
 
 export const VEHICLE_TYPE_LABELS: Record<VehicleType, string> = {

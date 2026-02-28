@@ -16,6 +16,7 @@ import Navbar from '../components/Navbar';
 import DistributionChart from '../components/DistributionChart';
 import StabilizerScatterChart from '../components/StabilizerScatterChart';
 import { BRGridSelector } from '../components/VehicleFilter';
+import LazyImage from '../components/LazyImage';
 import { loadVehicles, sampleVehicleDetail, sampleDistributions } from '../data/vehicles';
 import { NATIONS, VEHICLE_TYPE_LABELS, BATTLE_RATINGS, ECONOMIC_TYPE_GRADIENTS, Nation } from '../types';
 import type { Vehicle, MetricType, VehicleType } from '../types';
@@ -25,11 +26,11 @@ const BASE_URL = import.meta.env.BASE_URL || '/';
 
 /** Gets the flag image path for a nation */
 const getFlagImagePath = (nation: Nation): string => 
-  `${BASE_URL}images/flags/unit_tooltip/country_${nation}.png`;
+  `${BASE_URL}images/flags/unit_tooltip/country_${nation}.webp`;
 
 /** Gets the vehicle image path */
 const getVehicleImagePath = (vehicleId: string): string => 
-  `${BASE_URL}vehicles/${vehicleId}.png`;
+  `${BASE_URL}vehicles/${vehicleId}.webp`;
 
 /** Gets the numeric value for a given metric from vehicle performance data */
 function getMetricValue(vehicle: Vehicle, metric: MetricType): number {
@@ -621,8 +622,7 @@ export default function VehicleDetailPage() {
           }}
         >
           {/* Background flag watermark (md+) */}
-          <Box
-            component="img"
+          <LazyImage
             src={getFlagImagePath(vehicle.nation)}
             alt=""
             sx={{
@@ -661,11 +661,9 @@ export default function VehicleDetailPage() {
               width: { xs: '100%', md: 'auto' },
               mr: { md: 4 },
             }}>
-              <Box
-                component="img"
+              <LazyImage
                 src={getVehicleImagePath(vehicle.id)}
                 alt={vehicle.localizedName}
-                onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
                 sx={{
                   height: { xs: 100, sm: 130, md: 160, lg: 200 },
                   width: 'auto',
