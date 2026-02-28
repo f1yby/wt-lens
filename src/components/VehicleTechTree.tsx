@@ -183,6 +183,7 @@ export default function VehicleTechTree({ vehicles }: VehicleTechTreeProps) {
                       <Typography
                         variant="caption"
                         sx={{
+                          fontFamily: "'WTSymbols', 'Roboto', Tahoma, sans-serif",
                           color: '#fff',
                           fontSize: '0.65rem',
                           fontWeight: 600,

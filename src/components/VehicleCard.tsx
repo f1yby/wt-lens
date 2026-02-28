@@ -124,6 +124,7 @@ export default function VehicleCard({ vehicle }: VehicleCardProps) {
         <Typography
           variant="h6"
           sx={{
+            fontFamily: "'WTSymbols', 'Roboto', Tahoma, sans-serif",
             color: '#171717',
             fontWeight: 600,
             fontSize: '1rem',

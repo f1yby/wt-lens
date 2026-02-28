@@ -1,4 +1,5 @@
-import { Paper, Typography, Box, Chip, Divider } from '@mui/material';
+import { Paper, Typography, Box, Chip, Divider, IconButton } from '@mui/material';
+import { Add, Remove, Refresh } from '@mui/icons-material';
 import {
   ComposedChart,
   Scatter,
@@ -10,7 +11,7 @@ import {
   ResponsiveContainer,
   ZAxis,
 } from 'recharts';
-import { useState, useCallback, useMemo, useRef, useEffect } from 'react';
+import { useState, useCallback, useMemo, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import type { DistributionData, MetricType } from '../types';
 
@@ -61,11 +62,6 @@ const METRIC_NAMES: Record<ExtendedMetricType, string> = {
   expPerSpawn: '每次重生经验',
 };
 
-// Distance threshold for clustering (in data units)
-// Very high thresholds - only cluster when points are almost completely overlapping
-const CLUSTER_THRESHOLD_X = 1.5;   // metric value threshold (~25-30px at typical scale)
-const CLUSTER_THRESHOLD_Y = 3000;  // battles threshold (~25-30px at typical scale)
-
 interface ScatterPoint {
   x: number;
   y: number;
@@ -79,16 +75,18 @@ export default function DistributionChart({ data, title, unit, brInfo }: Distrib
   const color = METRIC_COLORS[data.metric as ExtendedMetricType] || '#4ade80';
   const navigate = useNavigate();
   const [hoveredPoint, setHoveredPoint] = useState<ScatterPoint | null>(null);
-  const [lockedPoint, setLockedPoint] = useState<ScatterPoint | null>(null);
-  const [lockedTooltipPos, setLockedTooltipPos] = useState<{ x: number; y: number } | null>(null);
-  const chartRef = useRef<HTMLDivElement>(null);
   const chartAreaRef = useRef<HTMLDivElement>(null);
+
+  // Clean zero-width spaces from vehicle names, keep WT symbols (rendered via WTSymbols font)
+  const cleanString = (str: string): string => {
+    return str.replace(/\u200b/g, '');
+  };
 
   // Transform data for scatter chart: x=metric value, y=battles
   const scatterData = useMemo(() => data.bins.map((bin) => ({
     x: bin.metricValue || 0,
     y: bin.battles || 0,
-    name: bin.range,
+    name: cleanString(bin.range),
     isCurrent: bin.isCurrent,
     vehicleId: bin.vehicleId,
     dotColor: (bin as any).dotColor,
@@ -98,7 +96,7 @@ export default function DistributionChart({ data, title, unit, brInfo }: Distrib
   const currentVehicle = scatterData.find(d => d.isCurrent);
   const otherVehicles = scatterData.filter(d => !d.isCurrent);
 
-  // Compute cumulative percentile line data (sorted by x, cumulative battles percentage)
+  // Compute cumulative percentile line data
   const percentileLine = useMemo(() => {
     const sorted = [...scatterData].sort((a, b) => a.x - b.x);
     const totalBattles = sorted.reduce((sum, d) => sum + d.y, 0);
@@ -110,39 +108,104 @@ export default function DistributionChart({ data, title, unit, brInfo }: Distrib
     });
   }, [scatterData]);
 
-  // Calculate Euclidean distance between two points (normalized)
-  const getDistance = useCallback((p1: ScatterPoint, p2: ScatterPoint): number => {
-    // Normalize distances to make them comparable
-    const xRange = Math.max(...scatterData.map(d => d.x)) - Math.min(...scatterData.map(d => d.x)) || 1;
-    const yRange = Math.max(...scatterData.map(d => d.y)) - Math.min(...scatterData.map(d => d.y)) || 1;
-    
-    const xDist = (p1.x - p2.x) / xRange;
-    const yDist = (p1.y - p2.y) / yRange;
-    
-    return Math.sqrt(xDist * xDist + yDist * yDist);
+  // Calculate default domains
+  const defaultDomains = useMemo(() => {
+    const xValues = scatterData.map(d => d.x);
+    const yValues = scatterData.map(d => d.y);
+    const xMin = Math.min(...xValues);
+    const xMax = Math.max(...xValues);
+    const yMin = Math.min(...yValues);
+    const yMax = Math.max(...yValues);
+    const xPadding = (xMax - xMin) * 0.05 || 1;
+    const yPadding = (yMax - yMin) * 0.05 || 1000;
+    return {
+      xMin: xMin - xPadding,
+      xMax: xMax + xPadding,
+      yMin: Math.max(0, yMin - yPadding),
+      yMax: yMax + yPadding,
+    };
   }, [scatterData]);
 
-  // Find nearby points based on coordinate distance
-  const findNearbyPoints = useCallback((centerPoint: ScatterPoint): ScatterPoint[] => {
-    const nearby = scatterData.filter(point => {
-      if (point.vehicleId === centerPoint.vehicleId) return true; // Always include the hovered point
-      
-      const xDist = Math.abs(point.x - centerPoint.x);
-      const yDist = Math.abs(point.y - centerPoint.y);
-      
-      // Use fixed thresholds - only cluster truly overlapping points
-      return xDist < CLUSTER_THRESHOLD_X && yDist < CLUSTER_THRESHOLD_Y;
-    });
-    
-    // Sort by distance from center point (closest first)
-    return nearby.sort((a, b) => {
-      const distA = getDistance(centerPoint, a);
-      const distB = getDistance(centerPoint, b);
-      return distA - distB;
-    });
-  }, [scatterData, getDistance]);
+  // View state (pan and zoom)
+  const [viewState, setViewState] = useState<{
+    xMin: number; xMax: number; yMin: number; yMax: number;
+  } | null>(null);
+  const [zoomLevel, setZoomLevel] = useState(0);
 
-  // Calculate weighted percentile by battles for a given metric value
+  const currentDomain = viewState ?? defaultDomains;
+  const isZoomed = zoomLevel > 0;
+
+  // Zoom in only (no zoom out beyond default)
+  const handleZoomIn = useCallback(() => {
+    setZoomLevel(prev => {
+      const newLevel = prev + 1;
+      const zoomFactor = Math.pow(0.5, newLevel);
+      const xCenter = (defaultDomains.xMin + defaultDomains.xMax) / 2;
+      const yCenter = (defaultDomains.yMin + defaultDomains.yMax) / 2;
+      const xRange = (defaultDomains.xMax - defaultDomains.xMin) * zoomFactor;
+      const yRange = (defaultDomains.yMax - defaultDomains.yMin) * zoomFactor;
+      setViewState({
+        xMin: xCenter - xRange / 2,
+        xMax: xCenter + xRange / 2,
+        yMin: Math.max(0, yCenter - yRange / 2),
+        yMax: yCenter + yRange / 2,
+      });
+      return newLevel;
+    });
+  }, [defaultDomains]);
+
+  const handleReset = useCallback(() => {
+    setZoomLevel(0);
+    setViewState(null);
+  }, []);
+
+  // Drag to pan
+  const [isDragging, setIsDragging] = useState(false);
+  const [dragStart, setDragStart] = useState<{ x: number; y: number } | null>(null);
+
+  const handleMouseDown = useCallback((e: React.MouseEvent) => {
+    if (!isZoomed) return;
+    setIsDragging(true);
+    setDragStart({ x: e.clientX, y: e.clientY });
+  }, [isZoomed]);
+
+  const handleMouseMove = useCallback((e: React.MouseEvent) => {
+    if (!isDragging || !dragStart || !chartAreaRef.current) return;
+    const rect = chartAreaRef.current.getBoundingClientRect();
+    const dx = e.clientX - dragStart.x;
+    const dy = e.clientY - dragStart.y;
+    
+    // Apply pan immediately for smooth dragging
+    const xRange = currentDomain.xMax - currentDomain.xMin;
+    const yRange = currentDomain.yMax - currentDomain.yMin;
+    const xShift = (dx / rect.width) * xRange;
+    const yShift = (dy / rect.height) * yRange;
+    
+    setViewState(prev => {
+      if (!prev) return null;
+      return {
+        xMin: prev.xMin - xShift,
+        xMax: prev.xMax - xShift,
+        yMin: Math.max(0, prev.yMin + yShift),
+        yMax: prev.yMax + yShift,
+      };
+    });
+    setDragStart({ x: e.clientX, y: e.clientY });
+  }, [isDragging, dragStart, currentDomain]);
+
+  const handleMouseUp = useCallback(() => {
+    setIsDragging(false);
+    setDragStart(null);
+  }, []);
+
+  // Handle point click - navigate directly
+  const handlePointClick = useCallback((point: ScatterPoint) => {
+    if (point.vehicleId) {
+      navigate(`/vehicle/${point.vehicleId}`);
+    }
+  }, [navigate]);
+
+  // Calculate percentile
   const calculatePercentile = useCallback((value: number): number => {
     const totalBattles = scatterData.reduce((sum, d) => sum + d.y, 0);
     if (totalBattles === 0) return 0;
@@ -150,66 +213,15 @@ export default function DistributionChart({ data, title, unit, brInfo }: Distrib
     return Math.round((battlesLessOrEqual / totalBattles) * 100);
   }, [scatterData]);
 
-  // Handle point click to lock/unlock tooltip
-  // recharts Scatter onClick signature: (data, index, event)
-  const handlePointClick = useCallback((point: ScatterPoint, _index: number, event: any) => {
-    // event from recharts can be a React SyntheticEvent or native MouseEvent
-    const nativeEvent = event?.nativeEvent || event;
-    nativeEvent?.stopPropagation?.();
-    
-    setLockedPoint(prev => {
-      if (prev?.vehicleId === point.vehicleId) {
-        setLockedTooltipPos(null);
-        return null;
-      }
-      // Calculate tooltip position relative to chart area
-      if (chartAreaRef.current) {
-        const rect = chartAreaRef.current.getBoundingClientRect();
-        const clientX = nativeEvent?.clientX ?? 0;
-        const clientY = nativeEvent?.clientY ?? 0;
-        setLockedTooltipPos({
-          x: clientX - rect.left,
-          y: clientY - rect.top,
-        });
-      }
-      return point;
-    });
-  }, []);
-
-  // Handle click outside to unlock
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (chartRef.current && !chartRef.current.contains(event.target as Node)) {
-        setLockedPoint(null);
-        setLockedTooltipPos(null);
-      }
-    };
-
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, []);
-
-  // Handle vehicle name click to navigate
-  const handleVehicleClick = useCallback((vehicleId: string) => {
-    navigate(`/vehicle/${vehicleId}`);
-  }, [navigate]);
-
-  // Custom Tooltip that shows clustered vehicles (only for hover, not locked)
+  // Custom Tooltip
   const CustomTooltip = ({ active, payload }: any) => {
-    // When locked, don't render here - the overlay handles it
-    if (lockedPoint) return null;
-    
     const pointFromPayload = payload && payload[0]?.payload as ScatterPoint;
     const targetPoint = hoveredPoint || pointFromPayload;
     
-    // Don't render tooltip for Line data (percentile line) - it has no vehicleId/name
     if (!targetPoint || !targetPoint.name) return null;
     if (!active) return null;
     
-    const nearbyPoints = findNearbyPoints(targetPoint);
-    const hasMultiple = nearbyPoints.length > 1;
+    const percentile = calculatePercentile(targetPoint.x);
     
     return (
       <Box
@@ -218,193 +230,66 @@ export default function DistributionChart({ data, title, unit, brInfo }: Distrib
           border: '1px solid #e5e5e5',
           borderRadius: 1,
           p: 1.5,
-          minWidth: 220,
-          maxWidth: 320,
-          maxHeight: 280,
-          overflow: 'auto',
-          boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
+          minWidth: 180,
+          maxWidth: 260,
+          boxShadow: '0 2px 8px rgba(0,0,0,0.15)',
         }}
       >
-        {hasMultiple && (
-          <Box sx={{ mb: 1 }}>
-            <Chip 
-              size="small" 
-              label={`该区域有 ${nearbyPoints.length} 个载具 (点击固定)`}
-              sx={{ 
-                backgroundColor: 'rgba(249, 115, 22, 0.2)', 
-                color: '#f97316',
-                fontSize: '0.7rem',
-                height: 20,
-              }}
-            />
-          </Box>
-        )}
-        
-        {nearbyPoints.map((p, index) => {
-          const percentile = calculatePercentile(p.x);
-          return (
-            <Box key={p.vehicleId}>
-              {index > 0 && <Divider sx={{ my: 1, borderColor: '#e5e5e5' }} />}
-              <Box sx={{ 
-                p: 0.5, 
-                borderRadius: 0.5,
-                backgroundColor: p.isCurrent ? 'rgba(249, 115, 22, 0.1)' : 'transparent',
-              }}>
-                <Typography 
-                  variant="body2" 
-                  sx={{ 
-                    color: p.isCurrent ? '#f97316' : '#171717', 
-                    fontWeight: p.isCurrent ? 600 : 500,
-                    fontSize: '0.8rem',
-                  }}
-                >
-                  {p.isCurrent ? '⭐ ' : ''}{p.name}
-                </Typography>
-                <Box sx={{ display: 'flex', justifyContent: 'space-between', mt: 0.5 }}>
-                  <Typography variant="caption" sx={{ color: '#737373', fontSize: '0.7rem' }}>
-                    {METRIC_NAMES[data.metric as ExtendedMetricType]}:
-                  </Typography>
-                  <Typography variant="caption" sx={{ color: '#171717', fontSize: '0.7rem', fontWeight: 500 }}>
-                    {p.x.toFixed(1)} {unit}
-                  </Typography>
-                </Box>
-                <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
-                  <Typography variant="caption" sx={{ color: '#737373', fontSize: '0.7rem' }}>
-                    出场数:
-                  </Typography>
-                  <Typography variant="caption" sx={{ color: '#171717', fontSize: '0.7rem', fontWeight: 500 }}>
-                    {p.y.toLocaleString()}
-                  </Typography>
-                </Box>
-                <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
-                  <Typography variant="caption" sx={{ color: '#737373', fontSize: '0.7rem' }}>
-                    出场占比 (≤该值):
-                  </Typography>
-                  <Typography variant="caption" sx={{ color: '#171717', fontSize: '0.7rem', fontWeight: 600 }}>
-                    {percentile}%
-                  </Typography>
-                </Box>
-              </Box>
-            </Box>
-          );
-        })}
-      </Box>
-    );
-  };
-
-  // Locked tooltip overlay content (rendered outside recharts)
-  const LockedTooltipOverlay = () => {
-    if (!lockedPoint || !lockedTooltipPos) return null;
-    
-    const nearbyPoints = findNearbyPoints(lockedPoint);
-    
-    return (
-      <Box
-        onMouseDown={(e) => e.stopPropagation()}
-        onClick={(e) => e.stopPropagation()}
-        sx={{
-          position: 'absolute',
-          left: lockedTooltipPos.x + 15,
-          top: lockedTooltipPos.y - 10,
-          zIndex: 1000,
-          pointerEvents: 'auto',
-          backgroundColor: '#ffffff',
-          border: '2px solid #f97316',
-          borderRadius: 1,
-          p: 1.5,
-          minWidth: 220,
-          maxWidth: 320,
-          maxHeight: 280,
-          overflow: 'auto',
-          boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
-        }}
-      >
-        <Box sx={{ mb: 1 }}>
-          <Chip 
-            size="small" 
-            label="已固定 - 点击外部解锁"
-            sx={{ 
-              backgroundColor: 'rgba(249, 115, 22, 0.15)', 
-              color: '#f97316',
-              fontSize: '0.7rem',
-              height: 20,
-              fontWeight: 500,
-            }}
-          />
+        <Typography 
+          variant="body2" 
+          sx={{ 
+            color: targetPoint.isCurrent ? '#f97316' : '#171717', 
+            fontWeight: targetPoint.isCurrent ? 600 : 500,
+            fontSize: '0.85rem',
+          }}
+        >
+          {targetPoint.isCurrent ? '⭐ ' : ''}{targetPoint.name}
+        </Typography>
+        <Box sx={{ display: 'flex', justifyContent: 'space-between', mt: 0.5 }}>
+          <Typography variant="caption" sx={{ color: '#737373', fontSize: '0.7rem' }}>
+            {METRIC_NAMES[data.metric as ExtendedMetricType]}:
+          </Typography>
+          <Typography variant="caption" sx={{ color: '#171717', fontSize: '0.7rem', fontWeight: 500 }}>
+            {targetPoint.x.toFixed(1)} {unit}
+          </Typography>
         </Box>
-        
-        {nearbyPoints.map((p, index) => {
-          const percentile = calculatePercentile(p.x);
-          return (
-            <Box key={p.vehicleId}>
-              {index > 0 && <Divider sx={{ my: 1, borderColor: '#e5e5e5' }} />}
-              <Box sx={{ 
-                p: 0.5, 
-                borderRadius: 0.5,
-                backgroundColor: p.isCurrent ? 'rgba(249, 115, 22, 0.1)' : 'transparent',
-              }}>
-                <Typography 
-                  variant="body2" 
-                  onClick={() => handleVehicleClick(p.vehicleId!)}
-                  sx={{ 
-                    color: p.isCurrent ? '#f97316' : '#171717', 
-                    fontWeight: p.isCurrent ? 600 : 500,
-                    fontSize: '0.8rem',
-                    cursor: 'pointer',
-                    textDecoration: 'underline',
-                    textDecorationColor: 'transparent',
-                    transition: 'all 0.2s',
-                    '&:hover': {
-                      textDecorationColor: p.isCurrent ? '#f97316' : '#171717',
-                    },
-                  }}
-                >
-                  {p.isCurrent ? '⭐ ' : ''}{p.name}
-                </Typography>
-                <Box sx={{ display: 'flex', justifyContent: 'space-between', mt: 0.5 }}>
-                  <Typography variant="caption" sx={{ color: '#737373', fontSize: '0.7rem' }}>
-                    {METRIC_NAMES[data.metric as ExtendedMetricType]}:
-                  </Typography>
-                  <Typography variant="caption" sx={{ color: '#171717', fontSize: '0.7rem', fontWeight: 500 }}>
-                    {p.x.toFixed(1)} {unit}
-                  </Typography>
-                </Box>
-                <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
-                  <Typography variant="caption" sx={{ color: '#737373', fontSize: '0.7rem' }}>
-                    出场数:
-                  </Typography>
-                  <Typography variant="caption" sx={{ color: '#171717', fontSize: '0.7rem', fontWeight: 500 }}>
-                    {p.y.toLocaleString()}
-                  </Typography>
-                </Box>
-                <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
-                  <Typography variant="caption" sx={{ color: '#737373', fontSize: '0.7rem' }}>
-                    出场占比 (≤该值):
-                  </Typography>
-                  <Typography variant="caption" sx={{ color: '#171717', fontSize: '0.7rem', fontWeight: 600 }}>
-                    {percentile}%
-                  </Typography>
-                </Box>
-              </Box>
-            </Box>
-          );
-        })}
+        <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
+          <Typography variant="caption" sx={{ color: '#737373', fontSize: '0.7rem' }}>
+            出场数:
+          </Typography>
+          <Typography variant="caption" sx={{ color: '#171717', fontSize: '0.7rem', fontWeight: 500 }}>
+            {targetPoint.y.toLocaleString()}
+          </Typography>
+        </Box>
+        <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
+          <Typography variant="caption" sx={{ color: '#737373', fontSize: '0.7rem' }}>
+            出场占比 (≤该值):
+          </Typography>
+          <Typography variant="caption" sx={{ color: '#171717', fontSize: '0.7rem', fontWeight: 600 }}>
+            {percentile}%
+          </Typography>
+        </Box>
       </Box>
     );
   };
 
   return (
     <Paper
-      ref={chartRef}
       elevation={1}
-      onClick={() => { setLockedPoint(null); setLockedTooltipPos(null); }}
       sx={{
         backgroundColor: '#ffffff',
         border: '1px solid #e5e5e5',
         borderRadius: 2,
         p: 2,
         height: '100%',
-        cursor: 'default',
+        cursor: isDragging ? 'grabbing' : 'default',
+        '& *': {
+          outline: 'none !important',
+        },
+        '& *:focus': {
+          outline: 'none !important',
+          boxShadow: 'none !important',
+        },
       }}
     >
       <Box sx={{ mb: 2 }}>
@@ -416,13 +301,52 @@ export default function DistributionChart({ data, title, unit, brInfo }: Distrib
         </Typography>
       </Box>
       
-      <Box sx={{ height: 240, position: 'relative' }} ref={chartAreaRef} onClick={(e) => e.stopPropagation()}>
+      <Box 
+        sx={{ height: 240, position: 'relative' }} 
+        ref={chartAreaRef} 
+        onMouseDown={handleMouseDown}
+        onMouseMove={handleMouseMove}
+        onMouseUp={handleMouseUp}
+        onMouseLeave={handleMouseUp}
+      >
+        {/* Zoom controls */}
+        <Box sx={{ 
+          position: 'absolute',
+          top: 0,
+          right: 35,
+          zIndex: 10,
+          display: 'flex',
+          gap: 0.5,
+          backgroundColor: 'rgba(255,255,255,0.9)',
+          borderRadius: 1,
+          p: 0.5,
+          boxShadow: '0 1px 3px rgba(0,0,0,0.1)',
+        }}>
+          <IconButton 
+            size="small" 
+            onClick={handleZoomIn}
+            sx={{ width: 24, height: 24, p: 0 }}
+          >
+            <Add sx={{ fontSize: 16 }} />
+          </IconButton>
+          {isZoomed && (
+            <IconButton 
+              size="small" 
+              onClick={handleReset}
+              sx={{ width: 24, height: 24, p: 0 }}
+            >
+              <Refresh sx={{ fontSize: 16 }} />
+            </IconButton>
+          )}
+        </Box>
+
         <ResponsiveContainer width="100%" height="100%">
           <ComposedChart margin={{ top: 10, right: 35, left: 5, bottom: 20 }}>
-            <CartesianGrid strokeDasharray="3 3" stroke="#333" />
+            <CartesianGrid strokeDasharray="3 3" stroke="#e5e5e5" />
             <XAxis
               type="number"
               dataKey="x"
+              domain={[currentDomain.xMin, currentDomain.xMax]}
               tick={{ fill: '#737373', fontSize: 10 }}
               axisLine={{ stroke: '#333' }}
               tickLine={{ stroke: '#333' }}
@@ -433,6 +357,7 @@ export default function DistributionChart({ data, title, unit, brInfo }: Distrib
               yAxisId="left"
               type="number"
               dataKey="y"
+              domain={[currentDomain.yMin, currentDomain.yMax]}
               tick={{ fill: '#737373', fontSize: 10 }}
               axisLine={{ stroke: '#333' }}
               tickLine={{ stroke: '#333' }}
@@ -463,58 +388,54 @@ export default function DistributionChart({ data, title, unit, brInfo }: Distrib
               isAnimationActive={false}
             />
             
-            {/* Cumulative percentile line */}
+            {/* Percentile line */}
             <Line
-              key={`pct-${percentileLine.length}-${percentileLine[0]?.x ?? 0}-${percentileLine[percentileLine.length - 1]?.x ?? 0}`}
               yAxisId="right"
               data={percentileLine}
               dataKey="pct"
               stroke="#f97316"
               strokeWidth={1.5}
               dot={false}
-              strokeOpacity={0.6}
+              strokeOpacity={0.4}
               isAnimationActive={false}
               tooltipType="none"
             />
             
-            {/* Other vehicles - colored by BR distance using shape renderer */}
+            {/* Other vehicles */}
             <Scatter
               yAxisId="left"
               data={otherVehicles}
               onMouseEnter={(data) => setHoveredPoint(data as ScatterPoint)}
               onMouseLeave={() => setHoveredPoint(null)}
-              onClick={(data: any, index: any, event: any) => handlePointClick(data as ScatterPoint, index, event)}
+              onClick={(data: any) => handlePointClick(data as ScatterPoint)}
               shape={(props: any) => {
                 const { cx, cy, payload } = props;
+                if (cx == null || cy == null) return null;
                 const dotColor = payload?.dotColor || color;
-                const isLocked = lockedPoint?.vehicleId === payload?.vehicleId;
                 return (
                   <circle
                     cx={cx}
                     cy={cy}
-                    r={isLocked ? 6 : 4}
+                    r={4}
                     fill={dotColor}
-                    stroke={isLocked ? '#f97316' : 'transparent'}
-                    strokeWidth={isLocked ? 2 : 0}
                     style={{ cursor: 'pointer' }}
                   />
                 );
               }}
             />
             
-            {/* Current vehicle - highlighted with star shape */}
+            {/* Current vehicle */}
             {currentVehicle && (
               <Scatter
                 yAxisId="left"
                 data={[currentVehicle]}
                 onMouseEnter={(data) => setHoveredPoint(data as ScatterPoint)}
                 onMouseLeave={() => setHoveredPoint(null)}
-                onClick={(data: any, index: any, event: any) => handlePointClick(data as ScatterPoint, index, event)}
+                onClick={(data: any) => handlePointClick(data as ScatterPoint)}
                 shape={(props: any) => {
-                  const { cx, cy, payload } = props;
-                  const size = lockedPoint?.vehicleId === payload?.vehicleId ? 10 : 8;
-                  const strokeWidth = lockedPoint?.vehicleId === payload?.vehicleId ? 2 : 1;
-                  // Calculate 5-point star coordinates
+                  const { cx, cy } = props;
+                  if (cx == null || cy == null) return null;
+                  const size = 8;
                   const starPoints = [];
                   for (let i = 0; i < 10; i++) {
                     const angle = (i * Math.PI) / 5 - Math.PI / 2;
@@ -526,7 +447,7 @@ export default function DistributionChart({ data, title, unit, brInfo }: Distrib
                       points={starPoints.join(' ')}
                       fill="#f97316"
                       stroke="#fff"
-                      strokeWidth={strokeWidth}
+                      strokeWidth={1}
                       style={{ cursor: 'pointer' }}
                     />
                   );
@@ -535,7 +456,6 @@ export default function DistributionChart({ data, title, unit, brInfo }: Distrib
             )}
           </ComposedChart>
         </ResponsiveContainer>
-        <LockedTooltipOverlay />
       </Box>
       
       {/* Gradient legend */}

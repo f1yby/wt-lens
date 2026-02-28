@@ -1,5 +1,14 @@
 import type { Vehicle, VehicleDetail, DistributionData } from '../types';
 
+/**
+ * Clean vehicle name: only remove zero-width spaces.
+ * Keep special WT symbols (␗, ▄, etc.) - they are rendered via WTSymbols font.
+ */
+function cleanVehicleName(name: string): string {
+  if (!name) return name;
+  return name.replace(/\u200b/g, '');
+}
+
 // Raw data types from JSON
 interface StatSharkEntry {
   id: string;
@@ -130,7 +139,7 @@ function mergeVehicleData(stats: StatSharkEntry[], datamine: DatamineEntry[]): V
     const vehicle: Vehicle = {
       id,
       name: datamineEntry.name,
-      localizedName: datamineEntry.localizedName,
+      localizedName: cleanVehicleName(datamineEntry.localizedName),
       nation: datamineEntry.nation as any,
       rank: statsEntry?.rank ?? datamineEntry.rank ?? 1,
       battleRating: statsEntry?.br ?? datamineEntry.battle_rating ?? 1.0,

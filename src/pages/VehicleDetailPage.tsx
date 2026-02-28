@@ -781,6 +781,7 @@ export default function VehicleDetailPage() {
 
               <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, justifyContent: { xs: 'center', md: 'flex-start' }, mb: { xs: 1, md: 1.5 } }}>
                 <Typography sx={{
+                  fontFamily: "'WTSymbols', 'Roboto', Tahoma, sans-serif",
                   color: '#fff',
                   fontWeight: 700,
                   fontSize: { xs: '1.4rem', sm: '1.8rem', md: '2.2rem', lg: '2.6rem' },
