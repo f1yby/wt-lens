@@ -1225,7 +1225,7 @@ def parse_tankmodel_data(data: dict[str, Any]) -> VehiclePerformance | None:
 
 def load_statshark_vehicles() -> list[dict[str, Any]]:
     """Load vehicle data from StatShark stats.json"""
-    stats_path = Path(__file__).parent.parent / "processed" / "stats.json"
+    stats_path = PUBLIC_DATA_PATH / "stats.json"
     if not stats_path.exists():
         print(f"StatShark data not found at {stats_path}")
         return []
@@ -1474,12 +1474,6 @@ def main() -> int:
         print("No vehicle data fetched")
         return 1
 
-    output_dir = Path(__file__).parent.parent / "processed"
-
-    save_vehicles(vehicles, output_dir / "datamine.json")
-    save_performance_cache(vehicles, output_dir / "vehicle_performance.json")
-
-    # Also save to public/data/ for web display
     save_vehicles(vehicles, PUBLIC_DATA_PATH / "datamine.json")
     save_performance_cache(vehicles, PUBLIC_DATA_PATH / "vehicle_performance.json")
 

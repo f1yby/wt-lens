@@ -156,7 +156,7 @@ def main():
     
     # Parse and save processed stats
     vehicles = parse_vehicle_stats(raw_data)
-    output_path = Path(__file__).parent.parent / "processed" / "stats.json"
+    output_path = Path(__file__).parent.parent.parent / "public" / "data" / "stats.json"
     save_stats(vehicles, str(output_path))
     
     return 0
