@@ -1022,31 +1022,79 @@ export default function VehicleDetailPage() {
         </Typography>
 
         <Grid container spacing={2}>
-          {/* Stats Charts - KR and WinRate (Most Important) */}
-          {statsComparisons?.killPerSpawn && (
-            <Grid item xs={12} md={4}>
-              <DistributionChart data={statsComparisons.killPerSpawn} title="KR (每重生击毁)" unit="" brInfo={{ vehicleBR: vehicle.battleRating, brMin: effectiveBrRange[0], brMax: effectiveBrRange[1] }} />
-            </Grid>
-          )}
+          {/* 1. 胜率 */}
           {statsComparisons?.winRate && (
             <Grid item xs={12} md={4}>
               <DistributionChart data={statsComparisons.winRate} title="胜率" unit="%" brInfo={{ vehicleBR: vehicle.battleRating, brMin: effectiveBrRange[0], brMax: effectiveBrRange[1] }} />
             </Grid>
           )}
+          {/* 2. KR */}
+          {statsComparisons?.killPerSpawn && (
+            <Grid item xs={12} md={4}>
+              <DistributionChart data={statsComparisons.killPerSpawn} title="KR (每重生击毁)" unit="" brInfo={{ vehicleBR: vehicle.battleRating, brMin: effectiveBrRange[0], brMax: effectiveBrRange[1] }} />
+            </Grid>
+          )}
+          {/* 3. 每次重生经验 */}
           {statsComparisons?.expPerSpawn && (
             <Grid item xs={12} md={4}>
               <DistributionChart data={statsComparisons.expPerSpawn} title="每次重生经验" unit=" RP" brInfo={{ vehicleBR: vehicle.battleRating, brMin: effectiveBrRange[0], brMax: effectiveBrRange[1] }} />
             </Grid>
           )}
-          
-          {/* Penetration Chart (High Importance) */}
+          {/* 4. 装填 */}
+          {comparisons?.reloadTime && (
+            <Grid item xs={12} md={4}>
+              <DistributionChart data={comparisons.reloadTime} title="装填时间" unit="s" brInfo={{ vehicleBR: vehicle.battleRating, brMin: effectiveBrRange[0], brMax: effectiveBrRange[1] }} />
+            </Grid>
+          )}
+          {/* 5. 功重比 */}
+          {comparisons?.powerToWeight && (
+            <Grid item xs={12} md={4}>
+              <DistributionChart data={comparisons.powerToWeight} title="功重比" unit="hp/t" brInfo={{ vehicleBR: vehicle.battleRating, brMin: effectiveBrRange[0], brMax: effectiveBrRange[1] }} />
+            </Grid>
+          )}
+          {/* 6. 穿深 */}
           {comparisons?.penetration && (
             <Grid item xs={12} md={4}>
               <DistributionChart data={comparisons.penetration} title="穿深" unit="mm" brInfo={{ vehicleBR: vehicle.battleRating, brMin: effectiveBrRange[0], brMax: effectiveBrRange[1] }} />
             </Grid>
           )}
-          
-          {/* Stabilizer Chart */}
+          {/* 7. 方向机速度 */}
+          {comparisons?.traverseSpeed && (
+            <Grid item xs={12} md={4}>
+              <DistributionChart data={comparisons.traverseSpeed} title="方向机速度" unit="°/s" brInfo={{ vehicleBR: vehicle.battleRating, brMin: effectiveBrRange[0], brMax: effectiveBrRange[1] }} />
+            </Grid>
+          )}
+          {/* 8. 高低机速度 */}
+          {comparisons?.elevationSpeed && (
+            <Grid item xs={12} md={4}>
+              <DistributionChart data={comparisons.elevationSpeed} title="高低机速度" unit="°/s" brInfo={{ vehicleBR: vehicle.battleRating, brMin: effectiveBrRange[0], brMax: effectiveBrRange[1] }} />
+            </Grid>
+          )}
+          {/* 9. 倒车极速 */}
+          {comparisons?.maxReverseSpeed && (
+            <Grid item xs={12} md={4}>
+              <DistributionChart data={comparisons.maxReverseSpeed} title="倒车速度" unit="km/h" brInfo={{ vehicleBR: vehicle.battleRating, brMin: effectiveBrRange[0], brMax: effectiveBrRange[1] }} />
+            </Grid>
+          )}
+          {/* 10. 前进极速 */}
+          {comparisons?.maxSpeed && (
+            <Grid item xs={12} md={4}>
+              <DistributionChart data={comparisons.maxSpeed} title="前进极速" unit="km/h" brInfo={{ vehicleBR: vehicle.battleRating, brMin: effectiveBrRange[0], brMax: effectiveBrRange[1] }} />
+            </Grid>
+          )}
+          {/* 11. 炮手热成像 */}
+          {comparisons?.gunnerThermal && (
+            <Grid item xs={12} md={4}>
+              <DistributionChart data={comparisons.gunnerThermal} title="炮手热成像" unit="像素" brInfo={{ vehicleBR: vehicle.battleRating, brMin: effectiveBrRange[0], brMax: effectiveBrRange[1] }} />
+            </Grid>
+          )}
+          {/* 12. 车长热成像 */}
+          {comparisons?.commanderThermal && (
+            <Grid item xs={12} md={4}>
+              <DistributionChart data={comparisons.commanderThermal} title="车长热成像" unit="像素" brInfo={{ vehicleBR: vehicle.battleRating, brMin: effectiveBrRange[0], brMax: effectiveBrRange[1] }} />
+            </Grid>
+          )}
+          {/* 13. 稳定器 */}
           <Grid item xs={12} md={4}>
             <StabilizerScatterChart 
               vehicles={stabilizerComparisonVehicles}
@@ -1054,27 +1102,6 @@ export default function VehicleDetailPage() {
               currentStabilizerType={vehicle.performance.stabilizerType}
             />
           </Grid>
-          
-          {/* Performance Charts - Ordered by Importance */}
-          {comparisons && (
-            [
-              { key: 'traverseSpeed', title: '方向机速度', unit: '°/s' },
-              { key: 'reloadTime', title: '装填时间', unit: 's' },
-              { key: 'powerToWeight', title: '功重比', unit: 'hp/t' },
-              { key: 'maxSpeed', title: '前进极速', unit: 'km/h' },
-              { key: 'elevationMin', title: '俯角', unit: '°' },
-              { key: 'maxReverseSpeed', title: '倒车速度', unit: 'km/h' },
-              { key: 'elevationSpeed', title: '高低机速度', unit: '°/s' },
-              { key: 'gunnerThermal', title: '炮手热成像', unit: '像素' },
-              { key: 'commanderThermal', title: '车长热成像', unit: '像素' },
-            ] as const
-          ).map(({ key, title, unit }) => 
-            comparisons[key] && (
-              <Grid item xs={12} md={4} key={key}>
-                <DistributionChart data={comparisons[key]} title={title} unit={unit} brInfo={{ vehicleBR: vehicle.battleRating, brMin: effectiveBrRange[0], brMax: effectiveBrRange[1] }} />
-              </Grid>
-            )
-          )}
         </Grid>
 
 
