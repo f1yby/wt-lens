@@ -2,7 +2,6 @@ import { Suspense, lazy } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
-import useMediaQuery from '@mui/material/useMediaQuery';
 import { Box, CircularProgress } from '@mui/material';
 
 // 懒加载页面组件
@@ -19,48 +18,7 @@ function PageLoader() {
   );
 }
 
-const darkTheme = createTheme({
-  breakpoints: {
-    values: {
-      xs: 0,
-      sm: 600,
-      md: 768,
-      lg: 1280,
-      xl: 1920,
-    },
-  },
-  palette: {
-    mode: 'dark',
-    background: {
-      default: '#0a0a0a',
-      paper: '#171717',
-    },
-    primary: {
-      main: '#4ade80',
-    },
-    secondary: {
-      main: '#3b82f6',
-    },
-    text: {
-      primary: '#ffffff',
-      secondary: '#a3a3a3',
-    },
-  },
-  typography: {
-    fontFamily: '"Roboto", "Inter", "Helvetica", "Arial", sans-serif',
-  },
-  components: {
-    MuiPaper: {
-      styleOverrides: {
-        root: {
-          backgroundImage: 'none',
-        },
-      },
-    },
-  },
-});
-
-const lightTheme = createTheme({
+const theme = createTheme({
   breakpoints: {
     values: {
       xs: 0,
@@ -102,9 +60,6 @@ const lightTheme = createTheme({
 });
 
 function App() {
-  // Force light theme for better visibility
-  const theme = lightTheme;
-
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
