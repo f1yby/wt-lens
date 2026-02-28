@@ -16,7 +16,7 @@ import Navbar from '../components/Navbar';
 import DistributionChart from '../components/DistributionChart';
 import StabilizerScatterChart from '../components/StabilizerScatterChart';
 import { BRGridSelector } from '../components/VehicleFilter';
-import LazyImage from '../components/LazyImage';
+
 import { loadVehicles, sampleVehicleDetail, sampleDistributions } from '../data/vehicles';
 import { NATIONS, VEHICLE_TYPE_LABELS, BATTLE_RATINGS, ECONOMIC_TYPE_GRADIENTS, Nation } from '../types';
 import type { Vehicle, MetricType, VehicleType } from '../types';
@@ -487,13 +487,20 @@ export default function VehicleDetailPage() {
   const [typesInitialized, setTypesInitialized] = useState(false);
 
   useEffect(() => {
-    loadVehicles().then(data => {
-      setVehicles(data);
-      setLoading(false);
-    });
+    loadVehicles()
+      .then(data => {
+        console.log('[VehicleDetailPage] Loaded vehicles:', data.length);
+        setVehicles(data);
+        setLoading(false);
+      })
+      .catch(err => {
+        console.error('[VehicleDetailPage] Failed to load vehicles:', err);
+        setLoading(false);
+      });
   }, []);
 
   const vehicle = vehicles.find(v => v.id === id);
+  console.log('[VehicleDetailPage] URL id:', id, 'Found vehicle:', vehicle?.id || 'NOT FOUND');
   const nation = vehicle ? NATIONS.find(n => n.id === vehicle.nation) : null;
 
   // Default selectedTypes to current vehicle's type
@@ -622,9 +629,14 @@ export default function VehicleDetailPage() {
           }}
         >
           {/* Background flag watermark (md+) */}
-          <LazyImage
+          <Box
+            component="img"
             src={getFlagImagePath(vehicle.nation)}
             alt=""
+            loading="lazy"
+            onError={(e) => {
+              (e.target as HTMLImageElement).style.display = 'none';
+            }}
             sx={{
               position: 'absolute',
               top: '-20%',
@@ -661,9 +673,14 @@ export default function VehicleDetailPage() {
               width: { xs: '100%', md: 'auto' },
               mr: { md: 4 },
             }}>
-              <LazyImage
+              <Box
+                component="img"
                 src={getVehicleImagePath(vehicle.id)}
                 alt={vehicle.localizedName}
+                loading="eager"
+                onError={(e) => {
+                  (e.target as HTMLImageElement).src = `https://placehold.co/400x300/e5e5e5/666?text=${encodeURIComponent(vehicle.localizedName)}`;
+                }}
                 sx={{
                   height: { xs: 100, sm: 130, md: 160, lg: 200 },
                   width: 'auto',
