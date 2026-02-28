@@ -39,12 +39,9 @@ interface VehicleCardProps {
 // Get base URL from Vite env for subpath deployment
 const BASE_URL = import.meta.env.BASE_URL || '/';
 
-// Vehicle image path helper
-const getVehicleImagePath = (imageUrl: string | undefined): string => {
-  if (!imageUrl) return '';
-  // Remove leading slash if present to make it relative to base URL
-  const cleanPath = imageUrl.startsWith('/') ? imageUrl.slice(1) : imageUrl;
-  return `${BASE_URL}${cleanPath}`;
+// Vehicle image path helper - use local webp images
+const getVehicleImagePath = (vehicleId: string): string => {
+  return `${BASE_URL}vehicles/${vehicleId}.webp`;
 };
 
 export default function VehicleCard({ vehicle }: VehicleCardProps) {
@@ -86,8 +83,12 @@ export default function VehicleCard({ vehicle }: VehicleCardProps) {
       >
         <Box
           component="img"
-          src={getVehicleImagePath(vehicle.imageUrl) || `https://placehold.co/300x200/e5e5e5/666?text=${vehicle.localizedName}`}
+          src={getVehicleImagePath(vehicle.id)}
           alt={vehicle.localizedName}
+          loading="lazy"
+          onError={(e) => {
+            (e.target as HTMLImageElement).src = `https://placehold.co/300x200/e5e5e5/666?text=${encodeURIComponent(vehicle.localizedName)}`;
+          }}
           sx={{
             maxWidth: '90%',
             maxHeight: '90%',

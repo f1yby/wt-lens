@@ -13,6 +13,12 @@ from pathlib import Path
 from dataclasses import dataclass
 from typing import Any
 
+try:
+    from PIL import Image
+    HAS_PILLOW = True
+except ImportError:
+    HAS_PILLOW = False
+
 
 # Local datamine path for tankmodels
 DATAMINE_BASE = Path(__file__).parent.parent / "datamine" / "aces.vromfs.bin_u" / "gamedata"
@@ -693,8 +699,31 @@ def get_ammo_localized_name(bullet_name: str) -> str | None:
     return loc.get(bullet_name)
 
 
+def convert_png_to_webp(source_path: Path, dest_path: Path, quality: int = 85) -> bool:
+    """Convert a PNG image to WebP format using Pillow.
+    
+    Returns True if conversion succeeded, False otherwise.
+    Falls back to copying the PNG if Pillow is not available.
+    """
+    if HAS_PILLOW:
+        try:
+            with Image.open(source_path) as img:
+                img.save(dest_path, 'WEBP', quality=quality, method=4)
+            return True
+        except Exception as e:
+            print(f"WebP conversion failed for {source_path.name}: {e}")
+            return False
+    else:
+        # Fallback: copy as PNG
+        try:
+            shutil.copy2(source_path, dest_path.with_suffix('.png'))
+            return False
+        except (IOError, shutil.Error):
+            return False
+
+
 def copy_vehicle_image(vehicle_id: str) -> str | None:
-    """Copy vehicle image from datamine to public directory
+    """Copy vehicle image from datamine to public directory, converting to WebP.
     
     Returns the web-accessible path if successful, None otherwise.
     """
@@ -707,11 +736,14 @@ def copy_vehicle_image(vehicle_id: str) -> str | None:
         # Ensure public/vehicles directory exists
         PUBLIC_VEHICLES_PATH.mkdir(parents=True, exist_ok=True)
         
-        # Copy image
-        dest_path = PUBLIC_VEHICLES_PATH / f"{vehicle_id}.png"
-        shutil.copy2(source_path, dest_path)
+        # Convert to WebP
+        dest_path = PUBLIC_VEHICLES_PATH / f"{vehicle_id}.webp"
+        if convert_png_to_webp(source_path, dest_path):
+            return f"vehicles/{vehicle_id}.webp"
         
-        # Return web-accessible path (relative to public, using relative path for base URL compatibility)
+        # Fallback to PNG
+        dest_path_png = PUBLIC_VEHICLES_PATH / f"{vehicle_id}.png"
+        shutil.copy2(source_path, dest_path_png)
         return f"vehicles/{vehicle_id}.png"
     except (IOError, shutil.Error) as e:
         print(f"Error copying image for {vehicle_id}: {e}")
@@ -719,7 +751,7 @@ def copy_vehicle_image(vehicle_id: str) -> str | None:
 
 
 def copy_nation_flags() -> int:
-    """Copy nation flag images from datamine to public directory
+    """Copy nation flag images from datamine to public directory, converting to WebP.
     
     Returns the number of flags copied.
     """
@@ -735,9 +767,14 @@ def copy_nation_flags() -> int:
         source_path = FLAG_IMAGES_PATH / f"country_{nation}.png"
         if source_path.exists():
             try:
-                dest_path = PUBLIC_FLAGS_PATH / f"country_{nation}.png"
-                shutil.copy2(source_path, dest_path)
-                copied += 1
+                dest_path = PUBLIC_FLAGS_PATH / f"country_{nation}.webp"
+                if convert_png_to_webp(source_path, dest_path):
+                    copied += 1
+                else:
+                    # Fallback to PNG copy
+                    dest_path_png = PUBLIC_FLAGS_PATH / f"country_{nation}.png"
+                    shutil.copy2(source_path, dest_path_png)
+                    copied += 1
             except (IOError, shutil.Error) as e:
                 print(f"Error copying flag for {nation}: {e}")
         else:
@@ -1198,7 +1235,7 @@ def fetch_vehicle_performance(vehicle_id: str, copy_images: bool = True) -> Vehi
     
     # Fallback image URL if copy failed (use relative path for base URL compatibility)
     if not image_url:
-        image_url = f"vehicles/{vehicle_id}.png"
+        image_url = f"vehicles/{vehicle_id}.webp"
 
     return VehicleData(
         id=vehicle_id,

@@ -7,13 +7,11 @@ import { NATIONS, VEHICLE_TYPE_LABELS, BATTLE_RATINGS } from '../types';
 const BASE_URL = import.meta.env.BASE_URL || '/';
 
 // Nation flag image mapping
-const getFlagImagePath = (nation: string): string => `${BASE_URL}images/flags/unit_tooltip/country_${nation}.png`;
+const getFlagImagePath = (nation: string): string => `${BASE_URL}images/flags/unit_tooltip/country_${nation}.webp`;
 
-// Vehicle image path with base URL
-const getVehicleImagePath = (imageUrl: string | undefined): string => {
-  if (!imageUrl) return '';
-  const cleanPath = imageUrl.startsWith('/') ? imageUrl.slice(1) : imageUrl;
-  return `${BASE_URL}${cleanPath}`;
+// Vehicle image path - use local webp images
+const getVehicleImagePath = (vehicleId: string): string => {
+  return `${BASE_URL}vehicles/${vehicleId}.webp`;
 };
 
 interface VehicleTechTreeProps {
@@ -130,6 +128,7 @@ export default function VehicleTechTree({ vehicles }: VehicleTechTreeProps) {
                       component="img"
                       src={getFlagImagePath(vehicle.nation)}
                       alt=""
+                      loading="lazy"
                       onError={(e) => {
                         (e.target as HTMLImageElement).style.display = 'none';
                       }}
@@ -148,8 +147,12 @@ export default function VehicleTechTree({ vehicles }: VehicleTechTreeProps) {
                     {/* 载具图片 */}
                     <Box
                       component="img"
-                      src={getVehicleImagePath(vehicle.imageUrl) || `https://placehold.co/120x90/e5e5e5/666?text=${vehicle.localizedName.slice(0, 10)}`}
+                      src={getVehicleImagePath(vehicle.id)}
                       alt={vehicle.localizedName}
+                      loading="lazy"
+                      onError={(e) => {
+                        (e.target as HTMLImageElement).src = `https://placehold.co/120x90/e5e5e5/666?text=${encodeURIComponent(vehicle.localizedName.slice(0, 10))}`;
+                      }}
                       sx={{
                         width: '80%',
                         height: '50%',
@@ -158,9 +161,6 @@ export default function VehicleTechTree({ vehicles }: VehicleTechTreeProps) {
                         top: '8%',
                         left: '10%',
                         zIndex: 1,
-                      }}
-                      onError={(e) => {
-                        (e.target as HTMLImageElement).src = `https://placehold.co/120x90/e5e5e5/666?text=${vehicle.localizedName.slice(0, 10)}`;
                       }}
                     />
 
