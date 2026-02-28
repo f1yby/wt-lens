@@ -39,6 +39,9 @@ PUBLIC_VEHICLES_PATH = Path(__file__).parent.parent.parent / "public" / "vehicle
 # Path to public flags directory (for web display)
 PUBLIC_FLAGS_PATH = Path(__file__).parent.parent.parent / "public" / "images" / "flags" / "unit_tooltip"
 
+# Path to public data directory (for web display)
+PUBLIC_DATA_PATH = Path(__file__).parent.parent.parent / "public" / "data"
+
 # Nations list for flag copying
 NATIONS = ['usa', 'germany', 'ussr', 'britain', 'japan', 'china', 'italy', 'france', 'sweden', 'israel']
 
@@ -1385,6 +1388,10 @@ def main() -> int:
 
     save_vehicles(vehicles, output_dir / "datamine.json")
     save_performance_cache(vehicles, output_dir / "vehicle_performance.json")
+
+    # Also save to public/data/ for web display
+    save_vehicles(vehicles, PUBLIC_DATA_PATH / "datamine.json")
+    save_performance_cache(vehicles, PUBLIC_DATA_PATH / "vehicle_performance.json")
 
     # Copy nation flags
     flags_copied = copy_nation_flags()
