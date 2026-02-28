@@ -1,5 +1,4 @@
-import { Paper, Typography, Box, IconButton } from '@mui/material';
-import { Add, Refresh } from '@mui/icons-material';
+import { Paper, Typography, Box } from '@mui/material';
 import {
   ComposedChart,
   Scatter,
@@ -11,7 +10,7 @@ import {
   ResponsiveContainer,
   ZAxis,
 } from 'recharts';
-import { useState, useCallback, useMemo, useRef } from 'react';
+import { useState, useCallback, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import type { DistributionData, MetricType } from '../types';
 import { starPolygonPoints } from '../utils/chart';
@@ -83,7 +82,6 @@ export default function DistributionChart({ data, title, unit, brInfo }: Distrib
   const color = METRIC_COLORS[data.metric as ExtendedMetricType] || '#4ade80';
   const navigate = useNavigate();
   const [hoveredPoint, setHoveredPoint] = useState<ScatterPoint | null>(null);
-  const chartAreaRef = useRef<HTMLDivElement>(null);
 
   // Clean zero-width spaces from vehicle names, keep WT symbols (rendered via WTSymbols font)
   const cleanString = (str: string): string => {
@@ -115,96 +113,6 @@ export default function DistributionChart({ data, title, unit, brInfo }: Distrib
       return { x: d.x, pct: Math.round((cumBattles / totalBattles) * 100) };
     });
   }, [scatterData]);
-
-  // Calculate default domains
-  const defaultDomains = useMemo(() => {
-    const xValues = scatterData.map(d => d.x);
-    const yValues = scatterData.map(d => d.y);
-    const xMin = Math.min(...xValues);
-    const xMax = Math.max(...xValues);
-    const yMin = Math.min(...yValues);
-    const yMax = Math.max(...yValues);
-    const xPadding = (xMax - xMin) * 0.05 || 1;
-    const yPadding = (yMax - yMin) * 0.05 || 1000;
-    return {
-      xMin: xMin - xPadding,
-      xMax: xMax + xPadding,
-      yMin: Math.max(0, yMin - yPadding),
-      yMax: yMax + yPadding,
-    };
-  }, [scatterData]);
-
-  // View state (pan and zoom)
-  const [viewState, setViewState] = useState<{
-    xMin: number; xMax: number; yMin: number; yMax: number;
-  } | null>(null);
-  const [zoomLevel, setZoomLevel] = useState(0);
-
-  const currentDomain = viewState ?? defaultDomains;
-  const isZoomed = zoomLevel > 0;
-
-  // Zoom in only (no zoom out beyond default)
-  const handleZoomIn = useCallback(() => {
-    setZoomLevel(prev => {
-      const newLevel = prev + 1;
-      const zoomFactor = Math.pow(0.5, newLevel);
-      const xCenter = (defaultDomains.xMin + defaultDomains.xMax) / 2;
-      const yCenter = (defaultDomains.yMin + defaultDomains.yMax) / 2;
-      const xRange = (defaultDomains.xMax - defaultDomains.xMin) * zoomFactor;
-      const yRange = (defaultDomains.yMax - defaultDomains.yMin) * zoomFactor;
-      setViewState({
-        xMin: xCenter - xRange / 2,
-        xMax: xCenter + xRange / 2,
-        yMin: Math.max(0, yCenter - yRange / 2),
-        yMax: yCenter + yRange / 2,
-      });
-      return newLevel;
-    });
-  }, [defaultDomains]);
-
-  const handleReset = useCallback(() => {
-    setZoomLevel(0);
-    setViewState(null);
-  }, []);
-
-  // Drag to pan
-  const [isDragging, setIsDragging] = useState(false);
-  const [dragStart, setDragStart] = useState<{ x: number; y: number } | null>(null);
-
-  const handleMouseDown = useCallback((e: React.MouseEvent) => {
-    if (!isZoomed) return;
-    setIsDragging(true);
-    setDragStart({ x: e.clientX, y: e.clientY });
-  }, [isZoomed]);
-
-  const handleMouseMove = useCallback((e: React.MouseEvent) => {
-    if (!isDragging || !dragStart || !chartAreaRef.current) return;
-    const rect = chartAreaRef.current.getBoundingClientRect();
-    const dx = e.clientX - dragStart.x;
-    const dy = e.clientY - dragStart.y;
-    
-    // Apply pan immediately for smooth dragging
-    const xRange = currentDomain.xMax - currentDomain.xMin;
-    const yRange = currentDomain.yMax - currentDomain.yMin;
-    const xShift = (dx / rect.width) * xRange;
-    const yShift = (dy / rect.height) * yRange;
-    
-    setViewState(prev => {
-      if (!prev) return null;
-      return {
-        xMin: prev.xMin - xShift,
-        xMax: prev.xMax - xShift,
-        yMin: Math.max(0, prev.yMin + yShift),
-        yMax: prev.yMax + yShift,
-      };
-    });
-    setDragStart({ x: e.clientX, y: e.clientY });
-  }, [isDragging, dragStart, currentDomain]);
-
-  const handleMouseUp = useCallback(() => {
-    setIsDragging(false);
-    setDragStart(null);
-  }, []);
 
   // Handle point click - navigate directly
   const handlePointClick = useCallback((point: ScatterPoint) => {
@@ -290,7 +198,6 @@ export default function DistributionChart({ data, title, unit, brInfo }: Distrib
         borderRadius: 2,
         p: 2,
         height: '100%',
-        cursor: isDragging ? 'grabbing' : 'default',
         '& *': {
           outline: 'none !important',
         },
@@ -311,50 +218,13 @@ export default function DistributionChart({ data, title, unit, brInfo }: Distrib
       
       <Box 
         sx={{ height: 240, position: 'relative' }} 
-        ref={chartAreaRef} 
-        onMouseDown={handleMouseDown}
-        onMouseMove={handleMouseMove}
-        onMouseUp={handleMouseUp}
-        onMouseLeave={handleMouseUp}
       >
-        {/* Zoom controls */}
-        <Box sx={{ 
-          position: 'absolute',
-          top: 0,
-          right: 35,
-          zIndex: 10,
-          display: 'flex',
-          gap: 0.5,
-          backgroundColor: 'rgba(255,255,255,0.9)',
-          borderRadius: 1,
-          p: 0.5,
-          boxShadow: '0 1px 3px rgba(0,0,0,0.1)',
-        }}>
-          <IconButton 
-            size="small" 
-            onClick={handleZoomIn}
-            sx={{ width: 24, height: 24, p: 0 }}
-          >
-            <Add sx={{ fontSize: 16 }} />
-          </IconButton>
-          {isZoomed && (
-            <IconButton 
-              size="small" 
-              onClick={handleReset}
-              sx={{ width: 24, height: 24, p: 0 }}
-            >
-              <Refresh sx={{ fontSize: 16 }} />
-            </IconButton>
-          )}
-        </Box>
-
         <ResponsiveContainer width="100%" height="100%">
           <ComposedChart margin={{ top: 10, right: 35, left: 5, bottom: 20 }}>
             <CartesianGrid strokeDasharray="3 3" stroke="#e5e5e5" />
             <XAxis
               type="number"
               dataKey="x"
-              domain={[currentDomain.xMin, currentDomain.xMax]}
               tick={{ fill: '#737373', fontSize: 10 }}
               axisLine={{ stroke: '#333' }}
               tickLine={{ stroke: '#333' }}
@@ -365,7 +235,6 @@ export default function DistributionChart({ data, title, unit, brInfo }: Distrib
               yAxisId="left"
               type="number"
               dataKey="y"
-              domain={[currentDomain.yMin, currentDomain.yMax]}
               tick={{ fill: '#737373', fontSize: 10 }}
               axisLine={{ stroke: '#333' }}
               tickLine={{ stroke: '#333' }}
@@ -383,16 +252,16 @@ export default function DistributionChart({ data, title, unit, brInfo }: Distrib
               type="number"
               domain={[0, 100]}
               ticks={[0, 25, 50, 75, 100]}
-              tick={{ fill: '#f97316', fontSize: 9 }}
-              axisLine={{ stroke: '#f97316' }}
-              tickLine={{ stroke: '#f97316' }}
+              tick={{ fill: '#9ca3af', fontSize: 9 }}
+              axisLine={{ stroke: '#9ca3af' }}
+              tickLine={{ stroke: '#9ca3af' }}
               tickFormatter={(v) => `${v}%`}
               width={35}
             />
             <ZAxis type="number" range={[60, 60]} />
             <Tooltip 
               content={<CustomTooltip />} 
-              cursor={{ strokeDasharray: '3 3' }}
+              cursor={false}
               isAnimationActive={false}
             />
             
@@ -401,9 +270,10 @@ export default function DistributionChart({ data, title, unit, brInfo }: Distrib
               yAxisId="right"
               data={percentileLine}
               dataKey="pct"
-              stroke="#f97316"
+              stroke="#9ca3af"
               strokeWidth={1.5}
               dot={false}
+              activeDot={false}
               strokeOpacity={0.4}
               isAnimationActive={false}
               tooltipType="none"
