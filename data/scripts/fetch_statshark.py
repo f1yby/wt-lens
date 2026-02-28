@@ -107,12 +107,16 @@ def parse_vehicle_stats(data: dict) -> list:
             # Kill/Response = kills per spawn (每次重生击杀数)
             avg_kills_per_spawn = (total_kills / spawns) if spawns > 0 else 0
             
+            # Experience per spawn (每次重生获取的经验)
+            exp_per_spawn = (rp / spawns) if spawns > 0 else 0
+            
             vehicles.append({
                 "id": name,
                 "mode": mode,  # arcade, realistic, simulator
                 "battles": total_battles,
                 "win_rate": round(win_rate, 2),
                 "avg_kills_per_spawn": round(avg_kills_per_spawn, 3),
+                "exp_per_spawn": round(exp_per_spawn, 1),
             })
     
     return vehicles

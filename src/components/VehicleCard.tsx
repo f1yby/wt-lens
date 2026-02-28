@@ -168,7 +168,7 @@ export default function VehicleCard({ vehicle }: VehicleCardProps) {
                   KR
                 </Typography>
                 <Typography variant="body2" sx={{ color: '#171717', fontWeight: 600 }}>
-                  {vehicle.stats.avgKills.toFixed(1)}
+                  {vehicle.stats.killPerSpawn.toFixed(1)}
                 </Typography>
               </Box>
             </>

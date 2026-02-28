@@ -11,7 +11,7 @@ import {
   ToggleButton,
   Stack,
 } from '@mui/material';
-import { ArrowBack, Speed, AccessTime, ExpandLess, SyncAlt, GpsFixed, Visibility, FastForward, FastRewind, RotateRight, FlashOn, OpenInNew, SvgIconComponent } from '@mui/icons-material';
+import { ArrowBack, Speed, AccessTime, ExpandLess, SyncAlt, GpsFixed, Visibility, FastForward, FastRewind, RotateRight, FlashOn, OpenInNew, School, SvgIconComponent } from '@mui/icons-material';
 import Navbar from '../components/Navbar';
 import DistributionChart from '../components/DistributionChart';
 import StabilizerScatterChart from '../components/StabilizerScatterChart';
@@ -132,15 +132,16 @@ function generateVehicleComparisonData(vehicleId: string, metric: MetricType, al
 }
 
 /** Stats metric types for comparison */
-type StatsMetricType = 'avgKills' | 'winRate';
+type StatsMetricType = 'killPerSpawn' | 'winRate' | 'expPerSpawn';
 
 /** Gets the numeric value for a given stats metric */
 function getStatsMetricValue(vehicle: Vehicle, metric: StatsMetricType): number {
   if (!vehicle.stats) return 0;
   
   switch (metric) {
-    case 'avgKills': return vehicle.stats.avgKills;
+    case 'killPerSpawn': return vehicle.stats.killPerSpawn;
     case 'winRate': return vehicle.stats.winRate;
+    case 'expPerSpawn': return vehicle.stats.expPerSpawn ?? 0;
     default: return 0;
   }
 }
@@ -276,6 +277,74 @@ function StatItem({ icon: Icon, value, subValue, label }: {
         lineHeight: 1.2,
       }}>
         {label}
+      </Typography>
+    </Box>
+  );
+}
+
+/** Reload time stat item with auto-loader indicator and crew skill levels */
+function ReloadTimeStatItem({ reloadTime, mainGun }: {
+  reloadTime: number;
+  mainGun?: { autoLoader?: boolean; reloadTimes?: { base: number; expert: number; ace: number } } | null;
+}) {
+  const isAutoLoader = mainGun?.autoLoader ?? false;
+  const reloadTimes = mainGun?.reloadTimes;
+  const hasData = reloadTime > 0;
+  const color = hasData ? COLOR_HAS_VALUE : COLOR_NO_VALUE;
+
+  // Format reload time display
+  const formatTime = (t: number) => t.toFixed(1) + 's';
+
+  // Generate sub-label
+  let subLabel = '';
+  if (hasData) {
+    if (isAutoLoader) {
+      subLabel = '自动装填';
+    } else if (reloadTimes) {
+      // Show range: base (whiteboard) → ace
+      subLabel = `${formatTime(reloadTimes.base)} → ${formatTime(reloadTimes.ace)}`;
+    }
+  }
+
+  return (
+    <Box sx={{
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      gap: 0.25,
+      py: { xs: 0.75, sm: 1 },
+    }}>
+      <AccessTime sx={{ color, fontSize: { xs: 18, sm: 20, md: 22 }, mb: 0.25 }} />
+      <Typography sx={{
+        color,
+        fontWeight: 700,
+        fontSize: { xs: '0.8rem', sm: '0.9rem', md: '1rem' },
+        textShadow: '0 1px 3px rgba(0,0,0,0.4)',
+        lineHeight: 1.2,
+      }}>
+        {hasData ? formatTime(reloadTime) : '-'}
+      </Typography>
+      {/* Auto-loader indicator or reload time range */}
+      {subLabel && (
+        <Typography sx={{
+          color: isAutoLoader ? '#4ade80' : 'rgba(255,255,255,0.85)',
+          fontSize: { xs: '0.55rem', sm: '0.6rem', md: '0.65rem' },
+          textShadow: '0 1px 2px rgba(0,0,0,0.3)',
+          lineHeight: 1,
+          whiteSpace: 'nowrap',
+        }}>
+          {subLabel}
+        </Typography>
+      )}
+      <Typography sx={{
+        color: 'rgba(255,255,255,0.85)',
+        fontSize: { xs: '0.6rem', sm: '0.65rem', md: '0.7rem' },
+        fontWeight: 500,
+        textShadow: '0 1px 2px rgba(0,0,0,0.3)',
+        whiteSpace: 'nowrap',
+        lineHeight: 1.2,
+      }}>
+        装填时间
       </Typography>
     </Box>
   );
@@ -552,8 +621,9 @@ export default function VehicleDetailPage() {
   const statsComparisons = useMemo(() => {
     if (!vehicle) return null;
     return {
-      avgKills: generateStatsComparisonData(vehicle.id, 'avgKills', vehicles, filter),
+      killPerSpawn: generateStatsComparisonData(vehicle.id, 'killPerSpawn', vehicles, filter),
       winRate: generateStatsComparisonData(vehicle.id, 'winRate', vehicles, filter),
+      expPerSpawn: generateStatsComparisonData(vehicle.id, 'expPerSpawn', vehicles, filter),
     };
   }, [vehicle, vehicles, filter]);
 
@@ -752,7 +822,7 @@ export default function VehicleDetailPage() {
                       value: `${vehicle.stats.winRate.toFixed(1)}%`,
                       color: vehicle.stats.winRate > 50 ? '#86efac' : vehicle.stats.winRate < 48 ? '#fca5a5' : '#fde047',
                     },
-                    { label: 'KR', value: vehicle.stats.avgKills.toFixed(1), color: '#fff' },
+                    { label: 'KR', value: (vehicle.stats.killPerSpawn ?? 0).toFixed(1), color: '#fff' },
                     { label: 'BR', value: vehicle.battleRating.toFixed(1), color: '#86efac' },
                   ].map((stat) => (
                     <Box key={stat.label}>
@@ -793,9 +863,9 @@ export default function VehicleDetailPage() {
               display: 'grid',
               gridTemplateColumns: {
                 xs: 'repeat(4, 1fr)',
-                sm: 'repeat(5, 1fr)',
-                md: 'repeat(5, 1fr)',
-                lg: 'repeat(11, 1fr)',
+                sm: 'repeat(4, 1fr)',
+                md: 'repeat(6, 1fr)',
+                lg: 'repeat(12, 1fr)',
               },
               gap: { xs: 0.5, sm: 1 },
             }}>
@@ -819,10 +889,9 @@ export default function VehicleDetailPage() {
                 value={vehicle.performance.traverseSpeed > 0 ? vehicle.performance.traverseSpeed.toFixed(1) : '-'}
                 label="转向速度"
               />
-              <StatItem
-                icon={AccessTime}
-                value={vehicle.performance.reloadTime > 0 ? `${vehicle.performance.reloadTime.toFixed(1)}s` : '-'}
-                label="装填时间"
+              <ReloadTimeStatItem
+                reloadTime={vehicle.performance.reloadTime}
+                mainGun={vehicle.performance.mainGun}
               />
               <PenetrationStatItem
                 penetration={vehicle.performance.penetration}
@@ -866,6 +935,11 @@ export default function VehicleDetailPage() {
                   ? `${vehicle.performance.commanderThermalResolution[0]}×${vehicle.performance.commanderThermalResolution[1]}`
                   : '-'}
                 label="车长热成像"
+              />
+              <StatItem
+                icon={School}
+                value={vehicle.stats?.expPerSpawn ? Math.round(vehicle.stats.expPerSpawn).toLocaleString() : '-'}
+                label="每次重生经验"
               />
             </Box>
           </Box>
@@ -949,14 +1023,19 @@ export default function VehicleDetailPage() {
 
         <Grid container spacing={2}>
           {/* Stats Charts - KR and WinRate (Most Important) */}
-          {statsComparisons?.avgKills && (
+          {statsComparisons?.killPerSpawn && (
             <Grid item xs={12} md={4}>
-              <DistributionChart data={statsComparisons.avgKills} title="KR (每重生击毁)" unit="" brInfo={{ vehicleBR: vehicle.battleRating, brMin: effectiveBrRange[0], brMax: effectiveBrRange[1] }} />
+              <DistributionChart data={statsComparisons.killPerSpawn} title="KR (每重生击毁)" unit="" brInfo={{ vehicleBR: vehicle.battleRating, brMin: effectiveBrRange[0], brMax: effectiveBrRange[1] }} />
             </Grid>
           )}
           {statsComparisons?.winRate && (
             <Grid item xs={12} md={4}>
               <DistributionChart data={statsComparisons.winRate} title="胜率" unit="%" brInfo={{ vehicleBR: vehicle.battleRating, brMin: effectiveBrRange[0], brMax: effectiveBrRange[1] }} />
+            </Grid>
+          )}
+          {statsComparisons?.expPerSpawn && (
+            <Grid item xs={12} md={4}>
+              <DistributionChart data={statsComparisons.expPerSpawn} title="每次重生经验" unit=" RP" brInfo={{ vehicleBR: vehicle.battleRating, brMin: effectiveBrRange[0], brMax: effectiveBrRange[1] }} />
             </Grid>
           )}
           

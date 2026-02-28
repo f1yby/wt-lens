@@ -23,7 +23,7 @@ interface DistributionChartProps {
 }
 
 /** Extended metric type including stats metrics */
-type ExtendedMetricType = MetricType | 'avgKills' | 'winRate';
+type ExtendedMetricType = MetricType | 'killPerSpawn' | 'winRate' | 'expPerSpawn';
 
 /** Color mapping for each metric type */
 const METRIC_COLORS: Record<ExtendedMetricType, string> = {
@@ -38,8 +38,9 @@ const METRIC_COLORS: Record<ExtendedMetricType, string> = {
   gunnerThermal: '#fbbf24',
   commanderThermal: '#fbbf24',
   stabilizer: '#8b5cf6',
-  avgKills: '#f97316',
+  killPerSpawn: '#f97316',
   winRate: '#4ade80',
+  expPerSpawn: '#3b82f6',
 };
 
 /** Display name mapping for each metric type */
@@ -55,8 +56,9 @@ const METRIC_NAMES: Record<ExtendedMetricType, string> = {
   gunnerThermal: '炮手热成像',
   commanderThermal: '车长热成像',
   stabilizer: '稳定器',
-  avgKills: 'KR',
+  killPerSpawn: 'KR',
   winRate: '胜率',
+  expPerSpawn: '每次重生经验',
 };
 
 // Distance threshold for clustering (in data units)
@@ -410,7 +412,7 @@ export default function DistributionChart({ data, title, unit, brInfo }: Distrib
           {title}
         </Typography>
         <Typography variant="caption" sx={{ color: '#737373' }}>
-          当前载具: {data.currentVehicleValue.toFixed(1)} {unit}
+          当前载具: {data.currentVehicleValue?.toFixed(1) ?? '-'} {unit}
         </Typography>
       </Box>
       

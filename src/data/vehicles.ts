@@ -8,6 +8,7 @@ interface StatSharkEntry {
   battles: number;
   win_rate: number;
   avg_kills_per_battle: number;
+  exp_per_spawn?: number;
   rank?: number;
   br?: number;
 }
@@ -47,6 +48,7 @@ interface DatamineEntry {
     mainGun?: any | null;
     ammunitions?: any[] | null;
     penetrationData?: any | null;
+    autoLoader?: boolean | null;
   };
   imageUrl: string;
   source: string;
@@ -160,11 +162,13 @@ function mergeVehicleData(stats: StatSharkEntry[], datamine: DatamineEntry[]): V
         mainGun: datamineEntry.performance.mainGun ?? undefined,
         ammunitions: datamineEntry.performance.ammunitions ?? undefined,
         penetrationData: datamineEntry.performance.penetrationData ?? undefined,
+        autoLoader: datamineEntry.performance.autoLoader ?? undefined,
       },
       stats: statsEntry ? {
         battles: statsEntry.battles,
         winRate: statsEntry.win_rate,
-        avgKills: statsEntry.avg_kills_per_battle,
+        killPerSpawn: statsEntry.avg_kills_per_battle,
+        expPerSpawn: statsEntry.exp_per_spawn,
       } : undefined,
       imageUrl: datamineEntry.imageUrl,
     };

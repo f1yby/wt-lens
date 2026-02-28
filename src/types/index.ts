@@ -47,7 +47,8 @@ export type MetricType =
   | 'elevationMin' 
   | 'gunnerThermal' 
   | 'commanderThermal' 
-  | 'stabilizer';
+  | 'stabilizer'
+  | 'expPerSpawn';
 
 export const ECONOMIC_TYPE_COLORS: Record<EconomicType, string> = {
   regular: '#3b82f6',  // Blue - 普通载具
@@ -85,6 +86,12 @@ export interface MainGun {
   caliber: number;           // mm
   reloadTime?: number;       // seconds
   ammoCount?: number;        // total ammo capacity
+  autoLoader?: boolean;      // true = auto-loader, false = manual loader
+  reloadTimes?: {            // reload times for different crew skill levels
+    base: number;            // whiteboard crew
+    expert: number;          // expert crew (+10%)
+    ace: number;             // ace crew (+25%)
+  };
 }
 
 /** Penetration data at different angles */
@@ -145,12 +152,14 @@ export interface Vehicle {
     mainGun?: MainGun;
     ammunitions?: Ammunition[];
     penetrationData?: PenetrationData;
+    autoLoader?: boolean;      // true = auto-loader (fixed reload time)
   };
   // Matchmaking stats from StatShark (may be missing if no stats available)
   stats?: {
     battles: number;
     winRate: number;
-    avgKills: number;
+    killPerSpawn: number;  // 每次重生击杀数 (Kills per spawn)
+    expPerSpawn?: number;  // 每次重生获取的经验 (RP per spawn)
   };
   // Thumbnail image URL (placeholder)
   imageUrl?: string;

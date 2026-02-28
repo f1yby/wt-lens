@@ -537,9 +537,10 @@ class VehiclePerformance:
     stabilizer_value: int | None = None  # 1 if has stabilizer, 0 otherwise
     elevation_range_value: float | None = None  # max - min elevation
     # Main gun and ammunition data (new)
-    main_gun: dict | None = None  # {name, caliber, reloadTime}
+    main_gun: dict | None = None  # {name, caliber, reloadTime, autoLoader, reloadTimes}
     ammunitions: list[dict] | None = None  # List of ammo data
     penetration_data: dict | None = None  # {at0m: {angle0, angle30, angle60}, at500m: {...}}
+    auto_loader: bool | None = None  # True if auto-loader, False if manual loader
 
 
 @dataclass
@@ -1124,6 +1125,52 @@ def parse_tankmodel_data(data: dict[str, Any]) -> VehiclePerformance | None:
                 if isinstance(shot_freq, (int, float)) and shot_freq > 0:
                     perf.reload_time = round(1.0 / shot_freq, 2)
                 
+                # Detect auto-loader: check tankmodel weapon definition
+                # "autoLoader": true in tankmodel = auto-loader (fixed reload time)
+                # Also check weapon file for sfxReloadBullet = "grd_cannon_reload_auto"
+                perf.auto_loader = main_weapon.get('autoLoader', False)
+                
+                # Fallback: check weapon file for auto-loader sound
+                if not perf.auto_loader:
+                    def check_auto_loader_sound(data):
+                        """Recursively check if weapon has auto-loader sound"""
+                        if isinstance(data, dict):
+                            for k, v in data.items():
+                                if k == 'sfxReloadBullet' and v == 'grd_cannon_reload_auto':
+                                    return True
+                                elif isinstance(v, (dict, list)) and check_auto_loader_sound(v):
+                                    return True
+                        elif isinstance(data, list):
+                            for item in data:
+                                if check_auto_loader_sound(item):
+                                    return True
+                        return False
+                    perf.auto_loader = check_auto_loader_sound(weapon_data)
+                
+                # Calculate reload times for different crew skill levels
+                # Based on rank.blkx loadingTimeMult: [1.3, 1.0] (whiteboard to ace)
+                # The datamine reload_time is the ACE (max skill) value
+                # Manual loader: ace (base), expert (+15%), whiteboard (+30%)
+                # Auto-loader: same for all levels
+                if perf.reload_time and perf.reload_time > 0:
+                    if perf.auto_loader:
+                        reload_times = {
+                            'base': perf.reload_time,
+                            'expert': perf.reload_time,
+                            'ace': perf.reload_time
+                        }
+                    else:
+                        # datamine value is ace (× 1.0)
+                        # whiteboard = ace × 1.3
+                        # expert = ace × 1.15 (midpoint)
+                        reload_times = {
+                            'base': round(perf.reload_time * 1.30, 2),
+                            'expert': round(perf.reload_time * 1.15, 2),
+                            'ace': perf.reload_time
+                        }
+                else:
+                    reload_times = None
+                
                 vehicle_mods = data.get('modifications', {})
                 if not isinstance(vehicle_mods, dict):
                     vehicle_mods = {}
@@ -1143,6 +1190,8 @@ def parse_tankmodel_data(data: dict[str, Any]) -> VehiclePerformance | None:
                         'name': weapon_blk.split('/')[-1].replace('.blk', '').replace('_user_cannon', ''),
                         'caliber': round(weapon_caliber_mm, 1),
                         'reloadTime': perf.reload_time,
+                        'autoLoader': perf.auto_loader,
+                        'reloadTimes': reload_times
                     }
                     
                     # Find best APFSDS penetration
@@ -1345,6 +1394,7 @@ def vehicle_data_to_dict(v: VehicleData) -> dict[str, Any]:
             "mainGun": v.performance.main_gun,
             "ammunitions": v.performance.ammunitions,
             "penetrationData": v.performance.penetration_data,
+            "autoLoader": v.performance.auto_loader,
         },
         "imageUrl": v.image_url,
         "source": v.source,
