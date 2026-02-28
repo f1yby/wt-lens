@@ -413,9 +413,9 @@ export default function DistributionChart({ data, title, unit, brInfo }: Distrib
             <Scatter
               yAxisId="left"
               data={otherVehicles}
-              onMouseEnter={(data) => setHoveredPoint(data as ScatterPoint)}
+              onMouseEnter={(data) => setHoveredPoint((data as ScatterShapeProps).payload ?? null)}
               onMouseLeave={() => setHoveredPoint(null)}
-              onClick={(data: unknown) => handlePointClick(data as ScatterPoint)}
+              onClick={(data: unknown) => handlePointClick(((data as ScatterShapeProps).payload) as ScatterPoint)}
               shape={(props: ScatterShapeProps) => {
                 const { cx, cy, payload } = props;
                 if (cx == null || cy == null) return null;
@@ -437,9 +437,9 @@ export default function DistributionChart({ data, title, unit, brInfo }: Distrib
               <Scatter
                 yAxisId="left"
                 data={[currentVehicle]}
-                onMouseEnter={(data) => setHoveredPoint(data as ScatterPoint)}
+                onMouseEnter={(data) => setHoveredPoint((data as ScatterShapeProps).payload ?? null)}
                 onMouseLeave={() => setHoveredPoint(null)}
-                onClick={(data: unknown) => handlePointClick(data as ScatterPoint)}
+                onClick={(data: unknown) => handlePointClick(((data as ScatterShapeProps).payload) as ScatterPoint)}
                 shape={(props: ScatterShapeProps) => {
                   const { cx, cy } = props;
                   if (cx == null || cy == null) return null;

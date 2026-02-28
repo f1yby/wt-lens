@@ -386,9 +386,9 @@ export default function StabilizerScatterChart({
             {/* Other vehicles */}
             <Scatter
               data={otherVehicles}
-              onMouseEnter={(data) => setHoveredPoint(data as ScatterPoint)}
+              onMouseEnter={(data) => setHoveredPoint((data as ScatterShapeProps).payload ?? null)}
               onMouseLeave={() => setHoveredPoint(null)}
-              onClick={(_data: unknown, index: number, event: React.MouseEvent) => handlePointClick(_data as ScatterPoint, index, event)}
+              onClick={(_data: unknown, index: number, event: React.MouseEvent) => handlePointClick(((_data as ScatterShapeProps).payload) as ScatterPoint, index, event)}
               shape={(props: ScatterShapeProps) => {
                 const { cx, cy, payload } = props;
                 if (cx == null || cy == null) return null;
@@ -412,9 +412,9 @@ export default function StabilizerScatterChart({
             {currentVehiclePoint && (
               <Scatter
                 data={[currentVehiclePoint]}
-                onMouseEnter={(data) => setHoveredPoint(data as ScatterPoint)}
+                onMouseEnter={(data) => setHoveredPoint((data as ScatterShapeProps).payload ?? null)}
                 onMouseLeave={() => setHoveredPoint(null)}
-                onClick={(_data: unknown, index: number, event: React.MouseEvent) => handlePointClick(_data as ScatterPoint, index, event)}
+                onClick={(_data: unknown, index: number, event: React.MouseEvent) => handlePointClick(((_data as ScatterShapeProps).payload) as ScatterPoint, index, event)}
                 shape={(props: ScatterShapeProps) => {
                   const { cx, cy, payload } = props;
                   if (cx == null || cy == null) return null;
