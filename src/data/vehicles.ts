@@ -7,7 +7,7 @@ interface StatSharkEntry {
   mode: 'arcade' | 'historical' | 'simulation';
   battles: number;
   win_rate: number;
-  avg_kills_per_battle: number;
+  avg_kills_per_spawn: number;
   exp_per_spawn?: number;
   rank?: number;
   br?: number;
@@ -167,7 +167,7 @@ function mergeVehicleData(stats: StatSharkEntry[], datamine: DatamineEntry[]): V
       stats: statsEntry ? {
         battles: statsEntry.battles,
         winRate: statsEntry.win_rate,
-        killPerSpawn: statsEntry.avg_kills_per_battle,
+        killPerSpawn: statsEntry.avg_kills_per_spawn,
         expPerSpawn: statsEntry.exp_per_spawn,
       } : undefined,
       imageUrl: datamineEntry.imageUrl,
