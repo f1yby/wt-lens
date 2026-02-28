@@ -821,7 +821,7 @@ export default function VehicleDetailPage() {
               />
               <StatItem
                 icon={AccessTime}
-                value={`${vehicle.performance.reloadTime.toFixed(1)}s`}
+                value={vehicle.performance.reloadTime > 0 ? `${vehicle.performance.reloadTime.toFixed(1)}s` : '-'}
                 label="装填时间"
               />
               <PenetrationStatItem

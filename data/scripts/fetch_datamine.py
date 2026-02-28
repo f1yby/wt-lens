@@ -1005,16 +1005,11 @@ def parse_tankmodel_data(data: dict[str, Any]) -> VehiclePerformance | None:
                     main_weapon = weapon
                     break
     elif isinstance(weapons, dict):
-        # Single weapon case
-        weapons_list = weapons.get('Weapon', [])
-        if isinstance(weapons_list, list):
-            for weapon in weapons_list:
-                if isinstance(weapon, dict):
-                    trigger = weapon.get('trigger', '')
-                    blk = weapon.get('blk', '')
-                    if trigger == 'gunner0' and 'cannon' in blk.lower():
-                        main_weapon = weapon
-                        break
+        # Single weapon case - the dict itself is the weapon
+        trigger = weapons.get('trigger', '')
+        blk = weapons.get('blk', '')
+        if trigger == 'gunner0' and 'cannon' in blk.lower():
+            main_weapon = weapons
 
     if main_weapon:
         # Elevation speed (speedPitch)
@@ -1121,6 +1116,14 @@ def parse_tankmodel_data(data: dict[str, Any]) -> VehiclePerformance | None:
             # Load weapon data and extract ammunition (filtered by vehicle modifications)
             weapon_data = load_weapon_data(weapon_blk)
             if weapon_data:
+                # Extract reload time from shotFreq (reloadTime = 1 / shotFreq)
+                # Priority: 1) tankmodel weapon override, 2) weapon file default
+                shot_freq = main_weapon.get('shotFreq', 0)
+                if not shot_freq:
+                    shot_freq = weapon_data.get('shotFreq', 0)
+                if isinstance(shot_freq, (int, float)) and shot_freq > 0:
+                    perf.reload_time = round(1.0 / shot_freq, 2)
+                
                 vehicle_mods = data.get('modifications', {})
                 if not isinstance(vehicle_mods, dict):
                     vehicle_mods = {}
