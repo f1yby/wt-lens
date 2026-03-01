@@ -320,11 +320,14 @@ def load_weapon_data(weapon_blk_path: str) -> dict | None:
         return _weapons_cache[weapon_blk_path]
     
     # Extract filename from path
-    # Path format: gamedata/weapons/groundmodels_weapons/filename.blk
-    if 'groundmodels_weapons/' in weapon_blk_path:
-        filename = weapon_blk_path.split('groundmodels_weapons/')[-1].replace('.blk', '') + '.blkx'
+    # Path format: gameData/Weapons/groundModels_weapons/filename.blk
+    # Note: paths in tankmodel blkx use mixed case (e.g. groundModels_weapons)
+    # but actual filenames on disk are lowercase, so we normalize to lowercase
+    lower_path = weapon_blk_path.lower()
+    if 'groundmodels_weapons/' in lower_path:
+        filename = lower_path.split('groundmodels_weapons/')[-1].replace('.blk', '') + '.blkx'
     else:
-        filename = weapon_blk_path.split('/')[-1].replace('.blk', '') + '.blkx'
+        filename = lower_path.split('/')[-1].replace('.blk', '') + '.blkx'
     
     filepath = WEAPONS_PATH / filename
     
