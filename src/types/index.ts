@@ -93,6 +93,9 @@ export interface MainGun {
     expert: number;          // expert crew (+10%)
     ace: number;             // ace crew (+25%)
   };
+  // Autocannon-specific fields
+  rateOfFire?: number;       // rounds per minute (from shotFreq)
+  beltReloadTime?: number;   // belt/magazine reload time in seconds (ace value)
 }
 
 /** Penetration data at different angles */

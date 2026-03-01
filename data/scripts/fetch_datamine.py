@@ -1117,13 +1117,32 @@ def parse_tankmodel_data(data: dict[str, Any]) -> VehiclePerformance | None:
             # Load weapon data and extract ammunition (filtered by vehicle modifications)
             weapon_data = load_weapon_data(weapon_blk)
             if weapon_data:
-                # Extract reload time from shotFreq (reloadTime = 1 / shotFreq)
-                # Priority: 1) tankmodel weapon override, 2) weapon file default
-                shot_freq = main_weapon.get('shotFreq', 0)
-                if not shot_freq:
-                    shot_freq = weapon_data.get('shotFreq', 0)
-                if isinstance(shot_freq, (int, float)) and shot_freq > 0:
-                    perf.reload_time = round(1.0 / shot_freq, 2)
+                # Extract reload time
+                # Autocannons (weaponType == 3) use reloadTime field (belt/magazine reload)
+                # Traditional cannons use 1/shotFreq
+                weapon_type = weapon_data.get('weaponType', -1)
+                weapon_reload_time = main_weapon.get('reloadTime') or weapon_data.get('reloadTime')
+                is_autocannon = (weapon_type == 3 and weapon_reload_time is not None)
+                
+                # For autocannons, also extract rate of fire (rounds/min) from shotFreq
+                autocannon_rate_of_fire = None
+                autocannon_belt_reload_time = None
+                if is_autocannon:
+                    # Autocannon: reloadTime is the belt/magazine reload time (ace value)
+                    perf.reload_time = round(float(weapon_reload_time), 2)
+                    autocannon_belt_reload_time = perf.reload_time
+                    # Rate of fire from shotFreq (shots per second → rounds per minute)
+                    ac_shot_freq = main_weapon.get('shotFreq', 0) or weapon_data.get('shotFreq', 0)
+                    if isinstance(ac_shot_freq, (int, float)) and ac_shot_freq > 0:
+                        autocannon_rate_of_fire = round(ac_shot_freq * 60)  # rounds per minute
+                else:
+                    # Traditional cannon: reloadTime = 1 / shotFreq
+                    # Priority: 1) tankmodel weapon override, 2) weapon file default
+                    shot_freq = main_weapon.get('shotFreq', 0)
+                    if not shot_freq:
+                        shot_freq = weapon_data.get('shotFreq', 0)
+                    if isinstance(shot_freq, (int, float)) and shot_freq > 0:
+                        perf.reload_time = round(1.0 / shot_freq, 2)
                 
                 # Detect auto-loader: check tankmodel weapon definition
                 # "autoLoader": true in tankmodel = auto-loader (fixed reload time)
@@ -1186,13 +1205,29 @@ def parse_tankmodel_data(data: dict[str, Any]) -> VehiclePerformance | None:
                     else:
                         weapon_caliber_mm = 0
                     
-                    perf.main_gun = {
+                    # Fallback: read caliber from bullet data (for autocannons)
+                    if not weapon_caliber_mm:
+                        bullet_data = weapon_data.get('bullet', {})
+                        if isinstance(bullet_data, list):
+                            bullet_data = bullet_data[0] if bullet_data else {}
+                        if isinstance(bullet_data, dict):
+                            bullet_caliber_m = bullet_data.get('caliber', 0)
+                            if isinstance(bullet_caliber_m, (int, float)) and bullet_caliber_m > 0:
+                                weapon_caliber_mm = bullet_caliber_m * 1000
+                    
+                    main_gun_data = {
                         'name': weapon_blk.split('/')[-1].replace('.blk', '').replace('_user_cannon', ''),
                         'caliber': round(weapon_caliber_mm, 1),
                         'reloadTime': perf.reload_time,
                         'autoLoader': perf.auto_loader,
                         'reloadTimes': reload_times
                     }
+                    # Add autocannon-specific fields
+                    if autocannon_rate_of_fire is not None:
+                        main_gun_data['rateOfFire'] = autocannon_rate_of_fire  # rounds per minute
+                    if autocannon_belt_reload_time is not None:
+                        main_gun_data['beltReloadTime'] = autocannon_belt_reload_time  # seconds (ace)
+                    perf.main_gun = main_gun_data
                     
                     # Find best APFSDS penetration
                     best_apfsds = None

@@ -250,26 +250,36 @@ function StatItem({ icon: Icon, value, subValue, label }: {
 /** Reload time stat item with auto-loader indicator and crew skill levels */
 function ReloadTimeStatItem({ reloadTime, mainGun }: {
   reloadTime: number;
-  mainGun?: { autoLoader?: boolean; reloadTimes?: { base: number; expert: number; ace: number } } | null;
+  mainGun?: { autoLoader?: boolean; reloadTimes?: { base: number; expert: number; ace: number }; rateOfFire?: number; beltReloadTime?: number } | null;
 }) {
   const isAutoLoader = mainGun?.autoLoader ?? false;
   const reloadTimes = mainGun?.reloadTimes;
+  const rateOfFire = mainGun?.rateOfFire;
+  const beltReloadTime = mainGun?.beltReloadTime;
+  const isAutocannon = rateOfFire != null && rateOfFire > 0;
   const hasData = reloadTime > 0;
   const color = hasData ? COLOR_HAS_VALUE : COLOR_NO_VALUE;
 
   // Format reload time display
   const formatTime = (t: number) => t.toFixed(1) + 's';
 
-  // Generate sub-label
+  // Generate sub-label for traditional cannons
   let subLabel = '';
-  if (hasData) {
+  if (hasData && !isAutocannon) {
     if (isAutoLoader) {
       subLabel = '自动装填';
     } else if (reloadTimes) {
-      // Show range: base (whiteboard) → ace
       subLabel = `${formatTime(reloadTimes.base)} → ${formatTime(reloadTimes.ace)}`;
     }
   }
+
+  const subTextSx = {
+    color: 'rgba(255,255,255,0.85)',
+    fontSize: { xs: '0.55rem', sm: '0.6rem', md: '0.65rem' },
+    textShadow: '0 1px 2px rgba(0,0,0,0.3)',
+    lineHeight: 1,
+    whiteSpace: 'nowrap',
+  } as const;
 
   return (
     <Box sx={{
@@ -289,17 +299,30 @@ function ReloadTimeStatItem({ reloadTime, mainGun }: {
       }}>
         {hasData ? formatTime(reloadTime) : '-'}
       </Typography>
-      {/* Auto-loader indicator or reload time range */}
-      {subLabel && (
-        <Typography sx={{
-          color: isAutoLoader ? '#4ade80' : 'rgba(255,255,255,0.85)',
-          fontSize: { xs: '0.55rem', sm: '0.6rem', md: '0.65rem' },
-          textShadow: '0 1px 2px rgba(0,0,0,0.3)',
-          lineHeight: 1,
-          whiteSpace: 'nowrap',
-        }}>
-          {subLabel}
-        </Typography>
+      {isAutocannon ? (
+        <>
+          {/* Autocannon: show belt reload time range + rate of fire */}
+          {reloadTimes && beltReloadTime != null && (
+            <Typography sx={subTextSx}>
+              {formatTime(reloadTimes.base)} → {formatTime(reloadTimes.ace)} 换弹链
+            </Typography>
+          )}
+          <Typography sx={subTextSx}>
+            射速 {rateOfFire} 发/分
+          </Typography>
+        </>
+      ) : (
+        <>
+          {/* Traditional cannon: auto-loader or crew skill range */}
+          {subLabel && (
+            <Typography sx={{
+              ...subTextSx,
+              color: isAutoLoader ? '#4ade80' : 'rgba(255,255,255,0.85)',
+            }}>
+              {subLabel}
+            </Typography>
+          )}
+        </>
       )}
       <Typography sx={{
         color: 'rgba(255,255,255,0.85)',
