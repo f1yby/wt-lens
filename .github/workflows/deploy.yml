@@ -21,7 +21,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          submodules: recursive
           lfs: true
 
       - name: Setup Node
@@ -30,18 +29,8 @@ jobs:
           node-version: "20"
           cache: npm
 
-      - name: Setup Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
-
       - name: Install dependencies
         run: npm ci
-
-      - name: Generate vehicle data and copy images
-        run: |
-          cd data/scripts
-          python fetch_datamine.py
 
       - name: Build
         run: npm run build
