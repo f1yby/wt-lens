@@ -791,6 +791,38 @@ export default function VehicleDetailPage() {
                 </Box>
               </Box>
 
+              {/* Release Date & Unreleased Badge */}
+              {vehicle.releaseDate && (
+                <Box sx={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: 1,
+                  justifyContent: { xs: 'center', md: 'flex-start' },
+                  mb: 1,
+                }}>
+                  <Typography sx={{
+                    color: 'rgba(255,255,255,0.7)',
+                    fontSize: { xs: '0.7rem', sm: '0.75rem', md: '0.8rem' },
+                  }}>
+                    {vehicle.unreleased ? '预计上线' : '发布日期'}：{vehicle.releaseDate}
+                  </Typography>
+                  {vehicle.unreleased && (
+                    <Box sx={{
+                      backgroundColor: '#f97316',
+                      color: '#fff',
+                      fontSize: '0.65rem',
+                      fontWeight: 700,
+                      px: 1,
+                      py: 0.25,
+                      borderRadius: 1,
+                      lineHeight: 1.2,
+                    }}>
+                      DEV
+                    </Box>
+                  )}
+                </Box>
+              )}
+
               {/* Battle Stats */}
               {vehicle.stats && (
                 <Box sx={{

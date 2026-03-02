@@ -101,17 +101,40 @@ export default function VehicleTechTree({ vehicles }: VehicleTechTreeProps) {
                       aspectRatio: '4/3',
                       backgroundColor: getEconomicBgColor(),
                       borderRadius: 1,
-                      border: '1px solid #d4d4d4',
+                      border: vehicle.unreleased ? '1px dashed #f97316' : '1px solid #d4d4d4',
                       overflow: 'hidden',
                       cursor: 'pointer',
+                      opacity: vehicle.unreleased ? 0.7 : 1,
                       transition: 'all 0.2s ease',
                       '&:hover': {
                         borderColor: '#16a34a',
                         transform: 'scale(1.05)',
                         zIndex: 10,
+                        opacity: 1,
                       },
                     }}
                   >
+                    {/* DEV 角标 */}
+                    {vehicle.unreleased && (
+                      <Box
+                        sx={{
+                          position: 'absolute',
+                          top: 2,
+                          right: 2,
+                          backgroundColor: '#f97316',
+                          color: '#fff',
+                          fontSize: '0.5rem',
+                          fontWeight: 700,
+                          px: 0.5,
+                          py: 0.125,
+                          borderRadius: 0.5,
+                          zIndex: 3,
+                          lineHeight: 1.2,
+                        }}
+                      >
+                        DEV
+                      </Box>
+                    )}
                     {/* 国旗背景 */}
                     <Box
                       component="img"

@@ -167,6 +167,10 @@ export interface Vehicle {
   };
   // Thumbnail image URL (placeholder)
   imageUrl?: string;
+  // Whether this vehicle is unreleased (not yet in live server)
+  unreleased?: boolean;
+  // Release date from datamine (YYYY-MM-DD format)
+  releaseDate?: string;
 }
 
 export interface MatchupData {

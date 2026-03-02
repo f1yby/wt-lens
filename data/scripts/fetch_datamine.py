@@ -27,6 +27,9 @@ TANKMODELS_PATH = DATAMINE_BASE / "units" / "tankmodels"
 # Path to wpcost.blkx for BR data
 WPCOST_PATH = Path(__file__).parent.parent / "datamine" / "char.vromfs.bin_u" / "config" / "wpcost.blkx"
 
+# Path to unittags.blkx for release date data
+UNITTAGS_PATH = Path(__file__).parent.parent / "datamine" / "char.vromfs.bin_u" / "config" / "unittags.blkx"
+
 # Path to units.csv for localization data
 UNITS_CSV_PATH = Path(__file__).parent.parent / "datamine" / "lang.vromfs.bin_u" / "lang" / "units.csv"
 
@@ -560,6 +563,8 @@ class VehicleData:
     performance: VehiclePerformance
     image_url: str
     source: str = "datamine"
+    unreleased: bool = False
+    release_date: str | None = None
 
 
 def read_local_blkx(filename: str) -> dict[str, Any] | None:
@@ -595,6 +600,30 @@ def load_wpcost_data() -> dict[str, Any]:
         print(f"Error loading wpcost.blkx: {e}")
         _wpcost_cache = {}
         return _wpcost_cache
+
+
+_unittags_cache: dict[str, Any] | None = None
+
+def load_unittags_data() -> dict[str, Any]:
+    """Load unittags.blkx for release date data (cached)"""
+    global _unittags_cache
+    if _unittags_cache is not None:
+        return _unittags_cache
+
+    if not UNITTAGS_PATH.exists():
+        print(f"Warning: unittags.blkx not found at {UNITTAGS_PATH}")
+        _unittags_cache = {}
+        return _unittags_cache
+
+    try:
+        with open(UNITTAGS_PATH, 'r', encoding='utf-8') as f:
+            _unittags_cache = json.load(f)
+        print(f"Loaded unittags.blkx with {len(_unittags_cache)} entries")
+        return _unittags_cache
+    except (json.JSONDecodeError, IOError) as e:
+        print(f"Error loading unittags.blkx: {e}")
+        _unittags_cache = {}
+        return _unittags_cache
 
 
 def load_localization_data() -> dict[str, dict[str, str]]:
@@ -1327,6 +1356,12 @@ def fetch_vehicle_performance(vehicle_id: str, copy_images: bool = True) -> Vehi
     if not image_url:
         image_url = f"vehicles/{vehicle_id}.webp"
 
+    # Get release date from unittags.blkx
+    unittags = load_unittags_data()
+    tag = unittags.get(vehicle_id, {})
+    release_date_str = tag.get('releaseDate')  # e.g. "2026-03-10 00:00:00"
+    release_date = release_date_str[:10] if release_date_str else None  # "2026-03-10"
+
     return VehicleData(
         id=vehicle_id,
         name=vehicle_id,
@@ -1338,7 +1373,8 @@ def fetch_vehicle_performance(vehicle_id: str, copy_images: bool = True) -> Vehi
         economic_type=economic_type,
         performance=perf,
         image_url=image_url,
-        source="datamine_tankmodel"
+        source="datamine_tankmodel",
+        release_date=release_date,
     )
 
 
@@ -1394,6 +1430,57 @@ def fetch_all_vehicles(max_vehicles: int | None = None, copy_images: bool = True
     print(f"\nFetch complete: {success_count} succeeded, {fail_count} failed")
     if copy_images:
         print(f"Images copied: {image_copied}")
+
+    # --- Phase 2: Scan tankmodels directory for unreleased vehicles ---
+    from datetime import datetime
+
+    statshark_ids = {entry.get('id') for entry in ground_vehicles if isinstance(entry.get('id'), str)}
+    wpcost = load_wpcost_data()
+    unittags = load_unittags_data()
+
+    now = datetime.now()
+
+    def is_unreleased(vid: str) -> bool:
+        """Check if vehicle is unreleased using unittags releaseDate.
+        - Has releaseDate in the future → unreleased
+        - Has releaseDate in the past → already released (skip)
+        - No releaseDate → unknown, not included
+        """
+        tag = unittags.get(vid, {})
+        release_str = tag.get('releaseDate')
+        if release_str:
+            try:
+                release_date = datetime.strptime(release_str, '%Y-%m-%d %H:%M:%S')
+                return release_date > now
+            except ValueError:
+                pass
+        # No releaseDate → can't confirm unreleased, skip
+        return False
+
+    all_tankmodel_ids = [
+        p.stem for p in TANKMODELS_PATH.glob("*.blkx")
+        if p.stem in wpcost
+        and p.stem not in statshark_ids
+        and is_unreleased(p.stem)
+    ]
+    print(f"\nScanning tankmodels for unreleased vehicles... found {len(all_tankmodel_ids)} candidates")
+
+    unreleased_count = 0
+    unreleased_fail = 0
+    for i, vid in enumerate(all_tankmodel_ids, 1):
+        if i % 50 == 0:
+            print(f"[{i}/{len(all_tankmodel_ids)}] Processing unreleased... ({unreleased_count} found)")
+
+        vehicle_data = fetch_vehicle_performance(vid, copy_images=copy_images)
+        if vehicle_data:
+            vehicle_data.unreleased = True
+            vehicles.append(vehicle_data)
+            unreleased_count += 1
+        else:
+            unreleased_fail += 1
+
+    print(f"Unreleased vehicles: {unreleased_count} succeeded, {unreleased_fail} failed")
+
     return vehicles
 
 
@@ -1437,6 +1524,10 @@ def vehicle_data_to_dict(v: VehicleData) -> dict[str, Any]:
         "imageUrl": v.image_url,
         "source": v.source,
     }
+    if v.unreleased:
+        result["unreleased"] = True
+    if v.release_date:
+        result["releaseDate"] = v.release_date
     return result
 
 

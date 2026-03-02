@@ -61,6 +61,8 @@ interface DatamineEntry {
   };
   imageUrl: string;
   source: string;
+  unreleased?: boolean;
+  releaseDate?: string;
 }
 
 // Cache for loaded data
@@ -180,6 +182,8 @@ function mergeVehicleData(stats: StatSharkEntry[], datamine: DatamineEntry[]): V
         expPerSpawn: statsEntry.exp_per_spawn,
       } : undefined,
       imageUrl: datamineEntry.imageUrl,
+      unreleased: datamineEntry.unreleased ?? false,
+      releaseDate: datamineEntry.releaseDate,
     };
     
     vehicles.push(vehicle);

@@ -12,6 +12,7 @@ export default function HomePage() {
   const [selectedNations, setSelectedNations] = useState<Nation[]>([]);
   const [brRange, setBrRange] = useState<[number, number]>([1.0, 12.7]);
   const [selectedType, setSelectedType] = useState<VehicleType | 'all'>('all');
+  const [showUnreleased, setShowUnreleased] = useState(false);
 
   useEffect(() => {
     loadVehicles().then(data => {
@@ -26,9 +27,10 @@ export default function HomePage() {
       const nationMatch = selectedNations.length === 0 || selectedNations.includes(vehicle.nation);
       const brMatch = vehicle.battleRating >= brRange[0] && vehicle.battleRating <= brRange[1];
       const typeMatch = selectedType === 'all' || vehicle.vehicleType === selectedType;
-      return nationMatch && brMatch && typeMatch;
+      const unreleasedMatch = showUnreleased || !vehicle.unreleased;
+      return nationMatch && brMatch && typeMatch && unreleasedMatch;
     });
-  }, [vehicles, selectedNations, brRange, selectedType]);
+  }, [vehicles, selectedNations, brRange, selectedType, showUnreleased]);
 
   return (
     <Box sx={{ minHeight: '100vh', backgroundColor: '#f5f5f5' }}>
@@ -89,6 +91,8 @@ export default function HomePage() {
           onBrRangeChange={setBrRange}
           selectedType={selectedType}
           onTypeChange={setSelectedType}
+          showUnreleased={showUnreleased}
+          onShowUnreleasedChange={setShowUnreleased}
         />
 
         {/* Results Count */}

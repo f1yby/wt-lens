@@ -3,6 +3,8 @@ import {
   Box,
   Typography,
   ToggleButton,
+  Switch,
+  FormControlLabel,
 } from '@mui/material';
 import { useState, useCallback, useRef, useEffect } from 'react';
 import { NATIONS, BATTLE_RATINGS, type Nation, type VehicleType } from '../types';
@@ -14,6 +16,8 @@ interface VehicleFilterProps {
   onBrRangeChange: (range: [number, number]) => void;
   selectedType: VehicleType | 'all';
   onTypeChange: (type: VehicleType | 'all') => void;
+  showUnreleased: boolean;
+  onShowUnreleasedChange: (show: boolean) => void;
 }
 
 const VEHICLE_TYPES: { value: VehicleType | 'all'; label: string }[] = [
@@ -32,6 +36,8 @@ export default function VehicleFilter({
   onBrRangeChange,
   selectedType,
   onTypeChange,
+  showUnreleased,
+  onShowUnreleasedChange,
 }: VehicleFilterProps) {
   const handleNationClick = (nationId: Nation) => {
     // 未选择任何国家时 -> 单选该国家
@@ -191,6 +197,32 @@ export default function VehicleFilter({
             </ToggleButton>
           ))}
         </Box>
+      </Box>
+
+      {/* Show Unreleased Toggle */}
+      <Box sx={{ mt: 2 }}>
+        <FormControlLabel
+          control={
+            <Switch
+              checked={showUnreleased}
+              onChange={(e) => onShowUnreleasedChange(e.target.checked)}
+              size="small"
+              sx={{
+                '& .MuiSwitch-switchBase.Mui-checked': {
+                  color: '#f97316',
+                },
+                '& .MuiSwitch-switchBase.Mui-checked + .MuiSwitch-track': {
+                  backgroundColor: '#f97316',
+                },
+              }}
+            />
+          }
+          label={
+            <Typography variant="body2" sx={{ color: '#525252', fontSize: '0.85rem' }}>
+              显示未实装载具
+            </Typography>
+          }
+        />
       </Box>
     </Paper>
   );
