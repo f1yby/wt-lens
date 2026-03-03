@@ -20,7 +20,7 @@ import GameModeSelector from '../components/GameModeSelector';
 
 import { loadVehicles, getVehicleStatsByMode } from '../data/vehicles';
 import { VEHICLE_TYPE_LABELS, BATTLE_RATINGS, ECONOMIC_TYPE_GRADIENTS } from '../types';
-import type { Vehicle, MetricType, VehicleType, Ammunition, GameMode } from '../types';
+import type { Vehicle, MetricType, VehicleType, GroundVehicleType, Ammunition, GameMode } from '../types';
 import { getVehicleImagePath, getFlagImagePath } from '../utils/paths';
 import { getBRGradientColor } from '../utils/chart';
 import { getInitialGameMode, saveGameModeToStorage, updateURLWithGameMode, getWinRateColor } from '../utils/gameMode';
@@ -1073,7 +1073,7 @@ export default function VehicleDetailPage() {
         </Paper>
 
         <Typography variant="body2" sx={{ color: '#737373', mb: 2 }}>
-          展示 BR {effectiveBrRange[0].toFixed(1)} - {effectiveBrRange[1].toFixed(1)} 范围内{selectedTypes.length > 0 ? selectedTypes.map(t => VEHICLE_TYPE_LABELS[t]).join('、') : '全部载具'}的指标对比，橙色星形标记当前载具位置
+          展示 BR {effectiveBrRange[0].toFixed(1)} - {effectiveBrRange[1].toFixed(1)} 范围内{selectedTypes.length > 0 ? selectedTypes.map(t => VEHICLE_TYPE_LABELS[t as GroundVehicleType]).join('、') : '全部载具'}的指标对比，橙色星形标记当前载具位置
         </Typography>
 
         <Grid container spacing={2}>
