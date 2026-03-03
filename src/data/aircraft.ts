@@ -1,0 +1,248 @@
+import type { AircraftVehicle, AircraftType, VehicleStats, GameMode } from '../types';
+
+/**
+ * Clean aircraft name: only remove zero-width spaces.
+ * Keep special WT symbols (␗, ▄, etc.) - they are rendered via WTSymbols font.
+ */
+function cleanAircraftName(name: string): string {
+  if (!name) return name;
+  return name.replace(/\u200b/g, '');
+}
+
+// Raw data types from JSON
+interface StatSharkEntry {
+  id: string;
+  name: string;
+  mode: 'arcade' | 'historical' | 'simulation';
+  battles: number;
+  win_rate: number;
+  avg_kills_per_spawn: number;
+  exp_per_spawn?: number;
+  rank?: number;
+  br?: number;
+}
+
+interface AircraftEntry {
+  id: string;
+  name: string;
+  localizedName: string;
+  nation: string;
+  rank: number;
+  battleRating: number;
+  aircraftType: AircraftType;
+  economicType: string;
+  imageUrl: string;
+  unreleased?: boolean;
+  releaseDate?: string;
+}
+
+// Cache for loaded data
+let statsData: StatSharkEntry[] | null = null;
+let aircraftData: AircraftEntry[] | null = null;
+let mergedAircraft: AircraftVehicle[] | null = null;
+
+/**
+ * Load stats data from JSON
+ */
+async function loadStatsData(): Promise<StatSharkEntry[]> {
+  if (statsData) return statsData;
+  const response = await fetch('/wt-lens/data/stats.json');
+  statsData = await response.json();
+  return statsData!;
+}
+
+/**
+ * Load aircraft data from JSON
+ */
+async function loadAircraftData(): Promise<AircraftEntry[]> {
+  if (aircraftData) return aircraftData;
+  const response = await fetch('/wt-lens/data/aircraft.json');
+  aircraftData = await response.json();
+  return aircraftData!;
+}
+
+/**
+ * Build StatShark stats map grouped by game mode
+ */
+function buildStatsMapByMode(stats: StatSharkEntry[]): Map<string, Record<GameMode, StatSharkEntry | undefined>> {
+  const statsMap = new Map<string, Record<GameMode, StatSharkEntry | undefined>>();
+
+  for (const entry of stats) {
+    const mode = entry.mode as GameMode;
+    if (!statsMap.has(entry.id)) {
+      statsMap.set(entry.id, { arcade: undefined, historical: undefined, simulation: undefined });
+    }
+    const modeRecord = statsMap.get(entry.id)!;
+    modeRecord[mode] = entry;
+  }
+
+  return statsMap;
+}
+
+/**
+ * Build aircraft data map
+ */
+function buildAircraftMap(aircraft: AircraftEntry[]): Map<string, AircraftEntry> {
+  const aircraftMap = new Map<string, AircraftEntry>();
+  
+  for (const entry of aircraft) {
+    aircraftMap.set(entry.id, entry);
+  }
+  
+  return aircraftMap;
+}
+
+/**
+ * Convert StatShark entry to VehicleStats
+ */
+function convertToVehicleStats(entry: StatSharkEntry | undefined): VehicleStats | undefined {
+  if (!entry) return undefined;
+  return {
+    battles: entry.battles,
+    winRate: entry.win_rate,
+    killPerSpawn: entry.avg_kills_per_spawn,
+    expPerSpawn: entry.exp_per_spawn,
+  };
+}
+
+/**
+ * Merge StatShark and aircraft data by vehicle ID
+ */
+function mergeAircraftData(stats: StatSharkEntry[], aircraft: AircraftEntry[]): AircraftVehicle[] {
+  const statsMapByMode = buildStatsMapByMode(stats);
+  const aircraftMap = buildAircraftMap(aircraft);
+
+  // Get all unique aircraft IDs
+  const allIds = new Set([...statsMapByMode.keys(), ...aircraftMap.keys()]);
+
+  const aircraftList: AircraftVehicle[] = [];
+
+  for (const id of allIds) {
+    const statsByMode = statsMapByMode.get(id);
+    const aircraftEntry = aircraftMap.get(id);
+
+    // Skip if no aircraft data (we need basic info)
+    if (!aircraftEntry) continue;
+
+    // Build stats by mode record
+    const statsByModeRecord: Record<GameMode, VehicleStats | undefined> = {
+      arcade: convertToVehicleStats(statsByMode?.arcade),
+      historical: convertToVehicleStats(statsByMode?.historical),
+      simulation: convertToVehicleStats(statsByMode?.simulation),
+    };
+
+    // Use historical mode as default stats for backward compatibility
+    const defaultStats = statsByModeRecord.historical;
+
+    const aircraftVehicle: AircraftVehicle = {
+      id,
+      name: aircraftEntry.name,
+      localizedName: cleanAircraftName(aircraftEntry.localizedName),
+      nation: aircraftEntry.nation as AircraftVehicle['nation'],
+      rank: defaultStats ? (statsByMode?.historical?.rank ?? aircraftEntry.rank ?? 1) : (aircraftEntry.rank ?? 1),
+      battleRating: defaultStats ? (statsByMode?.historical?.br ?? aircraftEntry.battleRating ?? 1.0) : (aircraftEntry.battleRating ?? 1.0),
+      aircraftType: aircraftEntry.aircraftType as AircraftType,
+      economicType: (aircraftEntry.economicType as AircraftVehicle['economicType']) ?? 'regular',
+      // Phase 1: No performance data from datamine
+      performance: undefined,
+      // Backward compatibility: use historical mode as default
+      stats: defaultStats,
+      // New: stats broken down by game mode
+      statsByMode: statsByModeRecord,
+      imageUrl: aircraftEntry.imageUrl,
+      unreleased: aircraftEntry.unreleased ?? false,
+      releaseDate: aircraftEntry.releaseDate,
+    };
+
+    aircraftList.push(aircraftVehicle);
+  }
+
+  return aircraftList;
+}
+
+/**
+ * Load all aircraft data (async)
+ */
+export async function loadAircraft(): Promise<AircraftVehicle[]> {
+  if (mergedAircraft) return mergedAircraft;
+
+  const [stats, aircraft] = await Promise.all([
+    loadStatsData(),
+    loadAircraftData(),
+  ]);
+
+  mergedAircraft = mergeAircraftData(stats, aircraft);
+  return mergedAircraft;
+}
+
+/**
+ * Get aircraft stats for a specific game mode
+ * Returns the stats for the given mode, or falls back to default stats
+ */
+export function getAircraftStatsByMode(aircraft: AircraftVehicle, mode: GameMode): VehicleStats | undefined {
+  // First try to get mode-specific stats
+  if (aircraft.statsByMode?.[mode]) {
+    return aircraft.statsByMode[mode];
+  }
+  // Fall back to default stats (historical mode for backward compatibility)
+  return aircraft.stats;
+}
+
+/**
+ * Filter aircraft by various criteria
+ */
+export function filterAircraft(
+  aircraft: AircraftVehicle[],
+  options: {
+    nations?: string[];
+    minBR?: number;
+    maxBR?: number;
+    aircraftTypes?: AircraftType[];
+    economicTypes?: string[];
+  }
+): AircraftVehicle[] {
+  return aircraft.filter(a => {
+    // Filter by nation
+    if (options.nations?.length && !options.nations.includes(a.nation)) {
+      return false;
+    }
+
+    // Filter by BR range
+    if (options.minBR !== undefined && a.battleRating < options.minBR) {
+      return false;
+    }
+    if (options.maxBR !== undefined && a.battleRating > options.maxBR) {
+      return false;
+    }
+
+    // Filter by aircraft type
+    if (options.aircraftTypes?.length && !options.aircraftTypes.includes(a.aircraftType)) {
+      return false;
+    }
+
+    // Filter by economic type
+    if (options.economicTypes?.length && !options.economicTypes.includes(a.economicType)) {
+      return false;
+    }
+
+    return true;
+  });
+}
+
+/**
+ * Sort aircraft by BR and then by name
+ */
+export function sortAircraft(aircraft: AircraftVehicle[]): AircraftVehicle[] {
+  return [...aircraft].sort((a, b) => {
+    // Sort by BR first
+    if (a.battleRating !== b.battleRating) {
+      return a.battleRating - b.battleRating;
+    }
+    // Then by nation
+    if (a.nation !== b.nation) {
+      return a.nation.localeCompare(b.nation);
+    }
+    // Finally by localized name
+    return a.localizedName.localeCompare(b.localizedName);
+  });
+}

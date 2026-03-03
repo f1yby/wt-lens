@@ -1,0 +1,120 @@
+import { useState, useMemo, useEffect } from 'react';
+import { useSearchParams } from 'react-router-dom';
+import { Container, Typography, Box, CircularProgress } from '@mui/material';
+import Navbar from '../components/Navbar';
+import VehicleFilter from '../components/VehicleFilter';
+import type { TypeOption } from '../components/VehicleFilter';
+import ShipTechTree from '../components/ShipTechTree';
+import GameModeSelector from '../components/GameModeSelector';
+import { loadShips } from '../data/ships';
+import type { Nation, ShipType, ShipVehicle, GameMode } from '../types';
+import { SHIP_TYPE_LABELS } from '../types';
+import { getInitialGameMode, saveGameModeToStorage, updateURLWithGameMode } from '../utils/gameMode';
+
+const SHIP_TYPES: TypeOption<ShipType>[] = [
+  { value: 'all', label: '全部' },
+  { value: 'destroyer', label: '驱逐舰' },
+  { value: 'cruiser', label: '巡洋舰' },
+  { value: 'torpedo_boat', label: '鱼雷艇' },
+  { value: 'submarine_chaser', label: '猎潜艇' },
+  { value: 'barge', label: '登陆艇/驳船' },
+  { value: 'ship', label: '通用舰船' },
+];
+
+export default function ShipPage() {
+  const [searchParams, setSearchParams] = useSearchParams();
+  const [ships, setShips] = useState<ShipVehicle[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [selectedNations, setSelectedNations] = useState<Nation[]>([]);
+  const [brRange, setBrRange] = useState<[number, number]>([1.0, 12.7]);
+  const [selectedType, setSelectedType] = useState<ShipType | 'all'>('all');
+  const [showUnreleased, setShowUnreleased] = useState(false);
+
+  // Initialize game mode from URL or storage
+  const [gameMode, setGameMode] = useState<GameMode>(() =>
+    getInitialGameMode(searchParams)
+  );
+
+  // Handle game mode change
+  const handleGameModeChange = (mode: GameMode) => {
+    setGameMode(mode);
+    saveGameModeToStorage(mode);
+    updateURLWithGameMode(searchParams, setSearchParams, mode);
+  };
+
+  // Sync game mode from URL on mount
+  useEffect(() => {
+    const urlMode = searchParams.get('mode') as GameMode | null;
+    if (urlMode && urlMode !== gameMode) {
+      setGameMode(urlMode);
+    }
+  }, [searchParams]);
+
+  useEffect(() => {
+    loadShips().then(data => {
+      setShips(data);
+      setLoading(false);
+    });
+  }, []);
+
+  const filteredShips = useMemo(() => {
+    return ships.filter(ship => {
+      const nationMatch = selectedNations.length === 0 || selectedNations.includes(ship.nation);
+      const brMatch = ship.battleRating >= brRange[0] && ship.battleRating <= brRange[1];
+      const typeMatch = selectedType === 'all' || ship.shipType === selectedType;
+      const unreleasedMatch = showUnreleased || !ship.unreleased;
+      return nationMatch && brMatch && typeMatch && unreleasedMatch;
+    });
+  }, [ships, selectedNations, brRange, selectedType, showUnreleased]);
+
+  return (
+    <Box sx={{ minHeight: '100vh', backgroundColor: '#f5f5f5' }}>
+      <Navbar />
+
+      {/* Main Content */}
+      <Container maxWidth="xl" sx={{ pt: 12, pb: 4 }}>
+        <GameModeSelector
+          currentMode={gameMode}
+          onModeChange={handleGameModeChange}
+        />
+
+        <VehicleFilter
+          selectedNations={selectedNations}
+          onNationsChange={setSelectedNations}
+          brRange={brRange}
+          onBrRangeChange={setBrRange}
+          selectedType={selectedType}
+          onTypeChange={setSelectedType}
+          showUnreleased={showUnreleased}
+          onShowUnreleasedChange={setShowUnreleased}
+          typeOptions={SHIP_TYPES}
+        />
+
+        {/* Results Count */}
+        <Box sx={{ mb: 2, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+          <Typography variant="body2" sx={{ color: '#737373' }}>
+            {loading ? '加载中...' : `显示 ${filteredShips.length} 艘舰船`}
+          </Typography>
+        </Box>
+
+        {/* Ship Tech Tree Grid */}
+        {loading ? (
+          <Box sx={{ display: 'flex', justifyContent: 'center', py: 8 }}>
+            <CircularProgress />
+          </Box>
+        ) : (
+          <ShipTechTree ships={filteredShips} gameMode={gameMode} />
+        )}
+      </Container>
+
+      {/* Footer */}
+      <Box sx={{ borderTop: '1px solid #262626', py: 3, mt: 4 }}>
+        <Container maxWidth="xl">
+          <Typography variant="caption" sx={{ color: '#525252', textAlign: 'center', display: 'block' }}>
+            数据来源: StatShark API & War Thunder Datamine | 仅供学习交流使用
+          </Typography>
+        </Container>
+      </Box>
+    </Box>
+  );
+}

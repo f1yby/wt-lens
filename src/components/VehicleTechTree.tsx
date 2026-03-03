@@ -1,18 +1,64 @@
 import { Box, Typography, Paper } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
-import type { Vehicle, GameMode } from '../types';
+import type { Vehicle, AircraftVehicle, ShipVehicle, GameMode, VehicleStats, EconomicType } from '../types';
 import { BATTLE_RATINGS } from '../types';
-import { getVehicleImagePath, getFlagImagePath } from '../utils/paths';
+import { getVehicleImagePath, getAircraftImagePath, getShipImagePath, getFlagImagePath } from '../utils/paths';
 import { getVehicleStatsByMode } from '../data/vehicles';
+import { getAircraftStatsByMode } from '../data/aircraft';
+import { getShipStatsByMode } from '../data/ships';
 import { getWinRateColor } from '../utils/gameMode';
 
-interface VehicleTechTreeProps {
-  vehicles: Vehicle[];
-  gameMode?: GameMode;
+/** Common fields shared by Vehicle and AircraftVehicle for the tech tree */
+interface TechTreeItem {
+  id: string;
+  localizedName: string;
+  nation: string;
+  battleRating: number;
+  economicType: EconomicType;
+  unreleased?: boolean;
 }
 
-export default function VehicleTechTree({ vehicles, gameMode = 'historical' }: VehicleTechTreeProps) {
+interface VehicleTechTreeProps<T extends TechTreeItem> {
+  vehicles: T[];
+  gameMode?: GameMode;
+  /** Get image path for the item */
+  getImagePath?: (item: T) => string;
+  /** Get navigation path for click */
+  getNavPath?: (item: T) => string;
+  /** Get stats for the current game mode */
+  getStats?: (item: T, mode: GameMode) => VehicleStats | undefined;
+  /** Empty state text */
+  emptyText?: string;
+}
+
+export default function VehicleTechTree<T extends TechTreeItem>({
+  vehicles,
+  gameMode = 'historical',
+  getImagePath,
+  getNavPath,
+  getStats,
+  emptyText = '没有找到符合条件的载具',
+}: VehicleTechTreeProps<T>) {
   const navigate = useNavigate();
+
+  // Resolve default functions based on data type
+  const resolveImagePath = getImagePath ?? ((item: T) => {
+    if ('shipType' in item) return getShipImagePath(item.id);
+    if ('aircraftType' in item) return getAircraftImagePath(item.id);
+    return getVehicleImagePath(item.id);
+  });
+
+  const resolveNavPath = getNavPath ?? ((item: T) => {
+    if ('shipType' in item) return `/ship/${item.id}`;
+    if ('aircraftType' in item) return `/aircraft/${item.id}`;
+    return `/vehicle/${item.id}`;
+  });
+
+  const resolveStats = getStats ?? ((item: T, mode: GameMode) => {
+    if ('shipType' in item) return getShipStatsByMode(item as unknown as ShipVehicle, mode);
+    if ('aircraftType' in item) return getAircraftStatsByMode(item as unknown as AircraftVehicle, mode);
+    return getVehicleStatsByMode(item as unknown as Vehicle, mode);
+  });
 
   // 按 BR 分组载具
   const vehiclesByBR = BATTLE_RATINGS.reduce((acc, br) => {
@@ -21,7 +67,7 @@ export default function VehicleTechTree({ vehicles, gameMode = 'historical' }: V
       acc[br] = brVehicles;
     }
     return acc;
-  }, {} as Record<number, Vehicle[]>);
+  }, {} as Record<number, T[]>);
 
   const brList = Object.keys(vehiclesByBR)
     .map(Number)
@@ -81,25 +127,24 @@ export default function VehicleTechTree({ vehicles, gameMode = 'historical' }: V
               }}
             >
               {vehiclesByBR[br].map(vehicle => {
-                const modeStats = getVehicleStatsByMode(vehicle, gameMode);
+                const modeStats = resolveStats(vehicle, gameMode);
                 const hasStats = modeStats && modeStats.battles > 100;
 
-                // 根据经济类型设置柔和的背景色
                 const getEconomicBgColor = () => {
                   switch (vehicle.economicType) {
                     case 'premium':
-                      return '#fef9c3'; // 柔和金色
+                      return '#fef9c3';
                     case 'clan':
-                      return '#dcfce7'; // 柔和绿色
+                      return '#dcfce7';
                     default:
-                      return '#dbeafe'; // 柔和蓝色
+                      return '#dbeafe';
                   }
                 };
 
                 return (
                   <Box
                     key={vehicle.id}
-                    onClick={() => navigate(`/vehicle/${vehicle.id}`)}
+                    onClick={() => navigate(resolveNavPath(vehicle))}
                     sx={{
                       position: 'relative',
                       aspectRatio: '4/3',
@@ -163,7 +208,7 @@ export default function VehicleTechTree({ vehicles, gameMode = 'historical' }: V
                     {/* 载具图片 */}
                     <Box
                       component="img"
-                      src={getVehicleImagePath(vehicle.id)}
+                      src={resolveImagePath(vehicle)}
                       alt={vehicle.localizedName}
                       loading="lazy"
                       onError={(e) => {
@@ -234,7 +279,7 @@ export default function VehicleTechTree({ vehicles, gameMode = 'historical' }: V
         {brList.length === 0 && (
           <Box sx={{ textAlign: 'center', py: 8 }}>
             <Typography variant="h6" sx={{ color: '#737373' }}>
-              没有找到符合条件的载具
+              {emptyText}
             </Typography>
           </Box>
         )}

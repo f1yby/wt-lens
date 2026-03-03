@@ -6,20 +6,28 @@ import {
   FormControlLabel,
 } from '@mui/material';
 import { useState, useCallback, useRef, useEffect } from 'react';
-import { NATIONS, BATTLE_RATINGS, type Nation, type VehicleType } from '../types';
+import { NATIONS, BATTLE_RATINGS, type Nation } from '../types';
 
-interface VehicleFilterProps {
+/** Type option for the filter */
+export interface TypeOption<T extends string = string> {
+  value: T | 'all';
+  label: string;
+}
+
+interface VehicleFilterProps<T extends string = string> {
   selectedNations: Nation[];
   onNationsChange: (nations: Nation[]) => void;
   brRange: [number, number];
   onBrRangeChange: (range: [number, number]) => void;
-  selectedType: VehicleType | 'all';
-  onTypeChange: (type: VehicleType | 'all') => void;
+  selectedType: T | 'all';
+  onTypeChange: (type: T | 'all') => void;
   showUnreleased: boolean;
   onShowUnreleasedChange: (show: boolean) => void;
+  /** Custom type options. Defaults to ground vehicle types. */
+  typeOptions?: TypeOption<T>[];
 }
 
-const VEHICLE_TYPES: { value: VehicleType | 'all'; label: string }[] = [
+const GROUND_VEHICLE_TYPES: TypeOption[] = [
   { value: 'all', label: '全部' },
   { value: 'light_tank', label: '轻坦' },
   { value: 'medium_tank', label: '中坦' },
@@ -28,7 +36,7 @@ const VEHICLE_TYPES: { value: VehicleType | 'all'; label: string }[] = [
   { value: 'spaa', label: '防空' },
 ];
 
-export default function VehicleFilter({
+export default function VehicleFilter<T extends string = string>({
   selectedNations,
   onNationsChange,
   brRange,
@@ -37,7 +45,10 @@ export default function VehicleFilter({
   onTypeChange,
   showUnreleased,
   onShowUnreleasedChange,
-}: VehicleFilterProps) {
+  typeOptions,
+}: VehicleFilterProps<T>) {
+  const types = (typeOptions ?? GROUND_VEHICLE_TYPES) as TypeOption<T>[];
+
   const handleNationClick = (nationId: Nation) => {
     // 未选择任何国家时 -> 单选该国家
     if (selectedNations.length === 0) {
@@ -148,33 +159,37 @@ export default function VehicleFilter({
 
         <Box sx={{ width: '1px', height: 24, backgroundColor: '#e5e5e5', mx: 0.5 }} />
 
-        {VEHICLE_TYPES.map(type => (
-          <ToggleButton
-            key={type.value}
-            value={type.value}
-            selected={selectedType === type.value}
-            onChange={() => onTypeChange(type.value)}
-            size="small"
-            sx={{
-              px: 1.5,
-              py: 0.25,
-              height: 30,
-              borderRadius: 1,
-              border: '1px solid #d4d4d4',
-              backgroundColor: selectedType === type.value ? 'rgba(37, 99, 235, 0.1)' : '#ffffff',
-              color: selectedType === type.value ? '#2563eb' : '#525252',
-              textTransform: 'none',
-              fontSize: '0.8rem',
-              '&:hover': {
-                backgroundColor: selectedType === type.value ? 'rgba(37, 99, 235, 0.2)' : '#f5f5f5',
-              },
-            }}
-          >
-            {type.label}
-          </ToggleButton>
-        ))}
+        {types.length > 0 && (
+          <>
+            {types.map(type => (
+              <ToggleButton
+                key={type.value}
+                value={type.value}
+                selected={selectedType === type.value}
+                onChange={() => onTypeChange(type.value)}
+                size="small"
+                sx={{
+                  px: 1.5,
+                  py: 0.25,
+                  height: 30,
+                  borderRadius: 1,
+                  border: '1px solid #d4d4d4',
+                  backgroundColor: selectedType === type.value ? 'rgba(37, 99, 235, 0.1)' : '#ffffff',
+                  color: selectedType === type.value ? '#2563eb' : '#525252',
+                  textTransform: 'none',
+                  fontSize: '0.8rem',
+                  '&:hover': {
+                    backgroundColor: selectedType === type.value ? 'rgba(37, 99, 235, 0.2)' : '#f5f5f5',
+                  },
+                }}
+              >
+                {type.label}
+              </ToggleButton>
+            ))}
 
-        <Box sx={{ width: '1px', height: 24, backgroundColor: '#e5e5e5', mx: 0.5 }} />
+            <Box sx={{ width: '1px', height: 24, backgroundColor: '#e5e5e5', mx: 0.5 }} />
+          </>
+        )}
 
         <FormControlLabel
           control={

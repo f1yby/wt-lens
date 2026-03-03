@@ -1,5 +1,14 @@
 // Vehicle types for Ground RB
-export type VehicleType = 'light_tank' | 'medium_tank' | 'heavy_tank' | 'tank_destroyer' | 'spaa';
+export type GroundVehicleType = 'light_tank' | 'medium_tank' | 'heavy_tank' | 'tank_destroyer' | 'spaa';
+
+// Aircraft types for Air RB
+export type AircraftType = 'fighter' | 'bomber' | 'assault' | 'helicopter';
+
+// Ship types for Naval RB
+export type ShipType = 'destroyer' | 'cruiser' | 'torpedo_boat' | 'submarine_chaser' | 'barge' | 'ship';
+
+// Combined vehicle type (for backward compatibility)
+export type VehicleType = GroundVehicleType | AircraftType | ShipType;
 
 // Economic types for vehicles
 export type EconomicType = 'regular' | 'clan' | 'premium';
@@ -135,7 +144,7 @@ export interface Vehicle {
   nation: Nation;
   rank: number;
   battleRating: number;
-  vehicleType: VehicleType;
+  vehicleType: GroundVehicleType;
   economicType: EconomicType;
   // Performance metrics from datamine (some fields may be missing)
   performance: {
@@ -179,6 +188,59 @@ export interface Vehicle {
   // Whether this vehicle is unreleased (not yet in live server)
   unreleased?: boolean;
   // Release date from datamine (YYYY-MM-DD format)
+  releaseDate?: string;
+}
+
+/** Aircraft vehicle data (Phase 1: StatShark only, no performance data) */
+export interface AircraftVehicle {
+  id: string;
+  name: string;
+  localizedName: string;
+  nation: Nation;
+  rank: number;
+  battleRating: number;
+  aircraftType: AircraftType;
+  economicType: EconomicType;
+  // Phase 1: No performance data from datamine
+  // Phase 2: Will add aircraft-specific performance (speed, climb rate, etc.)
+  performance?: {
+    // Placeholder for future aircraft performance data
+    maxSpeed?: number;
+    climbRate?: number;
+    turnTime?: number;
+    maxAltitude?: number;
+  };
+  // Matchmaking stats from StatShark
+  stats?: VehicleStats;
+  statsByMode?: Record<GameMode, VehicleStats | undefined>;
+  imageUrl?: string;
+  unreleased?: boolean;
+  releaseDate?: string;
+}
+
+/** Ship vehicle data (Phase 1: StatShark only, no performance data) */
+export interface ShipVehicle {
+  id: string;
+  name: string;
+  localizedName: string;
+  nation: Nation;
+  rank: number;
+  battleRating: number;
+  shipType: ShipType;
+  economicType: EconomicType;
+  // Phase 1: No performance data from datamine
+  // Phase 2: Will add ship-specific performance (displacement, max speed, etc.)
+  performance?: {
+    // Placeholder for future ship performance data
+    displacement?: number;  // 排水量 (tons)
+    maxSpeed?: number;      // 最大航速 (km/h)
+    crewSize?: number;      // 船员数量
+  };
+  // Matchmaking stats from StatShark
+  stats?: VehicleStats;
+  statsByMode?: Record<GameMode, VehicleStats | undefined>;
+  imageUrl?: string;
+  unreleased?: boolean;
   releaseDate?: string;
 }
 
@@ -242,12 +304,28 @@ export const NATIONS: NationConfig[] = [
   { id: 'israel', name: 'Israel', nameZh: '以色列', color: '#84cc16', flagIcon: '🇮🇱', flagImage: '/wt-lens/images/flags/unit_tooltip/country_israel.webp' },
 ];
 
-export const VEHICLE_TYPE_LABELS: Record<VehicleType, string> = {
+export const VEHICLE_TYPE_LABELS: Record<GroundVehicleType, string> = {
   light_tank: '轻型坦克',
   medium_tank: '中型坦克',
   heavy_tank: '重型坦克',
   tank_destroyer: '坦克歼击车',
   spaa: '自行防空炮',
+};
+
+export const AIRCRAFT_TYPE_LABELS: Record<AircraftType, string> = {
+  fighter: '战斗机',
+  bomber: '轰炸机',
+  assault: '攻击机',
+  helicopter: '直升机',
+};
+
+export const SHIP_TYPE_LABELS: Record<ShipType, string> = {
+  destroyer: '驱逐舰',
+  cruiser: '巡洋舰',
+  torpedo_boat: '鱼雷艇',
+  submarine_chaser: '猎潜艇',
+  barge: '登陆艇/驳船',
+  ship: '通用舰船',
 };
 
 export const BATTLE_RATINGS = [

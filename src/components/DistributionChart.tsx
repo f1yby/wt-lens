@@ -21,6 +21,8 @@ interface DistributionChartProps {
   unit: string;
   /** Current vehicle BR and filter BR range for gradient legend labels */
   brInfo?: { vehicleBR: number; brMin: number; brMax: number };
+  /** Navigation path prefix for clicking a point, e.g. '/vehicle' or '/aircraft'. Defaults to '/vehicle'. */
+  navPrefix?: string;
 }
 
 /** Extended metric type including stats metrics */
@@ -78,7 +80,7 @@ interface ScatterShapeProps {
   payload?: ScatterPoint;
 }
 
-export default function DistributionChart({ data, title, unit, brInfo }: DistributionChartProps) {
+export default function DistributionChart({ data, title, unit, brInfo, navPrefix = '/vehicle' }: DistributionChartProps) {
   const color = METRIC_COLORS[data.metric as ExtendedMetricType] || '#4ade80';
   const navigate = useNavigate();
   const [hoveredPoint, setHoveredPoint] = useState<ScatterPoint | null>(null);
@@ -117,9 +119,9 @@ export default function DistributionChart({ data, title, unit, brInfo }: Distrib
   // Handle point click - navigate directly
   const handlePointClick = useCallback((point: ScatterPoint) => {
     if (point.vehicleId) {
-      navigate(`/vehicle/${point.vehicleId}`);
+      navigate(`${navPrefix}/${point.vehicleId}`);
     }
-  }, [navigate]);
+  }, [navigate, navPrefix]);
 
   // Calculate percentile
   const calculatePercentile = useCallback((value: number): number => {
