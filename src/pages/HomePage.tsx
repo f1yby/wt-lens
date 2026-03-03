@@ -1,16 +1,14 @@
 import { useState, useMemo, useEffect } from 'react';
-import { useSearchParams } from 'react-router-dom';
 import { Container, Typography, Box, CircularProgress } from '@mui/material';
 import Navbar from '../components/Navbar';
 import VehicleFilter from '../components/VehicleFilter';
 import VehicleTechTree from '../components/VehicleTechTree';
 import GameModeSelector from '../components/GameModeSelector';
 import { loadVehicles } from '../data/vehicles';
-import type { Nation, VehicleType, Vehicle, GameMode } from '../types';
-import { getInitialGameMode, saveGameModeToStorage, updateURLWithGameMode } from '../utils/gameMode';
+import type { Nation, VehicleType, Vehicle } from '../types';
+import { useGameMode } from '../hooks/useGameMode';
 
 export default function HomePage() {
-  const [searchParams, setSearchParams] = useSearchParams();
   const [vehicles, setVehicles] = useState<Vehicle[]>([]);
   const [loading, setLoading] = useState(true);
   const [selectedNations, setSelectedNations] = useState<Nation[]>([]);
@@ -18,25 +16,8 @@ export default function HomePage() {
   const [selectedType, setSelectedType] = useState<VehicleType | 'all'>('all');
   const [showUnreleased, setShowUnreleased] = useState(false);
 
-  // Initialize game mode from URL or storage
-  const [gameMode, setGameMode] = useState<GameMode>(() =>
-    getInitialGameMode(searchParams)
-  );
-
-  // Handle game mode change
-  const handleGameModeChange = (mode: GameMode) => {
-    setGameMode(mode);
-    saveGameModeToStorage(mode);
-    updateURLWithGameMode(searchParams, setSearchParams, mode);
-  };
-
-  // Sync game mode from URL on mount (in case URL was changed externally)
-  useEffect(() => {
-    const urlMode = searchParams.get('mode') as GameMode | null;
-    if (urlMode && urlMode !== gameMode) {
-      setGameMode(urlMode);
-    }
-  }, [searchParams]);
+  // Use custom hook for game mode management
+  const { gameMode, handleGameModeChange } = useGameMode();
 
   useEffect(() => {
     loadVehicles().then(data => {

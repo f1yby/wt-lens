@@ -1,5 +1,4 @@
 import { useState, useMemo, useEffect } from 'react';
-import { useSearchParams } from 'react-router-dom';
 import { Container, Typography, Box, CircularProgress } from '@mui/material';
 import Navbar from '../components/Navbar';
 import VehicleFilter from '../components/VehicleFilter';
@@ -7,8 +6,8 @@ import type { TypeOption } from '../components/VehicleFilter';
 import AircraftTechTree from '../components/AircraftTechTree';
 import GameModeSelector from '../components/GameModeSelector';
 import { loadAircraft } from '../data/aircraft';
-import type { Nation, AircraftType, AircraftVehicle, GameMode } from '../types';
-import { getInitialGameMode, saveGameModeToStorage, updateURLWithGameMode } from '../utils/gameMode';
+import type { Nation, AircraftType, AircraftVehicle } from '../types';
+import { useGameMode } from '../hooks/useGameMode';
 
 const AIRCRAFT_TYPES: TypeOption<AircraftType>[] = [
   { value: 'all', label: '全部' },
@@ -18,7 +17,6 @@ const AIRCRAFT_TYPES: TypeOption<AircraftType>[] = [
 ];
 
 export default function AircraftPage() {
-  const [searchParams, setSearchParams] = useSearchParams();
   const [aircraft, setAircraft] = useState<AircraftVehicle[]>([]);
   const [loading, setLoading] = useState(true);
   const [selectedNations, setSelectedNations] = useState<Nation[]>([]);
@@ -26,25 +24,8 @@ export default function AircraftPage() {
   const [selectedType, setSelectedType] = useState<AircraftType | 'all'>('all');
   const [showUnreleased, setShowUnreleased] = useState(false);
 
-  // Initialize game mode from URL or storage
-  const [gameMode, setGameMode] = useState<GameMode>(() =>
-    getInitialGameMode(searchParams)
-  );
-
-  // Handle game mode change
-  const handleGameModeChange = (mode: GameMode) => {
-    setGameMode(mode);
-    saveGameModeToStorage(mode);
-    updateURLWithGameMode(searchParams, setSearchParams, mode);
-  };
-
-  // Sync game mode from URL on mount
-  useEffect(() => {
-    const urlMode = searchParams.get('mode') as GameMode | null;
-    if (urlMode && urlMode !== gameMode) {
-      setGameMode(urlMode);
-    }
-  }, [searchParams]);
+  // Use custom hook for game mode management
+  const { gameMode, handleGameModeChange } = useGameMode();
 
   useEffect(() => {
     loadAircraft().then(data => {

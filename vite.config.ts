@@ -23,4 +23,15 @@ export default defineConfig({
     },
     chunkSizeWarningLimit: 1000, // 调整警告阈值（单位 KB）
   },
+  test: {
+    globals: true,
+    environment: 'jsdom',
+    include: ['src/**/*.{test,spec}.{ts,tsx}'],
+    coverage: {
+      provider: 'v8',
+      reporter: ['text', 'json', 'html'],
+      include: ['src/**/*.{ts,tsx}'],
+      exclude: ['src/**/*.test.{ts,tsx}', 'src/**/*.spec.{ts,tsx}', 'src/main.tsx'],
+    },
+  },
 })

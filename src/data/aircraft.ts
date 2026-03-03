@@ -1,26 +1,5 @@
 import type { AircraftVehicle, AircraftType, VehicleStats, GameMode } from '../types';
-
-/**
- * Clean aircraft name: only remove zero-width spaces.
- * Keep special WT symbols (␗, ▄, etc.) - they are rendered via WTSymbols font.
- */
-function cleanAircraftName(name: string): string {
-  if (!name) return name;
-  return name.replace(/\u200b/g, '');
-}
-
-// Raw data types from JSON
-interface StatSharkEntry {
-  id: string;
-  name: string;
-  mode: 'arcade' | 'historical' | 'simulation';
-  battles: number;
-  win_rate: number;
-  avg_kills_per_spawn: number;
-  exp_per_spawn?: number;
-  rank?: number;
-  br?: number;
-}
+import { StatSharkEntry, cleanName, buildStatsMapByMode, convertToVehicleStats } from './base';
 
 interface AircraftEntry {
   id: string;
@@ -62,24 +41,6 @@ async function loadAircraftData(): Promise<AircraftEntry[]> {
 }
 
 /**
- * Build StatShark stats map grouped by game mode
- */
-function buildStatsMapByMode(stats: StatSharkEntry[]): Map<string, Record<GameMode, StatSharkEntry | undefined>> {
-  const statsMap = new Map<string, Record<GameMode, StatSharkEntry | undefined>>();
-
-  for (const entry of stats) {
-    const mode = entry.mode as GameMode;
-    if (!statsMap.has(entry.id)) {
-      statsMap.set(entry.id, { arcade: undefined, historical: undefined, simulation: undefined });
-    }
-    const modeRecord = statsMap.get(entry.id)!;
-    modeRecord[mode] = entry;
-  }
-
-  return statsMap;
-}
-
-/**
  * Build aircraft data map
  */
 function buildAircraftMap(aircraft: AircraftEntry[]): Map<string, AircraftEntry> {
@@ -90,19 +51,6 @@ function buildAircraftMap(aircraft: AircraftEntry[]): Map<string, AircraftEntry>
   }
   
   return aircraftMap;
-}
-
-/**
- * Convert StatShark entry to VehicleStats
- */
-function convertToVehicleStats(entry: StatSharkEntry | undefined): VehicleStats | undefined {
-  if (!entry) return undefined;
-  return {
-    battles: entry.battles,
-    winRate: entry.win_rate,
-    killPerSpawn: entry.avg_kills_per_spawn,
-    expPerSpawn: entry.exp_per_spawn,
-  };
 }
 
 /**
@@ -137,7 +85,7 @@ function mergeAircraftData(stats: StatSharkEntry[], aircraft: AircraftEntry[]): 
     const aircraftVehicle: AircraftVehicle = {
       id,
       name: aircraftEntry.name,
-      localizedName: cleanAircraftName(aircraftEntry.localizedName),
+      localizedName: cleanName(aircraftEntry.localizedName),
       nation: aircraftEntry.nation as AircraftVehicle['nation'],
       rank: defaultStats ? (statsByMode?.historical?.rank ?? aircraftEntry.rank ?? 1) : (aircraftEntry.rank ?? 1),
       battleRating: defaultStats ? (statsByMode?.historical?.br ?? aircraftEntry.battleRating ?? 1.0) : (aircraftEntry.battleRating ?? 1.0),

@@ -1,27 +1,7 @@
 import type { Vehicle, Ammunition, MainGun, PenetrationData, GameMode, VehicleStats } from '../types';
-
-/**
- * Clean vehicle name: only remove zero-width spaces.
- * Keep special WT symbols (␗, ▄, etc.) - they are rendered via WTSymbols font.
- */
-function cleanVehicleName(name: string): string {
-  if (!name) return name;
-  return name.replace(/\u200b/g, '');
-}
+import { StatSharkEntry, cleanName, buildStatsMapByMode, convertToVehicleStats } from './base';
 
 // Raw data types from JSON
-interface StatSharkEntry {
-  id: string;
-  name: string;
-  mode: 'arcade' | 'historical' | 'simulation';
-  battles: number;
-  win_rate: number;
-  avg_kills_per_spawn: number;
-  exp_per_spawn?: number;
-  rank?: number;
-  br?: number;
-}
-
 interface DatamineEntry {
   id: string;
   name: string;
@@ -91,25 +71,6 @@ async function loadDatamineData(): Promise<DatamineEntry[]> {
 }
 
 /**
- * Build StatShark stats map grouped by game mode
- * Returns a map of vehicleId -> Record<GameMode, StatSharkEntry>
- */
-function buildStatsMapByMode(stats: StatSharkEntry[]): Map<string, Record<GameMode, StatSharkEntry | undefined>> {
-  const statsMap = new Map<string, Record<GameMode, StatSharkEntry | undefined>>();
-
-  for (const entry of stats) {
-    const mode = entry.mode as GameMode;
-    if (!statsMap.has(entry.id)) {
-      statsMap.set(entry.id, { arcade: undefined, historical: undefined, simulation: undefined });
-    }
-    const modeRecord = statsMap.get(entry.id)!;
-    modeRecord[mode] = entry;
-  }
-
-  return statsMap;
-}
-
-/**
  * Build Datamine performance map
  */
 function buildDatamineMap(datamine: DatamineEntry[]): Map<string, DatamineEntry> {
@@ -120,19 +81,6 @@ function buildDatamineMap(datamine: DatamineEntry[]): Map<string, DatamineEntry>
   }
   
   return datamineMap;
-}
-
-/**
- * Convert StatShark entry to VehicleStats
- */
-function convertToVehicleStats(entry: StatSharkEntry | undefined): VehicleStats | undefined {
-  if (!entry) return undefined;
-  return {
-    battles: entry.battles,
-    winRate: entry.win_rate,
-    killPerSpawn: entry.avg_kills_per_spawn,
-    expPerSpawn: entry.exp_per_spawn,
-  };
 }
 
 /**
@@ -167,7 +115,7 @@ function mergeVehicleData(stats: StatSharkEntry[], datamine: DatamineEntry[]): V
     const vehicle: Vehicle = {
       id,
       name: datamineEntry.name,
-      localizedName: cleanVehicleName(datamineEntry.localizedName),
+      localizedName: cleanName(datamineEntry.localizedName),
       nation: datamineEntry.nation as Vehicle['nation'],
       rank: defaultStats ? (statsByMode?.historical?.rank ?? datamineEntry.rank ?? 1) : (datamineEntry.rank ?? 1),
       battleRating: defaultStats ? (statsByMode?.historical?.br ?? datamineEntry.battle_rating ?? 1.0) : (datamineEntry.battle_rating ?? 1.0),

@@ -1,4 +1,4 @@
-import { useParams, useNavigate, useSearchParams, useLocation } from 'react-router-dom';
+import { useParams, useNavigate, useLocation } from 'react-router-dom';
 import { useState, useEffect, useMemo } from 'react';
 import {
   Container,
@@ -18,10 +18,11 @@ import { BRGridSelector } from '../components/VehicleFilter';
 import GameModeSelector from '../components/GameModeSelector';
 import { loadAircraft, getAircraftStatsByMode } from '../data/aircraft';
 import { AIRCRAFT_TYPE_LABELS, BATTLE_RATINGS, ECONOMIC_TYPE_GRADIENTS } from '../types';
-import type { AircraftVehicle, AircraftType, GameMode, MetricType, VehicleStats } from '../types';
+import type { AircraftVehicle, AircraftType, GameMode, MetricType } from '../types';
 import { getAircraftImagePath, getFlagImagePath } from '../utils/paths';
 import { getBRGradientColor } from '../utils/chart';
-import { getInitialGameMode, saveGameModeToStorage, updateURLWithGameMode, getWinRateColor } from '../utils/gameMode';
+import { getWinRateColor } from '../utils/gameMode';
+import { useGameMode } from '../hooks/useGameMode';
 
 /** Stats metric types for comparison */
 type StatsMetricType = 'killPerSpawn' | 'winRate' | 'expPerSpawn';
@@ -113,7 +114,6 @@ export default function AircraftDetailPage() {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
   const location = useLocation();
-  const [searchParams, setSearchParams] = useSearchParams();
 
   // Detect if this is a helicopter detail page based on the current route
   const isHelicopter = location.pathname.startsWith('/helicopter');
@@ -125,22 +125,8 @@ export default function AircraftDetailPage() {
   const [brRange, setBrRange] = useState<[number, number] | null>(null);
   const [typesInitialized, setTypesInitialized] = useState(false);
 
-  const [gameMode, setGameMode] = useState<GameMode>(() =>
-    getInitialGameMode(searchParams)
-  );
-
-  const handleGameModeChange = (mode: GameMode) => {
-    setGameMode(mode);
-    saveGameModeToStorage(mode);
-    updateURLWithGameMode(searchParams, setSearchParams, mode);
-  };
-
-  useEffect(() => {
-    const urlMode = searchParams.get('mode') as GameMode | null;
-    if (urlMode && urlMode !== gameMode) {
-      setGameMode(urlMode);
-    }
-  }, [searchParams]);
+  // Use custom hook for game mode management
+  const { gameMode, handleGameModeChange } = useGameMode();
 
   useEffect(() => {
     loadAircraft()

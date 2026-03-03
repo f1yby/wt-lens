@@ -1,4 +1,4 @@
-import { useParams, useNavigate, useSearchParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { useState, useEffect, useMemo } from 'react';
 import {
   Container,
@@ -23,7 +23,8 @@ import { VEHICLE_TYPE_LABELS, BATTLE_RATINGS, ECONOMIC_TYPE_GRADIENTS } from '..
 import type { Vehicle, MetricType, VehicleType, GroundVehicleType, Ammunition, GameMode } from '../types';
 import { getVehicleImagePath, getFlagImagePath } from '../utils/paths';
 import { getBRGradientColor } from '../utils/chart';
-import { getInitialGameMode, saveGameModeToStorage, updateURLWithGameMode, getWinRateColor } from '../utils/gameMode';
+import { getWinRateColor } from '../utils/gameMode';
+import { useGameMode } from '../hooks/useGameMode';
 
 /** Gets the numeric value for a given metric from vehicle performance data */
 function getMetricValue(vehicle: Vehicle, metric: MetricType): number {
@@ -543,32 +544,14 @@ function PenetrationStatItem({ penetration, ammunitions, vehicleName, onNavigate
 export default function VehicleDetailPage() {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
-  const [searchParams, setSearchParams] = useSearchParams();
   const [vehicles, setVehicles] = useState<Vehicle[]>([]);
   const [loading, setLoading] = useState(true);
   const [selectedTypes, setSelectedTypes] = useState<VehicleType[]>([]);
   const [brRange, setBrRange] = useState<[number, number] | null>(null);
   const [typesInitialized, setTypesInitialized] = useState(false);
 
-  // Initialize game mode from URL or storage
-  const [gameMode, setGameMode] = useState<GameMode>(() =>
-    getInitialGameMode(searchParams)
-  );
-
-  // Handle game mode change
-  const handleGameModeChange = (mode: GameMode) => {
-    setGameMode(mode);
-    saveGameModeToStorage(mode);
-    updateURLWithGameMode(searchParams, setSearchParams, mode);
-  };
-
-  // Sync game mode from URL on mount (in case URL was changed externally)
-  useEffect(() => {
-    const urlMode = searchParams.get('mode') as GameMode | null;
-    if (urlMode && urlMode !== gameMode) {
-      setGameMode(urlMode);
-    }
-  }, [searchParams]);
+  // Use custom hook for game mode management
+  const { gameMode, handleGameModeChange } = useGameMode();
 
   useEffect(() => {
     loadVehicles()

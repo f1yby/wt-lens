@@ -1,5 +1,4 @@
 import { useState, useMemo, useEffect } from 'react';
-import { useSearchParams } from 'react-router-dom';
 import { Container, Typography, Box, CircularProgress } from '@mui/material';
 import Navbar from '../components/Navbar';
 import VehicleFilter from '../components/VehicleFilter';
@@ -7,9 +6,8 @@ import type { TypeOption } from '../components/VehicleFilter';
 import ShipTechTree from '../components/ShipTechTree';
 import GameModeSelector from '../components/GameModeSelector';
 import { loadShips } from '../data/ships';
-import type { Nation, ShipType, ShipVehicle, GameMode } from '../types';
-import { SHIP_TYPE_LABELS } from '../types';
-import { getInitialGameMode, saveGameModeToStorage, updateURLWithGameMode } from '../utils/gameMode';
+import type { Nation, ShipType, ShipVehicle } from '../types';
+import { useGameMode } from '../hooks/useGameMode';
 
 const SHIP_TYPES: TypeOption<ShipType>[] = [
   { value: 'all', label: '全部' },
@@ -22,7 +20,6 @@ const SHIP_TYPES: TypeOption<ShipType>[] = [
 ];
 
 export default function ShipPage() {
-  const [searchParams, setSearchParams] = useSearchParams();
   const [ships, setShips] = useState<ShipVehicle[]>([]);
   const [loading, setLoading] = useState(true);
   const [selectedNations, setSelectedNations] = useState<Nation[]>([]);
@@ -30,25 +27,8 @@ export default function ShipPage() {
   const [selectedType, setSelectedType] = useState<ShipType | 'all'>('all');
   const [showUnreleased, setShowUnreleased] = useState(false);
 
-  // Initialize game mode from URL or storage
-  const [gameMode, setGameMode] = useState<GameMode>(() =>
-    getInitialGameMode(searchParams)
-  );
-
-  // Handle game mode change
-  const handleGameModeChange = (mode: GameMode) => {
-    setGameMode(mode);
-    saveGameModeToStorage(mode);
-    updateURLWithGameMode(searchParams, setSearchParams, mode);
-  };
-
-  // Sync game mode from URL on mount
-  useEffect(() => {
-    const urlMode = searchParams.get('mode') as GameMode | null;
-    if (urlMode && urlMode !== gameMode) {
-      setGameMode(urlMode);
-    }
-  }, [searchParams]);
+  // Use custom hook for game mode management
+  const { gameMode, handleGameModeChange } = useGameMode();
 
   useEffect(() => {
     loadShips().then(data => {

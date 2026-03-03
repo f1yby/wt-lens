@@ -1,26 +1,5 @@
 import type { ShipVehicle, ShipType, VehicleStats, GameMode } from '../types';
-
-/**
- * Clean ship name: only remove zero-width spaces.
- * Keep special WT symbols (␗, ▄, etc.) - they are rendered via WTSymbols font.
- */
-function cleanShipName(name: string): string {
-  if (!name) return name;
-  return name.replace(/\u200b/g, '');
-}
-
-// Raw data types from JSON
-interface StatSharkEntry {
-  id: string;
-  name: string;
-  mode: 'arcade' | 'historical' | 'simulation';
-  battles: number;
-  win_rate: number;
-  avg_kills_per_spawn: number;
-  exp_per_spawn?: number;
-  rank?: number;
-  br?: number;
-}
+import { StatSharkEntry, cleanName, buildStatsMapByMode, convertToVehicleStats } from './base';
 
 interface ShipEntry {
   id: string;
@@ -62,24 +41,6 @@ async function loadShipsData(): Promise<ShipEntry[]> {
 }
 
 /**
- * Build StatShark stats map grouped by game mode
- */
-function buildStatsMapByMode(stats: StatSharkEntry[]): Map<string, Record<GameMode, StatSharkEntry | undefined>> {
-  const statsMap = new Map<string, Record<GameMode, StatSharkEntry | undefined>>();
-
-  for (const entry of stats) {
-    const mode = entry.mode as GameMode;
-    if (!statsMap.has(entry.id)) {
-      statsMap.set(entry.id, { arcade: undefined, historical: undefined, simulation: undefined });
-    }
-    const modeRecord = statsMap.get(entry.id)!;
-    modeRecord[mode] = entry;
-  }
-
-  return statsMap;
-}
-
-/**
  * Build ship data map
  */
 function buildShipsMap(ships: ShipEntry[]): Map<string, ShipEntry> {
@@ -90,19 +51,6 @@ function buildShipsMap(ships: ShipEntry[]): Map<string, ShipEntry> {
   }
   
   return shipsMap;
-}
-
-/**
- * Convert StatShark entry to VehicleStats
- */
-function convertToVehicleStats(entry: StatSharkEntry | undefined): VehicleStats | undefined {
-  if (!entry) return undefined;
-  return {
-    battles: entry.battles,
-    winRate: entry.win_rate,
-    killPerSpawn: entry.avg_kills_per_spawn,
-    expPerSpawn: entry.exp_per_spawn,
-  };
 }
 
 /**
@@ -137,7 +85,7 @@ function mergeShipsData(stats: StatSharkEntry[], ships: ShipEntry[]): ShipVehicl
     const shipVehicle: ShipVehicle = {
       id,
       name: shipEntry.name,
-      localizedName: cleanShipName(shipEntry.localizedName),
+      localizedName: cleanName(shipEntry.localizedName),
       nation: shipEntry.nation as ShipVehicle['nation'],
       rank: defaultStats ? (statsByMode?.historical?.rank ?? shipEntry.rank ?? 1) : (shipEntry.rank ?? 1),
       battleRating: defaultStats ? (statsByMode?.historical?.br ?? shipEntry.battleRating ?? 1.0) : (shipEntry.battleRating ?? 1.0),
