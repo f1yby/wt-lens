@@ -1,4 +1,4 @@
-import type { Vehicle, Ammunition, MainGun, PenetrationData } from '../types';
+import type { Vehicle, Ammunition, MainGun, PenetrationData, GameMode, VehicleStats } from '../types';
 
 /**
  * Clean vehicle name: only remove zero-width spaces.
@@ -91,16 +91,19 @@ async function loadDatamineData(): Promise<DatamineEntry[]> {
 }
 
 /**
- * Build StatShark stats map, only use historical mode (历史模式)
+ * Build StatShark stats map grouped by game mode
+ * Returns a map of vehicleId -> Record<GameMode, StatSharkEntry>
  */
-function buildStatsMap(stats: StatSharkEntry[]): Map<string, StatSharkEntry> {
-  const statsMap = new Map<string, StatSharkEntry>();
+function buildStatsMapByMode(stats: StatSharkEntry[]): Map<string, Record<GameMode, StatSharkEntry | undefined>> {
+  const statsMap = new Map<string, Record<GameMode, StatSharkEntry | undefined>>();
 
   for (const entry of stats) {
-    // 只使用历史模式数据 (StatShark uses 'historical' not 'realistic')
-    if (entry.mode === 'historical') {
-      statsMap.set(entry.id, entry);
+    const mode = entry.mode as GameMode;
+    if (!statsMap.has(entry.id)) {
+      statsMap.set(entry.id, { arcade: undefined, historical: undefined, simulation: undefined });
     }
+    const modeRecord = statsMap.get(entry.id)!;
+    modeRecord[mode] = entry;
   }
 
   return statsMap;
@@ -120,31 +123,54 @@ function buildDatamineMap(datamine: DatamineEntry[]): Map<string, DatamineEntry>
 }
 
 /**
+ * Convert StatShark entry to VehicleStats
+ */
+function convertToVehicleStats(entry: StatSharkEntry | undefined): VehicleStats | undefined {
+  if (!entry) return undefined;
+  return {
+    battles: entry.battles,
+    winRate: entry.win_rate,
+    killPerSpawn: entry.avg_kills_per_spawn,
+    expPerSpawn: entry.exp_per_spawn,
+  };
+}
+
+/**
  * Merge StatShark and Datamine data by vehicle ID
  */
 function mergeVehicleData(stats: StatSharkEntry[], datamine: DatamineEntry[]): Vehicle[] {
-  const statsMap = buildStatsMap(stats);
+  const statsMapByMode = buildStatsMapByMode(stats);
   const datamineMap = buildDatamineMap(datamine);
-  
+
   // Get all unique vehicle IDs
-  const allIds = new Set([...statsMap.keys(), ...datamineMap.keys()]);
-  
+  const allIds = new Set([...statsMapByMode.keys(), ...datamineMap.keys()]);
+
   const vehicles: Vehicle[] = [];
-  
+
   for (const id of allIds) {
-    const statsEntry = statsMap.get(id);
+    const statsByMode = statsMapByMode.get(id);
     const datamineEntry = datamineMap.get(id);
-    
+
     // Skip if no datamine data (we need performance data)
     if (!datamineEntry) continue;
-    
+
+    // Build stats by mode record
+    const statsByModeRecord: Record<GameMode, VehicleStats | undefined> = {
+      arcade: convertToVehicleStats(statsByMode?.arcade),
+      historical: convertToVehicleStats(statsByMode?.historical),
+      simulation: convertToVehicleStats(statsByMode?.simulation),
+    };
+
+    // Use historical mode as default stats for backward compatibility
+    const defaultStats = statsByModeRecord.historical;
+
     const vehicle: Vehicle = {
       id,
       name: datamineEntry.name,
       localizedName: cleanVehicleName(datamineEntry.localizedName),
       nation: datamineEntry.nation as Vehicle['nation'],
-      rank: statsEntry?.rank ?? datamineEntry.rank ?? 1,
-      battleRating: statsEntry?.br ?? datamineEntry.battle_rating ?? 1.0,
+      rank: defaultStats ? (statsByMode?.historical?.rank ?? datamineEntry.rank ?? 1) : (datamineEntry.rank ?? 1),
+      battleRating: defaultStats ? (statsByMode?.historical?.br ?? datamineEntry.battle_rating ?? 1.0) : (datamineEntry.battle_rating ?? 1.0),
       vehicleType: datamineEntry.vehicle_type as Vehicle['vehicleType'],
       economicType: (datamineEntry.economic_type as Vehicle['economicType']) ?? 'regular',
       performance: {
@@ -175,20 +201,18 @@ function mergeVehicleData(stats: StatSharkEntry[], datamine: DatamineEntry[]): V
         penetrationData: datamineEntry.performance.penetrationData ?? undefined,
         autoLoader: datamineEntry.performance.autoLoader ?? undefined,
       },
-      stats: statsEntry ? {
-        battles: statsEntry.battles,
-        winRate: statsEntry.win_rate,
-        killPerSpawn: statsEntry.avg_kills_per_spawn,
-        expPerSpawn: statsEntry.exp_per_spawn,
-      } : undefined,
+      // Backward compatibility: use historical mode as default
+      stats: defaultStats,
+      // New: stats broken down by game mode
+      statsByMode: statsByModeRecord,
       imageUrl: datamineEntry.imageUrl,
       unreleased: datamineEntry.unreleased ?? false,
       releaseDate: datamineEntry.releaseDate,
     };
-    
+
     vehicles.push(vehicle);
   }
-  
+
   return vehicles;
 }
 
@@ -197,13 +221,26 @@ function mergeVehicleData(stats: StatSharkEntry[], datamine: DatamineEntry[]): V
  */
 export async function loadVehicles(): Promise<Vehicle[]> {
   if (mergedVehicles) return mergedVehicles;
-  
+
   const [stats, datamine] = await Promise.all([
     loadStatsData(),
     loadDatamineData(),
   ]);
-  
+
   mergedVehicles = mergeVehicleData(stats, datamine);
   return mergedVehicles;
+}
+
+/**
+ * Get vehicle stats for a specific game mode
+ * Returns the stats for the given mode, or falls back to default stats
+ */
+export function getVehicleStatsByMode(vehicle: Vehicle, mode: GameMode): VehicleStats | undefined {
+  // First try to get mode-specific stats
+  if (vehicle.statsByMode?.[mode]) {
+    return vehicle.statsByMode[mode];
+  }
+  // Fall back to default stats (historical mode for backward compatibility)
+  return vehicle.stats;
 }
 

@@ -1,14 +1,17 @@
 import { Box, Typography, Paper } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
-import type { Vehicle } from '../types';
+import type { Vehicle, GameMode } from '../types';
 import { BATTLE_RATINGS } from '../types';
 import { getVehicleImagePath, getFlagImagePath } from '../utils/paths';
+import { getVehicleStatsByMode } from '../data/vehicles';
+import { getWinRateColor } from '../utils/gameMode';
 
 interface VehicleTechTreeProps {
   vehicles: Vehicle[];
+  gameMode?: GameMode;
 }
 
-export default function VehicleTechTree({ vehicles }: VehicleTechTreeProps) {
+export default function VehicleTechTree({ vehicles, gameMode = 'historical' }: VehicleTechTreeProps) {
   const navigate = useNavigate();
 
   // 按 BR 分组载具
@@ -78,7 +81,8 @@ export default function VehicleTechTree({ vehicles }: VehicleTechTreeProps) {
               }}
             >
               {vehiclesByBR[br].map(vehicle => {
-                const hasStats = vehicle.stats && vehicle.stats.battles > 100;
+                const modeStats = getVehicleStatsByMode(vehicle, gameMode);
+                const hasStats = modeStats && modeStats.battles > 100;
 
                 // 根据经济类型设置柔和的背景色
                 const getEconomicBgColor = () => {
@@ -213,10 +217,10 @@ export default function VehicleTechTree({ vehicles }: VehicleTechTreeProps) {
                           variant="caption"
                           sx={{
                             fontSize: '0.6rem',
-                            color: vehicle.stats!.winRate > 50 ? '#4ade80' : vehicle.stats!.winRate < 48 ? '#ef4444' : '#facc15',
+                            color: getWinRateColor(modeStats!.winRate),
                           }}
                         >
-                          {vehicle.stats!.winRate.toFixed(1)}% · {vehicle.stats!.battles >= 1000 ? (vehicle.stats!.battles / 1000).toFixed(1) + 'k' : vehicle.stats!.battles}场
+                          {modeStats!.winRate.toFixed(1)}% · {modeStats!.battles >= 1000 ? (modeStats!.battles / 1000).toFixed(1) + 'k' : modeStats!.battles}场
                         </Typography>
                       )}
                     </Box>

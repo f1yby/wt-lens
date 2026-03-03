@@ -1,4 +1,4 @@
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate, useSearchParams } from 'react-router-dom';
 import { useState, useEffect, useMemo } from 'react';
 import {
   Container,
@@ -16,12 +16,14 @@ import Navbar from '../components/Navbar';
 import DistributionChart from '../components/DistributionChart';
 import StabilizerScatterChart from '../components/StabilizerScatterChart';
 import { BRGridSelector } from '../components/VehicleFilter';
+import GameModeSelector from '../components/GameModeSelector';
 
-import { loadVehicles } from '../data/vehicles';
+import { loadVehicles, getVehicleStatsByMode } from '../data/vehicles';
 import { VEHICLE_TYPE_LABELS, BATTLE_RATINGS, ECONOMIC_TYPE_GRADIENTS } from '../types';
-import type { Vehicle, MetricType, VehicleType, Ammunition } from '../types';
+import type { Vehicle, MetricType, VehicleType, Ammunition, GameMode } from '../types';
 import { getVehicleImagePath, getFlagImagePath } from '../utils/paths';
 import { getBRGradientColor } from '../utils/chart';
+import { getInitialGameMode, saveGameModeToStorage, updateURLWithGameMode, getWinRateColor } from '../utils/gameMode';
 
 /** Gets the numeric value for a given metric from vehicle performance data */
 function getMetricValue(vehicle: Vehicle, metric: MetricType): number {
@@ -111,23 +113,25 @@ function generateVehicleComparisonData(vehicleId: string, metric: MetricType, al
 /** Stats metric types for comparison */
 type StatsMetricType = 'killPerSpawn' | 'winRate' | 'expPerSpawn';
 
-/** Gets the numeric value for a given stats metric */
-function getStatsMetricValue(vehicle: Vehicle, metric: StatsMetricType): number {
-  if (!vehicle.stats) return 0;
-  
+/** Gets the numeric value for a given stats metric for a specific game mode */
+function getStatsMetricValue(vehicle: Vehicle, metric: StatsMetricType, gameMode: GameMode): number {
+  const stats = getVehicleStatsByMode(vehicle, gameMode);
+  if (!stats) return 0;
+
   switch (metric) {
-    case 'killPerSpawn': return vehicle.stats.killPerSpawn;
-    case 'winRate': return vehicle.stats.winRate;
-    case 'expPerSpawn': return vehicle.stats.expPerSpawn ?? 0;
+    case 'killPerSpawn': return stats.killPerSpawn;
+    case 'winRate': return stats.winRate;
+    case 'expPerSpawn': return stats.expPerSpawn ?? 0;
     default: return 0;
   }
 }
 
 /** Generates scatter data for stats comparison charts (KR, winRate) */
 function generateStatsComparisonData(
-  vehicleId: string, 
-  metric: StatsMetricType, 
+  vehicleId: string,
+  metric: StatsMetricType,
   allVehicles: Vehicle[],
+  gameMode: GameMode,
   filter?: ComparisonFilter,
 ) {
   const vehicle = allVehicles.find(v => v.id === vehicleId);
@@ -137,17 +141,18 @@ function generateStatsComparisonData(
   const brMin = filter?.brMin ?? (targetBR - 1.0);
   const brMax = filter?.brMax ?? (targetBR + 1.0);
 
-  const value = getStatsMetricValue(vehicle, metric);
+  const value = getStatsMetricValue(vehicle, metric, gameMode);
 
   // Filter vehicles within BR range with valid stats data (always include current vehicle)
   const filteredVehicles = allVehicles.filter(v => {
+    const vStats = getVehicleStatsByMode(v, gameMode);
     // Always include current vehicle regardless of filters
     if (v.id === vehicleId) {
-      return v.stats && v.stats.battles > 0 && getStatsMetricValue(v, metric) > 0;
+      return vStats && vStats.battles > 0 && getStatsMetricValue(v, metric, gameMode) > 0;
     }
-    const metricValue = getStatsMetricValue(v, metric);
+    const metricValue = getStatsMetricValue(v, metric, gameMode);
     if (v.battleRating < brMin || v.battleRating > brMax) return false;
-    if (!v.stats || v.stats.battles <= 0 || metricValue <= 0) return false;
+    if (!vStats || vStats.battles <= 0 || metricValue <= 0) return false;
     if (filter?.vehicleTypes && filter.vehicleTypes.length > 0 && !filter.vehicleTypes.includes(v.vehicleType)) return false;
     return true;
   });
@@ -158,13 +163,14 @@ function generateStatsComparisonData(
   const upperSpan = Math.max(brMax - targetBR, 0.1);
 
   const bins = filteredVehicles.map((v) => {
+    const vStats = getVehicleStatsByMode(v, gameMode);
     const brDiff = parseFloat((v.battleRating - targetBR).toFixed(2));
     const isCurrent = v.id === vehicleId;
 
     return {
       range: v.localizedName,
-      metricValue: getStatsMetricValue(v, metric),
-      battles: v.stats?.battles ?? 0,
+      metricValue: getStatsMetricValue(v, metric, gameMode),
+      battles: vStats?.battles ?? 0,
       isCurrent,
       vehicleId: v.id,
       brDiff,
@@ -181,7 +187,7 @@ function generateStatsComparisonData(
     currentVehicleValue: value,
     allValues: filteredVehicles.map(v => ({
       vehicleId: v.id,
-      value: getStatsMetricValue(v, metric),
+      value: getStatsMetricValue(v, metric, gameMode),
     })),
   };
 }
@@ -537,11 +543,32 @@ function PenetrationStatItem({ penetration, ammunitions, vehicleName, onNavigate
 export default function VehicleDetailPage() {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
+  const [searchParams, setSearchParams] = useSearchParams();
   const [vehicles, setVehicles] = useState<Vehicle[]>([]);
   const [loading, setLoading] = useState(true);
   const [selectedTypes, setSelectedTypes] = useState<VehicleType[]>([]);
   const [brRange, setBrRange] = useState<[number, number] | null>(null);
   const [typesInitialized, setTypesInitialized] = useState(false);
+
+  // Initialize game mode from URL or storage
+  const [gameMode, setGameMode] = useState<GameMode>(() =>
+    getInitialGameMode(searchParams)
+  );
+
+  // Handle game mode change
+  const handleGameModeChange = (mode: GameMode) => {
+    setGameMode(mode);
+    saveGameModeToStorage(mode);
+    updateURLWithGameMode(searchParams, setSearchParams, mode);
+  };
+
+  // Sync game mode from URL on mount (in case URL was changed externally)
+  useEffect(() => {
+    const urlMode = searchParams.get('mode') as GameMode | null;
+    if (urlMode && urlMode !== gameMode) {
+      setGameMode(urlMode);
+    }
+  }, [searchParams]);
 
   useEffect(() => {
     loadVehicles()
@@ -604,11 +631,11 @@ export default function VehicleDetailPage() {
   const statsComparisons = useMemo(() => {
     if (!vehicle) return null;
     return {
-      killPerSpawn: generateStatsComparisonData(vehicle.id, 'killPerSpawn', vehicles, filter),
-      winRate: generateStatsComparisonData(vehicle.id, 'winRate', vehicles, filter),
-      expPerSpawn: generateStatsComparisonData(vehicle.id, 'expPerSpawn', vehicles, filter),
+      killPerSpawn: generateStatsComparisonData(vehicle.id, 'killPerSpawn', vehicles, gameMode, filter),
+      winRate: generateStatsComparisonData(vehicle.id, 'winRate', vehicles, gameMode, filter),
+      expPerSpawn: generateStatsComparisonData(vehicle.id, 'expPerSpawn', vehicles, gameMode, filter),
     };
-  }, [vehicle, vehicles, filter]);
+  }, [vehicle, vehicles, gameMode, filter]);
 
   const stabilizerComparisonVehicles = useMemo(() => {
     if (!vehicle) return [];
@@ -824,45 +851,48 @@ export default function VehicleDetailPage() {
               )}
 
               {/* Battle Stats */}
-              {vehicle.stats && (
-                <Box sx={{
-                  display: 'flex',
-                  gap: { xs: 2, sm: 3, md: 4 },
-                  justifyContent: { xs: 'center', md: 'flex-start' },
-                  flexWrap: 'wrap',
-                }}>
-                  {[
-                    { label: '总对局数', value: vehicle.stats.battles.toLocaleString(), color: '#fff' },
-                    {
-                      label: '胜率',
-                      value: `${vehicle.stats.winRate.toFixed(1)}%`,
-                      color: vehicle.stats.winRate > 50 ? '#86efac' : vehicle.stats.winRate < 48 ? '#fca5a5' : '#fde047',
-                    },
-                    { label: 'KR', value: (vehicle.stats.killPerSpawn ?? 0).toFixed(1), color: '#fff' },
-                    { label: 'BR', value: vehicle.battleRating.toFixed(1), color: '#86efac' },
-                  ].map((stat) => (
-                    <Box key={stat.label}>
-                      <Typography sx={{
-                        color: 'rgba(255,255,255,0.85)',
-                        fontSize: { xs: '0.6rem', sm: '0.65rem', md: '0.7rem' },
-                        fontWeight: 500,
-                        mb: 0.25,
-                        textShadow: '0 1px 2px rgba(0,0,0,0.3)',
-                      }}>
-                        {stat.label}
-                      </Typography>
-                      <Typography sx={{
-                        color: stat.color,
-                        fontWeight: 700,
-                        fontSize: { xs: '0.95rem', sm: '1.05rem', md: '1.2rem' },
-                        textShadow: '0 1px 3px rgba(0,0,0,0.4)',
-                      }}>
-                        {stat.value}
-                      </Typography>
-                    </Box>
-                  ))}
-                </Box>
-              )}
+              {(() => {
+                const modeStats = getVehicleStatsByMode(vehicle, gameMode);
+                return modeStats ? (
+                  <Box sx={{
+                    display: 'flex',
+                    gap: { xs: 2, sm: 3, md: 4 },
+                    justifyContent: { xs: 'center', md: 'flex-start' },
+                    flexWrap: 'wrap',
+                  }}>
+                    {[
+                      { label: '总对局数', value: modeStats.battles.toLocaleString(), color: '#fff' },
+                      {
+                        label: '胜率',
+                        value: `${modeStats.winRate.toFixed(1)}%`,
+                        color: getWinRateColor(modeStats.winRate),
+                      },
+                      { label: 'KPS', value: modeStats.killPerSpawn.toFixed(2), color: '#fff' },
+                      { label: 'BR', value: vehicle.battleRating.toFixed(1), color: '#86efac' },
+                    ].map((stat) => (
+                      <Box key={stat.label}>
+                        <Typography sx={{
+                          color: 'rgba(255,255,255,0.85)',
+                          fontSize: { xs: '0.6rem', sm: '0.65rem', md: '0.7rem' },
+                          fontWeight: 500,
+                          mb: 0.25,
+                          textShadow: '0 1px 2px rgba(0,0,0,0.3)',
+                        }}>
+                          {stat.label}
+                        </Typography>
+                        <Typography sx={{
+                          color: stat.color,
+                          fontWeight: 700,
+                          fontSize: { xs: '0.95rem', sm: '1.05rem', md: '1.2rem' },
+                          textShadow: '0 1px 3px rgba(0,0,0,0.4)',
+                        }}>
+                          {stat.value}
+                        </Typography>
+                      </Box>
+                    ))}
+                  </Box>
+                ) : null;
+              })()}
             </Box>
           </Box>
 
@@ -954,12 +984,21 @@ export default function VehicleDetailPage() {
               />
               <StatItem
                 icon={School}
-                value={vehicle.stats?.expPerSpawn ? Math.round(vehicle.stats.expPerSpawn).toLocaleString() : '-'}
+                value={(() => {
+                  const modeStats = getVehicleStatsByMode(vehicle, gameMode);
+                  return modeStats?.expPerSpawn ? Math.round(modeStats.expPerSpawn).toLocaleString() : '-';
+                })()}
                 label="每次重生经验"
               />
             </Box>
           </Box>
         </Paper>
+
+        {/* Game Mode Selector */}
+        <GameModeSelector
+          currentMode={gameMode}
+          onModeChange={handleGameModeChange}
+        />
 
         {/* Comparison Charts */}
         <Typography variant="h5" sx={{ color: '#171717', fontWeight: 600, mb: 2 }}>

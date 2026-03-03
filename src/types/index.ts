@@ -4,6 +4,17 @@ export type VehicleType = 'light_tank' | 'medium_tank' | 'heavy_tank' | 'tank_de
 // Economic types for vehicles
 export type EconomicType = 'regular' | 'clan' | 'premium';
 
+// Game modes for War Thunder
+export type GameMode = 'arcade' | 'historical' | 'simulation';
+
+// Vehicle statistics from StatShark
+export interface VehicleStats {
+  battles: number;
+  winRate: number;
+  killPerSpawn: number;  // 每次重生击杀数 (Kills per spawn)
+  expPerSpawn?: number;  // 每次重生获取的经验 (RP per spawn)
+}
+
 // Ammunition types
 export type AmmoType = 'apds_fs' | 'apds_fs_long' | 'heat' | 'heat_fs' | 'he' | 'apcbc' | 'ap' | 'apcr' | 'hesh' | 'atgm' | 'other';
 
@@ -159,12 +170,10 @@ export interface Vehicle {
     autoLoader?: boolean;      // true = auto-loader (fixed reload time)
   };
   // Matchmaking stats from StatShark (may be missing if no stats available)
-  stats?: {
-    battles: number;
-    winRate: number;
-    killPerSpawn: number;  // 每次重生击杀数 (Kills per spawn)
-    expPerSpawn?: number;  // 每次重生获取的经验 (RP per spawn)
-  };
+  // For backward compatibility - represents the default mode (historical)
+  stats?: VehicleStats;
+  // Stats broken down by game mode (arcade/historical/simulation)
+  statsByMode?: Record<GameMode, VehicleStats | undefined>;
   // Thumbnail image URL (placeholder)
   imageUrl?: string;
   // Whether this vehicle is unreleased (not yet in live server)
@@ -247,3 +256,45 @@ export const BATTLE_RATINGS = [
   7.0, 7.3, 7.7, 8.0, 8.3, 8.7, 9.0, 9.3, 9.7,
   10.0, 10.3, 10.7, 11.0, 11.3, 11.7, 12.0, 12.3, 12.7
 ];
+
+/** Game mode configuration */
+export interface GameModeConfig {
+  id: GameMode;
+  name: string;
+  nameZh: string;
+  color: string;
+  gradient: string;
+}
+
+export const GAME_MODES: GameModeConfig[] = [
+  { 
+    id: 'arcade', 
+    name: 'Arcade', 
+    nameZh: '街机', 
+    color: '#3b82f6',
+    gradient: 'linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%)'
+  },
+  { 
+    id: 'historical', 
+    name: 'Realistic', 
+    nameZh: '历史', 
+    color: '#16a34a',
+    gradient: 'linear-gradient(135deg, #4ade80 0%, #16a34a 100%)'
+  },
+  { 
+    id: 'simulation', 
+    name: 'Simulator', 
+    nameZh: '全真', 
+    color: '#dc2626',
+    gradient: 'linear-gradient(135deg, #f87171 0%, #dc2626 100%)'
+  },
+];
+
+export const GAME_MODE_LABELS: Record<GameMode, string> = {
+  arcade: '街机模式',
+  historical: '历史模式',
+  simulation: '全真模式',
+};
+
+/** Default game mode */
+export const DEFAULT_GAME_MODE: GameMode = 'historical';

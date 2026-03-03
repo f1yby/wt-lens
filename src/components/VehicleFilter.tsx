@@ -1,5 +1,4 @@
 import {
-  Paper,
   Box,
   Typography,
   ToggleButton,
@@ -62,145 +61,121 @@ export default function VehicleFilter({
     onNationsChange([...selectedNations, nationId]);
   };
 
-  const handleSelectAllNations = () => {
-    if (selectedNations.length === NATIONS.length) {
-      onNationsChange([]);
-    } else {
-      onNationsChange(NATIONS.map(n => n.id));
-    }
-  };
-
   return (
-    <Paper
-      elevation={1}
-      sx={{
-        backgroundColor: '#ffffff',
-        border: '1px solid #e5e5e5',
-        borderRadius: 2,
-        p: 3,
-        mb: 3,
-      }}
-    >
-      {/* Nation Filter */}
-      <Box sx={{ mb: 3 }}>
-        <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 2 }}>
-          <Typography variant="subtitle1" sx={{ color: '#171717', fontWeight: 600 }}>
-            国家筛选
-          </Typography>
-          <Typography
-            variant="caption"
-            sx={{
-              color: '#16a34a',
-              cursor: 'pointer',
-              '&:hover': { textDecoration: 'underline' },
-            }}
-            onClick={handleSelectAllNations}
-          >
-            {selectedNations.length === NATIONS.length ? '取消全选' : '全选'}
-          </Typography>
-        </Box>
-        <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
-          {NATIONS.map(nation => {
-            const isSelected = selectedNations.includes(nation.id);
-            return (
-              <ToggleButton
-                key={nation.id}
-                value={nation.id}
-                selected={isSelected}
-                onChange={() => handleNationClick(nation.id)}
-                sx={{
-                  minWidth: 0,
-                  width: 48,
-                  height: 36,
-                  borderRadius: 1,
-                  border: isSelected ? '3px solid #16a34a' : '1px solid #d4d4d4',
-                  backgroundImage: `url(${nation.flagImage})`,
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center',
-                  textTransform: 'none',
-                  position: 'relative',
-                  overflow: 'hidden',
-                  boxShadow: isSelected ? '0 2px 8px rgba(22, 163, 74, 0.4)' : '0 1px 3px rgba(0,0,0,0.1)',
-                  transition: 'all 0.15s ease',
-                  '&:hover': {
-                    transform: 'translateY(-1px)',
-                    boxShadow: isSelected ? '0 2px 8px rgba(22, 163, 74, 0.5)' : '0 4px 12px rgba(0,0,0,0.2)',
-                  },
-                  '&.Mui-selected': {
-                    border: '3px solid #16a34a',
-                    boxShadow: '0 2px 8px rgba(22, 163, 74, 0.4)',
-                  },
-                }}
-              >
-                <Box
-                  sx={{
-                    position: 'absolute',
-                    inset: 0,
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    backgroundColor: isSelected ? 'rgba(22, 163, 74, 0.15)' : 'rgba(0, 0, 0, 0.35)',
-                    opacity: 1,
-                    transition: 'all 0.2s',
-                    '&:hover': {
-                      backgroundColor: isSelected ? 'rgba(22, 163, 74, 0.1)' : 'rgba(0, 0, 0, 0.25)',
-                    },
-                  }}
-                >
-                  <Typography
-                    sx={{
-                      color: '#ffffff',
-                      fontSize: '0.75rem',
-                      fontWeight: 600,
-                      textShadow: '0 1px 3px rgba(0,0,0,0.9)',
-                    }}
-                  >
-                    {nation.nameZh}
-                  </Typography>
-                </Box>
-              </ToggleButton>
-            );
-          })}
-        </Box>
-      </Box>
-
-      {/* Battle Rating Grid Selector */}
-      <BRGridSelector brRange={brRange} onBrRangeChange={onBrRangeChange} />
-
-      {/* Vehicle Type */}
-      <Box>
-        <Typography variant="subtitle1" sx={{ color: '#171717', fontWeight: 600, mb: 2 }}>
-          载具类型
-        </Typography>
-        <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
-          {VEHICLE_TYPES.map(type => (
+    <Box sx={{ mb: 2 }}>
+      {/* 第一行：国家 + 载具类型 + 未实装开关 */}
+      <Box sx={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: 1, mb: 1.5 }}>
+        <ToggleButton
+          value="all"
+          selected={selectedNations.length === 0}
+          onChange={() => onNationsChange([])}
+          size="small"
+          sx={{
+            px: 1.5,
+            py: 0.25,
+            height: 30,
+            borderRadius: 1,
+            border: '1px solid #d4d4d4',
+            backgroundColor: selectedNations.length === 0 ? 'rgba(22, 163, 74, 0.1)' : '#ffffff',
+            color: selectedNations.length === 0 ? '#16a34a' : '#525252',
+            textTransform: 'none',
+            fontSize: '0.8rem',
+            '&:hover': {
+              backgroundColor: selectedNations.length === 0 ? 'rgba(22, 163, 74, 0.2)' : '#f5f5f5',
+            },
+          }}
+        >
+          全部
+        </ToggleButton>
+        {NATIONS.map(nation => {
+          const isSelected = selectedNations.includes(nation.id);
+          return (
             <ToggleButton
-              key={type.value}
-              value={type.value}
-              selected={selectedType === type.value}
-              onChange={() => onTypeChange(type.value)}
+              key={nation.id}
+              value={nation.id}
+              selected={isSelected}
+              onChange={() => handleNationClick(nation.id)}
+              size="small"
               sx={{
-                px: 2,
-                py: 0.5,
+                minWidth: 0,
+                width: 44,
+                height: 30,
                 borderRadius: 1,
-                border: '1px solid #d4d4d4',
-                backgroundColor: selectedType === type.value ? 'rgba(37, 99, 235, 0.1)' : '#ffffff',
-                color: selectedType === type.value ? '#2563eb' : '#525252',
+                border: isSelected ? '2px solid #16a34a' : '1px solid #d4d4d4',
+                backgroundImage: `url(${nation.flagImage})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
                 textTransform: 'none',
-                fontSize: '0.85rem',
+                position: 'relative',
+                overflow: 'hidden',
+                transition: 'all 0.15s ease',
                 '&:hover': {
-                  backgroundColor: selectedType === type.value ? 'rgba(37, 99, 235, 0.2)' : '#f5f5f5',
+                  borderColor: '#16a34a',
+                },
+                '&.Mui-selected': {
+                  border: '2px solid #16a34a',
                 },
               }}
             >
-              {type.label}
+              <Box
+                sx={{
+                  position: 'absolute',
+                  inset: 0,
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  backgroundColor: isSelected ? 'rgba(22, 163, 74, 0.15)' : 'rgba(0, 0, 0, 0.35)',
+                  transition: 'all 0.2s',
+                  '&:hover': {
+                    backgroundColor: isSelected ? 'rgba(22, 163, 74, 0.1)' : 'rgba(0, 0, 0, 0.25)',
+                  },
+                }}
+              >
+                <Typography
+                  sx={{
+                    color: '#ffffff',
+                    fontSize: '0.65rem',
+                    fontWeight: 600,
+                    textShadow: '0 1px 3px rgba(0,0,0,0.9)',
+                  }}
+                >
+                  {nation.nameZh}
+                </Typography>
+              </Box>
             </ToggleButton>
-          ))}
-        </Box>
-      </Box>
+          );
+        })}
 
-      {/* Show Unreleased Toggle */}
-      <Box sx={{ mt: 2 }}>
+        <Box sx={{ width: '1px', height: 24, backgroundColor: '#e5e5e5', mx: 0.5 }} />
+
+        {VEHICLE_TYPES.map(type => (
+          <ToggleButton
+            key={type.value}
+            value={type.value}
+            selected={selectedType === type.value}
+            onChange={() => onTypeChange(type.value)}
+            size="small"
+            sx={{
+              px: 1.5,
+              py: 0.25,
+              height: 30,
+              borderRadius: 1,
+              border: '1px solid #d4d4d4',
+              backgroundColor: selectedType === type.value ? 'rgba(37, 99, 235, 0.1)' : '#ffffff',
+              color: selectedType === type.value ? '#2563eb' : '#525252',
+              textTransform: 'none',
+              fontSize: '0.8rem',
+              '&:hover': {
+                backgroundColor: selectedType === type.value ? 'rgba(37, 99, 235, 0.2)' : '#f5f5f5',
+              },
+            }}
+          >
+            {type.label}
+          </ToggleButton>
+        ))}
+
+        <Box sx={{ width: '1px', height: 24, backgroundColor: '#e5e5e5', mx: 0.5 }} />
+
         <FormControlLabel
           control={
             <Switch
@@ -208,23 +183,23 @@ export default function VehicleFilter({
               onChange={(e) => onShowUnreleasedChange(e.target.checked)}
               size="small"
               sx={{
-                '& .MuiSwitch-switchBase.Mui-checked': {
-                  color: '#f97316',
-                },
-                '& .MuiSwitch-switchBase.Mui-checked + .MuiSwitch-track': {
-                  backgroundColor: '#f97316',
-                },
+                '& .MuiSwitch-switchBase.Mui-checked': { color: '#f97316' },
+                '& .MuiSwitch-switchBase.Mui-checked + .MuiSwitch-track': { backgroundColor: '#f97316' },
               }}
             />
           }
           label={
-            <Typography variant="body2" sx={{ color: '#525252', fontSize: '0.85rem' }}>
-              显示未实装载具
+            <Typography sx={{ color: '#525252', fontSize: '0.8rem' }}>
+              未实装
             </Typography>
           }
+          sx={{ m: 0 }}
         />
       </Box>
-    </Paper>
+
+      {/* 第二行：BR 网格 */}
+      <BRGridSelector brRange={brRange} onBrRangeChange={onBrRangeChange} />
+    </Box>
   );
 }
 
@@ -334,25 +309,7 @@ export function BRGridSelector({ brRange, onBrRangeChange }: BRGridSelectorProps
   const rangeText = isAllSelected ? '全部' : `${brRange[0].toFixed(1)} - ${brRange[1].toFixed(1)}`;
 
   return (
-    <Box sx={{ mb: 3 }}>
-      <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 2 }}>
-        <Typography variant="subtitle1" sx={{ color: '#171717', fontWeight: 600 }}>
-          权重范围: {rangeText}
-        </Typography>
-        <Typography
-          variant="caption"
-          sx={{
-            color: '#16a34a',
-            cursor: 'pointer',
-            '&:hover': { textDecoration: 'underline' },
-          }}
-          onClick={handleReset}
-        >
-          重置
-        </Typography>
-      </Box>
-      
-      {/* BR 网格 */}
+    <Box sx={{ mb: 1 }}>
       <Box
         ref={containerRef}
         sx={{
@@ -360,8 +317,20 @@ export function BRGridSelector({ brRange, onBrRangeChange }: BRGridSelectorProps
           flexWrap: 'wrap',
           gap: 0.25,
           userSelect: 'none',
+          alignItems: 'center',
         }}
       >
+        <Typography
+          sx={{
+            color: '#737373',
+            fontSize: '0.7rem',
+            fontWeight: 500,
+            mr: 0.5,
+            whiteSpace: 'nowrap',
+          }}
+        >
+          BR {rangeText}
+        </Typography>
         {BATTLE_RATINGS.map((br, index) => {
           const selected = isBrSelected(br);
           const inPreview = isInDragPreview(index);
@@ -410,18 +379,21 @@ export function BRGridSelector({ brRange, onBrRangeChange }: BRGridSelectorProps
         })}
       </Box>
       
-      {/* 提示文字 */}
-      <Typography
-        variant="caption"
-        sx={{
-          color: '#737373',
-          mt: 1,
-          display: 'block',
-          fontSize: '0.75rem',
-        }}
-      >
-        点击单选 · 拖动多选 · 点击已选中项全选
-      </Typography>
+      {!isAllSelected && (
+        <Typography
+          component="span"
+          onClick={handleReset}
+          sx={{
+            color: '#16a34a',
+            fontSize: '0.7rem',
+            cursor: 'pointer',
+            ml: 0.5,
+            '&:hover': { textDecoration: 'underline' },
+          }}
+        >
+          重置
+        </Typography>
+      )}
     </Box>
   );
 }

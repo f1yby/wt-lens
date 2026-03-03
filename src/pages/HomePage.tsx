@@ -1,18 +1,42 @@
 import { useState, useMemo, useEffect } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import { Container, Typography, Box, CircularProgress } from '@mui/material';
 import Navbar from '../components/Navbar';
 import VehicleFilter from '../components/VehicleFilter';
 import VehicleTechTree from '../components/VehicleTechTree';
+import GameModeSelector from '../components/GameModeSelector';
 import { loadVehicles } from '../data/vehicles';
-import type { Nation, VehicleType, Vehicle } from '../types';
+import type { Nation, VehicleType, Vehicle, GameMode } from '../types';
+import { getInitialGameMode, saveGameModeToStorage, updateURLWithGameMode } from '../utils/gameMode';
 
 export default function HomePage() {
+  const [searchParams, setSearchParams] = useSearchParams();
   const [vehicles, setVehicles] = useState<Vehicle[]>([]);
   const [loading, setLoading] = useState(true);
   const [selectedNations, setSelectedNations] = useState<Nation[]>([]);
   const [brRange, setBrRange] = useState<[number, number]>([1.0, 12.7]);
   const [selectedType, setSelectedType] = useState<VehicleType | 'all'>('all');
   const [showUnreleased, setShowUnreleased] = useState(false);
+
+  // Initialize game mode from URL or storage
+  const [gameMode, setGameMode] = useState<GameMode>(() =>
+    getInitialGameMode(searchParams)
+  );
+
+  // Handle game mode change
+  const handleGameModeChange = (mode: GameMode) => {
+    setGameMode(mode);
+    saveGameModeToStorage(mode);
+    updateURLWithGameMode(searchParams, setSearchParams, mode);
+  };
+
+  // Sync game mode from URL on mount (in case URL was changed externally)
+  useEffect(() => {
+    const urlMode = searchParams.get('mode') as GameMode | null;
+    if (urlMode && urlMode !== gameMode) {
+      setGameMode(urlMode);
+    }
+  }, [searchParams]);
 
   useEffect(() => {
     loadVehicles().then(data => {
@@ -36,54 +60,13 @@ export default function HomePage() {
     <Box sx={{ minHeight: '100vh', backgroundColor: '#f5f5f5' }}>
       <Navbar />
       
-      {/* Hero Section */}
-      <Box
-        sx={{
-          pt: 12,
-          pb: 4,
-          background: 'linear-gradient(180deg, rgba(74, 222, 128, 0.1) 0%, rgba(245, 245, 245, 1) 100%)',
-          borderBottom: '1px solid #e5e5e5',
-        }}
-      >
-        <Container maxWidth="xl">
-          <Typography
-            variant="h2"
-            sx={{
-              color: '#171717',
-              fontWeight: 700,
-              fontSize: { xs: '2rem', sm: '2.5rem', md: '3rem' },
-              mb: 1,
-              textAlign: 'center',
-            }}
-          >
-            战争雷霆
-            <Typography
-              component="span"
-              sx={{
-                ml: 1.5,
-                color: '#16a34a',
-              }}
-            >
-              数据分析
-            </Typography>
-          </Typography>
-          <Typography
-            variant="body1"
-            sx={{
-              color: '#525252',
-              textAlign: 'center',
-              maxWidth: 600,
-              mx: 'auto',
-            }}
-          >
-            基于 StatShark 和官方解包数据的载具性能分析工具，
-            提供匹配分析和性能分布对比
-          </Typography>
-        </Container>
-      </Box>
-
       {/* Main Content */}
-      <Container maxWidth="xl" sx={{ py: 4 }}>
+      <Container maxWidth="xl" sx={{ pt: 12, pb: 4 }}>
+        <GameModeSelector
+          currentMode={gameMode}
+          onModeChange={handleGameModeChange}
+        />
+
         <VehicleFilter
           selectedNations={selectedNations}
           onNationsChange={setSelectedNations}
@@ -108,7 +91,7 @@ export default function HomePage() {
             <CircularProgress />
           </Box>
         ) : (
-          <VehicleTechTree vehicles={filteredVehicles} />
+          <VehicleTechTree vehicles={filteredVehicles} gameMode={gameMode} />
         )}
       </Container>
 

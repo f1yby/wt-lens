@@ -1,9 +1,11 @@
 import { Card, CardContent, Typography, Chip, Box, Tooltip } from '@mui/material';
 import { GpsFixed, Bolt } from '@mui/icons-material';
 import { useNavigate } from 'react-router-dom';
-import type { Vehicle } from '../types';
+import type { Vehicle, GameMode } from '../types';
 import { NATIONS, VEHICLE_TYPE_LABELS } from '../types';
 import { getVehicleImagePath } from '../utils/paths';
+import { getVehicleStatsByMode } from '../data/vehicles';
+import { getWinRateColor } from '../utils/gameMode';
 
 /** Get stabilizer display info */
 function getStabilizerInfo(type: Vehicle['performance']['stabilizerType']) {
@@ -35,11 +37,15 @@ function getBestAmmoName(vehicle: Vehicle): string | null {
 
 interface VehicleCardProps {
   vehicle: Vehicle;
+  gameMode?: GameMode;
 }
 
-export default function VehicleCard({ vehicle }: VehicleCardProps) {
+export default function VehicleCard({ vehicle, gameMode = 'historical' }: VehicleCardProps) {
   const navigate = useNavigate();
   const nation = NATIONS.find(n => n.id === vehicle.nation);
+
+  // Get stats for the current game mode
+  const modeStats = getVehicleStatsByMode(vehicle, gameMode);
 
   return (
     <Card
@@ -141,7 +147,7 @@ export default function VehicleCard({ vehicle }: VehicleCardProps) {
         </Typography>
         
         <Box sx={{ display: 'flex', gap: 2, mt: 1.5, pt: 1.5, borderTop: '1px solid #e5e5e5', alignItems: 'center' }}>
-          {vehicle.stats && (
+          {modeStats && (
             <>
               <Box>
                 <Typography variant="caption" sx={{ color: '#737373', display: 'block' }}>
@@ -150,19 +156,19 @@ export default function VehicleCard({ vehicle }: VehicleCardProps) {
                 <Typography
                   variant="body2"
                   sx={{
-                    color: vehicle.stats.winRate > 50 ? '#16a34a' : vehicle.stats.winRate < 48 ? '#dc2626' : '#ca8a04',
+                    color: getWinRateColor(modeStats.winRate),
                     fontWeight: 600,
                   }}
                 >
-                  {vehicle.stats.winRate.toFixed(1)}%
+                  {modeStats.winRate.toFixed(1)}%
                 </Typography>
               </Box>
               <Box>
                 <Typography variant="caption" sx={{ color: '#737373', display: 'block' }}>
-                  KR
+                  KPS
                 </Typography>
                 <Typography variant="body2" sx={{ color: '#171717', fontWeight: 600 }}>
-                  {vehicle.stats.killPerSpawn.toFixed(1)}
+                  {modeStats.killPerSpawn.toFixed(2)}
                 </Typography>
               </Box>
             </>
