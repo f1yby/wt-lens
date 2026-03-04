@@ -136,7 +136,7 @@ def main():
     """Main entry point"""
     # Determine month to fetch
     # You can override this with environment variable
-    month_id = os.environ.get("STATSHARK_MONTH", "diff_2026_january_february")
+    month_id = os.environ.get("STATSHARK_MONTH") or "diff_2026_january_february"
     
     print(f"Fetching StatShark data for: {month_id}")
     
