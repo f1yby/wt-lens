@@ -5,10 +5,8 @@ import { isValidStatsMonthId, isValidMonthRange } from '../types';
 import {
   getInitialStatsMonth,
   saveStatsMonthToStorage,
-  updateURLWithStatsMonth,
   getInitialStatsMonthRange,
   saveStatsMonthRangeToStorage,
-  updateURLWithStatsMonthRange,
 } from '../utils/statsMonth';
 
 /**
@@ -53,21 +51,25 @@ export function useStatsMonth(): UseStatsMonthReturn {
     getInitialStatsMonth(searchParams)
   );
 
-  // Handle stats month change - memoized to prevent unnecessary re-renders
+  // Handle stats month change - uses functional setSearchParams to avoid stale closure
   const handleStatsMonthChange = useCallback((month: StatsMonthId) => {
     setStatsMonth(month);
     saveStatsMonthToStorage(month);
-    updateURLWithStatsMonth(searchParams, setSearchParams, month);
-  }, [searchParams, setSearchParams]);
+    setSearchParams((prev) => {
+      const newParams = new URLSearchParams(prev);
+      newParams.set('month', month);
+      return newParams;
+    });
+  }, [setSearchParams]);
 
-  // Sync stats month from URL on mount and when URL changes externally
+  // Sync stats month from URL when URL changes externally
   // (e.g., browser back/forward navigation)
   useEffect(() => {
     const urlMonth = searchParams.get('month');
-    if (urlMonth && isValidStatsMonthId(urlMonth) && urlMonth !== statsMonth) {
-      setStatsMonth(urlMonth);
+    if (urlMonth && isValidStatsMonthId(urlMonth)) {
+      setStatsMonth((prev) => prev === urlMonth ? prev : urlMonth);
     }
-  }, [searchParams, statsMonth]);
+  }, [searchParams]);
 
   return {
     statsMonth,
@@ -120,7 +122,7 @@ export function useStatsMonthRange(): UseStatsMonthRangeReturn {
     getInitialStatsMonthRange(searchParams)
   );
 
-  // Handle stats month range change - memoized to prevent unnecessary re-renders
+  // Handle stats month range change - uses functional setSearchParams to avoid stale closure
   const handleStatsMonthRangeChange = useCallback((range: StatsMonthRange) => {
     // Validate range before applying
     if (!isValidMonthRange(range)) {
@@ -130,10 +132,18 @@ export function useStatsMonthRange(): UseStatsMonthRangeReturn {
     
     setStatsMonthRange(range);
     saveStatsMonthRangeToStorage(range);
-    updateURLWithStatsMonthRange(searchParams, setSearchParams, range);
-  }, [searchParams, setSearchParams]);
+    
+    // Use functional update to avoid stale searchParams closure
+    setSearchParams((prev) => {
+      const newParams = new URLSearchParams(prev);
+      newParams.delete('month');
+      newParams.set('monthStart', range.startMonth);
+      newParams.set('monthEnd', range.endMonth);
+      return newParams;
+    });
+  }, [setSearchParams]);
 
-  // Sync stats month range from URL on mount and when URL changes externally
+  // Sync stats month range from URL when URL changes externally
   // (e.g., browser back/forward navigation)
   useEffect(() => {
     const urlMonthStart = searchParams.get('monthStart');
@@ -145,21 +155,25 @@ export function useStatsMonthRange(): UseStatsMonthRangeReturn {
         isValidStatsMonthId(urlMonthStart) && 
         isValidStatsMonthId(urlMonthEnd)) {
       const urlRange: StatsMonthRange = { startMonth: urlMonthStart, endMonth: urlMonthEnd };
-      if (isValidMonthRange(urlRange) && 
-          (urlRange.startMonth !== statsMonthRange.startMonth || 
-           urlRange.endMonth !== statsMonthRange.endMonth)) {
-        setStatsMonthRange(urlRange);
+      if (isValidMonthRange(urlRange)) {
+        setStatsMonthRange((prev) => {
+          if (prev.startMonth === urlRange.startMonth && prev.endMonth === urlRange.endMonth) {
+            return prev;
+          }
+          return urlRange;
+        });
       }
     }
     // Fallback to legacy format
     else if (legacyMonth && isValidStatsMonthId(legacyMonth)) {
-      const legacyRange: StatsMonthRange = { startMonth: legacyMonth, endMonth: legacyMonth };
-      if (legacyRange.startMonth !== statsMonthRange.startMonth || 
-          legacyRange.endMonth !== statsMonthRange.endMonth) {
-        setStatsMonthRange(legacyRange);
-      }
+      setStatsMonthRange((prev) => {
+        if (prev.startMonth === legacyMonth && prev.endMonth === legacyMonth) {
+          return prev;
+        }
+        return { startMonth: legacyMonth, endMonth: legacyMonth };
+      });
     }
-  }, [searchParams, statsMonthRange]);
+  }, [searchParams]);
 
   return {
     statsMonthRange,
