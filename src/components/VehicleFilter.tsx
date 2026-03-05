@@ -5,7 +5,7 @@ import {
   Switch,
   FormControlLabel,
 } from '@mui/material';
-import { useState, useCallback, useRef, useEffect } from 'react';
+import { useState, useCallback, useRef, useEffect, type ReactNode } from 'react';
 import { NATIONS, BATTLE_RATINGS, type Nation } from '../types';
 
 /** Type option for the filter */
@@ -25,6 +25,14 @@ interface VehicleFilterProps<T extends string = string> {
   onShowUnreleasedChange: (show: boolean) => void;
   /** Custom type options. Defaults to ground vehicle types. */
   typeOptions?: TypeOption<T>[];
+  /** Show ground combined BR toggle */
+  showGroundBRToggle?: boolean;
+  /** Ground combined BR state */
+  useGroundBR?: boolean;
+  /** Ground combined BR toggle callback */
+  onUseGroundBRChange?: (value: boolean) => void;
+  /** Extra controls to render in the first row (e.g., month selector) */
+  extraControls?: ReactNode;
 }
 
 const GROUND_VEHICLE_TYPES: TypeOption[] = [
@@ -46,6 +54,10 @@ export default function VehicleFilter<T extends string = string>({
   showUnreleased,
   onShowUnreleasedChange,
   typeOptions,
+  showGroundBRToggle = false,
+  useGroundBR = false,
+  onUseGroundBRChange,
+  extraControls,
 }: VehicleFilterProps<T>) {
   const types = (typeOptions ?? GROUND_VEHICLE_TYPES) as TypeOption<T>[];
 
@@ -210,6 +222,38 @@ export default function VehicleFilter<T extends string = string>({
           }
           sx={{ m: 0 }}
         />
+
+        {showGroundBRToggle && (
+          <>
+            <Box sx={{ width: '1px', height: 24, backgroundColor: '#e5e5e5', mx: 0.5 }} />
+            <FormControlLabel
+              control={
+                <Switch
+                  checked={useGroundBR}
+                  onChange={(_, checked) => onUseGroundBRChange?.(checked)}
+                  size="small"
+                  sx={{
+                    '& .MuiSwitch-switchBase.Mui-checked': { color: '#16a34a' },
+                    '& .MuiSwitch-switchBase.Mui-checked + .MuiSwitch-track': { backgroundColor: '#16a34a' },
+                  }}
+                />
+              }
+              label={
+                <Typography sx={{ color: useGroundBR ? '#16a34a' : '#525252', fontSize: '0.8rem', fontWeight: useGroundBR ? 600 : 400 }}>
+                  联合作战 BR
+                </Typography>
+              }
+              sx={{ m: 0 }}
+            />
+          </>
+        )}
+
+        {extraControls && (
+          <>
+            <Box sx={{ width: '1px', height: 24, backgroundColor: '#e5e5e5', mx: 0.5 }} />
+            {extraControls}
+          </>
+        )}
       </Box>
 
       {/* 第二行：BR 网格 */}

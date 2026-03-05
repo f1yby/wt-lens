@@ -27,6 +27,8 @@ interface VehicleTechTreeProps<T extends TechTreeItem> {
   getNavPath?: (item: T) => string;
   /** Get stats for the current game mode */
   getStats?: (item: T, mode: GameMode) => VehicleStats | undefined;
+  /** Custom BR resolver (default: item.battleRating) */
+  getBR?: (item: T) => number;
   /** Empty state text */
   emptyText?: string;
 }
@@ -37,6 +39,7 @@ export default function VehicleTechTree<T extends TechTreeItem>({
   getImagePath,
   getNavPath,
   getStats,
+  getBR,
   emptyText = '没有找到符合条件的载具',
 }: VehicleTechTreeProps<T>) {
   const navigate = useNavigate();
@@ -60,9 +63,12 @@ export default function VehicleTechTree<T extends TechTreeItem>({
     return getVehicleStatsByMode(item as unknown as Vehicle, mode);
   });
 
+  // BR resolver: custom or default
+  const resolveBR = getBR ?? ((item: T) => item.battleRating);
+
   // 按 BR 分组载具
   const vehiclesByBR = BATTLE_RATINGS.reduce((acc, br) => {
-    const brVehicles = vehicles.filter(v => Math.abs(v.battleRating - br) < 0.01);
+    const brVehicles = vehicles.filter(v => Math.abs(resolveBR(v) - br) < 0.01);
     if (brVehicles.length > 0) {
       acc[br] = brVehicles;
     }

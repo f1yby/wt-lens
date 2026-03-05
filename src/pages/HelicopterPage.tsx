@@ -16,6 +16,7 @@ export default function HelicopterPage() {
   const [selectedNations, setSelectedNations] = useState<Nation[]>([]);
   const [brRange, setBrRange] = useState<[number, number]>([1.0, 12.7]);
   const [showUnreleased, setShowUnreleased] = useState(false);
+  const [useGroundBR, setUseGroundBR] = useState(false);
 
   // Use custom hooks for game mode and stats month management
   const { gameMode, handleGameModeChange } = useGameMode();
@@ -34,11 +35,12 @@ export default function HelicopterPage() {
     return aircraft.filter(ac => {
       if (ac.aircraftType !== 'helicopter') return false;
       const nationMatch = selectedNations.length === 0 || selectedNations.includes(ac.nation);
-      const brMatch = ac.battleRating >= brRange[0] && ac.battleRating <= brRange[1];
+      const effectiveBR = useGroundBR ? (ac.groundBattleRating ?? ac.battleRating) : ac.battleRating;
+      const brMatch = effectiveBR >= brRange[0] && effectiveBR <= brRange[1];
       const unreleasedMatch = showUnreleased || !ac.unreleased;
       return nationMatch && brMatch && unreleasedMatch;
     });
-  }, [aircraft, selectedNations, brRange, showUnreleased]);
+  }, [aircraft, selectedNations, brRange, showUnreleased, useGroundBR]);
 
   return (
     <Box sx={{ minHeight: '100vh', backgroundColor: '#f5f5f5' }}>
@@ -61,12 +63,18 @@ export default function HelicopterPage() {
           showUnreleased={showUnreleased}
           onShowUnreleasedChange={setShowUnreleased}
           typeOptions={[]}
-        />
-        <MonthRangeSelector
-          currentRange={statsMonthRange}
-          onRangeChange={handleStatsMonthRangeChange}
+          showGroundBRToggle
+          useGroundBR={useGroundBR}
+          onUseGroundBRChange={setUseGroundBR}
+          extraControls={
+            <MonthRangeSelector
+              currentRange={statsMonthRange}
+              onRangeChange={handleStatsMonthRangeChange}
+            />
+          }
         />
 
+        {/* Results Count */}
         <Box sx={{ mb: 2, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <Typography variant="body2" sx={{ color: '#737373' }}>
             {loading ? '加载中...' : `显示 ${filteredHelicopters.length} 架直升机`}
@@ -78,7 +86,7 @@ export default function HelicopterPage() {
             <CircularProgress />
           </Box>
         ) : (
-          <AircraftTechTree aircraft={filteredHelicopters} gameMode={gameMode} />
+          <AircraftTechTree aircraft={filteredHelicopters} gameMode={gameMode} useGroundBR={useGroundBR} />
         )}
       </Container>
 

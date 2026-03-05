@@ -25,6 +25,7 @@ export default function AircraftPage() {
   const [brRange, setBrRange] = useState<[number, number]>([1.0, 12.7]);
   const [selectedType, setSelectedType] = useState<AircraftType | 'all'>('all');
   const [showUnreleased, setShowUnreleased] = useState(false);
+  const [useGroundBR, setUseGroundBR] = useState(false);
 
   // Use custom hooks for game mode and stats month management
   const { gameMode, handleGameModeChange } = useGameMode();
@@ -44,12 +45,13 @@ export default function AircraftPage() {
       // Exclude helicopters (they have their own page)
       if (ac.aircraftType === 'helicopter') return false;
       const nationMatch = selectedNations.length === 0 || selectedNations.includes(ac.nation);
-      const brMatch = ac.battleRating >= brRange[0] && ac.battleRating <= brRange[1];
+      const effectiveBR = useGroundBR ? (ac.groundBattleRating ?? ac.battleRating) : ac.battleRating;
+      const brMatch = effectiveBR >= brRange[0] && effectiveBR <= brRange[1];
       const typeMatch = selectedType === 'all' || ac.aircraftType === selectedType;
       const unreleasedMatch = showUnreleased || !ac.unreleased;
       return nationMatch && brMatch && typeMatch && unreleasedMatch;
     });
-  }, [aircraft, selectedNations, brRange, selectedType, showUnreleased]);
+  }, [aircraft, selectedNations, brRange, selectedType, showUnreleased, useGroundBR]);
 
   return (
     <Box sx={{ minHeight: '100vh', backgroundColor: '#f5f5f5' }}>
@@ -73,10 +75,15 @@ export default function AircraftPage() {
           showUnreleased={showUnreleased}
           onShowUnreleasedChange={setShowUnreleased}
           typeOptions={AIRCRAFT_TYPES}
-        />
-        <MonthRangeSelector
-          currentRange={statsMonthRange}
-          onRangeChange={handleStatsMonthRangeChange}
+          showGroundBRToggle
+          useGroundBR={useGroundBR}
+          onUseGroundBRChange={setUseGroundBR}
+          extraControls={
+            <MonthRangeSelector
+              currentRange={statsMonthRange}
+              onRangeChange={handleStatsMonthRangeChange}
+            />
+          }
         />
 
         {/* Results Count */}
@@ -92,7 +99,7 @@ export default function AircraftPage() {
             <CircularProgress />
           </Box>
         ) : (
-          <AircraftTechTree aircraft={filteredAircraft} gameMode={gameMode} />
+          <AircraftTechTree aircraft={filteredAircraft} gameMode={gameMode} useGroundBR={useGroundBR} />
         )}
       </Container>
 

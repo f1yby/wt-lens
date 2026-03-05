@@ -133,6 +133,10 @@ def fetch_aircraft_data(vehicle_id: str, copy_images: bool = True) -> dict[str, 
     if not isinstance(rank, int):
         rank = 1
     
+    # Get ground battle BR (for combined ground battles, may differ from air BR)
+    ground_economic_rank = vehicle_data.get('economicRankTankHistorical')
+    ground_br = economic_rank_to_br(ground_economic_rank) if ground_economic_rank is not None else None
+    
     # Get economic type
     economic_type = get_vehicle_economic_type(vehicle_data)
     
@@ -152,7 +156,7 @@ def fetch_aircraft_data(vehicle_id: str, copy_images: bool = True) -> dict[str, 
     if not image_url:
         image_url = f"aircrafts/{vehicle_id}.webp"
     
-    return {
+    result = {
         'id': vehicle_id,
         'name': vehicle_id,
         'localizedName': localized_name,
@@ -163,6 +167,12 @@ def fetch_aircraft_data(vehicle_id: str, copy_images: bool = True) -> dict[str, 
         'economicType': economic_type,
         'imageUrl': image_url,
     }
+    
+    # Only include groundBattleRating if it differs from air BR
+    if ground_br is not None and abs(ground_br - br) > 0.01:
+        result['groundBattleRating'] = ground_br
+    
+    return result
 
 
 def fetch_all_aircraft(copy_images: bool = True) -> list[dict[str, Any]]:

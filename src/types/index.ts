@@ -199,6 +199,8 @@ export interface AircraftVehicle {
   nation: Nation;
   rank: number;
   battleRating: number;
+  /** Ground combined battle BR (陆空联合 BR), only present when different from air BR */
+  groundBattleRating?: number;
   aircraftType: AircraftType;
   economicType: EconomicType;
   // Phase 1: No performance data from datamine

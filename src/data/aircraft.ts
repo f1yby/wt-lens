@@ -9,6 +9,7 @@ interface AircraftEntry {
   nation: string;
   rank: number;
   battleRating: number;
+  groundBattleRating?: number;
   aircraftType: AircraftType;
   economicType: string;
   imageUrl: string;
@@ -94,6 +95,7 @@ function mergeAircraftData(stats: StatSharkEntry[], aircraft: AircraftEntry[], r
       nation: aircraftEntry.nation as AircraftVehicle['nation'],
       rank: defaultStats ? (statsByMode?.historical?.rank ?? aircraftEntry.rank ?? 1) : (aircraftEntry.rank ?? 1),
       battleRating: defaultStats ? (statsByMode?.historical?.br ?? aircraftEntry.battleRating ?? 1.0) : (aircraftEntry.battleRating ?? 1.0),
+      groundBattleRating: aircraftEntry.groundBattleRating,
       aircraftType: aircraftEntry.aircraftType as AircraftType,
       economicType: (aircraftEntry.economicType as AircraftVehicle['economicType']) ?? 'regular',
       // Phase 1: No performance data from datamine

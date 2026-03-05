@@ -401,6 +401,7 @@ export default function AircraftDetailPage() {
                     },
                     { label: 'KPS', value: modeStats.killPerSpawn.toFixed(2), color: '#fff' },
                     { label: 'BR', value: aircraft.battleRating.toFixed(1), color: '#86efac' },
+                    ...(aircraft.groundBattleRating ? [{ label: '联合BR', value: aircraft.groundBattleRating.toFixed(1), color: '#fbbf24' }] : []),
                   ].map((stat) => (
                     <Box key={stat.label}>
                       <Typography sx={{
