@@ -429,3 +429,64 @@ export const getStatsMonthConfig = (monthId: StatsMonthId): StatsMonthConfig | u
 /** 验证月份ID是否有效 */
 export const isValidStatsMonthId = (value: string): value is StatsMonthId =>
   STATS_MONTHS.some(m => m.id === value);
+
+// ============================================================================
+// Stats Month Range Types (for date range filtering)
+// ============================================================================
+
+/** 统计数据月份范围 */
+export interface StatsMonthRange {
+  startMonth: StatsMonthId;
+  endMonth: StatsMonthId;
+}
+
+/** 默认统计数据月份范围（最新月份，单月模式） */
+export const DEFAULT_STATS_MONTH_RANGE: StatsMonthRange = {
+  startMonth: DEFAULT_STATS_MONTH,
+  endMonth: DEFAULT_STATS_MONTH,
+};
+
+/** 获取月份在 STATS_MONTHS 数组中的索引 */
+export const getStatsMonthIndex = (monthId: StatsMonthId): number =>
+  STATS_MONTHS.findIndex(m => m.id === monthId);
+
+/** 验证月份范围是否有效（endMonth 不早于 startMonth） */
+export const isValidMonthRange = (range: StatsMonthRange): boolean => {
+  const startIndex = getStatsMonthIndex(range.startMonth);
+  const endIndex = getStatsMonthIndex(range.endMonth);
+  return startIndex >= 0 && endIndex >= 0 && startIndex <= endIndex;
+};
+
+/** 获取范围内的所有月份 ID（按时间顺序） */
+export const getMonthsInRange = (range: StatsMonthRange): StatsMonthId[] => {
+  const startIndex = getStatsMonthIndex(range.startMonth);
+  const endIndex = getStatsMonthIndex(range.endMonth);
+  
+  if (startIndex < 0 || endIndex < 0 || startIndex > endIndex) {
+    return [];
+  }
+  
+  return STATS_MONTHS.slice(startIndex, endIndex + 1).map(m => m.id);
+};
+
+/** 生成范围的缓存键 */
+export const getMonthRangeCacheKey = (range: StatsMonthRange): string =>
+  `${range.startMonth}_${range.endMonth}`;
+
+/** 判断范围是否为单月模式 */
+export const isSingleMonthRange = (range: StatsMonthRange): boolean =>
+  range.startMonth === range.endMonth;
+
+/** 获取月份范围的显示标签 */
+export const getMonthRangeLabel = (range: StatsMonthRange): string => {
+  const startConfig = getStatsMonthConfig(range.startMonth);
+  const endConfig = getStatsMonthConfig(range.endMonth);
+  
+  if (!startConfig || !endConfig) return '';
+  
+  if (range.startMonth === range.endMonth) {
+    return startConfig.shortLabel;
+  }
+  
+  return `${startConfig.shortLabel} ~ ${endConfig.shortLabel}`;
+};

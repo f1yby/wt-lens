@@ -4,11 +4,11 @@ import Navbar from '../components/Navbar';
 import VehicleFilter from '../components/VehicleFilter';
 import VehicleTechTree from '../components/VehicleTechTree';
 import GameModeSelector from '../components/GameModeSelector';
-import MonthSelector from '../components/MonthSelector';
+import MonthRangeSelector from '../components/MonthSelector';
 import { loadVehicles } from '../data/vehicles';
 import type { Nation, VehicleType, Vehicle } from '../types';
 import { useGameMode } from '../hooks/useGameMode';
-import { useStatsMonth } from '../hooks/useStatsMonth';
+import { useStatsMonthRange } from '../hooks/useStatsMonth';
 
 export default function HomePage() {
   const [vehicles, setVehicles] = useState<Vehicle[]>([]);
@@ -20,16 +20,16 @@ export default function HomePage() {
 
   // Use custom hooks for game mode and stats month management
   const { gameMode, handleGameModeChange } = useGameMode();
-  const { statsMonth, handleStatsMonthChange } = useStatsMonth();
+  const { statsMonthRange, handleStatsMonthRangeChange } = useStatsMonthRange();
 
-  // Reload data when month changes
+  // Reload data when month range changes
   useEffect(() => {
     setLoading(true);
-    loadVehicles(statsMonth).then(data => {
+    loadVehicles(statsMonthRange).then(data => {
       setVehicles(data);
       setLoading(false);
     });
-  }, [statsMonth]);
+  }, [statsMonthRange]);
 
   const filteredVehicles = useMemo(() => {
     return vehicles.filter(vehicle => {
@@ -64,9 +64,9 @@ export default function HomePage() {
           showUnreleased={showUnreleased}
           onShowUnreleasedChange={setShowUnreleased}
         />
-        <MonthSelector
-          currentMonth={statsMonth}
-          onMonthChange={handleStatsMonthChange}
+        <MonthRangeSelector
+          currentRange={statsMonthRange}
+          onRangeChange={handleStatsMonthRangeChange}
         />
 
         {/* Results Count */}

@@ -1,6 +1,6 @@
-import type { ShipVehicle, ShipType, VehicleStats, GameMode, StatsMonthId } from '../types';
-import { DEFAULT_STATS_MONTH } from '../types';
-import { StatSharkEntry, cleanName, buildStatsMapByMode, convertToVehicleStats } from './base';
+import type { ShipVehicle, ShipType, VehicleStats, GameMode, StatsMonthRange } from '../types';
+import { DEFAULT_STATS_MONTH_RANGE, getMonthRangeCacheKey } from '../types';
+import { StatSharkEntry, cleanName, buildStatsMapByMonthRange, convertToVehicleStats } from './base';
 
 interface ShipEntry {
   id: string;
@@ -19,8 +19,8 @@ interface ShipEntry {
 // Cache for loaded raw data
 let statsData: StatSharkEntry[] | null = null;
 let shipsData: ShipEntry[] | null = null;
-// Cache for merged ships by month
-const shipsByMonth = new Map<StatsMonthId, ShipVehicle[]>();
+// Cache for merged ships by month range (key: startMonth_endMonth)
+const shipsByMonthRange = new Map<string, ShipVehicle[]>();
 
 /**
  * Load stats data from JSON
@@ -59,10 +59,10 @@ function buildShipsMap(ships: ShipEntry[]): Map<string, ShipEntry> {
  * Merge StatShark and ship data by vehicle ID
  * @param stats - Array of StatShark entries
  * @param ships - Array of ship entries
- * @param month - Optional month filter for stats data
+ * @param range - Optional month range filter for stats data
  */
-function mergeShipsData(stats: StatSharkEntry[], ships: ShipEntry[], month?: StatsMonthId): ShipVehicle[] {
-  const statsMapByMode = buildStatsMapByMode(stats, month);
+function mergeShipsData(stats: StatSharkEntry[], ships: ShipEntry[], range?: StatsMonthRange): ShipVehicle[] {
+  const statsMapByMode = buildStatsMapByMonthRange(stats, range);
   const shipsMap = buildShipsMap(ships);
 
   // Get all unique ship IDs
@@ -115,14 +115,15 @@ function mergeShipsData(stats: StatSharkEntry[], ships: ShipEntry[], month?: Sta
 
 /**
  * Load all ship data (async)
- * @param month - Optional month filter. Defaults to latest month if not specified.
+ * @param range - Optional month range filter. Defaults to latest month if not specified.
  */
-export async function loadShips(month?: StatsMonthId): Promise<ShipVehicle[]> {
-  const targetMonth = month ?? DEFAULT_STATS_MONTH;
+export async function loadShips(range?: StatsMonthRange): Promise<ShipVehicle[]> {
+  const targetRange = range ?? DEFAULT_STATS_MONTH_RANGE;
+  const cacheKey = getMonthRangeCacheKey(targetRange);
   
-  // Check if already cached for this month
-  if (shipsByMonth.has(targetMonth)) {
-    return shipsByMonth.get(targetMonth)!;
+  // Check if already cached for this month range
+  if (shipsByMonthRange.has(cacheKey)) {
+    return shipsByMonthRange.get(cacheKey)!;
   }
 
   const [stats, ships] = await Promise.all([
@@ -130,8 +131,8 @@ export async function loadShips(month?: StatsMonthId): Promise<ShipVehicle[]> {
     loadShipsData(),
   ]);
 
-  const merged = mergeShipsData(stats, ships, targetMonth);
-  shipsByMonth.set(targetMonth, merged);
+  const merged = mergeShipsData(stats, ships, targetRange);
+  shipsByMonthRange.set(cacheKey, merged);
   return merged;
 }
 

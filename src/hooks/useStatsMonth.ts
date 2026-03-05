@@ -1,15 +1,18 @@
 import { useState, useEffect, useCallback } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import type { StatsMonthId } from '../types';
-import { isValidStatsMonthId } from '../types';
+import type { StatsMonthId, StatsMonthRange } from '../types';
+import { isValidStatsMonthId, isValidMonthRange } from '../types';
 import {
   getInitialStatsMonth,
   saveStatsMonthToStorage,
   updateURLWithStatsMonth,
+  getInitialStatsMonthRange,
+  saveStatsMonthRangeToStorage,
+  updateURLWithStatsMonthRange,
 } from '../utils/statsMonth';
 
 /**
- * Return type for useStatsMonth hook
+ * Return type for useStatsMonth hook (legacy single month)
  */
 export interface UseStatsMonthReturn {
   /** Current stats month ID */
@@ -25,6 +28,8 @@ export interface UseStatsMonthReturn {
  * - Initializes from URL params > localStorage > default (latest month)
  * - Syncs changes to both URL and localStorage
  * - Responds to external URL changes (e.g., browser back/forward)
+ * 
+ * @deprecated Use useStatsMonthRange instead for range selection support
  * 
  * @example
  * ```tsx
@@ -67,6 +72,98 @@ export function useStatsMonth(): UseStatsMonthReturn {
   return {
     statsMonth,
     handleStatsMonthChange,
+  };
+}
+
+// ============================================================================
+// Month Range Hook
+// ============================================================================
+
+/**
+ * Return type for useStatsMonthRange hook
+ */
+export interface UseStatsMonthRangeReturn {
+  /** Current stats month range */
+  statsMonthRange: StatsMonthRange;
+  /** Handler to change stats month range - updates state, localStorage, and URL */
+  handleStatsMonthRangeChange: (range: StatsMonthRange) => void;
+}
+
+/**
+ * Custom hook for managing stats month range state with URL sync and localStorage persistence.
+ * 
+ * Features:
+ * - Initializes from URL params > localStorage > default (latest month as single-month range)
+ * - Syncs changes to both URL and localStorage
+ * - Responds to external URL changes (e.g., browser back/forward)
+ * - Supports both new range format and legacy single month format
+ * 
+ * @example
+ * ```tsx
+ * function MyPage() {
+ *   const { statsMonthRange, handleStatsMonthRangeChange } = useStatsMonthRange();
+ *   
+ *   return (
+ *     <MonthRangeSelector
+ *       currentRange={statsMonthRange}
+ *       onRangeChange={handleStatsMonthRangeChange}
+ *     />
+ *   );
+ * }
+ * ```
+ */
+export function useStatsMonthRange(): UseStatsMonthRangeReturn {
+  const [searchParams, setSearchParams] = useSearchParams();
+  
+  // Initialize stats month range from URL or storage
+  const [statsMonthRange, setStatsMonthRange] = useState<StatsMonthRange>(() =>
+    getInitialStatsMonthRange(searchParams)
+  );
+
+  // Handle stats month range change - memoized to prevent unnecessary re-renders
+  const handleStatsMonthRangeChange = useCallback((range: StatsMonthRange) => {
+    // Validate range before applying
+    if (!isValidMonthRange(range)) {
+      console.warn('Invalid month range:', range);
+      return;
+    }
+    
+    setStatsMonthRange(range);
+    saveStatsMonthRangeToStorage(range);
+    updateURLWithStatsMonthRange(searchParams, setSearchParams, range);
+  }, [searchParams, setSearchParams]);
+
+  // Sync stats month range from URL on mount and when URL changes externally
+  // (e.g., browser back/forward navigation)
+  useEffect(() => {
+    const urlMonthStart = searchParams.get('monthStart');
+    const urlMonthEnd = searchParams.get('monthEnd');
+    const legacyMonth = searchParams.get('month');
+    
+    // Try new format first
+    if (urlMonthStart && urlMonthEnd && 
+        isValidStatsMonthId(urlMonthStart) && 
+        isValidStatsMonthId(urlMonthEnd)) {
+      const urlRange: StatsMonthRange = { startMonth: urlMonthStart, endMonth: urlMonthEnd };
+      if (isValidMonthRange(urlRange) && 
+          (urlRange.startMonth !== statsMonthRange.startMonth || 
+           urlRange.endMonth !== statsMonthRange.endMonth)) {
+        setStatsMonthRange(urlRange);
+      }
+    }
+    // Fallback to legacy format
+    else if (legacyMonth && isValidStatsMonthId(legacyMonth)) {
+      const legacyRange: StatsMonthRange = { startMonth: legacyMonth, endMonth: legacyMonth };
+      if (legacyRange.startMonth !== statsMonthRange.startMonth || 
+          legacyRange.endMonth !== statsMonthRange.endMonth) {
+        setStatsMonthRange(legacyRange);
+      }
+    }
+  }, [searchParams, statsMonthRange]);
+
+  return {
+    statsMonthRange,
+    handleStatsMonthRangeChange,
   };
 }
 

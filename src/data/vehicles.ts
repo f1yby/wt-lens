@@ -1,6 +1,6 @@
-import type { Vehicle, Ammunition, MainGun, PenetrationData, GameMode, VehicleStats, StatsMonthId } from '../types';
-import { DEFAULT_STATS_MONTH } from '../types';
-import { StatSharkEntry, cleanName, buildStatsMapByMode, convertToVehicleStats } from './base';
+import type { Vehicle, Ammunition, MainGun, PenetrationData, GameMode, VehicleStats, StatsMonthRange } from '../types';
+import { DEFAULT_STATS_MONTH_RANGE, getMonthRangeCacheKey } from '../types';
+import { StatSharkEntry, cleanName, buildStatsMapByMonthRange, convertToVehicleStats } from './base';
 
 // Raw data types from JSON
 interface DatamineEntry {
@@ -49,8 +49,8 @@ interface DatamineEntry {
 // Cache for loaded raw data
 let statsData: StatSharkEntry[] | null = null;
 let datamineData: DatamineEntry[] | null = null;
-// Cache for merged vehicles by month
-const vehiclesByMonth = new Map<StatsMonthId, Vehicle[]>();
+// Cache for merged vehicles by month range (key: startMonth_endMonth)
+const vehiclesByMonthRange = new Map<string, Vehicle[]>();
 
 /**
  * Load stats data from JSON
@@ -89,10 +89,10 @@ function buildDatamineMap(datamine: DatamineEntry[]): Map<string, DatamineEntry>
  * Merge StatShark and Datamine data by vehicle ID
  * @param stats - Array of StatShark entries
  * @param datamine - Array of datamine entries
- * @param month - Optional month filter for stats data
+ * @param range - Optional month range filter for stats data
  */
-function mergeVehicleData(stats: StatSharkEntry[], datamine: DatamineEntry[], month?: StatsMonthId): Vehicle[] {
-  const statsMapByMode = buildStatsMapByMode(stats, month);
+function mergeVehicleData(stats: StatSharkEntry[], datamine: DatamineEntry[], range?: StatsMonthRange): Vehicle[] {
+  const statsMapByMode = buildStatsMapByMonthRange(stats, range);
   const datamineMap = buildDatamineMap(datamine);
 
   // Get all unique vehicle IDs
@@ -171,14 +171,15 @@ function mergeVehicleData(stats: StatSharkEntry[], datamine: DatamineEntry[], mo
 
 /**
  * Load all vehicles data (async)
- * @param month - Optional month filter. Defaults to latest month if not specified.
+ * @param range - Optional month range filter. Defaults to latest month if not specified.
  */
-export async function loadVehicles(month?: StatsMonthId): Promise<Vehicle[]> {
-  const targetMonth = month ?? DEFAULT_STATS_MONTH;
+export async function loadVehicles(range?: StatsMonthRange): Promise<Vehicle[]> {
+  const targetRange = range ?? DEFAULT_STATS_MONTH_RANGE;
+  const cacheKey = getMonthRangeCacheKey(targetRange);
   
-  // Check if already cached for this month
-  if (vehiclesByMonth.has(targetMonth)) {
-    return vehiclesByMonth.get(targetMonth)!;
+  // Check if already cached for this month range
+  if (vehiclesByMonthRange.has(cacheKey)) {
+    return vehiclesByMonthRange.get(cacheKey)!;
   }
 
   const [stats, datamine] = await Promise.all([
@@ -186,8 +187,8 @@ export async function loadVehicles(month?: StatsMonthId): Promise<Vehicle[]> {
     loadDatamineData(),
   ]);
 
-  const vehicles = mergeVehicleData(stats, datamine, targetMonth);
-  vehiclesByMonth.set(targetMonth, vehicles);
+  const vehicles = mergeVehicleData(stats, datamine, targetRange);
+  vehiclesByMonthRange.set(cacheKey, vehicles);
   return vehicles;
 }
 

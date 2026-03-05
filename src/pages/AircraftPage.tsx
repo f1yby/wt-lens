@@ -5,11 +5,11 @@ import VehicleFilter from '../components/VehicleFilter';
 import type { TypeOption } from '../components/VehicleFilter';
 import AircraftTechTree from '../components/AircraftTechTree';
 import GameModeSelector from '../components/GameModeSelector';
-import MonthSelector from '../components/MonthSelector';
+import MonthRangeSelector from '../components/MonthSelector';
 import { loadAircraft } from '../data/aircraft';
 import type { Nation, AircraftType, AircraftVehicle } from '../types';
 import { useGameMode } from '../hooks/useGameMode';
-import { useStatsMonth } from '../hooks/useStatsMonth';
+import { useStatsMonthRange } from '../hooks/useStatsMonth';
 
 const AIRCRAFT_TYPES: TypeOption<AircraftType>[] = [
   { value: 'all', label: '全部' },
@@ -28,16 +28,16 @@ export default function AircraftPage() {
 
   // Use custom hooks for game mode and stats month management
   const { gameMode, handleGameModeChange } = useGameMode();
-  const { statsMonth, handleStatsMonthChange } = useStatsMonth();
+  const { statsMonthRange, handleStatsMonthRangeChange } = useStatsMonthRange();
 
-  // Reload data when month changes
+  // Reload data when month range changes
   useEffect(() => {
     setLoading(true);
-    loadAircraft(statsMonth).then(data => {
+    loadAircraft(statsMonthRange).then(data => {
       setAircraft(data);
       setLoading(false);
     });
-  }, [statsMonth]);
+  }, [statsMonthRange]);
 
   const filteredAircraft = useMemo(() => {
     return aircraft.filter(ac => {
@@ -74,9 +74,9 @@ export default function AircraftPage() {
           onShowUnreleasedChange={setShowUnreleased}
           typeOptions={AIRCRAFT_TYPES}
         />
-        <MonthSelector
-          currentMonth={statsMonth}
-          onMonthChange={handleStatsMonthChange}
+        <MonthRangeSelector
+          currentRange={statsMonthRange}
+          onRangeChange={handleStatsMonthRangeChange}
         />
 
         {/* Results Count */}

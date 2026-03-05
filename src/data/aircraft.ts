@@ -1,6 +1,6 @@
-import type { AircraftVehicle, AircraftType, VehicleStats, GameMode, StatsMonthId } from '../types';
-import { DEFAULT_STATS_MONTH } from '../types';
-import { StatSharkEntry, cleanName, buildStatsMapByMode, convertToVehicleStats } from './base';
+import type { AircraftVehicle, AircraftType, VehicleStats, GameMode, StatsMonthRange } from '../types';
+import { DEFAULT_STATS_MONTH_RANGE, getMonthRangeCacheKey } from '../types';
+import { StatSharkEntry, cleanName, buildStatsMapByMonthRange, convertToVehicleStats } from './base';
 
 interface AircraftEntry {
   id: string;
@@ -19,8 +19,8 @@ interface AircraftEntry {
 // Cache for loaded raw data
 let statsData: StatSharkEntry[] | null = null;
 let aircraftData: AircraftEntry[] | null = null;
-// Cache for merged aircraft by month
-const aircraftByMonth = new Map<StatsMonthId, AircraftVehicle[]>();
+// Cache for merged aircraft by month range (key: startMonth_endMonth)
+const aircraftByMonthRange = new Map<string, AircraftVehicle[]>();
 
 /**
  * Load stats data from JSON
@@ -59,10 +59,10 @@ function buildAircraftMap(aircraft: AircraftEntry[]): Map<string, AircraftEntry>
  * Merge StatShark and aircraft data by vehicle ID
  * @param stats - Array of StatShark entries
  * @param aircraft - Array of aircraft entries
- * @param month - Optional month filter for stats data
+ * @param range - Optional month range filter for stats data
  */
-function mergeAircraftData(stats: StatSharkEntry[], aircraft: AircraftEntry[], month?: StatsMonthId): AircraftVehicle[] {
-  const statsMapByMode = buildStatsMapByMode(stats, month);
+function mergeAircraftData(stats: StatSharkEntry[], aircraft: AircraftEntry[], range?: StatsMonthRange): AircraftVehicle[] {
+  const statsMapByMode = buildStatsMapByMonthRange(stats, range);
   const aircraftMap = buildAircraftMap(aircraft);
 
   // Get all unique aircraft IDs
@@ -115,14 +115,15 @@ function mergeAircraftData(stats: StatSharkEntry[], aircraft: AircraftEntry[], m
 
 /**
  * Load all aircraft data (async)
- * @param month - Optional month filter. Defaults to latest month if not specified.
+ * @param range - Optional month range filter. Defaults to latest month if not specified.
  */
-export async function loadAircraft(month?: StatsMonthId): Promise<AircraftVehicle[]> {
-  const targetMonth = month ?? DEFAULT_STATS_MONTH;
+export async function loadAircraft(range?: StatsMonthRange): Promise<AircraftVehicle[]> {
+  const targetRange = range ?? DEFAULT_STATS_MONTH_RANGE;
+  const cacheKey = getMonthRangeCacheKey(targetRange);
   
-  // Check if already cached for this month
-  if (aircraftByMonth.has(targetMonth)) {
-    return aircraftByMonth.get(targetMonth)!;
+  // Check if already cached for this month range
+  if (aircraftByMonthRange.has(cacheKey)) {
+    return aircraftByMonthRange.get(cacheKey)!;
   }
 
   const [stats, aircraft] = await Promise.all([
@@ -130,8 +131,8 @@ export async function loadAircraft(month?: StatsMonthId): Promise<AircraftVehicl
     loadAircraftData(),
   ]);
 
-  const merged = mergeAircraftData(stats, aircraft, targetMonth);
-  aircraftByMonth.set(targetMonth, merged);
+  const merged = mergeAircraftData(stats, aircraft, targetRange);
+  aircraftByMonthRange.set(cacheKey, merged);
   return merged;
 }
 
