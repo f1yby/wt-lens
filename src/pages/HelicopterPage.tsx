@@ -4,9 +4,11 @@ import Navbar from '../components/Navbar';
 import VehicleFilter from '../components/VehicleFilter';
 import AircraftTechTree from '../components/AircraftTechTree';
 import GameModeSelector from '../components/GameModeSelector';
+import MonthSelector from '../components/MonthSelector';
 import { loadAircraft } from '../data/aircraft';
 import type { Nation, AircraftVehicle } from '../types';
 import { useGameMode } from '../hooks/useGameMode';
+import { useStatsMonth } from '../hooks/useStatsMonth';
 
 export default function HelicopterPage() {
   const [aircraft, setAircraft] = useState<AircraftVehicle[]>([]);
@@ -15,15 +17,18 @@ export default function HelicopterPage() {
   const [brRange, setBrRange] = useState<[number, number]>([1.0, 12.7]);
   const [showUnreleased, setShowUnreleased] = useState(false);
 
-  // Use custom hook for game mode management
+  // Use custom hooks for game mode and stats month management
   const { gameMode, handleGameModeChange } = useGameMode();
+  const { statsMonth, handleStatsMonthChange } = useStatsMonth();
 
+  // Reload data when month changes
   useEffect(() => {
-    loadAircraft().then(data => {
+    setLoading(true);
+    loadAircraft(statsMonth).then(data => {
       setAircraft(data);
       setLoading(false);
     });
-  }, []);
+  }, [statsMonth]);
 
   const filteredHelicopters = useMemo(() => {
     return aircraft.filter(ac => {
@@ -40,6 +45,7 @@ export default function HelicopterPage() {
       <Navbar />
 
       <Container maxWidth="xl" sx={{ pt: 12, pb: 4 }}>
+        {/* Mode Selector */}
         <GameModeSelector
           currentMode={gameMode}
           onModeChange={handleGameModeChange}
@@ -55,6 +61,10 @@ export default function HelicopterPage() {
           showUnreleased={showUnreleased}
           onShowUnreleasedChange={setShowUnreleased}
           typeOptions={[]}
+        />
+        <MonthSelector
+          currentMonth={statsMonth}
+          onMonthChange={handleStatsMonthChange}
         />
 
         <Box sx={{ mb: 2, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>

@@ -1,4 +1,5 @@
-import type { Vehicle, Ammunition, MainGun, PenetrationData, GameMode, VehicleStats } from '../types';
+import type { Vehicle, Ammunition, MainGun, PenetrationData, GameMode, VehicleStats, StatsMonthId } from '../types';
+import { DEFAULT_STATS_MONTH } from '../types';
 import { StatSharkEntry, cleanName, buildStatsMapByMode, convertToVehicleStats } from './base';
 
 // Raw data types from JSON
@@ -45,10 +46,11 @@ interface DatamineEntry {
   releaseDate?: string;
 }
 
-// Cache for loaded data
+// Cache for loaded raw data
 let statsData: StatSharkEntry[] | null = null;
 let datamineData: DatamineEntry[] | null = null;
-let mergedVehicles: Vehicle[] | null = null;
+// Cache for merged vehicles by month
+const vehiclesByMonth = new Map<StatsMonthId, Vehicle[]>();
 
 /**
  * Load stats data from JSON
@@ -85,9 +87,12 @@ function buildDatamineMap(datamine: DatamineEntry[]): Map<string, DatamineEntry>
 
 /**
  * Merge StatShark and Datamine data by vehicle ID
+ * @param stats - Array of StatShark entries
+ * @param datamine - Array of datamine entries
+ * @param month - Optional month filter for stats data
  */
-function mergeVehicleData(stats: StatSharkEntry[], datamine: DatamineEntry[]): Vehicle[] {
-  const statsMapByMode = buildStatsMapByMode(stats);
+function mergeVehicleData(stats: StatSharkEntry[], datamine: DatamineEntry[], month?: StatsMonthId): Vehicle[] {
+  const statsMapByMode = buildStatsMapByMode(stats, month);
   const datamineMap = buildDatamineMap(datamine);
 
   // Get all unique vehicle IDs
@@ -166,17 +171,24 @@ function mergeVehicleData(stats: StatSharkEntry[], datamine: DatamineEntry[]): V
 
 /**
  * Load all vehicles data (async)
+ * @param month - Optional month filter. Defaults to latest month if not specified.
  */
-export async function loadVehicles(): Promise<Vehicle[]> {
-  if (mergedVehicles) return mergedVehicles;
+export async function loadVehicles(month?: StatsMonthId): Promise<Vehicle[]> {
+  const targetMonth = month ?? DEFAULT_STATS_MONTH;
+  
+  // Check if already cached for this month
+  if (vehiclesByMonth.has(targetMonth)) {
+    return vehiclesByMonth.get(targetMonth)!;
+  }
 
   const [stats, datamine] = await Promise.all([
     loadStatsData(),
     loadDatamineData(),
   ]);
 
-  mergedVehicles = mergeVehicleData(stats, datamine);
-  return mergedVehicles;
+  const vehicles = mergeVehicleData(stats, datamine, targetMonth);
+  vehiclesByMonth.set(targetMonth, vehicles);
+  return vehicles;
 }
 
 /**

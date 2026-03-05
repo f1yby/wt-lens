@@ -5,9 +5,11 @@ import VehicleFilter from '../components/VehicleFilter';
 import type { TypeOption } from '../components/VehicleFilter';
 import ShipTechTree from '../components/ShipTechTree';
 import GameModeSelector from '../components/GameModeSelector';
+import MonthSelector from '../components/MonthSelector';
 import { loadShips } from '../data/ships';
 import type { Nation, ShipType, ShipVehicle } from '../types';
 import { useGameMode } from '../hooks/useGameMode';
+import { useStatsMonth } from '../hooks/useStatsMonth';
 
 const SHIP_TYPES: TypeOption<ShipType>[] = [
   { value: 'all', label: '全部' },
@@ -27,15 +29,18 @@ export default function ShipPage() {
   const [selectedType, setSelectedType] = useState<ShipType | 'all'>('all');
   const [showUnreleased, setShowUnreleased] = useState(false);
 
-  // Use custom hook for game mode management
+  // Use custom hooks for game mode and stats month management
   const { gameMode, handleGameModeChange } = useGameMode();
+  const { statsMonth, handleStatsMonthChange } = useStatsMonth();
 
+  // Reload data when month changes
   useEffect(() => {
-    loadShips().then(data => {
+    setLoading(true);
+    loadShips(statsMonth).then(data => {
       setShips(data);
       setLoading(false);
     });
-  }, []);
+  }, [statsMonth]);
 
   const filteredShips = useMemo(() => {
     return ships.filter(ship => {
@@ -53,6 +58,7 @@ export default function ShipPage() {
 
       {/* Main Content */}
       <Container maxWidth="xl" sx={{ pt: 12, pb: 4 }}>
+        {/* Mode Selector */}
         <GameModeSelector
           currentMode={gameMode}
           onModeChange={handleGameModeChange}
@@ -68,6 +74,10 @@ export default function ShipPage() {
           showUnreleased={showUnreleased}
           onShowUnreleasedChange={setShowUnreleased}
           typeOptions={SHIP_TYPES}
+        />
+        <MonthSelector
+          currentMonth={statsMonth}
+          onMonthChange={handleStatsMonthChange}
         />
 
         {/* Results Count */}

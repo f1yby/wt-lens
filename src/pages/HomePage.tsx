@@ -4,9 +4,11 @@ import Navbar from '../components/Navbar';
 import VehicleFilter from '../components/VehicleFilter';
 import VehicleTechTree from '../components/VehicleTechTree';
 import GameModeSelector from '../components/GameModeSelector';
+import MonthSelector from '../components/MonthSelector';
 import { loadVehicles } from '../data/vehicles';
 import type { Nation, VehicleType, Vehicle } from '../types';
 import { useGameMode } from '../hooks/useGameMode';
+import { useStatsMonth } from '../hooks/useStatsMonth';
 
 export default function HomePage() {
   const [vehicles, setVehicles] = useState<Vehicle[]>([]);
@@ -16,15 +18,18 @@ export default function HomePage() {
   const [selectedType, setSelectedType] = useState<VehicleType | 'all'>('all');
   const [showUnreleased, setShowUnreleased] = useState(false);
 
-  // Use custom hook for game mode management
+  // Use custom hooks for game mode and stats month management
   const { gameMode, handleGameModeChange } = useGameMode();
+  const { statsMonth, handleStatsMonthChange } = useStatsMonth();
 
+  // Reload data when month changes
   useEffect(() => {
-    loadVehicles().then(data => {
+    setLoading(true);
+    loadVehicles(statsMonth).then(data => {
       setVehicles(data);
       setLoading(false);
     });
-  }, []);
+  }, [statsMonth]);
 
   const filteredVehicles = useMemo(() => {
     return vehicles.filter(vehicle => {
@@ -43,6 +48,7 @@ export default function HomePage() {
       
       {/* Main Content */}
       <Container maxWidth="xl" sx={{ pt: 12, pb: 4 }}>
+        {/* Mode Selector */}
         <GameModeSelector
           currentMode={gameMode}
           onModeChange={handleGameModeChange}
@@ -57,6 +63,10 @@ export default function HomePage() {
           onTypeChange={setSelectedType}
           showUnreleased={showUnreleased}
           onShowUnreleasedChange={setShowUnreleased}
+        />
+        <MonthSelector
+          currentMonth={statsMonth}
+          onMonthChange={handleStatsMonthChange}
         />
 
         {/* Results Count */}

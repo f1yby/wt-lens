@@ -5,9 +5,11 @@ import VehicleFilter from '../components/VehicleFilter';
 import type { TypeOption } from '../components/VehicleFilter';
 import AircraftTechTree from '../components/AircraftTechTree';
 import GameModeSelector from '../components/GameModeSelector';
+import MonthSelector from '../components/MonthSelector';
 import { loadAircraft } from '../data/aircraft';
 import type { Nation, AircraftType, AircraftVehicle } from '../types';
 import { useGameMode } from '../hooks/useGameMode';
+import { useStatsMonth } from '../hooks/useStatsMonth';
 
 const AIRCRAFT_TYPES: TypeOption<AircraftType>[] = [
   { value: 'all', label: '全部' },
@@ -24,15 +26,18 @@ export default function AircraftPage() {
   const [selectedType, setSelectedType] = useState<AircraftType | 'all'>('all');
   const [showUnreleased, setShowUnreleased] = useState(false);
 
-  // Use custom hook for game mode management
+  // Use custom hooks for game mode and stats month management
   const { gameMode, handleGameModeChange } = useGameMode();
+  const { statsMonth, handleStatsMonthChange } = useStatsMonth();
 
+  // Reload data when month changes
   useEffect(() => {
-    loadAircraft().then(data => {
+    setLoading(true);
+    loadAircraft(statsMonth).then(data => {
       setAircraft(data);
       setLoading(false);
     });
-  }, []);
+  }, [statsMonth]);
 
   const filteredAircraft = useMemo(() => {
     return aircraft.filter(ac => {
@@ -52,6 +57,7 @@ export default function AircraftPage() {
 
       {/* Main Content */}
       <Container maxWidth="xl" sx={{ pt: 12, pb: 4 }}>
+        {/* Mode Selector */}
         <GameModeSelector
           currentMode={gameMode}
           onModeChange={handleGameModeChange}
@@ -67,6 +73,10 @@ export default function AircraftPage() {
           showUnreleased={showUnreleased}
           onShowUnreleasedChange={setShowUnreleased}
           typeOptions={AIRCRAFT_TYPES}
+        />
+        <MonthSelector
+          currentMonth={statsMonth}
+          onMonthChange={handleStatsMonthChange}
         />
 
         {/* Results Count */}

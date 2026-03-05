@@ -17,6 +17,7 @@ import DistributionChart from '../components/DistributionChart';
 import StabilizerScatterChart from '../components/StabilizerScatterChart';
 import { BRGridSelector } from '../components/VehicleFilter';
 import GameModeSelector from '../components/GameModeSelector';
+import MonthSelector from '../components/MonthSelector';
 
 import { loadVehicles, getVehicleStatsByMode } from '../data/vehicles';
 import { VEHICLE_TYPE_LABELS, BATTLE_RATINGS, ECONOMIC_TYPE_GRADIENTS } from '../types';
@@ -25,6 +26,7 @@ import { getVehicleImagePath, getFlagImagePath } from '../utils/paths';
 import { getBRGradientColor } from '../utils/chart';
 import { getWinRateColor } from '../utils/gameMode';
 import { useGameMode } from '../hooks/useGameMode';
+import { useStatsMonth } from '../hooks/useStatsMonth';
 
 /** Gets the numeric value for a given metric from vehicle performance data */
 function getMetricValue(vehicle: Vehicle, metric: MetricType): number {
@@ -550,11 +552,14 @@ export default function VehicleDetailPage() {
   const [brRange, setBrRange] = useState<[number, number] | null>(null);
   const [typesInitialized, setTypesInitialized] = useState(false);
 
-  // Use custom hook for game mode management
+  // Use custom hooks for game mode and stats month management
   const { gameMode, handleGameModeChange } = useGameMode();
+  const { statsMonth, handleStatsMonthChange } = useStatsMonth();
 
+  // Reload data when month changes
   useEffect(() => {
-    loadVehicles()
+    setLoading(true);
+    loadVehicles(statsMonth)
       .then(data => {
         setVehicles(data);
         setLoading(false);
@@ -562,7 +567,7 @@ export default function VehicleDetailPage() {
       .catch(() => {
         setLoading(false);
       });
-  }, []);
+  }, [statsMonth]);
 
   const vehicle = vehicles.find(v => v.id === id);
   // Default selectedTypes to current vehicle's type
@@ -977,10 +982,14 @@ export default function VehicleDetailPage() {
           </Box>
         </Paper>
 
-        {/* Game Mode Selector */}
+        {/* Mode Selector */}
         <GameModeSelector
           currentMode={gameMode}
           onModeChange={handleGameModeChange}
+        />
+        <MonthSelector
+          currentMonth={statsMonth}
+          onMonthChange={handleStatsMonthChange}
         />
 
         {/* Comparison Charts */}

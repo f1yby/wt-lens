@@ -2,7 +2,8 @@
  * Base module for shared data loading utilities.
  * Contains common types and functions used by vehicles, aircraft, and ships data modules.
  */
-import type { GameMode, VehicleStats } from '../types';
+import type { GameMode, VehicleStats, StatsMonthId } from '../types';
+import { DEFAULT_STATS_MONTH } from '../types';
 
 /**
  * StatShark entry from stats.json / aircraft-stats.json / ship-stats.json
@@ -17,6 +18,7 @@ export interface StatSharkEntry {
   exp_per_spawn?: number;
   rank?: number;
   br?: number;
+  month?: string; // 月份标识，如 "diff_2025_febuary_march"
 }
 
 /**
@@ -31,11 +33,25 @@ export function cleanName(name: string): string {
 /**
  * Build StatShark stats map grouped by game mode
  * Returns a map of vehicleId -> Record<GameMode, StatSharkEntry>
+ * @param stats - Array of StatShark entries
+ * @param month - Optional month filter. If provided, only entries with matching month are included.
+ *                If not provided, defaults to the latest month (DEFAULT_STATS_MONTH).
  */
-export function buildStatsMapByMode(stats: StatSharkEntry[]): Map<string, Record<GameMode, StatSharkEntry | undefined>> {
+export function buildStatsMapByMode(
+  stats: StatSharkEntry[], 
+  month?: StatsMonthId
+): Map<string, Record<GameMode, StatSharkEntry | undefined>> {
   const statsMap = new Map<string, Record<GameMode, StatSharkEntry | undefined>>();
+  
+  // Use default month if not specified
+  const targetMonth = month ?? DEFAULT_STATS_MONTH;
 
   for (const entry of stats) {
+    // Filter by month if entry has month field
+    if (entry.month && entry.month !== targetMonth) {
+      continue;
+    }
+    
     const mode = entry.mode as GameMode;
     if (!statsMap.has(entry.id)) {
       statsMap.set(entry.id, { arcade: undefined, historical: undefined, simulation: undefined });

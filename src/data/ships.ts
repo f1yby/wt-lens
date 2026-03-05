@@ -1,4 +1,5 @@
-import type { ShipVehicle, ShipType, VehicleStats, GameMode } from '../types';
+import type { ShipVehicle, ShipType, VehicleStats, GameMode, StatsMonthId } from '../types';
+import { DEFAULT_STATS_MONTH } from '../types';
 import { StatSharkEntry, cleanName, buildStatsMapByMode, convertToVehicleStats } from './base';
 
 interface ShipEntry {
@@ -15,10 +16,11 @@ interface ShipEntry {
   releaseDate?: string;
 }
 
-// Cache for loaded data
+// Cache for loaded raw data
 let statsData: StatSharkEntry[] | null = null;
 let shipsData: ShipEntry[] | null = null;
-let mergedShips: ShipVehicle[] | null = null;
+// Cache for merged ships by month
+const shipsByMonth = new Map<StatsMonthId, ShipVehicle[]>();
 
 /**
  * Load stats data from JSON
@@ -55,9 +57,12 @@ function buildShipsMap(ships: ShipEntry[]): Map<string, ShipEntry> {
 
 /**
  * Merge StatShark and ship data by vehicle ID
+ * @param stats - Array of StatShark entries
+ * @param ships - Array of ship entries
+ * @param month - Optional month filter for stats data
  */
-function mergeShipsData(stats: StatSharkEntry[], ships: ShipEntry[]): ShipVehicle[] {
-  const statsMapByMode = buildStatsMapByMode(stats);
+function mergeShipsData(stats: StatSharkEntry[], ships: ShipEntry[], month?: StatsMonthId): ShipVehicle[] {
+  const statsMapByMode = buildStatsMapByMode(stats, month);
   const shipsMap = buildShipsMap(ships);
 
   // Get all unique ship IDs
@@ -110,17 +115,24 @@ function mergeShipsData(stats: StatSharkEntry[], ships: ShipEntry[]): ShipVehicl
 
 /**
  * Load all ship data (async)
+ * @param month - Optional month filter. Defaults to latest month if not specified.
  */
-export async function loadShips(): Promise<ShipVehicle[]> {
-  if (mergedShips) return mergedShips;
+export async function loadShips(month?: StatsMonthId): Promise<ShipVehicle[]> {
+  const targetMonth = month ?? DEFAULT_STATS_MONTH;
+  
+  // Check if already cached for this month
+  if (shipsByMonth.has(targetMonth)) {
+    return shipsByMonth.get(targetMonth)!;
+  }
 
   const [stats, ships] = await Promise.all([
     loadStatsData(),
     loadShipsData(),
   ]);
 
-  mergedShips = mergeShipsData(stats, ships);
-  return mergedShips;
+  const merged = mergeShipsData(stats, ships, targetMonth);
+  shipsByMonth.set(targetMonth, merged);
+  return merged;
 }
 
 /**

@@ -376,3 +376,56 @@ export const GAME_MODE_LABELS: Record<GameMode, string> = {
 
 /** Default game mode */
 export const DEFAULT_GAME_MODE: GameMode = 'historical';
+
+// ============================================================================
+// Stats Month Types (for historical data filtering)
+// ============================================================================
+
+/** 统计数据月份 ID */
+export type StatsMonthId = 
+  | 'diff_2025_febuary_march'
+  | 'diff_2025_march_april'
+  | 'diff_2025_april_may'
+  | 'diff_2025_may_june'
+  | 'diff_2025_june_july'
+  | 'diff_2025_july_august'
+  | 'diff_2025_august_september'
+  | 'diff_2025_september_october'
+  | 'diff_2025_october_november'
+  | 'diff_2025_november_december'
+  | 'diff_2025_december_january'
+  | 'diff_2026_january_february';
+
+/** 月份配置 */
+export interface StatsMonthConfig {
+  id: StatsMonthId;
+  label: string;      // 如 "2025年2-3月"
+  shortLabel: string; // 如 "2-3月"
+}
+
+/** 所有可用的统计数据月份配置（按时间从早到晚排序） */
+export const STATS_MONTHS: StatsMonthConfig[] = [
+  { id: 'diff_2025_febuary_march', label: '2025年2月', shortLabel: '25年2月' },
+  { id: 'diff_2025_march_april', label: '2025年3月', shortLabel: '25年3月' },
+  { id: 'diff_2025_april_may', label: '2025年4月', shortLabel: '25年4月' },
+  { id: 'diff_2025_may_june', label: '2025年5月', shortLabel: '25年5月' },
+  { id: 'diff_2025_june_july', label: '2025年6月', shortLabel: '25年6月' },
+  { id: 'diff_2025_july_august', label: '2025年7月', shortLabel: '25年7月' },
+  { id: 'diff_2025_august_september', label: '2025年8月', shortLabel: '25年8月' },
+  { id: 'diff_2025_september_october', label: '2025年9月', shortLabel: '25年9月' },
+  { id: 'diff_2025_october_november', label: '2025年10月', shortLabel: '25年10月' },
+  { id: 'diff_2025_november_december', label: '2025年11月', shortLabel: '25年11月' },
+  { id: 'diff_2025_december_january', label: '2025年12月', shortLabel: '25年12月' },
+  { id: 'diff_2026_january_february', label: '2026年1月', shortLabel: '26年1月' },
+];
+
+/** 默认统计数据月份（最新月份） */
+export const DEFAULT_STATS_MONTH: StatsMonthId = 'diff_2026_january_february';
+
+/** 根据月份ID获取配置 */
+export const getStatsMonthConfig = (monthId: StatsMonthId): StatsMonthConfig | undefined => 
+  STATS_MONTHS.find(m => m.id === monthId);
+
+/** 验证月份ID是否有效 */
+export const isValidStatsMonthId = (value: string): value is StatsMonthId =>
+  STATS_MONTHS.some(m => m.id === value);

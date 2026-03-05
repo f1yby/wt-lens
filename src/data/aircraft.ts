@@ -1,4 +1,5 @@
-import type { AircraftVehicle, AircraftType, VehicleStats, GameMode } from '../types';
+import type { AircraftVehicle, AircraftType, VehicleStats, GameMode, StatsMonthId } from '../types';
+import { DEFAULT_STATS_MONTH } from '../types';
 import { StatSharkEntry, cleanName, buildStatsMapByMode, convertToVehicleStats } from './base';
 
 interface AircraftEntry {
@@ -15,10 +16,11 @@ interface AircraftEntry {
   releaseDate?: string;
 }
 
-// Cache for loaded data
+// Cache for loaded raw data
 let statsData: StatSharkEntry[] | null = null;
 let aircraftData: AircraftEntry[] | null = null;
-let mergedAircraft: AircraftVehicle[] | null = null;
+// Cache for merged aircraft by month
+const aircraftByMonth = new Map<StatsMonthId, AircraftVehicle[]>();
 
 /**
  * Load stats data from JSON
@@ -55,9 +57,12 @@ function buildAircraftMap(aircraft: AircraftEntry[]): Map<string, AircraftEntry>
 
 /**
  * Merge StatShark and aircraft data by vehicle ID
+ * @param stats - Array of StatShark entries
+ * @param aircraft - Array of aircraft entries
+ * @param month - Optional month filter for stats data
  */
-function mergeAircraftData(stats: StatSharkEntry[], aircraft: AircraftEntry[]): AircraftVehicle[] {
-  const statsMapByMode = buildStatsMapByMode(stats);
+function mergeAircraftData(stats: StatSharkEntry[], aircraft: AircraftEntry[], month?: StatsMonthId): AircraftVehicle[] {
+  const statsMapByMode = buildStatsMapByMode(stats, month);
   const aircraftMap = buildAircraftMap(aircraft);
 
   // Get all unique aircraft IDs
@@ -110,17 +115,24 @@ function mergeAircraftData(stats: StatSharkEntry[], aircraft: AircraftEntry[]): 
 
 /**
  * Load all aircraft data (async)
+ * @param month - Optional month filter. Defaults to latest month if not specified.
  */
-export async function loadAircraft(): Promise<AircraftVehicle[]> {
-  if (mergedAircraft) return mergedAircraft;
+export async function loadAircraft(month?: StatsMonthId): Promise<AircraftVehicle[]> {
+  const targetMonth = month ?? DEFAULT_STATS_MONTH;
+  
+  // Check if already cached for this month
+  if (aircraftByMonth.has(targetMonth)) {
+    return aircraftByMonth.get(targetMonth)!;
+  }
 
   const [stats, aircraft] = await Promise.all([
     loadStatsData(),
     loadAircraftData(),
   ]);
 
-  mergedAircraft = mergeAircraftData(stats, aircraft);
-  return mergedAircraft;
+  const merged = mergeAircraftData(stats, aircraft, targetMonth);
+  aircraftByMonth.set(targetMonth, merged);
+  return merged;
 }
 
 /**

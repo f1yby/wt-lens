@@ -3,35 +3,53 @@
 Fetch War Thunder vehicle statistics from StatShark API
 """
 
-import requests
+import argparse
 import json
-import os
-from datetime import datetime
+import requests
 from pathlib import Path
 
 
-def fetch_statshark_data(month_id: str = None) -> dict:
+# 可用的 diff 月份列表（按时间从早到晚排序）
+DIFF_MONTHS = [
+    "diff_2025_febuary_march",      # 2025年2-3月 (最早)
+    "diff_2025_march_april",
+    "diff_2025_april_may",
+    "diff_2025_may_june",
+    "diff_2025_june_july",
+    "diff_2025_july_august",
+    "diff_2025_august_september",
+    "diff_2025_september_october",
+    "diff_2025_october_november",
+    "diff_2025_november_december",
+    "diff_2025_december_january",
+    "diff_2026_january_february",   # 2026年1-2月 (最新)
+]
+
+
+def fetch_statshark_data(month_id: str) -> dict:
     """
     Fetch global user stats from StatShark API
     
     Args:
-        month_id: Format like "diff_2026_january_february" or "2026_february"
-                 If None, uses current month
+        month_id: Format like "diff_2026_january_february"
     
     Returns:
         JSON response from API
     """
     url = "https://statshark.net/api/misc/getGlobalUserStats"
     
-    if month_id is None:
-        # Generate current month id
-        now = datetime.now()
-        month_id = f"{now.year}_{now.strftime('%B').lower()}"
-    
     payload = {"id": month_id}
     
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+        "Accept": "application/json, text/plain, */*",
+        "Accept-Language": "en-US,en;q=0.9",
+        "Origin": "https://statshark.net",
+        "Referer": "https://statshark.net/",
+    }
+    
     try:
-        response = requests.post(url, json=payload, timeout=30)
+        response = requests.post(url, json=payload, headers=headers, timeout=30)
         response.raise_for_status()
         return response.json()
     except requests.RequestException as e:
@@ -134,30 +152,53 @@ def save_stats(vehicles: list, output_path: str):
 
 def main():
     """Main entry point"""
-    # Determine month to fetch
-    # You can override this with environment variable
-    month_id = os.environ.get("STATSHARK_MONTH") or "diff_2026_january_february"
+    parser = argparse.ArgumentParser(description="Fetch War Thunder vehicle statistics from StatShark")
+    parser.add_argument("--all", action="store_true", help="Fetch all available months (from earliest to latest)")
+    args = parser.parse_args()
     
-    print(f"Fetching StatShark data for: {month_id}")
+    # Determine which months to fetch
+    if args.all:
+        months_to_fetch = DIFF_MONTHS  # All months from earliest to latest
+        print(f"Fetching all {len(months_to_fetch)} months...")
+    else:
+        months_to_fetch = [DIFF_MONTHS[-1]]  # Only latest month
     
-    # Fetch data
-    raw_data = fetch_statshark_data(month_id)
+    all_vehicles = []
     
-    if not raw_data:
-        print("Failed to fetch data")
+    for month_id in months_to_fetch:
+        print(f"Fetching StatShark data for: {month_id}")
+        
+        # Fetch data
+        raw_data = fetch_statshark_data(month_id)
+        
+        if not raw_data:
+            print(f"  Failed to fetch data for {month_id}, skipping...")
+            continue
+        
+        # Save raw data for reference
+        raw_path = Path(__file__).parent.parent / "raw" / f"statshark_{month_id}.json"
+        raw_path.parent.mkdir(parents=True, exist_ok=True)
+        with open(raw_path, 'w', encoding='utf-8') as f:
+            json.dump(raw_data, f, ensure_ascii=False, indent=2)
+        print(f"  Saved raw data to {raw_path}")
+        
+        # Parse stats
+        vehicles = parse_vehicle_stats(raw_data)
+        print(f"  Parsed {len(vehicles)} vehicle stats")
+        
+        # Add month info to each vehicle
+        for v in vehicles:
+            v["month"] = month_id
+        
+        all_vehicles.extend(vehicles)
+    
+    if not all_vehicles:
+        print("No data fetched")
         return 1
     
-    # Save raw data for reference
-    raw_path = Path(__file__).parent.parent / "raw" / f"statshark_{month_id}.json"
-    raw_path.parent.mkdir(parents=True, exist_ok=True)
-    with open(raw_path, 'w', encoding='utf-8') as f:
-        json.dump(raw_data, f, ensure_ascii=False, indent=2)
-    print(f"Saved raw data to {raw_path}")
-    
-    # Parse and save processed stats
-    vehicles = parse_vehicle_stats(raw_data)
+    # Save final stats
     output_path = Path(__file__).parent.parent.parent / "public" / "data" / "stats.json"
-    save_stats(vehicles, str(output_path))
+    save_stats(all_vehicles, str(output_path))
     
     return 0
 
