@@ -78,10 +78,12 @@ export default function AircraftPage() {
       {/* Main Content */}
       <Container maxWidth="xl" sx={{ pt: 12, pb: 4 }}>
         {/* Mode Selector */}
-        <GameModeSelector
-          currentMode={gameMode}
-          onModeChange={handleGameModeChange}
-        />
+        <Box sx={{ mb: 2 }}>
+          <GameModeSelector
+            currentMode={gameMode}
+            onModeChange={handleGameModeChange}
+          />
+        </Box>
 
         <VehicleFilter
           selectedNations={selectedNations}

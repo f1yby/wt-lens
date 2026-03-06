@@ -760,6 +760,8 @@ def load_aircraft_ids() -> list[str]:
             continue
         unit_class = vdata.get('unitClass', '')
         if unit_class in AIRCRAFT_TYPE_MAP:
+            if _is_event_or_tutorial(vid):
+                continue
             aircraft_ids.append(vid)
 
     aircraft_ids.sort()
@@ -842,6 +844,20 @@ def fetch_aircraft_data(vehicle_id: str, copy_images: bool = True) -> dict[str, 
     elif (AIRCRAFT_IMAGES_PATH / f"{vehicle_id}.png").exists():
         image_url = f"aircrafts/{vehicle_id}.webp"
     
+    # Get release date from unittags.blkx
+    unittags = load_unittags_data()
+    tag = unittags.get(vehicle_id, {})
+    release_date_str = tag.get('releaseDate')
+    release_date = release_date_str[:10] if release_date_str else None
+
+    is_unreleased = False
+    if release_date:
+        try:
+            release_dt = datetime.strptime(release_date, '%Y-%m-%d')
+            is_unreleased = release_dt > datetime.now()
+        except ValueError:
+            pass
+
     result: dict[str, Any] = {
         'id': vehicle_id,
         'name': vehicle_id,
@@ -862,6 +878,11 @@ def fetch_aircraft_data(vehicle_id: str, copy_images: bool = True) -> dict[str, 
     # Only include groundBattleRating if it differs from air BR
     if ground_br is not None and abs(ground_br - br_realistic) > 0.01:
         result['groundBattleRating'] = ground_br
+
+    if is_unreleased:
+        result['unreleased'] = True
+    if release_date:
+        result['releaseDate'] = release_date
     
     return result
 
@@ -922,6 +943,8 @@ def load_ship_ids() -> list[str]:
             continue
         unit_class = vdata.get('unitClass', '')
         if unit_class in SHIP_TYPE_MAP:
+            if _is_event_or_tutorial(vid):
+                continue
             ship_ids.append(vid)
 
     ship_ids.sort()
@@ -1000,7 +1023,21 @@ def fetch_ship_data(vehicle_id: str, copy_images: bool = True) -> dict[str, Any]
     elif (SHIP_IMAGES_PATH / f"{vehicle_id}.png").exists():
         image_url = f"ships/{vehicle_id}.webp"
     
-    return {
+    # Get release date from unittags.blkx
+    unittags = load_unittags_data()
+    tag = unittags.get(vehicle_id, {})
+    release_date_str = tag.get('releaseDate')
+    release_date = release_date_str[:10] if release_date_str else None
+
+    is_unreleased = False
+    if release_date:
+        try:
+            release_dt = datetime.strptime(release_date, '%Y-%m-%d')
+            is_unreleased = release_dt > datetime.now()
+        except ValueError:
+            pass
+
+    result: dict[str, Any] = {
         'id': vehicle_id,
         'name': vehicle_id,
         'localizedName': localized_name,
@@ -1016,6 +1053,13 @@ def fetch_ship_data(vehicle_id: str, copy_images: bool = True) -> dict[str, Any]
         'economicType': economic_type,
         'imageUrl': image_url,
     }
+
+    if is_unreleased:
+        result['unreleased'] = True
+    if release_date:
+        result['releaseDate'] = release_date
+
+    return result
 
 
 def fetch_all_ships(copy_images: bool = True) -> list[dict[str, Any]]:
