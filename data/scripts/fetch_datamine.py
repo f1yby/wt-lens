@@ -1556,6 +1556,16 @@ def fetch_vehicle_performance(vehicle_id: str, copy_images: bool = True) -> Vehi
     release_date_str = tag.get('releaseDate')  # e.g. "2026-03-10 00:00:00"
     release_date = release_date_str[:10] if release_date_str else None  # "2026-03-10"
 
+    # Check if vehicle is unreleased (release date in the future)
+    is_unreleased = False
+    if release_date:
+        from datetime import datetime
+        try:
+            release_dt = datetime.strptime(release_date, '%Y-%m-%d')
+            is_unreleased = release_dt > datetime.now()
+        except ValueError:
+            pass
+
     return VehicleData(
         id=vehicle_id,
         name=vehicle_id,
@@ -1568,6 +1578,7 @@ def fetch_vehicle_performance(vehicle_id: str, copy_images: bool = True) -> Vehi
         performance=perf,
         image_url=image_url,
         source="datamine_tankmodel",
+        unreleased=is_unreleased,
         release_date=release_date,
     )
 
