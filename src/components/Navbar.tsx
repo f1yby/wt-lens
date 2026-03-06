@@ -125,22 +125,14 @@ export default function Navbar() {
             </Button>
           </Box>
 
-          <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
-            <Typography
-              variant="body2"
-              sx={{ color: '#525252', display: { xs: 'none', sm: 'block' } }}
-            >
-              {isShipPage ? '海战历史模式' : isHelicopterPage ? '直升机历史模式' : isAircraft ? '空战历史模式' : '陆战历史模式'}
-            </Typography>
-            <a
-              href="https://github.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ color: '#525252', display: 'flex', alignItems: 'center' }}
-            >
-              <GitHub sx={{ fontSize: 20 }} />
-            </a>
-          </Box>
+          <a
+            href="https://github.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: '#525252', display: 'flex', alignItems: 'center' }}
+          >
+            <GitHub sx={{ fontSize: 20 }} />
+          </a>
         </Toolbar>
       </Container>
     </AppBar>

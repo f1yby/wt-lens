@@ -34,10 +34,17 @@ export default function HomePage() {
 
   // 计算数据中的实际最大 BR，用于 BR 筛选器
   const availableBRs = useMemo(() => {
-    if (vehicles.length === 0) return BATTLE_RATINGS;
+    if (vehicles.length === 0) return [];
     const maxBR = Math.max(...vehicles.map(v => v.battleRating));
     return BATTLE_RATINGS.filter(br => br <= maxBR);
   }, [vehicles]);
+
+  // 数据加载完成后，校正 brRange 到实际可用范围
+  useEffect(() => {
+    if (availableBRs.length > 0) {
+      setBrRange([availableBRs[0], availableBRs[availableBRs.length - 1]]);
+    }
+  }, [availableBRs]);
 
   const filteredVehicles = useMemo(() => {
     return vehicles.filter(vehicle => {

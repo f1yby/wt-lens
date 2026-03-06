@@ -45,10 +45,17 @@ export default function ShipPage() {
 
   // 计算舰船数据中的实际最大 BR
   const availableBRs = useMemo(() => {
-    if (ships.length === 0) return BATTLE_RATINGS;
+    if (ships.length === 0) return [];
     const maxBR = Math.max(...ships.map(s => s.battleRating));
     return BATTLE_RATINGS.filter(br => br <= maxBR);
   }, [ships]);
+
+  // 数据加载完成后，校正 brRange 到实际可用范围
+  useEffect(() => {
+    if (availableBRs.length > 0) {
+      setBrRange([availableBRs[0], availableBRs[availableBRs.length - 1]]);
+    }
+  }, [availableBRs]);
 
   const filteredShips = useMemo(() => {
     return ships.filter(ship => {
