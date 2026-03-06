@@ -33,6 +33,8 @@ interface VehicleFilterProps<T extends string = string> {
   onUseGroundBRChange?: (value: boolean) => void;
   /** Extra controls to render in the first row (e.g., month selector) */
   extraControls?: ReactNode;
+  /** 可用的 BR 列表，传递给 BRGridSelector */
+  availableBRs?: number[];
 }
 
 const GROUND_VEHICLE_TYPES: TypeOption[] = [
@@ -58,6 +60,7 @@ export default function VehicleFilter<T extends string = string>({
   useGroundBR = false,
   onUseGroundBRChange,
   extraControls,
+  availableBRs,
 }: VehicleFilterProps<T>) {
   const types = (typeOptions ?? GROUND_VEHICLE_TYPES) as TypeOption<T>[];
 
@@ -257,7 +260,7 @@ export default function VehicleFilter<T extends string = string>({
       </Box>
 
       {/* 第二行：BR 网格 */}
-      <BRGridSelector brRange={brRange} onBrRangeChange={onBrRangeChange} />
+      <BRGridSelector brRange={brRange} onBrRangeChange={onBrRangeChange} availableBRs={availableBRs} />
     </Box>
   );
 }
@@ -266,17 +269,24 @@ export default function VehicleFilter<T extends string = string>({
 export interface BRGridSelectorProps {
   brRange: [number, number];
   onBrRangeChange: (range: [number, number]) => void;
+  /** 可用的 BR 列表，默认使用 BATTLE_RATINGS */
+  availableBRs?: number[];
 }
 
-export function BRGridSelector({ brRange, onBrRangeChange }: BRGridSelectorProps) {
+export function BRGridSelector({ brRange, onBrRangeChange, availableBRs }: BRGridSelectorProps) {
   const [isDragging, setIsDragging] = useState(false);
   const [dragStart, setDragStart] = useState<number | null>(null);
   const [dragEnd, setDragEnd] = useState<number | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const hasDragged = useRef(false);
 
+  // 使用传入的 BR 列表或默认值
+  const brList = availableBRs ?? BATTLE_RATINGS;
+  const minBR = brList[0];
+  const maxBR = brList[brList.length - 1];
+
   // 获取索引对应的 BR
-  const getBrByIndex = useCallback((index: number) => BATTLE_RATINGS[index], []);
+  const getBrByIndex = useCallback((index: number) => brList[index], [brList]);
 
   // 检查某个 BR 是否被选中
   const isBrSelected = useCallback((br: number) => {
@@ -331,8 +341,8 @@ export function BRGridSelector({ brRange, onBrRangeChange }: BRGridSelectorProps
         const clickedBr = startBr;
         if (brRange[0] === brRange[1] && brRange[0] === clickedBr) {
           // 点击已选中的单个 BR -> 全选
-          onBrRangeChange([1.0, 12.7]);
-        } else if (brRange[0] === 1.0 && brRange[1] === 12.7) {
+          onBrRangeChange([minBR, maxBR]);
+        } else if (brRange[0] === minBR && brRange[1] === maxBR) {
           // 全选状态下点击 -> 单选该 BR
           onBrRangeChange([clickedBr, clickedBr]);
         } else {
@@ -345,7 +355,7 @@ export function BRGridSelector({ brRange, onBrRangeChange }: BRGridSelectorProps
     setDragStart(null);
     setDragEnd(null);
     hasDragged.current = false;
-  }, [isDragging, dragStart, dragEnd, brRange, onBrRangeChange, getBrByIndex]);
+  }, [isDragging, dragStart, dragEnd, brRange, onBrRangeChange, getBrByIndex, minBR, maxBR]);
 
   // 全局鼠标松开监听
   useEffect(() => {
@@ -361,10 +371,10 @@ export function BRGridSelector({ brRange, onBrRangeChange }: BRGridSelectorProps
 
   // 全选/重置
   const handleReset = useCallback(() => {
-    onBrRangeChange([1.0, 12.7]);
-  }, [onBrRangeChange]);
+    onBrRangeChange([minBR, maxBR]);
+  }, [onBrRangeChange, minBR, maxBR]);
 
-  const isAllSelected = brRange[0] === 1.0 && brRange[1] === 12.7;
+  const isAllSelected = brRange[0] === minBR && brRange[1] === maxBR;
   const rangeText = isAllSelected ? '全部' : `${brRange[0].toFixed(1)} - ${brRange[1].toFixed(1)}`;
 
   return (
@@ -390,7 +400,7 @@ export function BRGridSelector({ brRange, onBrRangeChange }: BRGridSelectorProps
         >
           BR {rangeText}
         </Typography>
-        {BATTLE_RATINGS.map((br, index) => {
+        {brList.map((br, index) => {
           const selected = isBrSelected(br);
           const inPreview = isInDragPreview(index);
           const isPreviewActive = isDragging && inPreview;

@@ -8,6 +8,7 @@ import GameModeSelector from '../components/GameModeSelector';
 import MonthRangeSelector from '../components/MonthSelector';
 import { loadAircraft } from '../data/aircraft';
 import type { Nation, AircraftType, AircraftVehicle } from '../types';
+import { BATTLE_RATINGS } from '../types';
 import { useGameMode } from '../hooks/useGameMode';
 import { useStatsMonthRange } from '../hooks/useStatsMonth';
 
@@ -22,7 +23,7 @@ export default function AircraftPage() {
   const [aircraft, setAircraft] = useState<AircraftVehicle[]>([]);
   const [loading, setLoading] = useState(true);
   const [selectedNations, setSelectedNations] = useState<Nation[]>([]);
-  const [brRange, setBrRange] = useState<[number, number]>([1.0, 12.7]);
+  const [brRange, setBrRange] = useState<[number, number]>([BATTLE_RATINGS[0], BATTLE_RATINGS[BATTLE_RATINGS.length - 1]]);
   const [selectedType, setSelectedType] = useState<AircraftType | 'all'>('all');
   const [showUnreleased, setShowUnreleased] = useState(false);
   const [useGroundBR, setUseGroundBR] = useState(false);
@@ -39,6 +40,17 @@ export default function AircraftPage() {
       setLoading(false);
     });
   }, [statsMonthRange]);
+
+  // 计算数据中的实际最大 BR（排除直升机），用于 BR 筛选器
+  const availableBRs = useMemo(() => {
+    const planes = aircraft.filter(ac => ac.aircraftType !== 'helicopter');
+    if (planes.length === 0) return BATTLE_RATINGS;
+    const maxBR = Math.max(...planes.map(ac => {
+      // 考虑联合作战 BR
+      return Math.max(ac.battleRating, ac.groundBattleRating ?? ac.battleRating);
+    }));
+    return BATTLE_RATINGS.filter(br => br <= maxBR);
+  }, [aircraft]);
 
   const filteredAircraft = useMemo(() => {
     return aircraft.filter(ac => {
@@ -78,6 +90,7 @@ export default function AircraftPage() {
           showGroundBRToggle
           useGroundBR={useGroundBR}
           onUseGroundBRChange={setUseGroundBR}
+          availableBRs={availableBRs}
           extraControls={
             <MonthRangeSelector
               currentRange={statsMonthRange}

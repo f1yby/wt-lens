@@ -330,12 +330,27 @@ export const SHIP_TYPE_LABELS: Record<ShipType, string> = {
   ship: '通用舰船',
 };
 
-export const BATTLE_RATINGS = [
-  1.0, 1.3, 1.7, 2.0, 2.3, 2.7, 3.0, 3.3, 3.7,
-  4.0, 4.3, 4.7, 5.0, 5.3, 5.7, 6.0, 6.3, 6.7,
-  7.0, 7.3, 7.7, 8.0, 8.3, 8.7, 9.0, 9.3, 9.7,
-  10.0, 10.3, 10.7, 11.0, 11.3, 11.7, 12.0, 12.3, 12.7
-];
+/**
+ * 生成 War Thunder 标准 BR 序列
+ * BR 遵循固定模式: [整数, +0.3, +0.7] 循环
+ * 例如: 1.0 -> 1.3 -> 1.7 -> 2.0 -> 2.3 -> 2.7 -> ...
+ * @param maxBR 最大 BR 值（包含）
+ * @returns 从 1.0 到 maxBR 的所有标准 BR 值数组
+ */
+export function generateBRSequence(maxBR: number): number[] {
+  const brs: number[] = [];
+  const offsets = [0, 0.3, 0.7];
+  for (let base = 1; base <= Math.ceil(maxBR); base++) {
+    for (const offset of offsets) {
+      const br = +(base + offset).toFixed(1);
+      if (br <= maxBR) brs.push(br);
+    }
+  }
+  return brs;
+}
+
+/** 标准 BR 序列（预生成到 16.0 以适应未来更新） */
+export const BATTLE_RATINGS = generateBRSequence(16.0);
 
 /** Game mode configuration */
 export interface GameModeConfig {

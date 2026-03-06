@@ -7,6 +7,7 @@ import GameModeSelector from '../components/GameModeSelector';
 import MonthRangeSelector from '../components/MonthSelector';
 import { loadVehicles } from '../data/vehicles';
 import type { Nation, VehicleType, Vehicle } from '../types';
+import { BATTLE_RATINGS } from '../types';
 import { useGameMode } from '../hooks/useGameMode';
 import { useStatsMonthRange } from '../hooks/useStatsMonth';
 
@@ -14,7 +15,7 @@ export default function HomePage() {
   const [vehicles, setVehicles] = useState<Vehicle[]>([]);
   const [loading, setLoading] = useState(true);
   const [selectedNations, setSelectedNations] = useState<Nation[]>([]);
-  const [brRange, setBrRange] = useState<[number, number]>([1.0, 12.7]);
+  const [brRange, setBrRange] = useState<[number, number]>([BATTLE_RATINGS[0], BATTLE_RATINGS[BATTLE_RATINGS.length - 1]]);
   const [selectedType, setSelectedType] = useState<VehicleType | 'all'>('all');
   const [showUnreleased, setShowUnreleased] = useState(false);
 
@@ -30,6 +31,13 @@ export default function HomePage() {
       setLoading(false);
     });
   }, [statsMonthRange]);
+
+  // 计算数据中的实际最大 BR，用于 BR 筛选器
+  const availableBRs = useMemo(() => {
+    if (vehicles.length === 0) return BATTLE_RATINGS;
+    const maxBR = Math.max(...vehicles.map(v => v.battleRating));
+    return BATTLE_RATINGS.filter(br => br <= maxBR);
+  }, [vehicles]);
 
   const filteredVehicles = useMemo(() => {
     return vehicles.filter(vehicle => {
@@ -63,6 +71,7 @@ export default function HomePage() {
           onTypeChange={setSelectedType}
           showUnreleased={showUnreleased}
           onShowUnreleasedChange={setShowUnreleased}
+          availableBRs={availableBRs}
         />
         <MonthRangeSelector
           currentRange={statsMonthRange}

@@ -158,10 +158,10 @@ export default function AircraftDetailPage() {
   // Default BR range: aircraft BR ± 1.0
   const effectiveBrRange: [number, number] = useMemo(() => {
     if (brRange) return brRange;
-    if (!aircraft) return [1.0, 12.7];
+    if (!aircraft) return [BATTLE_RATINGS[0], BATTLE_RATINGS[BATTLE_RATINGS.length - 1]];
     const br = aircraft.battleRating;
-    const lo = BATTLE_RATINGS.filter(b => b >= br - 1.0)[0] ?? 1.0;
-    const hi = [...BATTLE_RATINGS].reverse().find(b => b <= br + 1.0) ?? 12.7;
+    const lo = BATTLE_RATINGS.filter(b => b >= br - 1.0)[0] ?? BATTLE_RATINGS[0];
+    const hi = [...BATTLE_RATINGS].reverse().find(b => b <= br + 1.0) ?? BATTLE_RATINGS[BATTLE_RATINGS.length - 1];
     return [lo, hi];
   }, [brRange, aircraft]);
 

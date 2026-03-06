@@ -587,10 +587,10 @@ export default function VehicleDetailPage() {
   // Default BR range: vehicle BR ± 1.0, snapped to BATTLE_RATINGS
   const effectiveBrRange: [number, number] = useMemo(() => {
     if (brRange) return brRange;
-    if (!vehicle) return [1.0, 12.7];
+    if (!vehicle) return [BATTLE_RATINGS[0], BATTLE_RATINGS[BATTLE_RATINGS.length - 1]];
     const br = vehicle.battleRating;
-    const lo = BATTLE_RATINGS.filter(b => b >= br - 1.0)[0] ?? 1.0;
-    const hi = [...BATTLE_RATINGS].reverse().find(b => b <= br + 1.0) ?? 12.7;
+    const lo = BATTLE_RATINGS.filter(b => b >= br - 1.0)[0] ?? BATTLE_RATINGS[0];
+    const hi = [...BATTLE_RATINGS].reverse().find(b => b <= br + 1.0) ?? BATTLE_RATINGS[BATTLE_RATINGS.length - 1];
     return [lo, hi];
   }, [brRange, vehicle]);
 
