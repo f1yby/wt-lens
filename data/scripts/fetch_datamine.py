@@ -942,7 +942,25 @@ def copy_vehicle_image(vehicle_id: str) -> str | None:
     source_path = TANK_IMAGES_PATH / f"{vehicle_id}.png"
     
     if not source_path.exists():
-        return None
+        # Try fallback: find image from other nations with same base name
+        # e.g., us_amx_13_75 -> try fr_amx_13_75
+        parts = vehicle_id.split('_', 1)
+        if len(parts) == 2:
+            base_name = parts[1]
+            # List of possible nation prefixes
+            nation_prefixes = ['germ_', 'ussr_', 'us_', 'uk_', 'jp_', 'cn_', 'it_', 'fr_', 'sw_', 'il_']
+            for prefix in nation_prefixes:
+                fallback_id = f"{prefix}{base_name}"
+                if fallback_id != vehicle_id:
+                    fallback_path = TANK_IMAGES_PATH / f"{fallback_id}.png"
+                    if fallback_path.exists():
+                        print(f"  Using fallback image for {vehicle_id} from {fallback_id}")
+                        source_path = fallback_path
+                        break
+            else:
+                return None
+        else:
+            return None
     
     try:
         # Ensure public/vehicles directory exists
