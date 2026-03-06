@@ -2,7 +2,6 @@
 """
 Fetch War Thunder ship data from local datamine repository
 
-Phase 1: StatShark only (no shipmodel performance data)
 Reads from wpcost.blkx for BR/rank, units.csv for names, tex/ships/ for images
 """
 
@@ -38,30 +37,23 @@ SHIP_TYPE_MAP: dict[str, str] = {
 }
 
 
-def load_statshark_data() -> list[dict[str, Any]]:
-    """Load all StatShark data from stats.json"""
-    stats_path = PUBLIC_DATA_PATH / "stats.json"
-    if not stats_path.exists():
-        print(f"StatShark data not found at {stats_path}")
-        return []
-    
-    try:
-        with open(stats_path, 'r', encoding='utf-8') as f:
-            return json.load(f)
-    except (json.JSONDecodeError, IOError) as e:
-        print(f"Error loading stats.json: {e}")
-        return []
-
-
-def is_ship_in_datamine(vehicle_id: str) -> bool:
-    """Check if vehicle is a ship by checking wpcost unitClass"""
+def load_ship_ids() -> list[str]:
+    """Load ship vehicle IDs from wpcost.blkx by unitClass."""
     wpcost = load_wpcost_data()
-    vehicle_data = wpcost.get(vehicle_id)
-    if not vehicle_data:
-        return False
-    
-    unit_class = vehicle_data.get('unitClass', '')
-    return unit_class in SHIP_TYPE_MAP
+    if not wpcost:
+        print("Warning: wpcost data is empty, cannot enumerate ships")
+        return []
+
+    ship_ids = []
+    for vid, vdata in wpcost.items():
+        if not isinstance(vdata, dict):
+            continue
+        unit_class = vdata.get('unitClass', '')
+        if unit_class in SHIP_TYPE_MAP:
+            ship_ids.append(vid)
+
+    ship_ids.sort()
+    return ship_ids
 
 
 def get_ship_type(vehicle_id: str) -> str | None:
@@ -168,30 +160,14 @@ def fetch_ship_data(vehicle_id: str, copy_images: bool = True) -> dict[str, Any]
 
 
 def fetch_all_ships(copy_images: bool = True) -> list[dict[str, Any]]:
-    """Fetch all ship data from StatShark list."""
-    # Load StatShark data
-    statshark_data = load_statshark_data()
-    
-    # Get all unique ship IDs that have historical mode data
-    # and are confirmed ships in wpcost
-    ship_ids: set[str] = set()
-    
-    for entry in statshark_data:
-        vid = entry.get('id')
-        mode = entry.get('mode', '')
-        
-        if not vid or not isinstance(vid, str):
-            continue
-        
-        # Only process historical/realistic mode
-        if mode != 'historical':
-            continue
-        
-        # Check if it's a ship in wpcost
-        if is_ship_in_datamine(vid):
-            ship_ids.add(vid)
-    
-    print(f"Found {len(ship_ids)} unique ships with StatShark data")
+    """Fetch all ship data from wpcost."""
+    ship_ids = load_ship_ids()
+
+    if not ship_ids:
+        print("No ships found in wpcost")
+        return []
+
+    print(f"Found {len(ship_ids)} ships in wpcost")
     
     if copy_images:
         print(f"Images will be copied to: {PUBLIC_SHIP_PATH}")
@@ -202,11 +178,9 @@ def fetch_all_ships(copy_images: bool = True) -> list[dict[str, Any]]:
     fail_count = 0
     image_copied = 0
     
-    ship_ids_list = sorted(ship_ids)
-    
-    for i, vid in enumerate(ship_ids_list, 1):
+    for i, vid in enumerate(ship_ids, 1):
         if i % 50 == 0:
-            print(f"[{i}/{len(ship_ids_list)}] Processing... ({success_count} found, {fail_count} failed, {image_copied} images)")
+            print(f"[{i}/{len(ship_ids)}] Processing... ({success_count} found, {fail_count} failed, {image_copied} images)")
         
         data = fetch_ship_data(vid, copy_images=copy_images)
         if data:
@@ -243,7 +217,7 @@ def main() -> int:
     args = parser.parse_args()
     
     print("=" * 60)
-    print("War Thunder Ship Fetcher (Phase 1: StatShark only)")
+    print("War Thunder Ship Fetcher (wpcost + datamine)")
     print("=" * 60)
     
     copy_images = not args.no_images

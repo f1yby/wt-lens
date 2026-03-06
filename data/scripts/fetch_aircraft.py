@@ -2,7 +2,6 @@
 """
 Fetch War Thunder aircraft data from local datamine repository
 
-Phase 1: StatShark only (no flightmodel performance data)
 Reads from wpcost.blkx for BR/rank, units.csv for names, tex/aircrafts/ for images
 """
 
@@ -36,30 +35,23 @@ AIRCRAFT_TYPE_MAP: dict[str, str] = {
 }
 
 
-def load_statshark_data() -> list[dict[str, Any]]:
-    """Load all StatShark data from stats.json"""
-    stats_path = PUBLIC_DATA_PATH / "stats.json"
-    if not stats_path.exists():
-        print(f"StatShark data not found at {stats_path}")
-        return []
-    
-    try:
-        with open(stats_path, 'r', encoding='utf-8') as f:
-            return json.load(f)
-    except (json.JSONDecodeError, IOError) as e:
-        print(f"Error loading stats.json: {e}")
-        return []
-
-
-def is_aircraft_in_datamine(vehicle_id: str) -> bool:
-    """Check if vehicle is an aircraft by checking wpcost unitClass"""
+def load_aircraft_ids() -> list[str]:
+    """Load aircraft vehicle IDs from wpcost.blkx by unitClass."""
     wpcost = load_wpcost_data()
-    vehicle_data = wpcost.get(vehicle_id)
-    if not vehicle_data:
-        return False
-    
-    unit_class = vehicle_data.get('unitClass', '')
-    return unit_class in AIRCRAFT_TYPE_MAP
+    if not wpcost:
+        print("Warning: wpcost data is empty, cannot enumerate aircraft")
+        return []
+
+    aircraft_ids = []
+    for vid, vdata in wpcost.items():
+        if not isinstance(vdata, dict):
+            continue
+        unit_class = vdata.get('unitClass', '')
+        if unit_class in AIRCRAFT_TYPE_MAP:
+            aircraft_ids.append(vid)
+
+    aircraft_ids.sort()
+    return aircraft_ids
 
 
 def get_aircraft_type(vehicle_id: str) -> str | None:
@@ -176,30 +168,14 @@ def fetch_aircraft_data(vehicle_id: str, copy_images: bool = True) -> dict[str, 
 
 
 def fetch_all_aircraft(copy_images: bool = True) -> list[dict[str, Any]]:
-    """Fetch all aircraft data from StatShark list."""
-    # Load StatShark data
-    statshark_data = load_statshark_data()
-    
-    # Get all unique aircraft IDs that have historical mode data
-    # and are confirmed aircraft in wpcost
-    aircraft_ids: set[str] = set()
-    
-    for entry in statshark_data:
-        vid = entry.get('id')
-        mode = entry.get('mode', '')
-        
-        if not vid or not isinstance(vid, str):
-            continue
-        
-        # Only process historical/realistic mode
-        if mode != 'historical':
-            continue
-        
-        # Check if it's an aircraft in wpcost
-        if is_aircraft_in_datamine(vid):
-            aircraft_ids.add(vid)
-    
-    print(f"Found {len(aircraft_ids)} unique aircraft with StatShark data")
+    """Fetch all aircraft data from wpcost."""
+    aircraft_ids = load_aircraft_ids()
+
+    if not aircraft_ids:
+        print("No aircraft found in wpcost")
+        return []
+
+    print(f"Found {len(aircraft_ids)} aircraft in wpcost")
     
     if copy_images:
         print(f"Images will be copied to: {PUBLIC_AIRCRAFT_PATH}")
@@ -210,11 +186,9 @@ def fetch_all_aircraft(copy_images: bool = True) -> list[dict[str, Any]]:
     fail_count = 0
     image_copied = 0
     
-    aircraft_ids_list = sorted(aircraft_ids)
-    
-    for i, vid in enumerate(aircraft_ids_list, 1):
+    for i, vid in enumerate(aircraft_ids, 1):
         if i % 50 == 0:
-            print(f"[{i}/{len(aircraft_ids_list)}] Processing... ({success_count} found, {fail_count} failed, {image_copied} images)")
+            print(f"[{i}/{len(aircraft_ids)}] Processing... ({success_count} found, {fail_count} failed, {image_copied} images)")
         
         data = fetch_aircraft_data(vid, copy_images=copy_images)
         if data:
@@ -251,7 +225,7 @@ def main() -> int:
     args = parser.parse_args()
     
     print("=" * 60)
-    print("War Thunder Aircraft Fetcher (Phase 1: StatShark only)")
+    print("War Thunder Aircraft Fetcher (wpcost + datamine)")
     print("=" * 60)
     
     copy_images = not args.no_images

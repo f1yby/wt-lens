@@ -885,21 +885,6 @@ def get_vehicle_br(vehicle_id: str) -> tuple[float, int]:
     return br, rank
 
 
-def statshark_id_to_datamine_filename(vehicle_id: str) -> str | None:
-    """
-    Convert StatShark vehicle ID to datamine filename.
-
-    Returns the lowercase filename if it exists in tankmodels directory,
-    otherwise returns None (not a ground vehicle).
-    """
-    filename = vehicle_id.lower()
-
-    # Primary check: does it exist in tankmodels directory?
-    if (TANKMODELS_PATH / f"{filename}.blkx").exists():
-        return filename
-
-    return None
-
 
 # Datamine vehicle type to our type mapping
 VEHICLE_TYPE_MAP = {
@@ -1290,41 +1275,41 @@ def parse_tankmodel_data(data: dict[str, Any]) -> VehiclePerformance | None:
     return perf
 
 
-def load_statshark_vehicles() -> list[dict[str, Any]]:
-    """Load vehicle data from StatShark stats.json"""
-    stats_path = PUBLIC_DATA_PATH / "stats.json"
-    if not stats_path.exists():
-        print(f"StatShark data not found at {stats_path}")
+GROUND_UNIT_CLASSES = {
+    'exp_tank', 'exp_heavy_tank', 'exp_light_tank',
+    'exp_tank_destroyer', 'exp_SPAA',
+}
+
+
+def load_ground_vehicle_ids() -> list[str]:
+    """Load ground vehicle IDs from wpcost.blkx + tankmodels directory.
+    
+    Returns IDs that are both in wpcost as ground vehicles AND have a tankmodel file.
+    """
+    wpcost = load_wpcost_data()
+    if not wpcost:
+        print("Warning: wpcost data is empty, cannot enumerate vehicles")
         return []
 
-    try:
-        with open(stats_path, 'r', encoding='utf-8') as f:
-            stats: list[dict[str, Any]] = json.load(f)
+    vehicle_ids = []
+    for vid, vdata in wpcost.items():
+        if not isinstance(vdata, dict):
+            continue
+        unit_class = vdata.get('unitClass', '')
+        if unit_class not in GROUND_UNIT_CLASSES:
+            continue
+        # Check tankmodel file exists
+        if (TANKMODELS_PATH / f"{vid.lower()}.blkx").exists():
+            vehicle_ids.append(vid)
 
-        # Group by vehicle ID, prefer realistic > arcade > simulator
-        vehicles_map: dict[str, dict[str, Any]] = {}
-        for entry in stats:
-            vid = entry.get('id')
-            mode = entry.get('mode', 'arcade')
-
-            if not vid or not isinstance(vid, str):
-                continue
-
-            if vid not in vehicles_map:
-                vehicles_map[vid] = entry
-            elif mode == 'realistic' and vehicles_map[vid].get('mode') != 'realistic':
-                vehicles_map[vid] = entry
-
-        return list(vehicles_map.values())
-    except (json.JSONDecodeError, IOError) as e:
-        print(f"Error loading StatShark data: {e}")
-        return []
+    vehicle_ids.sort()
+    return vehicle_ids
 
 
 def fetch_vehicle_performance(vehicle_id: str, copy_images: bool = True) -> VehicleData | None:
     """Fetch performance data for a single vehicle from local tankmodels"""
-    datamine_id = statshark_id_to_datamine_filename(vehicle_id)
-    if not datamine_id:
+    datamine_id = vehicle_id.lower()
+    if not (TANKMODELS_PATH / f"{datamine_id}.blkx").exists():
         return None
 
     # Read from local file
@@ -1379,47 +1364,33 @@ def fetch_vehicle_performance(vehicle_id: str, copy_images: bool = True) -> Vehi
 
 
 def fetch_all_vehicles(max_vehicles: int | None = None, copy_images: bool = True) -> list[VehicleData]:
-    """Fetch performance data for all vehicles from StatShark list"""
-    statshark_vehicles = load_statshark_vehicles()
+    """Fetch performance data for all ground vehicles from wpcost + tankmodels"""
+    ground_vehicle_ids = load_ground_vehicle_ids()
 
-    if not statshark_vehicles:
-        print("No vehicles to fetch")
+    if not ground_vehicle_ids:
+        print("No ground vehicles found in wpcost + tankmodels")
         return []
 
-    # Filter to ground vehicles by checking datamine directory (more reliable than name prefixes)
-    ground_vehicles = [
-        entry for entry in statshark_vehicles
-        if isinstance(entry.get('id'), str)
-        and statshark_id_to_datamine_filename(entry['id']) is not None
-    ]
-
-    print(f"Processing {len(ground_vehicles)} ground vehicles from StatShark...")
+    print(f"Processing {len(ground_vehicle_ids)} ground vehicles from wpcost...")
     if copy_images:
         print(f"Images will be copied to: {PUBLIC_VEHICLES_PATH}")
         # Ensure public directory exists
         PUBLIC_VEHICLES_PATH.mkdir(parents=True, exist_ok=True)
 
     if max_vehicles:
-        ground_vehicles = ground_vehicles[:max_vehicles]
+        ground_vehicle_ids = ground_vehicle_ids[:max_vehicles]
 
     vehicles: list[VehicleData] = []
     success_count = 0
     fail_count = 0
     image_copied = 0
 
-    for i, entry in enumerate(ground_vehicles, 1):
-        vid = entry.get('id')
-
+    for i, vid in enumerate(ground_vehicle_ids, 1):
         if i % 50 == 0:
-            print(f"[{i}/{len(ground_vehicles)}] Processing... ({success_count} found, {fail_count} not found, {image_copied} images)")
-
-        if not isinstance(vid, str):
-            fail_count += 1
-            continue
+            print(f"[{i}/{len(ground_vehicle_ids)}] Processing... ({success_count} found, {fail_count} not found, {image_copied} images)")
 
         vehicle_data = fetch_vehicle_performance(vid, copy_images=copy_images)
         if vehicle_data:
-            # BR and rank already set from wpcost.blkx in fetch_vehicle_performance
             vehicles.append(vehicle_data)
             success_count += 1
             if copy_images and vehicle_data.image_url and vehicle_data.image_url.startswith('/vehicles/'):
@@ -1434,7 +1405,7 @@ def fetch_all_vehicles(max_vehicles: int | None = None, copy_images: bool = True
     # --- Phase 2: Scan tankmodels directory for unreleased vehicles ---
     from datetime import datetime
 
-    statshark_ids = {entry.get('id') for entry in ground_vehicles if isinstance(entry.get('id'), str)}
+    known_ids = set(ground_vehicle_ids)
     wpcost = load_wpcost_data()
     unittags = load_unittags_data()
 
@@ -1460,7 +1431,7 @@ def fetch_all_vehicles(max_vehicles: int | None = None, copy_images: bool = True
     all_tankmodel_ids = [
         p.stem for p in TANKMODELS_PATH.glob("*.blkx")
         if p.stem in wpcost
-        and p.stem not in statshark_ids
+        and p.stem not in known_ids
         and is_unreleased(p.stem)
     ]
     print(f"\nScanning tankmodels for unreleased vehicles... found {len(all_tankmodel_ids)} candidates")
