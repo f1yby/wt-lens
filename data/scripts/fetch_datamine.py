@@ -942,25 +942,7 @@ def copy_vehicle_image(vehicle_id: str) -> str | None:
     source_path = TANK_IMAGES_PATH / f"{vehicle_id}.png"
     
     if not source_path.exists():
-        # Try fallback: find image from other nations with same base name
-        # e.g., us_amx_13_75 -> try fr_amx_13_75
-        parts = vehicle_id.split('_', 1)
-        if len(parts) == 2:
-            base_name = parts[1]
-            # List of possible nation prefixes
-            nation_prefixes = ['germ_', 'ussr_', 'us_', 'uk_', 'jp_', 'cn_', 'it_', 'fr_', 'sw_', 'il_']
-            for prefix in nation_prefixes:
-                fallback_id = f"{prefix}{base_name}"
-                if fallback_id != vehicle_id:
-                    fallback_path = TANK_IMAGES_PATH / f"{fallback_id}.png"
-                    if fallback_path.exists():
-                        print(f"  Using fallback image for {vehicle_id} from {fallback_id}")
-                        source_path = fallback_path
-                        break
-            else:
-                return None
-        else:
-            return None
+        return None
     
     try:
         # Ensure public/vehicles directory exists
@@ -1486,8 +1468,18 @@ EVENT_VEHICLE_PATTERNS = [
     r'_yt_cup_\d{4}$',    # YouTube Cup 车辆
 ]
 
+# 特定车辆ID黑名单（精确匹配）
+EVENT_VEHICLE_IDS = {
+    'us_amx_13_75',   # 美系借用法系AMX-13，无独立图片
+    'us_amx_13_90',   # 美系借用法系AMX-13，无独立图片
+}
+
 def _is_event_or_tutorial(vid: str) -> bool:
-    """Check if a vehicle ID is an event-mode copy or tutorial vehicle by suffix."""
+    """Check if a vehicle ID is an event-mode copy, tutorial vehicle, or in blacklist."""
+    # 检查精确ID黑名单
+    if vid in EVENT_VEHICLE_IDS:
+        return True
+    # 检查正则表达式模式
     for pattern in EVENT_VEHICLE_PATTERNS:
         if re.search(pattern, vid):
             return True
