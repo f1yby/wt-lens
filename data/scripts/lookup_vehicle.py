@@ -11,6 +11,7 @@ War Thunder 载具信息查询工具
 import json
 import sys
 from pathlib import Path
+from typing import Any
 
 # Import shared utilities from fetch_utils
 from fetch_utils import (
@@ -105,7 +106,7 @@ def load_shop_data() -> dict[str, dict]:
 
     vehicle_map: dict[str, dict] = {}
 
-    def scan(obj: any) -> None:
+    def scan(obj: Any) -> None:
         """递归扫描 shop.blkx，提取每个载具的 shop 条目"""
         if isinstance(obj, dict):
             for key, value in obj.items():

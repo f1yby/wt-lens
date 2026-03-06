@@ -32,17 +32,23 @@ export function getMetricValue(vehicle: Vehicle, metric: MetricType): number {
   }
 }
 
+/** Get vehicle BR for the current game mode */
+export function getVehicleBR(vehicle: Vehicle, gameMode: GameMode): number {
+  return vehicle.br?.[gameMode] ?? vehicle.battleRating;
+}
+
 /** Generates scatter data for vehicle comparison charts */
 export function generateVehicleComparisonData(
   vehicleId: string,
   metric: MetricType,
   allVehicles: Vehicle[],
+  gameMode: GameMode,
   filter?: ComparisonFilter
 ): DistributionData | null {
   const vehicle = allVehicles.find(v => v.id === vehicleId);
   if (!vehicle) return null;
 
-  const targetBR = vehicle.battleRating;
+  const targetBR = getVehicleBR(vehicle, gameMode);
   const brMin = filter?.brMin ?? (targetBR - 1.0);
   const brMax = filter?.brMax ?? (targetBR + 1.0);
 
@@ -56,7 +62,8 @@ export function generateVehicleComparisonData(
     }
     const metricValue = getMetricValue(v, metric);
     if (metricValue <= 0) return false;
-    if (v.battleRating < brMin || v.battleRating > brMax) return false;
+    const vBR = getVehicleBR(v, gameMode);
+    if (vBR < brMin || vBR > brMax) return false;
     if (filter?.vehicleTypes && filter.vehicleTypes.length > 0 && !filter.vehicleTypes.includes(v.vehicleType)) return false;
     return true;
   });
@@ -67,7 +74,8 @@ export function generateVehicleComparisonData(
   const upperSpan = Math.max(brMax - targetBR, 0.1);
 
   const bins = filteredVehicles.map((v) => {
-    const brDiff = parseFloat((v.battleRating - targetBR).toFixed(2));
+    const vBR = getVehicleBR(v, gameMode);
+    const brDiff = parseFloat((vBR - targetBR).toFixed(2));
     const isCurrent = v.id === vehicleId;
 
     return {
@@ -122,7 +130,7 @@ export function generateStatsComparisonData(
   const vehicle = allVehicles.find(v => v.id === vehicleId);
   if (!vehicle) return null;
 
-  const targetBR = vehicle.battleRating;
+  const targetBR = getVehicleBR(vehicle, gameMode);
   const brMin = filter?.brMin ?? (targetBR - 1.0);
   const brMax = filter?.brMax ?? (targetBR + 1.0);
 
@@ -136,7 +144,8 @@ export function generateStatsComparisonData(
       return vStats && vStats.battles > 0 && getStatsMetricValue(v, metric, gameMode) > 0;
     }
     const metricValue = getStatsMetricValue(v, metric, gameMode);
-    if (v.battleRating < brMin || v.battleRating > brMax) return false;
+    const vBR = getVehicleBR(v, gameMode);
+    if (vBR < brMin || vBR > brMax) return false;
     if (!vStats || vStats.battles <= 0 || metricValue <= 0) return false;
     if (filter?.vehicleTypes && filter.vehicleTypes.length > 0 && !filter.vehicleTypes.includes(v.vehicleType)) return false;
     return true;
@@ -149,7 +158,8 @@ export function generateStatsComparisonData(
 
   const bins = filteredVehicles.map((v) => {
     const vStats = getVehicleStatsByMode(v, gameMode);
-    const brDiff = parseFloat((v.battleRating - targetBR).toFixed(2));
+    const vBR = getVehicleBR(v, gameMode);
+    const brDiff = parseFloat((vBR - targetBR).toFixed(2));
     const isCurrent = v.id === vehicleId;
 
     return {

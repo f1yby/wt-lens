@@ -192,19 +192,20 @@ export default function VehicleCard({ vehicle, gameMode = 'historical' }: Vehicl
           )}
           
           <Box sx={{ ml: 'auto', display: 'flex', alignItems: 'center', gap: 0.5 }}>
-            <GpsFixed sx={{ 
-              fontSize: 14, 
-              color: getStabilizerInfo(vehicle.performance.stabilizerType).color 
-            }} />
-            <Typography 
-              variant="caption" 
-              sx={{ 
-                color: getStabilizerInfo(vehicle.performance.stabilizerType).color,
-                fontWeight: 600,
-              }}
-            >
-              {getStabilizerInfo(vehicle.performance.stabilizerType).label}
-            </Typography>
+            {(() => {
+              const stabInfo = getStabilizerInfo(vehicle.performance.stabilizerType);
+              return (
+                <>
+                  <GpsFixed sx={{ fontSize: 14, color: stabInfo.color }} />
+                  <Typography 
+                    variant="caption" 
+                    sx={{ color: stabInfo.color, fontWeight: 600 }}
+                  >
+                    {stabInfo.label}
+                  </Typography>
+                </>
+              );
+            })()}
           </Box>
         </Box>
       </CardContent>

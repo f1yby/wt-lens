@@ -241,7 +241,7 @@ def update_ghost_vehicles(all_stats: list[dict]) -> None:
     for fname in ['datamine.json', 'aircraft.json', 'ships.json']:
         fpath = public_data / fname
         if fpath.exists():
-            data = json.load(open(fpath))
+            data = json.load(open(fpath, encoding="utf-8"))
             for v in data:
                 datamine_ids.add(v['id'])
 
@@ -260,7 +260,7 @@ def update_ghost_vehicles(all_stats: list[dict]) -> None:
     for fname in ['datamine.json', 'aircraft.json', 'ships.json']:
         fpath = public_data / fname
         if fpath.exists():
-            data = json.load(open(fpath))
+            data = json.load(open(fpath, encoding="utf-8"))
             for v in data:
                 if v.get('unreleased'):
                     unreleased_ids.add(v['id'])
@@ -311,7 +311,7 @@ def update_ghost_vehicles(all_stats: list[dict]) -> None:
     for fname in ['datamine.json', 'aircraft.json', 'ships.json']:
         fpath = public_data / fname
         if fpath.exists():
-            data = json.load(open(fpath))
+            data = json.load(open(fpath, encoding="utf-8"))
             for v in data:
                 name_map[v['id']] = v.get('localizedName', v['id'])
 
