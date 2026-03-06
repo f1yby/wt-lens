@@ -8,6 +8,7 @@ Reads from data/datamine/aces.vromfs.bin_u/gamedata/units/tankmodels/
 import csv
 import json
 import math
+import re
 import shutil
 from pathlib import Path
 from dataclasses import dataclass
@@ -1456,9 +1457,23 @@ GROUND_UNIT_CLASSES = {
     'exp_tank_destroyer', 'exp_SPAA',
 }
 
+# 限时活动车辆黑名单（正则表达式形式）
+# 这些车辆只在特定活动期间可用，平时没有玩家数据
+EVENT_VEHICLE_PATTERNS = [
+    r'_event$',           # 一般活动车（如 germ_a7v_event）
+    r'_tutorial$',        # 教程车辆
+    r'_race$',            # 坦克两项/赛车活动车
+    r'_snowball$',        # 雪球活动车
+    r'_football$',        # 足球活动车
+    r'_yt_cup_\d{4}$',    # YouTube Cup 车辆
+]
+
 def _is_event_or_tutorial(vid: str) -> bool:
     """Check if a vehicle ID is an event-mode copy or tutorial vehicle by suffix."""
-    return vid.endswith('_event') or vid.endswith('_tutorial')
+    for pattern in EVENT_VEHICLE_PATTERNS:
+        if re.search(pattern, vid):
+            return True
+    return False
 
 
 def load_ground_vehicle_ids() -> list[str]:
