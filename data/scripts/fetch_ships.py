@@ -137,13 +137,11 @@ def fetch_ship_data(vehicle_id: str, copy_images: bool = True) -> dict[str, Any]
     # Get localized name
     localized_name = get_vehicle_localized_name(vehicle_id)
     
-    # Copy image
+    # Copy image (only set imageUrl if source image exists)
     image_url = None
     if copy_images:
         image_url = copy_ship_image(vehicle_id)
-    
-    # Fallback image path
-    if not image_url:
+    elif (SHIP_IMAGES_PATH / f"{vehicle_id}.png").exists():
         image_url = f"ships/{vehicle_id}.webp"
     
     return {

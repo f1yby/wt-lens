@@ -15,6 +15,7 @@ interface TechTreeItem {
   nation: string;
   battleRating: number;
   economicType: EconomicType;
+  imageUrl?: string;
   unreleased?: boolean;
 }
 
@@ -46,6 +47,10 @@ export default function VehicleTechTree<T extends TechTreeItem>({
 
   // Resolve default functions based on data type
   const resolveImagePath = getImagePath ?? ((item: T) => {
+    // If imageUrl is empty/missing, skip the 404 and go straight to placeholder
+    if (!item.imageUrl) {
+      return `https://placehold.co/120x90/e5e5e5/666?text=${encodeURIComponent(item.localizedName.slice(0, 10))}`;
+    }
     if ('shipType' in item) return getShipImagePath(item.id);
     if ('aircraftType' in item) return getAircraftImagePath(item.id);
     return getVehicleImagePath(item.id);

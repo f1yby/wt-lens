@@ -1332,13 +1332,11 @@ def fetch_vehicle_performance(vehicle_id: str, copy_images: bool = True) -> Vehi
     # Get localized name from units.csv
     localized_name = get_vehicle_localized_name(vehicle_id)
     
-    # Copy image and get URL
+    # Copy image and get URL (only set imageUrl if source image exists)
     image_url = None
     if copy_images:
         image_url = copy_vehicle_image(vehicle_id)
-    
-    # Fallback image URL if copy failed (use relative path for base URL compatibility)
-    if not image_url:
+    elif (TANK_IMAGES_PATH / f"{vehicle_id}.png").exists():
         image_url = f"vehicles/{vehicle_id}.webp"
 
     # Get release date from unittags.blkx
