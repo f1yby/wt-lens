@@ -28,7 +28,7 @@ echo -e "${GREEN}=== WT Lens 数据更新 ===${NC}"
 echo ""
 
 # 0. 检查工作区是否干净
-echo -e "${YELLOW}[0/6] 检查工作区状态...${NC}"
+echo -e "${YELLOW}[0/4] 检查工作区状态...${NC}"
 cd "$ROOT_DIR"
 if ! git diff --quiet || ! git diff --cached --quiet; then
   echo -e "  ${RED}错误: 工作区有未提交的改动，请先提交或 stash${NC}"
@@ -49,7 +49,7 @@ echo -e "  工作区干净 ✓"
 
 # 1. 更新 datamine submodule
 echo ""
-echo -e "${YELLOW}[1/6] 检查 datamine 更新...${NC}"
+echo -e "${YELLOW}[1/4] 检查 datamine 更新...${NC}"
 
 # 确保 submodule 已初始化
 if [ ! -d "$DATAMINE_DIR/.git" ] && [ ! -f "$DATAMINE_DIR/.git" ]; then
@@ -84,38 +84,28 @@ DATAMINE_SUBJECT=$(git log -1 --format='%s')
 
 cd "$SCRIPT_DIR"
 
-# 2. 地面载具数据
+# 2. 提取所有载具数据（使用统一脚本）
 echo ""
-echo -e "${YELLOW}[2/6] 提取地面载具数据...${NC}"
-python3 fetch_datamine.py $NO_IMAGES
+echo -e "${YELLOW}[2/4] 提取所有载具数据...${NC}"
+python3 fetch_all.py $NO_IMAGES
 
-# 3. 飞机数据
+# 3. 汇总
 echo ""
-echo -e "${YELLOW}[3/6] 提取飞机数据...${NC}"
-python3 fetch_aircraft.py --no-images
-
-# 4. 舰船数据
-echo ""
-echo -e "${YELLOW}[4/6] 提取舰船数据...${NC}"
-python3 fetch_ships.py --no-images
-
-# 5. 汇总
-echo ""
-echo -e "${YELLOW}[5/6] 数据文件汇总${NC}"
+echo -e "${YELLOW}[3/4] 数据文件汇总${NC}"
 echo ""
 
 cd "$ROOT_DIR"
 echo -e "${GREEN}输出文件:${NC}"
-for f in public/data/datamine.json public/data/vehicle_performance.json public/data/aircraft.json public/data/ships.json; do
+for f in public/data/datamine.json public/data/aircraft.json public/data/ships.json; do
   if [ -f "$f" ]; then
     SIZE=$(du -h "$f" | cut -f1)
     echo -e "  $f ($SIZE)"
   fi
 done
 
-# 6. 自动提交
+# 4. 自动提交
 echo ""
-echo -e "${YELLOW}[6/6] 提交更新...${NC}"
+echo -e "${YELLOW}[4/4] 提交更新...${NC}"
 git add data/datamine public/
 CHANGED=$(git diff --cached --name-only | wc -l | tr -d ' ')
 if [ "$CHANGED" -eq 0 ]; then
@@ -130,4 +120,6 @@ ref: gszabi99/War-Thunder-Datamine@${DATAMINE_HASH}"
 fi
 
 echo ""
-echo -e "${GREEN}完成!${NC} 可以运行 ${YELLOW}npm run build${NC} 构建或 ${YELLOW}npm run dev${NC} 预览"
+echo -e "${GREEN}完成!${NC}"
+echo ""
+echo -e "可以运行 ${YELLOW}npm run build${NC} 构建或 ${YELLOW}npm run dev${NC} 预览"

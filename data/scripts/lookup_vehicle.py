@@ -12,8 +12,8 @@ import json
 import sys
 from pathlib import Path
 
-# Import shared utilities from fetch_datamine
-from fetch_datamine import (
+# Import shared utilities from fetch_utils
+from fetch_utils import (
     WPCOST_PATH,
     load_wpcost_data,
     load_localization_data,
