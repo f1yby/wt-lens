@@ -189,6 +189,8 @@ export interface Vehicle {
   imageUrl?: string;
   // Whether this vehicle is unreleased (not yet in live server)
   unreleased?: boolean;
+  // Whether this vehicle is a "ghost" (in datamine but no stats data and no wiki page)
+  ghost?: boolean;
   // Release date from datamine (YYYY-MM-DD format)
   releaseDate?: string;
 }
@@ -221,6 +223,7 @@ export interface AircraftVehicle {
   statsByMode?: Record<GameMode, VehicleStats | undefined>;
   imageUrl?: string;
   unreleased?: boolean;
+  ghost?: boolean;
   releaseDate?: string;
 }
 
@@ -249,6 +252,7 @@ export interface ShipVehicle {
   statsByMode?: Record<GameMode, VehicleStats | undefined>;
   imageUrl?: string;
   unreleased?: boolean;
+  ghost?: boolean;
   releaseDate?: string;
 }
 

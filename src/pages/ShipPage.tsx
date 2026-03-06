@@ -29,6 +29,7 @@ export default function ShipPage() {
   const [brRange, setBrRange] = useState<[number, number]>([BATTLE_RATINGS[0], BATTLE_RATINGS[BATTLE_RATINGS.length - 1]]);
   const [selectedType, setSelectedType] = useState<ShipType | 'all'>('all');
   const [showUnreleased, setShowUnreleased] = useState(false);
+  const [showGhost, setShowGhost] = useState(false);
 
   // Use custom hooks for game mode and stats month management
   const { gameMode, handleGameModeChange } = useGameMode();
@@ -63,9 +64,10 @@ export default function ShipPage() {
       const brMatch = ship.battleRating >= brRange[0] && ship.battleRating <= brRange[1];
       const typeMatch = selectedType === 'all' || ship.shipType === selectedType;
       const unreleasedMatch = showUnreleased || !ship.unreleased;
-      return nationMatch && brMatch && typeMatch && unreleasedMatch;
+      const ghostMatch = showGhost || !ship.ghost;
+      return nationMatch && brMatch && typeMatch && unreleasedMatch && ghostMatch;
     });
-  }, [ships, selectedNations, brRange, selectedType, showUnreleased]);
+  }, [ships, selectedNations, brRange, selectedType, showUnreleased, showGhost]);
 
   return (
     <Box sx={{ minHeight: '100vh', backgroundColor: '#f5f5f5' }}>
@@ -90,6 +92,8 @@ export default function ShipPage() {
           onTypeChange={setSelectedType}
           showUnreleased={showUnreleased}
           onShowUnreleasedChange={setShowUnreleased}
+          showGhost={showGhost}
+          onShowGhostChange={setShowGhost}
           typeOptions={SHIP_TYPES}
           availableBRs={availableBRs}
         />

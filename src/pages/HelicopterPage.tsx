@@ -17,6 +17,7 @@ export default function HelicopterPage() {
   const [selectedNations, setSelectedNations] = useState<Nation[]>([]);
   const [brRange, setBrRange] = useState<[number, number]>([BATTLE_RATINGS[0], BATTLE_RATINGS[BATTLE_RATINGS.length - 1]]);
   const [showUnreleased, setShowUnreleased] = useState(false);
+  const [showGhost, setShowGhost] = useState(false);
   const [useGroundBR, setUseGroundBR] = useState(false);
 
   // Use custom hooks for game mode and stats month management
@@ -56,9 +57,10 @@ export default function HelicopterPage() {
       const effectiveBR = useGroundBR ? (ac.groundBattleRating ?? ac.battleRating) : ac.battleRating;
       const brMatch = effectiveBR >= brRange[0] && effectiveBR <= brRange[1];
       const unreleasedMatch = showUnreleased || !ac.unreleased;
-      return nationMatch && brMatch && unreleasedMatch;
+      const ghostMatch = showGhost || !ac.ghost;
+      return nationMatch && brMatch && unreleasedMatch && ghostMatch;
     });
-  }, [aircraft, selectedNations, brRange, showUnreleased, useGroundBR]);
+  }, [aircraft, selectedNations, brRange, showUnreleased, showGhost, useGroundBR]);
 
   return (
     <Box sx={{ minHeight: '100vh', backgroundColor: '#f5f5f5' }}>
@@ -82,6 +84,8 @@ export default function HelicopterPage() {
           onTypeChange={() => {}}
           showUnreleased={showUnreleased}
           onShowUnreleasedChange={setShowUnreleased}
+          showGhost={showGhost}
+          onShowGhostChange={setShowGhost}
           typeOptions={[]}
           showGroundBRToggle
           useGroundBR={useGroundBR}

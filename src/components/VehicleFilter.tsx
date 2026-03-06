@@ -23,6 +23,9 @@ interface VehicleFilterProps<T extends string = string> {
   onTypeChange: (type: T | 'all') => void;
   showUnreleased: boolean;
   onShowUnreleasedChange: (show: boolean) => void;
+  /** Show ghost vehicles toggle */
+  showGhost?: boolean;
+  onShowGhostChange?: (show: boolean) => void;
   /** Custom type options. Defaults to ground vehicle types. */
   typeOptions?: TypeOption<T>[];
   /** Show ground combined BR toggle */
@@ -55,6 +58,8 @@ export default function VehicleFilter<T extends string = string>({
   onTypeChange,
   showUnreleased,
   onShowUnreleasedChange,
+  showGhost = false,
+  onShowGhostChange,
   typeOptions,
   showGroundBRToggle = false,
   useGroundBR = false,
@@ -225,6 +230,28 @@ export default function VehicleFilter<T extends string = string>({
           }
           sx={{ m: 0 }}
         />
+
+        {onShowGhostChange && (
+          <FormControlLabel
+            control={
+              <Switch
+                checked={showGhost}
+                onChange={(e) => onShowGhostChange(e.target.checked)}
+                size="small"
+                sx={{
+                  '& .MuiSwitch-switchBase.Mui-checked': { color: '#6b7280' },
+                  '& .MuiSwitch-switchBase.Mui-checked + .MuiSwitch-track': { backgroundColor: '#6b7280' },
+                }}
+              />
+            }
+            label={
+              <Typography sx={{ color: '#525252', fontSize: '0.8rem' }}>
+                幽灵载具
+              </Typography>
+            }
+            sx={{ m: 0 }}
+          />
+        )}
 
         {showGroundBRToggle && (
           <>

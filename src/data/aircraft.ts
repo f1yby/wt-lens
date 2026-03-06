@@ -15,6 +15,7 @@ interface AircraftEntry {
   imageUrl: string;
   unreleased?: boolean;
   releaseDate?: string;
+  ghost?: boolean;
 }
 
 // Cache for loaded raw data
@@ -107,6 +108,7 @@ function mergeAircraftData(stats: StatSharkEntry[], aircraft: AircraftEntry[], r
       imageUrl: aircraftEntry.imageUrl,
       unreleased: aircraftEntry.unreleased ?? false,
       releaseDate: aircraftEntry.releaseDate,
+      ghost: aircraftEntry.ghost ?? false,
     };
 
     aircraftList.push(aircraftVehicle);

@@ -18,6 +18,7 @@ export default function HomePage() {
   const [brRange, setBrRange] = useState<[number, number]>([BATTLE_RATINGS[0], BATTLE_RATINGS[BATTLE_RATINGS.length - 1]]);
   const [selectedType, setSelectedType] = useState<VehicleType | 'all'>('all');
   const [showUnreleased, setShowUnreleased] = useState(false);
+  const [showGhost, setShowGhost] = useState(false);
 
   // Use custom hooks for game mode and stats month management
   const { gameMode, handleGameModeChange } = useGameMode();
@@ -55,9 +56,10 @@ export default function HomePage() {
       const brMatch = vehicleBR >= brRange[0] && vehicleBR <= brRange[1];
       const typeMatch = selectedType === 'all' || vehicle.vehicleType === selectedType;
       const unreleasedMatch = showUnreleased || !vehicle.unreleased;
-      return nationMatch && brMatch && typeMatch && unreleasedMatch;
+      const ghostMatch = showGhost || !vehicle.ghost;
+      return nationMatch && brMatch && typeMatch && unreleasedMatch && ghostMatch;
     });
-  }, [vehicles, selectedNations, brRange, selectedType, showUnreleased, gameMode]);
+  }, [vehicles, selectedNations, brRange, selectedType, showUnreleased, showGhost, gameMode]);
 
   return (
     <Box sx={{ minHeight: '100vh', backgroundColor: '#f5f5f5' }}>
@@ -82,6 +84,8 @@ export default function HomePage() {
           onTypeChange={setSelectedType}
           showUnreleased={showUnreleased}
           onShowUnreleasedChange={setShowUnreleased}
+          showGhost={showGhost}
+          onShowGhostChange={setShowGhost}
           availableBRs={availableBRs}
         />
         <MonthRangeSelector

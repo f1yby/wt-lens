@@ -46,6 +46,7 @@ from fetch_utils import (
     calculate_speed_from_gearbox,
     # Filtering
     _is_event_or_tutorial,
+    _is_ghost_vehicle,
     _has_no_image_and_release_date,
     # Paths
     PUBLIC_DATA_PATH,
@@ -740,6 +741,8 @@ def vehicle_data_to_dict(v: VehicleData) -> dict[str, Any]:
         result["unreleased"] = True
     if v.release_date:
         result["releaseDate"] = v.release_date
+    if _is_ghost_vehicle(v.id):
+        result["ghost"] = True
     return result
 
 
@@ -883,10 +886,10 @@ def fetch_aircraft_data(vehicle_id: str, copy_images: bool = True) -> dict[str, 
         result['unreleased'] = True
     if release_date:
         result['releaseDate'] = release_date
+    if _is_ghost_vehicle(vehicle_id):
+        result['ghost'] = True
     
     return result
-
-
 def fetch_all_aircraft(copy_images: bool = True) -> list[dict[str, Any]]:
     """Fetch all aircraft data from wpcost."""
     aircraft_ids = load_aircraft_ids()
@@ -1058,6 +1061,8 @@ def fetch_ship_data(vehicle_id: str, copy_images: bool = True) -> dict[str, Any]
         result['unreleased'] = True
     if release_date:
         result['releaseDate'] = release_date
+    if _is_ghost_vehicle(vehicle_id):
+        result['ghost'] = True
 
     return result
 

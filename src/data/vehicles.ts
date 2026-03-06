@@ -45,6 +45,7 @@ interface DatamineEntry {
   source: string;
   unreleased?: boolean;
   releaseDate?: string;
+  ghost?: boolean;
 }
 
 // Cache for loaded raw data
@@ -163,6 +164,7 @@ function mergeVehicleData(stats: StatSharkEntry[], datamine: DatamineEntry[], ra
       imageUrl: datamineEntry.imageUrl,
       unreleased: datamineEntry.unreleased ?? false,
       releaseDate: datamineEntry.releaseDate,
+      ghost: datamineEntry.ghost ?? false,
     };
 
     vehicles.push(vehicle);

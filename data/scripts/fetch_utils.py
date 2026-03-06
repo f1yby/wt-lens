@@ -673,19 +673,39 @@ EVENT_VEHICLE_PATTERNS = [
     r'_event$',           # 一般活动车（如 germ_a7v_event）
     r'_football$',        # 足球活动车
     r'_killstreak$',      # 连杀奖励活动车
+    r'_missile_test$',    # 导弹测试载具（如 j_8f_missile_test）
     r'_race$',            # 坦克两项/赛车活动车
     r'_snowball$',        # 雪球活动车
     r'_tutorial$',        # 教程车辆
     r'_yt_cup_\d{4}$',    # YouTube Cup 车辆
 ]
 
-# Specific vehicle IDs to exclude
+# Specific vehicle IDs to exclude (event/tutorial vehicles - never shown)
 EVENT_VEHICLE_IDS = {
-    'us_amx_13_75',   # 美系借用法系AMX-13，无独立图片
-    'us_amx_13_90',   # 美系借用法系AMX-13，无独立图片
-    'cn_bt_5',        # Wiki不存在，0场次
-    'cn_type_95_ha_go',  # Wiki不存在，0场次
-    'germ_pzkpfw_35t_romania_mare',  # Wiki不存在，0场次
+    'uav_quadcopter',          # 渡鸦之眼无人机
+    'ucav_recon_micro',        # 微型侦察无人机
+    'ucav_recon_micro_flir',   # 微型侦察无人机(FLIR)
+    'zeppelin',                # 齐柏林飞艇
+}
+
+# Ghost vehicle IDs — vehicles in datamine but with no StatShark data and no WT Wiki page.
+# These are included in data (marked ghost=true) but hidden by default in the frontend.
+# This set is auto-updated by fetch_statshark.py --update-ghosts
+GHOST_VEHICLE_IDS: set[str] = {
+    'a6m5_zero_china',               # ␗​零​战​五​二​型
+    'cn_bt_5',                       # ␗​BT-5
+    'cn_type_95_ha_go',              # ␗​九​五​式​轻​战​车
+    'fairey_3f_mk3b',                # 费​尔​雷 IIIF Mk.IIIB
+    'fokker_d7',                     # 福​克 D.VII
+    'germ_pzkpfw_35t_romania_mare',  # 35(t) 坦​克 (罗​马​尼​亚)
+    'md_460_usa',                    # ▃​超​神​秘 B2
+    'os2u_1_naval',                  # OS2U-1
+    'osprey_mk4',                    # 鱼​鹰 Mk IV
+    'pe-2-359_china',                # ␗​佩​-2 359 型
+    'po-2_nw',                       # 波​-2 夜​魔​女
+    're_2000_ga_ep',                 # Re.2000GA (“红 5”​号)
+    'spad_13',                       # SPAD S.XIII
+    'yak_1_litvyak',                 # 雅​克​-1 (利​特​维​亚​克​座​机)
 }
 
 
@@ -699,6 +719,11 @@ def _is_event_or_tutorial(vid: str) -> bool:
         if re.search(pattern, vid):
             return True
     return False
+
+
+def _is_ghost_vehicle(vid: str) -> bool:
+    """Check if a vehicle ID is a ghost vehicle (in datamine but no stats/wiki)."""
+    return vid in GHOST_VEHICLE_IDS
 
 
 def _has_no_image_and_release_date(vid: str, images_path: Path) -> bool:

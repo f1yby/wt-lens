@@ -22,7 +22,8 @@ DIFF_MONTHS = [
     "diff_2025_october_november",
     "diff_2025_november_december",
     "diff_2025_december_january",
-    "diff_2026_january_february",   # 2026年1-2月 (最新)
+    "diff_2026_january_february",
+    "diff_2026_february_march",     # 2026年2-3月 (最新)
 ]
 
 
@@ -154,22 +155,40 @@ def main():
     """Main entry point"""
     parser = argparse.ArgumentParser(description="Fetch War Thunder vehicle statistics from StatShark")
     parser.add_argument("--all", action="store_true", help="Fetch all available months (from earliest to latest)")
+    parser.add_argument("--update-ghosts", action="store_true",
+                        help="After fetching, detect ghost vehicles (0 battles in all months) "
+                             "and update GHOST_VEHICLE_IDS in fetch_utils.py")
     args = parser.parse_args()
     
     # Determine which months to fetch
+    prefetched: dict = {}  # Cache for data already fetched during probing
     if args.all:
         months_to_fetch = DIFF_MONTHS  # All months from earliest to latest
         print(f"Fetching all {len(months_to_fetch)} months...")
     else:
-        months_to_fetch = [DIFF_MONTHS[-1]]  # Only latest month
+        # Try latest month first; if it fails, fall back to previous months
+        months_to_fetch = []
+        for month_id in reversed(DIFF_MONTHS):
+            print(f"Trying latest available month: {month_id}")
+            test_data = fetch_statshark_data(month_id)
+            if test_data and test_data.get("vehicle_stats"):
+                print(f"  Success! Using {month_id}")
+                months_to_fetch = [month_id]
+                prefetched[month_id] = test_data
+                break
+            else:
+                print(f"  No data for {month_id}, trying previous month...")
+        if not months_to_fetch:
+            print("No valid month found in DIFF_MONTHS")
+            return 1
     
     all_vehicles = []
     
     for month_id in months_to_fetch:
         print(f"Fetching StatShark data for: {month_id}")
         
-        # Fetch data
-        raw_data = fetch_statshark_data(month_id)
+        # Use cached data if available, otherwise fetch
+        raw_data = prefetched.pop(month_id, None) or fetch_statshark_data(month_id)
         
         if not raw_data:
             print(f"  Failed to fetch data for {month_id}, skipping...")
@@ -200,7 +219,126 @@ def main():
     output_path = Path(__file__).parent.parent.parent / "public" / "data" / "stats.json"
     save_stats(all_vehicles, str(output_path))
     
+    # Optionally update ghost vehicle list
+    if args.update_ghosts:
+        update_ghost_vehicles(all_vehicles)
+    
     return 0
+
+
+def update_ghost_vehicles(all_stats: list[dict]) -> None:
+    """Detect ghost vehicles and update GHOST_VEHICLE_IDS in fetch_utils.py.
+    
+    Ghost vehicles are those present in datamine JSON files but with 0 total battles
+    across ALL months and ALL game modes in the stats data, AND not found on WT Wiki.
+    """
+    import re as re_mod
+
+    public_data = Path(__file__).parent.parent.parent / "public" / "data"
+
+    # Load all vehicle IDs from datamine JSONs
+    datamine_ids: set[str] = set()
+    for fname in ['datamine.json', 'aircraft.json', 'ships.json']:
+        fpath = public_data / fname
+        if fpath.exists():
+            data = json.load(open(fpath))
+            for v in data:
+                datamine_ids.add(v['id'])
+
+    # Build set of IDs that have any battles in stats
+    ids_with_battles: set[str] = set()
+    for entry in all_stats:
+        if entry.get('battles', 0) > 0:
+            ids_with_battles.add(entry['id'])
+
+    # Ghost candidates: in datamine but 0 battles across all stats
+    ghost_candidates = datamine_ids - ids_with_battles
+
+    # Filter out unreleased vehicles (they naturally have 0 battles)
+    # A vehicle is "unreleased" if it has unreleased=true in any of the JSON files
+    unreleased_ids: set[str] = set()
+    for fname in ['datamine.json', 'aircraft.json', 'ships.json']:
+        fpath = public_data / fname
+        if fpath.exists():
+            data = json.load(open(fpath))
+            for v in data:
+                if v.get('unreleased'):
+                    unreleased_ids.add(v['id'])
+
+    ghost_candidates -= unreleased_ids
+
+    # Check WT Wiki existence (batch check)
+    print(f"\n=== Ghost Vehicle Detection ===")
+    print(f"Datamine vehicle count: {len(datamine_ids)}")
+    print(f"Vehicles with battles: {len(ids_with_battles)}")
+    print(f"Candidates (0 battles, not unreleased): {len(ghost_candidates)}")
+
+    confirmed_ghosts: set[str] = set()
+    try:
+        import requests as req
+        print(f"Checking WT Wiki for {len(ghost_candidates)} candidates...")
+        for i, vid in enumerate(sorted(ghost_candidates), 1):
+            if i % 10 == 0:
+                print(f"  [{i}/{len(ghost_candidates)}] checking wiki...")
+            try:
+                resp = req.head(
+                    f"https://wiki.warthunder.com/unit/{vid}",
+                    timeout=10,
+                    allow_redirects=True,
+                )
+                if resp.status_code == 404:
+                    confirmed_ghosts.add(vid)
+            except req.RequestException:
+                # If wiki check fails, conservatively include as ghost
+                confirmed_ghosts.add(vid)
+    except ImportError:
+        print("Warning: requests not available, skipping wiki check. Using all 0-battle candidates.")
+        confirmed_ghosts = ghost_candidates
+
+    print(f"Confirmed ghost vehicles: {len(confirmed_ghosts)}")
+
+    if not confirmed_ghosts:
+        print("No ghost vehicles detected.")
+        return
+
+    # Update fetch_utils.py
+    utils_path = Path(__file__).parent / "fetch_utils.py"
+    utils_content = utils_path.read_text(encoding='utf-8')
+
+    # Build the new GHOST_VEHICLE_IDS block
+    # Load localized names for comments
+    name_map: dict[str, str] = {}
+    for fname in ['datamine.json', 'aircraft.json', 'ships.json']:
+        fpath = public_data / fname
+        if fpath.exists():
+            data = json.load(open(fpath))
+            for v in data:
+                name_map[v['id']] = v.get('localizedName', v['id'])
+
+    lines = []
+    for vid in sorted(confirmed_ghosts):
+        name = name_map.get(vid, vid)
+        lines.append(f"    '{vid}',{' ' * max(1, 30 - len(vid))}# {name}")
+
+    new_block = (
+        "GHOST_VEHICLE_IDS: set[str] = {\n"
+        + "\n".join(lines)
+        + "\n}"
+    )
+
+    # Replace existing GHOST_VEHICLE_IDS block using regex
+    pattern = r'GHOST_VEHICLE_IDS: set\[str\] = \{[^}]*\}'
+    if re_mod.search(pattern, utils_content, re_mod.DOTALL):
+        new_content = re_mod.sub(pattern, new_block, utils_content, flags=re_mod.DOTALL)
+        utils_path.write_text(new_content, encoding='utf-8')
+        print(f"Updated GHOST_VEHICLE_IDS in {utils_path} ({len(confirmed_ghosts)} vehicles)")
+    else:
+        print(f"Warning: Could not find GHOST_VEHICLE_IDS block in {utils_path}")
+
+    # Print the list
+    for vid in sorted(confirmed_ghosts):
+        name = name_map.get(vid, vid)
+        print(f"  {vid:45s} {name}")
 
 
 if __name__ == "__main__":

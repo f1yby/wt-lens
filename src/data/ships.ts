@@ -14,6 +14,7 @@ interface ShipEntry {
   imageUrl: string;
   unreleased?: boolean;
   releaseDate?: string;
+  ghost?: boolean;
 }
 
 // Cache for loaded raw data
@@ -105,6 +106,7 @@ function mergeShipsData(stats: StatSharkEntry[], ships: ShipEntry[], range?: Sta
       imageUrl: shipEntry.imageUrl,
       unreleased: shipEntry.unreleased ?? false,
       releaseDate: shipEntry.releaseDate,
+      ghost: shipEntry.ghost ?? false,
     };
 
     shipsList.push(shipVehicle);

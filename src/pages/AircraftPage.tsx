@@ -26,6 +26,7 @@ export default function AircraftPage() {
   const [brRange, setBrRange] = useState<[number, number]>([BATTLE_RATINGS[0], BATTLE_RATINGS[BATTLE_RATINGS.length - 1]]);
   const [selectedType, setSelectedType] = useState<AircraftType | 'all'>('all');
   const [showUnreleased, setShowUnreleased] = useState(false);
+  const [showGhost, setShowGhost] = useState(false);
   const [useGroundBR, setUseGroundBR] = useState(false);
 
   // Use custom hooks for game mode and stats month management
@@ -67,9 +68,10 @@ export default function AircraftPage() {
       const brMatch = effectiveBR >= brRange[0] && effectiveBR <= brRange[1];
       const typeMatch = selectedType === 'all' || ac.aircraftType === selectedType;
       const unreleasedMatch = showUnreleased || !ac.unreleased;
-      return nationMatch && brMatch && typeMatch && unreleasedMatch;
+      const ghostMatch = showGhost || !ac.ghost;
+      return nationMatch && brMatch && typeMatch && unreleasedMatch && ghostMatch;
     });
-  }, [aircraft, selectedNations, brRange, selectedType, showUnreleased, useGroundBR]);
+  }, [aircraft, selectedNations, brRange, selectedType, showUnreleased, showGhost, useGroundBR]);
 
   return (
     <Box sx={{ minHeight: '100vh', backgroundColor: '#f5f5f5' }}>
@@ -94,6 +96,8 @@ export default function AircraftPage() {
           onTypeChange={setSelectedType}
           showUnreleased={showUnreleased}
           onShowUnreleasedChange={setShowUnreleased}
+          showGhost={showGhost}
+          onShowGhostChange={setShowGhost}
           typeOptions={AIRCRAFT_TYPES}
           showGroundBRToggle
           useGroundBR={useGroundBR}
