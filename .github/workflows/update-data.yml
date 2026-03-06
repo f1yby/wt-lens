@@ -2,8 +2,8 @@ name: Update War Thunder Data
 
 on:
   schedule:
-    # Check for datamine updates every hour
-    - cron: "0 * * * *"
+    # Check for datamine updates every 30 minutes
+    - cron: "*/30 * * * *"
   workflow_dispatch:
     inputs:
       force_update:
