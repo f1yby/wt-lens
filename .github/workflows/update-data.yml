@@ -62,23 +62,11 @@ jobs:
         if: steps.check.outputs.changed == 'true'
         run: pip install -r data/scripts/requirements.txt
 
-      - name: Fetch ground vehicle data
+      - name: Fetch all vehicle data
         if: steps.check.outputs.changed == 'true'
         run: |
           cd data/scripts
-          python fetch_datamine.py
-
-      - name: Fetch aircraft data
-        if: steps.check.outputs.changed == 'true'
-        run: |
-          cd data/scripts
-          python fetch_aircraft.py --no-images
-
-      - name: Fetch ship data
-        if: steps.check.outputs.changed == 'true'
-        run: |
-          cd data/scripts
-          python fetch_ships.py --no-images
+          python fetch_all.py --no-images
 
       - name: Commit and push if changed
         if: steps.check.outputs.changed == 'true'
