@@ -16,7 +16,7 @@ export default function GameModeSelector({
   onModeChange,
 }: GameModeSelectorProps) {
   return (
-    <Box sx={{ display: 'flex', gap: 1, mb: 2 }}>
+    <Box sx={{ display: 'flex', gap: 1 }}>
       {GAME_MODES.map((mode) => {
         const isSelected = currentMode === mode.id;
 
@@ -32,7 +32,7 @@ export default function GameModeSelector({
               px: 2,
               borderRadius: 2,
               border: isSelected ? '2px solid' : '1px solid',
-              borderColor: isSelected ? mode.color : '#e5e5e5',
+              borderColor: isSelected ? mode.color : '#d4d4d4',
               backgroundColor: isSelected ? `${mode.color}10` : '#ffffff',
               color: isSelected ? mode.color : '#525252',
               textTransform: 'none',

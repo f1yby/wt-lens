@@ -144,6 +144,8 @@ export interface Vehicle {
   nation: Nation;
   rank: number;
   battleRating: number;
+  /** Battle rating for each game mode (arcade/historical/simulation) */
+  br?: Record<GameMode, number>;
   vehicleType: GroundVehicleType;
   economicType: EconomicType;
   // Performance metrics from datamine (some fields may be missing)
@@ -199,6 +201,8 @@ export interface AircraftVehicle {
   nation: Nation;
   rank: number;
   battleRating: number;
+  /** Battle rating for each game mode (arcade/historical/simulation) */
+  br?: Record<GameMode, number>;
   /** Ground combined battle BR (陆空联合 BR), only present when different from air BR */
   groundBattleRating?: number;
   aircraftType: AircraftType;
@@ -228,6 +232,8 @@ export interface ShipVehicle {
   nation: Nation;
   rank: number;
   battleRating: number;
+  /** Battle rating for each game mode (arcade/historical/simulation) */
+  br?: Record<GameMode, number>;
   shipType: ShipType;
   economicType: EconomicType;
   // Phase 1: No performance data from datamine

@@ -10,6 +10,7 @@ interface DatamineEntry {
   nation: string;
   rank: number;
   battle_rating: number;
+  br?: Record<GameMode, number>;
   vehicle_type: string;
   economic_type: string;
   performance: {
@@ -124,6 +125,7 @@ function mergeVehicleData(stats: StatSharkEntry[], datamine: DatamineEntry[], ra
       nation: datamineEntry.nation as Vehicle['nation'],
       rank: defaultStats ? (statsByMode?.historical?.rank ?? datamineEntry.rank ?? 1) : (datamineEntry.rank ?? 1),
       battleRating: defaultStats ? (statsByMode?.historical?.br ?? datamineEntry.battle_rating ?? 1.0) : (datamineEntry.battle_rating ?? 1.0),
+      br: datamineEntry.br,
       vehicleType: datamineEntry.vehicle_type as Vehicle['vehicleType'],
       economicType: (datamineEntry.economic_type as Vehicle['economicType']) ?? 'regular',
       performance: {

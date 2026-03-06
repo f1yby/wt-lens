@@ -108,7 +108,7 @@ export default function VehicleCard({ vehicle, gameMode = 'historical' }: Vehicl
             {nation?.flagIcon} {nation?.nameZh}
           </Typography>
           <Chip
-            label={`${vehicle.battleRating.toFixed(1)}`}
+            label={`${(vehicle.br?.[gameMode] ?? vehicle.battleRating).toFixed(1)}`}
             size="small"
             sx={{
               backgroundColor: 'rgba(22, 163, 74, 0.1)',

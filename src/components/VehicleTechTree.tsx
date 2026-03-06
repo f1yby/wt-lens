@@ -68,8 +68,11 @@ export default function VehicleTechTree<T extends TechTreeItem>({
     return getVehicleStatsByMode(item as unknown as Vehicle, mode);
   });
 
-  // BR resolver: custom or default
-  const resolveBR = getBR ?? ((item: T) => item.battleRating);
+  // BR resolver: custom or default (use game mode specific BR if available)
+  const resolveBR = getBR ?? ((item: T) => {
+    const v = item as unknown as Vehicle;
+    return v.br?.[gameMode] ?? item.battleRating;
+  });
 
   // 按 BR 分组载具
   const vehiclesByBR = BATTLE_RATINGS.reduce((acc, br) => {

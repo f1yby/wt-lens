@@ -28,6 +28,11 @@ import { getWinRateColor } from '../utils/gameMode';
 import { useGameMode } from '../hooks/useGameMode';
 import { useStatsMonthRange } from '../hooks/useStatsMonth';
 
+/** Get vehicle BR for the current game mode */
+function getVehicleBR(vehicle: Vehicle, gameMode: GameMode): number {
+  return vehicle.br?.[gameMode] ?? vehicle.battleRating;
+}
+
 /** Gets the numeric value for a given metric from vehicle performance data */
 function getMetricValue(vehicle: Vehicle, metric: MetricType): number {
   const { performance } = vehicle;
@@ -56,11 +61,11 @@ interface ComparisonFilter {
 }
 
 /** Generates scatter data for vehicle comparison charts */
-function generateVehicleComparisonData(vehicleId: string, metric: MetricType, allVehicles: Vehicle[], filter?: ComparisonFilter) {
+function generateVehicleComparisonData(vehicleId: string, metric: MetricType, allVehicles: Vehicle[], gameMode: GameMode, filter?: ComparisonFilter) {
   const vehicle = allVehicles.find(v => v.id === vehicleId);
   if (!vehicle) return null;
 
-  const targetBR = vehicle.battleRating;
+  const targetBR = getVehicleBR(vehicle, gameMode);
   const brMin = filter?.brMin ?? (targetBR - 1.0);
   const brMax = filter?.brMax ?? (targetBR + 1.0);
 
@@ -74,7 +79,8 @@ function generateVehicleComparisonData(vehicleId: string, metric: MetricType, al
     }
     const metricValue = getMetricValue(v, metric);
     if (metricValue <= 0) return false;
-    if (v.battleRating < brMin || v.battleRating > brMax) return false;
+    const vBR = getVehicleBR(v, gameMode);
+    if (vBR < brMin || vBR > brMax) return false;
     if (filter?.vehicleTypes && filter.vehicleTypes.length > 0 && !filter.vehicleTypes.includes(v.vehicleType)) return false;
     return true;
   });
@@ -85,7 +91,8 @@ function generateVehicleComparisonData(vehicleId: string, metric: MetricType, al
   const upperSpan = Math.max(brMax - targetBR, 0.1);
 
   const bins = filteredVehicles.map((v) => {
-    const brDiff = parseFloat((v.battleRating - targetBR).toFixed(2));
+    const vBR = getVehicleBR(v, gameMode);
+    const brDiff = parseFloat((vBR - targetBR).toFixed(2));
     const isCurrent = v.id === vehicleId;
 
     return {
@@ -140,7 +147,7 @@ function generateStatsComparisonData(
   const vehicle = allVehicles.find(v => v.id === vehicleId);
   if (!vehicle) return null;
 
-  const targetBR = vehicle.battleRating;
+  const targetBR = getVehicleBR(vehicle, gameMode);
   const brMin = filter?.brMin ?? (targetBR - 1.0);
   const brMax = filter?.brMax ?? (targetBR + 1.0);
 
@@ -154,7 +161,8 @@ function generateStatsComparisonData(
       return vStats && vStats.battles > 0 && getStatsMetricValue(v, metric, gameMode) > 0;
     }
     const metricValue = getStatsMetricValue(v, metric, gameMode);
-    if (v.battleRating < brMin || v.battleRating > brMax) return false;
+    const vBR = getVehicleBR(v, gameMode);
+    if (vBR < brMin || vBR > brMax) return false;
     if (!vStats || vStats.battles <= 0 || metricValue <= 0) return false;
     if (filter?.vehicleTypes && filter.vehicleTypes.length > 0 && !filter.vehicleTypes.includes(v.vehicleType)) return false;
     return true;
@@ -167,7 +175,8 @@ function generateStatsComparisonData(
 
   const bins = filteredVehicles.map((v) => {
     const vStats = getVehicleStatsByMode(v, gameMode);
-    const brDiff = parseFloat((v.battleRating - targetBR).toFixed(2));
+    const vBR = getVehicleBR(v, gameMode);
+    const brDiff = parseFloat((vBR - targetBR).toFixed(2));
     const isCurrent = v.id === vehicleId;
 
     return {
@@ -588,11 +597,11 @@ export default function VehicleDetailPage() {
   const effectiveBrRange: [number, number] = useMemo(() => {
     if (brRange) return brRange;
     if (!vehicle) return [BATTLE_RATINGS[0], BATTLE_RATINGS[BATTLE_RATINGS.length - 1]];
-    const br = vehicle.battleRating;
+    const br = getVehicleBR(vehicle, gameMode);
     const lo = BATTLE_RATINGS.filter(b => b >= br - 1.0)[0] ?? BATTLE_RATINGS[0];
     const hi = [...BATTLE_RATINGS].reverse().find(b => b <= br + 1.0) ?? BATTLE_RATINGS[BATTLE_RATINGS.length - 1];
     return [lo, hi];
-  }, [brRange, vehicle]);
+  }, [brRange, vehicle, gameMode]);
 
   const filter: ComparisonFilter = useMemo(() => ({
     vehicleTypes: selectedTypes,
@@ -603,18 +612,18 @@ export default function VehicleDetailPage() {
   const comparisons = useMemo(() => {
     if (!vehicle) return null;
     return {
-      powerToWeight: generateVehicleComparisonData(vehicle.id, 'powerToWeight', vehicles, filter),
-      maxSpeed: generateVehicleComparisonData(vehicle.id, 'maxSpeed', vehicles, filter),
-      maxReverseSpeed: generateVehicleComparisonData(vehicle.id, 'maxReverseSpeed', vehicles, filter),
-      reloadTime: generateVehicleComparisonData(vehicle.id, 'reloadTime', vehicles, filter),
-      penetration: generateVehicleComparisonData(vehicle.id, 'penetration', vehicles, filter),
-      traverseSpeed: generateVehicleComparisonData(vehicle.id, 'traverseSpeed', vehicles, filter),
-      elevationSpeed: generateVehicleComparisonData(vehicle.id, 'elevationSpeed', vehicles, filter),
-      elevationMin: generateVehicleComparisonData(vehicle.id, 'elevationMin', vehicles, filter),
-      gunnerThermal: generateVehicleComparisonData(vehicle.id, 'gunnerThermal', vehicles, filter),
-      commanderThermal: generateVehicleComparisonData(vehicle.id, 'commanderThermal', vehicles, filter),
+      powerToWeight: generateVehicleComparisonData(vehicle.id, 'powerToWeight', vehicles, gameMode, filter),
+      maxSpeed: generateVehicleComparisonData(vehicle.id, 'maxSpeed', vehicles, gameMode, filter),
+      maxReverseSpeed: generateVehicleComparisonData(vehicle.id, 'maxReverseSpeed', vehicles, gameMode, filter),
+      reloadTime: generateVehicleComparisonData(vehicle.id, 'reloadTime', vehicles, gameMode, filter),
+      penetration: generateVehicleComparisonData(vehicle.id, 'penetration', vehicles, gameMode, filter),
+      traverseSpeed: generateVehicleComparisonData(vehicle.id, 'traverseSpeed', vehicles, gameMode, filter),
+      elevationSpeed: generateVehicleComparisonData(vehicle.id, 'elevationSpeed', vehicles, gameMode, filter),
+      elevationMin: generateVehicleComparisonData(vehicle.id, 'elevationMin', vehicles, gameMode, filter),
+      gunnerThermal: generateVehicleComparisonData(vehicle.id, 'gunnerThermal', vehicles, gameMode, filter),
+      commanderThermal: generateVehicleComparisonData(vehicle.id, 'commanderThermal', vehicles, gameMode, filter),
     };
-  }, [vehicle, vehicles, filter]);
+  }, [vehicle, vehicles, gameMode, filter]);
 
   const statsComparisons = useMemo(() => {
     if (!vehicle) return null;
@@ -856,7 +865,7 @@ export default function VehicleDetailPage() {
                         color: getWinRateColor(modeStats.winRate),
                       },
                       { label: 'KPS', value: modeStats.killPerSpawn.toFixed(2), color: '#fff' },
-                      { label: 'BR', value: vehicle.battleRating.toFixed(1), color: '#86efac' },
+                      { label: 'BR', value: getVehicleBR(vehicle, gameMode).toFixed(1), color: '#86efac' },
                     ].map((stat) => (
                       <Box key={stat.label}>
                         <Typography sx={{
@@ -982,16 +991,6 @@ export default function VehicleDetailPage() {
           </Box>
         </Paper>
 
-        {/* Mode Selector */}
-        <GameModeSelector
-          currentMode={gameMode}
-          onModeChange={handleGameModeChange}
-        />
-        <MonthRangeSelector
-          currentRange={statsMonthRange}
-          onRangeChange={handleStatsMonthRangeChange}
-        />
-
         {/* Comparison Charts */}
         <Typography variant="h5" sx={{ color: '#171717', fontWeight: 600, mb: 2 }}>
           同权重载具对比
@@ -1000,6 +999,23 @@ export default function VehicleDetailPage() {
         {/* Filter Controls */}
         <Paper elevation={0} sx={{ p: 2, mb: 2, border: '1px solid #e5e5e5', borderRadius: 2 }}>
           <Stack spacing={2}>
+            {/* Game Mode and Time Range Selector */}
+            <Box sx={{ mb: 2 }}>
+              <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 1 }}>
+                <Typography variant="subtitle1" sx={{ color: '#171717', fontWeight: 600 }}>
+                  游戏模式
+                </Typography>
+                <MonthRangeSelector
+                  currentRange={statsMonthRange}
+                  onRangeChange={handleStatsMonthRangeChange}
+                />
+              </Box>
+              <GameModeSelector
+                currentMode={gameMode}
+                onModeChange={handleGameModeChange}
+              />
+            </Box>
+
             {/* Vehicle Type Filter */}
             <Box>
               <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 1 }}>
@@ -1072,25 +1088,25 @@ export default function VehicleDetailPage() {
           {/* 1. 胜率 */}
           {statsComparisons?.winRate && (
             <Grid item xs={12} md={4}>
-              <DistributionChart data={statsComparisons.winRate} title="胜率" unit="%" brInfo={{ vehicleBR: vehicle.battleRating, brMin: effectiveBrRange[0], brMax: effectiveBrRange[1] }} />
+              <DistributionChart data={statsComparisons.winRate} title="胜率" unit="%" brInfo={{ vehicleBR: getVehicleBR(vehicle, gameMode), brMin: effectiveBrRange[0], brMax: effectiveBrRange[1] }} />
             </Grid>
           )}
           {/* 2. KR */}
           {statsComparisons?.killPerSpawn && (
             <Grid item xs={12} md={4}>
-              <DistributionChart data={statsComparisons.killPerSpawn} title="KR (每重生击毁)" unit="" brInfo={{ vehicleBR: vehicle.battleRating, brMin: effectiveBrRange[0], brMax: effectiveBrRange[1] }} />
+              <DistributionChart data={statsComparisons.killPerSpawn} title="KR (每重生击毁)" unit="" brInfo={{ vehicleBR: getVehicleBR(vehicle, gameMode), brMin: effectiveBrRange[0], brMax: effectiveBrRange[1] }} />
             </Grid>
           )}
           {/* 3. 每次重生经验 */}
           {statsComparisons?.expPerSpawn && (
             <Grid item xs={12} md={4}>
-              <DistributionChart data={statsComparisons.expPerSpawn} title="每次重生经验" unit=" RP" brInfo={{ vehicleBR: vehicle.battleRating, brMin: effectiveBrRange[0], brMax: effectiveBrRange[1] }} />
+              <DistributionChart data={statsComparisons.expPerSpawn} title="每次重生经验" unit=" RP" brInfo={{ vehicleBR: getVehicleBR(vehicle, gameMode), brMin: effectiveBrRange[0], brMax: effectiveBrRange[1] }} />
             </Grid>
           )}
           {/* 4. 装填 */}
           {comparisons?.reloadTime && (
             <Grid item xs={12} md={4}>
-              <DistributionChart data={comparisons.reloadTime} title="装填时间" unit="s" brInfo={{ vehicleBR: vehicle.battleRating, brMin: effectiveBrRange[0], brMax: effectiveBrRange[1] }} />
+              <DistributionChart data={comparisons.reloadTime} title="装填时间" unit="s" brInfo={{ vehicleBR: getVehicleBR(vehicle, gameMode), brMin: effectiveBrRange[0], brMax: effectiveBrRange[1] }} />
             </Grid>
           )}
           {/* 5. 功重比 */}
@@ -1102,25 +1118,25 @@ export default function VehicleDetailPage() {
           {/* 6. 穿深 */}
           {comparisons?.penetration && (
             <Grid item xs={12} md={4}>
-              <DistributionChart data={comparisons.penetration} title="穿深" unit="mm" brInfo={{ vehicleBR: vehicle.battleRating, brMin: effectiveBrRange[0], brMax: effectiveBrRange[1] }} />
+              <DistributionChart data={comparisons.penetration} title="穿深" unit="mm" brInfo={{ vehicleBR: getVehicleBR(vehicle, gameMode), brMin: effectiveBrRange[0], brMax: effectiveBrRange[1] }} />
             </Grid>
           )}
           {/* 7. 方向机速度 */}
           {comparisons?.traverseSpeed && (
             <Grid item xs={12} md={4}>
-              <DistributionChart data={comparisons.traverseSpeed} title="方向机速度" unit="°/s" brInfo={{ vehicleBR: vehicle.battleRating, brMin: effectiveBrRange[0], brMax: effectiveBrRange[1] }} />
+              <DistributionChart data={comparisons.traverseSpeed} title="方向机速度" unit="°/s" brInfo={{ vehicleBR: getVehicleBR(vehicle, gameMode), brMin: effectiveBrRange[0], brMax: effectiveBrRange[1] }} />
             </Grid>
           )}
           {/* 8. 高低机速度 */}
           {comparisons?.elevationSpeed && (
             <Grid item xs={12} md={4}>
-              <DistributionChart data={comparisons.elevationSpeed} title="高低机速度" unit="°/s" brInfo={{ vehicleBR: vehicle.battleRating, brMin: effectiveBrRange[0], brMax: effectiveBrRange[1] }} />
+              <DistributionChart data={comparisons.elevationSpeed} title="高低机速度" unit="°/s" brInfo={{ vehicleBR: getVehicleBR(vehicle, gameMode), brMin: effectiveBrRange[0], brMax: effectiveBrRange[1] }} />
             </Grid>
           )}
           {/* 9. 倒车极速 */}
           {comparisons?.maxReverseSpeed && (
             <Grid item xs={12} md={4}>
-              <DistributionChart data={comparisons.maxReverseSpeed} title="倒车速度" unit="km/h" brInfo={{ vehicleBR: vehicle.battleRating, brMin: effectiveBrRange[0], brMax: effectiveBrRange[1] }} />
+              <DistributionChart data={comparisons.maxReverseSpeed} title="倒车速度" unit="km/h" brInfo={{ vehicleBR: getVehicleBR(vehicle, gameMode), brMin: effectiveBrRange[0], brMax: effectiveBrRange[1] }} />
             </Grid>
           )}
           {/* 10. 前进极速 */}
@@ -1138,7 +1154,7 @@ export default function VehicleDetailPage() {
           {/* 12. 车长热成像 */}
           {comparisons?.commanderThermal && (
             <Grid item xs={12} md={4}>
-              <DistributionChart data={comparisons.commanderThermal} title="车长热成像" unit="像素" brInfo={{ vehicleBR: vehicle.battleRating, brMin: effectiveBrRange[0], brMax: effectiveBrRange[1] }} />
+              <DistributionChart data={comparisons.commanderThermal} title="车长热成像" unit="像素" brInfo={{ vehicleBR: getVehicleBR(vehicle, gameMode), brMin: effectiveBrRange[0], brMax: effectiveBrRange[1] }} />
             </Grid>
           )}
           {/* 13. 稳定器 */}

@@ -741,6 +741,10 @@ class VehicleData:
     source: str = "datamine"
     unreleased: bool = False
     release_date: str | None = None
+    # Individual BR for each game mode
+    br_arcade: float | None = None
+    br_realistic: float | None = None
+    br_simulator: float | None = None
 
 
 def read_local_blkx(filename: str) -> TankModelData | None:
@@ -1024,24 +1028,39 @@ def get_vehicle_economic_type(vehicle_data: WpcostEntry | None) -> str:
     return 'regular'
 
 
-def get_vehicle_br_and_type(vehicle_id: str) -> tuple[float, int, str]:
+def get_vehicle_br_and_type(vehicle_id: str) -> tuple[dict[str, float], int, str]:
     """
-    Get vehicle BR, rank, and economic type from wpcost.blkx.
-    Returns (battle_rating, rank, economic_type)
+    Get vehicle BR for all modes, rank, and economic type from wpcost.blkx.
+    Returns (br_dict, rank, economic_type) where br_dict has keys: arcade, realistic, simulator
     """
     wpcost = load_wpcost_data()
     vehicle_data = wpcost.get(vehicle_id)
 
     if not vehicle_data:
-        return 4.0, 3, 'regular'  # defaults
+        return {'arcade': 4.0, 'realistic': 4.0, 'simulator': 4.0}, 3, 'regular'  # defaults
 
-    # Get economicRank for historical/realistic mode
-    economic_rank = vehicle_data.get('economicRankHistorical')
-    if economic_rank is None:
-        economic_rank = vehicle_data.get('economicRank')
+    # Get economicRank for each game mode
+    # Priority: specific mode rank -> economicRank (fallback)
+    arcade_rank = vehicle_data.get('economicRankArcade')
+    realistic_rank = vehicle_data.get('economicRankHistorical')
+    simulator_rank = vehicle_data.get('economicRankSimulation')
+    
+    # Fallback to generic economicRank if specific mode rank not available
+    fallback_rank = vehicle_data.get('economicRank', 9)  # default rank 9 = BR 4.0
+    
+    if arcade_rank is None:
+        arcade_rank = fallback_rank
+    if realistic_rank is None:
+        realistic_rank = fallback_rank
+    if simulator_rank is None:
+        simulator_rank = fallback_rank
 
     # Convert economicRank to BR using formula: round(rank/3 + 1.0, 1)
-    br = economic_rank_to_br(economic_rank)
+    br_dict = {
+        'arcade': economic_rank_to_br(arcade_rank),
+        'realistic': economic_rank_to_br(realistic_rank),
+        'simulator': economic_rank_to_br(simulator_rank),
+    }
 
     # Get rank
     rank = vehicle_data.get('rank', 3)
@@ -1051,17 +1070,17 @@ def get_vehicle_br_and_type(vehicle_id: str) -> tuple[float, int, str]:
     # Get economic type
     economic_type = get_vehicle_economic_type(vehicle_data)
 
-    return br, rank, economic_type
+    return br_dict, rank, economic_type
 
 
 # Keep for backward compatibility
 def get_vehicle_br(vehicle_id: str) -> tuple[float, int]:
     """
     Get vehicle BR and rank from wpcost.blkx.
-    Returns (battle_rating, rank)
+    Returns (battle_rating, rank) - uses realistic BR as the main BR
     """
-    br, rank, _ = get_vehicle_br_and_type(vehicle_id)
-    return br, rank
+    br_dict, rank, _ = get_vehicle_br_and_type(vehicle_id)
+    return br_dict['realistic'], rank
 
 
 
@@ -1537,8 +1556,9 @@ def fetch_vehicle_performance(vehicle_id: str, copy_images: bool = True) -> Vehi
     nation = extract_nation_from_id(vehicle_id)
     vehicle_type = detect_vehicle_type(data)
 
-    # Get BR, rank, and economic type from wpcost.blkx
-    br, rank, economic_type = get_vehicle_br_and_type(vehicle_id)
+    # Get BR for all modes, rank, and economic type from wpcost.blkx
+    br_dict, rank, economic_type = get_vehicle_br_and_type(vehicle_id)
+    br = br_dict['realistic']  # Use realistic BR as the main BR
     
     # Get localized name from units.csv
     localized_name = get_vehicle_localized_name(vehicle_id)
@@ -1580,6 +1600,9 @@ def fetch_vehicle_performance(vehicle_id: str, copy_images: bool = True) -> Vehi
         source="datamine_tankmodel",
         unreleased=is_unreleased,
         release_date=release_date,
+        br_arcade=br_dict.get('arcade'),
+        br_realistic=br_dict.get('realistic'),
+        br_simulator=br_dict.get('simulator'),
     )
 
 
@@ -1685,6 +1708,11 @@ def vehicle_data_to_dict(v: VehicleData) -> dict[str, Any]:
         "nation": v.nation,
         "rank": v.rank,
         "battle_rating": v.battle_rating,
+        "br": {
+            "arcade": v.br_arcade,
+            "realistic": v.br_realistic,
+            "simulator": v.br_simulator,
+        },
         "vehicle_type": v.vehicle_type,
         "economic_type": v.economic_type,
         "performance": {

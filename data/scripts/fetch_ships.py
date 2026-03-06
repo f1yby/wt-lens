@@ -120,9 +120,25 @@ def fetch_ship_data(vehicle_id: str, copy_images: bool = True) -> dict[str, Any]
     
     ship_type = SHIP_TYPE_MAP[unit_class]
     
-    # Get BR and rank
-    economic_rank = vehicle_data.get('economicRankHistorical') or vehicle_data.get('economicRank')
-    br = economic_rank_to_br(economic_rank)
+    # Get BR for each game mode
+    # Priority: specific mode rank -> economicRank (fallback)
+    arcade_rank = vehicle_data.get('economicRankArcade')
+    realistic_rank = vehicle_data.get('economicRankHistorical')
+    simulator_rank = vehicle_data.get('economicRankSimulation')
+    
+    fallback_rank = vehicle_data.get('economicRank', 9)  # default rank 9 = BR 4.0
+    
+    if arcade_rank is None:
+        arcade_rank = fallback_rank
+    if realistic_rank is None:
+        realistic_rank = fallback_rank
+    if simulator_rank is None:
+        simulator_rank = fallback_rank
+    
+    br_arcade = economic_rank_to_br(arcade_rank)
+    br_realistic = economic_rank_to_br(realistic_rank)
+    br_simulator = economic_rank_to_br(simulator_rank)
+    
     rank = vehicle_data.get('rank', 1)
     if not isinstance(rank, int):
         rank = 1
@@ -150,7 +166,12 @@ def fetch_ship_data(vehicle_id: str, copy_images: bool = True) -> dict[str, Any]
         'localizedName': localized_name,
         'nation': nation,
         'rank': rank,
-        'battleRating': br,
+        'battleRating': br_realistic,  # Use realistic BR as main BR
+        'br': {
+            'arcade': br_arcade,
+            'realistic': br_realistic,
+            'simulator': br_simulator,
+        },
         'shipType': ship_type,
         'economicType': economic_type,
         'imageUrl': image_url,

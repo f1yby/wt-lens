@@ -50,12 +50,14 @@ export default function HomePage() {
     return vehicles.filter(vehicle => {
       // 未选择任何国家 = 显示所有国家
       const nationMatch = selectedNations.length === 0 || selectedNations.includes(vehicle.nation);
-      const brMatch = vehicle.battleRating >= brRange[0] && vehicle.battleRating <= brRange[1];
+      // 使用当前游戏模式的BR进行匹配
+      const vehicleBR = vehicle.br?.[gameMode] ?? vehicle.battleRating;
+      const brMatch = vehicleBR >= brRange[0] && vehicleBR <= brRange[1];
       const typeMatch = selectedType === 'all' || vehicle.vehicleType === selectedType;
       const unreleasedMatch = showUnreleased || !vehicle.unreleased;
       return nationMatch && brMatch && typeMatch && unreleasedMatch;
     });
-  }, [vehicles, selectedNations, brRange, selectedType, showUnreleased]);
+  }, [vehicles, selectedNations, brRange, selectedType, showUnreleased, gameMode]);
 
   return (
     <Box sx={{ minHeight: '100vh', backgroundColor: '#f5f5f5' }}>
@@ -64,10 +66,12 @@ export default function HomePage() {
       {/* Main Content */}
       <Container maxWidth="xl" sx={{ pt: 12, pb: 4 }}>
         {/* Mode Selector */}
-        <GameModeSelector
-          currentMode={gameMode}
-          onModeChange={handleGameModeChange}
-        />
+        <Box sx={{ mb: 2 }}>
+          <GameModeSelector
+            currentMode={gameMode}
+            onModeChange={handleGameModeChange}
+          />
+        </Box>
 
         <VehicleFilter
           selectedNations={selectedNations}

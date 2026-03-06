@@ -58,10 +58,16 @@ export function useGameMode(): UseGameModeReturn {
   // (e.g., browser back/forward navigation)
   useEffect(() => {
     const urlMode = searchParams.get('mode') as GameMode | null;
-    if (urlMode && urlMode !== gameMode) {
-      setGameMode(urlMode);
+    if (urlMode) {
+      setGameMode(prevMode => {
+        if (urlMode !== prevMode) {
+          saveGameModeToStorage(urlMode);
+          return urlMode;
+        }
+        return prevMode;
+      });
     }
-  }, [searchParams, gameMode]);
+  }, [searchParams]);
 
   return {
     gameMode,
