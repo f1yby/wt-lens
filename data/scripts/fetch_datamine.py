@@ -1472,6 +1472,9 @@ EVENT_VEHICLE_PATTERNS = [
 EVENT_VEHICLE_IDS = {
     'us_amx_13_75',   # 美系借用法系AMX-13，无独立图片
     'us_amx_13_90',   # 美系借用法系AMX-13，无独立图片
+    'cn_bt_5',        # Wiki不存在，0场次
+    'cn_type_95_ha_go',  # Wiki不存在，0场次
+    'germ_pzkpfw_35t_romania_mare',  # Wiki不存在，0场次
 }
 
 def _is_event_or_tutorial(vid: str) -> bool:
