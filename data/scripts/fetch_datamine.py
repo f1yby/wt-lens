@@ -11,13 +11,14 @@ import math
 import shutil
 from pathlib import Path
 from dataclasses import dataclass
-from typing import Any
+from typing import Any, TypedDict
 
 try:
     from PIL import Image
-    HAS_PILLOW = True
+    has_pillow = True
 except ImportError:
-    HAS_PILLOW = False
+    Image = None  # type: ignore[assignment,misc]
+    has_pillow = False
 
 
 # Local datamine path for tankmodels
@@ -55,7 +56,7 @@ PUBLIC_DATA_PATH = Path(__file__).parent.parent.parent / "public" / "data"
 NATIONS = ['usa', 'germany', 'ussr', 'britain', 'japan', 'china', 'italy', 'france', 'sweden', 'israel']
 
 # Cache for wpcost data
-_wpcost_cache = None
+_wpcost_cache: "dict[str, WpcostEntry] | None" = None
 
 # Cache for localization data
 _localization_cache = None
@@ -64,7 +65,7 @@ _localization_cache = None
 _weaponry_localization_cache = None
 
 # Cache for weapon data
-_weapons_cache: dict[str, dict] = {}
+_weapons_cache: "dict[str, WeaponFileData]" = {}
 
 # Path to weapons
 WEAPONS_PATH = DATAMINE_BASE / "weapons" / "groundmodels_weapons"
@@ -74,6 +75,180 @@ RHA_DENSITY = 7850
 
 # RHA Brinell Hardness (WT uses ~260 BHN for standard RHA)
 RHA_BHN = 260
+
+
+# ============================================================
+# TypedDict definitions for datamine JSON structures
+# ============================================================
+
+class WpcostEntry(TypedDict, total=False):
+    """Single vehicle entry in wpcost.blkx."""
+    unitClass: str                      # e.g. 'exp_tank', 'exp_heavy_tank'
+    economicRankHistorical: int
+    economicRank: int
+    rank: int                           # tech-tree rank (I–VIII)
+    value: int                          # research cost; 0 = premium/gift
+    researchType: str                   # e.g. 'clanVehicle'
+    isPresentInShop: bool
+    rewardMulArcade: float
+    showOnlyWhenBought: bool
+    customClassIco: str
+    customImage: str
+    country: str
+
+
+class UnittagsEntry(TypedDict, total=False):
+    """Single vehicle entry in unittags.blkx."""
+    releaseDate: str                    # e.g. "2026-03-10 00:00:00"
+
+
+class GunStabilizer(TypedDict, total=False):
+    """Gun stabilizer data inside a weapon definition."""
+    hasHorizontal: bool
+    hasVertical: bool
+
+
+class WeaponLimits(TypedDict, total=False):
+    """Gun elevation/traverse limits."""
+    pitch: list[float]                  # [min_deg, max_deg]
+    yaw: list[float]                    # [min_deg, max_deg]
+
+
+class TankModelWeapon(TypedDict, total=False):
+    """Weapon entry in tankmodel commonWeapons.Weapon."""
+    trigger: str                        # e.g. 'gunner0', 'machine_gun'
+    blk: str                            # weapon file path
+    speedPitch: float                   # elevation speed (deg/s)
+    speedYaw: float                     # traverse speed (deg/s)
+    shotFreq: float                     # shots per second (overrides weapon file)
+    reloadTime: float                   # belt/magazine reload for autocannons
+    autoLoader: bool                    # True if auto-loader
+    gunStabilizer: GunStabilizer
+    limits: WeaponLimits
+
+
+class WeaponInfo(TypedDict, total=False):
+    """The 'Weapon' sub-dict inside a weapon file (caliber etc.)."""
+    caliber: float                      # in meters
+
+
+class WeaponFileData(TypedDict, total=False):
+    """Top-level structure of a groundmodels_weapons/*.blkx file."""
+    Weapon: WeaponInfo
+    weaponType: int                     # 3 = autocannon
+    reloadTime: float
+    shotFreq: float
+    bullet: dict[str, Any] | list[dict[str, Any]]
+    sfxReloadBullet: str
+
+
+class ThermalData(TypedDict, total=False):
+    """Thermal vision sensor data."""
+    resolution: list[int]               # [width, height]
+
+
+class NightVisionData(TypedDict, total=False):
+    """Night vision / thermal data block."""
+    gunnerThermal: ThermalData
+    commanderViewThermal: ThermalData
+
+
+class MassData(TypedDict, total=False):
+    TakeOff: float                      # kg
+
+
+class EngineData(TypedDict, total=False):
+    horsePowers: float
+    maxRPM: float
+
+
+class GearRatiosData(TypedDict, total=False):
+    ratio: list[float]
+
+
+class MechanicsData(TypedDict, total=False):
+    driveGearRadius: float
+    mainGearRatio: float
+    sideGearRatio: float
+    gearRatios: GearRatiosData
+
+
+class VehiclePhysData(TypedDict, total=False):
+    Mass: MassData
+    engine: EngineData
+    mechanics: MechanicsData
+
+
+class TankModelData(TypedDict, total=False):
+    """Top-level structure of a tankmodel BLKX file."""
+    type: str                           # e.g. 'typeLightTank'
+    maxFwdSpeed: float
+    maxRevSpeed: float
+    VehiclePhys: VehiclePhysData
+    DamageParts: dict[str, Any]
+    commonWeapons: dict[str, Any]       # {Weapon: TankModelWeapon | list[TankModelWeapon]}
+    modifications: dict[str, Any]
+    nightVision: NightVisionData
+
+
+class LanzOdermattInfo(TypedDict, total=False):
+    """Lanz-Odermatt penetrator parameters."""
+    workingLength: float
+    density: float
+    material: str
+    Cx: float | None
+
+
+class PenetrationAngles(TypedDict):
+    """Penetration at specific angles."""
+    angle0: float
+    angle30: float
+    angle60: float
+
+
+class PenetrationDataInfo(TypedDict, total=False):
+    """Penetration data at various distances."""
+    at0m: PenetrationAngles
+
+
+class ArmorPowerEntry(TypedDict):
+    """Single armor power table entry."""
+    penetration: float
+    distance: float
+
+
+class AmmoInfo(TypedDict, total=False):
+    """Ammunition data returned by parse_ammunition_data()."""
+    name: str
+    localizedName: str
+    type: str
+    caliber: float
+    mass: float
+    muzzleVelocity: float
+    lanzOdermatt: LanzOdermattInfo
+    penetration0m: float
+    penetrationData: PenetrationDataInfo
+    armorPowerTable: list[ArmorPowerEntry]
+    armorPower: float
+
+
+class ReloadTimes(TypedDict):
+    """Reload times for different crew skill levels."""
+    base: float                         # whiteboard crew (× 1.30)
+    expert: float                       # expert crew (× 1.15)
+    ace: float                          # ace crew (× 1.00)
+
+
+class MainGunInfo(TypedDict, total=False):
+    """Main gun data constructed in parse_tankmodel_data()."""
+    name: str
+    caliber: float
+    reloadTime: float | None
+    autoLoader: bool | None
+    reloadTimes: ReloadTimes | None
+    rateOfFire: int                     # autocannon: rounds per minute
+    beltReloadTime: float               # autocannon: belt reload (ace, seconds)
+
 
 # ============================================================
 # Lanz-Odermatt constants (from Lanz & Odermatt 2000 paper)
@@ -192,14 +367,14 @@ def calculate_penetration_at_angle(penetration_0deg: float, angle_deg: float) ->
         return 0.0
     # L-O obliquity: P(theta) = P(0) * cos(theta)^m / cos(0)^m = P(0) * cos(theta)^m
     # Since cos(0)^m = 1
-    f_obliquity = math.cos(math.radians(angle_deg)) ** LO_M
+    _f_obliquity = math.cos(math.radians(angle_deg)) ** LO_M
     # But this gives the perforation limit of an angled plate
     # The "effective penetration" at angle = P(0) * cos(theta) (LOS thickness)
     # We'll just return P * cos(theta) for the LOS equivalent
     return round(penetration_0deg * math.cos(math.radians(angle_deg)), 1)
 
 
-def parse_ammunition_data(bullet_data: dict, weapon_caliber_mm: float) -> dict | None:
+def parse_ammunition_data(bullet_data: dict[str, Any], weapon_caliber_mm: float) -> AmmoInfo | None:
     """
     Parse ammunition data from weapon file bullet entry.
     
@@ -217,7 +392,7 @@ def parse_ammunition_data(bullet_data: dict, weapon_caliber_mm: float) -> dict |
     damage_caliber = bullet_data.get('damageCaliber', 0)
     caliber_mm_from_data = damage_caliber * 1000 if damage_caliber else weapon_caliber_mm
     
-    ammo_info = {
+    ammo_info: AmmoInfo = {
         'name': bullet_name,
         'localizedName': get_ammo_localized_name(bullet_name) or bullet_name,
         'type': bullet_type,
@@ -268,7 +443,7 @@ def parse_ammunition_data(bullet_data: dict, weapon_caliber_mm: float) -> dict |
     # Check for direct armorPower data in the bullet or kinetic section
     # Format in datamine: dict like {'ArmorPower0m': [pen, dist], 'ArmorPower100m': [pen, dist], ...}
     # OR sometimes a simple numeric value
-    armor_power_source = bullet_data.get('armorpower', kinetic)
+    _armor_power_source = bullet_data.get('armorpower', kinetic)
     
     if not ammo_info.get('penetration0m'):
         # Try to extract ArmorPower table from kinetic section
@@ -308,7 +483,7 @@ def parse_ammunition_data(bullet_data: dict, weapon_caliber_mm: float) -> dict |
     return ammo_info
 
 
-def load_weapon_data(weapon_blk_path: str) -> dict | None:
+def load_weapon_data(weapon_blk_path: str) -> WeaponFileData | None:
     """
     Load weapon data from groundmodels_weapons directory.
     
@@ -347,7 +522,7 @@ def load_weapon_data(weapon_blk_path: str) -> dict | None:
         return None
 
 
-def extract_weapon_ammunition(weapon_data: dict, vehicle_modifications: dict | None = None) -> list[dict]:
+def extract_weapon_ammunition(weapon_data: WeaponFileData, vehicle_modifications: dict[str, Any] | None = None) -> list[AmmoInfo]:
     """
     Extract ammunition data from a weapon file.
     
@@ -403,7 +578,7 @@ def extract_weapon_ammunition(weapon_data: dict, vehicle_modifications: dict | N
                         clusters = ammo_rack['clusters']
                         if isinstance(clusters, dict):
                             # Each cluster represents a different ammo type
-                            for cluster_key, cluster_data in clusters.items():
+                            for _cluster_key, cluster_data in clusters.items():
                                 if isinstance(cluster_data, dict) and 'shell' in cluster_data:
                                     shell_data = cluster_data['shell']
                                     if isinstance(shell_data, dict):
@@ -542,10 +717,10 @@ class VehiclePerformance:
     commander_thermal_diagonal: float | None = None
     stabilizer_value: int | None = None  # 1 if has stabilizer, 0 otherwise
     elevation_range_value: float | None = None  # max - min elevation
-    # Main gun and ammunition data (new)
-    main_gun: dict | None = None  # {name, caliber, reloadTime, autoLoader, reloadTimes}
-    ammunitions: list[dict] | None = None  # List of ammo data
-    penetration_data: dict | None = None  # {at0m: {angle0, angle30, angle60}, at500m: {...}}
+    # Main gun and ammunition data
+    main_gun: MainGunInfo | None = None
+    ammunitions: list[AmmoInfo] | None = None
+    penetration_data: PenetrationDataInfo | None = None
     auto_loader: bool | None = None  # True if auto-loader, False if manual loader
 
 
@@ -561,13 +736,13 @@ class VehicleData:
     vehicle_type: str
     economic_type: str
     performance: VehiclePerformance
-    image_url: str
+    image_url: str | None = None
     source: str = "datamine"
     unreleased: bool = False
     release_date: str | None = None
 
 
-def read_local_blkx(filename: str) -> dict[str, Any] | None:
+def read_local_blkx(filename: str) -> TankModelData | None:
     """Read a BLKX file from local datamine repository"""
     filepath = TANKMODELS_PATH / f"{filename}.blkx"
     if not filepath.exists():
@@ -580,7 +755,7 @@ def read_local_blkx(filename: str) -> dict[str, Any] | None:
         return None
 
 
-def load_wpcost_data() -> dict[str, Any]:
+def load_wpcost_data() -> dict[str, WpcostEntry]:
     """Load wpcost.blkx for BR data (cached)"""
     global _wpcost_cache
     if _wpcost_cache is not None:
@@ -593,18 +768,19 @@ def load_wpcost_data() -> dict[str, Any]:
 
     try:
         with open(WPCOST_PATH, 'r', encoding='utf-8') as f:
-            _wpcost_cache = json.load(f)
-        print(f"Loaded wpcost.blkx with {len(_wpcost_cache)} entries")
-        return _wpcost_cache
+            data: dict[str, WpcostEntry] = json.load(f)
+        _wpcost_cache = data
+        print(f"Loaded wpcost.blkx with {len(data)} entries")
+        return data
     except (json.JSONDecodeError, IOError) as e:
         print(f"Error loading wpcost.blkx: {e}")
         _wpcost_cache = {}
         return _wpcost_cache
 
 
-_unittags_cache: dict[str, Any] | None = None
+_unittags_cache: dict[str, UnittagsEntry] | None = None
 
-def load_unittags_data() -> dict[str, Any]:
+def load_unittags_data() -> dict[str, UnittagsEntry]:
     """Load unittags.blkx for release date data (cached)"""
     global _unittags_cache
     if _unittags_cache is not None:
@@ -617,9 +793,10 @@ def load_unittags_data() -> dict[str, Any]:
 
     try:
         with open(UNITTAGS_PATH, 'r', encoding='utf-8') as f:
-            _unittags_cache = json.load(f)
-        print(f"Loaded unittags.blkx with {len(_unittags_cache)} entries")
-        return _unittags_cache
+            data = json.load(f)
+        _unittags_cache = data
+        print(f"Loaded unittags.blkx with {len(data)} entries")
+        return data
     except (json.JSONDecodeError, IOError) as e:
         print(f"Error loading unittags.blkx: {e}")
         _unittags_cache = {}
@@ -642,7 +819,7 @@ def load_localization_data() -> dict[str, dict[str, str]]:
         with open(UNITS_CSV_PATH, 'r', encoding='utf-8') as f:
             # CSV uses semicolon delimiter and quoted fields
             reader = csv.reader(f, delimiter=';', quotechar='"')
-            header = next(reader, None)  # Skip header
+            _header = next(reader, None)  # Skip header
             
             for row in reader:
                 if len(row) < 11:
@@ -738,8 +915,9 @@ def convert_png_to_webp(source_path: Path, dest_path: Path, quality: int = 85) -
     Returns True if conversion succeeded, False otherwise.
     Falls back to copying the PNG if Pillow is not available.
     """
-    if HAS_PILLOW:
+    if has_pillow:
         try:
+            assert Image is not None
             with Image.open(source_path) as img:
                 img.save(dest_path, 'WEBP', quality=quality, method=4)
             return True
@@ -816,7 +994,7 @@ def copy_nation_flags() -> int:
     return copied
 
 
-def get_vehicle_economic_type(vehicle_data: dict[str, Any] | None) -> str:
+def get_vehicle_economic_type(vehicle_data: WpcostEntry | None) -> str:
     """
     Determine vehicle economic type from wpcost data.
     
@@ -896,7 +1074,7 @@ VEHICLE_TYPE_MAP = {
 }
 
 
-def detect_vehicle_type(data: dict[str, Any]) -> str:
+def detect_vehicle_type(data: TankModelData) -> str:
     """Detect vehicle type from datamine data"""
     vtype = data.get('type', '')
     return VEHICLE_TYPE_MAP.get(vtype, 'medium_tank')
@@ -919,7 +1097,7 @@ def extract_nation_from_id(vehicle_id: str) -> str:
     }.get(prefix, prefix)  # Return prefix as-is if not in mapping
 
 
-def parse_tankmodel_data(data: dict[str, Any]) -> VehiclePerformance | None:
+def parse_tankmodel_data(data: TankModelData) -> VehiclePerformance | None:
     """Parse tankmodel BLKX data to extract performance metrics."""
     if not data:
         return None
@@ -1144,7 +1322,7 @@ def parse_tankmodel_data(data: dict[str, Any]) -> VehiclePerformance | None:
                 # For autocannons, also extract rate of fire (rounds/min) from shotFreq
                 autocannon_rate_of_fire = None
                 autocannon_belt_reload_time = None
-                if is_autocannon:
+                if is_autocannon and weapon_reload_time is not None:
                     # Autocannon: reloadTime is the belt/magazine reload time (ace value)
                     perf.reload_time = round(float(weapon_reload_time), 2)
                     autocannon_belt_reload_time = perf.reload_time
@@ -1188,6 +1366,7 @@ def parse_tankmodel_data(data: dict[str, Any]) -> VehiclePerformance | None:
                 # The datamine reload_time is the ACE (max skill) value
                 # Manual loader: ace (base), expert (+15%), whiteboard (+30%)
                 # Auto-loader: same for all levels
+                reload_times: ReloadTimes | None
                 if perf.reload_time and perf.reload_time > 0:
                     if perf.auto_loader:
                         reload_times = {
@@ -1196,9 +1375,6 @@ def parse_tankmodel_data(data: dict[str, Any]) -> VehiclePerformance | None:
                             'ace': perf.reload_time
                         }
                     else:
-                        # datamine value is ace (× 1.0)
-                        # whiteboard = ace × 1.3
-                        # expert = ace × 1.15 (midpoint)
                         reload_times = {
                             'base': round(perf.reload_time * 1.30, 2),
                             'expert': round(perf.reload_time * 1.15, 2),
@@ -1232,7 +1408,7 @@ def parse_tankmodel_data(data: dict[str, Any]) -> VehiclePerformance | None:
                             if isinstance(bullet_caliber_m, (int, float)) and bullet_caliber_m > 0:
                                 weapon_caliber_mm = bullet_caliber_m * 1000
                     
-                    main_gun_data = {
+                    main_gun_data: MainGunInfo = {
                         'name': weapon_blk.split('/')[-1].replace('.blk', '').replace('_user_cannon', ''),
                         'caliber': round(weapon_caliber_mm, 1),
                         'reloadTime': perf.reload_time,
@@ -1280,6 +1456,10 @@ GROUND_UNIT_CLASSES = {
     'exp_tank_destroyer', 'exp_SPAA',
 }
 
+def _is_event_or_tutorial(vid: str) -> bool:
+    """Check if a vehicle ID is an event-mode copy or tutorial vehicle by suffix."""
+    return vid.endswith('_event') or vid.endswith('_tutorial')
+
 
 def load_ground_vehicle_ids() -> list[str]:
     """Load ground vehicle IDs from wpcost.blkx + tankmodels directory.
@@ -1297,6 +1477,9 @@ def load_ground_vehicle_ids() -> list[str]:
             continue
         unit_class = vdata.get('unitClass', '')
         if unit_class not in GROUND_UNIT_CLASSES:
+            continue
+        # Skip event-mode copies and tutorial vehicles by suffix
+        if _is_event_or_tutorial(vid):
             continue
         # Check tankmodel file exists
         if (TANKMODELS_PATH / f"{vid.lower()}.blkx").exists():
@@ -1430,6 +1613,7 @@ def fetch_all_vehicles(max_vehicles: int | None = None, copy_images: bool = True
         p.stem for p in TANKMODELS_PATH.glob("*.blkx")
         if p.stem in wpcost
         and p.stem not in known_ids
+        and not _is_event_or_tutorial(p.stem)
         and is_unreleased(p.stem)
     ]
     print(f"\nScanning tankmodels for unreleased vehicles... found {len(all_tankmodel_ids)} candidates")
