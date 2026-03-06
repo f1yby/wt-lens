@@ -22,16 +22,20 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          submodules: true
-          fetch-depth: 0
+          fetch-depth: 1
+
+      - name: Init datamine submodule (shallow)
+        run: |
+          git submodule init data/datamine
+          git submodule update --depth 1 data/datamine
 
       - name: Check for datamine updates
         id: check
         run: |
           cd data/datamine
           CURRENT=$(git rev-parse HEAD)
-          git fetch origin
-          LATEST=$(git rev-parse origin/master 2>/dev/null || git rev-parse origin/main)
+          git fetch --depth 1 origin master
+          LATEST=$(git rev-parse FETCH_HEAD)
           echo "current=$CURRENT" >> $GITHUB_OUTPUT
           echo "latest=$LATEST" >> $GITHUB_OUTPUT
           if [ "$CURRENT" != "$LATEST" ] || [ "${{ github.event.inputs.force_update }}" == "true" ]; then
@@ -46,7 +50,7 @@ jobs:
         if: steps.check.outputs.changed == 'true'
         run: |
           cd data/datamine
-          git checkout $(git rev-parse origin/master 2>/dev/null || git rev-parse origin/main)
+          git checkout FETCH_HEAD
 
       - name: Setup Python
         if: steps.check.outputs.changed == 'true'

@@ -19,6 +19,12 @@ export default function HelicopterPage() {
   const [showUnreleased, setShowUnreleased] = useState(false);
   const [useGroundBR, setUseGroundBR] = useState(false);
 
+  // 切换联合作战 BR 时重置 brRange
+  const handleUseGroundBRChange = (value: boolean) => {
+    setUseGroundBR(value);
+    setBrRange([BATTLE_RATINGS[0], BATTLE_RATINGS[BATTLE_RATINGS.length - 1]]);
+  };
+
   // Use custom hooks for game mode and stats month management
   const { gameMode, handleGameModeChange } = useGameMode();
   const { statsMonthRange, handleStatsMonthRangeChange } = useStatsMonthRange();
@@ -32,15 +38,15 @@ export default function HelicopterPage() {
     });
   }, [statsMonthRange]);
 
-  // 计算直升机数据中的实际最大 BR
+  // 计算直升机数据中的实际最大 BR，根据当前 BR 模式动态生成
   const availableBRs = useMemo(() => {
     const helicopters = aircraft.filter(ac => ac.aircraftType === 'helicopter');
     if (helicopters.length === 0) return BATTLE_RATINGS;
     const maxBR = Math.max(...helicopters.map(ac => {
-      return Math.max(ac.battleRating, ac.groundBattleRating ?? ac.battleRating);
+      return useGroundBR ? (ac.groundBattleRating ?? ac.battleRating) : ac.battleRating;
     }));
     return BATTLE_RATINGS.filter(br => br <= maxBR);
-  }, [aircraft]);
+  }, [aircraft, useGroundBR]);
 
   const filteredHelicopters = useMemo(() => {
     return aircraft.filter(ac => {
@@ -76,7 +82,7 @@ export default function HelicopterPage() {
           typeOptions={[]}
           showGroundBRToggle
           useGroundBR={useGroundBR}
-          onUseGroundBRChange={setUseGroundBR}
+          onUseGroundBRChange={handleUseGroundBRChange}
           availableBRs={availableBRs}
           extraControls={
             <MonthRangeSelector

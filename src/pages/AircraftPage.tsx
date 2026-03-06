@@ -28,6 +28,12 @@ export default function AircraftPage() {
   const [showUnreleased, setShowUnreleased] = useState(false);
   const [useGroundBR, setUseGroundBR] = useState(false);
 
+  // 切换联合作战 BR 时重置 brRange
+  const handleUseGroundBRChange = (value: boolean) => {
+    setUseGroundBR(value);
+    setBrRange([BATTLE_RATINGS[0], BATTLE_RATINGS[BATTLE_RATINGS.length - 1]]);
+  };
+
   // Use custom hooks for game mode and stats month management
   const { gameMode, handleGameModeChange } = useGameMode();
   const { statsMonthRange, handleStatsMonthRangeChange } = useStatsMonthRange();
@@ -41,16 +47,15 @@ export default function AircraftPage() {
     });
   }, [statsMonthRange]);
 
-  // 计算数据中的实际最大 BR（排除直升机），用于 BR 筛选器
+  // 计算数据中的实际最大 BR（排除直升机），根据当前 BR 模式动态生成
   const availableBRs = useMemo(() => {
     const planes = aircraft.filter(ac => ac.aircraftType !== 'helicopter');
     if (planes.length === 0) return BATTLE_RATINGS;
     const maxBR = Math.max(...planes.map(ac => {
-      // 考虑联合作战 BR
-      return Math.max(ac.battleRating, ac.groundBattleRating ?? ac.battleRating);
+      return useGroundBR ? (ac.groundBattleRating ?? ac.battleRating) : ac.battleRating;
     }));
     return BATTLE_RATINGS.filter(br => br <= maxBR);
-  }, [aircraft]);
+  }, [aircraft, useGroundBR]);
 
   const filteredAircraft = useMemo(() => {
     return aircraft.filter(ac => {
@@ -89,7 +94,7 @@ export default function AircraftPage() {
           typeOptions={AIRCRAFT_TYPES}
           showGroundBRToggle
           useGroundBR={useGroundBR}
-          onUseGroundBRChange={setUseGroundBR}
+          onUseGroundBRChange={handleUseGroundBRChange}
           availableBRs={availableBRs}
           extraControls={
             <MonthRangeSelector
