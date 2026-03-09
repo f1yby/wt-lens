@@ -1,6 +1,7 @@
 import type { ShipVehicle, ShipType, VehicleStats, GameMode, StatsMonthRange } from '../types';
-import { DEFAULT_STATS_MONTH_RANGE, getMonthRangeCacheKey } from '../types';
+import { getDefaultStatsMonthRange, getMonthRangeCacheKey } from '../types';
 import { StatSharkEntry, cleanName, buildStatsMapByMonthRange, convertToVehicleStats } from './base';
+import { initStatsMonthService, isServiceInitialized } from '../services/statsMonthService';
 
 interface ShipEntry {
   id: string;
@@ -30,6 +31,12 @@ async function loadStatsData(): Promise<StatSharkEntry[]> {
   if (statsData) return statsData;
   const response = await fetch('/wt-lens/data/stats.json');
   statsData = await response.json();
+  
+  // Initialize stats month service with loaded data
+  if (!isServiceInitialized()) {
+    initStatsMonthService(statsData!);
+  }
+  
   return statsData!;
 }
 
@@ -120,7 +127,10 @@ function mergeShipsData(stats: StatSharkEntry[], ships: ShipEntry[], range?: Sta
  * @param range - Optional month range filter. Defaults to latest month if not specified.
  */
 export async function loadShips(range?: StatsMonthRange): Promise<ShipVehicle[]> {
-  const targetRange = range ?? DEFAULT_STATS_MONTH_RANGE;
+  // Load stats data first to ensure month service is initialized
+  const stats = await loadStatsData();
+  
+  const targetRange = range ?? getDefaultStatsMonthRange();
   const cacheKey = getMonthRangeCacheKey(targetRange);
   
   // Check if already cached for this month range
@@ -128,10 +138,7 @@ export async function loadShips(range?: StatsMonthRange): Promise<ShipVehicle[]>
     return shipsByMonthRange.get(cacheKey)!;
   }
 
-  const [stats, ships] = await Promise.all([
-    loadStatsData(),
-    loadShipsData(),
-  ]);
+  const ships = await loadShipsData();
 
   const merged = mergeShipsData(stats, ships, targetRange);
   shipsByMonthRange.set(cacheKey, merged);

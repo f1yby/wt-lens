@@ -3,7 +3,7 @@
  * Contains common types and functions used by vehicles, aircraft, and ships data modules.
  */
 import type { GameMode, VehicleStats, StatsMonthId, StatsMonthRange } from '../types';
-import { DEFAULT_STATS_MONTH, DEFAULT_STATS_MONTH_RANGE, getMonthsInRange, isSingleMonthRange } from '../types';
+import { getDefaultStatsMonth, getDefaultStatsMonthRange, getMonthsInRange, isSingleMonthRange } from '../types';
 
 /**
  * StatShark entry from stats.json / aircraft-stats.json / ship-stats.json
@@ -35,7 +35,7 @@ export function cleanName(name: string): string {
  * Returns a map of vehicleId -> Record<GameMode, StatSharkEntry>
  * @param stats - Array of StatShark entries
  * @param month - Optional month filter. If provided, only entries with matching month are included.
- *                If not provided, defaults to the latest month (DEFAULT_STATS_MONTH).
+ *                If not provided, defaults to the latest month.
  */
 export function buildStatsMapByMode(
   stats: StatSharkEntry[], 
@@ -44,7 +44,7 @@ export function buildStatsMapByMode(
   const statsMap = new Map<string, Record<GameMode, StatSharkEntry | undefined>>();
   
   // Use default month if not specified
-  const targetMonth = month ?? DEFAULT_STATS_MONTH;
+  const targetMonth = month ?? getDefaultStatsMonth();
 
   for (const entry of stats) {
     // Filter by month if entry has month field
@@ -130,7 +130,7 @@ export function buildStatsMapByMonthRange(
   stats: StatSharkEntry[], 
   range?: StatsMonthRange
 ): Map<string, Record<GameMode, StatSharkEntry | undefined>> {
-  const targetRange = range ?? DEFAULT_STATS_MONTH_RANGE;
+  const targetRange = range ?? getDefaultStatsMonthRange();
   
   // Optimization: if single month range, use simpler logic
   if (isSingleMonthRange(targetRange)) {

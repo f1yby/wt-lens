@@ -408,54 +408,85 @@ export const DEFAULT_GAME_MODE: GameMode = 'historical';
 // Stats Month Types (for historical data filtering)
 // ============================================================================
 
-/** 统计数据月份 ID */
-export type StatsMonthId = 
-  | 'diff_2025_febuary_march'
-  | 'diff_2025_march_april'
-  | 'diff_2025_april_may'
-  | 'diff_2025_may_june'
-  | 'diff_2025_june_july'
-  | 'diff_2025_july_august'
-  | 'diff_2025_august_september'
-  | 'diff_2025_september_october'
-  | 'diff_2025_october_november'
-  | 'diff_2025_november_december'
-  | 'diff_2025_december_january'
-  | 'diff_2026_january_february';
+// 月份配置现在从 statsMonthService 动态获取
+// 导入动态月份服务
+import {
+  getAvailableMonths,
+  getDefaultMonthId,
+  isValidMonthId,
+  getMonthConfig,
+  getMonthIndex,
+  type DynamicStatsMonthConfig,
+} from '../services/statsMonthService';
 
-/** 月份配置 */
+/**
+ * 统计数据月份 ID
+ * 
+ * 注意：这里使用 string 类型而非联合类型，因为月份列表是动态从数据中提取的。
+ * 运行时验证通过 isValidStatsMonthId() 函数进行。
+ */
+export type StatsMonthId = string;
+
+/** 月份配置（兼容旧接口） */
 export interface StatsMonthConfig {
   id: StatsMonthId;
-  label: string;      // 如 "2025年2-3月"
-  shortLabel: string; // 如 "2-3月"
+  label: string;      // 如 "2025年2月"
+  shortLabel: string; // 如 "25年2月"
 }
 
-/** 所有可用的统计数据月份配置（按时间从早到晚排序） */
-export const STATS_MONTHS: StatsMonthConfig[] = [
-  { id: 'diff_2025_febuary_march', label: '2025年2月', shortLabel: '25年2月' },
-  { id: 'diff_2025_march_april', label: '2025年3月', shortLabel: '25年3月' },
-  { id: 'diff_2025_april_may', label: '2025年4月', shortLabel: '25年4月' },
-  { id: 'diff_2025_may_june', label: '2025年5月', shortLabel: '25年5月' },
-  { id: 'diff_2025_june_july', label: '2025年6月', shortLabel: '25年6月' },
-  { id: 'diff_2025_july_august', label: '2025年7月', shortLabel: '25年7月' },
-  { id: 'diff_2025_august_september', label: '2025年8月', shortLabel: '25年8月' },
-  { id: 'diff_2025_september_october', label: '2025年9月', shortLabel: '25年9月' },
-  { id: 'diff_2025_october_november', label: '2025年10月', shortLabel: '25年10月' },
-  { id: 'diff_2025_november_december', label: '2025年11月', shortLabel: '25年11月' },
-  { id: 'diff_2025_december_january', label: '2025年12月', shortLabel: '25年12月' },
-  { id: 'diff_2026_january_february', label: '2026年1月', shortLabel: '26年1月' },
-];
+/**
+ * 获取所有可用的统计数据月份配置（按时间从早到晚排序）
+ * 
+ * 注意：这是一个函数而非常量，因为月份列表是动态加载的。
+ * 在数据加载完成后调用此函数获取最新的月份列表。
+ */
+export const getStatsMonths = (): StatsMonthConfig[] => {
+  const months = getAvailableMonths();
+  // 转换为兼容旧接口的格式
+  return months.map(m => ({
+    id: m.id,
+    label: m.label,
+    shortLabel: m.shortLabel,
+  }));
+};
 
-/** 默认统计数据月份（最新月份） */
-export const DEFAULT_STATS_MONTH: StatsMonthId = 'diff_2026_january_february';
+/**
+ * @deprecated 使用 getStatsMonths() 函数代替
+ * 保留此常量仅为向后兼容，但它可能为空数组（在数据加载前）
+ */
+export const STATS_MONTHS: StatsMonthConfig[] = [];
+
+/**
+ * 获取默认统计数据月份（最新月份）
+ * 
+ * 注意：在数据加载完成前可能返回空字符串
+ */
+export const getDefaultStatsMonth = (): StatsMonthId => getDefaultMonthId();
+
+/**
+ * @deprecated 使用 getDefaultStatsMonth() 函数代替
+ * 保留此常量仅为初始化时使用
+ */
+export const DEFAULT_STATS_MONTH: StatsMonthId = '';
 
 /** 根据月份ID获取配置 */
-export const getStatsMonthConfig = (monthId: StatsMonthId): StatsMonthConfig | undefined => 
-  STATS_MONTHS.find(m => m.id === monthId);
+export const getStatsMonthConfig = (monthId: StatsMonthId): StatsMonthConfig | undefined => {
+  const config = getMonthConfig(monthId);
+  if (!config) return undefined;
+  return {
+    id: config.id,
+    label: config.label,
+    shortLabel: config.shortLabel,
+  };
+};
 
 /** 验证月份ID是否有效 */
 export const isValidStatsMonthId = (value: string): value is StatsMonthId =>
-  STATS_MONTHS.some(m => m.id === value);
+  isValidMonthId(value);
+
+/** 获取月份在列表中的索引 */
+export const getStatsMonthIndex = (monthId: StatsMonthId): number =>
+  getMonthIndex(monthId);
 
 // ============================================================================
 // Stats Month Range Types (for date range filtering)
@@ -467,15 +498,27 @@ export interface StatsMonthRange {
   endMonth: StatsMonthId;
 }
 
-/** 默认统计数据月份范围（最新月份，单月模式） */
-export const DEFAULT_STATS_MONTH_RANGE: StatsMonthRange = {
-  startMonth: DEFAULT_STATS_MONTH,
-  endMonth: DEFAULT_STATS_MONTH,
+/**
+ * 获取默认统计数据月份范围（最新月份，单月模式）
+ * 
+ * 注意：在数据加载完成前可能返回空字符串
+ */
+export const getDefaultStatsMonthRange = (): StatsMonthRange => {
+  const defaultMonth = getDefaultStatsMonth();
+  return {
+    startMonth: defaultMonth,
+    endMonth: defaultMonth,
+  };
 };
 
-/** 获取月份在 STATS_MONTHS 数组中的索引 */
-export const getStatsMonthIndex = (monthId: StatsMonthId): number =>
-  STATS_MONTHS.findIndex(m => m.id === monthId);
+/**
+ * @deprecated 使用 getDefaultStatsMonthRange() 函数代替
+ * 保留此常量仅为初始化时使用
+ */
+export const DEFAULT_STATS_MONTH_RANGE: StatsMonthRange = {
+  startMonth: '',
+  endMonth: '',
+};
 
 /** 验证月份范围是否有效（endMonth 不早于 startMonth） */
 export const isValidMonthRange = (range: StatsMonthRange): boolean => {
@@ -493,7 +536,8 @@ export const getMonthsInRange = (range: StatsMonthRange): StatsMonthId[] => {
     return [];
   }
   
-  return STATS_MONTHS.slice(startIndex, endIndex + 1).map(m => m.id);
+  const months = getStatsMonths();
+  return months.slice(startIndex, endIndex + 1).map(m => m.id);
 };
 
 /** 生成范围的缓存键 */

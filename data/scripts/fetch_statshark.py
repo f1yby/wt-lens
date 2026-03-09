@@ -151,6 +151,28 @@ def save_stats(vehicles: list, output_path: str):
     print(f"Saved {len(vehicles)} vehicle stats to {output_path}")
 
 
+def rebuild_stats_from_raw() -> list:
+    """Rebuild stats.json from all raw data files in data/raw/.
+    
+    This ensures stats.json always contains ALL months, not just the latest fetch.
+    Returns the combined vehicle stats list.
+    """
+    raw_dir = Path(__file__).parent.parent / "raw"
+    all_vehicles = []
+    
+    for raw_file in sorted(raw_dir.glob("statshark_diff_*.json")):
+        month_id = raw_file.stem.replace("statshark_", "")
+        with open(raw_file, 'r', encoding='utf-8') as f:
+            raw_data = json.load(f)
+        vehicles = parse_vehicle_stats(raw_data)
+        for v in vehicles:
+            v["month"] = month_id
+        all_vehicles.extend(vehicles)
+        print(f"  Loaded {len(vehicles)} entries from {month_id}")
+    
+    return all_vehicles
+
+
 def main():
     """Main entry point"""
     parser = argparse.ArgumentParser(description="Fetch War Thunder vehicle statistics from StatShark")
@@ -182,8 +204,7 @@ def main():
             print("No valid month found in DIFF_MONTHS")
             return 1
     
-    all_vehicles = []
-    
+    # Fetch new data and save raw files
     for month_id in months_to_fetch:
         print(f"Fetching StatShark data for: {month_id}")
         
@@ -200,22 +221,16 @@ def main():
         with open(raw_path, 'w', encoding='utf-8') as f:
             json.dump(raw_data, f, ensure_ascii=False, indent=2)
         print(f"  Saved raw data to {raw_path}")
-        
-        # Parse stats
-        vehicles = parse_vehicle_stats(raw_data)
-        print(f"  Parsed {len(vehicles)} vehicle stats")
-        
-        # Add month info to each vehicle
-        for v in vehicles:
-            v["month"] = month_id
-        
-        all_vehicles.extend(vehicles)
+    
+    # Always rebuild stats.json from ALL raw files to include all months
+    print("\nRebuilding stats.json from all raw data files...")
+    all_vehicles = rebuild_stats_from_raw()
     
     if not all_vehicles:
-        print("No data fetched")
+        print("No data found in raw files")
         return 1
     
-    # Save final stats
+    # Save final stats (contains ALL months)
     output_path = Path(__file__).parent.parent.parent / "public" / "data" / "stats.json"
     save_stats(all_vehicles, str(output_path))
     

@@ -1,8 +1,8 @@
-import type { StatsMonthId, StatsMonthRange } from '../types';
+import type { StatsMonthId, StatsMonthRange, StatsMonthConfig } from '../types';
 import { 
-  STATS_MONTHS, 
-  DEFAULT_STATS_MONTH, 
-  DEFAULT_STATS_MONTH_RANGE,
+  getStatsMonths,
+  getDefaultStatsMonth,
+  getDefaultStatsMonthRange,
   isValidStatsMonthId, 
   getStatsMonthConfig,
   isValidMonthRange,
@@ -55,7 +55,7 @@ export function getInitialStatsMonth(searchParams: URLSearchParams): StatsMonthI
   // Priority: URL > localStorage > default
   return getStatsMonthFromURL(searchParams) 
     ?? getStatsMonthFromStorage() 
-    ?? DEFAULT_STATS_MONTH;
+    ?? getDefaultStatsMonth();
 }
 
 /**
@@ -90,8 +90,8 @@ export function getStatsMonthShortLabel(monthId: StatsMonthId): string {
 /**
  * Get all available stats months in reverse chronological order (latest first)
  */
-export function getStatsMonthsReversed() {
-  return [...STATS_MONTHS].reverse();
+export function getStatsMonthsReversed(): StatsMonthConfig[] {
+  return [...getStatsMonths()].reverse();
 }
 
 // ============================================================================
@@ -176,7 +176,7 @@ export function getInitialStatsMonthRange(searchParams: URLSearchParams): StatsM
   // Priority: URL > localStorage > default
   return getStatsMonthRangeFromURL(searchParams) 
     ?? getStatsMonthRangeFromStorage() 
-    ?? DEFAULT_STATS_MONTH_RANGE;
+    ?? getDefaultStatsMonthRange();
 }
 
 /**
