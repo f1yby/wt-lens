@@ -51,6 +51,8 @@ interface DatamineEntry {
     transmission_type?: string | null;
     forward_gears?: number | null;
     reverse_gears?: number | null;
+    forward_gear_speeds?: number[] | null;
+    reverse_gear_speeds?: number[] | null;
     steer_type?: string | null;
     empty_weight?: number | null;
     track_width?: number | null;

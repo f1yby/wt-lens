@@ -517,7 +517,6 @@ import {
   isValidMonthId,
   getMonthConfig,
   getMonthIndex,
-  type DynamicStatsMonthConfig,
 } from '../services/statsMonthService';
 
 /**
