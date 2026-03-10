@@ -766,13 +766,34 @@ def _has_no_image_and_release_date(vid: str, images_path: Path) -> bool:
 DEMARRE_AP_TYPES = {
     'ap_tank', 'apc_tank', 'apbc_tank', 'apcbc_tank',
     'aphe_tank', 'aphebc_tank',
+    # Variant names found in datamine
+    'apbc_usa_tank',                        # US-style APBC (e.g. 37 mm slpprj m/38)
+    'apc_solid_medium_caliber_tank',        # Solid APC (medium caliber)
+    'apcbc_solid_medium_caliber_tank',      # Solid APCBC (medium caliber)
+    # Autocannon / MG AP types (full-caliber, no sub-core)
+    'ap_t', 'ap_i_t', 'ap_i', 'apc_t',
+    'aphe',                                 # Belt-fed APHE (e.g. 37 mm Pzgr)
+    # SAP family (semi-armour-piercing) — treated like AP for de Marre
+    'sapcbc_tank', 'sap_hei_tank', 'sap_tank', 'sapbc_flat_nose_tank',
+    'sapi',
 }
 
 # Shell types that get the APCBC ballistic cap bonus (K_apcbc = 1.0 vs 0.9)
-DEMARRE_APCBC_TYPES = {'apc_tank', 'apcbc_tank'}
+DEMARRE_APCBC_TYPES = {
+    'apc_tank', 'apcbc_tank',
+    'apcbc_solid_medium_caliber_tank',      # Solid APCBC variant
+    'apc_solid_medium_caliber_tank',        # Solid APC (has ballistic cap)
+    'sapcbc_tank',                          # Semi-AP with ballistic cap
+}
 
-# APCR uses a separate formula
-DEMARRE_APCR_TYPES = {'apcr_tank'}
+# APCR / APDS uses a separate sub-caliber formula
+DEMARRE_APCR_TYPES = {
+    'apcr_tank',
+    'apcr_t',                               # Belt-fed APCR (autocannon)
+    # APDS variants (sub-caliber sabot, same formula as APCR)
+    'apds_tank', 'apds_early_tank', 'apds_l15_tank',
+    'apds_autocannon',                      # Autocannon APDS
+}
 
 
 def _calc_demarre_knap(explosive_mass_kg: float, shell_mass_kg: float) -> float:
