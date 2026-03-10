@@ -17,6 +17,7 @@ import DistributionChart from '../components/DistributionChart';
 import { BRGridSelector } from '../components/VehicleFilter';
 import GameModeSelector from '../components/GameModeSelector';
 import { loadAircraft, getAircraftStatsByMode } from '../data/aircraft';
+import EconomySection from '../components/EconomySection';
 import { AIRCRAFT_TYPE_LABELS, BATTLE_RATINGS, ECONOMIC_TYPE_GRADIENTS } from '../types';
 import type { AircraftVehicle, AircraftType, GameMode, MetricType } from '../types';
 import { getAircraftImagePath, getFlagImagePath } from '../utils/paths';
@@ -436,6 +437,13 @@ export default function AircraftDetailPage() {
             </Box>
           </Box>
         </Paper>
+
+        {/* Economy Data Section */}
+        {aircraft.economy && (
+          <Box sx={{ mb: 3 }}>
+            <EconomySection economy={aircraft.economy} gameMode={gameMode} />
+          </Box>
+        )}
 
         {/* Game Mode Selector */}
         <GameModeSelector

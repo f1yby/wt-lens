@@ -1,11 +1,12 @@
 import { Card, CardContent, Typography, Chip, Box, Tooltip } from '@mui/material';
-import { GpsFixed, Bolt } from '@mui/icons-material';
+import { GpsFixed, FlashOn } from '@mui/icons-material';
 import { useNavigate } from 'react-router-dom';
 import type { Vehicle, GameMode } from '../types';
 import { NATIONS, VEHICLE_TYPE_LABELS } from '../types';
 import { getVehicleImagePath } from '../utils/paths';
 import { getVehicleStatsByMode } from '../data/vehicles';
 import { getWinRateColor } from '../utils/gameMode';
+import { getBestRound } from '../utils/ammoUtils';
 
 /** Get stabilizer display info */
 function getStabilizerInfo(type: Vehicle['performance']['stabilizerType']) {
@@ -17,21 +18,10 @@ function getStabilizerInfo(type: Vehicle['performance']['stabilizerType']) {
   }
 }
 
-/** Get best APFSDS ammo name for display */
+/** Get best ammo name for display (uses unified priority) */
 function getBestAmmoName(vehicle: Vehicle): string | null {
-  if (!vehicle.performance.ammunitions) return null;
-  
-  const apfsds = vehicle.performance.ammunitions.filter(a => 
-    a.type.includes('apds_fs')
-  );
-  
-  if (apfsds.length === 0) return null;
-  
-  // Return the one with highest penetration
-  const best = apfsds.reduce((prev, curr) => 
-    (curr.penetration0m || 0) > (prev.penetration0m || 0) ? curr : prev
-  );
-  
+  const best = getBestRound(vehicle.performance.ammunitions);
+  if (!best) return null;
   return best.name.replace(/^\d+mm_/, '').replace(/_/g, '-').toUpperCase();
 }
 
@@ -182,7 +172,7 @@ export default function VehicleCard({ vehicle, gameMode = 'historical' }: Vehicl
                   穿深
                 </Typography>
                 <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.5 }}>
-                  <Bolt sx={{ fontSize: 12, color: '#f59e0b' }} />
+                  <FlashOn sx={{ fontSize: 12, color: '#f59e0b' }} />
                   <Typography variant="body2" sx={{ color: '#171717', fontWeight: 600 }}>
                     {Math.round(vehicle.performance.penetration)}mm
                   </Typography>

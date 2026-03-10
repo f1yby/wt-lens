@@ -1,12 +1,13 @@
 import { Box, Typography } from '@mui/material';
 import { FlashOn } from '@mui/icons-material';
 import type { Ammunition } from '../../types';
+import { getBestRound } from '../../utils/ammoUtils';
 
 /** Color constants - white with shadow works on all backgrounds */
 const COLOR_HAS_VALUE = '#ffffff';
 const COLOR_NO_VALUE = 'rgba(255,255,255,0.4)';
 
-/** Ammo type labels */
+/** Ammo type labels (used for hero banner display) */
 const AMMO_TYPE_LABELS: Record<string, string> = {
   'apds_fs_tank': 'APFSDS',
   'apds_fs_long_tank': '长杆APFSDS',
@@ -43,7 +44,7 @@ const AMMO_TYPE_LABELS: Record<string, string> = {
   'practice_tank': '训练弹',
 };
 
-interface BestKineticRoundInfo {
+interface BestRoundInfo {
   type: string;
   name: string;
   penetration: number;
@@ -56,30 +57,29 @@ interface BestKineticRoundInfo {
     velocity: number;
     Cx: number;
   };
+  isDeMarre: boolean;
+  deMarreParams?: {
+    fullCaliber: number;
+    mass: number;
+    velocity: number;
+    explosiveMass: number;
+    isApcbc: boolean;
+    Cx: number;
+    isApcr: boolean;
+    coreCaliber?: number;
+    coreMass?: number;
+  };
 }
 
-/** Get the best kinetic round info from ammunitions */
-function getBestKineticRound(ammunitions?: Ammunition[]): BestKineticRoundInfo | null {
-  if (!ammunitions || ammunitions.length === 0) return null;
-
-  // Find the round with the highest penetration
-  let bestRound: Ammunition | null = null;
-  let bestPen = 0;
-
-  for (const a of ammunitions) {
-    const pen = a.penetration0m || a.armorPower || 0;
-    if (pen > bestPen) {
-      bestPen = pen;
-      bestRound = a;
-    }
-  }
-
+/** Build display info from the best round selected by priority. */
+function buildBestRoundInfo(ammunitions?: Ammunition[], heroValue?: number): BestRoundInfo | null {
+  const bestRound = getBestRound(ammunitions, heroValue);
   if (!bestRound) return null;
 
   return {
     type: AMMO_TYPE_LABELS[bestRound.type] || bestRound.type || 'Unknown',
     name: bestRound.localizedName || bestRound.name || 'Unknown',
-    penetration: bestPen,
+    penetration: bestRound.penetration0m ?? bestRound.armorPower ?? 0,
     isLO: !!bestRound.lanzOdermatt,
     loParams: bestRound.lanzOdermatt ? {
       workingLength: bestRound.lanzOdermatt.workingLength,
@@ -89,12 +89,24 @@ function getBestKineticRound(ammunitions?: Ammunition[]): BestKineticRoundInfo |
       velocity: bestRound.muzzleVelocity,
       Cx: bestRound.lanzOdermatt.Cx || 0,
     } : undefined,
+    isDeMarre: !!bestRound.deMarre,
+    deMarreParams: bestRound.deMarre ? {
+      fullCaliber: bestRound.deMarre.fullCaliber,
+      mass: bestRound.mass,
+      velocity: bestRound.muzzleVelocity,
+      explosiveMass: bestRound.deMarre.explosiveMass,
+      isApcbc: bestRound.deMarre.isApcbc,
+      Cx: bestRound.deMarre.Cx || 0.3,
+      isApcr: !!bestRound.deMarre.isApcr,
+      coreCaliber: bestRound.deMarre.coreCaliber,
+      coreMass: bestRound.deMarre.coreMass,
+    } : undefined,
   };
 }
 
 /** Generate Lanz-Odermatt calculator internal URL with parameters */
 function generateLOCalculatorUrl(
-  loParams: NonNullable<BestKineticRoundInfo['loParams']>,
+  loParams: NonNullable<BestRoundInfo['loParams']>,
   roundName: string,
   penetration: number,
   vehicleName: string
@@ -113,6 +125,32 @@ function generateLOCalculatorUrl(
   return `/lo-calculator?${params.toString()}`;
 }
 
+/** Generate de Marre calculator internal URL with parameters */
+function generateDeMarreCalculatorUrl(
+  dmParams: NonNullable<BestRoundInfo['deMarreParams']>,
+  roundName: string,
+  penetration: number,
+  vehicleName: string
+): string {
+  const p: Record<string, string> = {
+    caliber: dmParams.fullCaliber.toString(),
+    mass: dmParams.mass.toString(),
+    velocity: dmParams.velocity.toString(),
+    explosive: dmParams.explosiveMass.toString(),
+    apcbc: dmParams.isApcbc ? '1' : '0',
+    cx: dmParams.Cx.toString(),
+    gamePen: penetration.toString(),
+    vehicle: vehicleName,
+    ammo: roundName,
+  };
+  if (dmParams.isApcr) {
+    p.apcr = '1';
+    if (dmParams.coreCaliber) p.coreCaliber = dmParams.coreCaliber.toString();
+    if (dmParams.coreMass) p.coreMass = dmParams.coreMass.toString();
+  }
+  return `/demarre-calculator?${new URLSearchParams(p).toString()}`;
+}
+
 export interface PenetrationStatItemProps {
   penetration: number;
   ammunitions?: Ammunition[];
@@ -122,11 +160,11 @@ export interface PenetrationStatItemProps {
 
 /**
  * Penetration stat item with ammo details.
- * Shows best kinetic round info and links to Lanz-Odermatt calculator.
+ * Shows best kinetic round info and links to Lanz-Odermatt or de Marre calculator.
  */
 export function PenetrationStatItem({ penetration, ammunitions, vehicleName, onNavigate }: PenetrationStatItemProps) {
   const color = penetration > 0 ? COLOR_HAS_VALUE : COLOR_NO_VALUE;
-  const roundInfo = getBestKineticRound(ammunitions);
+  const roundInfo = buildBestRoundInfo(ammunitions, penetration);
 
   const handleLOClick = () => {
     if (roundInfo?.isLO && roundInfo.loParams) {
@@ -134,6 +172,19 @@ export function PenetrationStatItem({ penetration, ammunitions, vehicleName, onN
       onNavigate(url);
     }
   };
+
+  const handleDeMarreClick = () => {
+    if (roundInfo?.isDeMarre && roundInfo.deMarreParams) {
+      const url = generateDeMarreCalculatorUrl(roundInfo.deMarreParams, roundInfo.name, penetration, vehicleName);
+      onNavigate(url);
+    }
+  };
+
+  // Determine calculator label and handler
+  const hasCalculator = roundInfo?.isLO || roundInfo?.isDeMarre;
+  const calculatorLabel = roundInfo?.isLO ? 'Lanz-Odermatt' : roundInfo?.isDeMarre ? 'de Marre' : null;
+  const calculatorColor = roundInfo?.isLO ? '#4ade80' : '#60a5fa';
+  const handleCalcClick = roundInfo?.isLO ? handleLOClick : handleDeMarreClick;
 
   return (
     <Box sx={{
@@ -164,45 +215,33 @@ export function PenetrationStatItem({ penetration, ammunitions, vehicleName, onN
           }}>
             {roundInfo.type}
           </Typography>
-          {roundInfo.isLO && roundInfo.loParams ? (
-            <>
-              <Typography sx={{
-                color: 'rgba(255,255,255,0.7)',
+          <Typography sx={{
+            color: 'rgba(255,255,255,0.7)',
+            fontSize: { xs: '0.5rem', sm: '0.55rem', md: '0.6rem' },
+            textShadow: '0 1px 2px rgba(0,0,0,0.3)',
+            lineHeight: 1,
+            fontWeight: 400,
+          }}>
+            {roundInfo.name}
+          </Typography>
+          {hasCalculator && calculatorLabel && (
+            <Typography
+              onClick={handleCalcClick}
+              sx={{
+                color: calculatorColor,
                 fontSize: { xs: '0.5rem', sm: '0.55rem', md: '0.6rem' },
                 textShadow: '0 1px 2px rgba(0,0,0,0.3)',
                 lineHeight: 1,
-                fontWeight: 400,
-              }}>
-                {roundInfo.name}
-              </Typography>
-              <Typography
-                onClick={handleLOClick}
-                sx={{
-                  color: '#4ade80',
-                  fontSize: { xs: '0.5rem', sm: '0.55rem', md: '0.6rem' },
-                  textShadow: '0 1px 2px rgba(0,0,0,0.3)',
-                  lineHeight: 1,
-                  fontWeight: 600,
-                  cursor: 'pointer',
-                  textDecoration: 'underline',
-                  textDecorationColor: 'rgba(74, 222, 128, 0.5)',
-                  '&:hover': {
-                    textDecorationColor: '#4ade80',
-                  },
-                }}
-              >
-                Lanz-Odermatt
-              </Typography>
-            </>
-          ) : (
-            <Typography sx={{
-              color: 'rgba(255,255,255,0.7)',
-              fontSize: { xs: '0.5rem', sm: '0.55rem', md: '0.6rem' },
-              textShadow: '0 1px 2px rgba(0,0,0,0.3)',
-              lineHeight: 1,
-              fontWeight: 400,
-            }}>
-              {roundInfo.name}
+                fontWeight: 600,
+                cursor: 'pointer',
+                textDecoration: 'underline',
+                textDecorationColor: `${calculatorColor}80`,
+                '&:hover': {
+                  textDecorationColor: calculatorColor,
+                },
+              }}
+            >
+              {calculatorLabel}
             </Typography>
           )}
         </>

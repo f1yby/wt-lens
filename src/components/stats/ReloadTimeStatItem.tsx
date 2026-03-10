@@ -1,5 +1,5 @@
 import { Box, Typography } from '@mui/material';
-import { AccessTime } from '@mui/icons-material';
+import { RotateRight } from '@mui/icons-material';
 
 /** Color constants - white with shadow works on all backgrounds */
 const COLOR_HAS_VALUE = '#ffffff';
@@ -57,7 +57,7 @@ export function ReloadTimeStatItem({ reloadTime, mainGun }: ReloadTimeStatItemPr
       gap: 0.25,
       py: { xs: 0.75, sm: 1 },
     }}>
-      <AccessTime sx={{ color, fontSize: { xs: 18, sm: 20, md: 22 }, mb: 0.25 }} />
+      <RotateRight sx={{ color, fontSize: { xs: 18, sm: 20, md: 22 }, mb: 0.25 }} />
       <Typography sx={{
         color,
         fontWeight: 700,

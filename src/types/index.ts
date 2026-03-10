@@ -24,8 +24,33 @@ export interface VehicleStats {
   expPerSpawn?: number;  // 每次重生获取的经验 (RP per spawn)
 }
 
-// Ammunition types
-export type AmmoType = 'apds_fs' | 'apds_fs_long' | 'heat' | 'heat_fs' | 'he' | 'apcbc' | 'ap' | 'apcr' | 'hesh' | 'atgm' | 'other';
+// Ammunition types – raw bulletType values from datamine (56+ variants)
+// Using string to accommodate all known and future bullet types
+export type AmmoType = string;
+
+/** Economy data from wpcost.blkx */
+export interface EconomyData {
+  // Research & Purchase
+  researchCost?: number;         // reqExp (RP needed to research)
+  purchaseCost?: number;         // value (SL needed to purchase)
+  purchaseCostGold?: number;     // costGold (GE for premium vehicles)
+  
+  // Crew Training
+  crewTraining?: number;         // trainCost (SL)
+  expertTraining?: number;       // train2Cost (SL)
+  aceTrainingGE?: number;        // train3Cost_gold (GE)
+  aceTrainingRP?: number;        // train3Cost_exp (RP)
+  
+  // Repair cost: { arcade: [base, spaded], realistic: [...], simulator: [...] }
+  repairCost?: Record<'arcade' | 'realistic' | 'simulator', [number, number]>;
+  
+  // Reward multipliers
+  rewardMultiplier?: Record<'arcade' | 'realistic' | 'simulator', number>;
+  expMultiplier?: number;        // expMul
+  
+  // Free repairs (premium/gift vehicles only)
+  freeRepairs?: number;
+}
 
 // Penetrator materials
 export type PenetratorMaterial = 'tungsten' | 'depletedUranium' | 'steel';
@@ -45,6 +70,17 @@ export interface Ammunition {
     material: PenetratorMaterial;
     Cx?: number;             // drag coefficient
   };
+  // Jacob de Marre parameters (for AP/APC/APBC/APCBC/APHE/APHEBC/APCR)
+  deMarre?: {
+    fullCaliber: number;     // full bore caliber (mm) — NOT damageCaliber
+    isApcbc: boolean;        // true → K_apcbc=1.0 (APC/APCBC), false → 0.9
+    explosiveMass: number;   // kg (raw, for knap calculation)
+    Cx?: number;             // drag coefficient
+    // APCR-specific fields
+    isApcr?: boolean;
+    coreCaliber?: number;    // mm (damageCaliber for APCR)
+    coreMass?: number;       // kg (damageMass for APCR)
+  };
   // Direct armorpower data (for non-APFSDS or older rounds)
   armorPower?: number;       // mm @ 0° (direct value from datamine)
   armorPowerTable?: {        // Distance-based penetration table
@@ -54,6 +90,10 @@ export interface Ammunition {
   // Calculated penetration
   penetration0m?: number;    // mm @ 0° NATO @ 0m
   penetration500m?: number;  // mm @ 0° NATO @ 500m
+  // Explosive filler (for HE, HEAT, APHE, etc.)
+  explosiveMassKg?: number;  // raw explosive mass in kg
+  explosiveType?: string;    // e.g. 'a_ix_2', 'tnt', 'comp_b'
+  tntEquivalent?: number;    // TNT equivalent mass in kg
 }
 
 /** Available metric types for vehicle performance comparison */
@@ -179,6 +219,61 @@ export interface Vehicle {
     ammunitions?: Ammunition[];
     penetrationData?: PenetrationData;
     autoLoader?: boolean;      // true = auto-loader (fixed reload time)
+
+    // ---- Extended fields (Detailed Performance) ----
+
+    // Engine details
+    engineManufacturer?: string;     // e.g. "honeywell"
+    engineModel?: string;            // e.g. "agt_1500"
+    engineType?: string;             // e.g. "gasturbine", "carburetor", "diesel"
+    engineMaxRpm?: number;           // max RPM
+
+    // Transmission details
+    transmissionManufacturer?: string; // e.g. "allison"
+    transmissionModel?: string;        // e.g. "x_1100_3b"
+    transmissionType?: string;         // e.g. "auto", "manual"
+    forwardGears?: number;             // number of forward gears
+    reverseGears?: number;             // number of reverse gears
+    forwardGearSpeeds?: number[];      // per-gear speed (km/h), index 0 = 1st gear (slowest)
+    reverseGearSpeeds?: number[];      // per-gear speed (km/h), index 0 = 1st reverse (slowest)
+    steerType?: string;                // e.g. "clutch_braking", "differential"
+
+    // Mass details
+    emptyWeight?: number;              // tons (empty mass)
+
+    // Track details
+    trackWidth?: number;               // meters
+
+    // Secondary weapons (machine guns, ATGMs, etc.)
+    secondaryWeapons?: {
+      trigger: string;
+      name: string;
+      caliber: number;        // mm
+      ammo: number;
+      // Extended fields (extracted from weapon files)
+      bulletType?: string;    // e.g. 'atgm_tandem_tank', 'ap_i_t'
+      reloadTime?: number;    // seconds
+      rateOfFire?: number;    // rounds per minute
+      penetration?: number;   // mm (cumulativeDamage.armorPower for HEAT/ATGM)
+      maxDistance?: number;    // meters (max range, rockets/missiles)
+      maxSpeed?: number;      // m/s (end speed for rockets/missiles)
+      guidanceType?: string;  // e.g. 'optical', 'laser', 'saclos'
+      explosiveMass?: number; // kg
+      explosiveType?: string; // e.g. 'lx14', 'tnt'
+    }[];
+
+    // Main gun ammo capacity
+    mainGunAmmo?: number;              // total ammo count
+
+    // Optics: driver night vision
+    driverNvResolution?: [number, number];  // [width, height]
+
+    // Smoke systems
+    hasSmokeGrenades?: boolean;
+    hasEss?: boolean;                  // engine smoke screen
+
+    // Laser rangefinder
+    hasLaserRangefinder?: boolean;
   };
   // Matchmaking stats from StatShark (may be missing if no stats available)
   // For backward compatibility - represents the default mode (historical)
@@ -193,6 +288,8 @@ export interface Vehicle {
   ghost?: boolean;
   // Release date from datamine (YYYY-MM-DD format)
   releaseDate?: string;
+  // Economy data from wpcost (repair cost, research cost, reward multipliers, etc.)
+  economy?: EconomyData;
 }
 
 /** Aircraft vehicle data (Phase 1: StatShark only, no performance data) */
@@ -225,6 +322,8 @@ export interface AircraftVehicle {
   unreleased?: boolean;
   ghost?: boolean;
   releaseDate?: string;
+  // Economy data from wpcost
+  economy?: EconomyData;
 }
 
 /** Ship vehicle data (Phase 1: StatShark only, no performance data) */
@@ -254,6 +353,8 @@ export interface ShipVehicle {
   unreleased?: boolean;
   ghost?: boolean;
   releaseDate?: string;
+  // Economy data from wpcost
+  economy?: EconomyData;
 }
 
 export interface MatchupData {

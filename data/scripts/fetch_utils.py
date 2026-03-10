@@ -64,6 +64,9 @@ RHA_DENSITY = 7850
 # RHA Brinell Hardness (WT uses ~260 BHN for standard RHA)
 RHA_BHN = 260
 
+# Explosive.blkx path (TNT equivalence data)
+EXPLOSIVE_BLKX_PATH = DATAMINE_BASE / "damage_model" / "explosive.blkx"
+
 
 # ============================================================
 # TypedDict definitions for datamine JSON structures
@@ -209,6 +212,17 @@ class ArmorPowerEntry(TypedDict):
     distance: float
 
 
+class DeMarreInfo(TypedDict, total=False):
+    """Jacob de Marre calculation parameters (AP/APC/APBC/APCBC/APHE/APHEBC/APCR)."""
+    fullCaliber: float          # full bore caliber (mm) — NOT damageCaliber
+    isApcbc: bool               # True → K_apcbc=1.0, False → 0.9
+    explosiveMass: float        # kg (raw, for knap calculation)
+    Cx: float                   # drag coefficient
+    isApcr: bool                # True for APCR
+    coreCaliber: float          # mm (damageCaliber for APCR)
+    coreMass: float             # kg (damageMass for APCR)
+
+
 class AmmoInfo(TypedDict, total=False):
     """Ammunition data returned by parse_ammunition_data()."""
     name: str
@@ -218,6 +232,7 @@ class AmmoInfo(TypedDict, total=False):
     mass: float
     muzzleVelocity: float
     lanzOdermatt: LanzOdermattInfo
+    deMarre: DeMarreInfo
     penetration0m: float
     penetrationData: PenetrationDataInfo
     armorPowerTable: list[ArmorPowerEntry]
@@ -742,6 +757,139 @@ def _has_no_image_and_release_date(vid: str, images_path: Path) -> bool:
 
 
 # ============================================================
+# Jacob de Marre Penetration Calculation
+# (for AP / APC / APBC / APCBC / APCR shells)
+# Source: https://wiki.warthunder.com/jacob_de_marre
+# ============================================================
+
+# De Marre shell types that use the AP/APC/APBC/APCBC formula
+DEMARRE_AP_TYPES = {
+    'ap_tank', 'apc_tank', 'apbc_tank', 'apcbc_tank',
+    'aphe_tank', 'aphebc_tank',
+}
+
+# Shell types that get the APCBC ballistic cap bonus (K_apcbc = 1.0 vs 0.9)
+DEMARRE_APCBC_TYPES = {'apc_tank', 'apcbc_tank'}
+
+# APCR uses a separate formula
+DEMARRE_APCR_TYPES = {'apcr_tank'}
+
+
+def _calc_demarre_knap(explosive_mass_kg: float, shell_mass_kg: float) -> float:
+    """
+    Calculate the explosive filler reduction factor (knap).
+
+    Based on the percentage of explosive mass relative to total shell mass.
+    A higher explosive filler % reduces penetration performance.
+
+    Piecewise linear interpolation from WT Wiki:
+      tnt% < 0.65  → 1.0
+      0.65–1.6     → 1.0 → 0.93
+      1.6–2.0      → 0.93 → 0.90
+      2.0–3.0      → 0.90 → 0.85
+      3.0–4.0      → 0.85 → 0.75
+      ≥ 4.0        → 0.75
+    """
+    if shell_mass_kg <= 0:
+        return 1.0
+    tnt_pct = (explosive_mass_kg / shell_mass_kg) * 100.0
+    if tnt_pct < 0.65:
+        return 1.0
+    elif tnt_pct < 1.6:
+        return 1.0 + (tnt_pct - 0.65) * (0.93 - 1.0) / (1.6 - 0.65)
+    elif tnt_pct < 2.0:
+        return 0.93 + (tnt_pct - 1.6) * (0.90 - 0.93) / (2.0 - 1.6)
+    elif tnt_pct < 3.0:
+        return 0.90 + (tnt_pct - 2.0) * (0.85 - 0.90) / (3.0 - 2.0)
+    elif tnt_pct < 4.0:
+        return 0.85 + (tnt_pct - 3.0) * (0.75 - 0.85) / (4.0 - 3.0)
+    else:
+        return 0.75
+
+
+def calculate_demarre_ap_penetration(
+    caliber_mm: float,
+    mass_kg: float,
+    velocity_ms: float,
+    explosive_mass_kg: float,
+    is_apcbc: bool,
+) -> float:
+    """
+    Calculate AP/APC/APBC/APCBC penetration at 0 m using the Jacob de Marre formula.
+
+    Formula (from WT Wiki calculator JS):
+      P = (v^1.43 × m^0.71) / (K_fbr^1.43 × (d/100)^1.07) × 100 × knap × K_apcbc
+
+    Where:
+      v          = muzzle velocity (m/s)
+      m          = shell mass (kg)
+      d          = caliber (mm)
+      K_fbr      = 1900 (base constant)
+      K_apcbc    = 1.0 for APC/APCBC, 0.9 for AP/APBC/APHE/APHEBC
+      knap       = explosive filler reduction factor (see _calc_demarre_knap)
+
+    Returns penetration in mm at 0 m distance, 0° angle.
+    """
+    if caliber_mm <= 0 or mass_kg <= 0 or velocity_ms <= 0:
+        return 0.0
+
+    K_FBR = 1900.0
+    kf_apcbc = 1.0 if is_apcbc else 0.9
+    knap = _calc_demarre_knap(explosive_mass_kg, mass_kg)
+
+    pen = (
+        (velocity_ms ** 1.43 * mass_kg ** 0.71)
+        / (K_FBR ** 1.43 * (caliber_mm / 100.0) ** 1.07)
+        * 100.0
+        * knap
+        * kf_apcbc
+    )
+    return round(pen, 2)
+
+
+def calculate_demarre_apcr_penetration(
+    core_caliber_mm: float,
+    shell_mass_kg: float,
+    core_mass_kg: float,
+    velocity_ms: float,
+) -> float:
+    """
+    Calculate APCR penetration at 0 m using the Jacob de Marre sub-caliber formula.
+
+    Formula (from WT Wiki calculator JS):
+      pallet_mass        = shell_mass - core_mass
+      part_pallet_mass   = (core_mass / shell_mass) × 100   (percentage)
+      kf_pallet          = 0.5 if part_pallet_mass > 36 else 0.4
+      calculated_mass    = core_mass + kf_pallet × pallet_mass
+      P = (v^1.43 × calculated_mass^0.71) / (K_fbr^1.43 × (d_core / 10000)^1.07)
+
+    Where:
+      v      = muzzle velocity (m/s)
+      d_core = core caliber (mm)  — from bullet.damageCaliber in datamine
+      K_fbr  = 3000 (base constant for APCR)
+
+    Returns penetration in mm at 0 m distance, 0° angle.
+    """
+    if core_caliber_mm <= 0 or shell_mass_kg <= 0 or core_mass_kg <= 0 or velocity_ms <= 0:
+        return 0.0
+    if core_mass_kg >= shell_mass_kg:
+        # Degenerate case: treat as solid shot
+        core_mass_kg = shell_mass_kg * 0.95
+
+    K_FBR = 3000.0
+    pallet_mass = shell_mass_kg - core_mass_kg
+    part_pallet_pct = (core_mass_kg / shell_mass_kg) * 100.0
+    kf_pallet = 0.5 if part_pallet_pct > 36.0 else 0.4
+    calculated_mass = core_mass_kg + kf_pallet * pallet_mass
+
+    pen = (
+        (velocity_ms ** 1.43 * calculated_mass ** 0.71)
+        / (K_FBR ** 1.43 * (core_caliber_mm / 10000.0) ** 1.07)
+    )
+    return round(pen, 2)
+
+
+# ============================================================
 # Lanz-Odermatt Penetration Calculation
 # ============================================================
 
@@ -866,6 +1014,26 @@ def load_weapon_data(weapon_blk_path: str) -> WeaponFileData | None:
         return None
 
 
+# ── Explosive TNT equivalence table (loaded lazily) ──
+_EXPLOSIVE_EQUIVALENTS: dict[str, float] | None = None
+
+def get_explosive_equivalents() -> dict[str, float]:
+    """Load brisanceEquivalent table from explosive.blkx (cached)."""
+    global _EXPLOSIVE_EQUIVALENTS
+    if _EXPLOSIVE_EQUIVALENTS is not None:
+        return _EXPLOSIVE_EQUIVALENTS
+    _EXPLOSIVE_EQUIVALENTS = {}
+    try:
+        with open(EXPLOSIVE_BLKX_PATH, encoding='utf-8') as f:
+            data = json.load(f)
+        for name, info in data.get('explosiveTypes', {}).items():
+            if isinstance(info, dict) and 'brisanceEquivalent' in info:
+                _EXPLOSIVE_EQUIVALENTS[name] = info['brisanceEquivalent']
+    except (json.JSONDecodeError, IOError) as e:
+        print(f"Warning: could not load explosive.blkx: {e}")
+    return _EXPLOSIVE_EQUIVALENTS
+
+
 def parse_ammunition_data(bullet_data: dict[str, Any], weapon_caliber_mm: float) -> AmmoInfo | None:
     """
     Parse ammunition data from weapon file bullet entry.
@@ -882,7 +1050,14 @@ def parse_ammunition_data(bullet_data: dict[str, Any], weapon_caliber_mm: float)
     mass = bullet_data.get('mass', 0)
     speed = bullet_data.get('speed', 0)
     damage_caliber = bullet_data.get('damageCaliber', 0)
-    caliber_mm_from_data = damage_caliber * 1000 if damage_caliber else weapon_caliber_mm
+    bullet_caliber = bullet_data.get('caliber', 0)  # in meters
+    # Priority: damageCaliber (sub-caliber core) > bullet.caliber > weapon_caliber_mm
+    if damage_caliber:
+        caliber_mm_from_data = damage_caliber * 1000
+    elif bullet_caliber:
+        caliber_mm_from_data = bullet_caliber * 1000
+    else:
+        caliber_mm_from_data = weapon_caliber_mm
     
     ammo_info: AmmoInfo = {
         'name': bullet_name,
@@ -913,7 +1088,9 @@ def parse_ammunition_data(bullet_data: dict[str, Any], weapon_caliber_mm: float)
         )
         
         # Extract drag coefficient (Cx) for ballistic velocity decay model
-        cx_drag = bullet_data.get('Cx', 0)
+        # Cx can be a list of segment values in some shells — take the first one
+        cx_drag_raw = bullet_data.get('Cx', 0)
+        cx_drag = cx_drag_raw[0] if isinstance(cx_drag_raw, list) else (cx_drag_raw or 0)
         
         ammo_info['lanzOdermatt'] = {
             'workingLength': lanz_odermatt_working_length,
@@ -932,7 +1109,29 @@ def parse_ammunition_data(bullet_data: dict[str, Any], weapon_caliber_mm: float)
             },
         }
     
-    # Check for direct armorPower data in the bullet or kinetic section
+    # ── HEAT / HEAT-FS / ATGM: cumulative jet penetration ──
+    # HEAT-type rounds store their real penetration in cumulativeDamage.armorPower,
+    # while the bullet-level armorpower is just the inert body penetration (~5 mm).
+    # ATGMs additionally store data in bullet.rocket sub-dict.
+    if not ammo_info.get('penetration0m'):
+        # 1) Check bullet-level cumulativeDamage (HEAT / HEAT-FS)
+        cumulative = bullet_data.get('cumulativeDamage')
+        if isinstance(cumulative, dict) and 'armorPower' in cumulative:
+            ammo_info['penetration0m'] = cumulative['armorPower']
+
+        # 2) Check rocket sub-dict (ATGMs fired from gun barrel)
+        rocket = bullet_data.get('rocket')
+        if isinstance(rocket, dict):
+            if not ammo_info.get('penetration0m'):
+                rcum = rocket.get('cumulativeDamage')
+                if isinstance(rcum, dict) and 'armorPower' in rcum:
+                    ammo_info['penetration0m'] = rcum['armorPower']
+            # ATGM speed: prefer endSpeed (steady-state flight speed)
+            end_speed = rocket.get('endSpeed') or rocket.get('maxSpeed')
+            if end_speed and (not ammo_info.get('muzzleVelocity') or ammo_info['muzzleVelocity'] == 0):
+                ammo_info['muzzleVelocity'] = round(float(end_speed), 1)
+
+    # ── Kinetic ArmorPower table (APCR, older AP rounds) ──
     if not ammo_info.get('penetration0m'):
         # Try to extract ArmorPower table from kinetic section
         armor_power_entries = []
@@ -952,7 +1151,7 @@ def parse_ammunition_data(bullet_data: dict[str, Any], weapon_caliber_mm: float)
             # Use the closest distance entry as penetration0m
             ammo_info['penetration0m'] = armor_power_entries[0]['penetration']
         
-        # Fallback: check bullet-level armorpower
+        # Fallback: check bullet-level armorpower (non-HEAT rounds only)
         elif 'armorpower' in bullet_data:
             ap = bullet_data['armorpower']
             if isinstance(ap, (int, float)):
@@ -968,6 +1167,84 @@ def parse_ammunition_data(bullet_data: dict[str, Any], weapon_caliber_mm: float)
                     ammo_info['armorPowerTable'] = entries
                     ammo_info['penetration0m'] = entries[0]['penetration']
     
+    # ── Jacob de Marre fallback (AP / APC / APBC / APCBC / APCR) ──
+    # If no penetration has been determined yet and the shell is an AP-family type,
+    # calculate it using the de Marre formula from the WT Wiki calculator.
+    # Also store deMarre params for the frontend calculator page.
+    if bullet_type in (DEMARRE_AP_TYPES | DEMARRE_APCR_TYPES):
+        # Use the full-caliber value from bullet.caliber (in meters) for the formula,
+        # NOT damageCaliber which is the sub-caliber core for APCR.
+        full_caliber_mm = (bullet_data.get('caliber', 0) or 0) * 1000
+        if not full_caliber_mm:
+            full_caliber_mm = weapon_caliber_mm
+
+        explosive_mass_raw = bullet_data.get('explosiveMass', 0) or 0
+        # Cx can be a list of segment values in some shells — take the first one
+        cx_drag_raw = bullet_data.get('Cx', 0)
+        cx_drag = cx_drag_raw[0] if isinstance(cx_drag_raw, list) else (cx_drag_raw or 0)
+
+        if bullet_type in DEMARRE_APCR_TYPES:
+            # APCR: use sub-caliber core formula
+            core_cal_mm = (bullet_data.get('damageCaliber', 0) or 0) * 1000
+            core_mass = bullet_data.get('damageMass', 0) or 0
+            if core_cal_mm > 0 and core_mass > 0 and mass > 0 and speed > 0:
+                # Save de Marre params for frontend calculator
+                ammo_info['deMarre'] = {
+                    'fullCaliber': round(full_caliber_mm, 1),
+                    'isApcbc': False,
+                    'explosiveMass': 0,
+                    'isApcr': True,
+                    'coreCaliber': round(core_cal_mm, 1),
+                    'coreMass': round(core_mass, 4),
+                }
+                if cx_drag:
+                    ammo_info['deMarre']['Cx'] = round(cx_drag, 4)
+                if not ammo_info.get('penetration0m'):
+                    pen = calculate_demarre_apcr_penetration(
+                        core_caliber_mm=core_cal_mm,
+                        shell_mass_kg=mass,
+                        core_mass_kg=core_mass,
+                        velocity_ms=speed,
+                    )
+                    if pen > 0:
+                        ammo_info['penetration0m'] = round(pen, 1)
+        else:
+            # AP / APC / APBC / APCBC / APHE / APHEBC
+            is_apcbc = bullet_type in DEMARRE_APCBC_TYPES
+            if full_caliber_mm > 0 and mass > 0 and speed > 0:
+                # Save de Marre params for frontend calculator
+                ammo_info['deMarre'] = {
+                    'fullCaliber': round(full_caliber_mm, 1),
+                    'isApcbc': is_apcbc,
+                    'explosiveMass': round(explosive_mass_raw, 4),
+                }
+                if cx_drag:
+                    ammo_info['deMarre']['Cx'] = round(cx_drag, 4)
+                if not ammo_info.get('penetration0m'):
+                    pen = calculate_demarre_ap_penetration(
+                        caliber_mm=full_caliber_mm,
+                        mass_kg=mass,
+                        velocity_ms=speed,
+                        explosive_mass_kg=explosive_mass_raw,
+                        is_apcbc=is_apcbc,
+                    )
+                    if pen > 0:
+                        ammo_info['penetration0m'] = round(pen, 1)
+
+    # ── Explosive filler → TNT equivalent ──
+    explosive_mass = bullet_data.get('explosiveMass')
+    explosive_type = bullet_data.get('explosiveType')
+    if explosive_mass and explosive_mass > 0:
+        ammo_info['explosiveMassKg'] = round(float(explosive_mass), 4)
+        if explosive_type:
+            ammo_info['explosiveType'] = explosive_type
+            equiv_table = get_explosive_equivalents()
+            brisance = equiv_table.get(explosive_type, 1.0)  # default to 1.0 (= TNT)
+            ammo_info['tntEquivalent'] = round(float(explosive_mass) * brisance, 3)
+        else:
+            # No type specified → treat as TNT
+            ammo_info['tntEquivalent'] = round(float(explosive_mass), 3)
+
     return ammo_info
 
 
@@ -985,6 +1262,7 @@ def extract_weapon_ammunition(weapon_data: WeaponFileData, vehicle_modifications
         return []
     
     ammunitions = []
+    seen_names: set[str] = set()  # Track bullet names to avoid duplicates
     
     # Get weapon caliber
     weapon_caliber_mm = 0
@@ -1010,6 +1288,7 @@ def extract_weapon_ammunition(weapon_data: WeaponFileData, vehicle_modifications
             if isinstance(value, dict):
                 ammo_info = parse_ammunition_data(value, weapon_caliber_mm)
                 if ammo_info:
+                    seen_names.add(ammo_info['name'])
                     ammunitions.append(ammo_info)
             continue
         
@@ -1032,12 +1311,14 @@ def extract_weapon_ammunition(weapon_data: WeaponFileData, vehicle_modifications
                                     shell_data = cluster_data['shell']
                                     if isinstance(shell_data, dict):
                                         ammo_info = parse_ammunition_data(shell_data, weapon_caliber_mm)
-                                        if ammo_info:
+                                        if ammo_info and ammo_info['name'] not in seen_names:
+                                            seen_names.add(ammo_info['name'])
                                             ammunitions.append(ammo_info)
                 else:
                     # Direct bullet definition
                     ammo_info = parse_ammunition_data(bullet_data, weapon_caliber_mm)
-                    if ammo_info:
+                    if ammo_info and ammo_info['name'] not in seen_names:
+                        seen_names.add(ammo_info['name'])
                         ammunitions.append(ammo_info)
     
     return ammunitions
@@ -1128,3 +1409,105 @@ def detect_vehicle_type(data: TankModelData) -> str:
     """Detect vehicle type from datamine tankmodel data"""
     vtype = data.get('type', '')
     return VEHICLE_TYPE_MAP.get(vtype, 'medium_tank')
+
+
+# ============================================================
+# Economy Data
+# ============================================================
+
+class EconomyData(TypedDict, total=False):
+    """Economy data extracted from wpcost.blkx for a vehicle."""
+    # Research & Purchase
+    researchCost: int           # reqExp (RP needed to research)
+    purchaseCost: int           # value (SL needed to purchase)
+    purchaseCostGold: int       # costGold (GE for premium vehicles)
+    
+    # Crew Training
+    crewTraining: int           # trainCost (SL)
+    expertTraining: int         # train2Cost (SL)
+    aceTrainingGE: int          # train3Cost_gold (GE)
+    aceTrainingRP: int          # train3Cost_exp (RP)
+    
+    # Repair cost (base / spaded)
+    repairCost: 'dict[str, list[int]]'   # { arcade: [base, spaded], realistic: [...], simulator: [...] }
+    
+    # Reward multipliers
+    rewardMultiplier: 'dict[str, float]' # { arcade, realistic, simulator }
+    expMultiplier: float                 # expMul
+    
+    # Free repairs (premium/gift vehicles only)
+    freeRepairs: int
+
+
+def parse_economy_data(vehicle_id: str) -> EconomyData | None:
+    """
+    Extract economy data for a vehicle from wpcost.blkx.
+    
+    Returns EconomyData dict or None if vehicle not found.
+    """
+    wpcost = load_wpcost_data()
+    vdata = wpcost.get(vehicle_id)
+    if not vdata or not isinstance(vdata, dict):
+        return None
+    
+    economy: EconomyData = {}
+    
+    # Research & Purchase costs
+    req_exp = vdata.get('reqExp')
+    if isinstance(req_exp, (int, float)):
+        economy['researchCost'] = int(req_exp)
+    
+    value = vdata.get('value')
+    if isinstance(value, (int, float)):
+        economy['purchaseCost'] = int(value)
+    
+    cost_gold = vdata.get('costGold')
+    if isinstance(cost_gold, (int, float)) and cost_gold > 0:
+        economy['purchaseCostGold'] = int(cost_gold)
+    
+    # Crew training costs
+    train_cost = vdata.get('trainCost')
+    if isinstance(train_cost, (int, float)):
+        economy['crewTraining'] = int(train_cost)
+    
+    train2_cost = vdata.get('train2Cost')
+    if isinstance(train2_cost, (int, float)):
+        economy['expertTraining'] = int(train2_cost)
+    
+    train3_gold = vdata.get('train3Cost_gold')
+    if isinstance(train3_gold, (int, float)):
+        economy['aceTrainingGE'] = int(train3_gold)
+    
+    train3_exp = vdata.get('train3Cost_exp')
+    if isinstance(train3_exp, (int, float)):
+        economy['aceTrainingRP'] = int(train3_exp)
+    
+    # Repair costs: [base, fully upgraded] for each mode
+    repair_cost: dict[str, list[int]] = {}
+    for mode_key, mode_name in [('Arcade', 'arcade'), ('Historical', 'realistic'), ('Simulation', 'simulator')]:
+        base = vdata.get(f'repairCost{mode_key}')
+        spaded = vdata.get(f'repairCostFullUpgraded{mode_key}')
+        if isinstance(base, (int, float)) and isinstance(spaded, (int, float)):
+            repair_cost[mode_name] = [int(base), int(spaded)]
+    if repair_cost:
+        economy['repairCost'] = repair_cost
+    
+    # Reward multipliers
+    reward_mul: dict[str, float] = {}
+    for mode_key, mode_name in [('Arcade', 'arcade'), ('Historical', 'realistic'), ('Simulation', 'simulator')]:
+        mul = vdata.get(f'rewardMul{mode_key}')
+        if isinstance(mul, (int, float)):
+            reward_mul[mode_name] = round(float(mul), 2)
+    if reward_mul:
+        economy['rewardMultiplier'] = reward_mul
+    
+    exp_mul = vdata.get('expMul')
+    if isinstance(exp_mul, (int, float)):
+        economy['expMultiplier'] = round(float(exp_mul), 2)
+    
+    # Free repairs (premium/gift vehicles)
+    free_repairs = vdata.get('freeRepairs')
+    if isinstance(free_repairs, (int, float)) and free_repairs > 0:
+        economy['freeRepairs'] = int(free_repairs)
+    
+    return economy if economy else None

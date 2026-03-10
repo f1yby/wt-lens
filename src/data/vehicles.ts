@@ -1,4 +1,4 @@
-import type { Vehicle, Ammunition, MainGun, PenetrationData, GameMode, VehicleStats, StatsMonthRange } from '../types';
+import type { Vehicle, Ammunition, MainGun, PenetrationData, GameMode, VehicleStats, StatsMonthRange, EconomyData } from '../types';
 import { getDefaultStatsMonthRange, getMonthRangeCacheKey } from '../types';
 import { StatSharkEntry, cleanName, buildStatsMapByMonthRange, convertToVehicleStats } from './base';
 import { initStatsMonthService, isServiceInitialized } from '../services/statsMonthService';
@@ -41,12 +41,46 @@ interface DatamineEntry {
     ammunitions?: Ammunition[] | null;
     penetrationData?: PenetrationData | null;
     autoLoader?: boolean | null;
+    // Extended fields
+    engine_manufacturer?: string | null;
+    engine_model?: string | null;
+    engine_type?: string | null;
+    engine_max_rpm?: number | null;
+    transmission_manufacturer?: string | null;
+    transmission_model?: string | null;
+    transmission_type?: string | null;
+    forward_gears?: number | null;
+    reverse_gears?: number | null;
+    steer_type?: string | null;
+    empty_weight?: number | null;
+    track_width?: number | null;
+    secondary_weapons?: {
+      trigger: string;
+      name: string;
+      caliber: number;
+      ammo: number;
+      bulletType?: string;
+      reloadTime?: number;
+      rateOfFire?: number;
+      penetration?: number;
+      maxDistance?: number;
+      maxSpeed?: number;
+      guidanceType?: string;
+      explosiveMass?: number;
+      explosiveType?: string;
+    }[] | null;
+    main_gun_ammo?: number | null;
+    driver_nv_resolution?: number[] | null;
+    has_smoke_grenades?: boolean | null;
+    has_ess?: boolean | null;
+    has_laser_rangefinder?: boolean | null;
   };
   imageUrl: string;
   source: string;
   unreleased?: boolean;
   releaseDate?: string;
   ghost?: boolean;
+  economy?: EconomyData;
 }
 
 // Cache for loaded raw data
@@ -163,6 +197,27 @@ function mergeVehicleData(stats: StatSharkEntry[], datamine: DatamineEntry[], ra
         ammunitions: datamineEntry.performance.ammunitions ?? undefined,
         penetrationData: datamineEntry.performance.penetrationData ?? undefined,
         autoLoader: datamineEntry.performance.autoLoader ?? undefined,
+        // Extended fields
+        engineManufacturer: datamineEntry.performance.engine_manufacturer ?? undefined,
+        engineModel: datamineEntry.performance.engine_model ?? undefined,
+        engineType: datamineEntry.performance.engine_type ?? undefined,
+        engineMaxRpm: datamineEntry.performance.engine_max_rpm ?? undefined,
+        transmissionManufacturer: datamineEntry.performance.transmission_manufacturer ?? undefined,
+        transmissionModel: datamineEntry.performance.transmission_model ?? undefined,
+        transmissionType: datamineEntry.performance.transmission_type ?? undefined,
+        forwardGears: datamineEntry.performance.forward_gears ?? undefined,
+        reverseGears: datamineEntry.performance.reverse_gears ?? undefined,
+        forwardGearSpeeds: datamineEntry.performance.forward_gear_speeds ?? undefined,
+        reverseGearSpeeds: datamineEntry.performance.reverse_gear_speeds ?? undefined,
+        steerType: datamineEntry.performance.steer_type ?? undefined,
+        emptyWeight: datamineEntry.performance.empty_weight ?? undefined,
+        trackWidth: datamineEntry.performance.track_width ?? undefined,
+        secondaryWeapons: datamineEntry.performance.secondary_weapons ?? undefined,
+        mainGunAmmo: datamineEntry.performance.main_gun_ammo ?? undefined,
+        driverNvResolution: datamineEntry.performance.driver_nv_resolution as [number, number] ?? undefined,
+        hasSmokeGrenades: datamineEntry.performance.has_smoke_grenades ?? undefined,
+        hasEss: datamineEntry.performance.has_ess ?? undefined,
+        hasLaserRangefinder: datamineEntry.performance.has_laser_rangefinder ?? undefined,
       },
       // Backward compatibility: use historical mode as default
       stats: defaultStats,
@@ -172,6 +227,7 @@ function mergeVehicleData(stats: StatSharkEntry[], datamine: DatamineEntry[], ra
       unreleased: datamineEntry.unreleased ?? false,
       releaseDate: datamineEntry.releaseDate,
       ghost: datamineEntry.ghost ?? false,
+      economy: datamineEntry.economy,
     };
 
     vehicles.push(vehicle);

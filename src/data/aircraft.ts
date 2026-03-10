@@ -1,4 +1,4 @@
-import type { AircraftVehicle, AircraftType, VehicleStats, GameMode, StatsMonthRange } from '../types';
+import type { AircraftVehicle, AircraftType, VehicleStats, GameMode, StatsMonthRange, EconomyData } from '../types';
 import { getDefaultStatsMonthRange, getMonthRangeCacheKey } from '../types';
 import { StatSharkEntry, cleanName, buildStatsMapByMonthRange, convertToVehicleStats } from './base';
 import { initStatsMonthService, isServiceInitialized } from '../services/statsMonthService';
@@ -17,6 +17,7 @@ interface AircraftEntry {
   unreleased?: boolean;
   releaseDate?: string;
   ghost?: boolean;
+  economy?: EconomyData;
 }
 
 // Cache for loaded raw data
@@ -116,6 +117,7 @@ function mergeAircraftData(stats: StatSharkEntry[], aircraft: AircraftEntry[], r
       unreleased: aircraftEntry.unreleased ?? false,
       releaseDate: aircraftEntry.releaseDate,
       ghost: aircraftEntry.ghost ?? false,
+      economy: aircraftEntry.economy,
     };
 
     aircraftList.push(aircraftVehicle);

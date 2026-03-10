@@ -44,6 +44,7 @@ from fetch_utils import (
     copy_nation_flags,
     # Speed
     calculate_speed_from_gearbox,
+    _calculate_wheel_speed,
     # Filtering
     _is_event_or_tutorial,
     _is_ghost_vehicle,
@@ -68,6 +69,8 @@ from fetch_utils import (
     PenetrationDataInfo,
     AmmoInfo,
     WpcostEntry,
+    # Economy
+    parse_economy_data,
     # Tankmodel I/O
     read_local_blkx,
 )
@@ -81,7 +84,7 @@ from fetch_utils import (
 class VehiclePerformance:
     """Vehicle performance metrics"""
     horsepower: float | None = None
-    weight: float | None = None  # in tons
+    weight: float | None = None  # in tons (combat weight = TakeOff)
     power_to_weight: float | None = None
     max_reverse_speed: float | None = None
     reload_time: float | None = None
@@ -110,6 +113,47 @@ class VehiclePerformance:
     penetration_data: PenetrationDataInfo | None = None
     auto_loader: bool | None = None  # True if auto-loader, False if manual loader
 
+    # ---- Extended fields (Detailed Performance) ----
+
+    # Engine details
+    engine_manufacturer: str | None = None       # e.g. "honeywell"
+    engine_model: str | None = None              # e.g. "agt_1500"
+    engine_type: str | None = None               # e.g. "gasturbine", "carburetor", "diesel"
+    engine_max_rpm: float | None = None          # max RPM
+    engine_min_rpm: float | None = None          # min RPM (idle)
+
+    # Transmission details
+    transmission_manufacturer: str | None = None # e.g. "allison"
+    transmission_model: str | None = None        # e.g. "x_1100_3b"
+    transmission_type: str | None = None         # e.g. "auto", "manual"
+    forward_gears: int | None = None             # number of forward gears
+    reverse_gears: int | None = None             # number of reverse gears
+    forward_gear_speeds: list[float] | None = None   # per-gear speed (km/h), 1st=slowest
+    reverse_gear_speeds: list[float] | None = None   # per-gear speed (km/h), 1st=slowest
+    steer_type: str | None = None                # e.g. "clutch_braking", "differential"
+
+    # Mass details
+    empty_weight: float | None = None            # tons (Empty mass without fuel/ammo loading)
+
+    # Track details
+    track_width: float | None = None             # meters
+
+    # Secondary weapons (machine guns etc.)
+    secondary_weapons: list[dict[str, Any]] | None = None  # [{trigger, name, caliber, ammo}]
+
+    # Main gun ammo capacity
+    main_gun_ammo: int | None = None             # total ammo count for main gun
+
+    # Optics: driver night vision
+    driver_nv_resolution: list[int] | None = None   # [width, height] for driver IR/NV
+
+    # Smoke systems
+    has_smoke_grenades: bool | None = None        # smoke grenade launcher
+    has_ess: bool | None = None                   # engine smoke screen
+
+    # Laser rangefinder
+    has_laser_rangefinder: bool | None = None
+
 
 @dataclass
 class VehicleData:
@@ -131,6 +175,8 @@ class VehicleData:
     br_arcade: float | None = None
     br_realistic: float | None = None
     br_simulator: float | None = None
+    # Economy data from wpcost
+    economy: dict[str, Any] | None = None
 
 
 # ============================================================
@@ -224,6 +270,98 @@ def parse_tankmodel_data(data: TankModelData) -> VehiclePerformance | None:
         max_rev_speed = data.get('maxRevSpeed')
         if isinstance(max_rev_speed, (int, float)):
             perf.max_reverse_speed = round(max_rev_speed, 1)
+
+    # ---- Extended data extraction (detailed performance) ----
+
+    # Engine details
+    if isinstance(engine_data, dict):
+        mfr = engine_data.get('manufacturer')
+        if isinstance(mfr, str) and mfr:
+            perf.engine_manufacturer = mfr
+        mdl = engine_data.get('model')
+        if isinstance(mdl, str) and mdl:
+            perf.engine_model = mdl
+        etype = engine_data.get('type')
+        if isinstance(etype, str) and etype:
+            perf.engine_type = etype
+        max_rpm_val = engine_data.get('maxRPM')
+        if isinstance(max_rpm_val, (int, float)):
+            perf.engine_max_rpm = max_rpm_val
+        min_rpm_val = engine_data.get('minRPM')
+        if isinstance(min_rpm_val, (int, float)):
+            perf.engine_min_rpm = min_rpm_val
+
+    # Transmission / Mechanics details
+    if isinstance(mechanics, dict):
+        tmfr = mechanics.get('manufacturer')
+        if isinstance(tmfr, str) and tmfr:
+            perf.transmission_manufacturer = tmfr
+        tmdl = mechanics.get('model')
+        if isinstance(tmdl, str) and tmdl:
+            perf.transmission_model = tmdl
+        ttype = mechanics.get('type')
+        if isinstance(ttype, str) and ttype:
+            perf.transmission_type = ttype
+        stype = mechanics.get('steerType')
+        if isinstance(stype, str) and stype:
+            perf.steer_type = stype
+
+        gear_ratios_data = mechanics.get('gearRatios', {})
+        if isinstance(gear_ratios_data, dict):
+            all_gears = gear_ratios_data.get('ratio', [])
+            if isinstance(all_gears, list) and all_gears:
+                fwd = [g for g in all_gears if isinstance(g, (int, float)) and g > 0]
+                rev = [g for g in all_gears if isinstance(g, (int, float)) and g < 0]
+                perf.forward_gears = len(fwd) if fwd else None
+                perf.reverse_gears = len(rev) if rev else None
+
+                # Calculate per-gear speeds if drivetrain params available
+                if all([max_rpm > 0, drive_gear_radius > 0, side_gear_ratio > 0]):
+                    if fwd:
+                        # Sort by ratio descending (1st gear = highest ratio = slowest)
+                        fwd_sorted = sorted(fwd, reverse=True)
+                        perf.forward_gear_speeds = [
+                            _calculate_wheel_speed(max_rpm, drive_gear_radius, r, side_gear_ratio, main_gear_ratio)
+                            for r in fwd_sorted
+                        ]
+                    if rev:
+                        # Sort by absolute ratio descending (1st reverse = highest abs ratio = slowest)
+                        rev_sorted = sorted(rev, key=lambda x: abs(x), reverse=True)
+                        perf.reverse_gear_speeds = [
+                            _calculate_wheel_speed(max_rpm, drive_gear_radius, abs(r), side_gear_ratio, main_gear_ratio)
+                            for r in rev_sorted
+                        ]
+
+    # Mass details (empty weight)
+    if isinstance(mass_data, dict):
+        empty_kg = mass_data.get('Empty', 0.0)
+        if isinstance(empty_kg, (int, float)) and empty_kg > 1000:
+            perf.empty_weight = round(empty_kg / 1000.0, 2)
+
+    # Track details
+    tracks_data = vehicle_phys.get('tracks', {})
+    if isinstance(tracks_data, dict):
+        tw = tracks_data.get('width')
+        if isinstance(tw, (int, float)) and tw > 0:
+            perf.track_width = round(tw, 3)
+
+    # Driver night vision / IR
+    night_vision_root = data.get('nightVision', {})
+    if isinstance(night_vision_root, dict):
+        driver_ir = night_vision_root.get('driverIr', {})
+        if isinstance(driver_ir, dict):
+            d_res = driver_ir.get('resolution', [])
+            if isinstance(d_res, list) and len(d_res) >= 2:
+                perf.driver_nv_resolution = [int(d_res[0]), int(d_res[1])]
+
+    # Smoke systems (from modifications)
+    mods = data.get('modifications', {})
+    if isinstance(mods, dict):
+        perf.has_smoke_grenades = 'tank_smoke_screen_system_mod' in mods
+        perf.has_ess = 'tank_engine_smoke_screen_system' in mods
+        perf.has_laser_rangefinder = any(
+            'laser_rangefinder' in k for k in mods
+        )
 
     # Extract gun/turret stats from commonWeapons
     common_weapons = data.get('commonWeapons', {})
@@ -487,6 +625,131 @@ def parse_tankmodel_data(data: TankModelData) -> VehiclePerformance | None:
                         if best_penetration > 0:
                             perf.penetration = best_penetration
 
+    # Extract main gun ammo capacity from main weapon
+    if main_weapon:
+        ammo_count = main_weapon.get('bullets')
+        if isinstance(ammo_count, (int, float)) and ammo_count > 0:
+            perf.main_gun_ammo = int(ammo_count)
+
+    # Extract secondary weapons (machine guns, etc.)
+    all_weapons = common_weapons.get('Weapon', [])
+    if isinstance(all_weapons, dict):
+        all_weapons = [all_weapons]
+
+    secondary_list: list[dict[str, Any]] = []
+    for w in all_weapons:
+        if not isinstance(w, dict):
+            continue
+        trigger = w.get('trigger', '')
+        blk = w.get('blk', '')
+        # Skip main cannon (already handled)
+        if trigger == 'gunner0' and 'cannon' in blk.lower():
+            continue
+        # Skip empty triggers or dummy weapons
+        if not blk or 'dummy' in blk.lower():
+            continue
+        # Extract weapon name from blk path
+        weapon_filename = blk.split('/')[-1].replace('.blk', '')
+        weapon_name = weapon_filename.replace('_user_machinegun', '').replace('_user_cannon', '')
+        ammo_count = w.get('bullets', 0)
+
+        sec_entry: dict[str, Any] = {
+            'trigger': trigger,
+            'name': weapon_name,
+            'caliber': 0,
+            'ammo': int(ammo_count) if isinstance(ammo_count, (int, float)) else 0,
+        }
+
+        # Try to load weapon file for detailed data
+        sec_weapon_data = load_weapon_data(blk)
+        if sec_weapon_data:
+            # ---- Caliber ----
+            wi = sec_weapon_data.get('Weapon', {})
+            if isinstance(wi, dict):
+                cal = wi.get('caliber', 0)
+                if isinstance(cal, (int, float)) and cal > 0:
+                    sec_entry['caliber'] = round(cal * 1000, 1)
+            # Fallback: read caliber from bullet data (for machine guns)
+            if not sec_entry['caliber']:
+                bullet_data = sec_weapon_data.get('bullet', {})
+                if isinstance(bullet_data, list):
+                    bullet_data = bullet_data[0] if bullet_data else {}
+                if isinstance(bullet_data, dict):
+                    bcal = bullet_data.get('caliber', 0)
+                    if isinstance(bcal, (int, float)) and bcal > 0:
+                        sec_entry['caliber'] = round(bcal * 1000, 1)
+
+            # ---- Reload time ----
+            # From tankmodel weapon override first, then weapon file
+            sec_reload = w.get('reloadTime') or sec_weapon_data.get('reloadTime')
+            if isinstance(sec_reload, (int, float)) and sec_reload > 0:
+                sec_entry['reloadTime'] = round(float(sec_reload), 1)
+
+            # ---- Rate of fire (machine guns / autocannons) ----
+            sec_shot_freq = w.get('shotFreq') or sec_weapon_data.get('shotFreq')
+            if isinstance(sec_shot_freq, (int, float)) and sec_shot_freq > 0:
+                sec_entry['rateOfFire'] = round(sec_shot_freq * 60)  # rounds per minute
+
+            # ---- Bullet data (for ATGMs/rockets/HEAT etc.) ----
+            bullet_data = sec_weapon_data.get('bullet', {})
+            if isinstance(bullet_data, list):
+                bullet_data = bullet_data[0] if bullet_data else {}
+            if isinstance(bullet_data, dict):
+                # Bullet type
+                bt = bullet_data.get('bulletType', '')
+                if bt:
+                    sec_entry['bulletType'] = bt
+
+                # Rocket/missile-specific data
+                rocket_data = bullet_data.get('rocket', {})
+                if isinstance(rocket_data, dict):
+                    # Max distance (range)
+                    max_dist = rocket_data.get('maxDistance')
+                    if isinstance(max_dist, (int, float)) and max_dist > 0:
+                        sec_entry['maxDistance'] = round(max_dist)
+
+                    # Max speed
+                    end_speed = rocket_data.get('endSpeed')
+                    if isinstance(end_speed, (int, float)) and end_speed > 0:
+                        sec_entry['maxSpeed'] = round(end_speed)
+
+                    # Guidance type (optical, laser, saclos, etc.)
+                    guidance_type = rocket_data.get('guidanceType')
+                    if isinstance(guidance_type, str) and guidance_type:
+                        sec_entry['guidanceType'] = guidance_type
+
+                    # Penetration: cumulativeDamage.armorPower (for HEAT/ATGM)
+                    cum_damage = rocket_data.get('cumulativeDamage', {})
+                    if isinstance(cum_damage, dict):
+                        armor_power = cum_damage.get('armorPower')
+                        if isinstance(armor_power, (int, float)) and armor_power > 0:
+                            sec_entry['penetration'] = round(armor_power)
+
+                    # Explosive info
+                    exp_mass = rocket_data.get('explosiveMass')
+                    if isinstance(exp_mass, (int, float)) and exp_mass > 0:
+                        sec_entry['explosiveMass'] = round(exp_mass, 2)
+                    exp_type = rocket_data.get('explosiveType')
+                    if isinstance(exp_type, str) and exp_type:
+                        sec_entry['explosiveType'] = exp_type
+
+                # Non-rocket penetration (ArmorPower from kinetic damage)
+                if 'penetration' not in sec_entry:
+                    damage = bullet_data.get('damage', {})
+                    kinetic = damage.get('kinetic', {}) if isinstance(damage, dict) else {}
+                    if isinstance(kinetic, dict):
+                        for key, val in kinetic.items():
+                            if key.startswith('ArmorPower') and isinstance(val, list) and len(val) >= 2:
+                                pen_val = val[0]
+                                if isinstance(pen_val, (int, float)) and pen_val > 0:
+                                    if pen_val > sec_entry.get('penetration', 0):
+                                        sec_entry['penetration'] = round(pen_val)
+
+        secondary_list.append(sec_entry)
+
+    if secondary_list:
+        perf.secondary_weapons = secondary_list
+
     return perf
 
 
@@ -603,6 +866,7 @@ def fetch_vehicle_performance(vehicle_id: str, copy_images: bool = True) -> Vehi
         br_arcade=br_dict.get('arcade'),
         br_realistic=br_dict.get('realistic'),
         br_simulator=br_dict.get('simulator'),
+        economy=parse_economy_data(vehicle_id),
     )
 
 
@@ -733,6 +997,27 @@ def vehicle_data_to_dict(v: VehicleData) -> dict[str, Any]:
             "ammunitions": v.performance.ammunitions,
             "penetrationData": v.performance.penetration_data,
             "autoLoader": v.performance.auto_loader,
+            # Extended fields
+            "engine_manufacturer": v.performance.engine_manufacturer,
+            "engine_model": v.performance.engine_model,
+            "engine_type": v.performance.engine_type,
+            "engine_max_rpm": v.performance.engine_max_rpm,
+            "transmission_manufacturer": v.performance.transmission_manufacturer,
+            "transmission_model": v.performance.transmission_model,
+            "transmission_type": v.performance.transmission_type,
+            "forward_gears": v.performance.forward_gears,
+            "reverse_gears": v.performance.reverse_gears,
+            "forward_gear_speeds": v.performance.forward_gear_speeds,
+            "reverse_gear_speeds": v.performance.reverse_gear_speeds,
+            "steer_type": v.performance.steer_type,
+            "empty_weight": v.performance.empty_weight,
+            "track_width": v.performance.track_width,
+            "secondary_weapons": v.performance.secondary_weapons,
+            "main_gun_ammo": v.performance.main_gun_ammo,
+            "driver_nv_resolution": v.performance.driver_nv_resolution,
+            "has_smoke_grenades": v.performance.has_smoke_grenades,
+            "has_ess": v.performance.has_ess,
+            "has_laser_rangefinder": v.performance.has_laser_rangefinder,
         },
         "imageUrl": v.image_url,
         "source": v.source,
@@ -743,6 +1028,8 @@ def vehicle_data_to_dict(v: VehicleData) -> dict[str, Any]:
         result["releaseDate"] = v.release_date
     if _is_ghost_vehicle(v.id):
         result["ghost"] = True
+    if v.economy:
+        result["economy"] = v.economy
     return result
 
 
@@ -888,6 +1175,11 @@ def fetch_aircraft_data(vehicle_id: str, copy_images: bool = True) -> dict[str, 
         result['releaseDate'] = release_date
     if _is_ghost_vehicle(vehicle_id):
         result['ghost'] = True
+    
+    # Add economy data
+    economy = parse_economy_data(vehicle_id)
+    if economy:
+        result['economy'] = economy
     
     return result
 def fetch_all_aircraft(copy_images: bool = True) -> list[dict[str, Any]]:
@@ -1064,6 +1356,11 @@ def fetch_ship_data(vehicle_id: str, copy_images: bool = True) -> dict[str, Any]
     if _is_ghost_vehicle(vehicle_id):
         result['ghost'] = True
 
+    # Add economy data
+    economy = parse_economy_data(vehicle_id)
+    if economy:
+        result['economy'] = economy
+
     return result
 
 
@@ -1148,6 +1445,27 @@ def save_performance_cache(vehicles: list[VehicleData], output_path: Path):
             "commander_thermal_diagonal": v.performance.commander_thermal_diagonal,
             "stabilizer_value": v.performance.stabilizer_value,
             "elevation_range_value": v.performance.elevation_range_value,
+            # Extended fields
+            "engine_manufacturer": v.performance.engine_manufacturer,
+            "engine_model": v.performance.engine_model,
+            "engine_type": v.performance.engine_type,
+            "engine_max_rpm": v.performance.engine_max_rpm,
+            "transmission_manufacturer": v.performance.transmission_manufacturer,
+            "transmission_model": v.performance.transmission_model,
+            "transmission_type": v.performance.transmission_type,
+            "forward_gears": v.performance.forward_gears,
+            "reverse_gears": v.performance.reverse_gears,
+            "forward_gear_speeds": v.performance.forward_gear_speeds,
+            "reverse_gear_speeds": v.performance.reverse_gear_speeds,
+            "steer_type": v.performance.steer_type,
+            "empty_weight": v.performance.empty_weight,
+            "track_width": v.performance.track_width,
+            "secondary_weapons": v.performance.secondary_weapons,
+            "main_gun_ammo": v.performance.main_gun_ammo,
+            "driver_nv_resolution": v.performance.driver_nv_resolution,
+            "has_smoke_grenades": v.performance.has_smoke_grenades,
+            "has_ess": v.performance.has_ess,
+            "has_laser_rangefinder": v.performance.has_laser_rangefinder,
         }
         for v in vehicles
     }

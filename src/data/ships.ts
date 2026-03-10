@@ -1,4 +1,4 @@
-import type { ShipVehicle, ShipType, VehicleStats, GameMode, StatsMonthRange } from '../types';
+import type { ShipVehicle, ShipType, VehicleStats, GameMode, StatsMonthRange, EconomyData } from '../types';
 import { getDefaultStatsMonthRange, getMonthRangeCacheKey } from '../types';
 import { StatSharkEntry, cleanName, buildStatsMapByMonthRange, convertToVehicleStats } from './base';
 import { initStatsMonthService, isServiceInitialized } from '../services/statsMonthService';
@@ -16,6 +16,7 @@ interface ShipEntry {
   unreleased?: boolean;
   releaseDate?: string;
   ghost?: boolean;
+  economy?: EconomyData;
 }
 
 // Cache for loaded raw data
@@ -114,6 +115,7 @@ function mergeShipsData(stats: StatSharkEntry[], ships: ShipEntry[], range?: Sta
       unreleased: shipEntry.unreleased ?? false,
       releaseDate: shipEntry.releaseDate,
       ghost: shipEntry.ghost ?? false,
+      economy: shipEntry.economy,
     };
 
     shipsList.push(shipVehicle);

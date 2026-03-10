@@ -11,7 +11,7 @@ import {
   ToggleButton,
   Stack,
 } from '@mui/material';
-import { ArrowBack, Speed, ExpandLess, SyncAlt, GpsFixed, Visibility, FastForward, FastRewind, RotateRight, OpenInNew, School } from '@mui/icons-material';
+import { ArrowBack, Speed, SwapVert, SyncAlt, GpsFixed, CenterFocusStrong, FastForward, FastRewind, ThreeSixty, OpenInNew, School } from '@mui/icons-material';
 import Navbar from '../components/Navbar';
 import DistributionChart from '../components/DistributionChart';
 import StabilizerScatterChart from '../components/StabilizerScatterChart';
@@ -19,6 +19,10 @@ import { BRGridSelector } from '../components/VehicleFilter';
 import GameModeSelector from '../components/GameModeSelector';
 import MonthRangeSelector from '../components/MonthSelector';
 import { StatItem, ReloadTimeStatItem, PenetrationStatItem } from '../components/stats';
+import EconomySection from '../components/EconomySection';
+import MobilitySection from '../components/MobilitySection';
+import ArmamentsSection from '../components/ArmamentsSection';
+import OpticsSection from '../components/OpticsSection';
 
 import { loadVehicles, getVehicleStatsByMode } from '../data/vehicles';
 import { VEHICLE_TYPE_LABELS, BATTLE_RATINGS, ECONOMIC_TYPE_GRADIENTS } from '../types';
@@ -410,7 +414,7 @@ export default function VehicleDetailPage() {
                 label="倒退极速"
               />
               <StatItem
-                icon={RotateRight}
+                icon={ThreeSixty}
                 value={vehicle.performance.traverseSpeed > 0 ? vehicle.performance.traverseSpeed.toFixed(1) : '-'}
                 label="转向速度"
               />
@@ -425,7 +429,7 @@ export default function VehicleDetailPage() {
                 onNavigate={(url) => navigate(url)}
               />
               <StatItem
-                icon={ExpandLess}
+                icon={SwapVert}
                 value={vehicle.performance.elevationRange[1] > vehicle.performance.elevationRange[0]
                   ? `${vehicle.performance.elevationRange[0].toFixed(0)}°~${vehicle.performance.elevationRange[1].toFixed(0)}°`
                   : '-'}
@@ -448,14 +452,14 @@ export default function VehicleDetailPage() {
                 label="稳定器"
               />
               <StatItem
-                icon={Visibility}
+                icon={CenterFocusStrong}
                 value={vehicle.performance.gunnerThermalResolution[0] > 0
                   ? `${vehicle.performance.gunnerThermalResolution[0]}×${vehicle.performance.gunnerThermalResolution[1]}`
                   : '-'}
                 label="炮手热成像"
               />
               <StatItem
-                icon={Visibility}
+                icon={CenterFocusStrong}
                 value={vehicle.performance.commanderThermalResolution[0] > 0
                   ? `${vehicle.performance.commanderThermalResolution[0]}×${vehicle.performance.commanderThermalResolution[1]}`
                   : '-'}
@@ -472,6 +476,26 @@ export default function VehicleDetailPage() {
             </Box>
           </Box>
         </Paper>
+
+        {/* Economy Data Section */}
+        {vehicle.economy && (
+          <Box sx={{ mb: 3 }}>
+            <EconomySection economy={vehicle.economy} gameMode={gameMode} />
+          </Box>
+        )}
+
+        {/* Detailed Performance Sections - 3 columns on large screens */}
+        <Grid container spacing={2} sx={{ mb: 3 }}>
+          <Grid item xs={12} md={4}>
+            <MobilitySection performance={vehicle.performance} />
+          </Grid>
+          <Grid item xs={12} md={4}>
+            <ArmamentsSection performance={vehicle.performance} />
+          </Grid>
+          <Grid item xs={12} md={4}>
+            <OpticsSection performance={vehicle.performance} />
+          </Grid>
+        </Grid>
 
         {/* Comparison Charts */}
         <Typography variant="h5" sx={{ color: '#171717', fontWeight: 600, mb: 2 }}>

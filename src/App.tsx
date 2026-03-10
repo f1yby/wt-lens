@@ -8,6 +8,7 @@ import { Box, CircularProgress } from '@mui/material';
 const HomePage = lazy(() => import('./pages/HomePage'));
 const VehicleDetailPage = lazy(() => import('./pages/VehicleDetailPage'));
 const LanzOdermattPage = lazy(() => import('./pages/LanzOdermattPage'));
+const DeMarrePage = lazy(() => import('./pages/DeMarrePage'));
 const AircraftPage = lazy(() => import('./pages/AircraftPage'));
 const AircraftDetailPage = lazy(() => import('./pages/AircraftDetailPage'));
 const HelicopterPage = lazy(() => import('./pages/HelicopterPage'));
@@ -73,6 +74,7 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/vehicle/:id" element={<VehicleDetailPage />} />
             <Route path="/lo-calculator" element={<LanzOdermattPage />} />
+            <Route path="/demarre-calculator" element={<DeMarrePage />} />
             <Route path="/aircraft" element={<AircraftPage />} />
             <Route path="/aircraft/:id" element={<AircraftDetailPage />} />
             <Route path="/helicopter" element={<HelicopterPage />} />
