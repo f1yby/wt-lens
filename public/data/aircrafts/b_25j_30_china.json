@@ -1,0 +1,31 @@
+{
+  "id": "b_25j_30_china",
+  "economy": {
+    "researchCost": 18000,
+    "purchaseCost": 47000,
+    "crewTraining": 13000,
+    "expertTraining": 47000,
+    "aceTrainingGE": 400,
+    "aceTrainingRP": 280000,
+    "repairCost": {
+      "arcade": [
+        941,
+        1343
+      ],
+      "realistic": [
+        2015,
+        2784
+      ],
+      "simulator": [
+        3698,
+        5108
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.69,
+      "realistic": 1.55,
+      "simulator": 2.78
+    },
+    "expMultiplier": 1.36
+  }
+}

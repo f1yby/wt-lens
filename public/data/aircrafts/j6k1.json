@@ -1,0 +1,33 @@
+{
+  "id": "j6k1",
+  "economy": {
+    "researchCost": 71000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 6090,
+    "crewTraining": 10000,
+    "expertTraining": 340000,
+    "aceTrainingGE": 1200,
+    "aceTrainingRP": 1140000,
+    "repairCost": {
+      "arcade": [
+        2072,
+        2072
+      ],
+      "realistic": [
+        4864,
+        4864
+      ],
+      "simulator": [
+        7615,
+        7615
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.37,
+      "realistic": 4.76,
+      "simulator": 10.57
+    },
+    "expMultiplier": 1.78,
+    "freeRepairs": 30
+  }
+}

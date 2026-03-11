@@ -1,0 +1,93 @@
+{
+  "id": "sw_landsverk_ush_204_gk",
+  "performance": {
+    "horsepower": 90.0,
+    "weight": 4.8,
+    "power_to_weight": 18.75,
+    "max_reverse_speed": 10.0,
+    "reload_time": 7.0,
+    "penetration": null,
+    "max_speed": 80.1,
+    "crew_count": 5,
+    "elevation_speed": 60.0,
+    "traverse_speed": 40.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -10.0,
+      75.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 85.0,
+    "mainGun": null,
+    "ammunitions": null,
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 3000.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 6,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      12.0,
+      18.0,
+      20.6,
+      26.2,
+      41.2,
+      80.1
+    ],
+    "reverse_gear_speeds": [
+      9.0,
+      10.0
+    ],
+    "steer_type": null,
+    "empty_weight": 4.65,
+    "track_width": 0.4,
+    "secondary_weapons": null,
+    "main_gun_ammo": 400,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 54000,
+    "purchaseCost": 185000,
+    "crewTraining": 52000,
+    "expertTraining": 185000,
+    "aceTrainingGE": 710,
+    "aceTrainingRP": 480000,
+    "repairCost": {
+      "arcade": [
+        3494,
+        4531
+      ],
+      "realistic": [
+        2817,
+        3654
+      ],
+      "simulator": [
+        4390,
+        5695
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.25,
+      "realistic": 1.53,
+      "simulator": 2.14
+    },
+    "expMultiplier": 1.66
+  }
+}

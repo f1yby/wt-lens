@@ -1,0 +1,96 @@
+{
+  "id": "il_m163_vulcan",
+  "performance": {
+    "horsepower": 212.0,
+    "weight": 11.2,
+    "power_to_weight": 18.93,
+    "max_reverse_speed": 14.8,
+    "reload_time": 20.0,
+    "penetration": null,
+    "max_speed": 64.3,
+    "crew_count": 5,
+    "elevation_speed": 60.0,
+    "traverse_speed": 75.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -5.0,
+      80.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 85.0,
+    "mainGun": null,
+    "ammunitions": null,
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2800.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 6,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      8.4,
+      16.9,
+      22.4,
+      33.3,
+      43.9,
+      64.3
+    ],
+    "reverse_gear_speeds": [
+      7.4,
+      14.8
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 10.9,
+    "track_width": null,
+    "secondary_weapons": null,
+    "main_gun_ammo": 2200,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 82000,
+    "purchaseCost": 240000,
+    "crewTraining": 68000,
+    "expertTraining": 240000,
+    "aceTrainingGE": 990,
+    "aceTrainingRP": 620000,
+    "repairCost": {
+      "arcade": [
+        4003,
+        5145
+      ],
+      "realistic": [
+        3633,
+        4670
+      ],
+      "simulator": [
+        4873,
+        6264
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.36,
+      "realistic": 1.71,
+      "simulator": 2.29
+    },
+    "expMultiplier": 1.84
+  }
+}

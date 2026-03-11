@@ -1,0 +1,27 @@
+{
+  "id": "us_cruiser_worcester_class_roanoke",
+  "economy": {
+    "researchCost": 90000,
+    "purchaseCost": 280000,
+    "crewTraining": 80000,
+    "expertTraining": 280000,
+    "aceTrainingGE": 1400,
+    "aceTrainingRP": 620000,
+    "repairCost": {
+      "arcade": [
+        12660,
+        16421
+      ],
+      "realistic": [
+        12430,
+        16122
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 4.5,
+      "realistic": 6.0,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.84
+  }
+}

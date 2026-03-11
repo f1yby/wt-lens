@@ -1,0 +1,31 @@
+{
+  "id": "so_4050_vautour_2b",
+  "economy": {
+    "researchCost": 150000,
+    "purchaseCost": 420000,
+    "crewTraining": 120000,
+    "expertTraining": 420000,
+    "aceTrainingGE": 2200,
+    "aceTrainingRP": 890000,
+    "repairCost": {
+      "arcade": [
+        2869,
+        3820
+      ],
+      "realistic": [
+        10922,
+        14543
+      ],
+      "simulator": [
+        15936,
+        21220
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.02,
+      "realistic": 2.59,
+      "simulator": 6.0
+    },
+    "expMultiplier": 2.14
+  }
+}

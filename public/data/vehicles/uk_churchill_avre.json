@@ -1,0 +1,121 @@
+{
+  "id": "uk_churchill_avre",
+  "performance": {
+    "horsepower": 355.0,
+    "weight": 39.0,
+    "power_to_weight": 9.1,
+    "max_reverse_speed": 2.5,
+    "reload_time": 20.0,
+    "penetration": null,
+    "max_speed": 28.0,
+    "crew_count": 5,
+    "elevation_speed": 10.0,
+    "traverse_speed": 24.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -3.0,
+      15.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 18.0,
+    "mainGun": {
+      "name": "230mm_petard_spigot_mortar",
+      "caliber": 230.6,
+      "reloadTime": 20.0,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 26.0,
+        "expert": 23.0,
+        "ace": 20.0
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "no_1_demolition_bomb",
+        "localizedName": "No.1 Demolition Bomb",
+        "type": "rocket_tank",
+        "caliber": 230.6,
+        "mass": 18.14,
+        "muzzleVelocity": 50.0
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2550.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 4,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      3.2,
+      8.7,
+      13.3,
+      28.0
+    ],
+    "reverse_gear_speeds": [
+      2.5
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 38.32,
+    "track_width": 0.6,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_92mm_BESA",
+        "caliber": 7.9,
+        "ammo": 6975,
+        "reloadTime": 8.0,
+        "rateOfFire": 600,
+        "bulletType": "ap_i_ball"
+      }
+    ],
+    "main_gun_ammo": 16,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 9200,
+    "purchaseCost": 0,
+    "purchaseCostGold": 850,
+    "crewTraining": 3400,
+    "expertTraining": 23000,
+    "aceTrainingGE": 160,
+    "aceTrainingRP": 380000,
+    "repairCost": {
+      "arcade": [
+        566,
+        566
+      ],
+      "realistic": [
+        645,
+        645
+      ],
+      "simulator": [
+        770,
+        770
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.76,
+      "realistic": 1.11,
+      "simulator": 1.3
+    },
+    "expMultiplier": 1.18,
+    "freeRepairs": 30
+  }
+}

@@ -1,0 +1,169 @@
+{
+  "id": "sw_strv_74",
+  "performance": {
+    "horsepower": 340.0,
+    "weight": 26.0,
+    "power_to_weight": 13.08,
+    "max_reverse_speed": 4.9,
+    "reload_time": 6.67,
+    "penetration": 158.3,
+    "max_speed": 44.7,
+    "crew_count": 5,
+    "elevation_speed": 8.0,
+    "traverse_speed": 18.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -15.0,
+      15.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 30.0,
+    "mainGun": {
+      "name": "75mm_kan_strv_74",
+      "caliber": 75.0,
+      "reloadTime": 6.67,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 8.67,
+        "expert": 7.67,
+        "ace": 6.67
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "75mm_slpgr_m43",
+        "localizedName": "slpgr m/43",
+        "type": "apcbc_tank",
+        "caliber": 75.0,
+        "mass": 6.0,
+        "muzzleVelocity": 925.0,
+        "deMarre": {
+          "fullCaliber": 75.0,
+          "isApcbc": true,
+          "explosiveMass": 0.11,
+          "Cx": 0.4
+        },
+        "penetration0m": 158.3,
+        "explosiveMassKg": 0.11,
+        "explosiveType": "tnt",
+        "tntEquivalent": 0.11
+      },
+      {
+        "name": "75mm_sgr_m38",
+        "localizedName": "sgr m/38",
+        "type": "he_frag_tank",
+        "caliber": 75.0,
+        "mass": 6.43,
+        "muzzleVelocity": 840.0,
+        "explosiveMassKg": 0.69,
+        "explosiveType": "tnt",
+        "tntEquivalent": 0.69
+      },
+      {
+        "name": "75mm_slpprj_m49",
+        "localizedName": "7,5 cm slpprj m/49",
+        "type": "apds_early_tank",
+        "caliber": 50.0,
+        "mass": 2.6,
+        "muzzleVelocity": 1160.0,
+        "deMarre": {
+          "fullCaliber": 75.0,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "isApcr": true,
+          "coreCaliber": 50.0,
+          "coreMass": 1.1,
+          "Cx": 0.2576
+        },
+        "penetration0m": 115.3
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2300.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 6,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      6.2,
+      11.6,
+      18.8,
+      26.1,
+      34.5,
+      44.7
+    ],
+    "reverse_gear_speeds": [
+      4.9
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 25.5,
+    "track_width": 0.25,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "8mm_Ksp_m36",
+        "caliber": 8.0,
+        "ammo": 4000,
+        "reloadTime": 8.0,
+        "rateOfFire": 648,
+        "bulletType": "ap_i_t_ball"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "8mm_Ksp_m36",
+        "caliber": 8.0,
+        "ammo": 2000,
+        "reloadTime": 8.0,
+        "rateOfFire": 648,
+        "bulletType": "ap_i_t_ball"
+      }
+    ],
+    "main_gun_ammo": 40,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 63000,
+    "purchaseCost": 200000,
+    "crewTraining": 57000,
+    "expertTraining": 200000,
+    "aceTrainingGE": 800,
+    "aceTrainingRP": 520000,
+    "repairCost": {
+      "arcade": [
+        2376,
+        3414
+      ],
+      "realistic": [
+        2953,
+        4243
+      ],
+      "simulator": [
+        3640,
+        5230
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.21,
+      "realistic": 1.57,
+      "simulator": 2.28
+    },
+    "expMultiplier": 1.72
+  }
+}

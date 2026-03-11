@@ -1,0 +1,33 @@
+{
+  "id": "a6m2_zero_usa",
+  "economy": {
+    "researchCost": 18000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 1300,
+    "crewTraining": 10000,
+    "expertTraining": 67000,
+    "aceTrainingGE": 400,
+    "aceTrainingRP": 570000,
+    "repairCost": {
+      "arcade": [
+        965,
+        965
+      ],
+      "realistic": [
+        5548,
+        5548
+      ],
+      "simulator": [
+        1721,
+        1721
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.2,
+      "realistic": 4.41,
+      "simulator": 5.44
+    },
+    "expMultiplier": 1.36,
+    "freeRepairs": 30
+  }
+}

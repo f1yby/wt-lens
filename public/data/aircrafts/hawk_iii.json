@@ -1,0 +1,33 @@
+{
+  "id": "hawk_iii",
+  "economy": {
+    "researchCost": 2900,
+    "purchaseCost": 0,
+    "purchaseCostGold": 250,
+    "crewTraining": 150,
+    "expertTraining": 1000,
+    "aceTrainingGE": 20,
+    "aceTrainingRP": 145000,
+    "repairCost": {
+      "arcade": [
+        300,
+        300
+      ],
+      "realistic": [
+        96,
+        96
+      ],
+      "simulator": [
+        183,
+        183
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.3,
+      "realistic": 0.46,
+      "simulator": 1.11
+    },
+    "expMultiplier": 0.75,
+    "freeRepairs": 30
+  }
+}

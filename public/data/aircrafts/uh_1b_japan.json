@@ -1,0 +1,30 @@
+{
+  "id": "uh_1b_japan",
+  "economy": {
+    "purchaseCost": 390000,
+    "crewTraining": 110000,
+    "expertTraining": 390000,
+    "aceTrainingGE": 1700,
+    "aceTrainingRP": 720000,
+    "repairCost": {
+      "arcade": [
+        9562,
+        11983
+      ],
+      "realistic": [
+        2588,
+        3243
+      ],
+      "simulator": [
+        4364,
+        5469
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.0,
+      "realistic": 3.0,
+      "simulator": 4.3
+    },
+    "expMultiplier": 1.96
+  }
+}

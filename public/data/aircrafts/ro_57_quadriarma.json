@@ -1,0 +1,33 @@
+{
+  "id": "ro_57_quadriarma",
+  "economy": {
+    "researchCost": 11000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 1000,
+    "crewTraining": 4800,
+    "expertTraining": 32000,
+    "aceTrainingGE": 250,
+    "aceTrainingRP": 440000,
+    "repairCost": {
+      "arcade": [
+        736,
+        736
+      ],
+      "realistic": [
+        3185,
+        3185
+      ],
+      "simulator": [
+        1988,
+        1988
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.02,
+      "realistic": 3.52,
+      "simulator": 5.45
+    },
+    "expMultiplier": 1.24,
+    "freeRepairs": 30
+  }
+}

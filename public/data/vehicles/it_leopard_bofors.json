@@ -1,0 +1,97 @@
+{
+  "id": "it_leopard_bofors",
+  "performance": {
+    "horsepower": 830.0,
+    "weight": 35.5,
+    "power_to_weight": 23.38,
+    "max_reverse_speed": 25.1,
+    "reload_time": 0.5,
+    "penetration": null,
+    "max_speed": 65.2,
+    "crew_count": 5,
+    "elevation_speed": 45.0,
+    "traverse_speed": 85.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -5.0,
+      90.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 95.0,
+    "mainGun": null,
+    "ammunitions": null,
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2200.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 8,
+    "reverse_gears": 4,
+    "forward_gear_speeds": [
+      7.0,
+      14.0,
+      18.0,
+      25.1,
+      30.5,
+      39.0,
+      48.8,
+      65.2
+    ],
+    "reverse_gear_speeds": [
+      7.0,
+      14.0,
+      18.0,
+      25.1
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 35.0,
+    "track_width": 0.55,
+    "secondary_weapons": null,
+    "main_gun_ammo": 228,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 46000,
+    "purchaseCost": 155000,
+    "crewTraining": 45000,
+    "expertTraining": 155000,
+    "aceTrainingGE": 630,
+    "aceTrainingRP": 440000,
+    "repairCost": {
+      "arcade": [
+        2913,
+        3744
+      ],
+      "realistic": [
+        2314,
+        2974
+      ],
+      "simulator": [
+        3511,
+        4513
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.12,
+      "realistic": 1.4,
+      "simulator": 2.0
+    },
+    "expMultiplier": 1.6
+  }
+}

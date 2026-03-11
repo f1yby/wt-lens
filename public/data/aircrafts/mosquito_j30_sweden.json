@@ -1,0 +1,33 @@
+{
+  "id": "mosquito_j30_sweden",
+  "economy": {
+    "researchCost": 33000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 1600,
+    "crewTraining": 10000,
+    "expertTraining": 165000,
+    "aceTrainingGE": 590,
+    "aceTrainingRP": 710000,
+    "repairCost": {
+      "arcade": [
+        695,
+        695
+      ],
+      "realistic": [
+        1635,
+        1635
+      ],
+      "simulator": [
+        2332,
+        2332
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.35,
+      "realistic": 3.31,
+      "simulator": 6.91
+    },
+    "expMultiplier": 1.48,
+    "freeRepairs": 30
+  }
+}

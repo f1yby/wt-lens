@@ -1,0 +1,33 @@
+{
+  "id": "ki_61_1a_hei_ep",
+  "economy": {
+    "researchCost": 46000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 2980,
+    "crewTraining": 10000,
+    "expertTraining": 250000,
+    "aceTrainingGE": 820,
+    "aceTrainingRP": 870000,
+    "repairCost": {
+      "arcade": [
+        1395,
+        1395
+      ],
+      "realistic": [
+        5128,
+        5128
+      ],
+      "simulator": [
+        3869,
+        3869
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.7,
+      "realistic": 4.65,
+      "simulator": 8.36
+    },
+    "expMultiplier": 1.6,
+    "freeRepairs": 30
+  }
+}

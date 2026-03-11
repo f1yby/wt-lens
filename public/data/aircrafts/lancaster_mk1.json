@@ -1,0 +1,31 @@
+{
+  "id": "lancaster_mk1",
+  "economy": {
+    "researchCost": 46000,
+    "purchaseCost": 155000,
+    "crewTraining": 45000,
+    "expertTraining": 155000,
+    "aceTrainingGE": 820,
+    "aceTrainingRP": 440000,
+    "repairCost": {
+      "arcade": [
+        1961,
+        2739
+      ],
+      "realistic": [
+        5429,
+        7347
+      ],
+      "simulator": [
+        9980,
+        13505
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.01,
+      "realistic": 1.99,
+      "simulator": 4.57
+    },
+    "expMultiplier": 1.6
+  }
+}

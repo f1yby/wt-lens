@@ -1,0 +1,257 @@
+{
+  "id": "it_b1_centauro",
+  "performance": {
+    "horsepower": 520.0,
+    "weight": 27.0,
+    "power_to_weight": 19.26,
+    "max_reverse_speed": 22.1,
+    "reload_time": 6.67,
+    "penetration": 337.9,
+    "max_speed": 110.0,
+    "crew_count": 5,
+    "elevation_speed": 8.0,
+    "traverse_speed": 22.8,
+    "has_stabilizer": true,
+    "stabilizer_type": "both",
+    "elevation_range": [
+      -6.0,
+      16.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": [
+      500,
+      300
+    ],
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": 583.1,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 22.0,
+    "mainGun": {
+      "name": "105mm_OTO_Melara_ROMOR",
+      "caliber": 105.0,
+      "reloadTime": 6.67,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 8.67,
+        "expert": 7.67,
+        "ace": 6.67
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "105mm_m456",
+        "localizedName": "M456",
+        "type": "heat_fs_tank",
+        "caliber": 105.0,
+        "mass": 10.5,
+        "muzzleVelocity": 1173.5,
+        "penetration0m": 400.0,
+        "explosiveMassKg": 0.97,
+        "explosiveType": "comp_b",
+        "tntEquivalent": 1.232
+      },
+      {
+        "name": "105mm_m393a2",
+        "localizedName": "M393A2",
+        "type": "hesh_tank",
+        "caliber": 105.0,
+        "mass": 11.2,
+        "muzzleVelocity": 731.5,
+        "penetration0m": 127.0,
+        "explosiveMassKg": 2.9937,
+        "explosiveType": "comp_a",
+        "tntEquivalent": 3.772
+      },
+      {
+        "name": "105mm_m735",
+        "localizedName": "M735",
+        "type": "apds_fs_tungsten_l10_l15_tank",
+        "caliber": 31.8,
+        "mass": 3.719,
+        "muzzleVelocity": 1501.1,
+        "armorPowerTable": [
+          {
+            "penetration": 292.4,
+            "distance": 10.0
+          },
+          {
+            "penetration": 290.6,
+            "distance": 100.0
+          },
+          {
+            "penetration": 284.0,
+            "distance": 500.0
+          },
+          {
+            "penetration": 275.0,
+            "distance": 1000.0
+          },
+          {
+            "penetration": 265.9,
+            "distance": 1500.0
+          },
+          {
+            "penetration": 256.5,
+            "distance": 2000.0
+          },
+          {
+            "penetration": 246.7,
+            "distance": 2500.0
+          },
+          {
+            "penetration": 236.7,
+            "distance": 3000.0
+          },
+          {
+            "penetration": 215.5,
+            "distance": 4000.0
+          },
+          {
+            "penetration": 192.7,
+            "distance": 5000.0
+          },
+          {
+            "penetration": 50.0,
+            "distance": 10000.0
+          },
+          {
+            "penetration": 0.0,
+            "distance": 20000.0
+          }
+        ],
+        "penetration0m": 292.4
+      },
+      {
+        "name": "105mm_m416",
+        "localizedName": "M416",
+        "type": "smoke_tank",
+        "caliber": 105.0,
+        "mass": 11.6,
+        "muzzleVelocity": 731.5,
+        "explosiveMassKg": 0.05,
+        "explosiveType": "smoke_composition",
+        "tntEquivalent": 0.05
+      },
+      {
+        "name": "105mm_dm23",
+        "localizedName": "DM23",
+        "type": "apds_fs_tungsten_l10_l15_tank",
+        "caliber": 33.0,
+        "mass": 4.2,
+        "muzzleVelocity": 1455.0,
+        "lanzOdermatt": {
+          "workingLength": 327.0,
+          "density": 17500.0,
+          "material": "tungsten",
+          "Cx": 0.2676
+        },
+        "penetration0m": 337.9,
+        "penetrationData": {
+          "at0m": {
+            "angle0": 337.9,
+            "angle30": 292.6,
+            "angle60": 169.0
+          }
+        }
+      }
+    ],
+    "penetrationData": {
+      "at0m": {
+        "angle0": 337.9,
+        "angle30": 292.6,
+        "angle60": 169.0
+      }
+    },
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2400.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 10,
+    "reverse_gears": 4,
+    "forward_gear_speeds": [
+      12.6,
+      15.7,
+      16.2,
+      22.1,
+      28.4,
+      35.5,
+      47.5,
+      59.5,
+      80.3,
+      110.0
+    ],
+    "reverse_gear_speeds": [
+      12.7,
+      16.2,
+      17.3,
+      22.1
+    ],
+    "steer_type": null,
+    "empty_weight": 24.45,
+    "track_width": 0.4,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_Beretta_MG42_59",
+        "caliber": 7.6,
+        "ammo": 4600,
+        "reloadTime": 8.0,
+        "rateOfFire": 800,
+        "bulletType": "ap_ball"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "7_62mm_Beretta_MG42_59",
+        "caliber": 7.6,
+        "ammo": 2000,
+        "reloadTime": 8.0,
+        "rateOfFire": 800,
+        "bulletType": "ap_ball"
+      }
+    ],
+    "main_gun_ammo": 38,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": true
+  },
+  "economy": {
+    "researchCost": 190000,
+    "purchaseCost": 520000,
+    "crewTraining": 150000,
+    "expertTraining": 520000,
+    "aceTrainingGE": 2100,
+    "aceTrainingRP": 950000,
+    "repairCost": {
+      "arcade": [
+        3169,
+        5362
+      ],
+      "realistic": [
+        3316,
+        5610
+      ],
+      "simulator": [
+        3841,
+        6500
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.3,
+      "realistic": 1.65,
+      "simulator": 2.1
+    },
+    "expMultiplier": 2.2
+  }
+}

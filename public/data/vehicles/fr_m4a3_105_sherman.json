@@ -1,0 +1,155 @@
+{
+  "id": "fr_m4a3_105_sherman",
+  "performance": {
+    "horsepower": 500.0,
+    "weight": 31.7,
+    "power_to_weight": 15.77,
+    "max_reverse_speed": 5.4,
+    "reload_time": 10.0,
+    "penetration": 130.0,
+    "max_speed": 41.8,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 6.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -10.0,
+      35.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 45.0,
+    "mainGun": {
+      "name": "105mm_M4",
+      "caliber": 105.0,
+      "reloadTime": 10.0,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 13.0,
+        "expert": 11.5,
+        "ace": 10.0
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "105mm_m1",
+        "localizedName": "M1 shell",
+        "type": "he_frag_tank",
+        "caliber": 105.0,
+        "mass": 14.85,
+        "muzzleVelocity": 472.0,
+        "explosiveMassKg": 2.18,
+        "explosiveType": "tnt",
+        "tntEquivalent": 2.18
+      },
+      {
+        "name": "105mm_m67",
+        "localizedName": "M67 shot",
+        "type": "heat_tank",
+        "caliber": 105.0,
+        "mass": 13.14,
+        "muzzleVelocity": 381.0,
+        "penetration0m": 130.0,
+        "explosiveMassKg": 1.33,
+        "explosiveType": "pentolite",
+        "tntEquivalent": 1.676
+      },
+      {
+        "name": "105mm_m84",
+        "localizedName": "M84",
+        "type": "smoke_tank",
+        "caliber": 105.0,
+        "mass": 14.9,
+        "muzzleVelocity": 457.0,
+        "explosiveMassKg": 0.05,
+        "explosiveType": "smoke_composition",
+        "tntEquivalent": 0.05
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2600.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 5,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      4.0,
+      9.8,
+      17.2,
+      27.5,
+      41.8
+    ],
+    "reverse_gear_speeds": [
+      5.4
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 31.4,
+    "track_width": 0.5,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_M1919A4",
+        "caliber": 7.6,
+        "ammo": 3000,
+        "reloadTime": 8.0,
+        "rateOfFire": 500,
+        "bulletType": "ap_ball"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "12_7mm_M2_HB",
+        "caliber": 12.7,
+        "ammo": 600,
+        "reloadTime": 8.0,
+        "rateOfFire": 575,
+        "bulletType": "ap_i_t_ball_M20"
+      }
+    ],
+    "main_gun_ammo": 66,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 11000,
+    "purchaseCost": 22000,
+    "crewTraining": 6300,
+    "expertTraining": 22000,
+    "aceTrainingGE": 210,
+    "aceTrainingRP": 220000,
+    "repairCost": {
+      "arcade": [
+        684,
+        924
+      ],
+      "realistic": [
+        772,
+        1043
+      ],
+      "simulator": [
+        948,
+        1281
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.46,
+      "realistic": 0.65,
+      "simulator": 0.74
+    },
+    "expMultiplier": 1.24
+  }
+}

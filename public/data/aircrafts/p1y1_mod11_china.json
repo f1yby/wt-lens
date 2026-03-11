@@ -1,0 +1,31 @@
+{
+  "id": "p1y1_mod11_china",
+  "economy": {
+    "researchCost": 9200,
+    "purchaseCost": 16000,
+    "crewTraining": 4500,
+    "expertTraining": 16000,
+    "aceTrainingGE": 180,
+    "aceTrainingRP": 190000,
+    "repairCost": {
+      "arcade": [
+        609,
+        846
+      ],
+      "realistic": [
+        1012,
+        1362
+      ],
+      "simulator": [
+        2078,
+        2797
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.41,
+      "realistic": 0.85,
+      "simulator": 1.4
+    },
+    "expMultiplier": 1.18
+  }
+}

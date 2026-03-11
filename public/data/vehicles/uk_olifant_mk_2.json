@@ -1,0 +1,188 @@
+{
+  "id": "uk_olifant_mk_2",
+  "performance": {
+    "horsepower": 1050.0,
+    "weight": 60.5,
+    "power_to_weight": 17.36,
+    "max_reverse_speed": 21.2,
+    "reload_time": 6.67,
+    "penetration": 430.2,
+    "max_speed": 57.6,
+    "crew_count": 5,
+    "elevation_speed": 10.0,
+    "traverse_speed": 22.5,
+    "has_stabilizer": true,
+    "stabilizer_type": "both",
+    "elevation_range": [
+      -10.0,
+      18.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": [
+      800,
+      600
+    ],
+    "commander_thermal_resolution": [
+      800,
+      600
+    ],
+    "gunner_thermal_diagonal": 1000.0,
+    "commander_thermal_diagonal": 1000.0,
+    "stabilizer_value": 1,
+    "elevation_range_value": 28.0,
+    "mainGun": {
+      "name": "105mm_GT_8",
+      "caliber": 105.0,
+      "reloadTime": 6.67,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 8.67,
+        "expert": 7.67,
+        "ace": 6.67
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "105mm_m456",
+        "localizedName": "M456",
+        "type": "heat_fs_tank",
+        "caliber": 105.0,
+        "mass": 10.5,
+        "muzzleVelocity": 1173.5,
+        "penetration0m": 400.0,
+        "explosiveMassKg": 0.97,
+        "explosiveType": "comp_b",
+        "tntEquivalent": 1.232
+      },
+      {
+        "name": "105mm_m111",
+        "localizedName": "M111",
+        "type": "apds_fs_tungsten_l10_l15_tank",
+        "caliber": 33.0,
+        "mass": 4.2,
+        "muzzleVelocity": 1455.0,
+        "lanzOdermatt": {
+          "workingLength": 327.0,
+          "density": 17500.0,
+          "material": "tungsten",
+          "Cx": 0.2676
+        },
+        "penetration0m": 337.9,
+        "penetrationData": {
+          "at0m": {
+            "angle0": 337.9,
+            "angle30": 292.6,
+            "angle60": 169.0
+          }
+        }
+      },
+      {
+        "name": "105mm_dm63",
+        "localizedName": "DM63",
+        "type": "apds_fs_long_l30_tank",
+        "caliber": 24.0,
+        "mass": 4.4,
+        "muzzleVelocity": 1455.0,
+        "lanzOdermatt": {
+          "workingLength": 535.0,
+          "density": 17500.0,
+          "material": "tungsten",
+          "Cx": 0.5301
+        },
+        "penetration0m": 430.2,
+        "penetrationData": {
+          "at0m": {
+            "angle0": 430.2,
+            "angle30": 372.6,
+            "angle60": 215.1
+          }
+        }
+      }
+    ],
+    "penetrationData": {
+      "at0m": {
+        "angle0": 430.2,
+        "angle30": 372.6,
+        "angle60": 215.1
+      }
+    },
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2400.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 8,
+    "reverse_gears": 3,
+    "forward_gear_speeds": [
+      5.3,
+      14.3,
+      21.0,
+      29.7,
+      38.8,
+      46.4,
+      54.0,
+      57.6
+    ],
+    "reverse_gear_speeds": [
+      5.3,
+      14.3,
+      21.2
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 59.0,
+    "track_width": 0.68,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_Browning_MG4",
+        "caliber": 7.6,
+        "ammo": 6750,
+        "reloadTime": 8.0,
+        "rateOfFire": 500,
+        "bulletType": "ap_ball"
+      }
+    ],
+    "main_gun_ammo": 64,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": true,
+    "has_ess": true,
+    "has_laser_rangefinder": true
+  },
+  "economy": {
+    "researchCost": 220000,
+    "purchaseCost": 620000,
+    "crewTraining": 175000,
+    "expertTraining": 620000,
+    "aceTrainingGE": 2100,
+    "aceTrainingRP": 1010000,
+    "repairCost": {
+      "arcade": [
+        3575,
+        6229
+      ],
+      "realistic": [
+        3647,
+        6354
+      ],
+      "simulator": [
+        4661,
+        8121
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.52,
+      "realistic": 2.02,
+      "simulator": 2.38
+    },
+    "expMultiplier": 2.26
+  }
+}

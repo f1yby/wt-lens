@@ -1,0 +1,147 @@
+{
+  "id": "fr_amx_50_surblinde",
+  "performance": {
+    "horsepower": 1000.0,
+    "weight": 70.0,
+    "power_to_weight": 14.29,
+    "max_reverse_speed": 5.9,
+    "reload_time": 5.99,
+    "penetration": 301.5,
+    "max_speed": 51.2,
+    "crew_count": 5,
+    "elevation_speed": 5.0,
+    "traverse_speed": 24.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -6.0,
+      10.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 16.0,
+    "mainGun": {
+      "name": "120mm_SA_46_Surbaisse",
+      "caliber": 120.0,
+      "reloadTime": 5.99,
+      "autoLoader": true,
+      "reloadTimes": {
+        "base": 5.99,
+        "expert": 5.99,
+        "ace": 5.99
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "120mm_obus_de_rupture",
+        "localizedName": "120 mm Obus de rupture",
+        "type": "apbc_usa_tank",
+        "caliber": 120.0,
+        "mass": 23.1,
+        "muzzleVelocity": 1067.0,
+        "deMarre": {
+          "fullCaliber": 120.0,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "Cx": 0.24
+        },
+        "penetration0m": 301.5
+      },
+      {
+        "name": "120mm_obus_explosif",
+        "localizedName": "120 mm Obus explosif",
+        "type": "he_frag_tank",
+        "caliber": 120.0,
+        "mass": 22.84,
+        "muzzleVelocity": 762.0,
+        "explosiveMassKg": 3.55,
+        "explosiveType": "comp_b",
+        "tntEquivalent": 4.508
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": true,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2800.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 5,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      5.9,
+      13.4,
+      22.7,
+      35.3,
+      51.2
+    ],
+    "reverse_gear_speeds": [
+      5.9
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 69.0,
+    "track_width": 0.9,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_5mm_MAC_31",
+        "caliber": 7.5,
+        "ammo": 3000,
+        "reloadTime": 5.0,
+        "rateOfFire": 550,
+        "bulletType": "ap_ball"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "20mm_MG151_20",
+        "caliber": 20.0,
+        "ammo": 500,
+        "reloadTime": 10.0,
+        "rateOfFire": 700,
+        "bulletType": "he_frag_i_t"
+      }
+    ],
+    "main_gun_ammo": 50,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 120000,
+    "purchaseCost": 340000,
+    "crewTraining": 98000,
+    "expertTraining": 340000,
+    "aceTrainingGE": 1300,
+    "aceTrainingRP": 780000,
+    "repairCost": {
+      "arcade": [
+        5743,
+        7243
+      ],
+      "realistic": [
+        6082,
+        7670
+      ],
+      "simulator": [
+        9678,
+        12205
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.5,
+      "realistic": 2.09,
+      "simulator": 2.46
+    },
+    "expMultiplier": 2.02
+  }
+}

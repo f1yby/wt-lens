@@ -1,0 +1,31 @@
+{
+  "id": "sagittario_2",
+  "economy": {
+    "researchCost": 150000,
+    "purchaseCost": 420000,
+    "crewTraining": 120000,
+    "expertTraining": 420000,
+    "aceTrainingGE": 2200,
+    "aceTrainingRP": 890000,
+    "repairCost": {
+      "arcade": [
+        3522,
+        4690
+      ],
+      "realistic": [
+        9505,
+        12656
+      ],
+      "simulator": [
+        13342,
+        17766
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.3,
+      "realistic": 3.8,
+      "simulator": 6.0
+    },
+    "expMultiplier": 2.14
+  }
+}

@@ -1,0 +1,181 @@
+{
+  "id": "uk_ac4_thunderbolt",
+  "performance": {
+    "horsepower": 397.0,
+    "weight": 26.42,
+    "power_to_weight": 15.03,
+    "max_reverse_speed": 9.7,
+    "reload_time": 5.88,
+    "penetration": 190.6,
+    "max_speed": 47.7,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 18.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -10.0,
+      20.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 30.0,
+    "mainGun": {
+      "name": "76mm_17pdr_QF",
+      "caliber": 76.2,
+      "reloadTime": 5.88,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 7.64,
+        "expert": 6.76,
+        "ace": 5.88
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "76mm_shot_mk6_ap",
+        "localizedName": "Shot Mk.6",
+        "type": "ap_tank",
+        "caliber": 76.2,
+        "mass": 7.71,
+        "muzzleVelocity": 883.0,
+        "deMarre": {
+          "fullCaliber": 76.2,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "Cx": 0.4
+        },
+        "penetration0m": 171.6
+      },
+      {
+        "name": "76mm_shell_mk1_he",
+        "localizedName": "Shell Mk.1",
+        "type": "he_frag_tank",
+        "caliber": 76.2,
+        "mass": 6.98,
+        "muzzleVelocity": 883.0,
+        "explosiveMassKg": 0.58,
+        "explosiveType": "tnt",
+        "tntEquivalent": 0.58
+      },
+      {
+        "name": "76mm_shot_mk4_apc",
+        "localizedName": "Shot Mk.4",
+        "type": "apc_solid_medium_caliber_tank",
+        "caliber": 76.2,
+        "mass": 7.71,
+        "muzzleVelocity": 883.0,
+        "deMarre": {
+          "fullCaliber": 76.2,
+          "isApcbc": true,
+          "explosiveMass": 0,
+          "Cx": 0.4
+        },
+        "penetration0m": 190.6
+      },
+      {
+        "name": "76mm_shot_mk8_apcbc",
+        "localizedName": "Shot Mk.8",
+        "type": "apcbc_solid_medium_caliber_tank",
+        "caliber": 76.2,
+        "mass": 7.71,
+        "muzzleVelocity": 883.0,
+        "deMarre": {
+          "fullCaliber": 76.2,
+          "isApcbc": true,
+          "explosiveMass": 0,
+          "Cx": 0.4
+        },
+        "penetration0m": 190.6
+      },
+      {
+        "name": "76mm_shell_ss_mk1",
+        "localizedName": "17pdr Shell SS Mk.1",
+        "type": "smoke_tank",
+        "caliber": 76.0,
+        "mass": 8.44,
+        "muzzleVelocity": 229.0,
+        "explosiveMassKg": 0.05,
+        "explosiveType": "smoke_composition",
+        "tntEquivalent": 0.05
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 3050.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 5,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      4.0,
+      9.3,
+      23.3,
+      29.8,
+      47.7
+    ],
+    "reverse_gear_speeds": [
+      9.7
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 25.78,
+    "track_width": 0.5,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_7mm_Vikkers",
+        "caliber": 7.7,
+        "ammo": 4250,
+        "reloadTime": 8.0,
+        "rateOfFire": 390,
+        "bulletType": "i_t_ball"
+      }
+    ],
+    "main_gun_ammo": 50,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 46000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 3410,
+    "crewTraining": 10000,
+    "expertTraining": 250000,
+    "aceTrainingGE": 630,
+    "aceTrainingRP": 870000,
+    "repairCost": {
+      "arcade": [
+        1319,
+        1319
+      ],
+      "realistic": [
+        1532,
+        1532
+      ],
+      "simulator": [
+        2031,
+        2031
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.9,
+      "realistic": 2.95,
+      "simulator": 3.51
+    },
+    "expMultiplier": 1.6,
+    "freeRepairs": 30
+  }
+}

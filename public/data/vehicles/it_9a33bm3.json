@@ -1,0 +1,106 @@
+{
+  "id": "it_9a33bm3",
+  "performance": {
+    "horsepower": 300.0,
+    "weight": 18.68,
+    "power_to_weight": 16.06,
+    "max_reverse_speed": 9.8,
+    "reload_time": null,
+    "penetration": null,
+    "max_speed": 60.0,
+    "crew_count": 5,
+    "elevation_speed": null,
+    "traverse_speed": null,
+    "has_stabilizer": null,
+    "stabilizer_type": "none",
+    "elevation_range": null,
+    "traverse_range": null,
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": null,
+    "mainGun": null,
+    "ammunitions": null,
+    "penetrationData": null,
+    "autoLoader": null,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2200.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 10,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      6.8,
+      9.8,
+      12.6,
+      18.1,
+      18.7,
+      26.9,
+      27.8,
+      40.1,
+      41.6,
+      60.0
+    ],
+    "reverse_gear_speeds": [
+      6.8,
+      9.8
+    ],
+    "steer_type": null,
+    "empty_weight": 18.0,
+    "track_width": 0.4,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "209mm_9M33A3_launcher",
+        "caliber": 209.6,
+        "ammo": 6,
+        "reloadTime": 1.0,
+        "rateOfFire": 27,
+        "bulletType": "sam_tank",
+        "maxDistance": 10300,
+        "maxSpeed": 580,
+        "guidanceType": "saclos",
+        "explosiveMass": 5.38,
+        "explosiveType": "a_ix_2"
+      }
+    ],
+    "main_gun_ammo": null,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 300000,
+    "purchaseCost": 830000,
+    "crewTraining": 240000,
+    "expertTraining": 830000,
+    "aceTrainingGE": 2100,
+    "aceTrainingRP": 1140000,
+    "repairCost": {
+      "arcade": [
+        5262,
+        6870
+      ],
+      "realistic": [
+        5208,
+        6799
+      ],
+      "simulator": [
+        5965,
+        7787
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.6,
+      "realistic": 1.98,
+      "simulator": 2.38
+    },
+    "expMultiplier": 2.38
+  }
+}

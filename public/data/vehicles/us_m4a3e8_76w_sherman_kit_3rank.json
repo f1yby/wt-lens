@@ -1,0 +1,195 @@
+{
+  "id": "us_m4a3e8_76w_sherman_kit_3rank",
+  "performance": {
+    "horsepower": 500.0,
+    "weight": 32.9,
+    "power_to_weight": 15.2,
+    "max_reverse_speed": 5.4,
+    "reload_time": 5.88,
+    "penetration": 185.5,
+    "max_speed": 42.1,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 21.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "vertical",
+    "elevation_range": [
+      -10.0,
+      25.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 35.0,
+    "mainGun": {
+      "name": "76mm_M1",
+      "caliber": 76.2,
+      "reloadTime": 5.88,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 7.64,
+        "expert": 6.76,
+        "ace": 5.88
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "76mm_m79",
+        "localizedName": "M79 shot",
+        "type": "ap_tank",
+        "caliber": 76.2,
+        "mass": 6.8,
+        "muzzleVelocity": 792.0,
+        "deMarre": {
+          "fullCaliber": 76.2,
+          "isApcbc": false,
+          "explosiveMass": 0
+        },
+        "penetration0m": 134.3
+      },
+      {
+        "name": "76mm_m42a1",
+        "localizedName": "M42A1 shell",
+        "type": "he_frag_tank",
+        "caliber": 76.2,
+        "mass": 5.84,
+        "muzzleVelocity": 823.0,
+        "explosiveMassKg": 0.39,
+        "explosiveType": "tnt",
+        "tntEquivalent": 0.39
+      },
+      {
+        "name": "76mm_m62",
+        "localizedName": "M62 shell",
+        "type": "apcbc_tank",
+        "caliber": 76.2,
+        "mass": 7.0,
+        "muzzleVelocity": 792.0,
+        "deMarre": {
+          "fullCaliber": 76.2,
+          "isApcbc": true,
+          "explosiveMass": 0.065,
+          "Cx": 0.4
+        },
+        "penetration0m": 149.2,
+        "explosiveMassKg": 0.065,
+        "explosiveType": "exp_d",
+        "tntEquivalent": 0.064
+      },
+      {
+        "name": "76mm_m93",
+        "localizedName": "M93 shot",
+        "type": "apcr_tank",
+        "caliber": 38.1,
+        "mass": 4.24,
+        "muzzleVelocity": 1036.0,
+        "deMarre": {
+          "fullCaliber": 76.2,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "isApcr": true,
+          "coreCaliber": 38.1,
+          "coreMass": 1.79,
+          "Cx": 0.28
+        },
+        "penetration0m": 185.5
+      },
+      {
+        "name": "75mm_m88",
+        "localizedName": "M88",
+        "type": "smoke_tank",
+        "caliber": 76.0,
+        "mass": 3.44,
+        "muzzleVelocity": 274.0,
+        "explosiveMassKg": 0.05,
+        "explosiveType": "smoke_composition",
+        "tntEquivalent": 0.05
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2600.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 5,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      4.1,
+      9.9,
+      17.3,
+      27.7,
+      42.1
+    ],
+    "reverse_gear_speeds": [
+      5.4
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 32.6,
+    "track_width": 0.58,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_M1919A4",
+        "caliber": 7.6,
+        "ammo": 3000,
+        "reloadTime": 8.0,
+        "rateOfFire": 500,
+        "bulletType": "ap_ball"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "12_7mm_M2_HB",
+        "caliber": 12.7,
+        "ammo": 600,
+        "reloadTime": 8.0,
+        "rateOfFire": 575,
+        "bulletType": "ap_i_t_ball_M20"
+      }
+    ],
+    "main_gun_ammo": 71,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 40000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 1750,
+    "crewTraining": 10000,
+    "expertTraining": 210000,
+    "aceTrainingGE": 550,
+    "aceTrainingRP": 790000,
+    "repairCost": {
+      "arcade": [
+        1048,
+        1048
+      ],
+      "realistic": [
+        1233,
+        1233
+      ],
+      "simulator": [
+        1548,
+        1548
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.73,
+      "realistic": 2.72,
+      "simulator": 3.25
+    },
+    "expMultiplier": 1.54,
+    "freeRepairs": 30
+  }
+}

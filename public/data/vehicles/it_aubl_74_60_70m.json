@@ -1,0 +1,171 @@
+{
+  "id": "it_aubl_74_60_70m",
+  "performance": {
+    "horsepower": 160.0,
+    "weight": 8.7,
+    "power_to_weight": 18.39,
+    "max_reverse_speed": 19.4,
+    "reload_time": 5.0,
+    "penetration": 249.3,
+    "max_speed": 100.0,
+    "crew_count": 5,
+    "elevation_speed": 10.0,
+    "traverse_speed": 30.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "both",
+    "elevation_range": [
+      -6.0,
+      27.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 33.0,
+    "mainGun": {
+      "name": "60mm_OTO_HVG",
+      "caliber": 60.0,
+      "reloadTime": 5.0,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 6.5,
+        "expert": 5.75,
+        "ace": 5.0
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "60mm_m300",
+        "localizedName": "M300",
+        "type": "apds_fs_long_tank",
+        "caliber": 17.0,
+        "mass": 0.87,
+        "muzzleVelocity": 1620.0,
+        "lanzOdermatt": {
+          "workingLength": 243.0,
+          "density": 17500.0,
+          "material": "tungsten",
+          "Cx": 0.365
+        },
+        "penetration0m": 249.3,
+        "penetrationData": {
+          "at0m": {
+            "angle0": 249.3,
+            "angle30": 215.9,
+            "angle60": 124.7
+          }
+        }
+      },
+      {
+        "name": "60mm_oto_he",
+        "localizedName": "OTO HE",
+        "type": "he_frag_tank",
+        "caliber": 60.0,
+        "mass": 3.07,
+        "muzzleVelocity": 1000.0,
+        "explosiveMassKg": 0.45,
+        "explosiveType": "hexal",
+        "tntEquivalent": 0.63
+      }
+    ],
+    "penetrationData": {
+      "at0m": {
+        "angle0": 249.3,
+        "angle30": 215.9,
+        "angle60": 124.7
+      }
+    },
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 3200.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 10,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      12.8,
+      18.0,
+      22.4,
+      31.6,
+      35.2,
+      49.5,
+      56.4,
+      71.1,
+      79.4,
+      100.0
+    ],
+    "reverse_gear_speeds": [
+      13.8,
+      19.4
+    ],
+    "steer_type": null,
+    "empty_weight": 8.4,
+    "track_width": 0.2,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_Beretta_MG42_59",
+        "caliber": 7.6,
+        "ammo": 800,
+        "reloadTime": 8.0,
+        "rateOfFire": 800,
+        "bulletType": "ap_ball"
+      },
+      {
+        "trigger": "gunner3",
+        "name": "7_62mm_FN_MAG60_40",
+        "caliber": 7.6,
+        "ammo": 1600,
+        "reloadTime": 8.0,
+        "rateOfFire": 1000,
+        "bulletType": "ap_ball"
+      }
+    ],
+    "main_gun_ammo": 38,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 120000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 8380,
+    "crewTraining": 10000,
+    "expertTraining": 550000,
+    "aceTrainingGE": 1300,
+    "aceTrainingRP": 1600000,
+    "repairCost": {
+      "arcade": [
+        2490,
+        2490
+      ],
+      "realistic": [
+        2887,
+        2887
+      ],
+      "simulator": [
+        3647,
+        3647
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.35,
+      "realistic": 3.43,
+      "simulator": 4.19
+    },
+    "expMultiplier": 2.08,
+    "freeRepairs": 30
+  }
+}

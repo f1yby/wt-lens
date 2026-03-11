@@ -1,0 +1,163 @@
+{
+  "id": "uk_a_22f_mk_7_churchill_1944",
+  "performance": {
+    "horsepower": 355.0,
+    "weight": 42.2,
+    "power_to_weight": 8.41,
+    "max_reverse_speed": 1.8,
+    "reload_time": 5.0,
+    "penetration": 103.5,
+    "max_speed": 21.7,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 24.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -12.0,
+      20.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 32.0,
+    "mainGun": {
+      "name": "75mm_QQF_MkV",
+      "caliber": 75.0,
+      "reloadTime": 5.0,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 6.5,
+        "expert": 5.75,
+        "ace": 5.0
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "75mm_m72",
+        "localizedName": "M72 shot",
+        "type": "ap_tank",
+        "caliber": 75.0,
+        "mass": 6.3,
+        "muzzleVelocity": 619.0,
+        "deMarre": {
+          "fullCaliber": 75.0,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "Cx": 0.5
+        },
+        "penetration0m": 91.0
+      },
+      {
+        "name": "75mm_m48",
+        "localizedName": "M48 shell",
+        "type": "he_frag_tank",
+        "caliber": 75.0,
+        "mass": 6.3,
+        "muzzleVelocity": 463.0,
+        "explosiveMassKg": 0.666,
+        "explosiveType": "tnt",
+        "tntEquivalent": 0.666
+      },
+      {
+        "name": "75mm_m89",
+        "localizedName": "M89",
+        "type": "smoke_tank",
+        "caliber": 75.0,
+        "mass": 3.0,
+        "muzzleVelocity": 259.0,
+        "explosiveMassKg": 0.05,
+        "explosiveType": "smoke_composition",
+        "tntEquivalent": 0.05
+      },
+      {
+        "name": "75mm_m61_solid",
+        "localizedName": "M61 shot",
+        "type": "apcbc_solid_medium_caliber_tank",
+        "caliber": 75.0,
+        "mass": 6.53,
+        "muzzleVelocity": 618.0,
+        "deMarre": {
+          "fullCaliber": 75.0,
+          "isApcbc": true,
+          "explosiveMass": 0,
+          "Cx": 0.5
+        },
+        "penetration0m": 103.5
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2200.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 4,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      2.6,
+      7.2,
+      12.9,
+      21.7
+    ],
+    "reverse_gear_speeds": [
+      1.8
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 41.7,
+    "track_width": 0.6,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_92mm_BESA",
+        "caliber": 7.9,
+        "ammo": 6525,
+        "reloadTime": 8.0,
+        "rateOfFire": 600,
+        "bulletType": "ap_i_ball"
+      }
+    ],
+    "main_gun_ammo": 84,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 33000,
+    "purchaseCost": 105000,
+    "crewTraining": 30000,
+    "expertTraining": 105000,
+    "aceTrainingGE": 470,
+    "aceTrainingRP": 360000,
+    "repairCost": {
+      "arcade": [
+        1332,
+        1898
+      ],
+      "realistic": [
+        1472,
+        2096
+      ],
+      "simulator": [
+        2020,
+        2877
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.82,
+      "realistic": 1.21,
+      "simulator": 1.36
+    },
+    "expMultiplier": 1.48
+  }
+}

@@ -1,0 +1,179 @@
+{
+  "id": "ussr_su_100p",
+  "performance": {
+    "horsepower": 400.0,
+    "weight": 21.6,
+    "power_to_weight": 18.52,
+    "max_reverse_speed": 23.1,
+    "reload_time": 7.5,
+    "penetration": 239.6,
+    "max_speed": 63.4,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 7.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -4.0,
+      37.0
+    ],
+    "traverse_range": [
+      -77.5,
+      77.5
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 41.0,
+    "mainGun": {
+      "name": "100mm_D50",
+      "caliber": 100.0,
+      "reloadTime": 7.5,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 9.75,
+        "expert": 8.62,
+        "ace": 7.5
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "100mm_br_412",
+        "localizedName": "BR-412",
+        "type": "aphe_tank",
+        "caliber": 100.0,
+        "mass": 15.88,
+        "muzzleVelocity": 895.0,
+        "deMarre": {
+          "fullCaliber": 100.0,
+          "isApcbc": false,
+          "explosiveMass": 0.065,
+          "Cx": 0.658
+        },
+        "penetration0m": 218.4,
+        "explosiveMassKg": 0.065,
+        "explosiveType": "a_ix_2",
+        "tntEquivalent": 0.091
+      },
+      {
+        "name": "100mm_of_412",
+        "localizedName": "OF-412",
+        "type": "he_frag_tank",
+        "caliber": 100.0,
+        "mass": 15.6,
+        "muzzleVelocity": 900.0,
+        "explosiveMassKg": 1.462,
+        "explosiveType": "tnt",
+        "tntEquivalent": 1.462
+      },
+      {
+        "name": "100mm_br_412b",
+        "localizedName": "BR-412B",
+        "type": "aphebc_tank",
+        "caliber": 100.0,
+        "mass": 15.88,
+        "muzzleVelocity": 895.0,
+        "deMarre": {
+          "fullCaliber": 100.0,
+          "isApcbc": false,
+          "explosiveMass": 0.065,
+          "Cx": 0.395
+        },
+        "penetration0m": 218.4,
+        "explosiveMassKg": 0.065,
+        "explosiveType": "a_ix_2",
+        "tntEquivalent": 0.091
+      },
+      {
+        "name": "100mm_br_412d",
+        "localizedName": "BR-412D",
+        "type": "apcbc_tank",
+        "caliber": 100.0,
+        "mass": 15.88,
+        "muzzleVelocity": 887.0,
+        "deMarre": {
+          "fullCaliber": 100.0,
+          "isApcbc": true,
+          "explosiveMass": 0.065,
+          "Cx": 0.395
+        },
+        "penetration0m": 239.6,
+        "explosiveMassKg": 0.065,
+        "explosiveType": "a_ix_2",
+        "tntEquivalent": 0.091
+      },
+      {
+        "name": "100mm_3d3",
+        "localizedName": "3D3",
+        "type": "smoke_tank",
+        "caliber": 100.0,
+        "mass": 15.6,
+        "muzzleVelocity": 880.0,
+        "explosiveMassKg": 0.05,
+        "explosiveType": "smoke_composition",
+        "tntEquivalent": 0.05
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2000.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 5,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      10.8,
+      23.1,
+      32.3,
+      45.2,
+      63.4
+    ],
+    "reverse_gear_speeds": [
+      10.8,
+      23.1
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 21.4,
+    "track_width": 0.65,
+    "secondary_weapons": null,
+    "main_gun_ammo": 50,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 71000,
+    "purchaseCost": 210000,
+    "crewTraining": 61000,
+    "expertTraining": 210000,
+    "aceTrainingGE": 890,
+    "aceTrainingRP": 570000,
+    "repairCost": {
+      "arcade": [
+        3895,
+        4820
+      ],
+      "realistic": [
+        4375,
+        5415
+      ],
+      "simulator": [
+        5938,
+        7349
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.27,
+      "realistic": 1.99,
+      "simulator": 2.5
+    },
+    "expMultiplier": 1.78
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "id": "f6f-5_france",
+  "economy": {
+    "researchCost": 11000,
+    "purchaseCost": 22000,
+    "crewTraining": 6300,
+    "expertTraining": 22000,
+    "aceTrainingGE": 250,
+    "aceTrainingRP": 220000,
+    "repairCost": {
+      "arcade": [
+        637,
+        824
+      ],
+      "realistic": [
+        1352,
+        1699
+      ],
+      "simulator": [
+        2056,
+        2584
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.41,
+      "realistic": 0.96,
+      "simulator": 1.98
+    },
+    "expMultiplier": 1.24
+  }
+}

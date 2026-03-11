@@ -1,0 +1,130 @@
+{
+  "id": "jp_type_95_so_ki",
+  "performance": {
+    "horsepower": 130.0,
+    "weight": 7.2,
+    "power_to_weight": 18.06,
+    "max_reverse_speed": 7.2,
+    "reload_time": 3.0,
+    "penetration": 48.1,
+    "max_speed": 49.7,
+    "crew_count": 5,
+    "elevation_speed": 25.0,
+    "traverse_speed": 40.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -10.0,
+      85.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 95.0,
+    "mainGun": {
+      "name": "20mm_Type98",
+      "caliber": 20.0,
+      "reloadTime": 3.0,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 3.9,
+        "expert": 3.45,
+        "ace": 3.0
+      },
+      "rateOfFire": 300,
+      "beltReloadTime": 3.0
+    },
+    "ammunitions": [
+      {
+        "name": "20mm_type100_he",
+        "localizedName": "Type 100 HE-T",
+        "type": "he_frag_i_t",
+        "caliber": 20.0,
+        "mass": 0.133,
+        "muzzleVelocity": 950.0,
+        "explosiveMassKg": 0.006,
+        "explosiveType": "tnt",
+        "tntEquivalent": 0.006
+      },
+      {
+        "name": "20mm_type100_ap",
+        "localizedName": "Type 100 AP-T",
+        "type": "ap_i_t",
+        "caliber": 20.0,
+        "mass": 0.155,
+        "muzzleVelocity": 928.0,
+        "deMarre": {
+          "fullCaliber": 20.0,
+          "isApcbc": false,
+          "explosiveMass": 0
+        },
+        "penetration0m": 48.1
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2100.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 6,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      4.2,
+      4.8,
+      10.2,
+      20.2,
+      37.0,
+      49.7
+    ],
+    "reverse_gear_speeds": [
+      7.2
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 7.07,
+    "track_width": 0.3,
+    "secondary_weapons": null,
+    "main_gun_ammo": 260,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 14000,
+    "purchaseCost": 32000,
+    "crewTraining": 9200,
+    "expertTraining": 32000,
+    "aceTrainingGE": 270,
+    "aceTrainingRP": 250000,
+    "repairCost": {
+      "arcade": [
+        1037,
+        1333
+      ],
+      "realistic": [
+        844,
+        1085
+      ],
+      "simulator": [
+        1322,
+        1699
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.66,
+      "realistic": 0.74,
+      "simulator": 1.01
+    },
+    "expMultiplier": 1.3
+  }
+}

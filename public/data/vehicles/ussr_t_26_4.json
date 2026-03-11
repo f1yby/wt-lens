@@ -1,0 +1,150 @@
+{
+  "id": "ussr_t_26_4",
+  "performance": {
+    "horsepower": 91.0,
+    "weight": 11.0,
+    "power_to_weight": 8.27,
+    "max_reverse_speed": 3.1,
+    "reload_time": 4.0,
+    "penetration": 37.6,
+    "max_speed": 30.0,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 16.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -5.0,
+      21.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 26.0,
+    "mainGun": {
+      "name": "76mm_KT28_for_T26",
+      "caliber": 76.2,
+      "reloadTime": 4.0,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 5.2,
+        "expert": 4.6,
+        "ace": 4.0
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "76mm_br_350a",
+        "localizedName": "BR-350A (MD-5 fuze)",
+        "type": "aphebc_tank",
+        "caliber": 76.2,
+        "mass": 6.3,
+        "muzzleVelocity": 370.0,
+        "deMarre": {
+          "fullCaliber": 76.2,
+          "isApcbc": false,
+          "explosiveMass": 0.155,
+          "Cx": 0.3551
+        },
+        "penetration0m": 37.6,
+        "explosiveMassKg": 0.155,
+        "explosiveType": "tnt",
+        "tntEquivalent": 0.155
+      },
+      {
+        "name": "76mm_of_350m",
+        "localizedName": "OF-350M",
+        "type": "he_frag_tank",
+        "caliber": 76.2,
+        "mass": 6.2,
+        "muzzleVelocity": 387.0,
+        "explosiveMassKg": 0.71,
+        "explosiveType": "tnt",
+        "tntEquivalent": 0.71
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2200.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 5,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      3.1,
+      6.9,
+      11.6,
+      18.6,
+      30.0
+    ],
+    "reverse_gear_speeds": [
+      3.1
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 10.8,
+    "track_width": 0.26,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_DT",
+        "caliber": 7.6,
+        "ammo": 1890,
+        "reloadTime": 8.0,
+        "rateOfFire": 600,
+        "bulletType": "ap_i_ball"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "7_62mm_DT",
+        "caliber": 7.6,
+        "ammo": 1890,
+        "reloadTime": 8.0,
+        "rateOfFire": 600,
+        "bulletType": "ap_i_ball"
+      }
+    ],
+    "main_gun_ammo": 50,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 2900,
+    "purchaseCost": 700,
+    "crewTraining": 200,
+    "expertTraining": 1000,
+    "aceTrainingGE": 20,
+    "aceTrainingRP": 96000,
+    "repairCost": {
+      "arcade": [
+        106,
+        136
+      ],
+      "realistic": [
+        95,
+        122
+      ],
+      "simulator": [
+        111,
+        143
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.1,
+      "realistic": 0.12,
+      "simulator": 0.16
+    },
+    "expMultiplier": 1.0
+  }
+}

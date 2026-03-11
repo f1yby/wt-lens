@@ -1,0 +1,31 @@
+{
+  "id": "super_hind_mk3",
+  "economy": {
+    "researchCost": 360000,
+    "purchaseCost": 1030000,
+    "crewTraining": 280000,
+    "expertTraining": 980000,
+    "aceTrainingGE": 2000,
+    "aceTrainingRP": 830000,
+    "repairCost": {
+      "arcade": [
+        7492,
+        12786
+      ],
+      "realistic": [
+        3443,
+        5875
+      ],
+      "simulator": [
+        4485,
+        7653
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.0,
+      "realistic": 2.32,
+      "simulator": 3.27
+    },
+    "expMultiplier": 2.08
+  }
+}

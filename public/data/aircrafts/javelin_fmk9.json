@@ -1,0 +1,31 @@
+{
+  "id": "javelin_fmk9",
+  "economy": {
+    "researchCost": 135000,
+    "purchaseCost": 380000,
+    "crewTraining": 110000,
+    "expertTraining": 380000,
+    "aceTrainingGE": 2000,
+    "aceTrainingRP": 830000,
+    "repairCost": {
+      "arcade": [
+        3360,
+        4920
+      ],
+      "realistic": [
+        9172,
+        13429
+      ],
+      "simulator": [
+        9753,
+        14280
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.28,
+      "realistic": 3.8,
+      "simulator": 6.0
+    },
+    "expMultiplier": 2.08
+  }
+}

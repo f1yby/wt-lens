@@ -1,0 +1,200 @@
+{
+  "id": "uk_centurion_mk_2",
+  "performance": {
+    "horsepower": 640.0,
+    "weight": 48.77,
+    "power_to_weight": 13.12,
+    "max_reverse_speed": 11.9,
+    "reload_time": 5.88,
+    "penetration": 190.6,
+    "max_speed": 34.7,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 20.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "both",
+    "elevation_range": [
+      -12.0,
+      20.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 32.0,
+    "mainGun": {
+      "name": "76mm_17pdr_QF",
+      "caliber": 76.2,
+      "reloadTime": 5.88,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 7.64,
+        "expert": 6.76,
+        "ace": 5.88
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "76mm_shot_mk6_ap",
+        "localizedName": "Shot Mk.6",
+        "type": "ap_tank",
+        "caliber": 76.2,
+        "mass": 7.71,
+        "muzzleVelocity": 883.0,
+        "deMarre": {
+          "fullCaliber": 76.2,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "Cx": 0.4
+        },
+        "penetration0m": 171.6
+      },
+      {
+        "name": "76mm_shell_mk1_he",
+        "localizedName": "Shell Mk.1",
+        "type": "he_frag_tank",
+        "caliber": 76.2,
+        "mass": 6.98,
+        "muzzleVelocity": 883.0,
+        "explosiveMassKg": 0.58,
+        "explosiveType": "tnt",
+        "tntEquivalent": 0.58
+      },
+      {
+        "name": "76mm_shot_mk4_apc",
+        "localizedName": "Shot Mk.4",
+        "type": "apc_solid_medium_caliber_tank",
+        "caliber": 76.2,
+        "mass": 7.71,
+        "muzzleVelocity": 883.0,
+        "deMarre": {
+          "fullCaliber": 76.2,
+          "isApcbc": true,
+          "explosiveMass": 0,
+          "Cx": 0.4
+        },
+        "penetration0m": 190.6
+      },
+      {
+        "name": "76mm_shot_mk8_apcbc",
+        "localizedName": "Shot Mk.8",
+        "type": "apcbc_solid_medium_caliber_tank",
+        "caliber": 76.2,
+        "mass": 7.71,
+        "muzzleVelocity": 883.0,
+        "deMarre": {
+          "fullCaliber": 76.2,
+          "isApcbc": true,
+          "explosiveMass": 0,
+          "Cx": 0.4
+        },
+        "penetration0m": 190.6
+      },
+      {
+        "name": "76mm_shot_sv_mk1_apds",
+        "localizedName": "Shot SV Mk.1",
+        "type": "apds_early_tank",
+        "caliber": 49.5,
+        "mass": 2.477,
+        "muzzleVelocity": 1204.0,
+        "deMarre": {
+          "fullCaliber": 76.2,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "isApcr": true,
+          "coreCaliber": 49.5,
+          "coreMass": 1.7373,
+          "Cx": 0.2576
+        },
+        "penetration0m": 134.7
+      },
+      {
+        "name": "76mm_shell_ss_mk1",
+        "localizedName": "17pdr Shell SS Mk.1",
+        "type": "smoke_tank",
+        "caliber": 76.0,
+        "mass": 8.44,
+        "muzzleVelocity": 229.0,
+        "explosiveMassKg": 0.05,
+        "explosiveType": "smoke_composition",
+        "tntEquivalent": 0.05
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2550.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 5,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      4.0,
+      10.1,
+      16.3,
+      25.8,
+      34.7
+    ],
+    "reverse_gear_speeds": [
+      2.0,
+      11.9
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 48.0,
+    "track_width": 0.68,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_92mm_BESA",
+        "caliber": 7.9,
+        "ammo": 3375,
+        "reloadTime": 8.0,
+        "rateOfFire": 600,
+        "bulletType": "ap_i_ball"
+      }
+    ],
+    "main_gun_ammo": 77,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 63000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 4880,
+    "crewTraining": 10000,
+    "expertTraining": 320000,
+    "aceTrainingGE": 800,
+    "aceTrainingRP": 1050000,
+    "repairCost": {
+      "arcade": [
+        2099,
+        2099
+      ],
+      "realistic": [
+        2474,
+        2474
+      ],
+      "simulator": [
+        3234,
+        3234
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.32,
+      "realistic": 3.54,
+      "simulator": 4.11
+    },
+    "expMultiplier": 1.72,
+    "freeRepairs": 30
+  }
+}

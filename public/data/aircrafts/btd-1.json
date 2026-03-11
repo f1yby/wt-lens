@@ -1,0 +1,33 @@
+{
+  "id": "btd-1",
+  "economy": {
+    "researchCost": 40000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 1750,
+    "crewTraining": 10000,
+    "expertTraining": 210000,
+    "aceTrainingGE": 700,
+    "aceTrainingRP": 790000,
+    "repairCost": {
+      "arcade": [
+        1115,
+        1115
+      ],
+      "realistic": [
+        2137,
+        2137
+      ],
+      "simulator": [
+        4030,
+        4030
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.98,
+      "realistic": 4.24,
+      "simulator": 7.15
+    },
+    "expMultiplier": 1.54,
+    "freeRepairs": 30
+  }
+}

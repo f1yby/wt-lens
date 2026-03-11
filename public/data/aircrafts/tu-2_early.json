@@ -1,0 +1,31 @@
+{
+  "id": "tu-2_early",
+  "economy": {
+    "researchCost": 26000,
+    "purchaseCost": 76000,
+    "crewTraining": 22000,
+    "expertTraining": 76000,
+    "aceTrainingGE": 500,
+    "aceTrainingRP": 320000,
+    "repairCost": {
+      "arcade": [
+        1145,
+        1502
+      ],
+      "realistic": [
+        2828,
+        3603
+      ],
+      "simulator": [
+        4904,
+        6247
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.78,
+      "realistic": 1.82,
+      "simulator": 3.62
+    },
+    "expMultiplier": 1.42
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "id": "sw_lvrbv_701",
+  "performance": {
+    "horsepower": 136.0,
+    "weight": 9.7,
+    "power_to_weight": 14.02,
+    "max_reverse_speed": 6.7,
+    "reload_time": 12.0,
+    "penetration": 200.0,
+    "max_speed": 38.1,
+    "crew_count": 5,
+    "elevation_speed": 25.0,
+    "traverse_speed": 25.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -5.0,
+      35.0
+    ],
+    "traverse_range": [
+      -100.0,
+      100.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 40.0,
+    "mainGun": {
+      "name": "105mm_Rbs_70_launcher",
+      "caliber": 105.0,
+      "reloadTime": 12.0,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 15.6,
+        "expert": 13.8,
+        "ace": 12.0
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "105mm_rb_70",
+        "localizedName": "RB 70",
+        "type": "sam_tank",
+        "caliber": 105.0,
+        "mass": 17.0,
+        "muzzleVelocity": 525.0
+      },
+      {
+        "name": "105mm_rb_70_2",
+        "localizedName": "RB 70 Mk.2",
+        "type": "sam_tank",
+        "caliber": 105.0,
+        "mass": 17.0,
+        "muzzleVelocity": 580.0,
+        "penetration0m": 200.0
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 5200.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 4,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      6.9,
+      13.1,
+      24.4,
+      38.1
+    ],
+    "reverse_gear_speeds": [
+      6.7
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 9.5,
+    "track_width": 0.3,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "66mm_modern_smoke_grenade_launcher",
+        "caliber": 0,
+        "ammo": 6,
+        "rateOfFire": 2400
+      }
+    ],
+    "main_gun_ammo": 6,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 220000,
+    "purchaseCost": 620000,
+    "crewTraining": 175000,
+    "expertTraining": 620000,
+    "aceTrainingGE": 2100,
+    "aceTrainingRP": 1010000,
+    "repairCost": {
+      "arcade": [
+        5556,
+        7408
+      ],
+      "realistic": [
+        4721,
+        6295
+      ],
+      "simulator": [
+        5213,
+        6950
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.6,
+      "realistic": 1.86,
+      "simulator": 2.35
+    },
+    "expMultiplier": 2.26
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "id": "lagg-3-34",
+  "economy": {
+    "researchCost": 9200,
+    "purchaseCost": 0,
+    "purchaseCostGold": 1000,
+    "crewTraining": 3400,
+    "expertTraining": 23000,
+    "aceTrainingGE": 180,
+    "aceTrainingRP": 380000,
+    "repairCost": {
+      "arcade": [
+        977,
+        977
+      ],
+      "realistic": [
+        576,
+        576
+      ],
+      "simulator": [
+        930,
+        930
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.84,
+      "realistic": 1.53,
+      "simulator": 3.35
+    },
+    "expMultiplier": 1.18,
+    "freeRepairs": 30
+  }
+}

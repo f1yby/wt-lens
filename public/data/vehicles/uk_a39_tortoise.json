@@ -1,0 +1,153 @@
+{
+  "id": "uk_a39_tortoise",
+  "performance": {
+    "horsepower": 650.0,
+    "weight": 81.28,
+    "power_to_weight": 8.0,
+    "max_reverse_speed": 19.0,
+    "reload_time": 8.57,
+    "penetration": 256.4,
+    "max_speed": 19.0,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 10.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -10.0,
+      18.0
+    ],
+    "traverse_range": [
+      -20.0,
+      20.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 28.0,
+    "mainGun": {
+      "name": "94mm_QQF_32pdr",
+      "caliber": 94.0,
+      "reloadTime": 8.57,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 11.14,
+        "expert": 9.86,
+        "ace": 8.57
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "94mm_shot_mk1",
+        "localizedName": "Shot Mk.1",
+        "type": "apcbc_solid_medium_caliber_tank",
+        "caliber": 94.0,
+        "mass": 14.5,
+        "muzzleVelocity": 929.0,
+        "deMarre": {
+          "fullCaliber": 94.0,
+          "isApcbc": true,
+          "explosiveMass": 0,
+          "Cx": 0.3
+        },
+        "penetration0m": 256.4
+      },
+      {
+        "name": "94mm_shell_mk1",
+        "localizedName": "Shell Mk.1",
+        "type": "he_frag_tank",
+        "caliber": 94.0,
+        "mass": 12.7,
+        "muzzleVelocity": 1043.0,
+        "explosiveMassKg": 0.92,
+        "explosiveType": "tnt",
+        "tntEquivalent": 0.92
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2500.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 6,
+    "reverse_gears": 6,
+    "forward_gear_speeds": [
+      2.1,
+      3.2,
+      4.7,
+      6.9,
+      10.6,
+      19.0
+    ],
+    "reverse_gear_speeds": [
+      2.1,
+      3.2,
+      4.7,
+      6.9,
+      10.6,
+      19.0
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 80.65,
+    "track_width": 0.91,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_92mm_BESA",
+        "caliber": 7.9,
+        "ammo": 3600,
+        "reloadTime": 8.0,
+        "rateOfFire": 600,
+        "bulletType": "ap_i_ball"
+      },
+      {
+        "trigger": "gunner1",
+        "name": "7_92mm_BESA",
+        "caliber": 7.9,
+        "ammo": 3600,
+        "reloadTime": 8.0,
+        "rateOfFire": 600,
+        "bulletType": "ap_i_ball"
+      }
+    ],
+    "main_gun_ammo": 60,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 31000,
+    "purchaseCost": 200000,
+    "crewTraining": 57000,
+    "expertTraining": 200000,
+    "aceTrainingGE": 800,
+    "aceTrainingRP": 520000,
+    "repairCost": {
+      "arcade": [
+        3599,
+        4675
+      ],
+      "realistic": [
+        4092,
+        5315
+      ],
+      "simulator": [
+        5376,
+        6982
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.24,
+      "realistic": 1.95,
+      "simulator": 2.49
+    },
+    "expMultiplier": 1.72
+  }
+}

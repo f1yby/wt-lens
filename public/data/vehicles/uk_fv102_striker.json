@@ -1,0 +1,144 @@
+{
+  "id": "uk_fv102_striker",
+  "performance": {
+    "horsepower": 190.0,
+    "weight": 8.22,
+    "power_to_weight": 23.11,
+    "max_reverse_speed": 80.0,
+    "reload_time": 0.5,
+    "penetration": 700.0,
+    "max_speed": 80.0,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 18.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "both",
+    "elevation_range": [
+      -0.0,
+      0.0
+    ],
+    "traverse_range": [
+      -0.0,
+      0.0
+    ],
+    "gunner_thermal_resolution": [
+      500,
+      300
+    ],
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": 583.1,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 0.0,
+    "mainGun": {
+      "name": "170mm_BAe_Swingfire_launcher",
+      "caliber": 170.0,
+      "reloadTime": 0.5,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 0.65,
+        "expert": 0.57,
+        "ace": 0.5
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "170mm_swingfire",
+        "localizedName": "BAe Swingfire",
+        "type": "atgm_tank",
+        "caliber": 170.0,
+        "mass": 27.0,
+        "muzzleVelocity": 185.0,
+        "penetration0m": 535.0
+      },
+      {
+        "name": "170mm_swingfire_mk_2",
+        "localizedName": "BAe Swingfire Mk.2",
+        "type": "atgm_tank",
+        "caliber": 170.0,
+        "mass": 37.0,
+        "muzzleVelocity": 185.0,
+        "penetration0m": 700.0
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 4750.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 7,
+    "reverse_gears": 7,
+    "forward_gear_speeds": [
+      4.1,
+      9.2,
+      12.8,
+      21.3,
+      38.5,
+      50.7,
+      80.0
+    ],
+    "reverse_gear_speeds": [
+      4.1,
+      9.2,
+      12.8,
+      21.3,
+      38.5,
+      50.7,
+      80.0
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 8.08,
+    "track_width": 0.432,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner3",
+        "name": "7_62mm_L37A1",
+        "caliber": 7.6,
+        "ammo": 3000,
+        "reloadTime": 8.0,
+        "rateOfFire": 650,
+        "bulletType": "ap_ball"
+      }
+    ],
+    "main_gun_ammo": 10,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 160000,
+    "purchaseCost": 450000,
+    "crewTraining": 130000,
+    "expertTraining": 450000,
+    "aceTrainingGE": 2000,
+    "aceTrainingRP": 890000,
+    "repairCost": {
+      "arcade": [
+        4702,
+        6139
+      ],
+      "realistic": [
+        5152,
+        6726
+      ],
+      "simulator": [
+        6436,
+        8402
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.6,
+      "realistic": 2.1,
+      "simulator": 2.5
+    },
+    "expMultiplier": 2.14
+  }
+}

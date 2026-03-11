@@ -1,0 +1,124 @@
+{
+  "id": "ussr_it_1",
+  "performance": {
+    "horsepower": 580.0,
+    "weight": 34.5,
+    "power_to_weight": 16.81,
+    "max_reverse_speed": 7.5,
+    "reload_time": 11.11,
+    "penetration": 500.0,
+    "max_speed": 50.0,
+    "crew_count": 5,
+    "elevation_speed": 5.0,
+    "traverse_speed": 25.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "both",
+    "elevation_range": [
+      -9.0,
+      17.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 26.0,
+    "mainGun": {
+      "name": "180mm_2k4_launcher",
+      "caliber": 180.0,
+      "reloadTime": 11.11,
+      "autoLoader": true,
+      "reloadTimes": {
+        "base": 11.11,
+        "expert": 11.11,
+        "ace": 11.11
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "180mm_3m7",
+        "localizedName": "3M7",
+        "type": "atgm_tank",
+        "caliber": 180.0,
+        "mass": 54.0,
+        "muzzleVelocity": 224.0,
+        "penetration0m": 500.0
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": true,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2000.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 5,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      7.5,
+      16.1,
+      22.5,
+      31.5,
+      50.0
+    ],
+    "reverse_gear_speeds": [
+      7.5
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 33.8,
+    "track_width": 0.58,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_SGMT",
+        "caliber": 7.6,
+        "ammo": 2000,
+        "reloadTime": 8.0,
+        "rateOfFire": 600,
+        "bulletType": "ap_i_ball"
+      }
+    ],
+    "main_gun_ammo": 15,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": false,
+    "has_ess": true,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 135000,
+    "purchaseCost": 380000,
+    "crewTraining": 110000,
+    "expertTraining": 380000,
+    "aceTrainingGE": 1400,
+    "aceTrainingRP": 830000,
+    "repairCost": {
+      "arcade": [
+        4752,
+        6046
+      ],
+      "realistic": [
+        5287,
+        6727
+      ],
+      "simulator": [
+        5600,
+        7125
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.51,
+      "realistic": 2.1,
+      "simulator": 2.5
+    },
+    "expMultiplier": 2.08
+  }
+}

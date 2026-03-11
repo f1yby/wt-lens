@@ -1,0 +1,31 @@
+{
+  "id": "il-10_1946_hungary",
+  "economy": {
+    "researchCost": 63000,
+    "purchaseCost": 200000,
+    "crewTraining": 57000,
+    "expertTraining": 200000,
+    "aceTrainingGE": 1100,
+    "aceTrainingRP": 520000,
+    "repairCost": {
+      "arcade": [
+        2544,
+        3338
+      ],
+      "realistic": [
+        4467,
+        5690
+      ],
+      "simulator": [
+        8633,
+        10997
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.05,
+      "realistic": 1.8,
+      "simulator": 6.0
+    },
+    "expMultiplier": 1.72
+  }
+}

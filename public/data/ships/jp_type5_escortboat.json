@@ -1,0 +1,27 @@
+{
+  "id": "jp_type5_escortboat",
+  "economy": {
+    "researchCost": 5900,
+    "purchaseCost": 6300,
+    "crewTraining": 1800,
+    "expertTraining": 6300,
+    "aceTrainingGE": 80,
+    "aceTrainingRP": 135000,
+    "repairCost": {
+      "arcade": [
+        329,
+        415
+      ],
+      "realistic": [
+        505,
+        637
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.26,
+      "realistic": 0.32,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.06
+  }
+}

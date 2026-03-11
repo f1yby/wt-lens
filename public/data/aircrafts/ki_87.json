@@ -1,0 +1,33 @@
+{
+  "id": "ki_87",
+  "economy": {
+    "researchCost": 71000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 6090,
+    "crewTraining": 10000,
+    "expertTraining": 340000,
+    "aceTrainingGE": 1200,
+    "aceTrainingRP": 1140000,
+    "repairCost": {
+      "arcade": [
+        2100,
+        2100
+      ],
+      "realistic": [
+        4623,
+        4623
+      ],
+      "simulator": [
+        7203,
+        7203
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.18,
+      "realistic": 4.69,
+      "simulator": 10.23
+    },
+    "expMultiplier": 1.78,
+    "freeRepairs": 30
+  }
+}

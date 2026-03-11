@@ -1,0 +1,31 @@
+{
+  "id": "hurricane_mk1_late_finland",
+  "economy": {
+    "researchCost": 9200,
+    "purchaseCost": 16000,
+    "crewTraining": 4500,
+    "expertTraining": 16000,
+    "aceTrainingGE": 180,
+    "aceTrainingRP": 190000,
+    "repairCost": {
+      "arcade": [
+        522,
+        649
+      ],
+      "realistic": [
+        1039,
+        1257
+      ],
+      "simulator": [
+        1255,
+        1518
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.31,
+      "realistic": 0.76,
+      "simulator": 1.63
+    },
+    "expMultiplier": 1.18
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "ussr_cruiser_krasnyi_kavkaz",
+  "economy": {
+    "researchCost": 18000,
+    "purchaseCost": 55000,
+    "crewTraining": 16000,
+    "expertTraining": 55000,
+    "aceTrainingGE": 500,
+    "aceTrainingRP": 320000,
+    "repairCost": {
+      "arcade": [
+        4268,
+        5558
+      ],
+      "realistic": [
+        6281,
+        8179
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.92,
+      "realistic": 6.0,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.42
+  }
+}

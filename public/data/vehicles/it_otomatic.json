@@ -1,0 +1,171 @@
+{
+  "id": "it_otomatic",
+  "performance": {
+    "horsepower": 1100.0,
+    "weight": 46.0,
+    "power_to_weight": 23.91,
+    "max_reverse_speed": 24.0,
+    "reload_time": 0.5,
+    "penetration": 313.3,
+    "max_speed": 60.0,
+    "crew_count": 5,
+    "elevation_speed": 45.0,
+    "traverse_speed": 70.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "both",
+    "elevation_range": [
+      -5.0,
+      60.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": [
+      500,
+      300
+    ],
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": 583.1,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 65.0,
+    "mainGun": {
+      "name": "76mm_OTO_Breda_76_62",
+      "caliber": 76.0,
+      "reloadTime": 0.5,
+      "autoLoader": true,
+      "reloadTimes": {
+        "base": 0.5,
+        "expert": 0.5,
+        "ace": 0.5
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "76mm_sapom_sap",
+        "localizedName": "76/62 SAPOM",
+        "type": "sap_hei_tank",
+        "caliber": 76.0,
+        "mass": 6.35,
+        "muzzleVelocity": 910.0,
+        "deMarre": {
+          "fullCaliber": 76.0,
+          "isApcbc": false,
+          "explosiveMass": 0.46,
+          "Cx": 0.2475
+        },
+        "penetration0m": 117.4,
+        "explosiveMassKg": 0.46,
+        "explosiveType": "comp_a",
+        "tntEquivalent": 0.58
+      },
+      {
+        "name": "76mm_he_mom_vt",
+        "localizedName": "76/62 HE-VT MOM",
+        "type": "he_frag_radio_fuse",
+        "caliber": 76.0,
+        "mass": 6.3,
+        "muzzleVelocity": 910.0,
+        "explosiveMassKg": 0.745,
+        "explosiveType": "comp_a",
+        "tntEquivalent": 0.939
+      },
+      {
+        "name": "76mm_oto_apfsds",
+        "localizedName": "76/62 APFSDS",
+        "type": "apds_fs_long_tank",
+        "caliber": 26.0,
+        "mass": 2.175,
+        "muzzleVelocity": 1580.0,
+        "lanzOdermatt": {
+          "workingLength": 285.0,
+          "density": 17500.0,
+          "material": "tungsten",
+          "Cx": 0.33
+        },
+        "penetration0m": 313.3,
+        "penetrationData": {
+          "at0m": {
+            "angle0": 313.3,
+            "angle30": 271.3,
+            "angle60": 156.7
+          }
+        }
+      }
+    ],
+    "penetrationData": {
+      "at0m": {
+        "angle0": 313.3,
+        "angle30": 271.3,
+        "angle60": 156.7
+      }
+    },
+    "autoLoader": true,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2200.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 8,
+    "reverse_gears": 4,
+    "forward_gear_speeds": [
+      6.3,
+      12.6,
+      17.0,
+      25.9,
+      31.1,
+      38.8,
+      47.1,
+      60.0
+    ],
+    "reverse_gear_speeds": [
+      6.3,
+      12.6,
+      17.0,
+      24.0
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 45.5,
+    "track_width": 0.55,
+    "secondary_weapons": null,
+    "main_gun_ammo": 90,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": true
+  },
+  "economy": {
+    "researchCost": 350000,
+    "purchaseCost": 950000,
+    "crewTraining": 270000,
+    "expertTraining": 950000,
+    "aceTrainingGE": 2200,
+    "aceTrainingRP": 1210000,
+    "repairCost": {
+      "arcade": [
+        4911,
+        7308
+      ],
+      "realistic": [
+        5749,
+        8555
+      ],
+      "simulator": [
+        6951,
+        10343
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.6,
+      "realistic": 2.1,
+      "simulator": 2.08
+    },
+    "expMultiplier": 2.44
+  }
+}

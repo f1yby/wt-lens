@@ -1,0 +1,33 @@
+{
+  "id": "fiat_g91_r4_german",
+  "economy": {
+    "researchCost": 135000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 8910,
+    "crewTraining": 10000,
+    "expertTraining": 620000,
+    "aceTrainingGE": 2000,
+    "aceTrainingRP": 1760000,
+    "repairCost": {
+      "arcade": [
+        2477,
+        2477
+      ],
+      "realistic": [
+        5511,
+        5511
+      ],
+      "simulator": [
+        7794,
+        7794
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.6,
+      "realistic": 7.6,
+      "simulator": 12.0
+    },
+    "expMultiplier": 2.2,
+    "freeRepairs": 30
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "id": "bo_105cb2",
+  "economy": {
+    "researchCost": 360000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 8560,
+    "crewTraining": 10000,
+    "expertTraining": 1600000,
+    "aceTrainingGE": 2000,
+    "aceTrainingRP": 1710000,
+    "repairCost": {
+      "arcade": [
+        4992,
+        4992
+      ],
+      "realistic": [
+        1337,
+        1337
+      ],
+      "simulator": [
+        3920,
+        3920
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.0,
+      "realistic": 6.0,
+      "simulator": 8.6
+    },
+    "expMultiplier": 2.14,
+    "freeRepairs": 30
+  }
+}

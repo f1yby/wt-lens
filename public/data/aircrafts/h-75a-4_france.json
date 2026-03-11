@@ -1,0 +1,31 @@
+{
+  "id": "h-75a-4_france",
+  "economy": {
+    "researchCost": 2000,
+    "purchaseCost": 2100,
+    "crewTraining": 600,
+    "expertTraining": 2100,
+    "aceTrainingGE": 45,
+    "aceTrainingRP": 110000,
+    "repairCost": {
+      "arcade": [
+        172,
+        221
+      ],
+      "realistic": [
+        378,
+        473
+      ],
+      "simulator": [
+        502,
+        627
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.13,
+      "realistic": 0.3,
+      "simulator": 0.6
+    },
+    "expMultiplier": 1.0
+  }
+}

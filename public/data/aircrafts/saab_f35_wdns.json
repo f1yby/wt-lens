@@ -1,0 +1,31 @@
+{
+  "id": "saab_f35_wdns",
+  "economy": {
+    "researchCost": 520000,
+    "purchaseCost": 610000,
+    "crewTraining": 165000,
+    "expertTraining": 580000,
+    "aceTrainingGE": 2800,
+    "aceTrainingRP": 1080000,
+    "repairCost": {
+      "arcade": [
+        3140,
+        4498
+      ],
+      "realistic": [
+        8662,
+        12410
+      ],
+      "simulator": [
+        9937,
+        14236
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.88,
+      "realistic": 3.09,
+      "simulator": 6.0
+    },
+    "expMultiplier": 2.32
+  }
+}

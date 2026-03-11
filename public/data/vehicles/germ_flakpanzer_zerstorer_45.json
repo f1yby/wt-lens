@@ -1,0 +1,92 @@
+{
+  "id": "germ_flakpanzer_zerstorer_45",
+  "performance": {
+    "horsepower": 300.0,
+    "weight": 25.0,
+    "power_to_weight": 12.0,
+    "max_reverse_speed": 7.2,
+    "reload_time": 4.0,
+    "penetration": null,
+    "max_speed": 38.7,
+    "crew_count": 5,
+    "elevation_speed": 20.0,
+    "traverse_speed": 60.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -7.0,
+      80.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 87.0,
+    "mainGun": null,
+    "ammunitions": null,
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 3000.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 6,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      4.1,
+      6.4,
+      11.1,
+      15.5,
+      25.8,
+      38.7
+    ],
+    "reverse_gear_speeds": [
+      7.2
+    ],
+    "steer_type": null,
+    "empty_weight": 24.7,
+    "track_width": 0.4,
+    "secondary_weapons": null,
+    "main_gun_ammo": 210,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 63000,
+    "purchaseCost": 200000,
+    "crewTraining": 57000,
+    "expertTraining": 200000,
+    "aceTrainingGE": 800,
+    "aceTrainingRP": 520000,
+    "repairCost": {
+      "arcade": [
+        4441,
+        5820
+      ],
+      "realistic": [
+        3433,
+        4499
+      ],
+      "simulator": [
+        5350,
+        7012
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.24,
+      "realistic": 1.6,
+      "simulator": 2.2
+    },
+    "expMultiplier": 1.72
+  }
+}

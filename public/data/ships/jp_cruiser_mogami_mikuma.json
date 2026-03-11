@@ -1,0 +1,29 @@
+{
+  "id": "jp_cruiser_mogami_mikuma",
+  "economy": {
+    "researchCost": 110000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 8020,
+    "crewTraining": 10000,
+    "expertTraining": 550000,
+    "aceTrainingGE": 1500,
+    "aceTrainingRP": 1340000,
+    "repairCost": {
+      "arcade": [
+        6254,
+        6254
+      ],
+      "realistic": [
+        6257,
+        6257
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 9.0,
+      "realistic": 12.0,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.9,
+    "freeRepairs": 30
+  }
+}

@@ -1,0 +1,140 @@
+{
+  "id": "cn_sdkfz_222_early",
+  "performance": {
+    "horsepower": 75.0,
+    "weight": 3.85,
+    "power_to_weight": 19.48,
+    "max_reverse_speed": 15.1,
+    "reload_time": 6.0,
+    "penetration": 37.7,
+    "max_speed": 80.1,
+    "crew_count": 5,
+    "elevation_speed": 40.0,
+    "traverse_speed": 40.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -7.0,
+      80.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 87.0,
+    "mainGun": {
+      "name": "20mm_KwK30_222",
+      "caliber": 20.0,
+      "reloadTime": 6.0,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 7.8,
+        "expert": 6.9,
+        "ace": 6.0
+      },
+      "rateOfFire": 280,
+      "beltReloadTime": 6.0
+    },
+    "ammunitions": [
+      {
+        "name": "20mm_sprgr",
+        "localizedName": "Sprgr.",
+        "type": "he_frag_i_t",
+        "caliber": 20.0,
+        "mass": 0.115,
+        "muzzleVelocity": 900.0,
+        "explosiveMassKg": 0.006,
+        "explosiveType": "np_10",
+        "tntEquivalent": 0.008
+      },
+      {
+        "name": "20mm_pzgr",
+        "localizedName": "PzGr",
+        "type": "ap_i_t",
+        "caliber": 20.0,
+        "mass": 0.148,
+        "muzzleVelocity": 800.0,
+        "deMarre": {
+          "fullCaliber": 20.0,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "Cx": 0.5198
+        },
+        "penetration0m": 37.7
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 3600.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 5,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      13.1,
+      20.1,
+      34.1,
+      54.0,
+      80.1
+    ],
+    "reverse_gear_speeds": [
+      15.1
+    ],
+    "steer_type": null,
+    "empty_weight": 3.75,
+    "track_width": 0.2,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_92mm_MG13_Dreyse",
+        "caliber": 7.9,
+        "ammo": 900,
+        "reloadTime": 8.0,
+        "rateOfFire": 500,
+        "bulletType": "ap_i_ball"
+      }
+    ],
+    "main_gun_ammo": 180,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 2900,
+    "purchaseCost": 700,
+    "crewTraining": 200,
+    "expertTraining": 1000,
+    "aceTrainingGE": 20,
+    "aceTrainingRP": 96000,
+    "repairCost": {
+      "arcade": [
+        101,
+        131
+      ],
+      "realistic": [
+        89,
+        116
+      ],
+      "simulator": [
+        138,
+        179
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.12,
+      "realistic": 0.12,
+      "simulator": 0.15
+    },
+    "expMultiplier": 1.0
+  }
+}

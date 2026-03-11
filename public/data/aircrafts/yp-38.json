@@ -1,0 +1,33 @@
+{
+  "id": "yp-38",
+  "economy": {
+    "researchCost": 14000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 1150,
+    "crewTraining": 6900,
+    "expertTraining": 46000,
+    "aceTrainingGE": 320,
+    "aceTrainingRP": 500000,
+    "repairCost": {
+      "arcade": [
+        1502,
+        1502
+      ],
+      "realistic": [
+        6181,
+        6181
+      ],
+      "simulator": [
+        1415,
+        1415
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.36,
+      "realistic": 4.65,
+      "simulator": 4.8
+    },
+    "expMultiplier": 1.3,
+    "freeRepairs": 30
+  }
+}

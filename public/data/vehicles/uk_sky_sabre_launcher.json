@@ -1,0 +1,114 @@
+{
+  "id": "uk_sky_sabre_launcher",
+  "performance": {
+    "horsepower": 440.0,
+    "weight": 27.5,
+    "power_to_weight": 16.0,
+    "max_reverse_speed": 8.8,
+    "reload_time": null,
+    "penetration": null,
+    "max_speed": 100.3,
+    "crew_count": 5,
+    "elevation_speed": null,
+    "traverse_speed": null,
+    "has_stabilizer": null,
+    "stabilizer_type": "none",
+    "elevation_range": null,
+    "traverse_range": null,
+    "gunner_thermal_resolution": [
+      1200,
+      800
+    ],
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": 1442.2,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": null,
+    "mainGun": null,
+    "ammunitions": null,
+    "penetrationData": null,
+    "autoLoader": null,
+    "engine_manufacturer": "man",
+    "engine_model": "d2066",
+    "engine_type": null,
+    "engine_max_rpm": 2100.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 12,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      6.3,
+      8.2,
+      10.5,
+      13.5,
+      17.1,
+      22.0,
+      29.0,
+      37.3,
+      48.0,
+      61.6,
+      78.3,
+      100.3
+    ],
+    "reverse_gear_speeds": [
+      6.9,
+      8.8
+    ],
+    "steer_type": null,
+    "empty_weight": 27.0,
+    "track_width": 0.4,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "166mm_camm",
+        "caliber": 166.0,
+        "ammo": 8,
+        "reloadTime": 15.0,
+        "rateOfFire": 120,
+        "bulletType": "sam_tank",
+        "maxDistance": 25000,
+        "maxSpeed": 1028,
+        "guidanceType": "radar",
+        "explosiveMass": 3.85,
+        "explosiveType": "pbxn_110"
+      }
+    ],
+    "main_gun_ammo": null,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": true
+  },
+  "economy": {
+    "researchCost": 410000,
+    "purchaseCost": 1100000,
+    "crewTraining": 310000,
+    "expertTraining": 1100000,
+    "aceTrainingGE": 2300,
+    "aceTrainingRP": 1350000,
+    "repairCost": {
+      "arcade": [
+        5561,
+        7855
+      ],
+      "realistic": [
+        6756,
+        9542
+      ],
+      "simulator": [
+        7652,
+        10808
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.6,
+      "realistic": 2.1,
+      "simulator": 2.03
+    },
+    "expMultiplier": 2.56
+  }
+}

@@ -1,0 +1,166 @@
+{
+  "id": "us_t58",
+  "performance": {
+    "horsepower": 810.0,
+    "weight": 59.95,
+    "power_to_weight": 13.51,
+    "max_reverse_speed": 6.8,
+    "reload_time": 2.58,
+    "penetration": 406.0,
+    "max_speed": 35.0,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 36.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -8.0,
+      12.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 20.0,
+    "mainGun": {
+      "name": "155mm_t180",
+      "caliber": 155.0,
+      "reloadTime": 2.58,
+      "autoLoader": true,
+      "reloadTimes": {
+        "base": 2.58,
+        "expert": 2.58,
+        "ace": 2.58
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "155_mm_t267",
+        "localizedName": "T267",
+        "type": "heat_tank",
+        "caliber": 155.0,
+        "mass": 18.9,
+        "muzzleVelocity": 826.0,
+        "penetration0m": 406.0,
+        "explosiveMassKg": 2.85,
+        "explosiveType": "comp_b",
+        "tntEquivalent": 3.62
+      },
+      {
+        "name": "155mm_t152",
+        "localizedName": "T152",
+        "type": "hesh_tank",
+        "caliber": 155.0,
+        "mass": 31.978,
+        "muzzleVelocity": 563.0,
+        "penetration0m": 203.0,
+        "explosiveMassKg": 11.7,
+        "explosiveType": "comp_a",
+        "tntEquivalent": 14.742
+      },
+      {
+        "name": "155mm_t29e1",
+        "localizedName": "T29E1",
+        "type": "apcbc_tank",
+        "caliber": 155.0,
+        "mass": 45.36,
+        "muzzleVelocity": 670.0,
+        "deMarre": {
+          "fullCaliber": 155.0,
+          "isApcbc": true,
+          "explosiveMass": 0.653
+        },
+        "penetration0m": 199.2,
+        "explosiveMassKg": 0.653,
+        "explosiveType": "exp_d",
+        "tntEquivalent": 0.646
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": true,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2800.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 6,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      6.1,
+      8.5,
+      12.1,
+      15.5,
+      21.5,
+      35.0
+    ],
+    "reverse_gear_speeds": [
+      4.4,
+      6.8
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 58.95,
+    "track_width": 0.5,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_M1919A4",
+        "caliber": 7.6,
+        "ammo": 6500,
+        "reloadTime": 8.0,
+        "rateOfFire": 500,
+        "bulletType": "ap_ball"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "12_7mm_M2_HB",
+        "caliber": 12.7,
+        "ammo": 1200,
+        "reloadTime": 8.0,
+        "rateOfFire": 575,
+        "bulletType": "ap_i_t_ball_M20"
+      }
+    ],
+    "main_gun_ammo": 21,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 120000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 8380,
+    "crewTraining": 10000,
+    "expertTraining": 550000,
+    "aceTrainingGE": 1300,
+    "aceTrainingRP": 1550000,
+    "repairCost": {
+      "arcade": [
+        3828,
+        3828
+      ],
+      "realistic": [
+        3891,
+        3891
+      ],
+      "simulator": [
+        7417,
+        7417
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.73,
+      "realistic": 4.2,
+      "simulator": 5.0
+    },
+    "expMultiplier": 2.02,
+    "freeRepairs": 30
+  }
+}

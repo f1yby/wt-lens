@@ -1,0 +1,197 @@
+{
+  "id": "uk_challenger_2_lep",
+  "performance": {
+    "horsepower": 1314.0,
+    "weight": 62.5,
+    "power_to_weight": 21.02,
+    "max_reverse_speed": 38.3,
+    "reload_time": 6.0,
+    "penetration": 652.8,
+    "max_speed": 59.0,
+    "crew_count": 5,
+    "elevation_speed": 11.0,
+    "traverse_speed": 31.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "both",
+    "elevation_range": [
+      -10.0,
+      20.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": [
+      1200,
+      800
+    ],
+    "commander_thermal_resolution": [
+      1200,
+      800
+    ],
+    "gunner_thermal_diagonal": 1442.2,
+    "commander_thermal_diagonal": 1442.2,
+    "stabilizer_value": 1,
+    "elevation_range_value": 30.0,
+    "mainGun": {
+      "name": "120mm_rheinmetall_l55_a1",
+      "caliber": 120.0,
+      "reloadTime": 6.0,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 7.8,
+        "expert": 6.9,
+        "ace": 6.0
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "120mm_dm12a1",
+        "localizedName": "DM12A1",
+        "type": "heat_fs_tank",
+        "caliber": 120.0,
+        "mass": 13.5,
+        "muzzleVelocity": 1190.0,
+        "penetration0m": 480.0,
+        "explosiveMassKg": 1.64,
+        "explosiveType": "comp_b",
+        "tntEquivalent": 2.083
+      },
+      {
+        "name": "120mm_dm33",
+        "localizedName": "DM33",
+        "type": "apds_fs_long_tank",
+        "caliber": 25.0,
+        "mass": 4.3,
+        "muzzleVelocity": 1690.0,
+        "lanzOdermatt": {
+          "workingLength": 510.0,
+          "density": 17500.0,
+          "material": "tungsten",
+          "Cx": 0.55
+        },
+        "penetration0m": 496.7,
+        "penetrationData": {
+          "at0m": {
+            "angle0": 496.7,
+            "angle30": 430.2,
+            "angle60": 248.4
+          }
+        }
+      },
+      {
+        "name": "120mm_dm_11",
+        "localizedName": "DM11",
+        "type": "he_frag_dist_fuse",
+        "caliber": 120.0,
+        "mass": 19.0,
+        "muzzleVelocity": 1015.0,
+        "explosiveMassKg": 3.0,
+        "explosiveType": "comp_b",
+        "tntEquivalent": 3.81
+      },
+      {
+        "name": "120mm_dm53",
+        "localizedName": "DM53",
+        "type": "apds_fs_long_l30_tank",
+        "caliber": 23.0,
+        "mass": 5.0,
+        "muzzleVelocity": 1750.0,
+        "lanzOdermatt": {
+          "workingLength": 685.0,
+          "density": 17500.0,
+          "material": "tungsten",
+          "Cx": 0.74
+        },
+        "penetration0m": 652.8,
+        "penetrationData": {
+          "at0m": {
+            "angle0": 652.8,
+            "angle30": 565.3,
+            "angle60": 326.4
+          }
+        }
+      }
+    ],
+    "penetrationData": {
+      "at0m": {
+        "angle0": 652.8,
+        "angle30": 565.3,
+        "angle60": 326.4
+      }
+    },
+    "autoLoader": false,
+    "engine_manufacturer": "perkins",
+    "engine_model": "cv12_9a",
+    "engine_type": null,
+    "engine_max_rpm": 2300.0,
+    "transmission_manufacturer": "david_brown",
+    "transmission_model": "tn54e",
+    "transmission_type": "auto",
+    "forward_gears": 8,
+    "reverse_gears": 4,
+    "forward_gear_speeds": [
+      4.1,
+      8.3,
+      9.8,
+      12.1,
+      18.1,
+      26.8,
+      39.7,
+      59.0
+    ],
+    "reverse_gear_speeds": [
+      5.9,
+      11.8,
+      18.0,
+      38.3
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 61.0,
+    "track_width": 0.61,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_L94A1",
+        "caliber": 7.6,
+        "ammo": 4000,
+        "reloadTime": 8.0,
+        "rateOfFire": 600,
+        "bulletType": "ap_ball"
+      }
+    ],
+    "main_gun_ammo": 37,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": true,
+    "has_ess": true,
+    "has_laser_rangefinder": true
+  },
+  "economy": {
+    "researchCost": 400000,
+    "purchaseCost": 1080000,
+    "crewTraining": 310000,
+    "expertTraining": 1080000,
+    "aceTrainingGE": 2200,
+    "aceTrainingRP": 1280000,
+    "repairCost": {
+      "arcade": [
+        4401,
+        6943
+      ],
+      "realistic": [
+        4274,
+        6742
+      ],
+      "simulator": [
+        5413,
+        8538
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.55,
+      "realistic": 1.94,
+      "simulator": 2.06
+    },
+    "expMultiplier": 2.5
+  }
+}

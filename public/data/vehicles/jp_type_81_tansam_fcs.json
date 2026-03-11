@@ -1,0 +1,89 @@
+{
+  "id": "jp_type_81_tansam_fcs",
+  "performance": {
+    "horsepower": 285.0,
+    "weight": 12.0,
+    "power_to_weight": 23.75,
+    "max_reverse_speed": 12.0,
+    "reload_time": null,
+    "penetration": null,
+    "max_speed": 90.1,
+    "crew_count": 5,
+    "elevation_speed": null,
+    "traverse_speed": null,
+    "has_stabilizer": null,
+    "stabilizer_type": "none",
+    "elevation_range": null,
+    "traverse_range": null,
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": null,
+    "mainGun": null,
+    "ammunitions": null,
+    "penetrationData": null,
+    "autoLoader": null,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2300.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 6,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      17.4,
+      29.9,
+      38.3,
+      54.1,
+      76.1,
+      90.1
+    ],
+    "reverse_gear_speeds": [
+      12.0
+    ],
+    "steer_type": null,
+    "empty_weight": 11.5,
+    "track_width": 0.4,
+    "secondary_weapons": null,
+    "main_gun_ammo": null,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": true
+  },
+  "economy": {
+    "researchCost": 400000,
+    "purchaseCost": 1080000,
+    "crewTraining": 310000,
+    "expertTraining": 1080000,
+    "aceTrainingGE": 2200,
+    "aceTrainingRP": 1280000,
+    "repairCost": {
+      "arcade": [
+        5302,
+        7855
+      ],
+      "realistic": [
+        6441,
+        9542
+      ],
+      "simulator": [
+        7239,
+        10725
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.6,
+      "realistic": 2.1,
+      "simulator": 2.01
+    },
+    "expMultiplier": 2.5
+  }
+}

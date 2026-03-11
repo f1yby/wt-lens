@@ -1,0 +1,129 @@
+{
+  "id": "uk_stormer_air_defence",
+  "performance": {
+    "horsepower": 250.0,
+    "weight": 11.8,
+    "power_to_weight": 21.19,
+    "max_reverse_speed": 80.0,
+    "reload_time": 20.0,
+    "penetration": null,
+    "max_speed": 80.0,
+    "crew_count": 5,
+    "elevation_speed": 45.0,
+    "traverse_speed": 57.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "both",
+    "elevation_range": [
+      -8.0,
+      55.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": [
+      500,
+      300
+    ],
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": 583.1,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 63.0,
+    "mainGun": null,
+    "ammunitions": null,
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2600.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 7,
+    "reverse_gears": 7,
+    "forward_gear_speeds": [
+      4.1,
+      9.2,
+      12.8,
+      21.3,
+      38.2,
+      50.9,
+      80.0
+    ],
+    "reverse_gear_speeds": [
+      4.1,
+      9.2,
+      12.8,
+      21.3,
+      38.2,
+      50.9,
+      80.0
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 11.3,
+    "track_width": 0.432,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "70mm_fim_92e_stinger_stormer_launcher",
+        "caliber": 70.0,
+        "ammo": 8,
+        "reloadTime": 15.0,
+        "rateOfFire": 60,
+        "bulletType": "sam_tank",
+        "maxDistance": 10000,
+        "maxSpeed": 670,
+        "guidanceType": "optical",
+        "explosiveMass": 0.45,
+        "explosiveType": "hta"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "7_62mm_L3A1",
+        "caliber": 7.6,
+        "ammo": 1000,
+        "reloadTime": 8.0,
+        "rateOfFire": 500,
+        "bulletType": "ap_ball"
+      }
+    ],
+    "main_gun_ammo": 500,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": true
+  },
+  "economy": {
+    "researchCost": 260000,
+    "purchaseCost": 710000,
+    "crewTraining": 200000,
+    "expertTraining": 710000,
+    "aceTrainingGE": 2100,
+    "aceTrainingRP": 1080000,
+    "repairCost": {
+      "arcade": [
+        4728,
+        7035
+      ],
+      "realistic": [
+        4317,
+        6424
+      ],
+      "simulator": [
+        4762,
+        7086
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.6,
+      "realistic": 1.91,
+      "simulator": 2.41
+    },
+    "expMultiplier": 2.32
+  }
+}

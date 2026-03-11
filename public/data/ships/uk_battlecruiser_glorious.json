@@ -1,0 +1,27 @@
+{
+  "id": "uk_battlecruiser_glorious",
+  "economy": {
+    "researchCost": 90000,
+    "purchaseCost": 280000,
+    "crewTraining": 80000,
+    "expertTraining": 280000,
+    "aceTrainingGE": 1400,
+    "aceTrainingRP": 620000,
+    "repairCost": {
+      "arcade": [
+        14723,
+        18543
+      ],
+      "realistic": [
+        20365,
+        25649
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 4.5,
+      "realistic": 6.0,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.84
+  }
+}

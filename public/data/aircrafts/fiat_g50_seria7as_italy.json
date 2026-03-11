@@ -1,0 +1,31 @@
+{
+  "id": "fiat_g50_seria7as_italy",
+  "economy": {
+    "researchCost": 3000,
+    "purchaseCost": 6300,
+    "crewTraining": 1800,
+    "expertTraining": 6300,
+    "aceTrainingGE": 80,
+    "aceTrainingRP": 135000,
+    "repairCost": {
+      "arcade": [
+        242,
+        336
+      ],
+      "realistic": [
+        464,
+        625
+      ],
+      "simulator": [
+        591,
+        796
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.18,
+      "realistic": 0.47,
+      "simulator": 0.92
+    },
+    "expMultiplier": 1.06
+  }
+}

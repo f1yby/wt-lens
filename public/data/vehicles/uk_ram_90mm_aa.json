@@ -1,0 +1,130 @@
+{
+  "id": "uk_ram_90mm_aa",
+  "performance": {
+    "horsepower": 800.0,
+    "weight": 29.0,
+    "power_to_weight": 27.59,
+    "max_reverse_speed": 5.2,
+    "reload_time": 5.99,
+    "penetration": 204.1,
+    "max_speed": 40.0,
+    "crew_count": 5,
+    "elevation_speed": 6.0,
+    "traverse_speed": 11.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -5.0,
+      85.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 90.0,
+    "mainGun": {
+      "name": "94mm_QF_Mk1",
+      "caliber": 94.0,
+      "reloadTime": 5.99,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 7.79,
+        "expert": 6.89,
+        "ace": 5.99
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "94mm_shot_mk1",
+        "localizedName": "Shot Mk.1",
+        "type": "apcbc_solid_medium_caliber_tank",
+        "caliber": 94.0,
+        "mass": 14.5,
+        "muzzleVelocity": 792.0,
+        "deMarre": {
+          "fullCaliber": 94.0,
+          "isApcbc": true,
+          "explosiveMass": 0,
+          "Cx": 0.3
+        },
+        "penetration0m": 204.1
+      },
+      {
+        "name": "94mm_shell_mk1",
+        "localizedName": "Shell Mk.1",
+        "type": "he_frag_tank",
+        "caliber": 94.0,
+        "mass": 12.7,
+        "muzzleVelocity": 792.0,
+        "explosiveMassKg": 0.92,
+        "explosiveType": "tnt",
+        "tntEquivalent": 0.92
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2400.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 5,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      3.9,
+      9.5,
+      16.3,
+      26.4,
+      40.0
+    ],
+    "reverse_gear_speeds": [
+      5.2
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 28.5,
+    "track_width": 0.4,
+    "secondary_weapons": null,
+    "main_gun_ammo": 44,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 54000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 3850,
+    "crewTraining": 10000,
+    "expertTraining": 290000,
+    "aceTrainingGE": 710,
+    "aceTrainingRP": 960000,
+    "repairCost": {
+      "arcade": [
+        1739,
+        1739
+      ],
+      "realistic": [
+        2116,
+        2116
+      ],
+      "simulator": [
+        2971,
+        2971
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.3,
+      "realistic": 3.61,
+      "simulator": 4.52
+    },
+    "expMultiplier": 1.66,
+    "freeRepairs": 30
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "id": "fr_destroyer_bourrasque_class_tornade",
+  "economy": {
+    "researchCost": 4000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 400,
+    "crewTraining": 450,
+    "expertTraining": 3000,
+    "aceTrainingGE": 45,
+    "aceTrainingRP": 220000,
+    "repairCost": {
+      "arcade": [
+        283,
+        283
+      ],
+      "realistic": [
+        449,
+        449
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.99,
+      "realistic": 1.72,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.0,
+    "freeRepairs": 30
+  }
+}

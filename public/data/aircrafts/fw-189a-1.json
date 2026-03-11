@@ -1,0 +1,33 @@
+{
+  "id": "fw-189a-1",
+  "economy": {
+    "researchCost": 4000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 400,
+    "crewTraining": 450,
+    "expertTraining": 3000,
+    "aceTrainingGE": 45,
+    "aceTrainingRP": 220000,
+    "repairCost": {
+      "arcade": [
+        189,
+        189
+      ],
+      "realistic": [
+        270,
+        270
+      ],
+      "simulator": [
+        329,
+        329
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.42,
+      "realistic": 0.77,
+      "simulator": 1.63
+    },
+    "expMultiplier": 1.0,
+    "freeRepairs": 30
+  }
+}

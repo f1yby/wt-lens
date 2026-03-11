@@ -1,0 +1,29 @@
+{
+  "id": "uk_destroyer_v_class_verdun",
+  "economy": {
+    "researchCost": 2900,
+    "purchaseCost": 0,
+    "purchaseCostGold": 250,
+    "crewTraining": 150,
+    "expertTraining": 1000,
+    "aceTrainingGE": 20,
+    "aceTrainingRP": 145000,
+    "repairCost": {
+      "arcade": [
+        144,
+        144
+      ],
+      "realistic": [
+        210,
+        210
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.64,
+      "realistic": 1.1,
+      "simulator": 1.0
+    },
+    "expMultiplier": 0.75,
+    "freeRepairs": 30
+  }
+}

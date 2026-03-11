@@ -1,0 +1,27 @@
+{
+  "id": "it_albatros_class_f544",
+  "economy": {
+    "researchCost": 250000,
+    "purchaseCost": 700000,
+    "crewTraining": 200000,
+    "expertTraining": 700000,
+    "aceTrainingGE": 1500,
+    "aceTrainingRP": 670000,
+    "repairCost": {
+      "arcade": [
+        9533,
+        12159
+      ],
+      "realistic": [
+        13686,
+        17457
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.21,
+      "realistic": 4.25,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.9
+  }
+}

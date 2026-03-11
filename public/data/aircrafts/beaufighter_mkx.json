@@ -1,0 +1,31 @@
+{
+  "id": "beaufighter_mkx",
+  "economy": {
+    "researchCost": 5600,
+    "purchaseCost": 22000,
+    "crewTraining": 6300,
+    "expertTraining": 22000,
+    "aceTrainingGE": 250,
+    "aceTrainingRP": 220000,
+    "repairCost": {
+      "arcade": [
+        563,
+        798
+      ],
+      "realistic": [
+        764,
+        1048
+      ],
+      "simulator": [
+        1827,
+        2506
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.44,
+      "realistic": 0.84,
+      "simulator": 1.55
+    },
+    "expMultiplier": 1.24
+  }
+}

@@ -1,0 +1,186 @@
+{
+  "id": "ussr_t_10m",
+  "performance": {
+    "horsepower": 750.0,
+    "weight": 50.0,
+    "power_to_weight": 15.0,
+    "max_reverse_speed": 9.9,
+    "reload_time": 14.99,
+    "penetration": 400.0,
+    "max_speed": 50.2,
+    "crew_count": 5,
+    "elevation_speed": 4.5,
+    "traverse_speed": 17.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "both",
+    "elevation_range": [
+      -4.0,
+      15.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 19.0,
+    "mainGun": {
+      "name": "122mm_M62T2S",
+      "caliber": 122.0,
+      "reloadTime": 14.99,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 19.49,
+        "expert": 17.24,
+        "ace": 14.99
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "122mm_br_472",
+        "localizedName": "BR-472",
+        "type": "apcbc_tank",
+        "caliber": 122.0,
+        "mass": 25.1,
+        "muzzleVelocity": 950.0,
+        "deMarre": {
+          "fullCaliber": 122.0,
+          "isApcbc": true,
+          "explosiveMass": 0.12
+        },
+        "penetration0m": 295.7,
+        "explosiveMassKg": 0.12,
+        "explosiveType": "a_ix_2",
+        "tntEquivalent": 0.168
+      },
+      {
+        "name": "122mm_of_472",
+        "localizedName": "OF-472",
+        "type": "he_frag_tank",
+        "caliber": 122.0,
+        "mass": 27.2,
+        "muzzleVelocity": 865.0,
+        "explosiveMassKg": 3.0,
+        "explosiveType": "tnt",
+        "tntEquivalent": 3.0
+      },
+      {
+        "name": "122mm_zbm_11",
+        "localizedName": "3BM-11",
+        "type": "apds_tank",
+        "caliber": 58.0,
+        "mass": 4.5,
+        "muzzleVelocity": 1620.0,
+        "deMarre": {
+          "fullCaliber": 122.0,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "isApcr": true,
+          "coreCaliber": 58.0,
+          "coreMass": 2.81,
+          "Cx": 0.2281
+        },
+        "penetration0m": 257.1
+      },
+      {
+        "name": "122mm_zbk_9",
+        "localizedName": "3BK-9",
+        "type": "heat_fs_tank",
+        "caliber": 122.0,
+        "mass": 18.4,
+        "muzzleVelocity": 920.0,
+        "penetration0m": 400.0,
+        "explosiveMassKg": 1.698,
+        "explosiveType": "a_ix_1",
+        "tntEquivalent": 1.936
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2100.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 8,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      5.2,
+      7.3,
+      9.9,
+      13.7,
+      19.2,
+      26.6,
+      36.1,
+      50.2
+    ],
+    "reverse_gear_speeds": [
+      5.2,
+      9.9
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 49.5,
+    "track_width": 0.65,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "14_5mm_KPVT",
+        "caliber": 14.5,
+        "ammo": 500,
+        "reloadTime": 8.0,
+        "rateOfFire": 600,
+        "bulletType": "ap_i_t_ball"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "14_5mm_KPVT",
+        "caliber": 14.5,
+        "ammo": 250,
+        "reloadTime": 8.0,
+        "rateOfFire": 600,
+        "bulletType": "ap_i_t_ball"
+      }
+    ],
+    "main_gun_ammo": 30,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": true,
+    "has_ess": true,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 135000,
+    "purchaseCost": 380000,
+    "crewTraining": 110000,
+    "expertTraining": 380000,
+    "aceTrainingGE": 1400,
+    "aceTrainingRP": 830000,
+    "repairCost": {
+      "arcade": [
+        5741,
+        7844
+      ],
+      "realistic": [
+        6265,
+        8559
+      ],
+      "simulator": [
+        11861,
+        16204
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.49,
+      "realistic": 2.1,
+      "simulator": 2.5
+    },
+    "expMultiplier": 2.08
+  }
+}

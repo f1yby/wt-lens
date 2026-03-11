@@ -1,0 +1,31 @@
+{
+  "id": "bf-109g-14",
+  "economy": {
+    "researchCost": 54000,
+    "purchaseCost": 185000,
+    "crewTraining": 52000,
+    "expertTraining": 185000,
+    "aceTrainingGE": 940,
+    "aceTrainingRP": 480000,
+    "repairCost": {
+      "arcade": [
+        2376,
+        3314
+      ],
+      "realistic": [
+        5518,
+        7457
+      ],
+      "simulator": [
+        7723,
+        10436
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.93,
+      "realistic": 2.11,
+      "simulator": 4.4
+    },
+    "expMultiplier": 1.66
+  }
+}

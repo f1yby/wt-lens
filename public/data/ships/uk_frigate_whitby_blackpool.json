@@ -1,0 +1,27 @@
+{
+  "id": "uk_frigate_whitby_blackpool",
+  "economy": {
+    "researchCost": 250000,
+    "purchaseCost": 700000,
+    "crewTraining": 200000,
+    "expertTraining": 700000,
+    "aceTrainingGE": 1500,
+    "aceTrainingRP": 670000,
+    "repairCost": {
+      "arcade": [
+        9814,
+        12408
+      ],
+      "realistic": [
+        14133,
+        17867
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.46,
+      "realistic": 4.59,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.9
+  }
+}

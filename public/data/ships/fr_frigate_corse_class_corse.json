@@ -1,0 +1,29 @@
+{
+  "id": "fr_frigate_corse_class_corse",
+  "economy": {
+    "researchCost": 120000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 6090,
+    "crewTraining": 10000,
+    "expertTraining": 580000,
+    "aceTrainingGE": 1200,
+    "aceTrainingRP": 1140000,
+    "repairCost": {
+      "arcade": [
+        5309,
+        5309
+      ],
+      "realistic": [
+        7685,
+        7685
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 4.13,
+      "realistic": 7.96,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.78,
+    "freeRepairs": 30
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "id": "ta_154a_1",
+  "economy": {
+    "researchCost": 26000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 1450,
+    "crewTraining": 10000,
+    "expertTraining": 115000,
+    "aceTrainingGE": 500,
+    "aceTrainingRP": 640000,
+    "repairCost": {
+      "arcade": [
+        711,
+        711
+      ],
+      "realistic": [
+        3869,
+        3869
+      ],
+      "simulator": [
+        2100,
+        2100
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.2,
+      "realistic": 3.83,
+      "simulator": 6.15
+    },
+    "expMultiplier": 1.42,
+    "freeRepairs": 30
+  }
+}

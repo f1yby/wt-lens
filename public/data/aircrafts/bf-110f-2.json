@@ -1,0 +1,31 @@
+{
+  "id": "bf-110f-2",
+  "economy": {
+    "researchCost": 6900,
+    "purchaseCost": 32000,
+    "crewTraining": 9200,
+    "expertTraining": 32000,
+    "aceTrainingGE": 320,
+    "aceTrainingRP": 250000,
+    "repairCost": {
+      "arcade": [
+        739,
+        974
+      ],
+      "realistic": [
+        1012,
+        1294
+      ],
+      "simulator": [
+        2314,
+        2959
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.51,
+      "realistic": 1.01,
+      "simulator": 1.92
+    },
+    "expMultiplier": 1.3
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "id": "scout_ah_mk1",
+  "economy": {
+    "purchaseCost": 390000,
+    "crewTraining": 110000,
+    "expertTraining": 390000,
+    "aceTrainingGE": 1700,
+    "aceTrainingRP": 720000,
+    "repairCost": {
+      "arcade": [
+        9954,
+        12569
+      ],
+      "realistic": [
+        2938,
+        3710
+      ],
+      "simulator": [
+        4952,
+        6253
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.0,
+      "realistic": 3.0,
+      "simulator": 4.3
+    },
+    "expMultiplier": 1.96
+  }
+}

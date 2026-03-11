@@ -1,0 +1,123 @@
+{
+  "id": "sw_udes_33",
+  "performance": {
+    "horsepower": 150.0,
+    "weight": 8.6,
+    "power_to_weight": 17.44,
+    "max_reverse_speed": 12.0,
+    "reload_time": 10.0,
+    "penetration": 800.0,
+    "max_speed": 52.9,
+    "crew_count": 5,
+    "elevation_speed": 8.0,
+    "traverse_speed": 18.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -20.0,
+      25.0
+    ],
+    "traverse_range": [
+      -100.0,
+      120.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 45.0,
+    "mainGun": {
+      "name": "127mm_Rbs_55_tow_UDES_launcher",
+      "caliber": 127.0,
+      "reloadTime": 10.0,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 13.0,
+        "expert": 11.5,
+        "ace": 10.0
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "127mm_rb_55_b",
+        "localizedName": "RB 55B",
+        "type": "atgm_tank",
+        "caliber": 127.0,
+        "mass": 37.0,
+        "muzzleVelocity": 296.0,
+        "penetration0m": 630.0
+      },
+      {
+        "name": "152mm_rb_55_c",
+        "localizedName": "RB 55C",
+        "type": "atgm_tank",
+        "caliber": 152.0,
+        "mass": 37.0,
+        "muzzleVelocity": 329.0,
+        "penetration0m": 800.0
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 3200.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 5,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      6.6,
+      12.6,
+      23.5,
+      36.4,
+      52.9
+    ],
+    "reverse_gear_speeds": [
+      12.0
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 8.4,
+    "track_width": null,
+    "secondary_weapons": null,
+    "main_gun_ammo": 10,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 135000,
+    "purchaseCost": 380000,
+    "crewTraining": 110000,
+    "expertTraining": 380000,
+    "aceTrainingGE": 1400,
+    "aceTrainingRP": 830000,
+    "repairCost": {
+      "arcade": [
+        5502,
+        6677
+      ],
+      "realistic": [
+        5578,
+        6770
+      ],
+      "simulator": [
+        9122,
+        11071
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.6,
+      "realistic": 2.1,
+      "simulator": 2.5
+    },
+    "expMultiplier": 2.08
+  }
+}

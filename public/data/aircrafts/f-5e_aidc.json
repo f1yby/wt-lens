@@ -1,0 +1,31 @@
+{
+  "id": "f-5e_aidc",
+  "economy": {
+    "researchCost": 130000,
+    "purchaseCost": 720000,
+    "crewTraining": 200000,
+    "expertTraining": 720000,
+    "aceTrainingGE": 3200,
+    "aceTrainingRP": 1210000,
+    "repairCost": {
+      "arcade": [
+        2934,
+        4046
+      ],
+      "realistic": [
+        9162,
+        12638
+      ],
+      "simulator": [
+        8871,
+        12236
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.04,
+      "realistic": 3.3,
+      "simulator": 6.0
+    },
+    "expMultiplier": 2.44
+  }
+}

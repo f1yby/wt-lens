@@ -1,0 +1,31 @@
+{
+  "id": "f_111c_raaf",
+  "economy": {
+    "researchCost": 230000,
+    "purchaseCost": 630000,
+    "crewTraining": 180000,
+    "expertTraining": 630000,
+    "aceTrainingGE": 3000,
+    "aceTrainingRP": 1140000,
+    "repairCost": {
+      "arcade": [
+        2844,
+        4283
+      ],
+      "realistic": [
+        7474,
+        11257
+      ],
+      "simulator": [
+        10186,
+        15340
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.84,
+      "realistic": 3.02,
+      "simulator": 6.0
+    },
+    "expMultiplier": 2.38
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "id": "spitfire_fr_mk14e",
+  "economy": {
+    "researchCost": 63000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 6090,
+    "crewTraining": 10000,
+    "expertTraining": 320000,
+    "aceTrainingGE": 1100,
+    "aceTrainingRP": 1050000,
+    "repairCost": {
+      "arcade": [
+        1941,
+        1941
+      ],
+      "realistic": [
+        4376,
+        4376
+      ],
+      "simulator": [
+        6215,
+        6215
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.0,
+      "realistic": 4.56,
+      "simulator": 9.54
+    },
+    "expMultiplier": 1.72,
+    "freeRepairs": 30
+  }
+}

@@ -1,0 +1,123 @@
+{
+  "id": "uk_armored_car_mk_2_aa",
+  "performance": {
+    "horsepower": 160.0,
+    "weight": 12.7,
+    "power_to_weight": 12.6,
+    "max_reverse_speed": 12.8,
+    "reload_time": 6.0,
+    "penetration": 38.2,
+    "max_speed": 66.8,
+    "crew_count": 5,
+    "elevation_speed": 20.0,
+    "traverse_speed": 40.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -5.0,
+      87.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 92.0,
+    "mainGun": {
+      "name": "20mm_Oerlikon",
+      "caliber": 20.0,
+      "reloadTime": 6.0,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 7.8,
+        "expert": 6.9,
+        "ace": 6.0
+      },
+      "rateOfFire": 450,
+      "beltReloadTime": 6.0
+    },
+    "ammunitions": [
+      {
+        "name": "20mm_oerlikon_ap",
+        "localizedName": "AP-T",
+        "type": "ap_t",
+        "caliber": 20.0,
+        "mass": 0.14,
+        "muzzleVelocity": 830.0,
+        "deMarre": {
+          "fullCaliber": 20.0,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "Cx": 0.4986
+        },
+        "penetration0m": 38.2
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2000.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 8,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      6.4,
+      9.6,
+      14.4,
+      18.5,
+      24.8,
+      28.9,
+      41.8,
+      66.8
+    ],
+    "reverse_gear_speeds": [
+      5.6,
+      12.8
+    ],
+    "steer_type": null,
+    "empty_weight": 12.5,
+    "track_width": 0.4,
+    "secondary_weapons": null,
+    "main_gun_ammo": 300,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 9200,
+    "purchaseCost": 16000,
+    "crewTraining": 4500,
+    "expertTraining": 16000,
+    "aceTrainingGE": 160,
+    "aceTrainingRP": 190000,
+    "repairCost": {
+      "arcade": [
+        653,
+        847
+      ],
+      "realistic": [
+        532,
+        690
+      ],
+      "simulator": [
+        816,
+        1058
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.42,
+      "realistic": 0.47,
+      "simulator": 0.69
+    },
+    "expMultiplier": 1.18
+  }
+}

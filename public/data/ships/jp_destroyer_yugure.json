@@ -1,0 +1,29 @@
+{
+  "id": "jp_destroyer_yugure",
+  "economy": {
+    "researchCost": 9000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 850,
+    "crewTraining": 3400,
+    "expertTraining": 23000,
+    "aceTrainingGE": 180,
+    "aceTrainingRP": 380000,
+    "repairCost": {
+      "arcade": [
+        711,
+        711
+      ],
+      "realistic": [
+        1264,
+        1264
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.1,
+      "realistic": 4.84,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.18,
+    "freeRepairs": 30
+  }
+}

@@ -1,0 +1,157 @@
+{
+  "id": "il_m_51_w",
+  "performance": {
+    "horsepower": 460.0,
+    "weight": 40.0,
+    "power_to_weight": 11.5,
+    "max_reverse_speed": 4.9,
+    "reload_time": 7.5,
+    "penetration": 400.0,
+    "max_speed": 38.0,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 24.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -8.0,
+      20.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 28.0,
+    "mainGun": {
+      "name": "105mm_M_51",
+      "caliber": 105.0,
+      "reloadTime": 7.5,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 9.75,
+        "expert": 8.62,
+        "ace": 7.5
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "105mm_occ_f1",
+        "localizedName": "OCC 105 F1",
+        "type": "heat_tank",
+        "caliber": 105.0,
+        "mass": 10.95,
+        "muzzleVelocity": 800.0,
+        "penetration0m": 400.0,
+        "explosiveMassKg": 0.78,
+        "explosiveType": "comp_b",
+        "tntEquivalent": 0.991
+      },
+      {
+        "name": "105mm_oe_f1_mle60",
+        "localizedName": "OE 105 F1 Mle.60",
+        "type": "he_frag_tank",
+        "caliber": 105.0,
+        "mass": 12.1,
+        "muzzleVelocity": 800.0,
+        "explosiveMassKg": 2.0,
+        "explosiveType": "tnt",
+        "tntEquivalent": 2.0
+      },
+      {
+        "name": "105mm_ofph_f1",
+        "localizedName": "OFPH 105 F1",
+        "type": "smoke_tank",
+        "caliber": 105.0,
+        "mass": 11.4,
+        "muzzleVelocity": 600.0,
+        "explosiveMassKg": 0.05,
+        "explosiveType": "smoke_composition",
+        "tntEquivalent": 0.05
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2400.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 5,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      3.7,
+      9.0,
+      15.5,
+      25.1,
+      38.0
+    ],
+    "reverse_gear_speeds": [
+      4.9
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 39.5,
+    "track_width": 0.58,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_M1919A4",
+        "caliber": 7.6,
+        "ammo": 4750,
+        "reloadTime": 8.0,
+        "rateOfFire": 500,
+        "bulletType": "ap_ball"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "12_7mm_M2_HB",
+        "caliber": 12.7,
+        "ammo": 600,
+        "reloadTime": 8.0,
+        "rateOfFire": 575,
+        "bulletType": "ap_i_t_ball_M20"
+      }
+    ],
+    "main_gun_ammo": 56,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 63000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 4880,
+    "crewTraining": 10000,
+    "expertTraining": 320000,
+    "aceTrainingGE": 800,
+    "aceTrainingRP": 1050000,
+    "repairCost": {
+      "arcade": [
+        2096,
+        2096
+      ],
+      "realistic": [
+        2478,
+        2478
+      ],
+      "simulator": [
+        3098,
+        3098
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.31,
+      "realistic": 3.56,
+      "simulator": 4.21
+    },
+    "expMultiplier": 1.72,
+    "freeRepairs": 30
+  }
+}

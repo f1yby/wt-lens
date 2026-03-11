@@ -1,0 +1,33 @@
+{
+  "id": "mig-21_sps_k",
+  "economy": {
+    "researchCost": 210000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 9270,
+    "crewTraining": 10000,
+    "expertTraining": 940000,
+    "aceTrainingGE": 2800,
+    "aceTrainingRP": 2150000,
+    "repairCost": {
+      "arcade": [
+        2024,
+        2024
+      ],
+      "realistic": [
+        7515,
+        7515
+      ],
+      "simulator": [
+        6938,
+        6938
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.6,
+      "realistic": 7.54,
+      "simulator": 12.0
+    },
+    "expMultiplier": 2.32,
+    "freeRepairs": 30
+  }
+}

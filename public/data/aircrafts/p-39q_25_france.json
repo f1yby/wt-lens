@@ -1,0 +1,33 @@
+{
+  "id": "p-39q_25_france",
+  "economy": {
+    "researchCost": 18000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 1300,
+    "crewTraining": 10000,
+    "expertTraining": 67000,
+    "aceTrainingGE": 400,
+    "aceTrainingRP": 570000,
+    "repairCost": {
+      "arcade": [
+        665,
+        665
+      ],
+      "realistic": [
+        2072,
+        2072
+      ],
+      "simulator": [
+        1721,
+        1721
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.14,
+      "realistic": 3.0,
+      "simulator": 5.44
+    },
+    "expMultiplier": 1.36,
+    "freeRepairs": 30
+  }
+}

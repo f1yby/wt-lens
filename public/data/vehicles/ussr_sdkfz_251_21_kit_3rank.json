@@ -1,0 +1,116 @@
+{
+  "id": "ussr_sdkfz_251_21_kit_3rank",
+  "performance": {
+    "horsepower": 100.0,
+    "weight": 8.0,
+    "power_to_weight": 12.5,
+    "max_reverse_speed": 10.7,
+    "reload_time": 14.0,
+    "penetration": null,
+    "max_speed": 52.4,
+    "crew_count": 5,
+    "elevation_speed": 60.0,
+    "traverse_speed": 60.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -5.0,
+      49.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 54.0,
+    "mainGun": null,
+    "ammunitions": null,
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2800.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 8,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      6.4,
+      12.2,
+      16.0,
+      18.3,
+      30.2,
+      31.5,
+      45.9,
+      52.4
+    ],
+    "reverse_gear_speeds": [
+      5.5,
+      10.7
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 7.8,
+    "track_width": 0.28,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "20mm_mg151_20_out_drilling",
+        "caliber": 20.0,
+        "ammo": 1000,
+        "reloadTime": 14.0,
+        "rateOfFire": 700,
+        "bulletType": "he_i_mine"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "20mm_mg151_20_out_drilling",
+        "caliber": 20.0,
+        "ammo": 1000,
+        "reloadTime": 14.0,
+        "rateOfFire": 700,
+        "bulletType": "he_i_mine"
+      }
+    ],
+    "main_gun_ammo": 1000,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 9200,
+    "purchaseCost": 0,
+    "purchaseCostGold": 1300,
+    "crewTraining": 10000,
+    "expertTraining": 67000,
+    "aceTrainingGE": 330,
+    "aceTrainingRP": 570000,
+    "repairCost": {
+      "arcade": [
+        792,
+        792
+      ],
+      "realistic": [
+        661,
+        661
+      ],
+      "simulator": [
+        997,
+        997
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.51,
+      "realistic": 1.79,
+      "simulator": 2.69
+    },
+    "expMultiplier": 1.36,
+    "freeRepairs": 30
+  }
+}

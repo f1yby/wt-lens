@@ -1,0 +1,30 @@
+{
+  "id": "mi_4av",
+  "economy": {
+    "purchaseCost": 390000,
+    "crewTraining": 110000,
+    "expertTraining": 390000,
+    "aceTrainingGE": 1700,
+    "aceTrainingRP": 720000,
+    "repairCost": {
+      "arcade": [
+        9602,
+        12569
+      ],
+      "realistic": [
+        2771,
+        3627
+      ],
+      "simulator": [
+        4486,
+        5871
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.0,
+      "realistic": 3.0,
+      "simulator": 4.3
+    },
+    "expMultiplier": 1.96
+  }
+}

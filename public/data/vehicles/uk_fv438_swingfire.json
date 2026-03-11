@@ -1,0 +1,125 @@
+{
+  "id": "uk_fv438_swingfire",
+  "performance": {
+    "horsepower": 240.0,
+    "weight": 16.2,
+    "power_to_weight": 14.81,
+    "max_reverse_speed": 8.7,
+    "reload_time": null,
+    "penetration": null,
+    "max_speed": 52.4,
+    "crew_count": 5,
+    "elevation_speed": null,
+    "traverse_speed": null,
+    "has_stabilizer": null,
+    "stabilizer_type": "none",
+    "elevation_range": null,
+    "traverse_range": null,
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": null,
+    "mainGun": null,
+    "ammunitions": null,
+    "penetrationData": null,
+    "autoLoader": null,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 3750.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 6,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      9.9,
+      13.7,
+      19.5,
+      27.0,
+      37.7,
+      52.4
+    ],
+    "reverse_gear_speeds": [
+      8.7
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 15.5,
+    "track_width": 0.4,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "170mm_bae_swingfire_fv438_launcher",
+        "caliber": 170.0,
+        "ammo": 7,
+        "rateOfFire": 6,
+        "bulletType": "atgm_tank",
+        "maxDistance": 4000,
+        "maxSpeed": 185,
+        "penetration": 535,
+        "explosiveMass": 3.47,
+        "explosiveType": "comp_b"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "170mm_bae_swingfire_fv438_launcher",
+        "caliber": 170.0,
+        "ammo": 7,
+        "rateOfFire": 6,
+        "bulletType": "atgm_tank",
+        "maxDistance": 4000,
+        "maxSpeed": 185,
+        "penetration": 535,
+        "explosiveMass": 3.47,
+        "explosiveType": "comp_b"
+      },
+      {
+        "trigger": "gunner3",
+        "name": "7_62mm_L3A1",
+        "caliber": 7.6,
+        "ammo": 2500,
+        "reloadTime": 8.0,
+        "rateOfFire": 500,
+        "bulletType": "ap_ball"
+      }
+    ],
+    "main_gun_ammo": null,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 105000,
+    "purchaseCost": 300000,
+    "crewTraining": 86000,
+    "expertTraining": 300000,
+    "aceTrainingGE": 1200,
+    "aceTrainingRP": 720000,
+    "repairCost": {
+      "arcade": [
+        5474,
+        6684
+      ],
+      "realistic": [
+        5520,
+        6740
+      ],
+      "simulator": [
+        9140,
+        11160
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.52,
+      "realistic": 2.1,
+      "simulator": 2.5
+    },
+    "expMultiplier": 1.96
+  }
+}

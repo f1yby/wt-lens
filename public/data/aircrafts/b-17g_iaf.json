@@ -1,0 +1,31 @@
+{
+  "id": "b-17g_iaf",
+  "economy": {
+    "researchCost": 63000,
+    "purchaseCost": 200000,
+    "crewTraining": 57000,
+    "expertTraining": 200000,
+    "aceTrainingGE": 1100,
+    "aceTrainingRP": 520000,
+    "repairCost": {
+      "arcade": [
+        2617,
+        3676
+      ],
+      "realistic": [
+        7554,
+        10278
+      ],
+      "simulator": [
+        15696,
+        21356
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.18,
+      "realistic": 2.35,
+      "simulator": 5.49
+    },
+    "expMultiplier": 1.72
+  }
+}

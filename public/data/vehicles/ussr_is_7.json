@@ -1,0 +1,208 @@
+{
+  "id": "ussr_is_7",
+  "performance": {
+    "horsepower": 1050.0,
+    "weight": 68.0,
+    "power_to_weight": 15.44,
+    "max_reverse_speed": 23.0,
+    "reload_time": 10.0,
+    "penetration": 313.2,
+    "max_speed": 59.6,
+    "crew_count": 5,
+    "elevation_speed": 3.5,
+    "traverse_speed": 20.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -3.0,
+      15.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 18.0,
+    "mainGun": {
+      "name": "130mm_C70",
+      "caliber": 130.0,
+      "reloadTime": 10.0,
+      "autoLoader": true,
+      "reloadTimes": {
+        "base": 10.0,
+        "expert": 10.0,
+        "ace": 10.0
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "130mm_br_482b",
+        "localizedName": "BR-482B",
+        "type": "apcbc_tank",
+        "caliber": 130.0,
+        "mass": 33.4,
+        "muzzleVelocity": 900.0,
+        "deMarre": {
+          "fullCaliber": 130.0,
+          "isApcbc": true,
+          "explosiveMass": 0.115,
+          "Cx": 0.3594
+        },
+        "penetration0m": 313.2,
+        "explosiveMassKg": 0.115,
+        "explosiveType": "a_ix_2",
+        "tntEquivalent": 0.161
+      },
+      {
+        "name": "130mm_of_482m",
+        "localizedName": "OF-482M",
+        "type": "he_frag_tank",
+        "caliber": 130.0,
+        "mass": 33.4,
+        "muzzleVelocity": 900.0,
+        "explosiveMassKg": 3.64,
+        "explosiveType": "tnt",
+        "tntEquivalent": 3.64
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": true,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 1850.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 8,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      5.9,
+      8.5,
+      12.2,
+      16.8,
+      19.9,
+      30.1,
+      42.9,
+      59.6
+    ],
+    "reverse_gear_speeds": [
+      6.5,
+      23.0
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 66.7,
+    "track_width": 0.65,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner2",
+        "name": "14_5mm_KPVT",
+        "caliber": 14.5,
+        "ammo": 200,
+        "reloadTime": 8.0,
+        "rateOfFire": 600,
+        "bulletType": "ap_i_t_ball"
+      },
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_RP46",
+        "caliber": 7.6,
+        "ammo": 400,
+        "reloadTime": 8.0,
+        "rateOfFire": 600,
+        "bulletType": "ap_i_ball"
+      },
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_RP46",
+        "caliber": 7.6,
+        "ammo": 400,
+        "reloadTime": 8.0,
+        "rateOfFire": 600,
+        "bulletType": "ap_i_ball"
+      },
+      {
+        "trigger": "gunner3",
+        "name": "14_5mm_KPVT",
+        "caliber": 14.5,
+        "ammo": 200,
+        "reloadTime": 8.0,
+        "rateOfFire": 600,
+        "bulletType": "ap_i_t_ball"
+      },
+      {
+        "trigger": "gunner4",
+        "name": "7_62mm_RP46",
+        "caliber": 7.6,
+        "ammo": 400,
+        "reloadTime": 8.0,
+        "rateOfFire": 600,
+        "bulletType": "ap_i_ball"
+      },
+      {
+        "trigger": "gunner4",
+        "name": "7_62mm_RP46",
+        "caliber": 7.6,
+        "ammo": 400,
+        "reloadTime": 8.0,
+        "rateOfFire": 600,
+        "bulletType": "ap_i_ball"
+      },
+      {
+        "trigger": "gunner5",
+        "name": "7_62mm_RP46",
+        "caliber": 7.6,
+        "ammo": 400,
+        "reloadTime": 8.0,
+        "rateOfFire": 600,
+        "bulletType": "ap_i_ball"
+      },
+      {
+        "trigger": "gunner5",
+        "name": "7_62mm_RP46",
+        "caliber": 7.6,
+        "ammo": 400,
+        "reloadTime": 8.0,
+        "rateOfFire": 600,
+        "bulletType": "ap_i_ball"
+      }
+    ],
+    "main_gun_ammo": 30,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 160000,
+    "purchaseCost": 450000,
+    "crewTraining": 130000,
+    "expertTraining": 450000,
+    "aceTrainingGE": 2000,
+    "aceTrainingRP": 890000,
+    "repairCost": {
+      "arcade": [
+        6319,
+        8206
+      ],
+      "realistic": [
+        6590,
+        8559
+      ],
+      "simulator": [
+        12477,
+        16204
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.45,
+      "realistic": 2.1,
+      "simulator": 2.5
+    },
+    "expMultiplier": 2.14
+  }
+}

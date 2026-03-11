@@ -1,0 +1,222 @@
+{
+  "id": "cn_wma_301",
+  "performance": {
+    "horsepower": 320.0,
+    "weight": 19.0,
+    "power_to_weight": 16.84,
+    "max_reverse_speed": 7.2,
+    "reload_time": 6.67,
+    "penetration": 337.9,
+    "max_speed": 85.0,
+    "crew_count": 5,
+    "elevation_speed": 6.0,
+    "traverse_speed": 26.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "both",
+    "elevation_range": [
+      -4.5,
+      18.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": [
+      800,
+      600
+    ],
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": 1000.0,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 22.5,
+    "mainGun": {
+      "name": "105mm_AT_WMA",
+      "caliber": 105.0,
+      "reloadTime": 6.67,
+      "autoLoader": true,
+      "reloadTimes": {
+        "base": 6.67,
+        "expert": 6.67,
+        "ace": 6.67
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "105mm_TYPE83_HEAT",
+        "localizedName": "Type-83 HEAT",
+        "type": "heat_fs_tank",
+        "caliber": 105.0,
+        "mass": 11.0,
+        "muzzleVelocity": 1173.5,
+        "penetration0m": 400.0,
+        "explosiveMassKg": 0.97,
+        "explosiveType": "comp_b",
+        "tntEquivalent": 1.232
+      },
+      {
+        "name": "105mm_TYPE83_HESH",
+        "localizedName": "Type-83 HESH",
+        "type": "hesh_tank",
+        "caliber": 105.0,
+        "mass": 11.2,
+        "muzzleVelocity": 731.5,
+        "penetration0m": 127.0,
+        "explosiveMassKg": 2.9937,
+        "explosiveType": "comp_a",
+        "tntEquivalent": 3.772
+      },
+      {
+        "name": "105mm_TYPE83_APDS",
+        "localizedName": "Type-83 APDS",
+        "type": "apds_fs_tungsten_l10_l15_tank",
+        "caliber": 33.0,
+        "mass": 4.2,
+        "muzzleVelocity": 1455.0,
+        "lanzOdermatt": {
+          "workingLength": 327.0,
+          "density": 17500.0,
+          "material": "tungsten",
+          "Cx": 0.2676
+        },
+        "penetration0m": 337.9,
+        "penetrationData": {
+          "at0m": {
+            "angle0": 337.9,
+            "angle30": 292.6,
+            "angle60": 169.0
+          }
+        }
+      },
+      {
+        "name": "105mm_dtb_1_he",
+        "localizedName": "DTB-1",
+        "type": "he_frag_radio_fuse",
+        "caliber": 105.0,
+        "mass": 16.2,
+        "muzzleVelocity": 825.0,
+        "explosiveMassKg": 1.661,
+        "explosiveType": "tnt",
+        "tntEquivalent": 1.661
+      },
+      {
+        "name": "105mm_btm_1",
+        "localizedName": "BTM1",
+        "type": "sapcbc_tank",
+        "caliber": 105.0,
+        "mass": 16.2,
+        "muzzleVelocity": 803.0,
+        "deMarre": {
+          "fullCaliber": 105.0,
+          "isApcbc": true,
+          "explosiveMass": 1.5
+        },
+        "penetration0m": 150.1,
+        "explosiveMassKg": 1.5,
+        "explosiveType": "a_ix_2",
+        "tntEquivalent": 2.1
+      },
+      {
+        "name": "105mm_gp_105",
+        "localizedName": "GP105",
+        "type": "atgm_tandem_tank",
+        "caliber": 105.0,
+        "mass": 18.8,
+        "muzzleVelocity": 370.0,
+        "penetration0m": 750.0
+      }
+    ],
+    "penetrationData": {
+      "at0m": {
+        "angle0": 337.9,
+        "angle30": 292.6,
+        "angle60": 169.0
+      }
+    },
+    "autoLoader": true,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2500.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 9,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      6.5,
+      9.6,
+      13.5,
+      18.1,
+      24.8,
+      32.9,
+      46.4,
+      62.0,
+      85.0
+    ],
+    "reverse_gear_speeds": [
+      7.2
+    ],
+    "steer_type": null,
+    "empty_weight": 18.5,
+    "track_width": 0.4,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_Type86",
+        "caliber": 7.6,
+        "ammo": 1000,
+        "reloadTime": 8.0,
+        "rateOfFire": 700,
+        "bulletType": "ap_i_ball"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "12_7mm_QJC_88A",
+        "caliber": 12.7,
+        "ammo": 600,
+        "reloadTime": 5.0,
+        "rateOfFire": 600,
+        "bulletType": "ap_i_t_ball"
+      }
+    ],
+    "main_gun_ammo": 30,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": true
+  },
+  "economy": {
+    "researchCost": 160000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 8730,
+    "crewTraining": 10000,
+    "expertTraining": 730000,
+    "aceTrainingGE": 2000,
+    "aceTrainingRP": 1780000,
+    "repairCost": {
+      "arcade": [
+        2568,
+        2568
+      ],
+      "realistic": [
+        2706,
+        2706
+      ],
+      "simulator": [
+        3145,
+        3145
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.5,
+      "realistic": 3.2,
+      "simulator": 4.08
+    },
+    "expMultiplier": 2.14,
+    "freeRepairs": 30
+  }
+}

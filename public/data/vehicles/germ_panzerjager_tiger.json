@@ -1,0 +1,165 @@
+{
+  "id": "germ_panzerjager_tiger",
+  "performance": {
+    "horsepower": 600.0,
+    "weight": 75.2,
+    "power_to_weight": 7.98,
+    "max_reverse_speed": 9.1,
+    "reload_time": 18.18,
+    "penetration": 272.4,
+    "max_speed": 38.0,
+    "crew_count": 5,
+    "elevation_speed": 3.0,
+    "traverse_speed": 5.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -7.0,
+      14.0
+    ],
+    "traverse_range": [
+      -10.0,
+      10.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 21.0,
+    "mainGun": {
+      "name": "128mm_PaK44",
+      "caliber": 128.0,
+      "reloadTime": 18.18,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 23.63,
+        "expert": 20.91,
+        "ace": 18.18
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "128mm_pzrg_39_43",
+        "localizedName": "PzGr",
+        "type": "apc_tank",
+        "caliber": 128.0,
+        "mass": 26.35,
+        "muzzleVelocity": 930.0,
+        "deMarre": {
+          "fullCaliber": 128.0,
+          "isApcbc": true,
+          "explosiveMass": 0.55,
+          "Cx": 0.3
+        },
+        "penetration0m": 252.6,
+        "explosiveMassKg": 0.55,
+        "explosiveType": "ph_salz_h10",
+        "tntEquivalent": 0.671
+      },
+      {
+        "name": "128mm_sprgr",
+        "localizedName": "Sprgr. L/5",
+        "type": "he_frag_tank",
+        "caliber": 128.0,
+        "mass": 28.0,
+        "muzzleVelocity": 750.0,
+        "explosiveMassKg": 3.7,
+        "explosiveType": "fp02",
+        "tntEquivalent": 3.7
+      },
+      {
+        "name": "128mm_pzrg_40_43",
+        "localizedName": "PzGr 43",
+        "type": "apcbc_tank",
+        "caliber": 128.0,
+        "mass": 28.3,
+        "muzzleVelocity": 940.0,
+        "deMarre": {
+          "fullCaliber": 128.0,
+          "isApcbc": true,
+          "explosiveMass": 0.55,
+          "Cx": 0.3
+        },
+        "penetration0m": 272.4,
+        "explosiveMassKg": 0.55,
+        "explosiveType": "ph_salz_h10",
+        "tntEquivalent": 0.671
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2500.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 8,
+    "reverse_gears": 4,
+    "forward_gear_speeds": [
+      2.1,
+      3.0,
+      4.1,
+      7.0,
+      10.1,
+      16.1,
+      23.1,
+      38.0
+    ],
+    "reverse_gear_speeds": [
+      3.0,
+      4.0,
+      7.0,
+      9.1
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 74.5,
+    "track_width": 0.65,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_92mm_MG34",
+        "caliber": 7.9,
+        "ammo": 3000,
+        "reloadTime": 8.0,
+        "rateOfFire": 900,
+        "bulletType": "ap_ball"
+      }
+    ],
+    "main_gun_ammo": 40,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 35000,
+    "purchaseCost": 210000,
+    "crewTraining": 61000,
+    "expertTraining": 210000,
+    "aceTrainingGE": 890,
+    "aceTrainingRP": 570000,
+    "repairCost": {
+      "arcade": [
+        4397,
+        5711
+      ],
+      "realistic": [
+        4412,
+        5731
+      ],
+      "simulator": [
+        6315,
+        8201
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.38,
+      "realistic": 2.02,
+      "simulator": 2.47
+    },
+    "expMultiplier": 1.78
+  }
+}

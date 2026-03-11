@@ -1,0 +1,33 @@
+{
+  "id": "f-86f-40_japan_blue_impulse",
+  "economy": {
+    "researchCost": 120000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 8560,
+    "crewTraining": 10000,
+    "expertTraining": 550000,
+    "aceTrainingGE": 1800,
+    "aceTrainingRP": 1600000,
+    "repairCost": {
+      "arcade": [
+        2520,
+        2520
+      ],
+      "realistic": [
+        5827,
+        5827
+      ],
+      "simulator": [
+        6975,
+        6975
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.56,
+      "realistic": 7.6,
+      "simulator": 12.0
+    },
+    "expMultiplier": 2.08,
+    "freeRepairs": 30
+  }
+}

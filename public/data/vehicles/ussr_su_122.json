@@ -1,0 +1,136 @@
+{
+  "id": "ussr_su_122",
+  "performance": {
+    "horsepower": 500.0,
+    "weight": 30.9,
+    "power_to_weight": 16.18,
+    "max_reverse_speed": 8.4,
+    "reload_time": 18.18,
+    "penetration": 160.0,
+    "max_speed": 55.0,
+    "crew_count": 5,
+    "elevation_speed": 5.0,
+    "traverse_speed": 15.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -3.0,
+      25.0
+    ],
+    "traverse_range": [
+      -10.0,
+      10.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 28.0,
+    "mainGun": {
+      "name": "122mm_M30",
+      "caliber": 122.0,
+      "reloadTime": 18.18,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 23.63,
+        "expert": 20.91,
+        "ace": 18.18
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "122mm_of_462",
+        "localizedName": "OF-462",
+        "type": "he_frag_tank",
+        "caliber": 122.0,
+        "mass": 21.76,
+        "muzzleVelocity": 515.0,
+        "explosiveMassKg": 3.672,
+        "explosiveType": "tnt",
+        "tntEquivalent": 3.672
+      },
+      {
+        "name": "122mm_bp_462",
+        "localizedName": "BP-460A",
+        "type": "heat_tank",
+        "caliber": 122.0,
+        "mass": 13.4,
+        "muzzleVelocity": 335.0,
+        "penetration0m": 160.0,
+        "explosiveMassKg": 2.18,
+        "explosiveType": "a_ix_1",
+        "tntEquivalent": 2.485
+      },
+      {
+        "name": "122mm_d462a",
+        "localizedName": "D-462A",
+        "type": "smoke_tank",
+        "caliber": 122.0,
+        "mass": 22.32,
+        "muzzleVelocity": 515.0,
+        "explosiveMassKg": 0.05,
+        "explosiveType": "smoke_composition",
+        "tntEquivalent": 0.05
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 1800.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 5,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      7.5,
+      16.0,
+      22.4,
+      34.2,
+      55.0
+    ],
+    "reverse_gear_speeds": [
+      8.4
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 30.5,
+    "track_width": 0.55,
+    "secondary_weapons": null,
+    "main_gun_ammo": 40,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 9200,
+    "purchaseCost": 16000,
+    "crewTraining": 4500,
+    "expertTraining": 16000,
+    "aceTrainingGE": 160,
+    "aceTrainingRP": 190000,
+    "repairCost": {
+      "arcade": [
+        600,
+        742
+      ],
+      "realistic": [
+        660,
+        817
+      ],
+      "simulator": [
+        801,
+        991
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.4,
+      "realistic": 0.61,
+      "simulator": 0.75
+    },
+    "expMultiplier": 1.18
+  }
+}

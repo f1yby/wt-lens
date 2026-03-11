@@ -1,0 +1,179 @@
+{
+  "id": "jp_pzkpfw_VI_ausf_e_tiger",
+  "performance": {
+    "horsepower": 700.0,
+    "weight": 57.32,
+    "power_to_weight": 12.21,
+    "max_reverse_speed": 8.3,
+    "reload_time": 7.41,
+    "penetration": 164.8,
+    "max_speed": 44.9,
+    "crew_count": 5,
+    "elevation_speed": 3.0,
+    "traverse_speed": 14.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -8.0,
+      16.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 24.0,
+    "mainGun": {
+      "name": "88mm_Kwk36",
+      "caliber": 88.0,
+      "reloadTime": 7.41,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 9.63,
+        "expert": 8.52,
+        "ace": 7.41
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "88mm_pzrg_39",
+        "localizedName": "PzGr 39",
+        "type": "apcbc_tank",
+        "caliber": 88.0,
+        "mass": 10.2,
+        "muzzleVelocity": 773.0,
+        "deMarre": {
+          "fullCaliber": 88.0,
+          "isApcbc": true,
+          "explosiveMass": 0.064,
+          "Cx": 0.33
+        },
+        "penetration0m": 164.8,
+        "explosiveMassKg": 0.064,
+        "explosiveType": "h10",
+        "tntEquivalent": 0.09
+      },
+      {
+        "name": "88mm_sprgr",
+        "localizedName": "Sprgr. L/4.5",
+        "type": "he_frag_tank",
+        "caliber": 88.0,
+        "mass": 9.0,
+        "muzzleVelocity": 820.0,
+        "explosiveMassKg": 0.9,
+        "explosiveType": "fp02",
+        "tntEquivalent": 0.9
+      },
+      {
+        "name": "88mm_pzgr",
+        "localizedName": "Pzgr.",
+        "type": "apcbc_tank",
+        "caliber": 88.0,
+        "mass": 9.5,
+        "muzzleVelocity": 810.0,
+        "deMarre": {
+          "fullCaliber": 88.0,
+          "isApcbc": true,
+          "explosiveMass": 0.168,
+          "Cx": 0.33
+        },
+        "penetration0m": 153.7,
+        "explosiveMassKg": 0.168,
+        "explosiveType": "fp10_np10",
+        "tntEquivalent": 0.213
+      },
+      {
+        "name": "88mm_grhl39",
+        "localizedName": "Hl.Gr 39",
+        "type": "heat_tank",
+        "caliber": 88.0,
+        "mass": 7.64,
+        "muzzleVelocity": 600.0,
+        "penetration0m": 110.0,
+        "explosiveMassKg": 0.646,
+        "explosiveType": "h5",
+        "tntEquivalent": 0.904
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 3000.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 8,
+    "reverse_gears": 4,
+    "forward_gear_speeds": [
+      2.8,
+      4.2,
+      6.1,
+      9.1,
+      13.9,
+      20.6,
+      30.1,
+      44.9
+    ],
+    "reverse_gear_speeds": [
+      2.7,
+      4.1,
+      5.9,
+      8.3
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 57.0,
+    "track_width": 0.65,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_92mm_MG34",
+        "caliber": 7.9,
+        "ammo": 2400,
+        "reloadTime": 8.0,
+        "rateOfFire": 900,
+        "bulletType": "ap_ball"
+      }
+    ],
+    "main_gun_ammo": 92,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 63000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 4880,
+    "crewTraining": 10000,
+    "expertTraining": 320000,
+    "aceTrainingGE": 800,
+    "aceTrainingRP": 1050000,
+    "repairCost": {
+      "arcade": [
+        2437,
+        2437
+      ],
+      "realistic": [
+        2585,
+        2585
+      ],
+      "simulator": [
+        3603,
+        3603
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.43,
+      "realistic": 3.71,
+      "simulator": 4.16
+    },
+    "expMultiplier": 1.72,
+    "freeRepairs": 30
+  }
+}

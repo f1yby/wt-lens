@@ -1,0 +1,33 @@
+{
+  "id": "hs-129b-2_romania",
+  "economy": {
+    "researchCost": 26000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 1450,
+    "crewTraining": 10000,
+    "expertTraining": 115000,
+    "aceTrainingGE": 500,
+    "aceTrainingRP": 640000,
+    "repairCost": {
+      "arcade": [
+        619,
+        619
+      ],
+      "realistic": [
+        1521,
+        1521
+      ],
+      "simulator": [
+        8422,
+        8422
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.29,
+      "realistic": 3.22,
+      "simulator": 5.72
+    },
+    "expMultiplier": 1.42,
+    "freeRepairs": 30
+  }
+}

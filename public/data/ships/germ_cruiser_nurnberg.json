@@ -1,0 +1,27 @@
+{
+  "id": "germ_cruiser_nurnberg",
+  "economy": {
+    "researchCost": 30000,
+    "purchaseCost": 185000,
+    "crewTraining": 53000,
+    "expertTraining": 185000,
+    "aceTrainingGE": 1100,
+    "aceTrainingRP": 520000,
+    "repairCost": {
+      "arcade": [
+        11276,
+        14663
+      ],
+      "realistic": [
+        10943,
+        14231
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 4.5,
+      "realistic": 6.0,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.72
+  }
+}

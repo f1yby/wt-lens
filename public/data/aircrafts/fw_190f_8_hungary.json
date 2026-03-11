@@ -1,0 +1,31 @@
+{
+  "id": "fw_190f_8_hungary",
+  "economy": {
+    "researchCost": 71000,
+    "purchaseCost": 210000,
+    "crewTraining": 61000,
+    "expertTraining": 210000,
+    "aceTrainingGE": 1200,
+    "aceTrainingRP": 570000,
+    "repairCost": {
+      "arcade": [
+        2826,
+        3709
+      ],
+      "realistic": [
+        4807,
+        6123
+      ],
+      "simulator": [
+        9101,
+        11594
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.12,
+      "realistic": 1.86,
+      "simulator": 5.08
+    },
+    "expMultiplier": 1.78
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "id": "fa_18f_block_2_raaf",
+  "economy": {
+    "researchCost": 400000,
+    "purchaseCost": 1080000,
+    "crewTraining": 310000,
+    "expertTraining": 1080000,
+    "aceTrainingGE": 3800,
+    "aceTrainingRP": 1400000,
+    "repairCost": {
+      "arcade": [
+        2988,
+        4501
+      ],
+      "realistic": [
+        8590,
+        12937
+      ],
+      "simulator": [
+        10108,
+        15223
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.96,
+      "realistic": 3.24,
+      "simulator": 5.08
+    },
+    "expMultiplier": 2.68
+  }
+}

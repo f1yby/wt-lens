@@ -1,0 +1,203 @@
+{
+  "id": "fr_amx_30_b2_brenus",
+  "performance": {
+    "horsepower": 680.0,
+    "weight": 38.2,
+    "power_to_weight": 17.8,
+    "max_reverse_speed": 65.1,
+    "reload_time": 6.67,
+    "penetration": 361.0,
+    "max_speed": 65.1,
+    "crew_count": 5,
+    "elevation_speed": 6.0,
+    "traverse_speed": 30.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -8.0,
+      20.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": [
+      500,
+      300
+    ],
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": 583.1,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 28.0,
+    "mainGun": {
+      "name": "105mm_CN_105_F1",
+      "caliber": 105.0,
+      "reloadTime": 6.67,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 8.67,
+        "expert": 7.67,
+        "ace": 6.67
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "105mm_occ_f1",
+        "localizedName": "OCC 105 F1",
+        "type": "heat_tank",
+        "caliber": 105.0,
+        "mass": 10.95,
+        "muzzleVelocity": 1000.0,
+        "penetration0m": 400.0,
+        "explosiveMassKg": 0.78,
+        "explosiveType": "comp_b",
+        "tntEquivalent": 0.991
+      },
+      {
+        "name": "105mm_oe_f1_mle60",
+        "localizedName": "OE 105 F1 Mle.60",
+        "type": "he_frag_tank",
+        "caliber": 105.0,
+        "mass": 12.1,
+        "muzzleVelocity": 700.0,
+        "explosiveMassKg": 2.0,
+        "explosiveType": "tnt",
+        "tntEquivalent": 2.0
+      },
+      {
+        "name": "105mm_ofl_105_f1",
+        "localizedName": "OFL 105 F1",
+        "type": "apds_fs_long_tank",
+        "caliber": 26.0,
+        "mass": 3.8,
+        "muzzleVelocity": 1525.0,
+        "lanzOdermatt": {
+          "workingLength": 380.0,
+          "density": 17500.0,
+          "material": "tungsten",
+          "Cx": 0.49
+        },
+        "penetration0m": 361.0,
+        "penetrationData": {
+          "at0m": {
+            "angle0": 361.0,
+            "angle30": 312.6,
+            "angle60": 180.5
+          }
+        }
+      },
+      {
+        "name": "105mm_ofph_f1",
+        "localizedName": "OFPH 105 F1",
+        "type": "smoke_tank",
+        "caliber": 105.0,
+        "mass": 11.4,
+        "muzzleVelocity": 700.0,
+        "explosiveMassKg": 0.05,
+        "explosiveType": "smoke_composition",
+        "tntEquivalent": 0.05
+      }
+    ],
+    "penetrationData": {
+      "at0m": {
+        "angle0": 361.0,
+        "angle30": 312.6,
+        "angle60": 180.5
+      }
+    },
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2400.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 10,
+    "reverse_gears": 10,
+    "forward_gear_speeds": [
+      4.0,
+      6.9,
+      10.0,
+      10.8,
+      17.3,
+      17.4,
+      26.0,
+      27.1,
+      43.4,
+      65.1
+    ],
+    "reverse_gear_speeds": [
+      4.0,
+      6.9,
+      10.0,
+      10.8,
+      17.3,
+      17.4,
+      26.0,
+      27.1,
+      43.4,
+      65.1
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 37.4,
+    "track_width": 0.57,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "20mm_M_693",
+        "caliber": 20.0,
+        "ammo": 1000,
+        "reloadTime": 10.0,
+        "rateOfFire": 740,
+        "bulletType": "he_frag_i_t"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "7_62mm_AAN_F1",
+        "caliber": 7.6,
+        "ammo": 2100,
+        "reloadTime": 8.0,
+        "rateOfFire": 900,
+        "bulletType": "ap_ball"
+      }
+    ],
+    "main_gun_ammo": 47,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": true
+  },
+  "economy": {
+    "researchCost": 94000,
+    "purchaseCost": 520000,
+    "crewTraining": 150000,
+    "expertTraining": 520000,
+    "aceTrainingGE": 2100,
+    "aceTrainingRP": 950000,
+    "repairCost": {
+      "arcade": [
+        4247,
+        6321
+      ],
+      "realistic": [
+        4624,
+        6881
+      ],
+      "simulator": [
+        5886,
+        8759
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.42,
+      "realistic": 2.06,
+      "simulator": 2.5
+    },
+    "expMultiplier": 2.2
+  }
+}

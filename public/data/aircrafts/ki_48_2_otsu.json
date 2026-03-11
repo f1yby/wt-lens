@@ -1,0 +1,33 @@
+{
+  "id": "ki_48_2_otsu",
+  "economy": {
+    "researchCost": 7900,
+    "purchaseCost": 0,
+    "purchaseCostGold": 700,
+    "crewTraining": 2300,
+    "expertTraining": 15000,
+    "aceTrainingGE": 125,
+    "aceTrainingRP": 320000,
+    "repairCost": {
+      "arcade": [
+        336,
+        336
+      ],
+      "realistic": [
+        523,
+        523
+      ],
+      "simulator": [
+        772,
+        772
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.74,
+      "realistic": 1.52,
+      "simulator": 2.99
+    },
+    "expMultiplier": 1.12,
+    "freeRepairs": 30
+  }
+}

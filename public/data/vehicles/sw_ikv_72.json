@@ -1,0 +1,172 @@
+{
+  "id": "sw_ikv_72",
+  "performance": {
+    "horsepower": 145.0,
+    "weight": 8.0,
+    "power_to_weight": 18.12,
+    "max_reverse_speed": 7.6,
+    "reload_time": 5.88,
+    "penetration": 85.7,
+    "max_speed": 56.6,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 8.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -20.0,
+      20.0
+    ],
+    "traverse_range": [
+      -10.0,
+      10.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 40.0,
+    "mainGun": {
+      "name": "75mm_kan_m41_open_turret",
+      "caliber": 75.0,
+      "reloadTime": 5.88,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 7.64,
+        "expert": 6.76,
+        "ace": 5.88
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "75mm_slpprj_m40",
+        "localizedName": "slpprj m/40",
+        "type": "ap_tank",
+        "caliber": 75.0,
+        "mass": 6.6,
+        "muzzleVelocity": 580.0,
+        "deMarre": {
+          "fullCaliber": 75.0,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "Cx": 0.5
+        },
+        "penetration0m": 85.7
+      },
+      {
+        "name": "75mm_slpprj_m40b",
+        "localizedName": "slpprj m/40B",
+        "type": "apbc_tank",
+        "caliber": 75.0,
+        "mass": 6.3,
+        "muzzleVelocity": 590.0,
+        "deMarre": {
+          "fullCaliber": 75.0,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "Cx": 0.5
+        },
+        "penetration0m": 85.0
+      },
+      {
+        "name": "75mm_rokgr_m22",
+        "localizedName": "rökgr m/22",
+        "type": "smoke_tank",
+        "caliber": 75.0,
+        "mass": 6.6,
+        "muzzleVelocity": 496.0,
+        "explosiveMassKg": 0.008,
+        "explosiveType": "smoke_composition",
+        "tntEquivalent": 0.008
+      },
+      {
+        "name": "75mm_sgr_m40",
+        "localizedName": "sgr m/40",
+        "type": "he_frag_tank",
+        "caliber": 75.0,
+        "mass": 6.43,
+        "muzzleVelocity": 570.0,
+        "explosiveMassKg": 0.58,
+        "explosiveType": "tnt",
+        "tntEquivalent": 0.58
+      },
+      {
+        "name": "75mm_slpgr_m39",
+        "localizedName": "slpgr m/39",
+        "type": "aphe_tank",
+        "caliber": 75.0,
+        "mass": 6.5,
+        "muzzleVelocity": 580.0,
+        "deMarre": {
+          "fullCaliber": 75.0,
+          "isApcbc": false,
+          "explosiveMass": 0.26,
+          "Cx": 0.6
+        },
+        "penetration0m": 63.6,
+        "explosiveMassKg": 0.26,
+        "explosiveType": "tnt",
+        "tntEquivalent": 0.26
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 3600.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 5,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      7.5,
+      14.2,
+      26.5,
+      41.0,
+      56.6
+    ],
+    "reverse_gear_speeds": [
+      7.6
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 7.8,
+    "track_width": null,
+    "secondary_weapons": null,
+    "main_gun_ammo": 42,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 2900,
+    "purchaseCost": 700,
+    "crewTraining": 200,
+    "expertTraining": 1000,
+    "aceTrainingGE": 20,
+    "aceTrainingRP": 96000,
+    "repairCost": {
+      "arcade": [
+        105,
+        130
+      ],
+      "realistic": [
+        110,
+        137
+      ],
+      "simulator": [
+        137,
+        170
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.1,
+      "realistic": 0.15,
+      "simulator": 0.19
+    },
+    "expMultiplier": 1.0
+  }
+}

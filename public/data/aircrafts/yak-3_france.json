@@ -1,0 +1,33 @@
+{
+  "id": "yak-3_france",
+  "economy": {
+    "researchCost": 33000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 1600,
+    "crewTraining": 10000,
+    "expertTraining": 165000,
+    "aceTrainingGE": 590,
+    "aceTrainingRP": 710000,
+    "repairCost": {
+      "arcade": [
+        687,
+        687
+      ],
+      "realistic": [
+        4616,
+        4616
+      ],
+      "simulator": [
+        2533,
+        2533
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.33,
+      "realistic": 4.39,
+      "simulator": 6.75
+    },
+    "expMultiplier": 1.48,
+    "freeRepairs": 30
+  }
+}

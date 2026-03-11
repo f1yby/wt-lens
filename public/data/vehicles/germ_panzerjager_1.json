@@ -1,0 +1,138 @@
+{
+  "id": "germ_panzerjager_1",
+  "performance": {
+    "horsepower": 100.0,
+    "weight": 6.4,
+    "power_to_weight": 15.62,
+    "max_reverse_speed": 4.1,
+    "reload_time": 3.03,
+    "penetration": 115.5,
+    "max_speed": 42.3,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 12.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -8.0,
+      10.0
+    ],
+    "traverse_range": [
+      -15.0,
+      15.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 18.0,
+    "mainGun": {
+      "name": "47mm_PaK_t_Sf",
+      "caliber": 47.0,
+      "reloadTime": 3.03,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 3.94,
+        "expert": 3.48,
+        "ace": 3.03
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "47mm_pzgr_36t",
+        "localizedName": "Pzgr.36(t)",
+        "type": "apc_tank",
+        "caliber": 47.0,
+        "mass": 1.65,
+        "muzzleVelocity": 775.0,
+        "deMarre": {
+          "fullCaliber": 47.0,
+          "isApcbc": true,
+          "explosiveMass": 0.015,
+          "Cx": 0.6
+        },
+        "penetration0m": 87.1,
+        "explosiveMassKg": 0.015,
+        "explosiveType": "fp02",
+        "tntEquivalent": 0.015
+      },
+      {
+        "name": "47mm_pzgr_40",
+        "localizedName": "Pzgr.40",
+        "type": "apcr_tank",
+        "caliber": 21.0,
+        "mass": 0.825,
+        "muzzleVelocity": 1080.0,
+        "deMarre": {
+          "fullCaliber": 47.0,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "isApcr": true,
+          "coreCaliber": 21.0,
+          "coreMass": 0.335,
+          "Cx": 0.47
+        },
+        "penetration0m": 115.5
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 3000.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 5,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      6.7,
+      14.1,
+      26.2,
+      32.0,
+      42.3
+    ],
+    "reverse_gear_speeds": [
+      4.1
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 6.3,
+    "track_width": 0.28,
+    "secondary_weapons": null,
+    "main_gun_ammo": 86,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 4000,
+    "purchaseCost": 2100,
+    "crewTraining": 600,
+    "expertTraining": 2100,
+    "aceTrainingGE": 45,
+    "aceTrainingRP": 110000,
+    "repairCost": {
+      "arcade": [
+        200,
+        248
+      ],
+      "realistic": [
+        219,
+        271
+      ],
+      "simulator": [
+        253,
+        313
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.16,
+      "realistic": 0.25,
+      "simulator": 0.31
+    },
+    "expMultiplier": 1.0
+  }
+}

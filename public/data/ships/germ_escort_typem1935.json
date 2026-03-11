@@ -1,0 +1,27 @@
+{
+  "id": "germ_escort_typem1935",
+  "economy": {
+    "researchCost": 120000,
+    "purchaseCost": 360000,
+    "crewTraining": 105000,
+    "expertTraining": 360000,
+    "aceTrainingGE": 1200,
+    "aceTrainingRP": 570000,
+    "repairCost": {
+      "arcade": [
+        4631,
+        5907
+      ],
+      "realistic": [
+        7260,
+        9260
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.18,
+      "realistic": 2.09,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.78
+  }
+}

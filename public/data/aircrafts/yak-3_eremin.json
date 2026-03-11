@@ -1,0 +1,33 @@
+{
+  "id": "yak-3_eremin",
+  "economy": {
+    "researchCost": 26000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 1450,
+    "crewTraining": 10000,
+    "expertTraining": 115000,
+    "aceTrainingGE": 500,
+    "aceTrainingRP": 640000,
+    "repairCost": {
+      "arcade": [
+        654,
+        654
+      ],
+      "realistic": [
+        1455,
+        1455
+      ],
+      "simulator": [
+        2177,
+        2177
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.19,
+      "realistic": 2.95,
+      "simulator": 6.13
+    },
+    "expMultiplier": 1.42,
+    "freeRepairs": 30
+  }
+}

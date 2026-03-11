@@ -1,0 +1,27 @@
+{
+  "id": "jp_cruiser_haguro",
+  "economy": {
+    "researchCost": 73000,
+    "purchaseCost": 230000,
+    "crewTraining": 67000,
+    "expertTraining": 230000,
+    "aceTrainingGE": 1200,
+    "aceTrainingRP": 570000,
+    "repairCost": {
+      "arcade": [
+        11420,
+        15412
+      ],
+      "realistic": [
+        11318,
+        15274
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 4.5,
+      "realistic": 6.0,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.78
+  }
+}

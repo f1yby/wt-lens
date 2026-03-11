@@ -1,0 +1,31 @@
+{
+  "id": "f-4e_kurnass_2000",
+  "economy": {
+    "researchCost": 290000,
+    "purchaseCost": 780000,
+    "crewTraining": 220000,
+    "expertTraining": 780000,
+    "aceTrainingGE": 3400,
+    "aceTrainingRP": 1280000,
+    "repairCost": {
+      "arcade": [
+        3031,
+        4097
+      ],
+      "realistic": [
+        8914,
+        12046
+      ],
+      "simulator": [
+        9680,
+        13081
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.03,
+      "realistic": 3.19,
+      "simulator": 6.0
+    },
+    "expMultiplier": 2.5
+  }
+}

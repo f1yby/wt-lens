@@ -1,0 +1,105 @@
+{
+  "id": "jp_sub_i_ii_20mm",
+  "performance": {
+    "horsepower": 350.0,
+    "weight": 13.5,
+    "power_to_weight": 25.93,
+    "max_reverse_speed": 14.8,
+    "reload_time": 8.0,
+    "penetration": null,
+    "max_speed": 59.7,
+    "crew_count": 5,
+    "elevation_speed": 20.0,
+    "traverse_speed": 60.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -10.0,
+      80.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 90.0,
+    "mainGun": null,
+    "ammunitions": null,
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2200.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 8,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      8.0,
+      15.9,
+      19.9,
+      26.5,
+      31.3,
+      38.2,
+      46.6,
+      59.7
+    ],
+    "reverse_gear_speeds": [
+      7.4,
+      14.8
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 13.0,
+    "track_width": 0.4,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_M1919A4",
+        "caliber": 7.6,
+        "ammo": 1000,
+        "reloadTime": 8.0,
+        "rateOfFire": 500,
+        "bulletType": "ap_ball"
+      }
+    ],
+    "main_gun_ammo": 800,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 46000,
+    "purchaseCost": 155000,
+    "crewTraining": 45000,
+    "expertTraining": 155000,
+    "aceTrainingGE": 630,
+    "aceTrainingRP": 440000,
+    "repairCost": {
+      "arcade": [
+        2794,
+        3775
+      ],
+      "realistic": [
+        2217,
+        2996
+      ],
+      "simulator": [
+        3429,
+        4633
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.1,
+      "realistic": 1.41,
+      "simulator": 1.96
+    },
+    "expMultiplier": 1.6
+  }
+}

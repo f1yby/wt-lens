@@ -1,0 +1,31 @@
+{
+  "id": "spitfire_mk5c_notrop",
+  "economy": {
+    "researchCost": 17000,
+    "purchaseCost": 105000,
+    "crewTraining": 30000,
+    "expertTraining": 105000,
+    "aceTrainingGE": 590,
+    "aceTrainingRP": 360000,
+    "repairCost": {
+      "arcade": [
+        1232,
+        1594
+      ],
+      "realistic": [
+        2820,
+        3543
+      ],
+      "simulator": [
+        4169,
+        5237
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.7,
+      "realistic": 1.6,
+      "simulator": 3.32
+    },
+    "expMultiplier": 1.48
+  }
+}

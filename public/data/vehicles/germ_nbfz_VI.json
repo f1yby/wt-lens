@@ -1,0 +1,193 @@
+{
+  "id": "germ_nbfz_VI",
+  "performance": {
+    "horsepower": 290.0,
+    "weight": 23.4,
+    "power_to_weight": 12.39,
+    "max_reverse_speed": 3.9,
+    "reload_time": 3.33,
+    "penetration": 80.0,
+    "max_speed": 30.3,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 15.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -10.0,
+      22.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 32.0,
+    "mainGun": {
+      "name": "75mm_KwK37_for_nbfz",
+      "caliber": 75.0,
+      "reloadTime": 3.33,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 4.33,
+        "expert": 3.83,
+        "ace": 3.33
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "75mm_pzgr_rot",
+        "localizedName": "K.Gr.rot Pz.",
+        "type": "apcbc_tank",
+        "caliber": 75.0,
+        "mass": 6.8,
+        "muzzleVelocity": 385.0,
+        "deMarre": {
+          "fullCaliber": 75.0,
+          "isApcbc": true,
+          "explosiveMass": 0.08,
+          "Cx": 0.5
+        },
+        "penetration0m": 52.0,
+        "explosiveMassKg": 0.08,
+        "explosiveType": "fp02_np10",
+        "tntEquivalent": 0.102
+      },
+      {
+        "name": "75mm_sprgr_34",
+        "localizedName": "Sprgr. 34",
+        "type": "he_frag_tank",
+        "caliber": 75.0,
+        "mass": 5.74,
+        "muzzleVelocity": 420.0,
+        "explosiveMassKg": 0.686,
+        "explosiveType": "tnt",
+        "tntEquivalent": 0.686
+      },
+      {
+        "name": "75mm_grhl_38_b",
+        "localizedName": "Hl.Gr 38B",
+        "type": "heat_tank",
+        "caliber": 75.0,
+        "mass": 4.57,
+        "muzzleVelocity": 450.0,
+        "penetration0m": 80.0,
+        "explosiveMassKg": 0.513,
+        "explosiveType": "h5",
+        "tntEquivalent": 0.718
+      },
+      {
+        "name": "75mm_k_gr_rot_nb",
+        "localizedName": "K.Gr.Rot Nb.",
+        "type": "smoke_tank",
+        "caliber": 75.0,
+        "mass": 6.2,
+        "muzzleVelocity": 423.0,
+        "explosiveMassKg": 0.05,
+        "explosiveType": "smoke_composition",
+        "tntEquivalent": 0.05
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 1400.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 6,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      3.9,
+      7.4,
+      11.6,
+      17.3,
+      23.3,
+      30.3
+    ],
+    "reverse_gear_speeds": [
+      3.9
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 23.0,
+    "track_width": 0.38,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_92mm_MG13_Dreyse",
+        "caliber": 7.9,
+        "ammo": 1950,
+        "reloadTime": 8.0,
+        "rateOfFire": 500,
+        "bulletType": "ap_i_ball"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "37mm_KwK36_for_nbfz",
+        "caliber": 37.0,
+        "ammo": 50,
+        "rateOfFire": 21,
+        "bulletType": "aphe_tank"
+      },
+      {
+        "trigger": "gunner3",
+        "name": "7_92mm_MG13_Dreyse",
+        "caliber": 7.9,
+        "ammo": 1950,
+        "reloadTime": 8.0,
+        "rateOfFire": 500,
+        "bulletType": "ap_i_ball"
+      },
+      {
+        "trigger": "gunner4",
+        "name": "7_92mm_MG13_Dreyse",
+        "caliber": 7.9,
+        "ammo": 1950,
+        "reloadTime": 8.0,
+        "rateOfFire": 500,
+        "bulletType": "ap_i_ball"
+      }
+    ],
+    "main_gun_ammo": 80,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 7900,
+    "purchaseCost": 0,
+    "purchaseCostGold": 1750,
+    "crewTraining": 2300,
+    "expertTraining": 15000,
+    "aceTrainingGE": 115,
+    "aceTrainingRP": 320000,
+    "repairCost": {
+      "arcade": [
+        809,
+        809
+      ],
+      "realistic": [
+        269,
+        269
+      ],
+      "simulator": [
+        313,
+        313
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.72,
+      "realistic": 0.84,
+      "simulator": 1.13
+    },
+    "expMultiplier": 1.12,
+    "freeRepairs": 30
+  }
+}

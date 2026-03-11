@@ -1,0 +1,31 @@
+{
+  "id": "he51c1_late",
+  "economy": {
+    "researchCost": 1500,
+    "purchaseCost": 700,
+    "crewTraining": 200,
+    "expertTraining": 1000,
+    "aceTrainingGE": 20,
+    "aceTrainingRP": 96000,
+    "repairCost": {
+      "arcade": [
+        101,
+        125
+      ],
+      "realistic": [
+        151,
+        186
+      ],
+      "simulator": [
+        92,
+        113
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.1,
+      "realistic": 0.23,
+      "simulator": 0.84
+    },
+    "expMultiplier": 1.0
+  }
+}

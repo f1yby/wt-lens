@@ -1,0 +1,27 @@
+{
+  "id": "us_battleship_mississippi",
+  "economy": {
+    "researchCost": 260000,
+    "purchaseCost": 780000,
+    "crewTraining": 220000,
+    "expertTraining": 780000,
+    "aceTrainingGE": 2200,
+    "aceTrainingRP": 890000,
+    "repairCost": {
+      "arcade": [
+        26458,
+        34496
+      ],
+      "realistic": [
+        32079,
+        41824
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 4.5,
+      "realistic": 6.0,
+      "simulator": 1.0
+    },
+    "expMultiplier": 2.14
+  }
+}

@@ -1,0 +1,165 @@
+{
+  "id": "ussr_asu_57",
+  "performance": {
+    "horsepower": 55.0,
+    "weight": 3.35,
+    "power_to_weight": 16.42,
+    "max_reverse_speed": 5.2,
+    "reload_time": 5.0,
+    "penetration": 163.9,
+    "max_speed": 45.8,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 12.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -5.0,
+      12.0
+    ],
+    "traverse_range": [
+      -8.0,
+      8.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 17.0,
+    "mainGun": {
+      "name": "57mm_Ch51M",
+      "caliber": 57.0,
+      "reloadTime": 5.0,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 6.5,
+        "expert": 5.75,
+        "ace": 5.0
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "57mm_br_271sp",
+        "localizedName": "BR-271SP",
+        "type": "apbc_tank",
+        "caliber": 57.0,
+        "mass": 3.14,
+        "muzzleVelocity": 975.0,
+        "deMarre": {
+          "fullCaliber": 57.0,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "Cx": 0.372
+        },
+        "penetration0m": 142.5
+      },
+      {
+        "name": "57mm_br_271m",
+        "localizedName": "BR-271M",
+        "type": "apcbc_tank",
+        "caliber": 57.0,
+        "mass": 2.8,
+        "muzzleVelocity": 1020.0,
+        "deMarre": {
+          "fullCaliber": 57.0,
+          "isApcbc": true,
+          "explosiveMass": 0.013
+        },
+        "penetration0m": 155.7,
+        "explosiveMassKg": 0.013,
+        "explosiveType": "a_ix_2",
+        "tntEquivalent": 0.018
+      },
+      {
+        "name": "57mm_o_271",
+        "localizedName": "O-271",
+        "type": "he_frag_tank",
+        "caliber": 57.0,
+        "mass": 3.72,
+        "muzzleVelocity": 695.0,
+        "explosiveMassKg": 0.22,
+        "explosiveType": "tnt",
+        "tntEquivalent": 0.22
+      },
+      {
+        "name": "57mm_br_271n",
+        "localizedName": "BR-271N",
+        "type": "apcr_tank",
+        "caliber": 28.0,
+        "mass": 2.4,
+        "muzzleVelocity": 1125.0,
+        "deMarre": {
+          "fullCaliber": 57.0,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "isApcr": true,
+          "coreCaliber": 28.0,
+          "coreMass": 0.648,
+          "Cx": 0.2796
+        },
+        "penetration0m": 163.9
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 3600.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 4,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      6.3,
+      13.4,
+      24.0,
+      45.8
+    ],
+    "reverse_gear_speeds": [
+      5.2
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 3.05,
+    "track_width": 0.35,
+    "secondary_weapons": null,
+    "main_gun_ammo": 30,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 18000,
+    "purchaseCost": 47000,
+    "crewTraining": 13000,
+    "expertTraining": 47000,
+    "aceTrainingGE": 330,
+    "aceTrainingRP": 280000,
+    "repairCost": {
+      "arcade": [
+        955,
+        1250
+      ],
+      "realistic": [
+        1203,
+        1575
+      ],
+      "simulator": [
+        1568,
+        2052
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.69,
+      "realistic": 1.05,
+      "simulator": 1.35
+    },
+    "expMultiplier": 1.36
+  }
+}

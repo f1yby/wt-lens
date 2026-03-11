@@ -1,0 +1,183 @@
+{
+  "id": "fr_mars_15",
+  "performance": {
+    "horsepower": 400.0,
+    "weight": 16.0,
+    "power_to_weight": 25.0,
+    "max_reverse_speed": 75.1,
+    "reload_time": 5.0,
+    "penetration": 277.2,
+    "max_speed": 75.1,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 24.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -8.0,
+      15.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 23.0,
+    "mainGun": {
+      "name": "90mm_CN_90_F4",
+      "caliber": 90.0,
+      "reloadTime": 5.0,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 6.5,
+        "expert": 5.75,
+        "ace": 5.0
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "90mm_occ_90_f2",
+        "localizedName": "OCC 90 F2",
+        "type": "heat_fs_tank",
+        "caliber": 90.0,
+        "mass": 8.95,
+        "muzzleVelocity": 950.0,
+        "penetration0m": 350.0,
+        "explosiveMassKg": 0.67,
+        "explosiveType": "comp_b",
+        "tntEquivalent": 0.851
+      },
+      {
+        "name": "90mm_ofum_90_f1",
+        "localizedName": "OFUM 90 F1",
+        "type": "smoke_tank",
+        "caliber": 90.0,
+        "mass": 10.2,
+        "muzzleVelocity": 750.0,
+        "explosiveMassKg": 0.05,
+        "explosiveType": "smoke_composition",
+        "tntEquivalent": 0.05
+      },
+      {
+        "name": "90mm_oe_90_f1",
+        "localizedName": "OE 90 F1",
+        "type": "he_frag_tank",
+        "caliber": 90.0,
+        "mass": 10.45,
+        "muzzleVelocity": 750.0,
+        "explosiveMassKg": 0.945,
+        "explosiveType": "tnt",
+        "tntEquivalent": 0.945
+      },
+      {
+        "name": "90mm_ofl_f1",
+        "localizedName": "OFL 90 F1",
+        "type": "apds_fs_long_tank",
+        "caliber": 26.0,
+        "mass": 3.8,
+        "muzzleVelocity": 1275.0,
+        "lanzOdermatt": {
+          "workingLength": 380.0,
+          "density": 17500.0,
+          "material": "tungsten",
+          "Cx": 0.49
+        },
+        "penetration0m": 277.2,
+        "penetrationData": {
+          "at0m": {
+            "angle0": 277.2,
+            "angle30": 240.1,
+            "angle60": 138.6
+          }
+        }
+      }
+    ],
+    "penetrationData": {
+      "at0m": {
+        "angle0": 277.2,
+        "angle30": 240.1,
+        "angle60": 138.6
+      }
+    },
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2900.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 6,
+    "reverse_gears": 6,
+    "forward_gear_speeds": [
+      8.8,
+      16.4,
+      24.6,
+      39.4,
+      59.1,
+      75.1
+    ],
+    "reverse_gear_speeds": [
+      8.8,
+      16.4,
+      24.6,
+      39.4,
+      59.1,
+      75.1
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 15.2,
+    "track_width": 0.35,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_AAN_F1",
+        "caliber": 7.6,
+        "ammo": 2000,
+        "reloadTime": 8.0,
+        "rateOfFire": 900,
+        "bulletType": "ap_ball"
+      }
+    ],
+    "main_gun_ammo": 30,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": true
+  },
+  "economy": {
+    "researchCost": 135000,
+    "purchaseCost": 380000,
+    "crewTraining": 110000,
+    "expertTraining": 380000,
+    "aceTrainingGE": 1400,
+    "aceTrainingRP": 830000,
+    "repairCost": {
+      "arcade": [
+        3221,
+        4948
+      ],
+      "realistic": [
+        3650,
+        5607
+      ],
+      "simulator": [
+        4456,
+        6846
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.18,
+      "realistic": 1.65,
+      "simulator": 2.01
+    },
+    "expMultiplier": 2.08
+  }
+}

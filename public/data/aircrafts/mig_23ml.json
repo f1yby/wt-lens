@@ -1,0 +1,33 @@
+{
+  "id": "mig_23ml",
+  "economy": {
+    "researchCost": 290000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 9800,
+    "crewTraining": 10000,
+    "expertTraining": 1280000,
+    "aceTrainingGE": 3400,
+    "aceTrainingRP": 2560000,
+    "repairCost": {
+      "arcade": [
+        2052,
+        2052
+      ],
+      "realistic": [
+        6124,
+        6124
+      ],
+      "simulator": [
+        6119,
+        6119
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.06,
+      "realistic": 6.37,
+      "simulator": 12.0
+    },
+    "expMultiplier": 2.5,
+    "freeRepairs": 30
+  }
+}

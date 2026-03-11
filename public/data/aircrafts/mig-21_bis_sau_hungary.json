@@ -1,0 +1,31 @@
+{
+  "id": "mig-21_bis_sau_hungary",
+  "economy": {
+    "researchCost": 115000,
+    "purchaseCost": 630000,
+    "crewTraining": 180000,
+    "expertTraining": 630000,
+    "aceTrainingGE": 3000,
+    "aceTrainingRP": 1140000,
+    "repairCost": {
+      "arcade": [
+        2838,
+        4090
+      ],
+      "realistic": [
+        8121,
+        11702
+      ],
+      "simulator": [
+        8295,
+        11952
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.13,
+      "realistic": 3.12,
+      "simulator": 6.0
+    },
+    "expMultiplier": 2.38
+  }
+}

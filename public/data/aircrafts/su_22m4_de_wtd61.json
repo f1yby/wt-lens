@@ -1,0 +1,33 @@
+{
+  "id": "su_22m4_de_wtd61",
+  "economy": {
+    "researchCost": 230000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 9450,
+    "crewTraining": 10000,
+    "expertTraining": 1030000,
+    "aceTrainingGE": 3000,
+    "aceTrainingRP": 2280000,
+    "repairCost": {
+      "arcade": [
+        2207,
+        2207
+      ],
+      "realistic": [
+        5509,
+        5509
+      ],
+      "simulator": [
+        7318,
+        7318
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.83,
+      "realistic": 6.64,
+      "simulator": 12.0
+    },
+    "expMultiplier": 2.38,
+    "freeRepairs": 30
+  }
+}

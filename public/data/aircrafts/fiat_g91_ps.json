@@ -1,0 +1,31 @@
+{
+  "id": "fiat_g91_ps",
+  "economy": {
+    "researchCost": 105000,
+    "purchaseCost": 300000,
+    "crewTraining": 86000,
+    "expertTraining": 300000,
+    "aceTrainingGE": 1700,
+    "aceTrainingRP": 720000,
+    "repairCost": {
+      "arcade": [
+        3313,
+        4477
+      ],
+      "realistic": [
+        9281,
+        12542
+      ],
+      "simulator": [
+        11364,
+        15357
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.2,
+      "realistic": 3.69,
+      "simulator": 6.0
+    },
+    "expMultiplier": 1.96
+  }
+}

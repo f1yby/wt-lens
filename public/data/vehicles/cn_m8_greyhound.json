@@ -1,0 +1,138 @@
+{
+  "id": "cn_m8_greyhound",
+  "performance": {
+    "horsepower": 110.0,
+    "weight": 7.89,
+    "power_to_weight": 13.94,
+    "max_reverse_speed": 12.9,
+    "reload_time": 3.53,
+    "penetration": 87.7,
+    "max_speed": 90.5,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 20.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -10.0,
+      20.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 30.0,
+    "mainGun": {
+      "name": "37mm_M6",
+      "caliber": 37.0,
+      "reloadTime": 3.53,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 4.59,
+        "expert": 4.06,
+        "ace": 3.53
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "37mm_m74b1",
+        "localizedName": "M74B1 shot",
+        "type": "ap_tank",
+        "caliber": 37.0,
+        "mass": 0.87,
+        "muzzleVelocity": 883.0,
+        "deMarre": {
+          "fullCaliber": 37.0,
+          "isApcbc": false,
+          "explosiveMass": 0
+        },
+        "penetration0m": 79.0
+      },
+      {
+        "name": "37mm_m51b1",
+        "localizedName": "M51B1 shot",
+        "type": "apcbc_solid_medium_caliber_tank",
+        "caliber": 37.0,
+        "mass": 0.87,
+        "muzzleVelocity": 883.0,
+        "deMarre": {
+          "fullCaliber": 37.0,
+          "isApcbc": true,
+          "explosiveMass": 0
+        },
+        "penetration0m": 87.7
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 3000.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 8,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      7.1,
+      13.1,
+      13.9,
+      25.5,
+      26.4,
+      46.3,
+      51.6,
+      90.5
+    ],
+    "reverse_gear_speeds": [
+      6.6,
+      12.9
+    ],
+    "steer_type": null,
+    "empty_weight": 7.68,
+    "track_width": 0.25,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_M1919A4",
+        "caliber": 7.6,
+        "ammo": 1500,
+        "reloadTime": 8.0,
+        "rateOfFire": 500,
+        "bulletType": "ap_ball"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "12_7mm_M2_HB",
+        "caliber": 12.7,
+        "ammo": 400,
+        "reloadTime": 8.0,
+        "rateOfFire": 575,
+        "bulletType": "ap_i_t_ball_M20"
+      }
+    ],
+    "main_gun_ammo": 80,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "purchaseCost": 0,
+    "crewTraining": 0,
+    "expertTraining": 1000,
+    "aceTrainingGE": 10,
+    "aceTrainingRP": 80000,
+    "rewardMultiplier": {
+      "arcade": 0.1,
+      "realistic": 0.1,
+      "simulator": 0.1
+    },
+    "expMultiplier": 1.0
+  }
+}

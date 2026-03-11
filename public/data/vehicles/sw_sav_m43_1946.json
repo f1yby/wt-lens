@@ -1,0 +1,140 @@
+{
+  "id": "sw_sav_m43_1946",
+  "performance": {
+    "horsepower": 160.0,
+    "weight": 12.0,
+    "power_to_weight": 13.33,
+    "max_reverse_speed": 5.9,
+    "reload_time": 10.0,
+    "penetration": 240.0,
+    "max_speed": 40.8,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 8.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -14.0,
+      20.0
+    ],
+    "traverse_range": [
+      -20.0,
+      15.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 34.0,
+    "mainGun": {
+      "name": "105mm_kan_m44",
+      "caliber": 105.0,
+      "reloadTime": 10.0,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 13.0,
+        "expert": 11.5,
+        "ace": 10.0
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "105mm_slpprj_m44",
+        "localizedName": "slpprj m/44",
+        "type": "apbc_tank",
+        "caliber": 105.0,
+        "mass": 11.67,
+        "muzzleVelocity": 475.0,
+        "deMarre": {
+          "fullCaliber": 105.0,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "Cx": 0.5
+        },
+        "penetration0m": 67.3
+      },
+      {
+        "name": "105mm_sgr_m34_lt",
+        "localizedName": "sgr m/34 LT",
+        "type": "he_frag_tank",
+        "caliber": 105.0,
+        "mass": 11.67,
+        "muzzleVelocity": 475.0,
+        "explosiveMassKg": 1.82,
+        "explosiveType": "tnt",
+        "tntEquivalent": 1.82
+      },
+      {
+        "name": "105mm_psgr_m49",
+        "localizedName": "psgr m/49",
+        "type": "heat_tank",
+        "caliber": 105.0,
+        "mass": 10.25,
+        "muzzleVelocity": 425.0,
+        "penetration0m": 240.0,
+        "explosiveMassKg": 0.95,
+        "explosiveType": "comp_b",
+        "tntEquivalent": 1.206
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2300.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 5,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      4.0,
+      10.0,
+      16.0,
+      25.5,
+      40.8
+    ],
+    "reverse_gear_speeds": [
+      5.9
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 11.7,
+    "track_width": 0.25,
+    "secondary_weapons": null,
+    "main_gun_ammo": 41,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 11000,
+    "purchaseCost": 22000,
+    "crewTraining": 6300,
+    "expertTraining": 22000,
+    "aceTrainingGE": 210,
+    "aceTrainingRP": 220000,
+    "repairCost": {
+      "arcade": [
+        779,
+        965
+      ],
+      "realistic": [
+        889,
+        1100
+      ],
+      "simulator": [
+        1062,
+        1315
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.52,
+      "realistic": 0.8,
+      "simulator": 0.99
+    },
+    "expMultiplier": 1.24
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "id": "ki-49_2b",
+  "economy": {
+    "researchCost": 18000,
+    "purchaseCost": 47000,
+    "crewTraining": 13000,
+    "expertTraining": 47000,
+    "aceTrainingGE": 400,
+    "aceTrainingRP": 280000,
+    "repairCost": {
+      "arcade": [
+        1105,
+        1464
+      ],
+      "realistic": [
+        1935,
+        2487
+      ],
+      "simulator": [
+        3799,
+        4883
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.74,
+      "realistic": 1.51,
+      "simulator": 2.55
+    },
+    "expMultiplier": 1.36
+  }
+}

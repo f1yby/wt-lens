@@ -1,0 +1,139 @@
+{
+  "id": "germ_spz_oerlikon_raketenautomat",
+  "performance": {
+    "horsepower": 240.0,
+    "weight": 16.0,
+    "power_to_weight": 15.0,
+    "max_reverse_speed": 14.2,
+    "reload_time": 0.4,
+    "penetration": 330.0,
+    "max_speed": 61.9,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 20.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -10.0,
+      20.0
+    ],
+    "traverse_range": [
+      0.0,
+      0.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 30.0,
+    "mainGun": {
+      "name": "81mm_Oerlikon_Typ_3Z_8Dla_Raketenautomat",
+      "caliber": 81.0,
+      "reloadTime": 0.4,
+      "autoLoader": true,
+      "reloadTimes": {
+        "base": 0.4,
+        "expert": 0.4,
+        "ace": 0.4
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "81mm_pl03",
+        "localizedName": "Pl-3",
+        "type": "heat_grenade_tank",
+        "caliber": 81.0,
+        "mass": 13.2,
+        "muzzleVelocity": 820.0,
+        "penetration0m": 330.0
+      },
+      {
+        "name": "81mm_ssk032",
+        "localizedName": "SSK 032",
+        "type": "he_grenade_tank",
+        "caliber": 81.0,
+        "mass": 19.7,
+        "muzzleVelocity": 820.0
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": true,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 3750.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 8,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      5.2,
+      7.5,
+      10.9,
+      15.7,
+      22.4,
+      32.2,
+      47.4,
+      61.9
+    ],
+    "reverse_gear_speeds": [
+      14.2
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 15.5,
+    "track_width": 0.4,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "81mm_Oerlikon_Typ_3Z_8Dla_Raketenautomat",
+        "caliber": 81.0,
+        "ammo": 18,
+        "rateOfFire": 150,
+        "bulletType": "heat_grenade_tank",
+        "maxDistance": 6000,
+        "maxSpeed": 820,
+        "penetration": 330,
+        "explosiveMass": 1.0,
+        "explosiveType": "tnt"
+      }
+    ],
+    "main_gun_ammo": 18,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 105000,
+    "purchaseCost": 300000,
+    "crewTraining": 86000,
+    "expertTraining": 300000,
+    "aceTrainingGE": 1200,
+    "aceTrainingRP": 720000,
+    "repairCost": {
+      "arcade": [
+        5508,
+        6684
+      ],
+      "realistic": [
+        5553,
+        6740
+      ],
+      "simulator": [
+        9196,
+        11160
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.52,
+      "realistic": 2.1,
+      "simulator": 2.5
+    },
+    "expMultiplier": 1.96
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "id": "tornado_f3",
+  "economy": {
+    "researchCost": 260000,
+    "purchaseCost": 720000,
+    "crewTraining": 200000,
+    "expertTraining": 720000,
+    "aceTrainingGE": 3200,
+    "aceTrainingRP": 1210000,
+    "repairCost": {
+      "arcade": [
+        2691,
+        4065
+      ],
+      "realistic": [
+        7916,
+        11957
+      ],
+      "simulator": [
+        9268,
+        14001
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.02,
+      "realistic": 3.16,
+      "simulator": 5.39
+    },
+    "expMultiplier": 2.44
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "id": "yak-4",
+  "economy": {
+    "researchCost": 4000,
+    "purchaseCost": 2100,
+    "crewTraining": 600,
+    "expertTraining": 2100,
+    "aceTrainingGE": 45,
+    "aceTrainingRP": 110000,
+    "repairCost": {
+      "arcade": [
+        223,
+        311
+      ],
+      "realistic": [
+        345,
+        466
+      ],
+      "simulator": [
+        583,
+        788
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.2,
+      "realistic": 0.4,
+      "simulator": 0.76
+    },
+    "expMultiplier": 1.0
+  }
+}

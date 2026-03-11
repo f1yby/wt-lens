@@ -1,0 +1,27 @@
+{
+  "id": "us_cruiser_baltimore_class",
+  "economy": {
+    "researchCost": 180000,
+    "purchaseCost": 540000,
+    "crewTraining": 155000,
+    "expertTraining": 540000,
+    "aceTrainingGE": 1800,
+    "aceTrainingRP": 780000,
+    "repairCost": {
+      "arcade": [
+        12722,
+        17169
+      ],
+      "realistic": [
+        12691,
+        17127
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 4.5,
+      "realistic": 6.0,
+      "simulator": 1.0
+    },
+    "expMultiplier": 2.02
+  }
+}

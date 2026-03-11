@@ -1,0 +1,130 @@
+{
+  "id": "sw_bkan_1c",
+  "performance": {
+    "horsepower": 600.0,
+    "weight": 53.0,
+    "power_to_weight": 11.32,
+    "max_reverse_speed": 30.2,
+    "reload_time": 3.21,
+    "penetration": null,
+    "max_speed": 30.2,
+    "crew_count": 5,
+    "elevation_speed": 5.0,
+    "traverse_speed": 10.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -3.0,
+      40.0
+    ],
+    "traverse_range": [
+      -15.0,
+      15.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 43.0,
+    "mainGun": {
+      "name": "155mm_Bkan",
+      "caliber": 155.0,
+      "reloadTime": 3.21,
+      "autoLoader": true,
+      "reloadTimes": {
+        "base": 3.21,
+        "expert": 3.21,
+        "ace": 3.21
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "155mm_sgr_m60",
+        "localizedName": "sgr m/60",
+        "type": "he_frag_tank",
+        "caliber": 155.0,
+        "mass": 48.0,
+        "muzzleVelocity": 850.0,
+        "explosiveMassKg": 7.5,
+        "explosiveType": "tnt",
+        "tntEquivalent": 7.5
+      },
+      {
+        "name": "155mm_zonar_m65",
+        "localizedName": "sgr m/60 (PF)",
+        "type": "he_frag_radio_fuse",
+        "caliber": 155.0,
+        "mass": 48.0,
+        "muzzleVelocity": 850.0,
+        "explosiveMassKg": 7.5,
+        "explosiveType": "tnt",
+        "tntEquivalent": 7.5
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": true,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2800.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 6,
+    "reverse_gears": 6,
+    "forward_gear_speeds": [
+      4.3,
+      6.1,
+      9.8,
+      12.6,
+      16.8,
+      30.2
+    ],
+    "reverse_gear_speeds": [
+      4.3,
+      6.1,
+      9.8,
+      12.6,
+      16.8,
+      30.2
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 52.0,
+    "track_width": 0.67,
+    "secondary_weapons": null,
+    "main_gun_ammo": 14,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 71000,
+    "purchaseCost": 210000,
+    "crewTraining": 61000,
+    "expertTraining": 210000,
+    "aceTrainingGE": 890,
+    "aceTrainingRP": 570000,
+    "repairCost": {
+      "arcade": [
+        4257,
+        5268
+      ],
+      "realistic": [
+        4630,
+        5731
+      ],
+      "simulator": [
+        6626,
+        8201
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.31,
+      "realistic": 2.02,
+      "simulator": 2.47
+    },
+    "expMultiplier": 1.78
+  }
+}

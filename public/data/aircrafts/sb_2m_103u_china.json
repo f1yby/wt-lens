@@ -1,0 +1,31 @@
+{
+  "id": "sb_2m_103u_china",
+  "economy": {
+    "researchCost": 4600,
+    "purchaseCost": 16000,
+    "crewTraining": 4500,
+    "expertTraining": 16000,
+    "aceTrainingGE": 180,
+    "aceTrainingRP": 190000,
+    "repairCost": {
+      "arcade": [
+        666,
+        919
+      ],
+      "realistic": [
+        1065,
+        1426
+      ],
+      "simulator": [
+        1582,
+        2118
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.46,
+      "realistic": 0.99,
+      "simulator": 1.95
+    },
+    "expMultiplier": 1.18
+  }
+}

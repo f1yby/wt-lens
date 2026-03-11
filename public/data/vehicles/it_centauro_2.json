@@ -1,0 +1,215 @@
+{
+  "id": "it_centauro_2",
+  "performance": {
+    "horsepower": 720.0,
+    "weight": 30.0,
+    "power_to_weight": 24.0,
+    "max_reverse_speed": 13.4,
+    "reload_time": 5.0,
+    "penetration": 623.6,
+    "max_speed": 109.7,
+    "crew_count": 5,
+    "elevation_speed": 28.6,
+    "traverse_speed": 22.9,
+    "has_stabilizer": true,
+    "stabilizer_type": "both",
+    "elevation_range": [
+      -7.0,
+      16.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": [
+      1200,
+      800
+    ],
+    "commander_thermal_resolution": [
+      1200,
+      800
+    ],
+    "gunner_thermal_diagonal": 1442.2,
+    "commander_thermal_diagonal": 1442.2,
+    "stabilizer_value": 1,
+    "elevation_range_value": 23.0,
+    "mainGun": {
+      "name": "120mm_OTO_Leonardo_120_45",
+      "caliber": 120.0,
+      "reloadTime": 5.0,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 6.5,
+        "expert": 5.75,
+        "ace": 5.0
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "120mm_dm12a1",
+        "localizedName": "DM12A1",
+        "type": "heat_fs_tank",
+        "caliber": 120.0,
+        "mass": 13.5,
+        "muzzleVelocity": 1140.0,
+        "penetration0m": 480.0,
+        "explosiveMassKg": 1.64,
+        "explosiveType": "comp_b",
+        "tntEquivalent": 2.083
+      },
+      {
+        "name": "120mm_m322",
+        "localizedName": "CL3143",
+        "type": "apds_fs_long_l30_tank",
+        "caliber": 25.0,
+        "mass": 5.6,
+        "muzzleVelocity": 1705.0,
+        "lanzOdermatt": {
+          "workingLength": 620.0,
+          "density": 17500.0,
+          "material": "tungsten",
+          "Cx": 0.73
+        },
+        "penetration0m": 588.6,
+        "penetrationData": {
+          "at0m": {
+            "angle0": 588.6,
+            "angle30": 509.7,
+            "angle60": 294.3
+          }
+        }
+      },
+      {
+        "name": "120mm_m339",
+        "localizedName": "M339",
+        "type": "he_frag_dist_fuse",
+        "caliber": 120.0,
+        "mass": 17.0,
+        "muzzleVelocity": 900.0,
+        "explosiveMassKg": 2.3,
+        "explosiveType": "clx_663",
+        "tntEquivalent": 2.875
+      },
+      {
+        "name": "120mm_dm53",
+        "localizedName": "DM53",
+        "type": "apds_fs_long_l30_tank",
+        "caliber": 23.0,
+        "mass": 5.0,
+        "muzzleVelocity": 1670.0,
+        "lanzOdermatt": {
+          "workingLength": 685.0,
+          "density": 17500.0,
+          "material": "tungsten",
+          "Cx": 0.74
+        },
+        "penetration0m": 623.6,
+        "penetrationData": {
+          "at0m": {
+            "angle0": 623.6,
+            "angle30": 540.1,
+            "angle60": 311.8
+          }
+        }
+      }
+    ],
+    "penetrationData": {
+      "at0m": {
+        "angle0": 623.6,
+        "angle30": 540.1,
+        "angle60": 311.8
+      }
+    },
+    "autoLoader": false,
+    "engine_manufacturer": "iveco",
+    "engine_model": "iveco_vector_8v",
+    "engine_type": null,
+    "engine_max_rpm": 2400.0,
+    "transmission_manufacturer": "iveco",
+    "transmission_model": "zf_7hp_902",
+    "transmission_type": "auto",
+    "forward_gears": 14,
+    "reverse_gears": 4,
+    "forward_gear_speeds": [
+      7.5,
+      11.6,
+      15.4,
+      18.9,
+      24.6,
+      32.2,
+      39.0,
+      45.6,
+      54.8,
+      64.7,
+      74.4,
+      78.0,
+      98.1,
+      109.7
+    ],
+    "reverse_gear_speeds": [
+      7.4,
+      11.6,
+      12.9,
+      13.4
+    ],
+    "steer_type": null,
+    "empty_weight": 29.7,
+    "track_width": 0.4,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_Beretta_MG42_59",
+        "caliber": 7.6,
+        "ammo": 2000,
+        "reloadTime": 8.0,
+        "rateOfFire": 800,
+        "bulletType": "ap_ball"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "12_7mm_M2_HB_for_400",
+        "caliber": 12.7,
+        "ammo": 400,
+        "reloadTime": 8.0,
+        "rateOfFire": 575,
+        "bulletType": "ap_i_t_ball_M20"
+      }
+    ],
+    "main_gun_ammo": 32,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": true
+  },
+  "economy": {
+    "researchCost": 400000,
+    "purchaseCost": 1080000,
+    "crewTraining": 310000,
+    "expertTraining": 1080000,
+    "aceTrainingGE": 2200,
+    "aceTrainingRP": 1280000,
+    "repairCost": {
+      "arcade": [
+        3392,
+        5740
+      ],
+      "realistic": [
+        3476,
+        5882
+      ],
+      "simulator": [
+        3747,
+        6340
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.36,
+      "realistic": 1.62,
+      "simulator": 2.01
+    },
+    "expMultiplier": 2.5
+  }
+}

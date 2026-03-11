@@ -1,0 +1,29 @@
+{
+  "id": "it_destroyer_leone_class_tigre",
+  "economy": {
+    "researchCost": 25000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 1750,
+    "crewTraining": 10000,
+    "expertTraining": 135000,
+    "aceTrainingGE": 700,
+    "aceTrainingRP": 790000,
+    "repairCost": {
+      "arcade": [
+        3443,
+        3443
+      ],
+      "realistic": [
+        3052,
+        3052
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 6.0,
+      "realistic": 12.0,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.54,
+    "freeRepairs": 30
+  }
+}

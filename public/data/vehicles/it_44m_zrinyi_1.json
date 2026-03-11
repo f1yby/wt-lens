@@ -1,0 +1,160 @@
+{
+  "id": "it_44m_zrinyi_1",
+  "performance": {
+    "horsepower": 260.0,
+    "weight": 22.0,
+    "power_to_weight": 11.82,
+    "max_reverse_speed": 40.1,
+    "reload_time": 5.88,
+    "penetration": 145.8,
+    "max_speed": 40.1,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 14.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -8.0,
+      25.0
+    ],
+    "traverse_range": [
+      -12.0,
+      10.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 33.0,
+    "mainGun": {
+      "name": "75mm_43M",
+      "caliber": 75.0,
+      "reloadTime": 5.88,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 7.64,
+        "expert": 6.76,
+        "ace": 5.88
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "75mm_43m",
+        "localizedName": "43.M páncélgránát",
+        "type": "apcbc_tank",
+        "caliber": 75.0,
+        "mass": 6.8,
+        "muzzleVelocity": 770.0,
+        "deMarre": {
+          "fullCaliber": 75.0,
+          "isApcbc": true,
+          "explosiveMass": 0.017,
+          "Cx": 0.4
+        },
+        "penetration0m": 145.8,
+        "explosiveMassKg": 0.017,
+        "explosiveType": "h10",
+        "tntEquivalent": 0.024
+      },
+      {
+        "name": "75mm_43m_he",
+        "localizedName": "43.M repeszgránát",
+        "type": "he_frag_tank",
+        "caliber": 75.0,
+        "mass": 5.74,
+        "muzzleVelocity": 550.0,
+        "explosiveMassKg": 0.686,
+        "explosiveType": "tnt",
+        "tntEquivalent": 0.686
+      },
+      {
+        "name": "75mm_43m_heat",
+        "localizedName": "43.M páncélrobbantó gránát",
+        "type": "heat_tank",
+        "caliber": 75.0,
+        "mass": 4.4,
+        "muzzleVelocity": 550.0,
+        "penetration0m": 80.0,
+        "explosiveMassKg": 0.513,
+        "explosiveType": "h5",
+        "tntEquivalent": 0.718
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2200.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 6,
+    "reverse_gears": 6,
+    "forward_gear_speeds": [
+      4.0,
+      5.6,
+      11.2,
+      18.7,
+      32.7,
+      40.1
+    ],
+    "reverse_gear_speeds": [
+      4.0,
+      5.6,
+      11.2,
+      18.7,
+      32.7,
+      40.1
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 21.5,
+    "track_width": 0.42,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner2",
+        "name": "158mm_NB_Wf_41_rocket_launcher",
+        "caliber": 0,
+        "ammo": 6,
+        "reloadTime": 8.0,
+        "rateOfFire": 60
+      }
+    ],
+    "main_gun_ammo": 40,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 33000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 1600,
+    "crewTraining": 10000,
+    "expertTraining": 165000,
+    "aceTrainingGE": 470,
+    "aceTrainingRP": 710000,
+    "repairCost": {
+      "arcade": [
+        838,
+        838
+      ],
+      "realistic": [
+        1052,
+        1052
+      ],
+      "simulator": [
+        1202,
+        1202
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.75,
+      "realistic": 2.65,
+      "simulator": 3.39
+    },
+    "expMultiplier": 1.48,
+    "freeRepairs": 30
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "id": "wellington_mk10",
+  "economy": {
+    "researchCost": 6900,
+    "purchaseCost": 32000,
+    "crewTraining": 9200,
+    "expertTraining": 32000,
+    "aceTrainingGE": 320,
+    "aceTrainingRP": 250000,
+    "repairCost": {
+      "arcade": [
+        923,
+        1289
+      ],
+      "realistic": [
+        1554,
+        2103
+      ],
+      "simulator": [
+        3229,
+        4369
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.64,
+      "realistic": 1.33,
+      "simulator": 2.2
+    },
+    "expMultiplier": 1.3
+  }
+}

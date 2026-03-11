@@ -1,0 +1,31 @@
+{
+  "id": "uh_1b",
+  "economy": {
+    "researchCost": 99000,
+    "purchaseCost": 390000,
+    "crewTraining": 110000,
+    "expertTraining": 390000,
+    "aceTrainingGE": 1700,
+    "aceTrainingRP": 720000,
+    "repairCost": {
+      "arcade": [
+        9465,
+        12670
+      ],
+      "realistic": [
+        2785,
+        3728
+      ],
+      "simulator": [
+        4671,
+        6253
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.0,
+      "realistic": 3.0,
+      "simulator": 4.3
+    },
+    "expMultiplier": 1.96
+  }
+}

@@ -1,0 +1,162 @@
+{
+  "id": "it_lancia3ro_100",
+  "performance": {
+    "horsepower": 93.0,
+    "weight": 8.45,
+    "power_to_weight": 11.01,
+    "max_reverse_speed": 11.1,
+    "reload_time": 10.0,
+    "penetration": 110.0,
+    "max_speed": 45.0,
+    "crew_count": 5,
+    "elevation_speed": 6.0,
+    "traverse_speed": 14.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -8.0,
+      48.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 56.0,
+    "mainGun": {
+      "name": "100mm_Mod_1914_100_17",
+      "caliber": 100.0,
+      "reloadTime": 10.0,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 13.0,
+        "expert": 11.5,
+        "ace": 10.0
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "100mm_gr_mod32",
+        "localizedName": "Granata da 100 Mod.32",
+        "type": "he_frag_tank",
+        "caliber": 100.0,
+        "mass": 13.49,
+        "muzzleVelocity": 399.0,
+        "explosiveMassKg": 2.218,
+        "explosiveType": "tnt",
+        "tntEquivalent": 2.218
+      },
+      {
+        "name": "100mm_gr_mod914",
+        "localizedName": "Granata da 100 Mod.914",
+        "type": "ac_shell_tank",
+        "caliber": 100.0,
+        "mass": 16.2,
+        "muzzleVelocity": 244.0,
+        "explosiveMassKg": 1.55,
+        "explosiveType": "tnt",
+        "tntEquivalent": 1.55
+      },
+      {
+        "name": "100mm_ep",
+        "localizedName": "Effetto Pronto da 100",
+        "type": "hesh_tank",
+        "caliber": 100.0,
+        "mass": 10.45,
+        "muzzleVelocity": 399.0,
+        "penetration0m": 75.0,
+        "explosiveMassKg": 1.65,
+        "explosiveType": "rdx_tnt",
+        "tntEquivalent": 2.112
+      },
+      {
+        "name": "105mm_ep_m43",
+        "localizedName": "Effetto Pronto mod.43",
+        "type": "heat_tank",
+        "caliber": 100.0,
+        "mass": 12.5,
+        "muzzleVelocity": 431.0,
+        "penetration0m": 110.0,
+        "explosiveMassKg": 1.2,
+        "explosiveType": "rdx_tnt",
+        "tntEquivalent": 1.536
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 1860.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 8,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      7.2,
+      9.0,
+      12.0,
+      16.0,
+      19.4,
+      26.5,
+      33.5,
+      45.0
+    ],
+    "reverse_gear_speeds": [
+      8.5,
+      11.1
+    ],
+    "steer_type": null,
+    "empty_weight": 8.3,
+    "track_width": 0.5,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "8mm_Breda_Mod38",
+        "caliber": 8.0,
+        "ammo": 1680,
+        "reloadTime": 8.0,
+        "rateOfFire": 600,
+        "bulletType": "ap_i_t_ball"
+      }
+    ],
+    "main_gun_ammo": 72,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 5900,
+    "purchaseCost": 6300,
+    "crewTraining": 1800,
+    "expertTraining": 6300,
+    "aceTrainingGE": 75,
+    "aceTrainingRP": 135000,
+    "repairCost": {
+      "arcade": [
+        305,
+        381
+      ],
+      "realistic": [
+        329,
+        411
+      ],
+      "simulator": [
+        396,
+        495
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.22,
+      "realistic": 0.34,
+      "simulator": 0.42
+    },
+    "expMultiplier": 1.06
+  }
+}

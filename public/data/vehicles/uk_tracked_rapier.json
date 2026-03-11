@@ -1,0 +1,108 @@
+{
+  "id": "uk_tracked_rapier",
+  "performance": {
+    "horsepower": 213.0,
+    "weight": 14.0,
+    "power_to_weight": 15.21,
+    "max_reverse_speed": 14.0,
+    "reload_time": null,
+    "penetration": null,
+    "max_speed": 61.1,
+    "crew_count": 5,
+    "elevation_speed": null,
+    "traverse_speed": null,
+    "has_stabilizer": null,
+    "stabilizer_type": "none",
+    "elevation_range": null,
+    "traverse_range": null,
+    "gunner_thermal_resolution": [
+      500,
+      300
+    ],
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": 583.1,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": null,
+    "mainGun": null,
+    "ammunitions": null,
+    "penetrationData": null,
+    "autoLoader": null,
+    "engine_manufacturer": "general_motors",
+    "engine_model": "6v_53t",
+    "engine_type": null,
+    "engine_max_rpm": 2800.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 6,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      8.0,
+      16.0,
+      21.3,
+      31.6,
+      41.7,
+      61.1
+    ],
+    "reverse_gear_speeds": [
+      7.0,
+      14.0
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 13.4,
+    "track_width": null,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "130mm_rapier_launcher",
+        "caliber": 130.0,
+        "ammo": 8,
+        "reloadTime": 1.0,
+        "rateOfFire": 60,
+        "bulletType": "sam_tank",
+        "maxDistance": 7000,
+        "maxSpeed": 685,
+        "guidanceType": "saclos",
+        "explosiveMass": 0.5,
+        "explosiveType": "comp_b"
+      }
+    ],
+    "main_gun_ammo": null,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 220000,
+    "purchaseCost": 620000,
+    "crewTraining": 175000,
+    "expertTraining": 620000,
+    "aceTrainingGE": 2100,
+    "aceTrainingRP": 1010000,
+    "repairCost": {
+      "arcade": [
+        4427,
+        6718
+      ],
+      "realistic": [
+        4148,
+        6295
+      ],
+      "simulator": [
+        4580,
+        6950
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.6,
+      "realistic": 1.86,
+      "simulator": 2.35
+    },
+    "expMultiplier": 2.26
+  }
+}

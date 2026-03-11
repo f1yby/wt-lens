@@ -1,0 +1,33 @@
+{
+  "id": "morko_morane",
+  "economy": {
+    "researchCost": 7900,
+    "purchaseCost": 0,
+    "purchaseCostGold": 700,
+    "crewTraining": 2300,
+    "expertTraining": 15000,
+    "aceTrainingGE": 125,
+    "aceTrainingRP": 320000,
+    "repairCost": {
+      "arcade": [
+        827,
+        827
+      ],
+      "realistic": [
+        2016,
+        2016
+      ],
+      "simulator": [
+        451,
+        451
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.72,
+      "realistic": 1.98,
+      "simulator": 2.92
+    },
+    "expMultiplier": 1.12,
+    "freeRepairs": 30
+  }
+}

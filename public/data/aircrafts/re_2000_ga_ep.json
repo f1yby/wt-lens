@@ -1,0 +1,33 @@
+{
+  "id": "re_2000_ga_ep",
+  "economy": {
+    "researchCost": 9200,
+    "purchaseCost": 0,
+    "purchaseCostGold": 850,
+    "crewTraining": 3400,
+    "expertTraining": 23000,
+    "aceTrainingGE": 180,
+    "aceTrainingRP": 380000,
+    "repairCost": {
+      "arcade": [
+        1048,
+        1048
+      ],
+      "realistic": [
+        3460,
+        3460
+      ],
+      "simulator": [
+        1433,
+        1433
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.92,
+      "realistic": 2.87,
+      "simulator": 7.0
+    },
+    "expMultiplier": 1.18,
+    "freeRepairs": 30
+  }
+}

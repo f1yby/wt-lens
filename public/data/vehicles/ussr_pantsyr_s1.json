@@ -1,0 +1,124 @@
+{
+  "id": "ussr_pantsyr_s1",
+  "performance": {
+    "horsepower": 400.0,
+    "weight": 34.0,
+    "power_to_weight": 11.76,
+    "max_reverse_speed": 5.4,
+    "reload_time": 4.0,
+    "penetration": null,
+    "max_speed": 70.0,
+    "crew_count": 5,
+    "elevation_speed": 70.0,
+    "traverse_speed": 67.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "both",
+    "elevation_range": [
+      -1.5,
+      85.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": [
+      800,
+      600
+    ],
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": 1000.0,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 86.5,
+    "mainGun": null,
+    "ammunitions": null,
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": "kamaz",
+    "engine_model": "740_632_400",
+    "engine_type": null,
+    "engine_max_rpm": 1900.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 16,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      4.3,
+      5.1,
+      6.2,
+      7.4,
+      9.0,
+      10.8,
+      12.9,
+      15.4,
+      19.5,
+      23.2,
+      28.3,
+      33.8,
+      41.1,
+      49.0,
+      58.8,
+      70.0
+    ],
+    "reverse_gear_speeds": [
+      4.6,
+      5.4
+    ],
+    "steer_type": null,
+    "empty_weight": 33.5,
+    "track_width": 0.4,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "170mm_57E6_rocket_launcher",
+        "caliber": 170.0,
+        "ammo": 12,
+        "reloadTime": 1.0,
+        "rateOfFire": 30,
+        "bulletType": "sam_tank",
+        "maxDistance": 20000,
+        "maxSpeed": 1300,
+        "guidanceType": "saclos",
+        "explosiveMass": 5.5,
+        "explosiveType": "a_ix_2"
+      }
+    ],
+    "main_gun_ammo": 351,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 400000,
+    "purchaseCost": 1080000,
+    "crewTraining": 310000,
+    "expertTraining": 1080000,
+    "aceTrainingGE": 2200,
+    "aceTrainingRP": 1280000,
+    "repairCost": {
+      "arcade": [
+        5728,
+        7978
+      ],
+      "realistic": [
+        6825,
+        9506
+      ],
+      "simulator": [
+        7658,
+        10666
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.6,
+      "realistic": 2.1,
+      "simulator": 2.01
+    },
+    "expMultiplier": 2.5
+  }
+}

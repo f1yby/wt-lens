@@ -1,0 +1,33 @@
+{
+  "id": "mirage_milan",
+  "economy": {
+    "researchCost": 190000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 9090,
+    "crewTraining": 10000,
+    "expertTraining": 860000,
+    "aceTrainingGE": 2600,
+    "aceTrainingRP": 2020000,
+    "repairCost": {
+      "arcade": [
+        2142,
+        2142
+      ],
+      "realistic": [
+        7063,
+        7063
+      ],
+      "simulator": [
+        6799,
+        6799
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.59,
+      "realistic": 7.6,
+      "simulator": 12.0
+    },
+    "expMultiplier": 2.26,
+    "freeRepairs": 30
+  }
+}

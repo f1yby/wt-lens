@@ -1,0 +1,204 @@
+{
+  "id": "uk_rooikat_105_td",
+  "performance": {
+    "horsepower": 567.0,
+    "weight": 28.5,
+    "power_to_weight": 19.89,
+    "max_reverse_speed": 36.6,
+    "reload_time": 6.67,
+    "penetration": 420.7,
+    "max_speed": 120.3,
+    "crew_count": 5,
+    "elevation_speed": 5.0,
+    "traverse_speed": 40.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "both",
+    "elevation_range": [
+      -10.0,
+      20.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": [
+      500,
+      300
+    ],
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": 583.1,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 30.0,
+    "mainGun": {
+      "name": "105mm_GT_7",
+      "caliber": 105.0,
+      "reloadTime": 6.67,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 8.67,
+        "expert": 7.67,
+        "ace": 6.67
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "105mm_dm12",
+        "localizedName": "DM12",
+        "type": "heat_fs_tank",
+        "caliber": 105.0,
+        "mass": 10.5,
+        "muzzleVelocity": 1173.5,
+        "penetration0m": 400.0,
+        "explosiveMassKg": 0.97,
+        "explosiveType": "comp_b",
+        "tntEquivalent": 1.232
+      },
+      {
+        "name": "105mm_dm502",
+        "localizedName": "DM512",
+        "type": "hesh_tank",
+        "caliber": 105.0,
+        "mass": 11.2,
+        "muzzleVelocity": 731.5,
+        "penetration0m": 127.0,
+        "explosiveMassKg": 2.9937,
+        "explosiveType": "comp_a",
+        "tntEquivalent": 3.772
+      },
+      {
+        "name": "105mm_dm23",
+        "localizedName": "DM23",
+        "type": "apds_fs_tungsten_l10_l15_tank",
+        "caliber": 33.0,
+        "mass": 4.2,
+        "muzzleVelocity": 1455.0,
+        "lanzOdermatt": {
+          "workingLength": 327.0,
+          "density": 17500.0,
+          "material": "tungsten",
+          "Cx": 0.2676
+        },
+        "penetration0m": 337.9,
+        "penetrationData": {
+          "at0m": {
+            "angle0": 337.9,
+            "angle30": 292.6,
+            "angle60": 169.0
+          }
+        }
+      },
+      {
+        "name": "105mm_dm33",
+        "localizedName": "DM33",
+        "type": "apds_fs_long_tank",
+        "caliber": 26.0,
+        "mass": 3.79,
+        "muzzleVelocity": 1455.0,
+        "lanzOdermatt": {
+          "workingLength": 510.0,
+          "density": 17500.0,
+          "material": "tungsten",
+          "Cx": 0.4
+        },
+        "penetration0m": 420.7,
+        "penetrationData": {
+          "at0m": {
+            "angle0": 420.7,
+            "angle30": 364.3,
+            "angle60": 210.4
+          }
+        }
+      }
+    ],
+    "penetrationData": {
+      "at0m": {
+        "angle0": 420.7,
+        "angle30": 364.3,
+        "angle60": 210.4
+      }
+    },
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2400.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 12,
+    "reverse_gears": 4,
+    "forward_gear_speeds": [
+      9.9,
+      12.7,
+      17.7,
+      25.5,
+      36.6,
+      47.9,
+      54.6,
+      63.2,
+      74.2,
+      89.0,
+      98.9,
+      120.3
+    ],
+    "reverse_gear_speeds": [
+      12.7,
+      17.7,
+      25.5,
+      36.6
+    ],
+    "steer_type": null,
+    "empty_weight": 28.0,
+    "track_width": 0.4,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_Browning_MG4",
+        "caliber": 7.6,
+        "ammo": 3000,
+        "reloadTime": 8.0,
+        "rateOfFire": 500,
+        "bulletType": "ap_ball"
+      }
+    ],
+    "main_gun_ammo": 32,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": true,
+    "has_ess": true,
+    "has_laser_rangefinder": true
+  },
+  "economy": {
+    "researchCost": 220000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 9090,
+    "crewTraining": 10000,
+    "expertTraining": 1010000,
+    "aceTrainingGE": 2100,
+    "aceTrainingRP": 2020000,
+    "repairCost": {
+      "arcade": [
+        2676,
+        2676
+      ],
+      "realistic": [
+        2841,
+        2841
+      ],
+      "simulator": [
+        3489,
+        3489
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.66,
+      "realistic": 3.35,
+      "simulator": 4.32
+    },
+    "expMultiplier": 2.26,
+    "freeRepairs": 30
+  }
+}

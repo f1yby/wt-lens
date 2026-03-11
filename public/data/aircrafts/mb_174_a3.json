@@ -1,0 +1,31 @@
+{
+  "id": "mb_174_a3",
+  "economy": {
+    "researchCost": 3000,
+    "purchaseCost": 6300,
+    "crewTraining": 1800,
+    "expertTraining": 6300,
+    "aceTrainingGE": 80,
+    "aceTrainingRP": 135000,
+    "repairCost": {
+      "arcade": [
+        355,
+        461
+      ],
+      "realistic": [
+        616,
+        777
+      ],
+      "simulator": [
+        925,
+        1166
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.29,
+      "realistic": 0.54,
+      "simulator": 1.03
+    },
+    "expMultiplier": 1.06
+  }
+}

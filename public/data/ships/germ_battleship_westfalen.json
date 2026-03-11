@@ -1,0 +1,27 @@
+{
+  "id": "germ_battleship_westfalen",
+  "economy": {
+    "researchCost": 110000,
+    "purchaseCost": 340000,
+    "crewTraining": 97000,
+    "expertTraining": 340000,
+    "aceTrainingGE": 1500,
+    "aceTrainingRP": 670000,
+    "repairCost": {
+      "arcade": [
+        22774,
+        28574
+      ],
+      "realistic": [
+        28736,
+        36055
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 4.5,
+      "realistic": 6.0,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.9
+  }
+}

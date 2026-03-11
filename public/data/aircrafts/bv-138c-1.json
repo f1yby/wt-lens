@@ -1,0 +1,31 @@
+{
+  "id": "bv-138c-1",
+  "economy": {
+    "researchCost": 2000,
+    "purchaseCost": 2100,
+    "crewTraining": 600,
+    "expertTraining": 2100,
+    "aceTrainingGE": 45,
+    "aceTrainingRP": 110000,
+    "repairCost": {
+      "arcade": [
+        229,
+        301
+      ],
+      "realistic": [
+        337,
+        429
+      ],
+      "simulator": [
+        477,
+        608
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.22,
+      "realistic": 0.43,
+      "simulator": 0.81
+    },
+    "expMultiplier": 1.0
+  }
+}

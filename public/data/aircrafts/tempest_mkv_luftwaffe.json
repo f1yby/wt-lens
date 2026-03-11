@@ -1,0 +1,33 @@
+{
+  "id": "tempest_mkv_luftwaffe",
+  "economy": {
+    "researchCost": 63000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 7100,
+    "crewTraining": 10000,
+    "expertTraining": 320000,
+    "aceTrainingGE": 1100,
+    "aceTrainingRP": 1050000,
+    "repairCost": {
+      "arcade": [
+        1928,
+        1928
+      ],
+      "realistic": [
+        4282,
+        4282
+      ],
+      "simulator": [
+        7014,
+        7014
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.1,
+      "realistic": 4.53,
+      "simulator": 10.21
+    },
+    "expMultiplier": 1.72,
+    "freeRepairs": 30
+  }
+}

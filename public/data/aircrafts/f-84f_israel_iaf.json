@@ -1,0 +1,33 @@
+{
+  "id": "f-84f_israel_iaf",
+  "economy": {
+    "researchCost": 150000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 8730,
+    "crewTraining": 10000,
+    "expertTraining": 680000,
+    "aceTrainingGE": 2200,
+    "aceTrainingRP": 1780000,
+    "repairCost": {
+      "arcade": [
+        2046,
+        2046
+      ],
+      "realistic": [
+        5954,
+        5954
+      ],
+      "simulator": [
+        6937,
+        6937
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.35,
+      "realistic": 6.34,
+      "simulator": 12.0
+    },
+    "expMultiplier": 2.14,
+    "freeRepairs": 30
+  }
+}

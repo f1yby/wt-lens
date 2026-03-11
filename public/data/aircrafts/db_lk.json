@@ -1,0 +1,33 @@
+{
+  "id": "db_lk",
+  "economy": {
+    "researchCost": 5900,
+    "purchaseCost": 0,
+    "purchaseCostGold": 550,
+    "crewTraining": 1400,
+    "expertTraining": 9000,
+    "aceTrainingGE": 80,
+    "aceTrainingRP": 270000,
+    "repairCost": {
+      "arcade": [
+        239,
+        239
+      ],
+      "realistic": [
+        360,
+        360
+      ],
+      "simulator": [
+        548,
+        548
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.59,
+      "realistic": 1.16,
+      "simulator": 2.3
+    },
+    "expMultiplier": 1.06,
+    "freeRepairs": 30
+  }
+}

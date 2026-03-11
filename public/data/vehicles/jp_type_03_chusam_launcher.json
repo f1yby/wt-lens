@@ -1,0 +1,111 @@
+{
+  "id": "jp_type_03_chusam_launcher",
+  "performance": {
+    "horsepower": 420.0,
+    "weight": 23.0,
+    "power_to_weight": 18.26,
+    "max_reverse_speed": 13.4,
+    "reload_time": 0.5,
+    "penetration": null,
+    "max_speed": 100.4,
+    "crew_count": 5,
+    "elevation_speed": 0.0,
+    "traverse_speed": 80.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -0.0,
+      0.0
+    ],
+    "traverse_range": [
+      -0.0,
+      0.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 0.0,
+    "mainGun": {
+      "name": "320mm_type_03",
+      "caliber": 326.0,
+      "reloadTime": 0.5,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 0.65,
+        "expert": 0.57,
+        "ace": 0.5
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "jp_type_03",
+        "localizedName": "Type 03",
+        "type": "sam_tank",
+        "caliber": 326.0,
+        "mass": 583.0,
+        "muzzleVelocity": 1120.0
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": "mitsubishi",
+    "engine_model": "6m70t4",
+    "engine_type": null,
+    "engine_max_rpm": 2000.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 6,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      19.4,
+      33.3,
+      42.7,
+      60.3,
+      84.9,
+      100.4
+    ],
+    "reverse_gear_speeds": [
+      13.4
+    ],
+    "steer_type": null,
+    "empty_weight": 22.5,
+    "track_width": 0.4,
+    "secondary_weapons": null,
+    "main_gun_ammo": 6,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 410000,
+    "purchaseCost": 1100000,
+    "crewTraining": 310000,
+    "expertTraining": 1100000,
+    "aceTrainingGE": 2300,
+    "aceTrainingRP": 1350000,
+    "repairCost": {
+      "arcade": [
+        6095,
+        7855
+      ],
+      "realistic": [
+        7405,
+        9542
+      ],
+      "simulator": [
+        8387,
+        10808
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.6,
+      "realistic": 2.1,
+      "simulator": 2.03
+    },
+    "expMultiplier": 2.56
+  }
+}

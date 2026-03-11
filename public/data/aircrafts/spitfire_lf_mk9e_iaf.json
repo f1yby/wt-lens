@@ -1,0 +1,31 @@
+{
+  "id": "spitfire_lf_mk9e_iaf",
+  "economy": {
+    "researchCost": 71000,
+    "purchaseCost": 210000,
+    "crewTraining": 61000,
+    "expertTraining": 210000,
+    "aceTrainingGE": 1200,
+    "aceTrainingRP": 570000,
+    "repairCost": {
+      "arcade": [
+        3105,
+        4075
+      ],
+      "realistic": [
+        7349,
+        9362
+      ],
+      "simulator": [
+        10153,
+        12934
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.04,
+      "realistic": 2.35,
+      "simulator": 4.93
+    },
+    "expMultiplier": 1.78
+  }
+}

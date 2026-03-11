@@ -1,0 +1,147 @@
+{
+  "id": "germ_wiesel_1_tow",
+  "performance": {
+    "horsepower": 87.0,
+    "weight": 2.9,
+    "power_to_weight": 30.0,
+    "max_reverse_speed": 38.2,
+    "reload_time": 10.0,
+    "penetration": 800.0,
+    "max_speed": 79.9,
+    "crew_count": 5,
+    "elevation_speed": 30.0,
+    "traverse_speed": 30.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -20.0,
+      20.0
+    ],
+    "traverse_range": [
+      -45.0,
+      45.0
+    ],
+    "gunner_thermal_resolution": [
+      500,
+      300
+    ],
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": 583.1,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 40.0,
+    "mainGun": {
+      "name": "127mm_BGM_71_tow_Wiesel_launcher",
+      "caliber": 152.0,
+      "reloadTime": 10.0,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 13.0,
+        "expert": 11.5,
+        "ace": 10.0
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "152mm_tow_2",
+        "localizedName": "TOW-2",
+        "type": "atgm_tank",
+        "caliber": 152.0,
+        "mass": 37.0,
+        "muzzleVelocity": 329.0,
+        "penetration0m": 800.0
+      },
+      {
+        "name": "152mm_tow_2a",
+        "localizedName": "TOW-2A",
+        "type": "atgm_tandem_tank",
+        "caliber": 152.0,
+        "mass": 37.0,
+        "muzzleVelocity": 329.0,
+        "penetration0m": 800.0
+      },
+      {
+        "name": "127mm_tow_2b",
+        "localizedName": "TOW-2B",
+        "type": "atgm_tank",
+        "caliber": 152.0,
+        "mass": 22.59,
+        "muzzleVelocity": 309.0,
+        "penetration0m": 100.0
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 4500.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 6,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      16.1,
+      32.2,
+      40.4,
+      54.1,
+      64.5,
+      79.9
+    ],
+    "reverse_gear_speeds": [
+      19.1,
+      38.2
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 2.8,
+    "track_width": 0.2,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_92mm_MG3",
+        "caliber": 7.6,
+        "ammo": 1000,
+        "reloadTime": 8.0,
+        "rateOfFire": 1200,
+        "bulletType": "ap_ball"
+      }
+    ],
+    "main_gun_ammo": 8,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 260000,
+    "purchaseCost": 710000,
+    "crewTraining": 200000,
+    "expertTraining": 710000,
+    "aceTrainingGE": 2100,
+    "aceTrainingRP": 1080000,
+    "repairCost": {
+      "arcade": [
+        4640,
+        6383
+      ],
+      "realistic": [
+        4801,
+        6605
+      ],
+      "simulator": [
+        6790,
+        9340
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.6,
+      "realistic": 2.1,
+      "simulator": 2.5
+    },
+    "expMultiplier": 2.32
+  }
+}

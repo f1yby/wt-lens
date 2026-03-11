@@ -1,0 +1,225 @@
+{
+  "id": "ussr_t_62m1",
+  "performance": {
+    "horsepower": 690.0,
+    "weight": 42.0,
+    "power_to_weight": 16.43,
+    "max_reverse_speed": 7.5,
+    "reload_time": 8.0,
+    "penetration": 420.0,
+    "max_speed": 50.5,
+    "crew_count": 5,
+    "elevation_speed": 6.0,
+    "traverse_speed": 15.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "both",
+    "elevation_range": [
+      -5.0,
+      16.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 21.0,
+    "mainGun": {
+      "name": "115mm_U5TS_T-62M1",
+      "caliber": 115.0,
+      "reloadTime": 8.0,
+      "autoLoader": true,
+      "reloadTimes": {
+        "base": 8.0,
+        "expert": 8.0,
+        "ace": 8.0
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "115mm_3bk_15m",
+        "localizedName": "3BK15M",
+        "type": "heat_fs_tank",
+        "caliber": 115.0,
+        "mass": 12.2,
+        "muzzleVelocity": 1060.0,
+        "penetration0m": 500.0,
+        "explosiveMassKg": 1.478,
+        "explosiveType": "a_ix_2",
+        "tntEquivalent": 2.069
+      },
+      {
+        "name": "115mm_3of_27",
+        "localizedName": "3OF27",
+        "type": "he_frag_fs_tank",
+        "caliber": 115.0,
+        "mass": 17.82,
+        "muzzleVelocity": 800.0,
+        "explosiveMassKg": 3.13,
+        "explosiveType": "a_ix_2",
+        "tntEquivalent": 4.382
+      },
+      {
+        "name": "115mm_3bm28",
+        "localizedName": "3BM28",
+        "type": "apds_fs_tungsten_l10_l15_tank",
+        "caliber": 35.0,
+        "mass": 4.88,
+        "muzzleVelocity": 1600.0,
+        "lanzOdermatt": {
+          "workingLength": 320.0,
+          "density": 18600.0,
+          "material": "depletedUranium",
+          "Cx": 0.55
+        },
+        "penetration0m": 396.2,
+        "penetrationData": {
+          "at0m": {
+            "angle0": 396.2,
+            "angle30": 343.1,
+            "angle60": 198.1
+          }
+        }
+      },
+      {
+        "name": "115mm_3bm21",
+        "localizedName": "3BM21",
+        "type": "apds_fs_tungsten_small_core_tank",
+        "caliber": 38.0,
+        "mass": 4.55,
+        "muzzleVelocity": 1600.0,
+        "armorPowerTable": [
+          {
+            "penetration": 420.0,
+            "distance": 10.0
+          },
+          {
+            "penetration": 415.0,
+            "distance": 100.0
+          },
+          {
+            "penetration": 405.0,
+            "distance": 500.0
+          },
+          {
+            "penetration": 390.0,
+            "distance": 1000.0
+          },
+          {
+            "penetration": 370.0,
+            "distance": 2000.0
+          },
+          {
+            "penetration": 350.0,
+            "distance": 3000.0
+          },
+          {
+            "penetration": 330.0,
+            "distance": 4000.0
+          },
+          {
+            "penetration": 50.0,
+            "distance": 10000.0
+          },
+          {
+            "penetration": 0.0,
+            "distance": 20000.0
+          }
+        ],
+        "penetration0m": 420.0
+      },
+      {
+        "name": "115mm_9m_117",
+        "localizedName": "9M117",
+        "type": "atgm_tank",
+        "caliber": 115.0,
+        "mass": 18.8,
+        "muzzleVelocity": 370.0,
+        "penetration0m": 600.0
+      }
+    ],
+    "penetrationData": {},
+    "autoLoader": true,
+    "engine_manufacturer": "chtz",
+    "engine_model": "v_46_5m",
+    "engine_type": null,
+    "engine_max_rpm": 2000.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 5,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      6.9,
+      14.8,
+      20.7,
+      28.9,
+      50.5
+    ],
+    "reverse_gear_speeds": [
+      7.5
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 41.0,
+    "track_width": 0.58,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_PKT",
+        "caliber": 7.6,
+        "ammo": 3000,
+        "reloadTime": 8.0,
+        "rateOfFire": 700,
+        "bulletType": "ap_i_ball"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "12_7mm_DShK",
+        "caliber": 12.7,
+        "ammo": 300,
+        "reloadTime": 8.0,
+        "rateOfFire": 600,
+        "bulletType": "ap_i_t_ball"
+      }
+    ],
+    "main_gun_ammo": 42,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": true,
+    "has_ess": true,
+    "has_laser_rangefinder": true
+  },
+  "economy": {
+    "researchCost": 94000,
+    "purchaseCost": 520000,
+    "crewTraining": 150000,
+    "expertTraining": 520000,
+    "aceTrainingGE": 2100,
+    "aceTrainingRP": 950000,
+    "repairCost": {
+      "arcade": [
+        4092,
+        6228
+      ],
+      "realistic": [
+        4248,
+        6466
+      ],
+      "simulator": [
+        5256,
+        8000
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.45,
+      "realistic": 2.01,
+      "simulator": 2.4
+    },
+    "expMultiplier": 2.2
+  }
+}

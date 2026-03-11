@@ -1,0 +1,197 @@
+{
+  "id": "us_m1128_mgs",
+  "performance": {
+    "horsepower": 350.0,
+    "weight": 18.7,
+    "power_to_weight": 18.72,
+    "max_reverse_speed": 12.5,
+    "reload_time": 7.5,
+    "penetration": 522.2,
+    "max_speed": 96.5,
+    "crew_count": 5,
+    "elevation_speed": 36.0,
+    "traverse_speed": 40.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "both",
+    "elevation_range": [
+      -5.0,
+      15.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": [
+      1200,
+      800
+    ],
+    "commander_thermal_resolution": [
+      1200,
+      800
+    ],
+    "gunner_thermal_diagonal": 1442.2,
+    "commander_thermal_diagonal": 1442.2,
+    "stabilizer_value": 1,
+    "elevation_range_value": 20.0,
+    "mainGun": {
+      "name": "105mm_M68A1_E8",
+      "caliber": 105.0,
+      "reloadTime": 7.5,
+      "autoLoader": true,
+      "reloadTimes": {
+        "base": 7.5,
+        "expert": 7.5,
+        "ace": 7.5
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "105mm_m456a2",
+        "localizedName": "M456A2",
+        "type": "heat_fs_tank",
+        "caliber": 105.0,
+        "mass": 10.5,
+        "muzzleVelocity": 1173.5,
+        "penetration0m": 400.0,
+        "explosiveMassKg": 0.97,
+        "explosiveType": "comp_b",
+        "tntEquivalent": 1.232
+      },
+      {
+        "name": "105mm_m774",
+        "localizedName": "M774",
+        "type": "apds_fs_long_tank",
+        "caliber": 26.0,
+        "mass": 3.4,
+        "muzzleVelocity": 1509.0,
+        "lanzOdermatt": {
+          "workingLength": 375.0,
+          "density": 18600.0,
+          "material": "depletedUranium",
+          "Cx": 0.45
+        },
+        "penetration0m": 372.6,
+        "penetrationData": {
+          "at0m": {
+            "angle0": 372.6,
+            "angle30": 322.7,
+            "angle60": 186.3
+          }
+        }
+      },
+      {
+        "name": "105mm_m900",
+        "localizedName": "M900",
+        "type": "apds_fs_long_l30_tank",
+        "caliber": 23.0,
+        "mass": 3.85,
+        "muzzleVelocity": 1505.0,
+        "lanzOdermatt": {
+          "workingLength": 603.0,
+          "density": 18600.0,
+          "material": "depletedUranium",
+          "Cx": 0.5525
+        },
+        "penetration0m": 522.2,
+        "penetrationData": {
+          "at0m": {
+            "angle0": 522.2,
+            "angle30": 452.2,
+            "angle60": 261.1
+          }
+        }
+      }
+    ],
+    "penetrationData": {
+      "at0m": {
+        "angle0": 522.2,
+        "angle30": 452.2,
+        "angle60": 261.1
+      }
+    },
+    "autoLoader": true,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2400.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 12,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      10.0,
+      18.0,
+      25.8,
+      32.8,
+      38.5,
+      44.5,
+      54.5,
+      62.7,
+      71.3,
+      83.6,
+      89.6,
+      96.5
+    ],
+    "reverse_gear_speeds": [
+      8.4,
+      12.5
+    ],
+    "steer_type": null,
+    "empty_weight": 18.0,
+    "track_width": 0.4,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_M240",
+        "caliber": 7.6,
+        "ammo": 3400,
+        "reloadTime": 8.0,
+        "rateOfFire": 940,
+        "bulletType": "ap_ball"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "12_7mm_M2_HB",
+        "caliber": 12.7,
+        "ammo": 400,
+        "reloadTime": 8.0,
+        "rateOfFire": 575,
+        "bulletType": "ap_i_t_ball_M20"
+      }
+    ],
+    "main_gun_ammo": 18,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": true
+  },
+  "economy": {
+    "researchCost": 260000,
+    "purchaseCost": 710000,
+    "crewTraining": 200000,
+    "expertTraining": 710000,
+    "aceTrainingGE": 2100,
+    "aceTrainingRP": 1080000,
+    "repairCost": {
+      "arcade": [
+        2981,
+        5778
+      ],
+      "realistic": [
+        2895,
+        5611
+      ],
+      "simulator": [
+        3886,
+        7531
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.38,
+      "realistic": 1.73,
+      "simulator": 2.21
+    },
+    "expMultiplier": 2.32
+  }
+}

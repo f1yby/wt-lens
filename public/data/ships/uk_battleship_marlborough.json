@@ -1,0 +1,27 @@
+{
+  "id": "uk_battleship_marlborough",
+  "economy": {
+    "researchCost": 260000,
+    "purchaseCost": 780000,
+    "crewTraining": 220000,
+    "expertTraining": 780000,
+    "aceTrainingGE": 2200,
+    "aceTrainingRP": 890000,
+    "repairCost": {
+      "arcade": [
+        27493,
+        34496
+      ],
+      "realistic": [
+        33334,
+        41824
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 4.5,
+      "realistic": 6.0,
+      "simulator": 1.0
+    },
+    "expMultiplier": 2.14
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "id": "p-47d_30_italy",
+  "economy": {
+    "researchCost": 26000,
+    "purchaseCost": 76000,
+    "crewTraining": 22000,
+    "expertTraining": 76000,
+    "aceTrainingGE": 500,
+    "aceTrainingRP": 320000,
+    "repairCost": {
+      "arcade": [
+        983,
+        1338
+      ],
+      "realistic": [
+        2387,
+        3149
+      ],
+      "simulator": [
+        3142,
+        4146
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.6,
+      "realistic": 1.43,
+      "simulator": 3.09
+    },
+    "expMultiplier": 1.42
+  }
+}

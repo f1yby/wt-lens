@@ -1,0 +1,94 @@
+{
+  "id": "il_zsu_23_4",
+  "performance": {
+    "horsepower": 280.0,
+    "weight": 21.0,
+    "power_to_weight": 13.33,
+    "max_reverse_speed": 6.8,
+    "reload_time": 4.0,
+    "penetration": null,
+    "max_speed": 50.1,
+    "crew_count": 5,
+    "elevation_speed": 60.0,
+    "traverse_speed": 70.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "both",
+    "elevation_range": [
+      -4.0,
+      85.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 89.0,
+    "mainGun": null,
+    "ammunitions": null,
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2000.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 5,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      7.4,
+      13.1,
+      22.6,
+      35.4,
+      50.1
+    ],
+    "reverse_gear_speeds": [
+      6.8
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 20.0,
+    "track_width": 0.33,
+    "secondary_weapons": null,
+    "main_gun_ammo": 500,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 135000,
+    "purchaseCost": 380000,
+    "crewTraining": 110000,
+    "expertTraining": 380000,
+    "aceTrainingGE": 1400,
+    "aceTrainingRP": 830000,
+    "repairCost": {
+      "arcade": [
+        4912,
+        6313
+      ],
+      "realistic": [
+        4202,
+        5401
+      ],
+      "simulator": [
+        5284,
+        6792
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.47,
+      "realistic": 1.88,
+      "simulator": 2.34
+    },
+    "expMultiplier": 2.08
+  }
+}

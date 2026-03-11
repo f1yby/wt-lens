@@ -1,0 +1,27 @@
+{
+  "id": "jp_destroyer_mutsuki",
+  "economy": {
+    "researchCost": 2900,
+    "purchaseCost": 700,
+    "crewTraining": 200,
+    "expertTraining": 1000,
+    "aceTrainingGE": 20,
+    "aceTrainingRP": 96000,
+    "repairCost": {
+      "arcade": [
+        220,
+        282
+      ],
+      "realistic": [
+        347,
+        445
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.34,
+      "realistic": 0.58,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.0
+  }
+}

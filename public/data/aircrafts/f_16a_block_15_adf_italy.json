@@ -1,0 +1,31 @@
+{
+  "id": "f_16a_block_15_adf_italy",
+  "economy": {
+    "researchCost": 320000,
+    "purchaseCost": 860000,
+    "crewTraining": 250000,
+    "expertTraining": 860000,
+    "aceTrainingGE": 3600,
+    "aceTrainingRP": 1350000,
+    "repairCost": {
+      "arcade": [
+        3174,
+        4427
+      ],
+      "realistic": [
+        9162,
+        12779
+      ],
+      "simulator": [
+        10789,
+        15047
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.94,
+      "realistic": 3.19,
+      "simulator": 5.0
+    },
+    "expMultiplier": 2.56
+  }
+}

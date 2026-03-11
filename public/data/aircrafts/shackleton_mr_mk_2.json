@@ -1,0 +1,31 @@
+{
+  "id": "shackleton_mr_mk_2",
+  "economy": {
+    "researchCost": 31000,
+    "purchaseCost": 200000,
+    "crewTraining": 57000,
+    "expertTraining": 200000,
+    "aceTrainingGE": 1100,
+    "aceTrainingRP": 520000,
+    "repairCost": {
+      "arcade": [
+        2647,
+        3676
+      ],
+      "realistic": [
+        7971,
+        10728
+      ],
+      "simulator": [
+        15867,
+        21356
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.18,
+      "realistic": 2.04,
+      "simulator": 5.49
+    },
+    "expMultiplier": 1.72
+  }
+}

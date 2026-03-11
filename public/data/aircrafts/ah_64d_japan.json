@@ -1,0 +1,31 @@
+{
+  "id": "ah_64d_japan",
+  "economy": {
+    "researchCost": 400000,
+    "purchaseCost": 1020000,
+    "crewTraining": 290000,
+    "expertTraining": 1020000,
+    "aceTrainingGE": 2800,
+    "aceTrainingRP": 1080000,
+    "repairCost": {
+      "arcade": [
+        8527,
+        14308
+      ],
+      "realistic": [
+        3899,
+        6542
+      ],
+      "simulator": [
+        4965,
+        8332
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.0,
+      "realistic": 2.5,
+      "simulator": 3.66
+    },
+    "expMultiplier": 2.32
+  }
+}

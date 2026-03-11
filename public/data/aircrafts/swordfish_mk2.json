@@ -1,0 +1,33 @@
+{
+  "id": "swordfish_mk2",
+  "economy": {
+    "researchCost": 4000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 400,
+    "crewTraining": 450,
+    "expertTraining": 3000,
+    "aceTrainingGE": 45,
+    "aceTrainingRP": 220000,
+    "repairCost": {
+      "arcade": [
+        157,
+        157
+      ],
+      "realistic": [
+        193,
+        193
+      ],
+      "simulator": [
+        270,
+        270
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.48,
+      "realistic": 0.93,
+      "simulator": 1.75
+    },
+    "expMultiplier": 1.0,
+    "freeRepairs": 30
+  }
+}

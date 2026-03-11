@@ -1,0 +1,27 @@
+{
+  "id": "uk_frigate_leopard",
+  "economy": {
+    "researchCost": 320000,
+    "purchaseCost": 860000,
+    "crewTraining": 250000,
+    "expertTraining": 860000,
+    "aceTrainingGE": 1800,
+    "aceTrainingRP": 780000,
+    "repairCost": {
+      "arcade": [
+        10063,
+        12722
+      ],
+      "realistic": [
+        14477,
+        18302
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.35,
+      "realistic": 4.53,
+      "simulator": 1.0
+    },
+    "expMultiplier": 2.02
+  }
+}

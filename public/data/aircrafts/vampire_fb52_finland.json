@@ -1,0 +1,31 @@
+{
+  "id": "vampire_fb52_finland",
+  "economy": {
+    "researchCost": 53000,
+    "purchaseCost": 300000,
+    "crewTraining": 86000,
+    "expertTraining": 300000,
+    "aceTrainingGE": 1700,
+    "aceTrainingRP": 720000,
+    "repairCost": {
+      "arcade": [
+        3293,
+        4691
+      ],
+      "realistic": [
+        9131,
+        13007
+      ],
+      "simulator": [
+        12197,
+        17375
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.28,
+      "realistic": 3.64,
+      "simulator": 6.0
+    },
+    "expMultiplier": 1.96
+  }
+}

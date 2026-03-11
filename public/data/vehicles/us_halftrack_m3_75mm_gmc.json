@@ -1,0 +1,161 @@
+{
+  "id": "us_halftrack_m3_75mm_gmc",
+  "performance": {
+    "horsepower": 148.0,
+    "weight": 9.07,
+    "power_to_weight": 16.32,
+    "max_reverse_speed": 17.4,
+    "reload_time": 6.02,
+    "penetration": 101.8,
+    "max_speed": 75.7,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 6.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -10.0,
+      29.0
+    ],
+    "traverse_range": [
+      -19.0,
+      21.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 39.0,
+    "mainGun": {
+      "name": "75mm_m1897a4",
+      "caliber": 75.0,
+      "reloadTime": 6.02,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 7.83,
+        "expert": 6.92,
+        "ace": 6.02
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "75mm_m72",
+        "localizedName": "M72 shot",
+        "type": "ap_tank",
+        "caliber": 75.0,
+        "mass": 6.3,
+        "muzzleVelocity": 609.0,
+        "deMarre": {
+          "fullCaliber": 75.0,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "Cx": 0.5
+        },
+        "penetration0m": 88.9
+      },
+      {
+        "name": "75mm_m48",
+        "localizedName": "M48 shell",
+        "type": "he_frag_tank",
+        "caliber": 75.0,
+        "mass": 6.3,
+        "muzzleVelocity": 594.4,
+        "explosiveMassKg": 0.666,
+        "explosiveType": "tnt",
+        "tntEquivalent": 0.666
+      },
+      {
+        "name": "75mm_m61",
+        "localizedName": "M61 shot",
+        "type": "apcbc_tank",
+        "caliber": 75.0,
+        "mass": 6.79,
+        "muzzleVelocity": 609.0,
+        "deMarre": {
+          "fullCaliber": 75.0,
+          "isApcbc": true,
+          "explosiveMass": 0.065,
+          "Cx": 0.379
+        },
+        "penetration0m": 101.8,
+        "explosiveMassKg": 0.065,
+        "explosiveType": "exp_d",
+        "tntEquivalent": 0.064
+      },
+      {
+        "name": "75mm_m89",
+        "localizedName": "M89",
+        "type": "smoke_tank",
+        "caliber": 75.0,
+        "mass": 3.0,
+        "muzzleVelocity": 259.0,
+        "explosiveMassKg": 0.05,
+        "explosiveType": "smoke_composition",
+        "tntEquivalent": 0.05
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 3000.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 8,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      6.2,
+      11.7,
+      15.4,
+      17.6,
+      29.1,
+      30.4,
+      44.3,
+      75.7
+    ],
+    "reverse_gear_speeds": [
+      6.9,
+      17.4
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 8.85,
+    "track_width": 0.28,
+    "secondary_weapons": null,
+    "main_gun_ammo": 60,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 5900,
+    "purchaseCost": 6300,
+    "crewTraining": 1800,
+    "expertTraining": 6300,
+    "aceTrainingGE": 75,
+    "aceTrainingRP": 135000,
+    "repairCost": {
+      "arcade": [
+        298,
+        369
+      ],
+      "realistic": [
+        332,
+        411
+      ],
+      "simulator": [
+        400,
+        495
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.22,
+      "realistic": 0.34,
+      "simulator": 0.42
+    },
+    "expMultiplier": 1.06
+  }
+}

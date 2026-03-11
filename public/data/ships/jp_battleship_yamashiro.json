@@ -1,0 +1,29 @@
+{
+  "id": "jp_battleship_yamashiro",
+  "economy": {
+    "researchCost": 180000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 8380,
+    "crewTraining": 10000,
+    "expertTraining": 880000,
+    "aceTrainingGE": 1800,
+    "aceTrainingRP": 1550000,
+    "repairCost": {
+      "arcade": [
+        12733,
+        12733
+      ],
+      "realistic": [
+        14714,
+        14714
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 9.0,
+      "realistic": 12.0,
+      "simulator": 1.0
+    },
+    "expMultiplier": 2.02,
+    "freeRepairs": 30
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "id": "jp_destroyer_hayanami",
+  "economy": {
+    "researchCost": 11000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 1000,
+    "crewTraining": 4800,
+    "expertTraining": 32000,
+    "aceTrainingGE": 250,
+    "aceTrainingRP": 440000,
+    "repairCost": {
+      "arcade": [
+        1070,
+        1070
+      ],
+      "realistic": [
+        1570,
+        1570
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.77,
+      "realistic": 6.37,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.24,
+    "freeRepairs": 30
+  }
+}

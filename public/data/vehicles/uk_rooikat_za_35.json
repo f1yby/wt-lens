@@ -1,0 +1,101 @@
+{
+  "id": "uk_rooikat_za_35",
+  "performance": {
+    "horsepower": 567.0,
+    "weight": 32.0,
+    "power_to_weight": 17.72,
+    "max_reverse_speed": 36.6,
+    "reload_time": 1.0,
+    "penetration": null,
+    "max_speed": 120.3,
+    "crew_count": 5,
+    "elevation_speed": 42.0,
+    "traverse_speed": 45.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "both",
+    "elevation_range": [
+      -8.0,
+      81.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 89.0,
+    "mainGun": null,
+    "ammunitions": null,
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2400.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 12,
+    "reverse_gears": 4,
+    "forward_gear_speeds": [
+      9.9,
+      12.7,
+      17.7,
+      25.5,
+      36.6,
+      47.9,
+      54.6,
+      63.2,
+      74.2,
+      89.0,
+      98.9,
+      120.3
+    ],
+    "reverse_gear_speeds": [
+      12.7,
+      17.7,
+      25.5,
+      36.6
+    ],
+    "steer_type": null,
+    "empty_weight": 31.0,
+    "track_width": 0.4,
+    "secondary_weapons": null,
+    "main_gun_ammo": 230,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": true,
+    "has_laser_rangefinder": true
+  },
+  "economy": {
+    "researchCost": 81000,
+    "purchaseCost": 450000,
+    "crewTraining": 130000,
+    "expertTraining": 450000,
+    "aceTrainingGE": 2000,
+    "aceTrainingRP": 890000,
+    "repairCost": {
+      "arcade": [
+        4880,
+        6797
+      ],
+      "realistic": [
+        4160,
+        5795
+      ],
+      "simulator": [
+        5056,
+        7042
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.45,
+      "realistic": 1.91,
+      "simulator": 2.28
+    },
+    "expMultiplier": 2.14
+  }
+}

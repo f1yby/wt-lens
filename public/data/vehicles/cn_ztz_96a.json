@@ -1,0 +1,178 @@
+{
+  "id": "cn_ztz_96a",
+  "performance": {
+    "horsepower": 800.0,
+    "weight": 42.8,
+    "power_to_weight": 18.69,
+    "max_reverse_speed": 5.9,
+    "reload_time": 7.0,
+    "penetration": 466.3,
+    "max_speed": 59.1,
+    "crew_count": 5,
+    "elevation_speed": 6.0,
+    "traverse_speed": 30.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "both",
+    "elevation_range": [
+      -5.4,
+      12.8
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": [
+      800,
+      600
+    ],
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": 1000.0,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 18.2,
+    "mainGun": {
+      "name": "125mm_Type_88C",
+      "caliber": 125.0,
+      "reloadTime": 7.0,
+      "autoLoader": true,
+      "reloadTimes": {
+        "base": 7.0,
+        "expert": 7.0,
+        "ace": 7.0
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "125mm_dtp_125",
+        "localizedName": "DTP-125",
+        "type": "heat_fs_tank",
+        "caliber": 125.0,
+        "mass": 18.0,
+        "muzzleVelocity": 905.0,
+        "penetration0m": 480.0,
+        "explosiveMassKg": 1.71,
+        "explosiveType": "jh_2",
+        "tntEquivalent": 2.291
+      },
+      {
+        "name": "125mm_dtb_125",
+        "localizedName": "DTB-125",
+        "type": "he_frag_fs_tank",
+        "caliber": 125.0,
+        "mass": 23.0,
+        "muzzleVelocity": 850.0,
+        "explosiveMassKg": 3.548,
+        "explosiveType": "a_ix_2",
+        "tntEquivalent": 4.967
+      },
+      {
+        "name": "125mm_125_1",
+        "localizedName": "Type 1985-I APFSDS",
+        "type": "apds_fs_long_tank",
+        "caliber": 28.0,
+        "mass": 4.02,
+        "muzzleVelocity": 1730.0,
+        "lanzOdermatt": {
+          "workingLength": 437.0,
+          "density": 17500.0,
+          "material": "tungsten",
+          "Cx": 0.3693
+        },
+        "penetration0m": 466.3,
+        "penetrationData": {
+          "at0m": {
+            "angle0": 466.3,
+            "angle30": 403.8,
+            "angle60": 233.2
+          }
+        }
+      }
+    ],
+    "penetrationData": {
+      "at0m": {
+        "angle0": 466.3,
+        "angle30": 403.8,
+        "angle60": 233.2
+      }
+    },
+    "autoLoader": true,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2000.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 5,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      9.1,
+      19.0,
+      25.5,
+      39.4,
+      59.1
+    ],
+    "reverse_gear_speeds": [
+      5.9
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 42.3,
+    "track_width": 0.65,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_Type86",
+        "caliber": 7.6,
+        "ammo": 2500,
+        "reloadTime": 8.0,
+        "rateOfFire": 700,
+        "bulletType": "ap_i_ball"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "12_7mm_QJC_88A",
+        "caliber": 12.7,
+        "ammo": 600,
+        "reloadTime": 5.0,
+        "rateOfFire": 600,
+        "bulletType": "ap_i_t_ball"
+      }
+    ],
+    "main_gun_ammo": 40,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": true,
+    "has_ess": true,
+    "has_laser_rangefinder": true
+  },
+  "economy": {
+    "researchCost": 260000,
+    "purchaseCost": 710000,
+    "crewTraining": 200000,
+    "expertTraining": 710000,
+    "aceTrainingGE": 2100,
+    "aceTrainingRP": 1080000,
+    "repairCost": {
+      "arcade": [
+        4193,
+        6613
+      ],
+      "realistic": [
+        4063,
+        6409
+      ],
+      "simulator": [
+        4748,
+        7490
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.52,
+      "realistic": 1.95,
+      "simulator": 2.45
+    },
+    "expMultiplier": 2.32
+  }
+}

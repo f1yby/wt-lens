@@ -1,0 +1,134 @@
+{
+  "id": "ussr_object_775",
+  "performance": {
+    "horsepower": 700.0,
+    "weight": 35.5,
+    "power_to_weight": 19.72,
+    "max_reverse_speed": 4.6,
+    "reload_time": 6.0,
+    "penetration": 500.0,
+    "max_speed": 66.1,
+    "crew_count": 5,
+    "elevation_speed": 6.0,
+    "traverse_speed": 20.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "both",
+    "elevation_range": [
+      -5.5,
+      18.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 23.5,
+    "mainGun": {
+      "name": "125mm_D_126",
+      "caliber": 125.0,
+      "reloadTime": 6.0,
+      "autoLoader": true,
+      "reloadTimes": {
+        "base": 6.0,
+        "expert": 6.0,
+        "ace": 6.0
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "125mm_rubin",
+        "localizedName": "Rubin",
+        "type": "atgm_tank",
+        "caliber": 125.0,
+        "mass": 28.5,
+        "muzzleVelocity": 550.0,
+        "penetration0m": 500.0
+      },
+      {
+        "name": "125mm_bur",
+        "localizedName": "BUR",
+        "type": "he_frag_tank",
+        "caliber": 125.0,
+        "mass": 22.0,
+        "muzzleVelocity": 380.0
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": true,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 3000.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 7,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      8.1,
+      15.0,
+      19.0,
+      23.7,
+      32.6,
+      45.1,
+      66.1
+    ],
+    "reverse_gear_speeds": [
+      4.6
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 35.0,
+    "track_width": 0.54,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_PKT",
+        "caliber": 7.6,
+        "ammo": 2000,
+        "reloadTime": 8.0,
+        "rateOfFire": 700,
+        "bulletType": "ap_i_ball"
+      }
+    ],
+    "main_gun_ammo": 24,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": false,
+    "has_ess": true,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 190000,
+    "purchaseCost": 520000,
+    "crewTraining": 150000,
+    "expertTraining": 520000,
+    "aceTrainingGE": 2100,
+    "aceTrainingRP": 950000,
+    "repairCost": {
+      "arcade": [
+        4564,
+        6118
+      ],
+      "realistic": [
+        5190,
+        6957
+      ],
+      "simulator": [
+        6599,
+        8846
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.52,
+      "realistic": 2.06,
+      "simulator": 2.44
+    },
+    "expMultiplier": 2.2
+  }
+}

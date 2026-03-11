@@ -1,0 +1,31 @@
+{
+  "id": "p-40e_china",
+  "economy": {
+    "researchCost": 9200,
+    "purchaseCost": 16000,
+    "crewTraining": 4500,
+    "expertTraining": 16000,
+    "aceTrainingGE": 180,
+    "aceTrainingRP": 190000,
+    "repairCost": {
+      "arcade": [
+        487,
+        630
+      ],
+      "realistic": [
+        1004,
+        1261
+      ],
+      "simulator": [
+        1342,
+        1686
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.31,
+      "realistic": 0.75,
+      "simulator": 1.53
+    },
+    "expMultiplier": 1.18
+  }
+}

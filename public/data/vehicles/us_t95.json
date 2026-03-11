@@ -1,0 +1,171 @@
+{
+  "id": "us_t95",
+  "performance": {
+    "horsepower": 500.0,
+    "weight": 86.18,
+    "power_to_weight": 5.8,
+    "max_reverse_speed": 4.1,
+    "reload_time": 15.38,
+    "penetration": 287.9,
+    "max_speed": 12.8,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 10.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -5.0,
+      19.5
+    ],
+    "traverse_range": [
+      -10.0,
+      11.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 24.5,
+    "mainGun": {
+      "name": "105mm_T15E2",
+      "caliber": 105.0,
+      "reloadTime": 15.38,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 19.99,
+        "expert": 17.69,
+        "ace": 15.38
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "105mm_t32",
+        "localizedName": "T32",
+        "type": "apcbc_solid_medium_caliber_tank",
+        "caliber": 105.0,
+        "mass": 17.7,
+        "muzzleVelocity": 914.0,
+        "deMarre": {
+          "fullCaliber": 105.0,
+          "isApcbc": true,
+          "explosiveMass": 0
+        },
+        "penetration0m": 256.4
+      },
+      {
+        "name": "105mm_t30e1",
+        "localizedName": "T30E1",
+        "type": "he_frag_tank",
+        "caliber": 105.0,
+        "mass": 15.2,
+        "muzzleVelocity": 945.0,
+        "explosiveMassKg": 1.55,
+        "explosiveType": "tnt",
+        "tntEquivalent": 1.55
+      },
+      {
+        "name": "105mm_t13",
+        "localizedName": "T13",
+        "type": "apcbc_tank",
+        "caliber": 105.0,
+        "mass": 18.59,
+        "muzzleVelocity": 899.0,
+        "deMarre": {
+          "fullCaliber": 105.0,
+          "isApcbc": true,
+          "explosiveMass": 0.181
+        },
+        "penetration0m": 253.1,
+        "explosiveMassKg": 0.181,
+        "explosiveType": "exp_d",
+        "tntEquivalent": 0.179
+      },
+      {
+        "name": "105mm_t29e3",
+        "localizedName": "T29E3",
+        "type": "apcr_tank",
+        "caliber": 47.8,
+        "mass": 11.2,
+        "muzzleVelocity": 1128.0,
+        "deMarre": {
+          "fullCaliber": 105.0,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "isApcr": true,
+          "coreCaliber": 47.8,
+          "coreMass": 3.6,
+          "Cx": 0.28
+        },
+        "penetration0m": 287.9
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2600.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 4,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      1.6,
+      3.1,
+      7.3,
+      12.8
+    ],
+    "reverse_gear_speeds": [
+      4.1
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 85.18,
+    "track_width": 1.1,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "12_7mm_M2_HB",
+        "caliber": 12.7,
+        "ammo": 1000,
+        "reloadTime": 8.0,
+        "rateOfFire": 575,
+        "bulletType": "ap_i_t_ball_M20"
+      }
+    ],
+    "main_gun_ammo": 62,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 82000,
+    "purchaseCost": 240000,
+    "crewTraining": 68000,
+    "expertTraining": 240000,
+    "aceTrainingGE": 990,
+    "aceTrainingRP": 620000,
+    "repairCost": {
+      "arcade": [
+        4506,
+        5640
+      ],
+      "realistic": [
+        5018,
+        6281
+      ],
+      "simulator": [
+        7427,
+        9295
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.35,
+      "realistic": 2.1,
+      "simulator": 2.44
+    },
+    "expMultiplier": 1.84
+  }
+}

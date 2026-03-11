@@ -1,0 +1,126 @@
+{
+  "id": "jp_type_2_ho_ni_2",
+  "performance": {
+    "horsepower": 200.0,
+    "weight": 15.0,
+    "power_to_weight": 13.33,
+    "max_reverse_speed": 11.8,
+    "reload_time": 10.0,
+    "penetration": 120.0,
+    "max_speed": 40.1,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 16.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -10.0,
+      20.0
+    ],
+    "traverse_range": [
+      -10.0,
+      10.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 30.0,
+    "mainGun": {
+      "name": "105mm_type_91",
+      "caliber": 105.0,
+      "reloadTime": 10.0,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 13.0,
+        "expert": 11.5,
+        "ace": 10.0
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "105mm_type91_he",
+        "localizedName": "105mm_type91_he",
+        "type": "he_frag_tank",
+        "caliber": 105.0,
+        "mass": 15.76,
+        "muzzleVelocity": 546.0,
+        "explosiveMassKg": 2.52,
+        "explosiveType": "tnt",
+        "tntEquivalent": 2.52
+      },
+      {
+        "name": "105mm_type91_heat",
+        "localizedName": "105mm_type91_heat",
+        "type": "heat_tank",
+        "caliber": 105.0,
+        "mass": 10.91,
+        "muzzleVelocity": 337.0,
+        "penetration0m": 120.0,
+        "explosiveMassKg": 1.59,
+        "explosiveType": "rdx_tnt",
+        "tntEquivalent": 2.035
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2000.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 5,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      4.5,
+      8.1,
+      14.1,
+      24.6,
+      40.1
+    ],
+    "reverse_gear_speeds": [
+      6.6,
+      11.8
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 14.7,
+    "track_width": 0.25,
+    "secondary_weapons": null,
+    "main_gun_ammo": 20,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 4000,
+    "purchaseCost": 2100,
+    "crewTraining": 600,
+    "expertTraining": 2100,
+    "aceTrainingGE": 45,
+    "aceTrainingRP": 110000,
+    "repairCost": {
+      "arcade": [
+        193,
+        239
+      ],
+      "realistic": [
+        229,
+        283
+      ],
+      "simulator": [
+        271,
+        335
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.15,
+      "realistic": 0.24,
+      "simulator": 0.29
+    },
+    "expMultiplier": 1.0
+  }
+}

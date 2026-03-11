@@ -1,0 +1,31 @@
+{
+  "id": "jf_17",
+  "economy": {
+    "researchCost": 580000,
+    "purchaseCost": 910000,
+    "crewTraining": 250000,
+    "expertTraining": 860000,
+    "aceTrainingGE": 3600,
+    "aceTrainingRP": 1350000,
+    "repairCost": {
+      "arcade": [
+        3738,
+        5630
+      ],
+      "realistic": [
+        8425,
+        12688
+      ],
+      "simulator": [
+        11626,
+        17509
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.78,
+      "realistic": 2.89,
+      "simulator": 5.26
+    },
+    "expMultiplier": 2.56
+  }
+}

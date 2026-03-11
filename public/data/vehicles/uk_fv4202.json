@@ -1,0 +1,167 @@
+{
+  "id": "uk_fv4202",
+  "performance": {
+    "horsepower": 510.0,
+    "weight": 37.24,
+    "power_to_weight": 13.69,
+    "max_reverse_speed": 4.6,
+    "reload_time": 6.25,
+    "penetration": 239.1,
+    "max_speed": 31.5,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 18.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "both",
+    "elevation_range": [
+      -10.0,
+      20.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 30.0,
+    "mainGun": {
+      "name": "84mm_QQF_20pdr_Mk_I_fume_extractor",
+      "caliber": 83.4,
+      "reloadTime": 6.25,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 8.12,
+        "expert": 7.19,
+        "ace": 6.25
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "83mm_shot_mk1",
+        "localizedName": "Shot Mk.1",
+        "type": "apcbc_solid_medium_caliber_tank",
+        "caliber": 83.4,
+        "mass": 9.072,
+        "muzzleVelocity": 1021.1,
+        "deMarre": {
+          "fullCaliber": 83.4,
+          "isApcbc": true,
+          "explosiveMass": 0,
+          "Cx": 0.28
+        },
+        "penetration0m": 239.1
+      },
+      {
+        "name": "83mm_shell_mk1",
+        "localizedName": "Shell Mk.1",
+        "type": "he_frag_tank",
+        "caliber": 83.4,
+        "mass": 7.835,
+        "muzzleVelocity": 609.6,
+        "explosiveMassKg": 1.13,
+        "explosiveType": "rdx_tnt",
+        "tntEquivalent": 1.446
+      },
+      {
+        "name": "83mm_shot_mk3",
+        "localizedName": "Shot Mk.3",
+        "type": "apds_early_tank",
+        "caliber": 53.0,
+        "mass": 3.22,
+        "muzzleVelocity": 1432.6,
+        "deMarre": {
+          "fullCaliber": 83.4,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "isApcr": true,
+          "coreCaliber": 53.0,
+          "coreMass": 2.1,
+          "Cx": 0.1914
+        },
+        "penetration0m": 189.5
+      },
+      {
+        "name": "83mm_shell_ss_mk1",
+        "localizedName": "20pdr Shell SS Mk.1",
+        "type": "smoke_tank",
+        "caliber": 83.4,
+        "mass": 10.131,
+        "muzzleVelocity": 251.5,
+        "explosiveMassKg": 0.05,
+        "explosiveType": "smoke_composition",
+        "tntEquivalent": 0.05
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2700.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 5,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      3.6,
+      9.2,
+      14.8,
+      23.4,
+      31.5
+    ],
+    "reverse_gear_speeds": [
+      4.6
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 36.0,
+    "track_width": 0.4,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_L3A1",
+        "caliber": 7.6,
+        "ammo": 7500,
+        "reloadTime": 8.0,
+        "rateOfFire": 500,
+        "bulletType": "ap_ball"
+      }
+    ],
+    "main_gun_ammo": 50,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 63000,
+    "purchaseCost": 200000,
+    "crewTraining": 57000,
+    "expertTraining": 200000,
+    "aceTrainingGE": 800,
+    "aceTrainingRP": 520000,
+    "repairCost": {
+      "arcade": [
+        3167,
+        4368
+      ],
+      "realistic": [
+        3610,
+        4980
+      ],
+      "simulator": [
+        4998,
+        6895
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.18,
+      "realistic": 1.78,
+      "simulator": 1.96
+    },
+    "expMultiplier": 1.72
+  }
+}

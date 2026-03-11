@@ -1,0 +1,31 @@
+{
+  "id": "f-104g_belgium",
+  "economy": {
+    "researchCost": 230000,
+    "purchaseCost": 630000,
+    "crewTraining": 180000,
+    "expertTraining": 630000,
+    "aceTrainingGE": 3000,
+    "aceTrainingRP": 1140000,
+    "repairCost": {
+      "arcade": [
+        3135,
+        4237
+      ],
+      "realistic": [
+        9174,
+        12398
+      ],
+      "simulator": [
+        9411,
+        12718
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.24,
+      "realistic": 3.22,
+      "simulator": 6.0
+    },
+    "expMultiplier": 2.38
+  }
+}

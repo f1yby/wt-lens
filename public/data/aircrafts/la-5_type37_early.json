@@ -1,0 +1,31 @@
+{
+  "id": "la-5_type37_early",
+  "economy": {
+    "researchCost": 11000,
+    "purchaseCost": 22000,
+    "crewTraining": 6300,
+    "expertTraining": 22000,
+    "aceTrainingGE": 250,
+    "aceTrainingRP": 220000,
+    "repairCost": {
+      "arcade": [
+        621,
+        828
+      ],
+      "realistic": [
+        1296,
+        1674
+      ],
+      "simulator": [
+        1797,
+        2322
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.4,
+      "realistic": 0.99,
+      "simulator": 2.01
+    },
+    "expMultiplier": 1.24
+  }
+}

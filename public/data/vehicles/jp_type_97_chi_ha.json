@@ -1,0 +1,152 @@
+{
+  "id": "jp_type_97_chi_ha",
+  "performance": {
+    "horsepower": 200.0,
+    "weight": 15.3,
+    "power_to_weight": 13.07,
+    "max_reverse_speed": 11.8,
+    "reload_time": 3.33,
+    "penetration": 55.0,
+    "max_speed": 40.1,
+    "crew_count": 5,
+    "elevation_speed": 10.0,
+    "traverse_speed": 15.2,
+    "has_stabilizer": true,
+    "stabilizer_type": "vertical",
+    "elevation_range": [
+      -15.0,
+      20.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 35.0,
+    "mainGun": {
+      "name": "57mm_Type97",
+      "caliber": 57.0,
+      "reloadTime": 3.33,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 4.33,
+        "expert": 3.83,
+        "ace": 3.33
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "57mm_type90_ap",
+        "localizedName": "Type 92 APHE",
+        "type": "aphe_tank",
+        "caliber": 57.0,
+        "mass": 2.58,
+        "muzzleVelocity": 349.0,
+        "deMarre": {
+          "fullCaliber": 57.0,
+          "isApcbc": false,
+          "explosiveMass": 0.103,
+          "Cx": 0.32
+        },
+        "penetration0m": 21.4,
+        "explosiveMassKg": 0.103,
+        "explosiveType": "tnt",
+        "tntEquivalent": 0.103
+      },
+      {
+        "name": "57mm_type3",
+        "localizedName": "Type 3 HEAT",
+        "type": "heat_tank",
+        "caliber": 57.0,
+        "mass": 1.8,
+        "muzzleVelocity": 380.0,
+        "penetration0m": 55.0,
+        "explosiveMassKg": 0.237,
+        "explosiveType": "rdx_tnt",
+        "tntEquivalent": 0.303
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2000.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 5,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      4.5,
+      8.1,
+      14.1,
+      24.6,
+      40.1
+    ],
+    "reverse_gear_speeds": [
+      6.6,
+      11.8
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 15.17,
+    "track_width": 0.25,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_7mm_Type_97",
+        "caliber": 7.7,
+        "ammo": 3000,
+        "reloadTime": 3.0,
+        "rateOfFire": 498,
+        "bulletType": "ap_ball"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "7_7mm_Type_97",
+        "caliber": 7.7,
+        "ammo": 1000,
+        "reloadTime": 3.0,
+        "rateOfFire": 498,
+        "bulletType": "ap_ball"
+      }
+    ],
+    "main_gun_ammo": 120,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 2900,
+    "purchaseCost": 700,
+    "crewTraining": 200,
+    "expertTraining": 1000,
+    "aceTrainingGE": 20,
+    "aceTrainingRP": 96000,
+    "repairCost": {
+      "arcade": [
+        132,
+        170
+      ],
+      "realistic": [
+        110,
+        142
+      ],
+      "simulator": [
+        120,
+        154
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.1,
+      "realistic": 0.14,
+      "simulator": 0.18
+    },
+    "expMultiplier": 1.0
+  }
+}

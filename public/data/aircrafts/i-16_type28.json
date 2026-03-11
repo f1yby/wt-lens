@@ -1,0 +1,33 @@
+{
+  "id": "i-16_type28",
+  "economy": {
+    "researchCost": 9200,
+    "purchaseCost": 0,
+    "purchaseCostGold": 1350,
+    "crewTraining": 3400,
+    "expertTraining": 23000,
+    "aceTrainingGE": 180,
+    "aceTrainingRP": 380000,
+    "repairCost": {
+      "arcade": [
+        977,
+        977
+      ],
+      "realistic": [
+        1207,
+        1207
+      ],
+      "simulator": [
+        1089,
+        1089
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.84,
+      "realistic": 1.68,
+      "simulator": 3.83
+    },
+    "expMultiplier": 1.18,
+    "freeRepairs": 30
+  }
+}

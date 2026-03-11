@@ -1,0 +1,117 @@
+{
+  "id": "fr_lorraine_37l",
+  "performance": {
+    "horsepower": 70.0,
+    "weight": 7.2,
+    "power_to_weight": 9.72,
+    "max_reverse_speed": 6.7,
+    "reload_time": 3.03,
+    "penetration": 105.5,
+    "max_speed": 34.6,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 12.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -13.5,
+      16.0
+    ],
+    "traverse_range": [
+      -34.0,
+      34.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 29.5,
+    "mainGun": {
+      "name": "47mm_SA_37",
+      "caliber": 47.0,
+      "reloadTime": 3.03,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 3.94,
+        "expert": 3.48,
+        "ace": 3.03
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "47mm_mle1936",
+        "localizedName": "Mle1936",
+        "type": "apcbc_solid_medium_caliber_tank",
+        "caliber": 47.0,
+        "mass": 1.726,
+        "muzzleVelocity": 855.0,
+        "deMarre": {
+          "fullCaliber": 47.0,
+          "isApcbc": true,
+          "explosiveMass": 0,
+          "Cx": 0.389
+        },
+        "penetration0m": 105.5
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2700.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 5,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      3.4,
+      7.2,
+      14.3,
+      26.2,
+      34.6
+    ],
+    "reverse_gear_speeds": [
+      6.7
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 7.0,
+    "track_width": 0.22,
+    "secondary_weapons": null,
+    "main_gun_ammo": 22,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 4000,
+    "purchaseCost": 2100,
+    "crewTraining": 600,
+    "expertTraining": 2100,
+    "aceTrainingGE": 45,
+    "aceTrainingRP": 110000,
+    "repairCost": {
+      "arcade": [
+        200,
+        248
+      ],
+      "realistic": [
+        219,
+        271
+      ],
+      "simulator": [
+        253,
+        313
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.16,
+      "realistic": 0.25,
+      "simulator": 0.31
+    },
+    "expMultiplier": 1.0
+  }
+}

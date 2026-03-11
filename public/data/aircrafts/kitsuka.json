@@ -1,0 +1,31 @@
+{
+  "id": "kitsuka",
+  "economy": {
+    "researchCost": 82000,
+    "purchaseCost": 240000,
+    "crewTraining": 68000,
+    "expertTraining": 240000,
+    "aceTrainingGE": 1400,
+    "aceTrainingRP": 620000,
+    "repairCost": {
+      "arcade": [
+        2931,
+        4400
+      ],
+      "realistic": [
+        7465,
+        11210
+      ],
+      "simulator": [
+        11128,
+        16709
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.26,
+      "realistic": 3.06,
+      "simulator": 6.0
+    },
+    "expMultiplier": 1.84
+  }
+}

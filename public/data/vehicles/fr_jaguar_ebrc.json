@@ -1,0 +1,197 @@
+{
+  "id": "fr_jaguar_ebrc",
+  "performance": {
+    "horsepower": 500.0,
+    "weight": 23.34,
+    "power_to_weight": 21.42,
+    "max_reverse_speed": 25.0,
+    "reload_time": 0.3,
+    "penetration": 157.2,
+    "max_speed": 90.1,
+    "crew_count": 5,
+    "elevation_speed": 60.0,
+    "traverse_speed": 60.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "both",
+    "elevation_range": [
+      -10.0,
+      45.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": [
+      1200,
+      800
+    ],
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": 1442.2,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 55.0,
+    "mainGun": {
+      "name": "40mm_CTC",
+      "caliber": 40.0,
+      "reloadTime": 0.3,
+      "autoLoader": true,
+      "reloadTimes": {
+        "base": 0.3,
+        "expert": 0.3,
+        "ace": 0.3
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "40mm_gpr_ke_t_apfsds",
+        "localizedName": "OFLT",
+        "type": "apds_fs_long_tank",
+        "caliber": 11.7,
+        "mass": 0.34,
+        "muzzleVelocity": 1510.0,
+        "lanzOdermatt": {
+          "workingLength": 165.0,
+          "density": 17550.0,
+          "material": "tungsten",
+          "Cx": 0.3715
+        },
+        "penetration0m": 157.2,
+        "penetrationData": {
+          "at0m": {
+            "angle0": 157.2,
+            "angle30": 136.1,
+            "angle60": 78.6
+          }
+        }
+      },
+      {
+        "name": "40mm_gpr_pd_t_he",
+        "localizedName": "OET",
+        "type": "he_frag_tank",
+        "caliber": 40.0,
+        "mass": 0.98,
+        "muzzleVelocity": 1000.0,
+        "explosiveMassKg": 0.115,
+        "explosiveType": "hmx",
+        "tntEquivalent": 0.173
+      },
+      {
+        "name": "40mm_gpr_ab_t_he",
+        "localizedName": "OET CHR",
+        "type": "he_frag_dist_fuse",
+        "caliber": 40.0,
+        "mass": 0.98,
+        "muzzleVelocity": 1000.0,
+        "explosiveMassKg": 0.115,
+        "explosiveType": "hmx",
+        "tntEquivalent": 0.173
+      },
+      {
+        "name": "40mm_ke_ab_ahead",
+        "localizedName": "PPM CHR",
+        "type": "ahead_tank",
+        "caliber": 40.0,
+        "mass": 1.4,
+        "muzzleVelocity": 900.0,
+        "explosiveMassKg": 0.0008,
+        "explosiveType": "clx_663",
+        "tntEquivalent": 0.001
+      }
+    ],
+    "penetrationData": {
+      "at0m": {
+        "angle0": 157.2,
+        "angle30": 136.1,
+        "angle60": 78.6
+      }
+    },
+    "autoLoader": true,
+    "engine_manufacturer": "volvo",
+    "engine_model": "d13",
+    "engine_type": null,
+    "engine_max_rpm": 1700.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 7,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      9.5,
+      15.5,
+      26.4,
+      37.4,
+      53.2,
+      64.1,
+      90.1
+    ],
+    "reverse_gear_speeds": [
+      11.0,
+      25.0
+    ],
+    "steer_type": null,
+    "empty_weight": 22.84,
+    "track_width": 0.4,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_FN_MAG58",
+        "caliber": 7.6,
+        "ammo": 2200,
+        "reloadTime": 8.0,
+        "rateOfFire": 1000,
+        "bulletType": "ap_ball"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "140mm_akeron_mp_rocket_launchr",
+        "caliber": 140.0,
+        "ammo": 4,
+        "reloadTime": 10.0,
+        "rateOfFire": 120,
+        "bulletType": "atgm_tandem_tank",
+        "maxDistance": 5000,
+        "maxSpeed": 260,
+        "guidanceType": "ir",
+        "penetration": 1000,
+        "explosiveMass": 1.0,
+        "explosiveType": "comp_b"
+      }
+    ],
+    "main_gun_ammo": 183,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": true
+  },
+  "economy": {
+    "researchCost": 260000,
+    "purchaseCost": 710000,
+    "crewTraining": 200000,
+    "expertTraining": 710000,
+    "aceTrainingGE": 2100,
+    "aceTrainingRP": 1080000,
+    "repairCost": {
+      "arcade": [
+        3338,
+        5951
+      ],
+      "realistic": [
+        3303,
+        5889
+      ],
+      "simulator": [
+        3489,
+        6220
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.21,
+      "realistic": 1.54,
+      "simulator": 1.95
+    },
+    "expMultiplier": 2.32
+  }
+}

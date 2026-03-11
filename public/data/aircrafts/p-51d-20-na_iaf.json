@@ -1,0 +1,31 @@
+{
+  "id": "p-51d-20-na_iaf",
+  "economy": {
+    "researchCost": 54000,
+    "purchaseCost": 185000,
+    "crewTraining": 52000,
+    "expertTraining": 185000,
+    "aceTrainingGE": 940,
+    "aceTrainingRP": 480000,
+    "repairCost": {
+      "arcade": [
+        2281,
+        3103
+      ],
+      "realistic": [
+        5242,
+        6916
+      ],
+      "simulator": [
+        7910,
+        10436
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.88,
+      "realistic": 2.15,
+      "simulator": 4.4
+    },
+    "expMultiplier": 1.66
+  }
+}

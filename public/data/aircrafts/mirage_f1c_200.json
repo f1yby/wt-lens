@@ -1,0 +1,33 @@
+{
+  "id": "mirage_f1c_200",
+  "economy": {
+    "researchCost": 290000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 9800,
+    "crewTraining": 10000,
+    "expertTraining": 1280000,
+    "aceTrainingGE": 3400,
+    "aceTrainingRP": 2560000,
+    "repairCost": {
+      "arcade": [
+        2057,
+        2057
+      ],
+      "realistic": [
+        6124,
+        6124
+      ],
+      "simulator": [
+        6119,
+        6119
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.11,
+      "realistic": 6.37,
+      "simulator": 12.0
+    },
+    "expMultiplier": 2.5,
+    "freeRepairs": 30
+  }
+}

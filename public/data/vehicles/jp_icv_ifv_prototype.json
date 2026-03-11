@@ -1,0 +1,189 @@
+{
+  "id": "jp_icv_ifv_prototype",
+  "performance": {
+    "horsepower": 570.0,
+    "weight": 26.0,
+    "power_to_weight": 21.92,
+    "max_reverse_speed": 36.2,
+    "reload_time": 10.0,
+    "penetration": 114.0,
+    "max_speed": 99.6,
+    "crew_count": 5,
+    "elevation_speed": 28.0,
+    "traverse_speed": 53.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "both",
+    "elevation_range": [
+      -10.0,
+      45.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": [
+      1200,
+      800
+    ],
+    "commander_thermal_resolution": [
+      1200,
+      800
+    ],
+    "gunner_thermal_diagonal": 1442.2,
+    "commander_thermal_diagonal": 1442.2,
+    "stabilizer_value": 1,
+    "elevation_range_value": 55.0,
+    "mainGun": {
+      "name": "30mm_Bushmaster_2_Mk_44",
+      "caliber": 30.0,
+      "reloadTime": 10.0,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 13.0,
+        "expert": 11.5,
+        "ace": 10.0
+      },
+      "rateOfFire": 200,
+      "beltReloadTime": 10.0
+    },
+    "ammunitions": [
+      {
+        "name": "30mm_mk320",
+        "localizedName": "MK320",
+        "type": "apds_autocannon",
+        "caliber": 18.0,
+        "mass": 0.19,
+        "muzzleVelocity": 1480.0,
+        "deMarre": {
+          "fullCaliber": 30.0,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "isApcr": true,
+          "coreCaliber": 18.0,
+          "coreMass": 0.19,
+          "Cx": 0.13
+        },
+        "penetration0m": 95.1
+      },
+      {
+        "name": "30mm_mk258",
+        "localizedName": "MK258",
+        "type": "apds_fs_long_tank",
+        "caliber": 9.0,
+        "mass": 0.17,
+        "muzzleVelocity": 1430.0,
+        "lanzOdermatt": {
+          "workingLength": 130.0,
+          "density": 17500.0,
+          "material": "tungsten",
+          "Cx": 0.3
+        },
+        "penetration0m": 114.0,
+        "penetrationData": {
+          "at0m": {
+            "angle0": 114.0,
+            "angle30": 98.7,
+            "angle60": 57.0
+          }
+        }
+      },
+      {
+        "name": "30mm_mk_266",
+        "localizedName": "MK266",
+        "type": "he_i_t",
+        "caliber": 30.0,
+        "mass": 0.362,
+        "muzzleVelocity": 1080.0,
+        "explosiveMassKg": 0.032,
+        "explosiveType": "hexal",
+        "tntEquivalent": 0.045
+      },
+      {
+        "name": "30mm_mk_310",
+        "localizedName": "MK310",
+        "type": "he_tf",
+        "caliber": 30.0,
+        "mass": 0.424,
+        "muzzleVelocity": 970.0,
+        "explosiveMassKg": 0.04,
+        "explosiveType": "hexal",
+        "tntEquivalent": 0.056
+      }
+    ],
+    "penetrationData": {
+      "at0m": {
+        "angle0": 114.0,
+        "angle30": 98.7,
+        "angle60": 57.0
+      }
+    },
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2100.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 5,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      18.1,
+      36.2,
+      54.3,
+      72.4,
+      99.6
+    ],
+    "reverse_gear_speeds": [
+      18.1,
+      36.2
+    ],
+    "steer_type": null,
+    "empty_weight": 25.5,
+    "track_width": 0.4,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_Mk52",
+        "caliber": 7.6,
+        "ammo": 2000,
+        "reloadTime": 8.0,
+        "rateOfFire": 600,
+        "bulletType": "ap_ball"
+      }
+    ],
+    "main_gun_ammo": 360,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": true
+  },
+  "economy": {
+    "researchCost": 260000,
+    "purchaseCost": 710000,
+    "crewTraining": 200000,
+    "expertTraining": 710000,
+    "aceTrainingGE": 2100,
+    "aceTrainingRP": 1080000,
+    "repairCost": {
+      "arcade": [
+        3434,
+        5810
+      ],
+      "realistic": [
+        3288,
+        5564
+      ],
+      "simulator": [
+        4382,
+        7415
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.37,
+      "realistic": 1.73,
+      "simulator": 2.23
+    },
+    "expMultiplier": 2.32
+  }
+}

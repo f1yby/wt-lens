@@ -1,0 +1,188 @@
+{
+  "id": "fr_leclerc_s2",
+  "performance": {
+    "horsepower": 1500.0,
+    "weight": 55.6,
+    "power_to_weight": 26.98,
+    "max_reverse_speed": 37.8,
+    "reload_time": 5.0,
+    "penetration": 575.9,
+    "max_speed": 71.8,
+    "crew_count": 5,
+    "elevation_speed": 30.0,
+    "traverse_speed": 40.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "both",
+    "elevation_range": [
+      -8.0,
+      20.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": [
+      800,
+      600
+    ],
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": 1000.0,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 28.0,
+    "mainGun": {
+      "name": "120mm_GIAT_CN120_26_F1",
+      "caliber": 120.0,
+      "reloadTime": 5.0,
+      "autoLoader": true,
+      "reloadTimes": {
+        "base": 5.0,
+        "expert": 5.0,
+        "ace": 5.0
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "120mm_occ_120_g1",
+        "localizedName": "OCC 120 G1",
+        "type": "heat_fs_tank",
+        "caliber": 120.0,
+        "mass": 14.4,
+        "muzzleVelocity": 1100.0,
+        "penetration0m": 480.0,
+        "explosiveMassKg": 1.64,
+        "explosiveType": "comp_b",
+        "tntEquivalent": 2.083
+      },
+      {
+        "name": "120mm_ofl_120_g1",
+        "localizedName": "OFL 120 G1",
+        "type": "apds_fs_long_tank",
+        "caliber": 26.0,
+        "mass": 3.8,
+        "muzzleVelocity": 1780.0,
+        "lanzOdermatt": {
+          "workingLength": 380.0,
+          "density": 17500.0,
+          "material": "tungsten",
+          "Cx": 0.49
+        },
+        "penetration0m": 425.0,
+        "penetrationData": {
+          "at0m": {
+            "angle0": 425.0,
+            "angle30": 368.1,
+            "angle60": 212.5
+          }
+        }
+      },
+      {
+        "name": "120mm_ofl_120_f1",
+        "localizedName": "OFL 120 F1",
+        "type": "apds_fs_long_l30_tank",
+        "caliber": 22.0,
+        "mass": 4.0,
+        "muzzleVelocity": 1790.0,
+        "lanzOdermatt": {
+          "workingLength": 585.0,
+          "density": 17500.0,
+          "material": "tungsten",
+          "Cx": 0.611
+        },
+        "penetration0m": 575.9,
+        "penetrationData": {
+          "at0m": {
+            "angle0": 575.9,
+            "angle30": 498.7,
+            "angle60": 288.0
+          }
+        }
+      }
+    ],
+    "penetrationData": {
+      "at0m": {
+        "angle0": 575.9,
+        "angle30": 498.7,
+        "angle60": 288.0
+      }
+    },
+    "autoLoader": true,
+    "engine_manufacturer": "wartsila",
+    "engine_model": "v8x_1500",
+    "engine_type": null,
+    "engine_max_rpm": 2500.0,
+    "transmission_manufacturer": "sesm",
+    "transmission_model": "esm_500",
+    "transmission_type": "auto",
+    "forward_gears": 10,
+    "reverse_gears": 4,
+    "forward_gear_speeds": [
+      4.7,
+      9.5,
+      11.9,
+      15.9,
+      19.5,
+      25.1,
+      32.4,
+      45.4,
+      55.7,
+      71.8
+    ],
+    "reverse_gear_speeds": [
+      6.7,
+      13.3,
+      19.7,
+      37.8
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 54.6,
+    "track_width": 0.55,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "12_7mm_M2_HB_for_leclerc",
+        "caliber": 12.7,
+        "ammo": 800,
+        "reloadTime": 8.0,
+        "rateOfFire": 575,
+        "bulletType": "ap_i_t_ball_M20"
+      }
+    ],
+    "main_gun_ammo": 40,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": true
+  },
+  "economy": {
+    "researchCost": 200000,
+    "purchaseCost": 1100000,
+    "crewTraining": 310000,
+    "expertTraining": 1100000,
+    "aceTrainingGE": 2300,
+    "aceTrainingRP": 1350000,
+    "repairCost": {
+      "arcade": [
+        4712,
+        7012
+      ],
+      "realistic": [
+        4567,
+        6796
+      ],
+      "simulator": [
+        5780,
+        8602
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.57,
+      "realistic": 1.96,
+      "simulator": 2.08
+    },
+    "expMultiplier": 2.56
+  }
+}

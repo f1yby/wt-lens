@@ -1,0 +1,31 @@
+{
+  "id": "av_8b_plus",
+  "economy": {
+    "researchCost": 320000,
+    "purchaseCost": 860000,
+    "crewTraining": 250000,
+    "expertTraining": 860000,
+    "aceTrainingGE": 3600,
+    "aceTrainingRP": 1350000,
+    "repairCost": {
+      "arcade": [
+        4166,
+        5630
+      ],
+      "realistic": [
+        9389,
+        12688
+      ],
+      "simulator": [
+        12956,
+        17509
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.78,
+      "realistic": 2.89,
+      "simulator": 5.26
+    },
+    "expMultiplier": 2.56
+  }
+}

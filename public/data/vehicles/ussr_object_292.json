@@ -1,0 +1,148 @@
+{
+  "id": "ussr_object_292",
+  "performance": {
+    "horsepower": 1100.0,
+    "weight": 46.0,
+    "power_to_weight": 23.91,
+    "max_reverse_speed": 11.0,
+    "reload_time": 10.0,
+    "penetration": 698.6,
+    "max_speed": 69.9,
+    "crew_count": 5,
+    "elevation_speed": 3.4,
+    "traverse_speed": 24.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "both",
+    "elevation_range": [
+      -5.0,
+      15.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 20.0,
+    "mainGun": {
+      "name": "152mm_LP83",
+      "caliber": 152.0,
+      "reloadTime": 10.0,
+      "autoLoader": true,
+      "reloadTimes": {
+        "base": 10.0,
+        "expert": 10.0,
+        "ace": 10.0
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "152mm_lp_83_apfsds",
+        "localizedName": "152 mm APFSDS",
+        "type": "apds_fs_tungsten_caliber_fins_tank",
+        "caliber": 28.0,
+        "mass": 7.0,
+        "muzzleVelocity": 1980.0,
+        "lanzOdermatt": {
+          "workingLength": 640.0,
+          "density": 17500.0,
+          "material": "tungsten",
+          "Cx": 0.5
+        },
+        "penetration0m": 698.6,
+        "penetrationData": {
+          "at0m": {
+            "angle0": 698.6,
+            "angle30": 605.0,
+            "angle60": 349.3
+          }
+        }
+      },
+      {
+        "name": "152mm_lp_83_he_fs",
+        "localizedName": "152 mm HE",
+        "type": "he_frag_fs_tank",
+        "caliber": 152.0,
+        "mass": 45.9,
+        "muzzleVelocity": 920.0,
+        "explosiveMassKg": 5.6,
+        "explosiveType": "a_ix_2",
+        "tntEquivalent": 7.84
+      }
+    ],
+    "penetrationData": {
+      "at0m": {
+        "angle0": 698.6,
+        "angle30": 605.0,
+        "angle60": 349.3
+      }
+    },
+    "autoLoader": true,
+    "engine_manufacturer": "klimov",
+    "engine_model": "gtd_1000tf",
+    "engine_type": "gasturbine",
+    "engine_max_rpm": 3154.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 9,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      16.0,
+      20.0,
+      32.4,
+      37.6,
+      47.9,
+      53.8,
+      58.2,
+      63.5,
+      69.9
+    ],
+    "reverse_gear_speeds": [
+      11.0
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 44.5,
+    "track_width": 0.54,
+    "secondary_weapons": null,
+    "main_gun_ammo": 30,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": false,
+    "has_ess": true,
+    "has_laser_rangefinder": true
+  },
+  "economy": {
+    "researchCost": 260000,
+    "purchaseCost": 710000,
+    "crewTraining": 200000,
+    "expertTraining": 710000,
+    "aceTrainingGE": 2100,
+    "aceTrainingRP": 1080000,
+    "repairCost": {
+      "arcade": [
+        4636,
+        6613
+      ],
+      "realistic": [
+        4492,
+        6409
+      ],
+      "simulator": [
+        5250,
+        7490
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.52,
+      "realistic": 1.95,
+      "simulator": 2.45
+    },
+    "expMultiplier": 2.32
+  }
+}

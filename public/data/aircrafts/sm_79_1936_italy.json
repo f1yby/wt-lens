@@ -1,0 +1,31 @@
+{
+  "id": "sm_79_1936_italy",
+  "economy": {
+    "researchCost": 5900,
+    "purchaseCost": 6300,
+    "crewTraining": 1800,
+    "expertTraining": 6300,
+    "aceTrainingGE": 80,
+    "aceTrainingRP": 135000,
+    "repairCost": {
+      "arcade": [
+        340,
+        461
+      ],
+      "realistic": [
+        460,
+        624
+      ],
+      "simulator": [
+        736,
+        998
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.29,
+      "realistic": 0.62,
+      "simulator": 1.15
+    },
+    "expMultiplier": 1.06
+  }
+}

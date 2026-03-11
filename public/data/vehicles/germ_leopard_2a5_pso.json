@@ -1,0 +1,213 @@
+{
+  "id": "germ_leopard_2a5_pso",
+  "performance": {
+    "horsepower": 1630.0,
+    "weight": 64.1,
+    "power_to_weight": 25.43,
+    "max_reverse_speed": 32.6,
+    "reload_time": 6.0,
+    "penetration": 623.6,
+    "max_speed": 68.1,
+    "crew_count": 5,
+    "elevation_speed": 40.0,
+    "traverse_speed": 40.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "both",
+    "elevation_range": [
+      -9.0,
+      20.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": [
+      500,
+      300
+    ],
+    "commander_thermal_resolution": [
+      800,
+      600
+    ],
+    "gunner_thermal_diagonal": 583.1,
+    "commander_thermal_diagonal": 1000.0,
+    "stabilizer_value": 1,
+    "elevation_range_value": 29.0,
+    "mainGun": {
+      "name": "120mm_Rheinmetall_L44_2A5",
+      "caliber": 120.0,
+      "reloadTime": 6.0,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 7.8,
+        "expert": 6.9,
+        "ace": 6.0
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "120mm_dm12a1",
+        "localizedName": "DM12A1",
+        "type": "heat_fs_tank",
+        "caliber": 120.0,
+        "mass": 13.5,
+        "muzzleVelocity": 1140.0,
+        "penetration0m": 480.0,
+        "explosiveMassKg": 1.64,
+        "explosiveType": "comp_b",
+        "tntEquivalent": 2.083
+      },
+      {
+        "name": "120mm_dm33",
+        "localizedName": "DM33",
+        "type": "apds_fs_long_tank",
+        "caliber": 25.0,
+        "mass": 4.3,
+        "muzzleVelocity": 1640.0,
+        "lanzOdermatt": {
+          "workingLength": 510.0,
+          "density": 17500.0,
+          "material": "tungsten",
+          "Cx": 0.55
+        },
+        "penetration0m": 481.5,
+        "penetrationData": {
+          "at0m": {
+            "angle0": 481.5,
+            "angle30": 417.0,
+            "angle60": 240.8
+          }
+        }
+      },
+      {
+        "name": "120mm_dm_11",
+        "localizedName": "DM11",
+        "type": "he_frag_dist_fuse",
+        "caliber": 120.0,
+        "mass": 19.0,
+        "muzzleVelocity": 980.0,
+        "explosiveMassKg": 3.0,
+        "explosiveType": "comp_b",
+        "tntEquivalent": 3.81
+      },
+      {
+        "name": "120mm_dm53",
+        "localizedName": "DM53",
+        "type": "apds_fs_long_l30_tank",
+        "caliber": 23.0,
+        "mass": 5.0,
+        "muzzleVelocity": 1670.0,
+        "lanzOdermatt": {
+          "workingLength": 685.0,
+          "density": 17500.0,
+          "material": "tungsten",
+          "Cx": 0.74
+        },
+        "penetration0m": 623.6,
+        "penetrationData": {
+          "at0m": {
+            "angle0": 623.6,
+            "angle30": 540.1,
+            "angle60": 311.8
+          }
+        }
+      }
+    ],
+    "penetrationData": {
+      "at0m": {
+        "angle0": 623.6,
+        "angle30": 540.1,
+        "angle60": 311.8
+      }
+    },
+    "autoLoader": false,
+    "engine_manufacturer": "mtu",
+    "engine_model": "mt_883_ka_501",
+    "engine_type": null,
+    "engine_max_rpm": 3000.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 10,
+    "reverse_gears": 6,
+    "forward_gear_speeds": [
+      6.0,
+      11.3,
+      16.8,
+      22.5,
+      27.9,
+      32.9,
+      39.0,
+      45.8,
+      55.9,
+      68.1
+    ],
+    "reverse_gear_speeds": [
+      6.0,
+      11.2,
+      16.8,
+      22.4,
+      27.5,
+      32.6
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 62.6,
+    "track_width": 0.55,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_92mm_MG3",
+        "caliber": 7.6,
+        "ammo": 4400,
+        "reloadTime": 8.0,
+        "rateOfFire": 1200,
+        "bulletType": "ap_ball"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "12_7mm_sMG_50",
+        "caliber": 12.7,
+        "ammo": 800,
+        "reloadTime": 8.0,
+        "rateOfFire": 575,
+        "bulletType": "ap_i_t_ball_M20"
+      }
+    ],
+    "main_gun_ammo": 42,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": true
+  },
+  "economy": {
+    "researchCost": 410000,
+    "purchaseCost": 1100000,
+    "crewTraining": 310000,
+    "expertTraining": 1100000,
+    "aceTrainingGE": 2300,
+    "aceTrainingRP": 1350000,
+    "repairCost": {
+      "arcade": [
+        4495,
+        7012
+      ],
+      "realistic": [
+        4356,
+        6796
+      ],
+      "simulator": [
+        5514,
+        8602
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.57,
+      "realistic": 1.96,
+      "simulator": 2.08
+    },
+    "expMultiplier": 2.56
+  }
+}

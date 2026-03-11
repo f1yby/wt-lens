@@ -1,0 +1,31 @@
+{
+  "id": "ju-87d-3",
+  "economy": {
+    "researchCost": 9200,
+    "purchaseCost": 16000,
+    "crewTraining": 4500,
+    "expertTraining": 16000,
+    "aceTrainingGE": 180,
+    "aceTrainingRP": 190000,
+    "repairCost": {
+      "arcade": [
+        693,
+        900
+      ],
+      "realistic": [
+        1020,
+        1287
+      ],
+      "simulator": [
+        1680,
+        2118
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.48,
+      "realistic": 1.03,
+      "simulator": 1.95
+    },
+    "expMultiplier": 1.18
+  }
+}

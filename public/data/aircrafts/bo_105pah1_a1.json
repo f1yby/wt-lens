@@ -1,0 +1,31 @@
+{
+  "id": "bo_105pah1_a1",
+  "economy": {
+    "researchCost": 370000,
+    "purchaseCost": 990000,
+    "crewTraining": 280000,
+    "expertTraining": 990000,
+    "aceTrainingGE": 2200,
+    "aceTrainingRP": 890000,
+    "repairCost": {
+      "arcade": [
+        10390,
+        13185
+      ],
+      "realistic": [
+        3626,
+        4602
+      ],
+      "simulator": [
+        6178,
+        7840
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.0,
+      "realistic": 3.0,
+      "simulator": 4.3
+    },
+    "expMultiplier": 2.14
+  }
+}

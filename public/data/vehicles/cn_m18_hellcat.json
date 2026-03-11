@@ -1,0 +1,168 @@
+{
+  "id": "cn_m18_hellcat",
+  "performance": {
+    "horsepower": 460.0,
+    "weight": 17.69,
+    "power_to_weight": 26.0,
+    "max_reverse_speed": 25.9,
+    "reload_time": 6.06,
+    "penetration": 149.2,
+    "max_speed": 80.2,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 24.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -10.0,
+      20.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 30.0,
+    "mainGun": {
+      "name": "76mm_M1_open_turret",
+      "caliber": 76.2,
+      "reloadTime": 6.06,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 7.88,
+        "expert": 6.97,
+        "ace": 6.06
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "76mm_m79",
+        "localizedName": "M79 shot",
+        "type": "ap_tank",
+        "caliber": 76.2,
+        "mass": 6.8,
+        "muzzleVelocity": 792.0,
+        "deMarre": {
+          "fullCaliber": 76.2,
+          "isApcbc": false,
+          "explosiveMass": 0
+        },
+        "penetration0m": 134.3
+      },
+      {
+        "name": "76mm_m42a1",
+        "localizedName": "M42A1 shell",
+        "type": "he_frag_tank",
+        "caliber": 76.2,
+        "mass": 5.84,
+        "muzzleVelocity": 823.0,
+        "explosiveMassKg": 0.39,
+        "explosiveType": "tnt",
+        "tntEquivalent": 0.39
+      },
+      {
+        "name": "76mm_m62",
+        "localizedName": "M62 shell",
+        "type": "apcbc_tank",
+        "caliber": 76.2,
+        "mass": 7.0,
+        "muzzleVelocity": 792.0,
+        "deMarre": {
+          "fullCaliber": 76.2,
+          "isApcbc": true,
+          "explosiveMass": 0.065,
+          "Cx": 0.4
+        },
+        "penetration0m": 149.2,
+        "explosiveMassKg": 0.065,
+        "explosiveType": "exp_d",
+        "tntEquivalent": 0.064
+      },
+      {
+        "name": "75mm_m88",
+        "localizedName": "M88",
+        "type": "smoke_tank",
+        "caliber": 76.0,
+        "mass": 3.44,
+        "muzzleVelocity": 274.0,
+        "explosiveMassKg": 0.05,
+        "explosiveType": "smoke_composition",
+        "tntEquivalent": 0.05
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2300.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 6,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      9.8,
+      19.6,
+      26.5,
+      41.0,
+      54.2,
+      80.2
+    ],
+    "reverse_gear_speeds": [
+      12.9,
+      25.9
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 17.39,
+    "track_width": 0.35,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "12_7mm_M2_HB",
+        "caliber": 12.7,
+        "ammo": 1000,
+        "reloadTime": 8.0,
+        "rateOfFire": 575,
+        "bulletType": "ap_i_t_ball_M20"
+      }
+    ],
+    "main_gun_ammo": 45,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 54000,
+    "purchaseCost": 185000,
+    "crewTraining": 52000,
+    "expertTraining": 185000,
+    "aceTrainingGE": 710,
+    "aceTrainingRP": 480000,
+    "repairCost": {
+      "arcade": [
+        2099,
+        2860
+      ],
+      "realistic": [
+        2703,
+        3682
+      ],
+      "simulator": [
+        3174,
+        4325
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.98,
+      "realistic": 1.45,
+      "simulator": 1.9
+    },
+    "expMultiplier": 1.66
+  }
+}

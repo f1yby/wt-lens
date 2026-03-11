@@ -1,0 +1,186 @@
+{
+  "id": "ussr_object_140",
+  "performance": {
+    "horsepower": 580.0,
+    "weight": 36.0,
+    "power_to_weight": 16.11,
+    "max_reverse_speed": 8.1,
+    "reload_time": 8.55,
+    "penetration": 380.0,
+    "max_speed": 54.1,
+    "crew_count": 5,
+    "elevation_speed": 4.5,
+    "traverse_speed": 20.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "both",
+    "elevation_range": [
+      -5.0,
+      16.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 21.0,
+    "mainGun": {
+      "name": "100mm_D54TS",
+      "caliber": 100.0,
+      "reloadTime": 8.55,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 11.12,
+        "expert": 9.83,
+        "ace": 8.55
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "100mm_d54ts_apds",
+        "localizedName": "D-54 APDS",
+        "type": "apds_tank",
+        "caliber": 55.0,
+        "mass": 4.13,
+        "muzzleVelocity": 1535.0,
+        "deMarre": {
+          "fullCaliber": 100.0,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "isApcr": true,
+          "coreCaliber": 55.0,
+          "coreMass": 2.78,
+          "Cx": 0.2281
+        },
+        "penetration0m": 242.1
+      },
+      {
+        "name": "100mm_d54ts_he",
+        "localizedName": "D-54 HE",
+        "type": "he_frag_tank",
+        "caliber": 100.0,
+        "mass": 15.6,
+        "muzzleVelocity": 1025.0,
+        "explosiveMassKg": 1.462,
+        "explosiveType": "tnt",
+        "tntEquivalent": 1.462
+      },
+      {
+        "name": "100mm_d54ts_apcbc",
+        "localizedName": "D-54 AP",
+        "type": "apcbc_tank",
+        "caliber": 100.0,
+        "mass": 15.88,
+        "muzzleVelocity": 1015.0,
+        "deMarre": {
+          "fullCaliber": 100.0,
+          "isApcbc": true,
+          "explosiveMass": 0.065,
+          "Cx": 0.395
+        },
+        "penetration0m": 290.6,
+        "explosiveMassKg": 0.065,
+        "explosiveType": "a_ix_2",
+        "tntEquivalent": 0.091
+      },
+      {
+        "name": "100mm_d54ts_heat",
+        "localizedName": "D-54 HEAT",
+        "type": "heat_fs_tank",
+        "caliber": 100.0,
+        "mass": 12.38,
+        "muzzleVelocity": 1025.0,
+        "penetration0m": 380.0,
+        "explosiveMassKg": 0.995,
+        "explosiveType": "a_ix_1",
+        "tntEquivalent": 1.134
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": "chtz",
+    "engine_model": "td_12",
+    "engine_type": null,
+    "engine_max_rpm": 2100.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 6,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      7.8,
+      11.3,
+      17.2,
+      24.6,
+      35.6,
+      54.1
+    ],
+    "reverse_gear_speeds": [
+      8.1
+    ],
+    "steer_type": null,
+    "empty_weight": 35.5,
+    "track_width": 0.58,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_SGMT",
+        "caliber": 7.6,
+        "ammo": 3500,
+        "reloadTime": 8.0,
+        "rateOfFire": 600,
+        "bulletType": "ap_i_ball"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "14_5mm_KPVT",
+        "caliber": 14.5,
+        "ammo": 350,
+        "reloadTime": 8.0,
+        "rateOfFire": 600,
+        "bulletType": "ap_i_t_ball"
+      }
+    ],
+    "main_gun_ammo": 50,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": false,
+    "has_ess": true,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 160000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 8730,
+    "crewTraining": 10000,
+    "expertTraining": 730000,
+    "aceTrainingGE": 2000,
+    "aceTrainingRP": 1780000,
+    "repairCost": {
+      "arcade": [
+        3039,
+        3039
+      ],
+      "realistic": [
+        3312,
+        3312
+      ],
+      "simulator": [
+        4358,
+        4358
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.77,
+      "realistic": 4.01,
+      "simulator": 4.89
+    },
+    "expMultiplier": 2.14,
+    "freeRepairs": 30
+  }
+}

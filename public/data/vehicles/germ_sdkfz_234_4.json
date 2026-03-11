@@ -1,0 +1,192 @@
+{
+  "id": "germ_sdkfz_234_4",
+  "performance": {
+    "horsepower": 210.0,
+    "weight": 11.74,
+    "power_to_weight": 17.89,
+    "max_reverse_speed": 89.9,
+    "reload_time": 5.88,
+    "penetration": 192.0,
+    "max_speed": 89.9,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 14.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -5.0,
+      22.0
+    ],
+    "traverse_range": [
+      -20.0,
+      20.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 27.0,
+    "mainGun": {
+      "name": "75mm_PaK40_3_L46",
+      "caliber": 75.0,
+      "reloadTime": 5.88,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 7.64,
+        "expert": 6.76,
+        "ace": 5.88
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "75mm_pzgr_39",
+        "localizedName": "PzGr 39",
+        "type": "apcbc_tank",
+        "caliber": 75.0,
+        "mass": 6.8,
+        "muzzleVelocity": 792.0,
+        "deMarre": {
+          "fullCaliber": 75.0,
+          "isApcbc": true,
+          "explosiveMass": 0.017,
+          "Cx": 0.4
+        },
+        "penetration0m": 151.8,
+        "explosiveMassKg": 0.017,
+        "explosiveType": "h10",
+        "tntEquivalent": 0.024
+      },
+      {
+        "name": "75mm_sprgr_34",
+        "localizedName": "Sprgr. 34",
+        "type": "he_frag_tank",
+        "caliber": 75.0,
+        "mass": 5.74,
+        "muzzleVelocity": 550.0,
+        "explosiveMassKg": 0.686,
+        "explosiveType": "tnt",
+        "tntEquivalent": 0.686
+      },
+      {
+        "name": "75mm_grhl_38_b",
+        "localizedName": "Hl.Gr 38B",
+        "type": "heat_tank",
+        "caliber": 75.0,
+        "mass": 4.4,
+        "muzzleVelocity": 450.0,
+        "penetration0m": 80.0,
+        "explosiveMassKg": 0.513,
+        "explosiveType": "h5",
+        "tntEquivalent": 0.718
+      },
+      {
+        "name": "75mm_pzgr_40",
+        "localizedName": "PzGr 40",
+        "type": "apcr_tank",
+        "caliber": 28.0,
+        "mass": 4.1,
+        "muzzleVelocity": 990.0,
+        "deMarre": {
+          "fullCaliber": 75.0,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "isApcr": true,
+          "coreCaliber": 28.0,
+          "coreMass": 0.9,
+          "Cx": 0.28
+        },
+        "penetration0m": 192.0
+      },
+      {
+        "name": "75mm_k_gr_rot_nb",
+        "localizedName": "K.Gr.Rot Nb.",
+        "type": "smoke_tank",
+        "caliber": 75.0,
+        "mass": 6.2,
+        "muzzleVelocity": 540.0,
+        "explosiveMassKg": 0.05,
+        "explosiveType": "smoke_composition",
+        "tntEquivalent": 0.05
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2200.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 7,
+    "reverse_gears": 7,
+    "forward_gear_speeds": [
+      8.3,
+      21.7,
+      26.9,
+      32.9,
+      39.8,
+      57.3,
+      89.9
+    ],
+    "reverse_gear_speeds": [
+      8.3,
+      21.7,
+      26.9,
+      32.9,
+      39.8,
+      57.3,
+      89.9
+    ],
+    "steer_type": null,
+    "empty_weight": 11.5,
+    "track_width": 0.2,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner2",
+        "name": "7_92mm_MG42",
+        "caliber": 7.9,
+        "ammo": 2100,
+        "reloadTime": 8.0,
+        "rateOfFire": 1200,
+        "bulletType": "ap_ball"
+      }
+    ],
+    "main_gun_ammo": 36,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 18000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 1300,
+    "crewTraining": 10000,
+    "expertTraining": 67000,
+    "aceTrainingGE": 330,
+    "aceTrainingRP": 570000,
+    "repairCost": {
+      "arcade": [
+        727,
+        727
+      ],
+      "realistic": [
+        818,
+        818
+      ],
+      "simulator": [
+        1128,
+        1128
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.39,
+      "realistic": 2.11,
+      "simulator": 2.68
+    },
+    "expMultiplier": 1.36,
+    "freeRepairs": 30
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "id": "fc_20_bis",
+  "economy": {
+    "researchCost": 5900,
+    "purchaseCost": 6300,
+    "crewTraining": 1800,
+    "expertTraining": 6300,
+    "aceTrainingGE": 80,
+    "aceTrainingRP": 135000,
+    "repairCost": {
+      "arcade": [
+        242,
+        335
+      ],
+      "realistic": [
+        301,
+        417
+      ],
+      "simulator": [
+        617,
+        853
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.19,
+      "realistic": 0.44,
+      "simulator": 0.89
+    },
+    "expMultiplier": 1.06
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "id": "ef_2000a_aesa",
+  "economy": {
+    "researchCost": 410000,
+    "purchaseCost": 1100000,
+    "crewTraining": 310000,
+    "expertTraining": 1100000,
+    "aceTrainingGE": 3800,
+    "aceTrainingRP": 1430000,
+    "repairCost": {
+      "arcade": [
+        2632,
+        4538
+      ],
+      "realistic": [
+        7558,
+        13031
+      ],
+      "simulator": [
+        8930,
+        15396
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.97,
+      "realistic": 3.27,
+      "simulator": 5.13
+    },
+    "expMultiplier": 2.74
+  }
+}

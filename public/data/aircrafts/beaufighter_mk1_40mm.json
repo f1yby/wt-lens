@@ -1,0 +1,33 @@
+{
+  "id": "beaufighter_mk1_40mm",
+  "economy": {
+    "researchCost": 9200,
+    "purchaseCost": 0,
+    "purchaseCostGold": 850,
+    "crewTraining": 3400,
+    "expertTraining": 23000,
+    "aceTrainingGE": 180,
+    "aceTrainingRP": 380000,
+    "repairCost": {
+      "arcade": [
+        883,
+        883
+      ],
+      "realistic": [
+        2278,
+        2278
+      ],
+      "simulator": [
+        6173,
+        6173
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.92,
+      "realistic": 2.81,
+      "simulator": 6.02
+    },
+    "expMultiplier": 1.18,
+    "freeRepairs": 30
+  }
+}

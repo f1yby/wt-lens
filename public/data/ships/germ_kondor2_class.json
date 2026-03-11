@@ -1,0 +1,27 @@
+{
+  "id": "germ_kondor2_class",
+  "economy": {
+    "researchCost": 220000,
+    "purchaseCost": 640000,
+    "crewTraining": 185000,
+    "expertTraining": 640000,
+    "aceTrainingGE": 1400,
+    "aceTrainingRP": 620000,
+    "repairCost": {
+      "arcade": [
+        5093,
+        6136
+      ],
+      "realistic": [
+        7808,
+        9408
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.2,
+      "realistic": 2.04,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.84
+  }
+}

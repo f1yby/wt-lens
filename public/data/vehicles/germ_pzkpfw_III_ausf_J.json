@@ -1,0 +1,178 @@
+{
+  "id": "germ_pzkpfw_III_ausf_J",
+  "performance": {
+    "horsepower": 300.0,
+    "weight": 21.25,
+    "power_to_weight": 14.12,
+    "max_reverse_speed": 10.0,
+    "reload_time": 3.7,
+    "penetration": 137.1,
+    "max_speed": 53.4,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 14.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -10.0,
+      20.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 30.0,
+    "mainGun": {
+      "name": "50mm_KwK39",
+      "caliber": 50.0,
+      "reloadTime": 3.7,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 4.81,
+        "expert": 4.25,
+        "ace": 3.7
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "50mm_pzgr_39",
+        "localizedName": "PzGr 39",
+        "type": "apc_tank",
+        "caliber": 50.0,
+        "mass": 2.05,
+        "muzzleVelocity": 835.0,
+        "deMarre": {
+          "fullCaliber": 50.0,
+          "isApcbc": true,
+          "explosiveMass": 0.017,
+          "Cx": 0.5922
+        },
+        "penetration0m": 106.4,
+        "explosiveMassKg": 0.017,
+        "explosiveType": "np_10",
+        "tntEquivalent": 0.022
+      },
+      {
+        "name": "50mm_sprgr_38",
+        "localizedName": "Sprgr. 38",
+        "type": "he_frag_tank",
+        "caliber": 50.0,
+        "mass": 1.82,
+        "muzzleVelocity": 870.0,
+        "explosiveMassKg": 0.17,
+        "explosiveType": "fp02_np10",
+        "tntEquivalent": 0.216
+      },
+      {
+        "name": "50mm_pzgr_40_1",
+        "localizedName": "PzGr 40/1",
+        "type": "apcr_tank",
+        "caliber": 21.0,
+        "mass": 1.07,
+        "muzzleVelocity": 1130.0,
+        "deMarre": {
+          "fullCaliber": 50.0,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "isApcr": true,
+          "coreCaliber": 21.0,
+          "coreMass": 0.335,
+          "Cx": 0.464
+        },
+        "penetration0m": 130.6
+      },
+      {
+        "name": "50mm_pzgr_40",
+        "localizedName": "PzGr 40",
+        "type": "apcr_tank",
+        "caliber": 21.0,
+        "mass": 0.9,
+        "muzzleVelocity": 1180.0,
+        "deMarre": {
+          "fullCaliber": 50.0,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "isApcr": true,
+          "coreCaliber": 21.0,
+          "coreMass": 0.335,
+          "Cx": 0.47
+        },
+        "penetration0m": 137.1
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 3000.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 6,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      6.3,
+      8.9,
+      15.3,
+      21.4,
+      35.6,
+      53.4
+    ],
+    "reverse_gear_speeds": [
+      10.0
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 21.5,
+    "track_width": 0.4,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_92mm_MG34",
+        "caliber": 7.9,
+        "ammo": 3750,
+        "reloadTime": 8.0,
+        "rateOfFire": 900,
+        "bulletType": "ap_ball"
+      }
+    ],
+    "main_gun_ammo": 84,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 7900,
+    "purchaseCost": 10000,
+    "crewTraining": 3000,
+    "expertTraining": 10000,
+    "aceTrainingGE": 115,
+    "aceTrainingRP": 160000,
+    "repairCost": {
+      "arcade": [
+        390,
+        530
+      ],
+      "realistic": [
+        430,
+        585
+      ],
+      "simulator": [
+        517,
+        703
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.27,
+      "realistic": 0.38,
+      "simulator": 0.44
+    },
+    "expMultiplier": 1.12
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "fr_elan_class_commandant_domine",
+  "economy": {
+    "researchCost": 61000,
+    "purchaseCost": 230000,
+    "crewTraining": 65000,
+    "expertTraining": 230000,
+    "aceTrainingGE": 820,
+    "aceTrainingRP": 440000,
+    "repairCost": {
+      "arcade": [
+        5840,
+        7412
+      ],
+      "realistic": [
+        8441,
+        10713
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.56,
+      "realistic": 4.16,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.6
+  }
+}

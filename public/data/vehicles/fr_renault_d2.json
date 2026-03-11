@@ -1,0 +1,138 @@
+{
+  "id": "fr_renault_d2",
+  "performance": {
+    "horsepower": 150.0,
+    "weight": 19.5,
+    "power_to_weight": 7.69,
+    "max_reverse_speed": 5.0,
+    "reload_time": 4.0,
+    "penetration": 69.7,
+    "max_speed": 23.0,
+    "crew_count": 5,
+    "elevation_speed": 10.0,
+    "traverse_speed": 10.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "vertical",
+    "elevation_range": [
+      -18.0,
+      18.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 36.0,
+    "mainGun": {
+      "name": "47mm_SA_35",
+      "caliber": 47.0,
+      "reloadTime": 4.0,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 5.2,
+        "expert": 4.6,
+        "ace": 4.0
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "47mm_mle1935",
+        "localizedName": "Mle1935",
+        "type": "apc_solid_medium_caliber_tank",
+        "caliber": 47.0,
+        "mass": 1.62,
+        "muzzleVelocity": 660.0,
+        "deMarre": {
+          "fullCaliber": 47.0,
+          "isApcbc": true,
+          "explosiveMass": 0,
+          "Cx": 0.6
+        },
+        "penetration0m": 69.7
+      },
+      {
+        "name": "47mm_mle1935_he",
+        "localizedName": "Mle1935 HE",
+        "type": "he_frag_tank",
+        "caliber": 47.0,
+        "mass": 1.41,
+        "muzzleVelocity": 590.0,
+        "explosiveMassKg": 0.143,
+        "explosiveType": "tnt",
+        "tntEquivalent": 0.143
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2000.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 5,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      3.0,
+      5.0,
+      10.0,
+      17.1,
+      23.0
+    ],
+    "reverse_gear_speeds": [
+      5.0
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 19.2,
+    "track_width": 0.35,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_5mm_MAC_31",
+        "caliber": 7.5,
+        "ammo": 3300,
+        "reloadTime": 5.0,
+        "rateOfFire": 550,
+        "bulletType": "ap_ball"
+      }
+    ],
+    "main_gun_ammo": 108,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 4000,
+    "purchaseCost": 2100,
+    "crewTraining": 600,
+    "expertTraining": 2100,
+    "aceTrainingGE": 45,
+    "aceTrainingRP": 110000,
+    "repairCost": {
+      "arcade": [
+        200,
+        257
+      ],
+      "realistic": [
+        204,
+        262
+      ],
+      "simulator": [
+        254,
+        327
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.13,
+      "realistic": 0.21,
+      "simulator": 0.29
+    },
+    "expMultiplier": 1.0
+  }
+}

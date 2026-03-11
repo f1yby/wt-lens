@@ -1,0 +1,167 @@
+{
+  "id": "jp_type_5_chi_ri",
+  "performance": {
+    "horsepower": 550.0,
+    "weight": 37.0,
+    "power_to_weight": 14.86,
+    "max_reverse_speed": 12.5,
+    "reload_time": 4.5,
+    "penetration": 151.0,
+    "max_speed": 44.8,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 12.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -10.0,
+      20.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 30.0,
+    "mainGun": {
+      "name": "75mm_Type_II_Model_I",
+      "caliber": 75.0,
+      "reloadTime": 4.5,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 5.85,
+        "expert": 5.17,
+        "ace": 4.5
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "75mm_type1_ap",
+        "localizedName": "Type 1 APHE",
+        "type": "aphe_tank",
+        "caliber": 75.0,
+        "mass": 6.605,
+        "muzzleVelocity": 865.0,
+        "deMarre": {
+          "fullCaliber": 75.0,
+          "isApcbc": false,
+          "explosiveMass": 0.065,
+          "Cx": 0.4
+        },
+        "penetration0m": 148.1,
+        "explosiveMassKg": 0.065,
+        "explosiveType": "rdx",
+        "tntEquivalent": 0.091
+      },
+      {
+        "name": "75mm_type4_ap_kou",
+        "localizedName": "Type 4 Kou",
+        "type": "aphe_tank",
+        "caliber": 75.0,
+        "mass": 6.75,
+        "muzzleVelocity": 865.0,
+        "deMarre": {
+          "fullCaliber": 75.0,
+          "isApcbc": false,
+          "explosiveMass": 0.063
+        },
+        "penetration0m": 151.0,
+        "explosiveMassKg": 0.063,
+        "explosiveType": "rdx_tnt",
+        "tntEquivalent": 0.081
+      },
+      {
+        "name": "75mm_type90",
+        "localizedName": "Type 90 HE",
+        "type": "he_frag_tank",
+        "caliber": 75.0,
+        "mass": 6.17,
+        "muzzleVelocity": 830.0,
+        "explosiveMassKg": 0.49,
+        "explosiveType": "tnt",
+        "tntEquivalent": 0.49
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 1500.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 5,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      6.6,
+      12.5,
+      18.7,
+      28.9,
+      44.8
+    ],
+    "reverse_gear_speeds": [
+      6.6,
+      12.5
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 36.5,
+    "track_width": 0.4,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "37mm_Type1_Chi_Ri",
+        "caliber": 37.0,
+        "ammo": 102,
+        "rateOfFire": 15,
+        "bulletType": "aphe_tank"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "7_7mm_Type_97",
+        "caliber": 7.7,
+        "ammo": 5000,
+        "reloadTime": 3.0,
+        "rateOfFire": 498,
+        "bulletType": "ap_ball"
+      }
+    ],
+    "main_gun_ammo": 100,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 46000,
+    "purchaseCost": 155000,
+    "crewTraining": 45000,
+    "expertTraining": 155000,
+    "aceTrainingGE": 630,
+    "aceTrainingRP": 440000,
+    "repairCost": {
+      "arcade": [
+        2152,
+        2766
+      ],
+      "realistic": [
+        2521,
+        3241
+      ],
+      "simulator": [
+        3168,
+        4073
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.93,
+      "realistic": 1.45,
+      "simulator": 1.7
+    },
+    "expMultiplier": 1.6
+  }
+}

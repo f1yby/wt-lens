@@ -1,0 +1,144 @@
+{
+  "id": "sw_vickers_mk_e_37",
+  "performance": {
+    "horsepower": 92.0,
+    "weight": 8.6,
+    "power_to_weight": 10.7,
+    "max_reverse_speed": 3.6,
+    "reload_time": 3.12,
+    "penetration": 62.2,
+    "max_speed": 35.1,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 14.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -10.0,
+      20.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 30.0,
+    "mainGun": {
+      "name": "37mm_Psv_K36",
+      "caliber": 37.0,
+      "reloadTime": 3.12,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 4.06,
+        "expert": 3.59,
+        "ace": 3.12
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "37mm_psav",
+        "localizedName": "psav Vj4",
+        "type": "ap_tank",
+        "caliber": 37.0,
+        "mass": 0.74,
+        "muzzleVelocity": 810.0,
+        "deMarre": {
+          "fullCaliber": 37.0,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "Cx": 0.6
+        },
+        "penetration0m": 62.2
+      },
+      {
+        "name": "37mm_pstkr",
+        "localizedName": "pstkr 27-34",
+        "type": "aphe_tank",
+        "caliber": 37.0,
+        "mass": 0.74,
+        "muzzleVelocity": 800.0,
+        "deMarre": {
+          "fullCaliber": 37.0,
+          "isApcbc": false,
+          "explosiveMass": 0.015,
+          "Cx": 0.6
+        },
+        "penetration0m": 54.9,
+        "explosiveMassKg": 0.015,
+        "explosiveType": "tnt",
+        "tntEquivalent": 0.015
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2400.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 4,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      3.6,
+      13.6,
+      21.8,
+      35.1
+    ],
+    "reverse_gear_speeds": [
+      3.6
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 8.3,
+    "track_width": 0.25,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "8mm_Ksp_m36",
+        "caliber": 8.0,
+        "ammo": 4000,
+        "reloadTime": 8.0,
+        "rateOfFire": 648,
+        "bulletType": "ap_i_t_ball"
+      }
+    ],
+    "main_gun_ammo": 50,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 2900,
+    "purchaseCost": 700,
+    "crewTraining": 200,
+    "expertTraining": 1000,
+    "aceTrainingGE": 20,
+    "aceTrainingRP": 96000,
+    "repairCost": {
+      "arcade": [
+        106,
+        136
+      ],
+      "realistic": [
+        95,
+        122
+      ],
+      "simulator": [
+        111,
+        143
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.1,
+      "realistic": 0.12,
+      "simulator": 0.16
+    },
+    "expMultiplier": 1.0
+  }
+}

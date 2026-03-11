@@ -1,0 +1,189 @@
+{
+  "id": "il_sabra_mk1",
+  "performance": {
+    "horsepower": 908.0,
+    "weight": 55.0,
+    "power_to_weight": 16.51,
+    "max_reverse_speed": 11.3,
+    "reload_time": 6.0,
+    "penetration": 588.6,
+    "max_speed": 47.7,
+    "crew_count": 5,
+    "elevation_speed": 15.0,
+    "traverse_speed": 34.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "both",
+    "elevation_range": [
+      -9.0,
+      19.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": [
+      500,
+      300
+    ],
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": 583.1,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 28.0,
+    "mainGun": {
+      "name": "120mm_IMI_MG253",
+      "caliber": 120.0,
+      "reloadTime": 6.0,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 7.8,
+        "expert": 6.9,
+        "ace": 6.0
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "120mm_m325",
+        "localizedName": "M325",
+        "type": "heat_fs_tank",
+        "caliber": 120.0,
+        "mass": 15.81,
+        "muzzleVelocity": 1078.0,
+        "penetration0m": 480.0,
+        "explosiveMassKg": 1.8,
+        "explosiveType": "comp_b",
+        "tntEquivalent": 2.286
+      },
+      {
+        "name": "120mm_m339",
+        "localizedName": "M339",
+        "type": "he_frag_dist_fuse",
+        "caliber": 120.0,
+        "mass": 17.0,
+        "muzzleVelocity": 900.0,
+        "explosiveMassKg": 2.3,
+        "explosiveType": "clx_663",
+        "tntEquivalent": 2.875
+      },
+      {
+        "name": "120mm_m322_idf",
+        "localizedName": "M322",
+        "type": "apds_fs_long_l30_tank",
+        "caliber": 25.0,
+        "mass": 5.6,
+        "muzzleVelocity": 1705.0,
+        "lanzOdermatt": {
+          "workingLength": 620.0,
+          "density": 17500.0,
+          "material": "tungsten",
+          "Cx": 0.73
+        },
+        "penetration0m": 588.6,
+        "penetrationData": {
+          "at0m": {
+            "angle0": 588.6,
+            "angle30": 509.7,
+            "angle60": 294.3
+          }
+        }
+      }
+    ],
+    "penetrationData": {
+      "at0m": {
+        "angle0": 588.6,
+        "angle30": 509.7,
+        "angle60": 294.3
+      }
+    },
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2400.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 6,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      8.6,
+      11.4,
+      17.2,
+      25.0,
+      33.9,
+      47.7
+    ],
+    "reverse_gear_speeds": [
+      6.1,
+      11.3
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 54.0,
+    "track_width": 0.55,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_FN_MAG60_40",
+        "caliber": 7.6,
+        "ammo": 2400,
+        "reloadTime": 8.0,
+        "rateOfFire": 1000,
+        "bulletType": "ap_ball"
+      },
+      {
+        "trigger": "gunner3",
+        "name": "7_62mm_FN_MAG60_40",
+        "caliber": 7.6,
+        "ammo": 1800,
+        "reloadTime": 8.0,
+        "rateOfFire": 1000,
+        "bulletType": "ap_ball"
+      },
+      {
+        "trigger": "gunner3",
+        "name": "7_62mm_FN_MAG60_40",
+        "caliber": 7.6,
+        "ammo": 1800,
+        "reloadTime": 8.0,
+        "rateOfFire": 1000,
+        "bulletType": "ap_ball"
+      }
+    ],
+    "main_gun_ammo": 40,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": true,
+    "has_ess": true,
+    "has_laser_rangefinder": true
+  },
+  "economy": {
+    "researchCost": 260000,
+    "purchaseCost": 710000,
+    "crewTraining": 200000,
+    "expertTraining": 710000,
+    "aceTrainingGE": 2100,
+    "aceTrainingRP": 1080000,
+    "repairCost": {
+      "arcade": [
+        4171,
+        6580
+      ],
+      "realistic": [
+        4041,
+        6375
+      ],
+      "simulator": [
+        4931,
+        7779
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.59,
+      "realistic": 2.03,
+      "simulator": 2.47
+    },
+    "expMultiplier": 2.32
+  }
+}

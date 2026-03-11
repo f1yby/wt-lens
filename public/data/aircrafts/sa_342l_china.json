@@ -1,0 +1,31 @@
+{
+  "id": "sa_342l_china",
+  "economy": {
+    "researchCost": 150000,
+    "purchaseCost": 490000,
+    "crewTraining": 140000,
+    "expertTraining": 490000,
+    "aceTrainingGE": 1800,
+    "aceTrainingRP": 780000,
+    "repairCost": {
+      "arcade": [
+        10112,
+        12832
+      ],
+      "realistic": [
+        2938,
+        3728
+      ],
+      "simulator": [
+        4927,
+        6253
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.0,
+      "realistic": 3.0,
+      "simulator": 4.3
+    },
+    "expMultiplier": 2.02
+  }
+}

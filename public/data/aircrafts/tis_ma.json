@@ -1,0 +1,33 @@
+{
+  "id": "tis_ma",
+  "economy": {
+    "researchCost": 18000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 1300,
+    "crewTraining": 10000,
+    "expertTraining": 67000,
+    "aceTrainingGE": 400,
+    "aceTrainingRP": 570000,
+    "repairCost": {
+      "arcade": [
+        642,
+        642
+      ],
+      "realistic": [
+        910,
+        910
+      ],
+      "simulator": [
+        1990,
+        1990
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.14,
+      "realistic": 2.0,
+      "simulator": 4.76
+    },
+    "expMultiplier": 1.36,
+    "freeRepairs": 30
+  }
+}

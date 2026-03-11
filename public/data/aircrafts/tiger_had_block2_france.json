@@ -1,0 +1,31 @@
+{
+  "id": "tiger_had_block2_france",
+  "economy": {
+    "researchCost": 400000,
+    "purchaseCost": 1030000,
+    "crewTraining": 300000,
+    "expertTraining": 1030000,
+    "aceTrainingGE": 3000,
+    "aceTrainingRP": 1140000,
+    "repairCost": {
+      "arcade": [
+        9190,
+        14967
+      ],
+      "realistic": [
+        4786,
+        7795
+      ],
+      "simulator": [
+        6417,
+        10452
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.0,
+      "realistic": 2.02,
+      "simulator": 2.4
+    },
+    "expMultiplier": 2.38
+  }
+}

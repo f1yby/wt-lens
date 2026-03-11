@@ -1,0 +1,33 @@
+{
+  "id": "yak-1b_luftwaffe",
+  "economy": {
+    "researchCost": 14000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 1150,
+    "crewTraining": 6900,
+    "expertTraining": 46000,
+    "aceTrainingGE": 320,
+    "aceTrainingRP": 500000,
+    "repairCost": {
+      "arcade": [
+        844,
+        844
+      ],
+      "realistic": [
+        1243,
+        1243
+      ],
+      "simulator": [
+        1521,
+        1521
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.08,
+      "realistic": 2.47,
+      "simulator": 4.69
+    },
+    "expMultiplier": 1.3,
+    "freeRepairs": 30
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "ussr_mpk_204",
+  "economy": {
+    "researchCost": 120000,
+    "purchaseCost": 360000,
+    "crewTraining": 105000,
+    "expertTraining": 360000,
+    "aceTrainingGE": 1200,
+    "aceTrainingRP": 570000,
+    "repairCost": {
+      "arcade": [
+        4856,
+        5907
+      ],
+      "realistic": [
+        7612,
+        9260
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.18,
+      "realistic": 2.09,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.78
+  }
+}

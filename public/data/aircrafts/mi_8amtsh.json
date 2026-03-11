@@ -1,0 +1,31 @@
+{
+  "id": "mi_8amtsh",
+  "economy": {
+    "researchCost": 360000,
+    "purchaseCost": 980000,
+    "crewTraining": 280000,
+    "expertTraining": 980000,
+    "aceTrainingGE": 2000,
+    "aceTrainingRP": 830000,
+    "repairCost": {
+      "arcade": [
+        9421,
+        12749
+      ],
+      "realistic": [
+        4097,
+        5544
+      ],
+      "simulator": [
+        5681,
+        7688
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.0,
+      "realistic": 2.81,
+      "simulator": 4.19
+    },
+    "expMultiplier": 2.08
+  }
+}

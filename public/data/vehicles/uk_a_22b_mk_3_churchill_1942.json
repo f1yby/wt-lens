@@ -1,0 +1,167 @@
+{
+  "id": "uk_a_22b_mk_3_churchill_1942",
+  "performance": {
+    "horsepower": 355.0,
+    "weight": 39.0,
+    "power_to_weight": 9.1,
+    "max_reverse_speed": 2.5,
+    "reload_time": 4.0,
+    "penetration": 132.1,
+    "max_speed": 28.0,
+    "crew_count": 5,
+    "elevation_speed": 10.0,
+    "traverse_speed": 24.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "vertical",
+    "elevation_range": [
+      -12.0,
+      20.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 32.0,
+    "mainGun": {
+      "name": "57mm_6pdr_QQF_Mk_5_L50",
+      "caliber": 57.0,
+      "reloadTime": 4.0,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 5.2,
+        "expert": 4.6,
+        "ace": 4.0
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "57mm_shot_mk8t",
+        "localizedName": "Shot Mk.8",
+        "type": "apc_solid_medium_caliber_tank",
+        "caliber": 57.0,
+        "mass": 2.87,
+        "muzzleVelocity": 883.0,
+        "deMarre": {
+          "fullCaliber": 57.0,
+          "isApcbc": true,
+          "explosiveMass": 0,
+          "Cx": 0.54
+        },
+        "penetration0m": 128.9
+      },
+      {
+        "name": "57mm_shell_mk10t",
+        "localizedName": "Shell Mk.10",
+        "type": "he_frag_tank",
+        "caliber": 57.0,
+        "mass": 2.72,
+        "muzzleVelocity": 655.0,
+        "explosiveMassKg": 0.59,
+        "explosiveType": "tnt",
+        "tntEquivalent": 0.59
+      },
+      {
+        "name": "57mm_shot_mk5t_hv",
+        "localizedName": "Shot Mk.5 HV",
+        "type": "ap_tank",
+        "caliber": 57.0,
+        "mass": 2.8,
+        "muzzleVelocity": 891.0,
+        "deMarre": {
+          "fullCaliber": 57.0,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "Cx": 0.54
+        },
+        "penetration0m": 115.5
+      },
+      {
+        "name": "57mm_shot_mk9t",
+        "localizedName": "Shot Mk.9",
+        "type": "apcbc_solid_medium_caliber_tank",
+        "caliber": 57.0,
+        "mass": 3.23,
+        "muzzleVelocity": 847.0,
+        "deMarre": {
+          "fullCaliber": 57.0,
+          "isApcbc": true,
+          "explosiveMass": 0,
+          "Cx": 0.54
+        },
+        "penetration0m": 132.1
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2550.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 4,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      3.2,
+      8.7,
+      13.3,
+      28.0
+    ],
+    "reverse_gear_speeds": [
+      2.5
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 38.32,
+    "track_width": 0.6,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_92mm_BESA",
+        "caliber": 7.9,
+        "ammo": 6975,
+        "reloadTime": 8.0,
+        "rateOfFire": 600,
+        "bulletType": "ap_i_ball"
+      }
+    ],
+    "main_gun_ammo": 85,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 18000,
+    "purchaseCost": 47000,
+    "crewTraining": 13000,
+    "expertTraining": 47000,
+    "aceTrainingGE": 330,
+    "aceTrainingRP": 280000,
+    "repairCost": {
+      "arcade": [
+        1227,
+        1594
+      ],
+      "realistic": [
+        1271,
+        1650
+      ],
+      "simulator": [
+        1709,
+        2219
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.72,
+      "realistic": 1.0,
+      "simulator": 1.05
+    },
+    "expMultiplier": 1.36
+  }
+}

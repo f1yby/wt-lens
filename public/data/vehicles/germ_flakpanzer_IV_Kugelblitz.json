@@ -1,0 +1,92 @@
+{
+  "id": "germ_flakpanzer_IV_Kugelblitz",
+  "performance": {
+    "horsepower": 300.0,
+    "weight": 25.0,
+    "power_to_weight": 12.0,
+    "max_reverse_speed": 7.2,
+    "reload_time": 10.0,
+    "penetration": null,
+    "max_speed": 38.7,
+    "crew_count": 5,
+    "elevation_speed": 20.0,
+    "traverse_speed": 60.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -7.0,
+      80.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 87.0,
+    "mainGun": null,
+    "ammunitions": null,
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 3000.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 6,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      4.1,
+      6.4,
+      11.1,
+      15.5,
+      25.8,
+      38.7
+    ],
+    "reverse_gear_speeds": [
+      7.2
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 24.7,
+    "track_width": 0.4,
+    "secondary_weapons": null,
+    "main_gun_ammo": 600,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 71000,
+    "purchaseCost": 210000,
+    "crewTraining": 61000,
+    "expertTraining": 210000,
+    "aceTrainingGE": 890,
+    "aceTrainingRP": 570000,
+    "repairCost": {
+      "arcade": [
+        3519,
+        4524
+      ],
+      "realistic": [
+        3348,
+        4303
+      ],
+      "simulator": [
+        5066,
+        6511
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.36,
+      "realistic": 1.72,
+      "simulator": 2.37
+    },
+    "expMultiplier": 1.78
+  }
+}

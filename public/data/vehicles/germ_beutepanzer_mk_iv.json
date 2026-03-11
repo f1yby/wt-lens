@@ -1,0 +1,166 @@
+{
+  "id": "germ_beutepanzer_mk_iv",
+  "performance": {
+    "horsepower": 125.0,
+    "weight": 28.0,
+    "power_to_weight": 4.46,
+    "max_reverse_speed": 1.2,
+    "reload_time": 4.0,
+    "penetration": 39.9,
+    "max_speed": 6.1,
+    "crew_count": 5,
+    "elevation_speed": 10.0,
+    "traverse_speed": 10.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -6.0,
+      12.0
+    ],
+    "traverse_range": [
+      0.0,
+      88.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 18.0,
+    "mainGun": {
+      "name": "57mm_maxim_nordenfelt",
+      "caliber": 57.0,
+      "reloadTime": 4.0,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 5.2,
+        "expert": 4.6,
+        "ace": 4.0
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "57mm_gr_p",
+        "localizedName": "Gr.m.P.",
+        "type": "aphe_tank",
+        "caliber": 57.0,
+        "mass": 3.1,
+        "muzzleVelocity": 487.0,
+        "deMarre": {
+          "fullCaliber": 57.0,
+          "isApcbc": false,
+          "explosiveMass": 0.12,
+          "Cx": 0.6
+        },
+        "penetration0m": 39.9,
+        "explosiveMassKg": 0.12,
+        "explosiveType": "fp02",
+        "tntEquivalent": 0.12
+      },
+      {
+        "name": "57mm_gr",
+        "localizedName": "Gr.",
+        "type": "he_frag_tank",
+        "caliber": 57.0,
+        "mass": 2.75,
+        "muzzleVelocity": 487.0,
+        "explosiveMassKg": 0.16,
+        "explosiveType": "fp02",
+        "tntEquivalent": 0.16
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 1000.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 4,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      1.2,
+      1.7,
+      3.0,
+      6.1
+    ],
+    "reverse_gear_speeds": [
+      1.2
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 27.5,
+    "track_width": 0.7,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "57mm_maxim_nordenfelt",
+        "caliber": 57.0,
+        "ammo": 141,
+        "rateOfFire": 15,
+        "bulletType": "aphe_tank"
+      },
+      {
+        "trigger": "gunner3",
+        "name": "7_7mm_mg_lewis",
+        "caliber": 7.6,
+        "ammo": 1500,
+        "reloadTime": 5.0,
+        "rateOfFire": 600,
+        "bulletType": "he_ball"
+      },
+      {
+        "trigger": "gunner4",
+        "name": "7_7mm_mg_lewis",
+        "caliber": 7.6,
+        "ammo": 1500,
+        "reloadTime": 5.0,
+        "rateOfFire": 600,
+        "bulletType": "he_ball"
+      },
+      {
+        "trigger": "gunner5",
+        "name": "7_7mm_mg_lewis",
+        "caliber": 7.6,
+        "ammo": 1500,
+        "reloadTime": 5.0,
+        "rateOfFire": 600,
+        "bulletType": "he_ball"
+      }
+    ],
+    "main_gun_ammo": 141,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 2900,
+    "purchaseCost": 700,
+    "crewTraining": 200,
+    "expertTraining": 1000,
+    "aceTrainingGE": 20,
+    "aceTrainingRP": 96000,
+    "repairCost": {
+      "arcade": [
+        127,
+        164
+      ],
+      "realistic": [
+        108,
+        139
+      ],
+      "simulator": [
+        115,
+        148
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.1,
+      "realistic": 0.14,
+      "simulator": 0.19
+    },
+    "expMultiplier": 1.0
+  }
+}

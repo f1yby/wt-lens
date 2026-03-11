@@ -1,0 +1,146 @@
+{
+  "id": "cn_wz_141",
+  "performance": {
+    "horsepower": 176.0,
+    "weight": 6.2,
+    "power_to_weight": 28.39,
+    "max_reverse_speed": 10.8,
+    "reload_time": 10.0,
+    "penetration": 360.0,
+    "max_speed": 80.1,
+    "crew_count": 5,
+    "elevation_speed": 6.0,
+    "traverse_speed": 10.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -4.5,
+      9.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 13.5,
+    "mainGun": {
+      "name": "105mm_type_75",
+      "caliber": 105.0,
+      "reloadTime": 10.0,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 13.0,
+        "expert": 11.5,
+        "ace": 10.0
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "105mm_type_75_heat",
+        "localizedName": "Type 75 HEAT",
+        "type": "heat_grenade_tank",
+        "caliber": 105.0,
+        "mass": 7.96,
+        "muzzleVelocity": 503.0,
+        "penetration0m": 360.0,
+        "explosiveMassKg": 1.26,
+        "explosiveType": "jhl_2",
+        "tntEquivalent": 1.638
+      },
+      {
+        "name": "105mm_type_75_hesh",
+        "localizedName": "Type 75 HESH",
+        "type": "hesh_tank",
+        "caliber": 105.0,
+        "mass": 7.95,
+        "muzzleVelocity": 323.0,
+        "penetration0m": 152.0,
+        "explosiveMassKg": 3.5,
+        "explosiveType": "jhl_2",
+        "tntEquivalent": 4.55
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2650.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 5,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      10.8,
+      16.2,
+      33.7,
+      60.0,
+      80.1
+    ],
+    "reverse_gear_speeds": [
+      10.8
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 6.0,
+    "track_width": 0.5,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "105mm_type_75",
+        "caliber": 105.0,
+        "ammo": 9,
+        "rateOfFire": 6,
+        "bulletType": "heat_grenade_tank"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "12_7mm_type_77",
+        "caliber": 12.7,
+        "ammo": 250,
+        "reloadTime": 8.0,
+        "rateOfFire": 600,
+        "bulletType": "ap_i_t_ball"
+      }
+    ],
+    "main_gun_ammo": 9,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 63000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 4880,
+    "crewTraining": 10000,
+    "expertTraining": 320000,
+    "aceTrainingGE": 800,
+    "aceTrainingRP": 1050000,
+    "repairCost": {
+      "arcade": [
+        1732,
+        1732
+      ],
+      "realistic": [
+        2121,
+        2121
+      ],
+      "simulator": [
+        2914,
+        2914
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.15,
+      "realistic": 2.93,
+      "simulator": 3.76
+    },
+    "expMultiplier": 1.72,
+    "freeRepairs": 30
+  }
+}

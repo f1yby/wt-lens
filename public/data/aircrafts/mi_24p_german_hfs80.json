@@ -1,0 +1,33 @@
+{
+  "id": "mi_24p_german_hfs80",
+  "economy": {
+    "researchCost": 360000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 8730,
+    "crewTraining": 10000,
+    "expertTraining": 1600000,
+    "aceTrainingGE": 2000,
+    "aceTrainingRP": 1710000,
+    "repairCost": {
+      "arcade": [
+        5031,
+        5031
+      ],
+      "realistic": [
+        2949,
+        2949
+      ],
+      "simulator": [
+        4106,
+        4106
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.0,
+      "realistic": 5.78,
+      "simulator": 8.6
+    },
+    "expMultiplier": 2.14,
+    "freeRepairs": 30
+  }
+}

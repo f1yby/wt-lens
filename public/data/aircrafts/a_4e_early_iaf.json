@@ -1,0 +1,31 @@
+{
+  "id": "a_4e_early_iaf",
+  "economy": {
+    "researchCost": 86000,
+    "purchaseCost": 480000,
+    "crewTraining": 135000,
+    "expertTraining": 480000,
+    "aceTrainingGE": 2400,
+    "aceTrainingRP": 950000,
+    "repairCost": {
+      "arcade": [
+        3026,
+        4112
+      ],
+      "realistic": [
+        8770,
+        11916
+      ],
+      "simulator": [
+        9999,
+        13586
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.15,
+      "realistic": 3.4,
+      "simulator": 6.0
+    },
+    "expMultiplier": 2.2
+  }
+}

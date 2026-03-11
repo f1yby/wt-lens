@@ -1,0 +1,31 @@
+{
+  "id": "mirage_3e",
+  "economy": {
+    "researchCost": 115000,
+    "purchaseCost": 630000,
+    "crewTraining": 180000,
+    "expertTraining": 630000,
+    "aceTrainingGE": 3000,
+    "aceTrainingRP": 1140000,
+    "repairCost": {
+      "arcade": [
+        3148,
+        4237
+      ],
+      "realistic": [
+        10283,
+        13840
+      ],
+      "simulator": [
+        8954,
+        12051
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.24,
+      "realistic": 3.51,
+      "simulator": 6.0
+    },
+    "expMultiplier": 2.38
+  }
+}

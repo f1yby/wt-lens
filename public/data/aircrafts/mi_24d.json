@@ -1,0 +1,33 @@
+{
+  "id": "mi_24d",
+  "economy": {
+    "researchCost": 360000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 8560,
+    "crewTraining": 10000,
+    "expertTraining": 1600000,
+    "aceTrainingGE": 2000,
+    "aceTrainingRP": 1760000,
+    "repairCost": {
+      "arcade": [
+        4939,
+        4939
+      ],
+      "realistic": [
+        1359,
+        1359
+      ],
+      "simulator": [
+        2363,
+        2363
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.0,
+      "realistic": 6.0,
+      "simulator": 8.6
+    },
+    "expMultiplier": 2.2,
+    "freeRepairs": 30
+  }
+}

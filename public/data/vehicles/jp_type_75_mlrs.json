@@ -1,0 +1,112 @@
+{
+  "id": "jp_type_75_mlrs",
+  "performance": {
+    "horsepower": 350.0,
+    "weight": 16.5,
+    "power_to_weight": 21.21,
+    "max_reverse_speed": 12.4,
+    "reload_time": null,
+    "penetration": null,
+    "max_speed": 50.1,
+    "crew_count": 5,
+    "elevation_speed": null,
+    "traverse_speed": null,
+    "has_stabilizer": null,
+    "stabilizer_type": "none",
+    "elevation_range": null,
+    "traverse_range": null,
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": null,
+    "mainGun": null,
+    "ammunitions": null,
+    "penetrationData": null,
+    "autoLoader": null,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2200.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 8,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      6.7,
+      13.4,
+      16.7,
+      22.3,
+      26.3,
+      32.1,
+      39.1,
+      50.1
+    ],
+    "reverse_gear_speeds": [
+      6.2,
+      12.4
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 16.0,
+    "track_width": 0.4,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner0",
+        "name": "130mm_Type_75_rocket_launcher",
+        "caliber": 0,
+        "ammo": 30,
+        "reloadTime": 8.0,
+        "rateOfFire": 144
+      },
+      {
+        "trigger": "gunner1",
+        "name": "12_7mm_M2_HB",
+        "caliber": 12.7,
+        "ammo": 600,
+        "reloadTime": 8.0,
+        "rateOfFire": 575,
+        "bulletType": "ap_i_t_ball_M20"
+      }
+    ],
+    "main_gun_ammo": null,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 105000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 8200,
+    "crewTraining": 10000,
+    "expertTraining": 490000,
+    "aceTrainingGE": 1200,
+    "aceTrainingRP": 1440000,
+    "repairCost": {
+      "arcade": [
+        3180,
+        3180
+      ],
+      "realistic": [
+        2667,
+        2667
+      ],
+      "simulator": [
+        4445,
+        4445
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.88,
+      "realistic": 4.2,
+      "simulator": 5.0
+    },
+    "expMultiplier": 1.96,
+    "freeRepairs": 30
+  }
+}

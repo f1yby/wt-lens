@@ -1,0 +1,33 @@
+{
+  "id": "j9_early",
+  "economy": {
+    "researchCost": 7900,
+    "purchaseCost": 0,
+    "purchaseCostGold": 700,
+    "crewTraining": 2300,
+    "expertTraining": 15000,
+    "aceTrainingGE": 125,
+    "aceTrainingRP": 320000,
+    "repairCost": {
+      "arcade": [
+        239,
+        239
+      ],
+      "realistic": [
+        441,
+        441
+      ],
+      "simulator": [
+        547,
+        547
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.49,
+      "realistic": 1.21,
+      "simulator": 2.51
+    },
+    "expMultiplier": 1.12,
+    "freeRepairs": 30
+  }
+}

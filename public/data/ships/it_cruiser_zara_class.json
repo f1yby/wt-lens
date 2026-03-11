@@ -1,0 +1,27 @@
+{
+  "id": "it_cruiser_zara_class",
+  "economy": {
+    "researchCost": 110000,
+    "purchaseCost": 340000,
+    "crewTraining": 97000,
+    "expertTraining": 340000,
+    "aceTrainingGE": 1500,
+    "aceTrainingRP": 670000,
+    "repairCost": {
+      "arcade": [
+        12531,
+        16911
+      ],
+      "realistic": [
+        12864,
+        17361
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 4.5,
+      "realistic": 6.0,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.9
+  }
+}

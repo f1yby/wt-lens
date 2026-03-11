@@ -1,0 +1,223 @@
+{
+  "id": "jp_m36b2_jgsdf",
+  "performance": {
+    "horsepower": 500.0,
+    "weight": 29.94,
+    "power_to_weight": 16.7,
+    "max_reverse_speed": 6.2,
+    "reload_time": 7.5,
+    "penetration": 305.0,
+    "max_speed": 47.8,
+    "crew_count": 5,
+    "elevation_speed": 5.0,
+    "traverse_speed": 24.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -10.0,
+      20.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 30.0,
+    "mainGun": {
+      "name": "90mm_M3A1",
+      "caliber": 90.0,
+      "reloadTime": 7.5,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 9.75,
+        "expert": 8.62,
+        "ace": 7.5
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "90mm_m318",
+        "localizedName": "M318 shot",
+        "type": "apbc_usa_tank",
+        "caliber": 90.0,
+        "mass": 10.98,
+        "muzzleVelocity": 853.0,
+        "deMarre": {
+          "fullCaliber": 90.0,
+          "isApcbc": false,
+          "explosiveMass": 0
+        },
+        "penetration0m": 175.7
+      },
+      {
+        "name": "90mm_m71",
+        "localizedName": "M71 shell",
+        "type": "he_frag_tank",
+        "caliber": 90.0,
+        "mass": 10.55,
+        "muzzleVelocity": 823.0,
+        "explosiveMassKg": 0.925,
+        "explosiveType": "comp_b",
+        "tntEquivalent": 1.175
+      },
+      {
+        "name": "90mm_m82",
+        "localizedName": "M82 shot",
+        "type": "apcbc_tank",
+        "caliber": 90.0,
+        "mass": 10.91,
+        "muzzleVelocity": 853.4,
+        "deMarre": {
+          "fullCaliber": 90.0,
+          "isApcbc": true,
+          "explosiveMass": 0.14,
+          "Cx": 0.2766
+        },
+        "penetration0m": 185.4,
+        "explosiveMassKg": 0.14,
+        "explosiveType": "exp_d",
+        "tntEquivalent": 0.139
+      },
+      {
+        "name": "90mm_m304",
+        "localizedName": "M304 shot",
+        "type": "apcr_tank",
+        "caliber": 38.1,
+        "mass": 7.62,
+        "muzzleVelocity": 1021.0,
+        "deMarre": {
+          "fullCaliber": 90.0,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "isApcr": true,
+          "coreCaliber": 38.1,
+          "coreMass": 3.6,
+          "Cx": 0.28
+        },
+        "penetration0m": 282.4
+      },
+      {
+        "name": "90mm_m332",
+        "localizedName": "M332 shot",
+        "type": "apcr_tank",
+        "caliber": 38.1,
+        "mass": 5.7,
+        "muzzleVelocity": 1165.0,
+        "deMarre": {
+          "fullCaliber": 90.0,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "isApcr": true,
+          "coreCaliber": 38.1,
+          "coreMass": 3.6,
+          "Cx": 0.2
+        },
+        "penetration0m": 298.4
+      },
+      {
+        "name": "90mm_m348",
+        "localizedName": "M348 shell",
+        "type": "heat_fs_tank",
+        "caliber": 90.0,
+        "mass": 6.5,
+        "muzzleVelocity": 853.0,
+        "penetration0m": 305.0,
+        "explosiveMassKg": 0.707,
+        "explosiveType": "comp_b",
+        "tntEquivalent": 0.898
+      },
+      {
+        "name": "90mm_m313",
+        "localizedName": "M313",
+        "type": "smoke_tank",
+        "caliber": 90.0,
+        "mass": 10.7,
+        "muzzleVelocity": 821.0,
+        "explosiveMassKg": 0.05,
+        "explosiveType": "smoke_composition",
+        "tntEquivalent": 0.05
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2100.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 5,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      4.6,
+      11.2,
+      19.6,
+      31.4,
+      47.8
+    ],
+    "reverse_gear_speeds": [
+      6.2
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 29.4,
+    "track_width": 0.4,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "12_7mm_M2_HB",
+        "caliber": 12.7,
+        "ammo": 1000,
+        "reloadTime": 8.0,
+        "rateOfFire": 575,
+        "bulletType": "ap_i_t_ball_M20"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "7_62mm_M1919A4",
+        "caliber": 7.6,
+        "ammo": 2000,
+        "reloadTime": 8.0,
+        "rateOfFire": 500,
+        "bulletType": "ap_ball"
+      }
+    ],
+    "main_gun_ammo": 47,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 46000,
+    "purchaseCost": 155000,
+    "crewTraining": 45000,
+    "expertTraining": 155000,
+    "aceTrainingGE": 630,
+    "aceTrainingRP": 440000,
+    "repairCost": {
+      "arcade": [
+        2427,
+        3004
+      ],
+      "realistic": [
+        2866,
+        3547
+      ],
+      "simulator": [
+        3956,
+        4896
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.05,
+      "realistic": 1.64,
+      "simulator": 2.13
+    },
+    "expMultiplier": 1.6
+  }
+}

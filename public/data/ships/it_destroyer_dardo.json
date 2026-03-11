@@ -1,0 +1,27 @@
+{
+  "id": "it_destroyer_dardo",
+  "economy": {
+    "researchCost": 4000,
+    "purchaseCost": 2100,
+    "crewTraining": 600,
+    "expertTraining": 2100,
+    "aceTrainingGE": 45,
+    "aceTrainingRP": 110000,
+    "repairCost": {
+      "arcade": [
+        426,
+        554
+      ],
+      "realistic": [
+        668,
+        871
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.5,
+      "realistic": 0.86,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.0
+  }
+}

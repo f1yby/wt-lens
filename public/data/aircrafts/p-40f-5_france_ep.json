@@ -1,0 +1,33 @@
+{
+  "id": "p-40f-5_france_ep",
+  "economy": {
+    "researchCost": 9200,
+    "purchaseCost": 0,
+    "purchaseCostGold": 850,
+    "crewTraining": 3400,
+    "expertTraining": 23000,
+    "aceTrainingGE": 180,
+    "aceTrainingRP": 380000,
+    "repairCost": {
+      "arcade": [
+        884,
+        884
+      ],
+      "realistic": [
+        573,
+        573
+      ],
+      "simulator": [
+        918,
+        918
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.84,
+      "realistic": 1.51,
+      "simulator": 3.05
+    },
+    "expMultiplier": 1.18,
+    "freeRepairs": 30
+  }
+}

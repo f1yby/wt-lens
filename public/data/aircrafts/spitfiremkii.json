@@ -1,0 +1,31 @@
+{
+  "id": "spitfiremkii",
+  "economy": {
+    "researchCost": 9200,
+    "purchaseCost": 16000,
+    "crewTraining": 4500,
+    "expertTraining": 16000,
+    "aceTrainingGE": 180,
+    "aceTrainingRP": 190000,
+    "repairCost": {
+      "arcade": [
+        495,
+        646
+      ],
+      "realistic": [
+        1077,
+        1365
+      ],
+      "simulator": [
+        1447,
+        1834
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.29,
+      "realistic": 0.72,
+      "simulator": 1.53
+    },
+    "expMultiplier": 1.18
+  }
+}

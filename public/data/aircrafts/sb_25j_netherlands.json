@@ -1,0 +1,33 @@
+{
+  "id": "sb_25j_netherlands",
+  "economy": {
+    "researchCost": 26000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 1450,
+    "crewTraining": 10000,
+    "expertTraining": 115000,
+    "aceTrainingGE": 500,
+    "aceTrainingRP": 640000,
+    "repairCost": {
+      "arcade": [
+        824,
+        824
+      ],
+      "realistic": [
+        1363,
+        1363
+      ],
+      "simulator": [
+        2944,
+        2944
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.56,
+      "realistic": 3.42,
+      "simulator": 6.29
+    },
+    "expMultiplier": 1.42,
+    "freeRepairs": 30
+  }
+}

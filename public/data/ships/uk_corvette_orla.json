@@ -1,0 +1,29 @@
+{
+  "id": "uk_corvette_orla",
+  "economy": {
+    "researchCost": 120000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 6090,
+    "crewTraining": 10000,
+    "expertTraining": 580000,
+    "aceTrainingGE": 1200,
+    "aceTrainingRP": 1140000,
+    "repairCost": {
+      "arcade": [
+        3031,
+        3031
+      ],
+      "realistic": [
+        4732,
+        4732
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.36,
+      "realistic": 4.19,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.78,
+    "freeRepairs": 30
+  }
+}

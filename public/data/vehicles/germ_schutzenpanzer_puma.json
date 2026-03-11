@@ -1,0 +1,200 @@
+{
+  "id": "germ_schutzenpanzer_puma",
+  "performance": {
+    "horsepower": 1088.0,
+    "weight": 43.0,
+    "power_to_weight": 25.3,
+    "max_reverse_speed": 30.1,
+    "reload_time": 0.2,
+    "penetration": 120.9,
+    "max_speed": 70.2,
+    "crew_count": 5,
+    "elevation_speed": 45.0,
+    "traverse_speed": 45.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "both",
+    "elevation_range": [
+      -10.0,
+      45.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": [
+      1200,
+      800
+    ],
+    "commander_thermal_resolution": [
+      1200,
+      800
+    ],
+    "gunner_thermal_diagonal": 1442.2,
+    "commander_thermal_diagonal": 1442.2,
+    "stabilizer_value": 1,
+    "elevation_range_value": 55.0,
+    "mainGun": {
+      "name": "30mm_Rheinmetall_MK_30_2_ABM",
+      "caliber": 30.0,
+      "reloadTime": 0.2,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 0.26,
+        "expert": 0.23,
+        "ace": 0.2
+      },
+      "rateOfFire": 200,
+      "beltReloadTime": 0.2
+    },
+    "ammunitions": [
+      {
+        "name": "30mm_mk320",
+        "localizedName": "MK320",
+        "type": "apds_autocannon",
+        "caliber": 18.0,
+        "mass": 0.19,
+        "muzzleVelocity": 1480.0,
+        "deMarre": {
+          "fullCaliber": 30.0,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "isApcr": true,
+          "coreCaliber": 18.0,
+          "coreMass": 0.19,
+          "Cx": 0.13
+        },
+        "penetration0m": 95.1
+      },
+      {
+        "name": "30mm_pmc287",
+        "localizedName": "PMC287",
+        "type": "apds_fs_long_tank",
+        "caliber": 8.5,
+        "mass": 0.165,
+        "muzzleVelocity": 1405.0,
+        "lanzOdermatt": {
+          "workingLength": 150.0,
+          "density": 17500.0,
+          "material": "tungsten",
+          "Cx": 0.3744
+        },
+        "penetration0m": 120.9,
+        "penetrationData": {
+          "at0m": {
+            "angle0": 120.9,
+            "angle30": 104.7,
+            "angle60": 60.5
+          }
+        }
+      },
+      {
+        "name": "30mm_mk_266",
+        "localizedName": "MK266",
+        "type": "he_i_t",
+        "caliber": 30.0,
+        "mass": 0.362,
+        "muzzleVelocity": 1080.0,
+        "explosiveMassKg": 0.032,
+        "explosiveType": "hexal",
+        "tntEquivalent": 0.045
+      },
+      {
+        "name": "30mm_pmc308",
+        "localizedName": "PMC308",
+        "type": "ahead",
+        "caliber": 30.0,
+        "mass": 0.36,
+        "muzzleVelocity": 1100.0,
+        "explosiveMassKg": 0.0005,
+        "explosiveType": "clx_663",
+        "tntEquivalent": 0.001
+      }
+    ],
+    "penetrationData": {
+      "at0m": {
+        "angle0": 120.9,
+        "angle30": 104.7,
+        "angle60": 60.5
+      }
+    },
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 3800.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 10,
+    "reverse_gears": 5,
+    "forward_gear_speeds": [
+      5.0,
+      8.0,
+      15.0,
+      22.0,
+      30.1,
+      42.1,
+      48.7,
+      54.3,
+      63.4,
+      70.2
+    ],
+    "reverse_gear_speeds": [
+      5.0,
+      8.0,
+      15.0,
+      22.0,
+      30.1
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 42.0,
+    "track_width": 0.5,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "5_56mm_MG4",
+        "caliber": 5.6,
+        "ammo": 2000,
+        "reloadTime": 8.0,
+        "rateOfFire": 890,
+        "bulletType": "ball"
+      }
+    ],
+    "main_gun_ammo": 400,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": true
+  },
+  "economy": {
+    "researchCost": 300000,
+    "purchaseCost": 830000,
+    "crewTraining": 240000,
+    "expertTraining": 830000,
+    "aceTrainingGE": 2100,
+    "aceTrainingRP": 1140000,
+    "repairCost": {
+      "arcade": [
+        3552,
+        5941
+      ],
+      "realistic": [
+        3387,
+        5663
+      ],
+      "simulator": [
+        4525,
+        7567
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.41,
+      "realistic": 1.77,
+      "simulator": 2.29
+    },
+    "expMultiplier": 2.38
+  }
+}

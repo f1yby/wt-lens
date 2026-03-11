@@ -1,0 +1,31 @@
+{
+  "id": "tu-2_postwar_late",
+  "economy": {
+    "researchCost": 35000,
+    "purchaseCost": 210000,
+    "crewTraining": 61000,
+    "expertTraining": 210000,
+    "aceTrainingGE": 1200,
+    "aceTrainingRP": 570000,
+    "repairCost": {
+      "arcade": [
+        3106,
+        4136
+      ],
+      "realistic": [
+        8881,
+        11474
+      ],
+      "simulator": [
+        17289,
+        22338
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.1,
+      "realistic": 2.21,
+      "simulator": 5.7
+    },
+    "expMultiplier": 1.78
+  }
+}

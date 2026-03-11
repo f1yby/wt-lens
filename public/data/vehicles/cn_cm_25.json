@@ -1,0 +1,135 @@
+{
+  "id": "cn_cm_25",
+  "performance": {
+    "horsepower": 215.0,
+    "weight": 12.0,
+    "power_to_weight": 17.92,
+    "max_reverse_speed": 14.8,
+    "reload_time": 10.0,
+    "penetration": 630.0,
+    "max_speed": 64.3,
+    "crew_count": 5,
+    "elevation_speed": 30.0,
+    "traverse_speed": 30.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -20.0,
+      25.0
+    ],
+    "traverse_range": [
+      -45.0,
+      45.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 45.0,
+    "mainGun": {
+      "name": "127mm_BGM_71_tow_launcher",
+      "caliber": 127.0,
+      "reloadTime": 10.0,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 13.0,
+        "expert": 11.5,
+        "ace": 10.0
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "127mm_i_tow",
+        "localizedName": "I-TOW",
+        "type": "atgm_tank",
+        "caliber": 127.0,
+        "mass": 37.0,
+        "muzzleVelocity": 296.0,
+        "penetration0m": 630.0
+      },
+      {
+        "name": "127mm_tow_2b",
+        "localizedName": "TOW-2B",
+        "type": "atgm_tank",
+        "caliber": 152.0,
+        "mass": 22.59,
+        "muzzleVelocity": 309.0,
+        "penetration0m": 100.0
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2800.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 6,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      8.4,
+      16.9,
+      22.4,
+      33.3,
+      43.9,
+      64.3
+    ],
+    "reverse_gear_speeds": [
+      7.4,
+      14.8
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 11.8,
+    "track_width": null,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner2",
+        "name": "12_7mm_M2_HB",
+        "caliber": 12.7,
+        "ammo": 1000,
+        "reloadTime": 8.0,
+        "rateOfFire": 575,
+        "bulletType": "ap_i_t_ball_M20"
+      }
+    ],
+    "main_gun_ammo": 10,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 160000,
+    "purchaseCost": 450000,
+    "crewTraining": 130000,
+    "expertTraining": 450000,
+    "aceTrainingGE": 2000,
+    "aceTrainingRP": 890000,
+    "repairCost": {
+      "arcade": [
+        4617,
+        5874
+      ],
+      "realistic": [
+        5287,
+        6727
+      ],
+      "simulator": [
+        5600,
+        7125
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.6,
+      "realistic": 2.1,
+      "simulator": 2.5
+    },
+    "expMultiplier": 2.14
+  }
+}

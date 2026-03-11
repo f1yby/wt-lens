@@ -1,0 +1,33 @@
+{
+  "id": "f-86f-35",
+  "economy": {
+    "researchCost": 210000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 9270,
+    "crewTraining": 10000,
+    "expertTraining": 940000,
+    "aceTrainingGE": 2800,
+    "aceTrainingRP": 2150000,
+    "repairCost": {
+      "arcade": [
+        1354,
+        1354
+      ],
+      "realistic": [
+        3859,
+        3859
+      ],
+      "simulator": [
+        7223,
+        7223
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.6,
+      "realistic": 7.6,
+      "simulator": 12.0
+    },
+    "expMultiplier": 2.32,
+    "freeRepairs": 30
+  }
+}

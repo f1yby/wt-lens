@@ -1,0 +1,152 @@
+{
+  "id": "uk_conqueror_mk_2",
+  "performance": {
+    "horsepower": 821.0,
+    "weight": 66.04,
+    "power_to_weight": 12.43,
+    "max_reverse_speed": 11.6,
+    "reload_time": 14.93,
+    "penetration": 241.4,
+    "max_speed": 34.3,
+    "crew_count": 5,
+    "elevation_speed": 4.5,
+    "traverse_speed": 16.3,
+    "has_stabilizer": true,
+    "stabilizer_type": "both",
+    "elevation_range": [
+      -7.0,
+      15.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 22.0,
+    "mainGun": {
+      "name": "120mm_QQF_Tk_L1A1",
+      "caliber": 120.0,
+      "reloadTime": 14.93,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 19.41,
+        "expert": 17.17,
+        "ace": 14.93
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "120mm_l1g",
+        "localizedName": "Shot L1G",
+        "type": "apds_early_tank",
+        "caliber": 70.0,
+        "mass": 6.37,
+        "muzzleVelocity": 1493.0,
+        "deMarre": {
+          "fullCaliber": 120.0,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "isApcr": true,
+          "coreCaliber": 70.0,
+          "coreMass": 4.1,
+          "Cx": 0.22
+        },
+        "penetration0m": 241.4
+      },
+      {
+        "name": "120mm_l1tk",
+        "localizedName": "Shell L1TK",
+        "type": "hesh_tank",
+        "caliber": 120.0,
+        "mass": 15.87,
+        "muzzleVelocity": 792.0,
+        "penetration0m": 152.0,
+        "explosiveMassKg": 3.1,
+        "explosiveType": "rdx_tnt",
+        "tntEquivalent": 3.968
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2800.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 5,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      4.0,
+      10.0,
+      16.2,
+      25.5,
+      34.3
+    ],
+    "reverse_gear_speeds": [
+      2.0,
+      11.6
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 65.04,
+    "track_width": 0.787,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_L3A1",
+        "caliber": 7.6,
+        "ammo": 3750,
+        "reloadTime": 8.0,
+        "rateOfFire": 500,
+        "bulletType": "ap_ball"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "7_62mm_L3A1",
+        "caliber": 7.6,
+        "ammo": 3750,
+        "reloadTime": 8.0,
+        "rateOfFire": 500,
+        "bulletType": "ap_ball"
+      }
+    ],
+    "main_gun_ammo": 35,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 48000,
+    "purchaseCost": 270000,
+    "crewTraining": 78000,
+    "expertTraining": 270000,
+    "aceTrainingGE": 1100,
+    "aceTrainingRP": 670000,
+    "repairCost": {
+      "arcade": [
+        4996,
+        6882
+      ],
+      "realistic": [
+        5311,
+        7315
+      ],
+      "simulator": [
+        8461,
+        11655
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.4,
+      "realistic": 1.96,
+      "simulator": 2.31
+    },
+    "expMultiplier": 1.9
+  }
+}

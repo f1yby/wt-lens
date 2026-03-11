@@ -1,0 +1,31 @@
+{
+  "id": "a_7e_thailand",
+  "economy": {
+    "researchCost": 210000,
+    "purchaseCost": 580000,
+    "crewTraining": 165000,
+    "expertTraining": 580000,
+    "aceTrainingGE": 2800,
+    "aceTrainingRP": 1080000,
+    "repairCost": {
+      "arcade": [
+        3411,
+        4705
+      ],
+      "realistic": [
+        8730,
+        12042
+      ],
+      "simulator": [
+        10321,
+        14236
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.78,
+      "realistic": 3.05,
+      "simulator": 6.0
+    },
+    "expMultiplier": 2.32
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "fr_cruiser_dugauy_class_primaguet",
+  "economy": {
+    "researchCost": 25000,
+    "purchaseCost": 87000,
+    "crewTraining": 25000,
+    "expertTraining": 87000,
+    "aceTrainingGE": 700,
+    "aceTrainingRP": 390000,
+    "repairCost": {
+      "arcade": [
+        5826,
+        7905
+      ],
+      "realistic": [
+        6840,
+        9281
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 3.62,
+      "realistic": 6.0,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.54
+  }
+}

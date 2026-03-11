@@ -1,0 +1,200 @@
+{
+  "id": "cn_ztz_59a",
+  "performance": {
+    "horsepower": 520.0,
+    "weight": 36.0,
+    "power_to_weight": 14.44,
+    "max_reverse_speed": 7.5,
+    "reload_time": 7.5,
+    "penetration": 390.0,
+    "max_speed": 50.0,
+    "crew_count": 5,
+    "elevation_speed": 4.5,
+    "traverse_speed": 10.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "vertical",
+    "elevation_range": [
+      -5.0,
+      18.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 23.0,
+    "mainGun": {
+      "name": "100mm_Type59",
+      "caliber": 100.0,
+      "reloadTime": 7.5,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 9.75,
+        "expert": 8.62,
+        "ace": 7.5
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "100mm_br_412",
+        "localizedName": "BR-412",
+        "type": "aphe_tank",
+        "caliber": 100.0,
+        "mass": 15.88,
+        "muzzleVelocity": 895.0,
+        "deMarre": {
+          "fullCaliber": 100.0,
+          "isApcbc": false,
+          "explosiveMass": 0.065,
+          "Cx": 0.658
+        },
+        "penetration0m": 218.4,
+        "explosiveMassKg": 0.065,
+        "explosiveType": "a_ix_2",
+        "tntEquivalent": 0.091
+      },
+      {
+        "name": "100mm_of_412",
+        "localizedName": "OF-412",
+        "type": "he_frag_tank",
+        "caliber": 100.0,
+        "mass": 15.6,
+        "muzzleVelocity": 900.0,
+        "explosiveMassKg": 1.462,
+        "explosiveType": "tnt",
+        "tntEquivalent": 1.462
+      },
+      {
+        "name": "100mm_br_412d",
+        "localizedName": "BR-412D",
+        "type": "apcbc_tank",
+        "caliber": 100.0,
+        "mass": 15.88,
+        "muzzleVelocity": 887.0,
+        "deMarre": {
+          "fullCaliber": 100.0,
+          "isApcbc": true,
+          "explosiveMass": 0.065,
+          "Cx": 0.395
+        },
+        "penetration0m": 239.6,
+        "explosiveMassKg": 0.065,
+        "explosiveType": "a_ix_2",
+        "tntEquivalent": 0.091
+      },
+      {
+        "name": "100mm_type1959",
+        "localizedName": "Type 59 APDS",
+        "type": "apds_early_tank",
+        "caliber": 56.0,
+        "mass": 3.18,
+        "muzzleVelocity": 1432.0,
+        "deMarre": {
+          "fullCaliber": 100.0,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "isApcr": true,
+          "coreCaliber": 56.0,
+          "coreMass": 2.13,
+          "Cx": 0.223
+        },
+        "penetration0m": 178.3
+      },
+      {
+        "name": "100mm_type1973",
+        "localizedName": "Type 73 HEAT-FS",
+        "type": "heat_fs_tank",
+        "caliber": 100.0,
+        "mass": 10.05,
+        "muzzleVelocity": 955.0,
+        "penetration0m": 390.0,
+        "explosiveMassKg": 0.922,
+        "explosiveType": "rdx_tnt",
+        "tntEquivalent": 1.18
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": "CNGC",
+    "engine_model": "12150L",
+    "engine_type": null,
+    "engine_max_rpm": 2000.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 5,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      7.5,
+      16.1,
+      22.5,
+      31.5,
+      50.0
+    ],
+    "reverse_gear_speeds": [
+      7.5
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 35.5,
+    "track_width": 0.58,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_Type_59",
+        "caliber": 7.6,
+        "ammo": 3000,
+        "reloadTime": 8.0,
+        "rateOfFire": 600,
+        "bulletType": "ap_i_ball"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "12_7mm_Type_54",
+        "caliber": 12.7,
+        "ammo": 500,
+        "reloadTime": 8.0,
+        "rateOfFire": 600,
+        "bulletType": "ap_i_t_ball"
+      }
+    ],
+    "main_gun_ammo": 34,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": true
+  },
+  "economy": {
+    "researchCost": 105000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 8200,
+    "crewTraining": 10000,
+    "expertTraining": 490000,
+    "aceTrainingGE": 1200,
+    "aceTrainingRP": 1440000,
+    "repairCost": {
+      "arcade": [
+        2818,
+        2818
+      ],
+      "realistic": [
+        3225,
+        3225
+      ],
+      "simulator": [
+        4391,
+        4391
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.63,
+      "realistic": 3.95,
+      "simulator": 4.58
+    },
+    "expMultiplier": 1.96,
+    "freeRepairs": 30
+  }
+}

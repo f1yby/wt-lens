@@ -1,0 +1,33 @@
+{
+  "id": "a_20g_30_ussr",
+  "economy": {
+    "researchCost": 26000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 1450,
+    "crewTraining": 10000,
+    "expertTraining": 115000,
+    "aceTrainingGE": 500,
+    "aceTrainingRP": 640000,
+    "repairCost": {
+      "arcade": [
+        810,
+        810
+      ],
+      "realistic": [
+        1363,
+        1363
+      ],
+      "simulator": [
+        2872,
+        2872
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.68,
+      "realistic": 3.42,
+      "simulator": 7.0
+    },
+    "expMultiplier": 1.42,
+    "freeRepairs": 30
+  }
+}

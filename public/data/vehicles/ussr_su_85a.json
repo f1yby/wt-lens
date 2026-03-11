@@ -1,0 +1,168 @@
+{
+  "id": "ussr_su_85a",
+  "performance": {
+    "horsepower": 140.0,
+    "weight": 12.3,
+    "power_to_weight": 11.38,
+    "max_reverse_speed": 5.3,
+    "reload_time": 7.41,
+    "penetration": 222.6,
+    "max_speed": 40.2,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 7.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -4.0,
+      18.0
+    ],
+    "traverse_range": [
+      -8.5,
+      8.5
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 22.0,
+    "mainGun": {
+      "name": "85mm_D5S",
+      "caliber": 85.0,
+      "reloadTime": 7.41,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 9.63,
+        "expert": 8.52,
+        "ace": 7.41
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "85mm_br_365k",
+        "localizedName": "BR-365K",
+        "type": "aphe_tank",
+        "caliber": 85.0,
+        "mass": 9.2,
+        "muzzleVelocity": 792.0,
+        "deMarre": {
+          "fullCaliber": 85.0,
+          "isApcbc": false,
+          "explosiveMass": 0.05,
+          "Cx": 0.6106
+        },
+        "penetration0m": 148.1,
+        "explosiveMassKg": 0.05,
+        "explosiveType": "a_ix_2",
+        "tntEquivalent": 0.07
+      },
+      {
+        "name": "85mm_o_365k",
+        "localizedName": "O-365K",
+        "type": "he_frag_tank",
+        "caliber": 85.0,
+        "mass": 9.54,
+        "muzzleVelocity": 785.0,
+        "explosiveMassKg": 0.741,
+        "explosiveType": "tnt",
+        "tntEquivalent": 0.741
+      },
+      {
+        "name": "85mm_br_365a",
+        "localizedName": "BR-365",
+        "type": "aphebc_tank",
+        "caliber": 85.0,
+        "mass": 9.2,
+        "muzzleVelocity": 792.0,
+        "deMarre": {
+          "fullCaliber": 85.0,
+          "isApcbc": false,
+          "explosiveMass": 0.164,
+          "Cx": 0.3308
+        },
+        "penetration0m": 135.7,
+        "explosiveMassKg": 0.164,
+        "explosiveType": "tnt",
+        "tntEquivalent": 0.164
+      },
+      {
+        "name": "85mm_br_365p",
+        "localizedName": "BR-365P",
+        "type": "apcr_tank",
+        "caliber": 28.0,
+        "mass": 4.99,
+        "muzzleVelocity": 1050.0,
+        "deMarre": {
+          "fullCaliber": 85.0,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "isApcr": true,
+          "coreCaliber": 28.0,
+          "coreMass": 0.648,
+          "Cx": 0.4779
+        },
+        "penetration0m": 222.6
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 3400.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 4,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      6.1,
+      10.7,
+      21.9,
+      40.2
+    ],
+    "reverse_gear_speeds": [
+      5.3
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 12.0,
+    "track_width": 0.26,
+    "secondary_weapons": null,
+    "main_gun_ammo": 42,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 26000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 1450,
+    "crewTraining": 10000,
+    "expertTraining": 115000,
+    "aceTrainingGE": 400,
+    "aceTrainingRP": 640000,
+    "repairCost": {
+      "arcade": [
+        794,
+        794
+      ],
+      "realistic": [
+        950,
+        950
+      ],
+      "simulator": [
+        1040,
+        1040
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.57,
+      "realistic": 2.41,
+      "simulator": 3.03
+    },
+    "expMultiplier": 1.42,
+    "freeRepairs": 30
+  }
+}

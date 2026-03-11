@@ -1,0 +1,31 @@
+{
+  "id": "f-104a_china",
+  "economy": {
+    "researchCost": 170000,
+    "purchaseCost": 480000,
+    "crewTraining": 135000,
+    "expertTraining": 480000,
+    "aceTrainingGE": 2400,
+    "aceTrainingRP": 950000,
+    "repairCost": {
+      "arcade": [
+        3138,
+        4156
+      ],
+      "realistic": [
+        10323,
+        13673
+      ],
+      "simulator": [
+        10080,
+        13352
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.25,
+      "realistic": 3.8,
+      "simulator": 6.0
+    },
+    "expMultiplier": 2.2
+  }
+}

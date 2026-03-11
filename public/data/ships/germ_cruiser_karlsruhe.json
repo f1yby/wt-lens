@@ -1,0 +1,29 @@
+{
+  "id": "germ_cruiser_karlsruhe",
+  "economy": {
+    "researchCost": 59000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 4880,
+    "crewTraining": 10000,
+    "expertTraining": 300000,
+    "aceTrainingGE": 1100,
+    "aceTrainingRP": 1050000,
+    "repairCost": {
+      "arcade": [
+        6727,
+        6727
+      ],
+      "realistic": [
+        5260,
+        5260
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 9.0,
+      "realistic": 12.0,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.72,
+    "freeRepairs": 30
+  }
+}

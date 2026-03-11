@@ -1,0 +1,164 @@
+{
+  "id": "germ_ru251",
+  "performance": {
+    "horsepower": 660.0,
+    "weight": 25.5,
+    "power_to_weight": 25.88,
+    "max_reverse_speed": 80.2,
+    "reload_time": 7.5,
+    "penetration": 320.0,
+    "max_speed": 80.2,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 24.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -9.0,
+      20.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 29.0,
+    "mainGun": {
+      "name": "90mm_BK90_Ru251",
+      "caliber": 90.0,
+      "reloadTime": 7.5,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 9.75,
+        "expert": 8.62,
+        "ace": 7.5
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "90mm_dm502",
+        "localizedName": "DM502",
+        "type": "hesh_tank",
+        "caliber": 90.0,
+        "mass": 10.6,
+        "muzzleVelocity": 853.0,
+        "penetration0m": 102.0,
+        "explosiveMassKg": 2.12,
+        "explosiveType": "comp_a",
+        "tntEquivalent": 2.671
+      },
+      {
+        "name": "90mm_m71",
+        "localizedName": "M71 shell",
+        "type": "he_frag_tank",
+        "caliber": 90.0,
+        "mass": 10.55,
+        "muzzleVelocity": 823.0,
+        "explosiveMassKg": 0.925,
+        "explosiveType": "comp_b",
+        "tntEquivalent": 1.175
+      },
+      {
+        "name": "90mm_m431",
+        "localizedName": "M431 shell",
+        "type": "heat_fs_tank",
+        "caliber": 90.0,
+        "mass": 5.8,
+        "muzzleVelocity": 1181.0,
+        "penetration0m": 320.0,
+        "explosiveMassKg": 0.544,
+        "explosiveType": "comp_b",
+        "tntEquivalent": 0.691
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2200.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 6,
+    "reverse_gears": 6,
+    "forward_gear_speeds": [
+      10.0,
+      13.4,
+      26.7,
+      47.2,
+      57.3,
+      80.2
+    ],
+    "reverse_gear_speeds": [
+      10.0,
+      13.4,
+      26.7,
+      47.2,
+      57.3,
+      80.2
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 25.2,
+    "track_width": 0.53,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_92mm_MG3",
+        "caliber": 7.6,
+        "ammo": 2600,
+        "reloadTime": 8.0,
+        "rateOfFire": 1200,
+        "bulletType": "ap_ball"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "7_92mm_MG3",
+        "caliber": 7.6,
+        "ammo": 2600,
+        "reloadTime": 8.0,
+        "rateOfFire": 1200,
+        "bulletType": "ap_ball"
+      }
+    ],
+    "main_gun_ammo": 61,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 71000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 7480,
+    "crewTraining": 10000,
+    "expertTraining": 340000,
+    "aceTrainingGE": 890,
+    "aceTrainingRP": 1180000,
+    "repairCost": {
+      "arcade": [
+        2073,
+        2073
+      ],
+      "realistic": [
+        2554,
+        2554
+      ],
+      "simulator": [
+        3516,
+        3516
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.3,
+      "realistic": 3.09,
+      "simulator": 3.98
+    },
+    "expMultiplier": 1.84,
+    "freeRepairs": 30
+  }
+}

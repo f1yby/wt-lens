@@ -1,0 +1,33 @@
+{
+  "id": "wirraway",
+  "economy": {
+    "researchCost": 4000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 480,
+    "crewTraining": 450,
+    "expertTraining": 3000,
+    "aceTrainingGE": 45,
+    "aceTrainingRP": 220000,
+    "repairCost": {
+      "arcade": [
+        519,
+        519
+      ],
+      "realistic": [
+        144,
+        144
+      ],
+      "simulator": [
+        986,
+        986
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.42,
+      "realistic": 0.64,
+      "simulator": 1.41
+    },
+    "expMultiplier": 1.0,
+    "freeRepairs": 30
+  }
+}

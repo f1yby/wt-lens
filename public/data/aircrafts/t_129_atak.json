@@ -1,0 +1,33 @@
+{
+  "id": "t_129_atak",
+  "economy": {
+    "researchCost": 400000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 9270,
+    "crewTraining": 10000,
+    "expertTraining": 1670000,
+    "aceTrainingGE": 2800,
+    "aceTrainingRP": 2150000,
+    "repairCost": {
+      "arcade": [
+        5435,
+        5435
+      ],
+      "realistic": [
+        3202,
+        3202
+      ],
+      "simulator": [
+        3084,
+        3084
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.0,
+      "realistic": 5.55,
+      "simulator": 8.6
+    },
+    "expMultiplier": 2.32,
+    "freeRepairs": 30
+  }
+}

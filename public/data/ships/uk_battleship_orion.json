@@ -1,0 +1,27 @@
+{
+  "id": "uk_battleship_orion",
+  "economy": {
+    "researchCost": 180000,
+    "purchaseCost": 540000,
+    "crewTraining": 155000,
+    "expertTraining": 540000,
+    "aceTrainingGE": 1800,
+    "aceTrainingRP": 780000,
+    "repairCost": {
+      "arcade": [
+        25524,
+        31511
+      ],
+      "realistic": [
+        31398,
+        38763
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 4.5,
+      "realistic": 6.0,
+      "simulator": 1.0
+    },
+    "expMultiplier": 2.02
+  }
+}

@@ -1,0 +1,245 @@
+{
+  "id": "sw_t_54_1951",
+  "performance": {
+    "horsepower": 520.0,
+    "weight": 35.5,
+    "power_to_weight": 14.65,
+    "max_reverse_speed": 7.5,
+    "reload_time": 7.5,
+    "penetration": 380.0,
+    "max_speed": 50.0,
+    "crew_count": 5,
+    "elevation_speed": 4.5,
+    "traverse_speed": 10.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -4.0,
+      17.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 21.0,
+    "mainGun": {
+      "name": "100mm_D10T",
+      "caliber": 100.0,
+      "reloadTime": 7.5,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 9.75,
+        "expert": 8.62,
+        "ace": 7.5
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "100mm_br_412",
+        "localizedName": "BR-412",
+        "type": "aphe_tank",
+        "caliber": 100.0,
+        "mass": 15.88,
+        "muzzleVelocity": 895.0,
+        "deMarre": {
+          "fullCaliber": 100.0,
+          "isApcbc": false,
+          "explosiveMass": 0.065,
+          "Cx": 0.658
+        },
+        "penetration0m": 218.4,
+        "explosiveMassKg": 0.065,
+        "explosiveType": "a_ix_2",
+        "tntEquivalent": 0.091
+      },
+      {
+        "name": "100mm_of_412",
+        "localizedName": "OF-412",
+        "type": "he_frag_tank",
+        "caliber": 100.0,
+        "mass": 15.6,
+        "muzzleVelocity": 900.0,
+        "explosiveMassKg": 1.462,
+        "explosiveType": "tnt",
+        "tntEquivalent": 1.462
+      },
+      {
+        "name": "100mm_br_412b",
+        "localizedName": "BR-412B",
+        "type": "aphebc_tank",
+        "caliber": 100.0,
+        "mass": 15.88,
+        "muzzleVelocity": 895.0,
+        "deMarre": {
+          "fullCaliber": 100.0,
+          "isApcbc": false,
+          "explosiveMass": 0.065,
+          "Cx": 0.395
+        },
+        "penetration0m": 218.4,
+        "explosiveMassKg": 0.065,
+        "explosiveType": "a_ix_2",
+        "tntEquivalent": 0.091
+      },
+      {
+        "name": "100mm_br_412d",
+        "localizedName": "BR-412D",
+        "type": "apcbc_tank",
+        "caliber": 100.0,
+        "mass": 15.88,
+        "muzzleVelocity": 887.0,
+        "deMarre": {
+          "fullCaliber": 100.0,
+          "isApcbc": true,
+          "explosiveMass": 0.065,
+          "Cx": 0.395
+        },
+        "penetration0m": 239.6,
+        "explosiveMassKg": 0.065,
+        "explosiveType": "a_ix_2",
+        "tntEquivalent": 0.091
+      },
+      {
+        "name": "100mm_br_412p",
+        "localizedName": "BR-412P",
+        "type": "apcr_tank",
+        "caliber": 42.0,
+        "mass": 8.53,
+        "muzzleVelocity": 1050.0,
+        "deMarre": {
+          "fullCaliber": 100.0,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "isApcr": true,
+          "coreCaliber": 42.0,
+          "coreMass": 2.13,
+          "Cx": 0.47
+        },
+        "penetration0m": 233.2
+      },
+      {
+        "name": "100mm_zbm8",
+        "localizedName": "3BM-8",
+        "type": "apds_tank",
+        "caliber": 55.0,
+        "mass": 4.13,
+        "muzzleVelocity": 1415.0,
+        "deMarre": {
+          "fullCaliber": 100.0,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "isApcr": true,
+          "coreCaliber": 55.0,
+          "coreMass": 2.78,
+          "Cx": 0.2281
+        },
+        "penetration0m": 215.5
+      },
+      {
+        "name": "100mm_zbk_5",
+        "localizedName": "3BK-5",
+        "type": "heat_fs_tank",
+        "caliber": 100.0,
+        "mass": 12.38,
+        "muzzleVelocity": 900.0,
+        "penetration0m": 380.0,
+        "explosiveMassKg": 0.995,
+        "explosiveType": "a_ix_1",
+        "tntEquivalent": 1.134
+      },
+      {
+        "name": "100mm_3d3",
+        "localizedName": "3D3",
+        "type": "smoke_tank",
+        "caliber": 100.0,
+        "mass": 15.6,
+        "muzzleVelocity": 880.0,
+        "explosiveMassKg": 0.05,
+        "explosiveType": "smoke_composition",
+        "tntEquivalent": 0.05
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": "chtz",
+    "engine_model": "v_54",
+    "engine_type": null,
+    "engine_max_rpm": 2000.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 5,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      7.5,
+      16.1,
+      22.5,
+      31.5,
+      50.0
+    ],
+    "reverse_gear_speeds": [
+      7.5
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 35.0,
+    "track_width": 0.58,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_SGMT",
+        "caliber": 7.6,
+        "ammo": 3500,
+        "reloadTime": 8.0,
+        "rateOfFire": 600,
+        "bulletType": "ap_i_ball"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "12_7mm_DShK",
+        "caliber": 12.7,
+        "ammo": 250,
+        "reloadTime": 8.0,
+        "rateOfFire": 600,
+        "bulletType": "ap_i_t_ball"
+      }
+    ],
+    "main_gun_ammo": 34,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 120000,
+    "purchaseCost": 340000,
+    "crewTraining": 98000,
+    "expertTraining": 340000,
+    "aceTrainingGE": 1300,
+    "aceTrainingRP": 780000,
+    "repairCost": {
+      "arcade": [
+        4271,
+        5771
+      ],
+      "realistic": [
+        4757,
+        6429
+      ],
+      "simulator": [
+        6745,
+        9115
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.36,
+      "realistic": 2.04,
+      "simulator": 2.36
+    },
+    "expMultiplier": 2.02
+  }
+}

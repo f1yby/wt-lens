@@ -1,0 +1,174 @@
+{
+  "id": "sw_kv_1_1942_fin",
+  "performance": {
+    "horsepower": 600.0,
+    "weight": 48.95,
+    "power_to_weight": 12.26,
+    "max_reverse_speed": 6.2,
+    "reload_time": 6.9,
+    "penetration": 86.7,
+    "max_speed": 34.4,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 12.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -6.0,
+      20.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 26.0,
+    "mainGun": {
+      "name": "76mm_ZIS5",
+      "caliber": 76.2,
+      "reloadTime": 6.9,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 8.97,
+        "expert": 7.93,
+        "ace": 6.9
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "76mm_br_350a",
+        "localizedName": "BR-350A (MD-5 fuze)",
+        "type": "aphebc_tank",
+        "caliber": 76.2,
+        "mass": 6.3,
+        "muzzleVelocity": 662.0,
+        "deMarre": {
+          "fullCaliber": 76.2,
+          "isApcbc": false,
+          "explosiveMass": 0.15,
+          "Cx": 0.3598
+        },
+        "penetration0m": 86.7,
+        "explosiveMassKg": 0.15,
+        "explosiveType": "tnt",
+        "tntEquivalent": 0.15
+      },
+      {
+        "name": "76mm_of_350m",
+        "localizedName": "OF-350M",
+        "type": "he_frag_tank",
+        "caliber": 76.2,
+        "mass": 6.2,
+        "muzzleVelocity": 680.0,
+        "explosiveMassKg": 0.621,
+        "explosiveType": "tnt",
+        "tntEquivalent": 0.621
+      },
+      {
+        "name": "76mm_sh_354t",
+        "localizedName": "Sh-354T",
+        "type": "shrapnel_tank",
+        "caliber": 76.2,
+        "mass": 6.44,
+        "muzzleVelocity": 618.0,
+        "explosiveMassKg": 0.085,
+        "explosiveType": "tnt",
+        "tntEquivalent": 0.085
+      },
+      {
+        "name": "76mm_d350a",
+        "localizedName": "D-350A",
+        "type": "smoke_tank",
+        "caliber": 76.0,
+        "mass": 6.45,
+        "muzzleVelocity": 680.0,
+        "explosiveMassKg": 0.05,
+        "explosiveType": "smoke_composition",
+        "tntEquivalent": 0.05
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2000.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 5,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      4.1,
+      7.7,
+      12.6,
+      19.1,
+      34.4
+    ],
+    "reverse_gear_speeds": [
+      6.2
+    ],
+    "steer_type": null,
+    "empty_weight": 48.55,
+    "track_width": 0.7,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_DT",
+        "caliber": 7.6,
+        "ammo": 3024,
+        "reloadTime": 8.0,
+        "rateOfFire": 600,
+        "bulletType": "ap_i_ball"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "7_62mm_DT",
+        "caliber": 7.6,
+        "ammo": 1400,
+        "reloadTime": 8.0,
+        "rateOfFire": 600,
+        "bulletType": "ap_i_ball"
+      }
+    ],
+    "main_gun_ammo": 98,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 46000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 2980,
+    "crewTraining": 10000,
+    "expertTraining": 250000,
+    "aceTrainingGE": 630,
+    "aceTrainingRP": 870000,
+    "repairCost": {
+      "arcade": [
+        1616,
+        1616
+      ],
+      "realistic": [
+        1777,
+        1777
+      ],
+      "simulator": [
+        2437,
+        2437
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.03,
+      "realistic": 3.05,
+      "simulator": 3.41
+    },
+    "expMultiplier": 1.6,
+    "freeRepairs": 30
+  }
+}

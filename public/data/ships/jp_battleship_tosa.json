@@ -1,0 +1,27 @@
+{
+  "id": "jp_battleship_tosa",
+  "economy": {
+    "researchCost": 260000,
+    "purchaseCost": 780000,
+    "crewTraining": 220000,
+    "expertTraining": 780000,
+    "aceTrainingGE": 2200,
+    "aceTrainingRP": 890000,
+    "repairCost": {
+      "arcade": [
+        31912,
+        40041
+      ],
+      "realistic": [
+        37198,
+        46672
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 4.25,
+      "realistic": 6.0,
+      "simulator": 1.0
+    },
+    "expMultiplier": 2.14
+  }
+}

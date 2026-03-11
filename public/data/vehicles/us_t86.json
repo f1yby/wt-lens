@@ -1,0 +1,188 @@
+{
+  "id": "us_t86",
+  "performance": {
+    "horsepower": 400.0,
+    "weight": 20.2,
+    "power_to_weight": 19.8,
+    "max_reverse_speed": 21.5,
+    "reload_time": 6.06,
+    "penetration": 185.5,
+    "max_speed": 69.2,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 24.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "vertical",
+    "elevation_range": [
+      -10.0,
+      20.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 30.0,
+    "mainGun": {
+      "name": "76mm_M1_open_turret_no_MB",
+      "caliber": 76.2,
+      "reloadTime": 6.06,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 7.88,
+        "expert": 6.97,
+        "ace": 6.06
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "76mm_m79",
+        "localizedName": "M79 shot",
+        "type": "ap_tank",
+        "caliber": 76.2,
+        "mass": 6.8,
+        "muzzleVelocity": 792.0,
+        "deMarre": {
+          "fullCaliber": 76.2,
+          "isApcbc": false,
+          "explosiveMass": 0
+        },
+        "penetration0m": 134.3
+      },
+      {
+        "name": "76mm_m42a1",
+        "localizedName": "M42A1 shell",
+        "type": "he_frag_tank",
+        "caliber": 76.2,
+        "mass": 5.84,
+        "muzzleVelocity": 823.0,
+        "explosiveMassKg": 0.39,
+        "explosiveType": "tnt",
+        "tntEquivalent": 0.39
+      },
+      {
+        "name": "76mm_m62",
+        "localizedName": "M62 shell",
+        "type": "apcbc_tank",
+        "caliber": 76.2,
+        "mass": 7.0,
+        "muzzleVelocity": 792.0,
+        "deMarre": {
+          "fullCaliber": 76.2,
+          "isApcbc": true,
+          "explosiveMass": 0.065,
+          "Cx": 0.4
+        },
+        "penetration0m": 149.2,
+        "explosiveMassKg": 0.065,
+        "explosiveType": "exp_d",
+        "tntEquivalent": 0.064
+      },
+      {
+        "name": "76mm_m93",
+        "localizedName": "M93 shot",
+        "type": "apcr_tank",
+        "caliber": 38.1,
+        "mass": 4.24,
+        "muzzleVelocity": 1036.0,
+        "deMarre": {
+          "fullCaliber": 76.2,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "isApcr": true,
+          "coreCaliber": 38.1,
+          "coreMass": 1.79,
+          "Cx": 0.28
+        },
+        "penetration0m": 185.5
+      },
+      {
+        "name": "75mm_m88",
+        "localizedName": "M88",
+        "type": "smoke_tank",
+        "caliber": 76.0,
+        "mass": 3.44,
+        "muzzleVelocity": 274.0,
+        "explosiveMassKg": 0.05,
+        "explosiveType": "smoke_composition",
+        "tntEquivalent": 0.05
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2400.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 6,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      8.1,
+      16.3,
+      22.0,
+      34.1,
+      45.1,
+      69.2
+    ],
+    "reverse_gear_speeds": [
+      10.8,
+      21.5
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 19.8,
+    "track_width": 0.35,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "12_7mm_M2_HB",
+        "caliber": 12.7,
+        "ammo": 1000,
+        "reloadTime": 8.0,
+        "rateOfFire": 575,
+        "bulletType": "ap_i_t_ball_M20"
+      }
+    ],
+    "main_gun_ammo": 100,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 40000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 1750,
+    "crewTraining": 10000,
+    "expertTraining": 210000,
+    "aceTrainingGE": 550,
+    "aceTrainingRP": 790000,
+    "repairCost": {
+      "arcade": [
+        821,
+        821
+      ],
+      "realistic": [
+        1235,
+        1235
+      ],
+      "simulator": [
+        1549,
+        1549
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.75,
+      "realistic": 2.34,
+      "simulator": 3.01
+    },
+    "expMultiplier": 1.54,
+    "freeRepairs": 30
+  }
+}

@@ -1,0 +1,177 @@
+{
+  "id": "uk_as_90_mk_2",
+  "performance": {
+    "horsepower": 660.0,
+    "weight": 39.5,
+    "power_to_weight": 16.71,
+    "max_reverse_speed": 39.8,
+    "reload_time": 5.0,
+    "penetration": 20.0,
+    "max_speed": 55.0,
+    "crew_count": 5,
+    "elevation_speed": 15.0,
+    "traverse_speed": 12.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -5.0,
+      70.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 75.0,
+    "mainGun": {
+      "name": "155mm_L_31",
+      "caliber": 155.0,
+      "reloadTime": 5.0,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 6.5,
+        "expert": 5.75,
+        "ace": 5.0
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "155mm_m107",
+        "localizedName": "M107",
+        "type": "he_frag_tank",
+        "caliber": 155.0,
+        "mass": 43.1,
+        "muzzleVelocity": 940.0,
+        "armorPowerTable": [
+          {
+            "penetration": 20.0,
+            "distance": 100.0
+          },
+          {
+            "penetration": 16.0,
+            "distance": 4000.0
+          },
+          {
+            "penetration": 0.0,
+            "distance": 10000.0
+          }
+        ],
+        "penetration0m": 20.0,
+        "explosiveMassKg": 6.98,
+        "explosiveType": "comp_b",
+        "tntEquivalent": 8.865
+      },
+      {
+        "name": "155mm_m110",
+        "localizedName": "M110",
+        "type": "smoke_tank",
+        "caliber": 155.0,
+        "mass": 40.8,
+        "muzzleVelocity": 940.0,
+        "explosiveMassKg": 0.05,
+        "explosiveType": "smoke_composition",
+        "tntEquivalent": 0.05
+      },
+      {
+        "name": "155mm_m107_pf",
+        "localizedName": "M107 (PF)",
+        "type": "he_frag_radio_fuse",
+        "caliber": 155.0,
+        "mass": 43.1,
+        "muzzleVelocity": 940.0,
+        "explosiveMassKg": 6.98,
+        "explosiveType": "comp_b",
+        "tntEquivalent": 8.865
+      },
+      {
+        "name": "155mm_l15_a2",
+        "localizedName": "L15A2",
+        "type": "he_frag_tank",
+        "caliber": 155.0,
+        "mass": 43.5,
+        "muzzleVelocity": 940.0,
+        "explosiveMassKg": 11.3,
+        "explosiveType": "comp_b",
+        "tntEquivalent": 14.351
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": "cummins",
+    "engine_model": "vta_903t_v8",
+    "engine_type": null,
+    "engine_max_rpm": 2600.0,
+    "transmission_manufacturer": "z_f",
+    "transmission_model": "friedrichshafen_lsg_2000",
+    "transmission_type": "auto",
+    "forward_gears": 8,
+    "reverse_gears": 4,
+    "forward_gear_speeds": [
+      9.0,
+      13.2,
+      17.2,
+      23.3,
+      28.6,
+      35.0,
+      44.0,
+      55.0
+    ],
+    "reverse_gear_speeds": [
+      5.7,
+      12.2,
+      28.6,
+      39.8
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 38.8,
+    "track_width": 0.584,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_L37A2",
+        "caliber": 7.6,
+        "ammo": 1800,
+        "reloadTime": 8.0,
+        "rateOfFire": 650,
+        "bulletType": "ap_ball"
+      }
+    ],
+    "main_gun_ammo": 48,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 63000,
+    "purchaseCost": 200000,
+    "crewTraining": 57000,
+    "expertTraining": 200000,
+    "aceTrainingGE": 800,
+    "aceTrainingRP": 520000,
+    "repairCost": {
+      "arcade": [
+        3746,
+        4865
+      ],
+      "realistic": [
+        4240,
+        5507
+      ],
+      "simulator": [
+        6183,
+        8030
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.26,
+      "realistic": 2.0,
+      "simulator": 2.28
+    },
+    "expMultiplier": 1.72
+  }
+}

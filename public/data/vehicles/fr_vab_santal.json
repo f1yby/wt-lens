@@ -1,0 +1,124 @@
+{
+  "id": "fr_vab_santal",
+  "performance": {
+    "horsepower": 300.0,
+    "weight": 11.8,
+    "power_to_weight": 25.42,
+    "max_reverse_speed": 13.3,
+    "reload_time": 0.5,
+    "penetration": null,
+    "max_speed": 90.3,
+    "crew_count": 5,
+    "elevation_speed": 50.0,
+    "traverse_speed": 50.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -10.0,
+      65.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": [
+      500,
+      300
+    ],
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": 583.1,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 75.0,
+    "mainGun": {
+      "name": "90mm_atam_mistral",
+      "caliber": 90.0,
+      "reloadTime": 0.5,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 0.65,
+        "expert": 0.57,
+        "ace": 0.5
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "atam_mistral_sam",
+        "localizedName": "atam_mistral_sam",
+        "type": "sam_tank",
+        "caliber": 90.0,
+        "mass": 19.7,
+        "muzzleVelocity": 850.0
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2200.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 12,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      7.8,
+      13.3,
+      15.5,
+      18.8,
+      26.5,
+      26.6,
+      32.1,
+      37.5,
+      45.1,
+      53.3,
+      64.2,
+      90.3
+    ],
+    "reverse_gear_speeds": [
+      5.5,
+      13.3
+    ],
+    "steer_type": null,
+    "empty_weight": 11.3,
+    "track_width": 0.4,
+    "secondary_weapons": null,
+    "main_gun_ammo": 12,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 220000,
+    "purchaseCost": 620000,
+    "crewTraining": 175000,
+    "expertTraining": 620000,
+    "aceTrainingGE": 2100,
+    "aceTrainingRP": 1010000,
+    "repairCost": {
+      "arcade": [
+        4830,
+        7408
+      ],
+      "realistic": [
+        4217,
+        6468
+      ],
+      "simulator": [
+        4494,
+        6892
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.6,
+      "realistic": 2.06,
+      "simulator": 2.5
+    },
+    "expMultiplier": 2.26
+  }
+}

@@ -1,0 +1,193 @@
+{
+  "id": "us_t92",
+  "performance": {
+    "horsepower": 340.0,
+    "weight": 16.86,
+    "power_to_weight": 20.17,
+    "max_reverse_speed": 8.1,
+    "reload_time": 5.0,
+    "penetration": 254.0,
+    "max_speed": 56.6,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 24.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -10.0,
+      20.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 30.0,
+    "mainGun": {
+      "name": "76mm_T185E1",
+      "caliber": 76.2,
+      "reloadTime": 5.0,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 6.5,
+        "expert": 5.75,
+        "ace": 5.0
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "76mm_m319",
+        "localizedName": "M319 shot",
+        "type": "apcr_tank",
+        "caliber": 38.1,
+        "mass": 3.2,
+        "muzzleVelocity": 1234.0,
+        "deMarre": {
+          "fullCaliber": 76.2,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "isApcr": true,
+          "coreCaliber": 38.1,
+          "coreMass": 1.79,
+          "Cx": 0.28
+        },
+        "penetration0m": 208.3
+      },
+      {
+        "name": "76mm_m352",
+        "localizedName": "M352 shell",
+        "type": "he_frag_tank",
+        "caliber": 76.1,
+        "mass": 6.8,
+        "muzzleVelocity": 732.0,
+        "explosiveMassKg": 0.662,
+        "explosiveType": "comp_b",
+        "tntEquivalent": 0.841
+      },
+      {
+        "name": "76mm_m331a2",
+        "localizedName": "M331A2 shot",
+        "type": "apds_early_tank",
+        "caliber": 50.0,
+        "mass": 2.81,
+        "muzzleVelocity": 1257.0,
+        "deMarre": {
+          "fullCaliber": 76.2,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "isApcr": true,
+          "coreCaliber": 50.0,
+          "coreMass": 1.49,
+          "Cx": 0.2576
+        },
+        "penetration0m": 143.8
+      },
+      {
+        "name": "76mm_m496",
+        "localizedName": "M496 shell",
+        "type": "heat_fs_tank",
+        "caliber": 76.2,
+        "mass": 3.2,
+        "muzzleVelocity": 1082.0,
+        "penetration0m": 254.0,
+        "explosiveMassKg": 0.499,
+        "explosiveType": "comp_b",
+        "tntEquivalent": 0.634
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2800.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 6,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      8.1,
+      11.3,
+      15.1,
+      22.6,
+      37.7,
+      56.6
+    ],
+    "reverse_gear_speeds": [
+      8.1
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 16.55,
+    "track_width": 0.406,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "12_7mm_M2_HB",
+        "caliber": 12.7,
+        "ammo": 800,
+        "reloadTime": 8.0,
+        "rateOfFire": 575,
+        "bulletType": "ap_i_t_ball_M20"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "7_62mm_M37",
+        "caliber": 7.6,
+        "ammo": 5000,
+        "reloadTime": 8.0,
+        "rateOfFire": 500,
+        "bulletType": "ap_ball"
+      },
+      {
+        "trigger": "gunner3",
+        "name": "7_62mm_M37",
+        "caliber": 7.6,
+        "ammo": 5000,
+        "reloadTime": 8.0,
+        "rateOfFire": 500,
+        "bulletType": "ap_ball"
+      }
+    ],
+    "main_gun_ammo": 59,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 71000,
+    "purchaseCost": 210000,
+    "crewTraining": 61000,
+    "expertTraining": 210000,
+    "aceTrainingGE": 890,
+    "aceTrainingRP": 570000,
+    "repairCost": {
+      "arcade": [
+        2814,
+        3834
+      ],
+      "realistic": [
+        3438,
+        4685
+      ],
+      "simulator": [
+        4607,
+        6276
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.11,
+      "realistic": 1.52,
+      "simulator": 1.95
+    },
+    "expMultiplier": 1.78
+  }
+}

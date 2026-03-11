@@ -1,0 +1,31 @@
+{
+  "id": "fw_200c_1",
+  "economy": {
+    "researchCost": 7900,
+    "purchaseCost": 10000,
+    "crewTraining": 3000,
+    "expertTraining": 10000,
+    "aceTrainingGE": 125,
+    "aceTrainingRP": 160000,
+    "repairCost": {
+      "arcade": [
+        477,
+        659
+      ],
+      "realistic": [
+        762,
+        1021
+      ],
+      "simulator": [
+        1227,
+        1642
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.37,
+      "realistic": 0.76,
+      "simulator": 1.2
+    },
+    "expMultiplier": 1.12
+  }
+}

@@ -1,0 +1,168 @@
+{
+  "id": "jp_type_89",
+  "performance": {
+    "horsepower": 600.0,
+    "weight": 26.5,
+    "power_to_weight": 22.64,
+    "max_reverse_speed": 42.6,
+    "reload_time": 0.3,
+    "penetration": 134.5,
+    "max_speed": 70.2,
+    "crew_count": 5,
+    "elevation_speed": 24.0,
+    "traverse_speed": 30.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "both",
+    "elevation_range": [
+      -10.0,
+      35.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": [
+      500,
+      300
+    ],
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": 583.1,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 45.0,
+    "mainGun": {
+      "name": "35mm_Oerlikon_KDE",
+      "caliber": 35.0,
+      "reloadTime": 0.3,
+      "autoLoader": true,
+      "reloadTimes": {
+        "base": 0.3,
+        "expert": 0.3,
+        "ace": 0.3
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "35_228mm_apds_t_belt",
+        "localizedName": "DM23",
+        "type": "apds_tank",
+        "caliber": 18.0,
+        "mass": 0.38,
+        "muzzleVelocity": 1400.0,
+        "deMarre": {
+          "fullCaliber": 35.0,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "isApcr": true,
+          "coreCaliber": 18.0,
+          "coreMass": 0.295,
+          "Cx": 0.25
+        },
+        "penetration0m": 134.5
+      },
+      {
+        "name": "35_228mm_he_i_t_belt",
+        "localizedName": "DM11A1",
+        "type": "he_frag_tank",
+        "caliber": 35.0,
+        "mass": 0.55,
+        "muzzleVelocity": 1175.0,
+        "explosiveMassKg": 0.12,
+        "explosiveType": "hexal",
+        "tntEquivalent": 0.168
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": true,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2100.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 8,
+    "reverse_gears": 4,
+    "forward_gear_speeds": [
+      8.8,
+      17.7,
+      22.6,
+      31.5,
+      38.4,
+      49.3,
+      59.0,
+      70.2
+    ],
+    "reverse_gear_speeds": [
+      6.7,
+      13.5,
+      20.5,
+      42.6
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 26.0,
+    "track_width": null,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_Type74",
+        "caliber": 7.6,
+        "ammo": 2000,
+        "reloadTime": 8.0,
+        "rateOfFire": 700,
+        "bulletType": "ap_ball"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "152mm_Type_79_launcher",
+        "caliber": 152.0,
+        "ammo": 4,
+        "reloadTime": 10.0,
+        "rateOfFire": 120,
+        "bulletType": "atgm_tank",
+        "maxDistance": 4000,
+        "maxSpeed": 200,
+        "guidanceType": "saclos",
+        "penetration": 700,
+        "explosiveMass": 4.2,
+        "explosiveType": "comp_b"
+      }
+    ],
+    "main_gun_ammo": 251,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": true
+  },
+  "economy": {
+    "researchCost": 94000,
+    "purchaseCost": 520000,
+    "crewTraining": 150000,
+    "expertTraining": 520000,
+    "aceTrainingGE": 2100,
+    "aceTrainingRP": 950000,
+    "repairCost": {
+      "arcade": [
+        3215,
+        5376
+      ],
+      "realistic": [
+        3439,
+        5751
+      ],
+      "simulator": [
+        4117,
+        6884
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.29,
+      "realistic": 1.68,
+      "simulator": 2.09
+    },
+    "expMultiplier": 2.2
+  }
+}

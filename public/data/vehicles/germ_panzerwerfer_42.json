@@ -1,0 +1,111 @@
+{
+  "id": "germ_panzerwerfer_42",
+  "performance": {
+    "horsepower": 68.0,
+    "weight": 7.1,
+    "power_to_weight": 9.58,
+    "max_reverse_speed": 8.3,
+    "reload_time": null,
+    "penetration": null,
+    "max_speed": 46.6,
+    "crew_count": 5,
+    "elevation_speed": null,
+    "traverse_speed": null,
+    "has_stabilizer": null,
+    "stabilizer_type": "none",
+    "elevation_range": null,
+    "traverse_range": null,
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": null,
+    "mainGun": null,
+    "ammunitions": null,
+    "penetrationData": null,
+    "autoLoader": null,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 3000.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 6,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      2.3,
+      6.4,
+      10.9,
+      15.3,
+      25.5,
+      46.6
+    ],
+    "reverse_gear_speeds": [
+      8.3
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 6.95,
+    "track_width": 0.28,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner0",
+        "name": "158mm_NB_Wf_41_gun_rocket_launcher",
+        "caliber": 150.0,
+        "ammo": 20,
+        "reloadTime": 18.0,
+        "rateOfFire": 120,
+        "bulletType": "rocket_tank",
+        "maxDistance": 7055,
+        "maxSpeed": 340,
+        "explosiveMass": 2.15,
+        "explosiveType": "fp02"
+      },
+      {
+        "trigger": "gunner1",
+        "name": "7_92mm_MG42",
+        "caliber": 7.9,
+        "ammo": 2550,
+        "reloadTime": 8.0,
+        "rateOfFire": 1200,
+        "bulletType": "ap_ball"
+      }
+    ],
+    "main_gun_ammo": null,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 33000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 4800,
+    "crewTraining": 10000,
+    "expertTraining": 165000,
+    "aceTrainingGE": 470,
+    "aceTrainingRP": 710000,
+    "repairCost": {
+      "arcade": [
+        851,
+        851
+      ],
+      "realistic": [
+        1286,
+        1286
+      ],
+      "simulator": [
+        1177,
+        1177
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.83,
+      "realistic": 3.0,
+      "simulator": 3.47
+    },
+    "expMultiplier": 1.48,
+    "freeRepairs": 30
+  }
+}

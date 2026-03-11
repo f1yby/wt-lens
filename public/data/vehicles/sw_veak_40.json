@@ -1,0 +1,102 @@
+{
+  "id": "sw_veak_40",
+  "performance": {
+    "horsepower": 540.0,
+    "weight": 29.0,
+    "power_to_weight": 18.62,
+    "max_reverse_speed": 18.5,
+    "reload_time": 0.5,
+    "penetration": null,
+    "max_speed": 60.0,
+    "crew_count": 5,
+    "elevation_speed": 45.0,
+    "traverse_speed": 85.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "both",
+    "elevation_range": [
+      -5.0,
+      85.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 90.0,
+    "mainGun": null,
+    "ammunitions": null,
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 3750.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 5,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      7.4,
+      18.5,
+      23.9,
+      42.7,
+      60.0
+    ],
+    "reverse_gear_speeds": [
+      13.9,
+      18.5
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 28.4,
+    "track_width": null,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner2",
+        "name": "7_62mm_Ksp_58_Strv",
+        "caliber": 7.6,
+        "ammo": 1000,
+        "reloadTime": 8.0,
+        "rateOfFire": 600,
+        "bulletType": "ap_ball"
+      }
+    ],
+    "main_gun_ammo": 210,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 95000,
+    "purchaseCost": 270000,
+    "crewTraining": 78000,
+    "expertTraining": 270000,
+    "aceTrainingGE": 1100,
+    "aceTrainingRP": 670000,
+    "repairCost": {
+      "arcade": [
+        4845,
+        6228
+      ],
+      "realistic": [
+        4201,
+        5400
+      ],
+      "simulator": [
+        5088,
+        6539
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.29,
+      "realistic": 1.74,
+      "simulator": 2.03
+    },
+    "expMultiplier": 1.9
+  }
+}

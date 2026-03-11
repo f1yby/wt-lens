@@ -1,0 +1,143 @@
+{
+  "id": "ussr_bt_7_m",
+  "performance": {
+    "horsepower": 500.0,
+    "weight": 14.65,
+    "power_to_weight": 34.13,
+    "max_reverse_speed": 10.2,
+    "reload_time": 2.94,
+    "penetration": 73.1,
+    "max_speed": 62.1,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 16.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -5.0,
+      20.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 25.0,
+    "mainGun": {
+      "name": "45mm_20K",
+      "caliber": 45.0,
+      "reloadTime": 2.94,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 3.82,
+        "expert": 3.38,
+        "ace": 2.94
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "45mm_br_243",
+        "localizedName": "BR-240",
+        "type": "aphebc_tank",
+        "caliber": 45.0,
+        "mass": 1.43,
+        "muzzleVelocity": 760.0,
+        "deMarre": {
+          "fullCaliber": 45.0,
+          "isApcbc": false,
+          "explosiveMass": 0.019,
+          "Cx": 0.3984
+        },
+        "penetration0m": 69.9,
+        "explosiveMassKg": 0.019,
+        "explosiveType": "a_ix_2",
+        "tntEquivalent": 0.027
+      },
+      {
+        "name": "45mm_br_243sp",
+        "localizedName": "BR-240SP",
+        "type": "apbc_usa_tank",
+        "caliber": 45.0,
+        "mass": 1.43,
+        "muzzleVelocity": 757.0,
+        "deMarre": {
+          "fullCaliber": 45.0,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "Cx": 0.3984
+        },
+        "penetration0m": 73.1
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 1800.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 3,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      13.4,
+      27.2,
+      62.1
+    ],
+    "reverse_gear_speeds": [
+      10.2
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 14.45,
+    "track_width": 0.25,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_DT",
+        "caliber": 7.6,
+        "ammo": 1890,
+        "reloadTime": 8.0,
+        "rateOfFire": 600,
+        "bulletType": "ap_i_ball"
+      }
+    ],
+    "main_gun_ammo": 188,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 5900,
+    "purchaseCost": 6300,
+    "crewTraining": 1800,
+    "expertTraining": 6300,
+    "aceTrainingGE": 75,
+    "aceTrainingRP": 135000,
+    "repairCost": {
+      "arcade": [
+        249,
+        321
+      ],
+      "realistic": [
+        286,
+        368
+      ],
+      "simulator": [
+        359,
+        462
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.19,
+      "realistic": 0.24,
+      "simulator": 0.26
+    },
+    "expMultiplier": 1.06
+  }
+}

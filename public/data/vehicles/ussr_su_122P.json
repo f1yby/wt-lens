@@ -1,0 +1,169 @@
+{
+  "id": "ussr_su_122P",
+  "performance": {
+    "horsepower": 520.0,
+    "weight": 31.6,
+    "power_to_weight": 16.46,
+    "max_reverse_speed": 7.6,
+    "reload_time": 16.67,
+    "penetration": 230.6,
+    "max_speed": 50.0,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 7.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -2.0,
+      20.0
+    ],
+    "traverse_range": [
+      -7.5,
+      7.5
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 22.0,
+    "mainGun": {
+      "name": "122mm_D25S",
+      "caliber": 122.0,
+      "reloadTime": 16.67,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 21.67,
+        "expert": 19.17,
+        "ace": 16.67
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "122mm_br_471",
+        "localizedName": "BR-471",
+        "type": "aphe_tank",
+        "caliber": 122.0,
+        "mass": 25.0,
+        "muzzleVelocity": 795.0,
+        "deMarre": {
+          "fullCaliber": 122.0,
+          "isApcbc": false,
+          "explosiveMass": 0.16,
+          "Cx": 0.5947
+        },
+        "penetration0m": 205.7,
+        "explosiveMassKg": 0.16,
+        "explosiveType": "a_ix_2",
+        "tntEquivalent": 0.224
+      },
+      {
+        "name": "122mm_of_471",
+        "localizedName": "OF-471",
+        "type": "he_frag_tank",
+        "caliber": 122.0,
+        "mass": 25.0,
+        "muzzleVelocity": 795.0,
+        "explosiveMassKg": 3.6,
+        "explosiveType": "tnt",
+        "tntEquivalent": 3.6
+      },
+      {
+        "name": "122mm_br_471b",
+        "localizedName": "BR-471B",
+        "type": "aphebc_tank",
+        "caliber": 122.0,
+        "mass": 25.0,
+        "muzzleVelocity": 795.0,
+        "deMarre": {
+          "fullCaliber": 122.0,
+          "isApcbc": false,
+          "explosiveMass": 0.16,
+          "Cx": 0.3496
+        },
+        "penetration0m": 205.7,
+        "explosiveMassKg": 0.16,
+        "explosiveType": "a_ix_2",
+        "tntEquivalent": 0.224
+      },
+      {
+        "name": "122mm_br_471d",
+        "localizedName": "BR-471D",
+        "type": "apcbc_tank",
+        "caliber": 122.0,
+        "mass": 25.0,
+        "muzzleVelocity": 800.0,
+        "deMarre": {
+          "fullCaliber": 122.0,
+          "isApcbc": true,
+          "explosiveMass": 0.125,
+          "Cx": 0.35
+        },
+        "penetration0m": 230.6,
+        "explosiveMassKg": 0.125,
+        "explosiveType": "a_ix_2",
+        "tntEquivalent": 0.175
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2000.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 5,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      6.8,
+      14.5,
+      20.4,
+      31.1,
+      50.0
+    ],
+    "reverse_gear_speeds": [
+      7.6
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 31.4,
+    "track_width": 0.5,
+    "secondary_weapons": null,
+    "main_gun_ammo": 28,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 63000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 4880,
+    "crewTraining": 10000,
+    "expertTraining": 320000,
+    "aceTrainingGE": 800,
+    "aceTrainingRP": 1050000,
+    "repairCost": {
+      "arcade": [
+        2213,
+        2213
+      ],
+      "realistic": [
+        2458,
+        2458
+      ],
+      "simulator": [
+        3397,
+        3397
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.48,
+      "realistic": 3.87,
+      "simulator": 5.0
+    },
+    "expMultiplier": 1.72,
+    "freeRepairs": 30
+  }
+}

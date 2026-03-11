@@ -1,0 +1,33 @@
+{
+  "id": "su-11",
+  "economy": {
+    "researchCost": 95000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 7480,
+    "crewTraining": 10000,
+    "expertTraining": 440000,
+    "aceTrainingGE": 1500,
+    "aceTrainingRP": 1340000,
+    "repairCost": {
+      "arcade": [
+        2374,
+        2374
+      ],
+      "realistic": [
+        6293,
+        6293
+      ],
+      "simulator": [
+        8288,
+        8288
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.49,
+      "realistic": 6.88,
+      "simulator": 12.0
+    },
+    "expMultiplier": 1.9,
+    "freeRepairs": 30
+  }
+}

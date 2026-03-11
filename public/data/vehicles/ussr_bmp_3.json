@@ -1,0 +1,170 @@
+{
+  "id": "ussr_bmp_3",
+  "performance": {
+    "horsepower": 500.0,
+    "weight": 18.7,
+    "power_to_weight": 26.74,
+    "max_reverse_speed": 20.4,
+    "reload_time": 4.0,
+    "penetration": 750.0,
+    "max_speed": 70.1,
+    "crew_count": 5,
+    "elevation_speed": 35.0,
+    "traverse_speed": 0.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "both",
+    "elevation_range": [
+      0.0,
+      0.0
+    ],
+    "traverse_range": [
+      0.0,
+      0.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 0.0,
+    "mainGun": {
+      "name": "100mm_2A70",
+      "caliber": 100.0,
+      "reloadTime": 4.0,
+      "autoLoader": true,
+      "reloadTimes": {
+        "base": 4.0,
+        "expert": 4.0,
+        "ace": 4.0
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "100mm_3of_32",
+        "localizedName": "3OF32",
+        "type": "he_frag_tank",
+        "caliber": 100.0,
+        "mass": 15.6,
+        "muzzleVelocity": 250.0,
+        "explosiveMassKg": 1.69,
+        "explosiveType": "a_ix_2",
+        "tntEquivalent": 2.366
+      },
+      {
+        "name": "100mm_3of_70",
+        "localizedName": "3OF70",
+        "type": "he_frag_tank",
+        "caliber": 100.0,
+        "mass": 13.41,
+        "muzzleVelocity": 355.0,
+        "explosiveMassKg": 2.3,
+        "explosiveType": "a_ix_2",
+        "tntEquivalent": 3.22
+      },
+      {
+        "name": "100mm_9m_117",
+        "localizedName": "9M117",
+        "type": "atgm_tank",
+        "caliber": 100.0,
+        "mass": 18.8,
+        "muzzleVelocity": 370.0,
+        "penetration0m": 600.0
+      },
+      {
+        "name": "100mm_9m_117m1",
+        "localizedName": "9M117M1",
+        "type": "atgm_tandem_tank",
+        "caliber": 100.0,
+        "mass": 18.8,
+        "muzzleVelocity": 370.0,
+        "penetration0m": 750.0
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": true,
+    "engine_manufacturer": "transmash",
+    "engine_model": "utd_29",
+    "engine_type": null,
+    "engine_max_rpm": 2600.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 8,
+    "reverse_gears": 4,
+    "forward_gear_speeds": [
+      9.3,
+      14.0,
+      24.0,
+      41.0,
+      51.5,
+      58.0,
+      63.5,
+      70.1
+    ],
+    "reverse_gear_speeds": [
+      9.3,
+      11.9,
+      17.2,
+      20.4
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 18.4,
+    "track_width": 0.38,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "30mm_2A72",
+        "caliber": 30.0,
+        "ammo": 500,
+        "reloadTime": 1.0,
+        "rateOfFire": 330,
+        "bulletType": "ap_t"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "7_62mm_PKT",
+        "caliber": 7.6,
+        "ammo": 2000,
+        "reloadTime": 8.0,
+        "rateOfFire": 700,
+        "bulletType": "ap_i_ball"
+      }
+    ],
+    "main_gun_ammo": 48,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": true,
+    "has_ess": true,
+    "has_laser_rangefinder": true
+  },
+  "economy": {
+    "researchCost": 190000,
+    "purchaseCost": 520000,
+    "crewTraining": 150000,
+    "expertTraining": 520000,
+    "aceTrainingGE": 2100,
+    "aceTrainingRP": 950000,
+    "repairCost": {
+      "arcade": [
+        2844,
+        5376
+      ],
+      "realistic": [
+        2968,
+        5610
+      ],
+      "simulator": [
+        3438,
+        6500
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.29,
+      "realistic": 1.65,
+      "simulator": 2.1
+    },
+    "expMultiplier": 2.2
+  }
+}

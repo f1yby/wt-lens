@@ -1,0 +1,173 @@
+{
+  "id": "sw_pvkv_iv",
+  "performance": {
+    "horsepower": 142.0,
+    "weight": 9.56,
+    "power_to_weight": 14.85,
+    "max_reverse_speed": 5.3,
+    "reload_time": 4.0,
+    "penetration": 101.7,
+    "max_speed": 45.0,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 4.5,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -14.0,
+      19.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 33.0,
+    "mainGun": {
+      "name": "57mm_Pv_Kan_m43",
+      "caliber": 57.0,
+      "reloadTime": 4.0,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 5.2,
+        "expert": 4.6,
+        "ace": 4.0
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "57mm_slpprj_m43",
+        "localizedName": "slpprj m/43",
+        "type": "ap_tank",
+        "caliber": 57.0,
+        "mass": 2.7,
+        "muzzleVelocity": 830.0,
+        "deMarre": {
+          "fullCaliber": 57.0,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "Cx": 0.54
+        },
+        "penetration0m": 101.7
+      },
+      {
+        "name": "57mm_slpgr_m43",
+        "localizedName": "slpgr m/43",
+        "type": "aphebc_tank",
+        "caliber": 57.0,
+        "mass": 2.51,
+        "muzzleVelocity": 850.0,
+        "deMarre": {
+          "fullCaliber": 57.0,
+          "isApcbc": false,
+          "explosiveMass": 0.06,
+          "Cx": 0.28
+        },
+        "penetration0m": 88.0,
+        "explosiveMassKg": 0.06,
+        "explosiveType": "tnt",
+        "tntEquivalent": 0.06
+      },
+      {
+        "name": "57mm_sgr_m43",
+        "localizedName": "sgr m/43",
+        "type": "he_frag_tank",
+        "caliber": 57.0,
+        "mass": 2.82,
+        "muzzleVelocity": 600.0,
+        "explosiveMassKg": 0.5,
+        "explosiveType": "tnt",
+        "tntEquivalent": 0.5
+      },
+      {
+        "name": "57mm_slpprj_m49",
+        "localizedName": "slpprj m/49",
+        "type": "apds_early_tank",
+        "caliber": 36.8,
+        "mass": 1.025,
+        "muzzleVelocity": 1150.0,
+        "deMarre": {
+          "fullCaliber": 57.0,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "isApcr": true,
+          "coreCaliber": 36.8,
+          "coreMass": 0.694,
+          "Cx": 0.2728
+        },
+        "penetration0m": 91.6
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2300.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 4,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      5.6,
+      17.2,
+      34.8,
+      45.0
+    ],
+    "reverse_gear_speeds": [
+      5.3
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 9.3,
+    "track_width": 0.25,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_Ksp_39_Strv",
+        "caliber": 7.6,
+        "ammo": 3500,
+        "reloadTime": 8.0,
+        "rateOfFire": 648,
+        "bulletType": "ap_ball"
+      }
+    ],
+    "main_gun_ammo": 40,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 18000,
+    "purchaseCost": 47000,
+    "crewTraining": 13000,
+    "expertTraining": 47000,
+    "aceTrainingGE": 330,
+    "aceTrainingRP": 280000,
+    "repairCost": {
+      "arcade": [
+        990,
+        1273
+      ],
+      "realistic": [
+        1133,
+        1457
+      ],
+      "simulator": [
+        1421,
+        1826
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.63,
+      "realistic": 0.9,
+      "simulator": 1.06
+    },
+    "expMultiplier": 1.36
+  }
+}

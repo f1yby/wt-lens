@@ -1,0 +1,169 @@
+{
+  "id": "uk_sp_17_pdr_valentine",
+  "performance": {
+    "horsepower": 195.0,
+    "weight": 16.26,
+    "power_to_weight": 11.99,
+    "max_reverse_speed": 4.0,
+    "reload_time": 4.73,
+    "penetration": 190.6,
+    "max_speed": 32.5,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 2.5,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -7.5,
+      15.0
+    ],
+    "traverse_range": [
+      -22.3,
+      22.3
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 22.5,
+    "mainGun": {
+      "name": "76mm_17pdr_QF_open_turret",
+      "caliber": 76.2,
+      "reloadTime": 4.73,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 6.15,
+        "expert": 5.44,
+        "ace": 4.73
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "76mm_shot_mk6_ap",
+        "localizedName": "Shot Mk.6",
+        "type": "ap_tank",
+        "caliber": 76.2,
+        "mass": 7.71,
+        "muzzleVelocity": 883.0,
+        "deMarre": {
+          "fullCaliber": 76.2,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "Cx": 0.4
+        },
+        "penetration0m": 171.6
+      },
+      {
+        "name": "76mm_shell_mk1_he",
+        "localizedName": "Shell Mk.1",
+        "type": "he_frag_tank",
+        "caliber": 76.2,
+        "mass": 6.98,
+        "muzzleVelocity": 883.0,
+        "explosiveMassKg": 0.58,
+        "explosiveType": "tnt",
+        "tntEquivalent": 0.58
+      },
+      {
+        "name": "76mm_shot_mk4_apc",
+        "localizedName": "Shot Mk.4",
+        "type": "apc_solid_medium_caliber_tank",
+        "caliber": 76.2,
+        "mass": 7.71,
+        "muzzleVelocity": 883.0,
+        "deMarre": {
+          "fullCaliber": 76.2,
+          "isApcbc": true,
+          "explosiveMass": 0,
+          "Cx": 0.4
+        },
+        "penetration0m": 190.6
+      },
+      {
+        "name": "76mm_shot_mk8_apcbc",
+        "localizedName": "Shot Mk.8",
+        "type": "apcbc_solid_medium_caliber_tank",
+        "caliber": 76.2,
+        "mass": 7.71,
+        "muzzleVelocity": 883.0,
+        "deMarre": {
+          "fullCaliber": 76.2,
+          "isApcbc": true,
+          "explosiveMass": 0,
+          "Cx": 0.4
+        },
+        "penetration0m": 190.6
+      },
+      {
+        "name": "76mm_shell_ss_mk1",
+        "localizedName": "17pdr Shell SS Mk.1",
+        "type": "smoke_tank",
+        "caliber": 76.0,
+        "mass": 8.44,
+        "muzzleVelocity": 229.0,
+        "explosiveMassKg": 0.05,
+        "explosiveType": "smoke_composition",
+        "tntEquivalent": 0.05
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 1900.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 5,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      4.2,
+      7.5,
+      14.2,
+      25.4,
+      32.5
+    ],
+    "reverse_gear_speeds": [
+      4.0
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 16.03,
+    "track_width": 0.356,
+    "secondary_weapons": null,
+    "main_gun_ammo": 39,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 7900,
+    "purchaseCost": 10000,
+    "crewTraining": 3000,
+    "expertTraining": 10000,
+    "aceTrainingGE": 115,
+    "aceTrainingRP": 160000,
+    "repairCost": {
+      "arcade": [
+        430,
+        532
+      ],
+      "realistic": [
+        494,
+        611
+      ],
+      "simulator": [
+        592,
+        733
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.3,
+      "realistic": 0.47,
+      "simulator": 0.58
+    },
+    "expMultiplier": 1.12
+  }
+}

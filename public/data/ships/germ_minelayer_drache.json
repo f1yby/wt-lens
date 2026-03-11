@@ -1,0 +1,27 @@
+{
+  "id": "germ_minelayer_drache",
+  "economy": {
+    "researchCost": 120000,
+    "purchaseCost": 360000,
+    "crewTraining": 105000,
+    "expertTraining": 360000,
+    "aceTrainingGE": 1200,
+    "aceTrainingRP": 570000,
+    "repairCost": {
+      "arcade": [
+        4438,
+        5757
+      ],
+      "realistic": [
+        6749,
+        8754
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.17,
+      "realistic": 1.97,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.78
+  }
+}

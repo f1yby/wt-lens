@@ -1,0 +1,110 @@
+{
+  "id": "it_btr_80a_hungary",
+  "performance": {
+    "horsepower": 260.0,
+    "weight": 14.55,
+    "power_to_weight": 17.87,
+    "max_reverse_speed": 11.8,
+    "reload_time": 1.0,
+    "penetration": null,
+    "max_speed": 87.0,
+    "crew_count": 5,
+    "elevation_speed": 14.0,
+    "traverse_speed": 30.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -5.0,
+      70.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 75.0,
+    "mainGun": null,
+    "ammunitions": null,
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2600.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 10,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      6.1,
+      11.1,
+      11.8,
+      19.0,
+      21.6,
+      31.1,
+      34.8,
+      47.6,
+      56.9,
+      87.0
+    ],
+    "reverse_gear_speeds": [
+      6.4,
+      11.8
+    ],
+    "steer_type": null,
+    "empty_weight": 14.15,
+    "track_width": 0.4,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner2",
+        "name": "7_62mm_PKT",
+        "caliber": 7.6,
+        "ammo": 2000,
+        "reloadTime": 8.0,
+        "rateOfFire": 700,
+        "bulletType": "ap_i_ball"
+      }
+    ],
+    "main_gun_ammo": 300,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 95000,
+    "purchaseCost": 270000,
+    "crewTraining": 78000,
+    "expertTraining": 270000,
+    "aceTrainingGE": 1100,
+    "aceTrainingRP": 670000,
+    "repairCost": {
+      "arcade": [
+        3031,
+        4400
+      ],
+      "realistic": [
+        3620,
+        5254
+      ],
+      "simulator": [
+        4930,
+        7156
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.09,
+      "realistic": 1.58,
+      "simulator": 2.01
+    },
+    "expMultiplier": 1.9
+  }
+}

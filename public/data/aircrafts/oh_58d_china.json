@@ -1,0 +1,31 @@
+{
+  "id": "oh_58d_china",
+  "economy": {
+    "researchCost": 380000,
+    "purchaseCost": 1000000,
+    "crewTraining": 290000,
+    "expertTraining": 1000000,
+    "aceTrainingGE": 2400,
+    "aceTrainingRP": 950000,
+    "repairCost": {
+      "arcade": [
+        9168,
+        13444
+      ],
+      "realistic": [
+        4188,
+        6141
+      ],
+      "simulator": [
+        5445,
+        7984
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.0,
+      "realistic": 2.46,
+      "simulator": 3.46
+    },
+    "expMultiplier": 2.2
+  }
+}

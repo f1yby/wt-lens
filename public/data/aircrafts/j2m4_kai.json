@@ -1,0 +1,33 @@
+{
+  "id": "j2m4_kai",
+  "economy": {
+    "researchCost": 54000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 3850,
+    "crewTraining": 10000,
+    "expertTraining": 290000,
+    "aceTrainingGE": 940,
+    "aceTrainingRP": 960000,
+    "repairCost": {
+      "arcade": [
+        1704,
+        1704
+      ],
+      "realistic": [
+        5873,
+        5873
+      ],
+      "simulator": [
+        4882,
+        4882
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.77,
+      "realistic": 4.9,
+      "simulator": 9.08
+    },
+    "expMultiplier": 1.66,
+    "freeRepairs": 30
+  }
+}

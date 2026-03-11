@@ -1,0 +1,33 @@
+{
+  "id": "douglas_ad_4na_france",
+  "economy": {
+    "researchCost": 71000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 6090,
+    "crewTraining": 10000,
+    "expertTraining": 340000,
+    "aceTrainingGE": 1200,
+    "aceTrainingRP": 1140000,
+    "repairCost": {
+      "arcade": [
+        1929,
+        1929
+      ],
+      "realistic": [
+        2996,
+        2996
+      ],
+      "simulator": [
+        5350,
+        5350
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.24,
+      "realistic": 3.84,
+      "simulator": 12.0
+    },
+    "expMultiplier": 1.78,
+    "freeRepairs": 30
+  }
+}

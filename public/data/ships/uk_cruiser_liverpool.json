@@ -1,0 +1,27 @@
+{
+  "id": "uk_cruiser_liverpool",
+  "economy": {
+    "researchCost": 390000,
+    "purchaseCost": 230000,
+    "crewTraining": 67000,
+    "expertTraining": 230000,
+    "aceTrainingGE": 1200,
+    "aceTrainingRP": 570000,
+    "repairCost": {
+      "arcade": [
+        11832,
+        15406
+      ],
+      "realistic": [
+        11730,
+        15274
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 4.5,
+      "realistic": 6.0,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.78
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "id": "p-40e_td",
+  "economy": {
+    "researchCost": 7900,
+    "purchaseCost": 10000,
+    "crewTraining": 3000,
+    "expertTraining": 10000,
+    "aceTrainingGE": 125,
+    "aceTrainingRP": 160000,
+    "repairCost": {
+      "arcade": [
+        357,
+        461
+      ],
+      "realistic": [
+        730,
+        917
+      ],
+      "simulator": [
+        960,
+        1206
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.24,
+      "realistic": 0.58,
+      "simulator": 1.18
+    },
+    "expMultiplier": 1.12
+  }
+}

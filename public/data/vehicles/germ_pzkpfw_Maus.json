@@ -1,0 +1,195 @@
+{
+  "id": "germ_pzkpfw_Maus",
+  "performance": {
+    "horsepower": 1200.0,
+    "weight": 188.0,
+    "power_to_weight": 6.38,
+    "max_reverse_speed": 20.7,
+    "reload_time": 18.18,
+    "penetration": 312.4,
+    "max_speed": 20.7,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 8.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -7.0,
+      23.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 30.0,
+    "mainGun": {
+      "name": "128mm_KwK44",
+      "caliber": 128.0,
+      "reloadTime": 18.18,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 23.63,
+        "expert": 20.91,
+        "ace": 18.18
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "128mm_pzrg_39_43",
+        "localizedName": "PzGr",
+        "type": "apc_tank",
+        "caliber": 128.0,
+        "mass": 26.35,
+        "muzzleVelocity": 930.0,
+        "deMarre": {
+          "fullCaliber": 128.0,
+          "isApcbc": true,
+          "explosiveMass": 0.55,
+          "Cx": 0.3
+        },
+        "penetration0m": 252.6,
+        "explosiveMassKg": 0.55,
+        "explosiveType": "ph_salz_h10",
+        "tntEquivalent": 0.671
+      },
+      {
+        "name": "128mm_sprgr",
+        "localizedName": "Sprgr. L/5",
+        "type": "he_frag_tank",
+        "caliber": 128.0,
+        "mass": 28.0,
+        "muzzleVelocity": 750.0,
+        "explosiveMassKg": 3.7,
+        "explosiveType": "fp02",
+        "tntEquivalent": 3.7
+      },
+      {
+        "name": "128mm_pzrg_40_43",
+        "localizedName": "PzGr 43",
+        "type": "apcbc_tank",
+        "caliber": 128.0,
+        "mass": 28.3,
+        "muzzleVelocity": 940.0,
+        "deMarre": {
+          "fullCaliber": 128.0,
+          "isApcbc": true,
+          "explosiveMass": 0.55,
+          "Cx": 0.3
+        },
+        "penetration0m": 272.4,
+        "explosiveMassKg": 0.55,
+        "explosiveType": "ph_salz_h10",
+        "tntEquivalent": 0.671
+      },
+      {
+        "name": "128mm_pzgr_ts",
+        "localizedName": "12,8/8,8 Pzgr.TS",
+        "type": "apcbc_tank",
+        "caliber": 88.0,
+        "mass": 9.85,
+        "muzzleVelocity": 1230.0,
+        "deMarre": {
+          "fullCaliber": 88.0,
+          "isApcbc": true,
+          "explosiveMass": 0.064,
+          "Cx": 0.3
+        },
+        "penetration0m": 312.4,
+        "explosiveMassKg": 0.064,
+        "explosiveType": "h10",
+        "tntEquivalent": 0.09
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 3000.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 8,
+    "reverse_gears": 8,
+    "forward_gear_speeds": [
+      2.3,
+      2.6,
+      3.4,
+      4.1,
+      5.2,
+      6.9,
+      10.3,
+      20.7
+    ],
+    "reverse_gear_speeds": [
+      2.3,
+      2.6,
+      3.4,
+      4.1,
+      5.2,
+      6.9,
+      10.3,
+      20.7
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 186.5,
+    "track_width": 1.1,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_92mm_MG34",
+        "caliber": 7.9,
+        "ammo": 1050,
+        "reloadTime": 8.0,
+        "rateOfFire": 900,
+        "bulletType": "ap_ball"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "75mm_KwK44_L36",
+        "caliber": 75.0,
+        "ammo": 100,
+        "rateOfFire": 15,
+        "bulletType": "heat_tank"
+      }
+    ],
+    "main_gun_ammo": 68,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 120000,
+    "purchaseCost": 340000,
+    "crewTraining": 98000,
+    "expertTraining": 340000,
+    "aceTrainingGE": 1300,
+    "aceTrainingRP": 780000,
+    "repairCost": {
+      "arcade": [
+        5619,
+        7298
+      ],
+      "realistic": [
+        5906,
+        7670
+      ],
+      "simulator": [
+        9398,
+        12205
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.44,
+      "realistic": 2.09,
+      "simulator": 2.46
+    },
+    "expMultiplier": 2.02
+  }
+}

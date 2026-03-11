@@ -1,0 +1,31 @@
+{
+  "id": "mosquito_fb_mk6_norway",
+  "economy": {
+    "researchCost": 26000,
+    "purchaseCost": 76000,
+    "crewTraining": 22000,
+    "expertTraining": 76000,
+    "aceTrainingGE": 500,
+    "aceTrainingRP": 320000,
+    "repairCost": {
+      "arcade": [
+        854,
+        1198
+      ],
+      "realistic": [
+        1354,
+        1840
+      ],
+      "simulator": [
+        2967,
+        4031
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.62,
+      "realistic": 1.21,
+      "simulator": 2.43
+    },
+    "expMultiplier": 1.42
+  }
+}

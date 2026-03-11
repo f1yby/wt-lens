@@ -1,0 +1,33 @@
+{
+  "id": "intruder_mk_1",
+  "economy": {
+    "researchCost": 7900,
+    "purchaseCost": 0,
+    "purchaseCostGold": 700,
+    "crewTraining": 2300,
+    "expertTraining": 15000,
+    "aceTrainingGE": 125,
+    "aceTrainingRP": 320000,
+    "repairCost": {
+      "arcade": [
+        306,
+        306
+      ],
+      "realistic": [
+        459,
+        459
+      ],
+      "simulator": [
+        772,
+        772
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.8,
+      "realistic": 1.58,
+      "simulator": 2.99
+    },
+    "expMultiplier": 1.12,
+    "freeRepairs": 30
+  }
+}

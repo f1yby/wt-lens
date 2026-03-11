@@ -1,0 +1,130 @@
+{
+  "id": "ussr_zut_37",
+  "performance": {
+    "horsepower": 170.0,
+    "weight": 7.9,
+    "power_to_weight": 21.52,
+    "max_reverse_speed": 5.5,
+    "reload_time": 5.0,
+    "penetration": 71.4,
+    "max_speed": 42.1,
+    "crew_count": 5,
+    "elevation_speed": 7.5,
+    "traverse_speed": 7.5,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -3.0,
+      77.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 80.0,
+    "mainGun": {
+      "name": "37mm_Sh_37",
+      "caliber": 37.0,
+      "reloadTime": 5.0,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 6.5,
+        "expert": 5.75,
+        "ace": 5.0
+      },
+      "rateOfFire": 260,
+      "beltReloadTime": 5.0
+    },
+    "ammunitions": [
+      {
+        "name": "37mm_OFZ",
+        "localizedName": "OFZ",
+        "type": "he_frag_i_t",
+        "caliber": 37.0,
+        "mass": 0.735,
+        "muzzleVelocity": 900.0,
+        "explosiveMassKg": 0.034,
+        "explosiveType": "tnt",
+        "tntEquivalent": 0.034
+      },
+      {
+        "name": "37mm_BT",
+        "localizedName": "BT",
+        "type": "ap_t",
+        "caliber": 37.0,
+        "mass": 0.76,
+        "muzzleVelocity": 880.0,
+        "deMarre": {
+          "fullCaliber": 37.0,
+          "isApcbc": false,
+          "explosiveMass": 0
+        },
+        "penetration0m": 71.4
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 3400.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 4,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      6.4,
+      11.2,
+      22.9,
+      42.1
+    ],
+    "reverse_gear_speeds": [
+      5.5
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 7.7,
+    "track_width": 0.26,
+    "secondary_weapons": null,
+    "main_gun_ammo": 200,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 11000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 1000,
+    "crewTraining": 4800,
+    "expertTraining": 32000,
+    "aceTrainingGE": 210,
+    "aceTrainingRP": 440000,
+    "repairCost": {
+      "arcade": [
+        531,
+        531
+      ],
+      "realistic": [
+        837,
+        837
+      ],
+      "simulator": [
+        1988,
+        1988
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.14,
+      "realistic": 1.49,
+      "simulator": 2.24
+    },
+    "expMultiplier": 1.24,
+    "freeRepairs": 30
+  }
+}

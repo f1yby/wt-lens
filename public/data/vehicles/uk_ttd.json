@@ -1,0 +1,176 @@
+{
+  "id": "uk_ttd",
+  "performance": {
+    "horsepower": 1250.0,
+    "weight": 58.3,
+    "power_to_weight": 21.44,
+    "max_reverse_speed": 31.4,
+    "reload_time": 6.67,
+    "penetration": 430.2,
+    "max_speed": 71.2,
+    "crew_count": 5,
+    "elevation_speed": 34.0,
+    "traverse_speed": 36.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "both",
+    "elevation_range": [
+      -10.0,
+      20.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": [
+      500,
+      300
+    ],
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": 583.1,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 30.0,
+    "mainGun": {
+      "name": "105mm_GT3_TTD",
+      "caliber": 105.0,
+      "reloadTime": 6.67,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 8.67,
+        "expert": 7.67,
+        "ace": 6.67
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "105mm_imi_m152",
+        "localizedName": "M152",
+        "type": "heat_fs_tank",
+        "caliber": 105.0,
+        "mass": 10.5,
+        "muzzleVelocity": 1173.5,
+        "penetration0m": 400.0,
+        "explosiveMassKg": 0.97,
+        "explosiveType": "comp_b",
+        "tntEquivalent": 1.232
+      },
+      {
+        "name": "105mm_m111",
+        "localizedName": "M111",
+        "type": "apds_fs_tungsten_l10_l15_tank",
+        "caliber": 33.0,
+        "mass": 4.2,
+        "muzzleVelocity": 1455.0,
+        "lanzOdermatt": {
+          "workingLength": 327.0,
+          "density": 17500.0,
+          "material": "tungsten",
+          "Cx": 0.2676
+        },
+        "penetration0m": 337.9,
+        "penetrationData": {
+          "at0m": {
+            "angle0": 337.9,
+            "angle30": 292.6,
+            "angle60": 169.0
+          }
+        }
+      },
+      {
+        "name": "105mm_dm63",
+        "localizedName": "DM63",
+        "type": "apds_fs_long_l30_tank",
+        "caliber": 24.0,
+        "mass": 4.4,
+        "muzzleVelocity": 1455.0,
+        "lanzOdermatt": {
+          "workingLength": 535.0,
+          "density": 17500.0,
+          "material": "tungsten",
+          "Cx": 0.5301
+        },
+        "penetration0m": 430.2,
+        "penetrationData": {
+          "at0m": {
+            "angle0": 430.2,
+            "angle30": 372.6,
+            "angle60": 215.1
+          }
+        }
+      }
+    ],
+    "penetrationData": {
+      "at0m": {
+        "angle0": 430.2,
+        "angle30": 372.6,
+        "angle60": 215.1
+      }
+    },
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2100.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 8,
+    "reverse_gears": 4,
+    "forward_gear_speeds": [
+      6.4,
+      9.2,
+      13.2,
+      18.2,
+      21.5,
+      32.6,
+      46.6,
+      71.2
+    ],
+    "reverse_gear_speeds": [
+      6.4,
+      9.2,
+      13.2,
+      31.4
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 57.0,
+    "track_width": 0.68,
+    "secondary_weapons": null,
+    "main_gun_ammo": 54,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": true,
+    "has_ess": true,
+    "has_laser_rangefinder": true
+  },
+  "economy": {
+    "researchCost": 260000,
+    "purchaseCost": 710000,
+    "crewTraining": 200000,
+    "expertTraining": 710000,
+    "aceTrainingGE": 2100,
+    "aceTrainingRP": 1080000,
+    "repairCost": {
+      "arcade": [
+        4193,
+        6613
+      ],
+      "realistic": [
+        4063,
+        6409
+      ],
+      "simulator": [
+        4748,
+        7490
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.52,
+      "realistic": 1.95,
+      "simulator": 2.45
+    },
+    "expMultiplier": 2.32
+  }
+}

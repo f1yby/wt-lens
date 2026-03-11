@@ -1,0 +1,194 @@
+{
+  "id": "jp_type_5_na_to",
+  "performance": {
+    "horsepower": 165.0,
+    "weight": 13.7,
+    "power_to_weight": 12.04,
+    "max_reverse_speed": 8.2,
+    "reload_time": 5.88,
+    "penetration": 177.0,
+    "max_speed": 40.0,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 6.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -10.0,
+      20.0
+    ],
+    "traverse_range": [
+      -20.0,
+      20.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 30.0,
+    "mainGun": {
+      "name": "75mm_Lightweight_Type1_model_II",
+      "caliber": 75.0,
+      "reloadTime": 5.88,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 7.64,
+        "expert": 6.76,
+        "ace": 5.88
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "75mm_type1_ap",
+        "localizedName": "Type 1 APHE",
+        "type": "aphe_tank",
+        "caliber": 75.0,
+        "mass": 6.605,
+        "muzzleVelocity": 850.0,
+        "deMarre": {
+          "fullCaliber": 75.0,
+          "isApcbc": false,
+          "explosiveMass": 0.065,
+          "Cx": 0.4
+        },
+        "penetration0m": 144.4,
+        "explosiveMassKg": 0.065,
+        "explosiveType": "rdx",
+        "tntEquivalent": 0.091
+      },
+      {
+        "name": "75mm_type_4_apcr",
+        "localizedName": "Type 4 APCR",
+        "type": "apcr_tank",
+        "caliber": 75.0,
+        "mass": 4.15,
+        "muzzleVelocity": 930.0,
+        "armorPowerTable": [
+          {
+            "penetration": 177.0,
+            "distance": 10.0
+          },
+          {
+            "penetration": 175.0,
+            "distance": 100.0
+          },
+          {
+            "penetration": 164.0,
+            "distance": 250.0
+          },
+          {
+            "penetration": 151.0,
+            "distance": 500.0
+          },
+          {
+            "penetration": 139.0,
+            "distance": 750.0
+          },
+          {
+            "penetration": 127.0,
+            "distance": 1000.0
+          },
+          {
+            "penetration": 117.0,
+            "distance": 1250.0
+          },
+          {
+            "penetration": 108.0,
+            "distance": 1500.0
+          },
+          {
+            "penetration": 91.0,
+            "distance": 2000.0
+          },
+          {
+            "penetration": 77.0,
+            "distance": 2500.0
+          },
+          {
+            "penetration": 65.0,
+            "distance": 3000.0
+          },
+          {
+            "penetration": 0.0,
+            "distance": 7000.0
+          }
+        ],
+        "penetration0m": 177.0
+      },
+      {
+        "name": "75mm_type90",
+        "localizedName": "Type 90 HE",
+        "type": "he_frag_tank",
+        "caliber": 75.0,
+        "mass": 6.17,
+        "muzzleVelocity": 830.0,
+        "explosiveMassKg": 0.49,
+        "explosiveType": "tnt",
+        "tntEquivalent": 0.49
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2000.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 8,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      3.5,
+      4.2,
+      5.2,
+      7.3,
+      12.6,
+      17.6,
+      29.3,
+      40.0
+    ],
+    "reverse_gear_speeds": [
+      5.3,
+      8.2
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 13.2,
+    "track_width": 0.4,
+    "secondary_weapons": null,
+    "main_gun_ammo": 40,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 18000,
+    "purchaseCost": 47000,
+    "crewTraining": 13000,
+    "expertTraining": 47000,
+    "aceTrainingGE": 330,
+    "aceTrainingRP": 280000,
+    "repairCost": {
+      "arcade": [
+        1042,
+        1290
+      ],
+      "realistic": [
+        1212,
+        1500
+      ],
+      "simulator": [
+        1470,
+        1819
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.71,
+      "realistic": 1.07,
+      "simulator": 1.35
+    },
+    "expMultiplier": 1.36
+  }
+}

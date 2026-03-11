@@ -1,0 +1,199 @@
+{
+  "id": "jp_type_10",
+  "performance": {
+    "horsepower": 1200.0,
+    "weight": 44.4,
+    "power_to_weight": 27.03,
+    "max_reverse_speed": 70.1,
+    "reload_time": 4.0,
+    "penetration": 615.5,
+    "max_speed": 70.1,
+    "crew_count": 5,
+    "elevation_speed": 10.0,
+    "traverse_speed": 30.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "both",
+    "elevation_range": [
+      -7.0,
+      10.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": [
+      1200,
+      800
+    ],
+    "commander_thermal_resolution": [
+      1200,
+      800
+    ],
+    "gunner_thermal_diagonal": 1442.2,
+    "commander_thermal_diagonal": 1442.2,
+    "stabilizer_value": 1,
+    "elevation_range_value": 17.0,
+    "mainGun": {
+      "name": "120mm_TKG",
+      "caliber": 120.0,
+      "reloadTime": 4.0,
+      "autoLoader": true,
+      "reloadTimes": {
+        "base": 4.0,
+        "expert": 4.0,
+        "ace": 4.0
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "120mm_jm12a1",
+        "localizedName": "JM12A1",
+        "type": "heat_fs_tank",
+        "caliber": 120.0,
+        "mass": 13.5,
+        "muzzleVelocity": 1140.0,
+        "penetration0m": 480.0,
+        "explosiveMassKg": 1.64,
+        "explosiveType": "comp_b",
+        "tntEquivalent": 2.083
+      },
+      {
+        "name": "120mm_jm33",
+        "localizedName": "JM33",
+        "type": "apds_fs_long_tank",
+        "caliber": 25.0,
+        "mass": 4.3,
+        "muzzleVelocity": 1640.0,
+        "lanzOdermatt": {
+          "workingLength": 510.0,
+          "density": 17500.0,
+          "material": "tungsten",
+          "Cx": 0.55
+        },
+        "penetration0m": 481.5,
+        "penetrationData": {
+          "at0m": {
+            "angle0": 481.5,
+            "angle30": 417.0,
+            "angle60": 240.8
+          }
+        }
+      },
+      {
+        "name": "120mm_type_10",
+        "localizedName": "Type 10",
+        "type": "apds_fs_long_l30_tank",
+        "caliber": 24.0,
+        "mass": 4.2,
+        "muzzleVelocity": 1780.0,
+        "lanzOdermatt": {
+          "workingLength": 627.0,
+          "density": 17500.0,
+          "material": "tungsten",
+          "Cx": 0.58
+        },
+        "penetration0m": 615.5,
+        "penetrationData": {
+          "at0m": {
+            "angle0": 615.5,
+            "angle30": 533.0,
+            "angle60": 307.8
+          }
+        }
+      }
+    ],
+    "penetrationData": {
+      "at0m": {
+        "angle0": 615.5,
+        "angle30": 533.0,
+        "angle60": 307.8
+      }
+    },
+    "autoLoader": true,
+    "engine_manufacturer": null,
+    "engine_model": "8va_34twk",
+    "engine_type": null,
+    "engine_max_rpm": 2300.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 8,
+    "reverse_gears": 8,
+    "forward_gear_speeds": [
+      4.4,
+      8.6,
+      15.1,
+      29.1,
+      35.1,
+      41.1,
+      50.0,
+      70.1
+    ],
+    "reverse_gear_speeds": [
+      4.4,
+      8.6,
+      15.1,
+      29.1,
+      35.1,
+      41.1,
+      50.0,
+      70.1
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 43.0,
+    "track_width": 0.55,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_Type74",
+        "caliber": 7.6,
+        "ammo": 3000,
+        "reloadTime": 8.0,
+        "rateOfFire": 700,
+        "bulletType": "ap_ball"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "12_7mm_M2_HB",
+        "caliber": 12.7,
+        "ammo": 1000,
+        "reloadTime": 8.0,
+        "rateOfFire": 575,
+        "bulletType": "ap_i_t_ball_M20"
+      }
+    ],
+    "main_gun_ammo": 35,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": true
+  },
+  "economy": {
+    "researchCost": 400000,
+    "purchaseCost": 1080000,
+    "crewTraining": 310000,
+    "expertTraining": 1080000,
+    "aceTrainingGE": 2200,
+    "aceTrainingRP": 1280000,
+    "repairCost": {
+      "arcade": [
+        4665,
+        6943
+      ],
+      "realistic": [
+        4530,
+        6742
+      ],
+      "simulator": [
+        5737,
+        8538
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.55,
+      "realistic": 1.94,
+      "simulator": 2.06
+    },
+    "expMultiplier": 2.5
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "id": "ussr_bmp_2",
+  "performance": {
+    "horsepower": 300.0,
+    "weight": 14.0,
+    "power_to_weight": 21.43,
+    "max_reverse_speed": 10.7,
+    "reload_time": 1.0,
+    "penetration": null,
+    "max_speed": 65.2,
+    "crew_count": 5,
+    "elevation_speed": 35.0,
+    "traverse_speed": 30.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "both",
+    "elevation_range": [
+      -4.0,
+      74.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 78.0,
+    "mainGun": null,
+    "ammunitions": null,
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2600.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 10,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      7.4,
+      10.7,
+      13.7,
+      19.7,
+      20.3,
+      29.3,
+      30.3,
+      43.6,
+      45.3,
+      65.2
+    ],
+    "reverse_gear_speeds": [
+      7.4,
+      10.7
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 13.7,
+    "track_width": 0.35,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_PKT",
+        "caliber": 7.6,
+        "ammo": 2000,
+        "reloadTime": 8.0,
+        "rateOfFire": 700,
+        "bulletType": "ap_i_ball"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "125mm_9m113_launcher",
+        "caliber": 125.0,
+        "ammo": 4,
+        "reloadTime": 10.0,
+        "rateOfFire": 9,
+        "bulletType": "atgm_tank",
+        "maxDistance": 4000,
+        "maxSpeed": 248,
+        "guidanceType": "saclos",
+        "penetration": 500,
+        "explosiveMass": 2.75,
+        "explosiveType": "ocfol"
+      }
+    ],
+    "main_gun_ammo": 500,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": true,
+    "has_ess": true,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 135000,
+    "purchaseCost": 380000,
+    "crewTraining": 110000,
+    "expertTraining": 380000,
+    "aceTrainingGE": 1400,
+    "aceTrainingRP": 830000,
+    "repairCost": {
+      "arcade": [
+        3063,
+        5123
+      ],
+      "realistic": [
+        3299,
+        5517
+      ],
+      "simulator": [
+        3939,
+        6587
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.21,
+      "realistic": 1.59,
+      "simulator": 1.97
+    },
+    "expMultiplier": 2.08
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "id": "harrier_gr7",
+  "economy": {
+    "researchCost": 290000,
+    "purchaseCost": 780000,
+    "crewTraining": 220000,
+    "expertTraining": 780000,
+    "aceTrainingGE": 3400,
+    "aceTrainingRP": 1280000,
+    "repairCost": {
+      "arcade": [
+        3043,
+        4429
+      ],
+      "realistic": [
+        7951,
+        11574
+      ],
+      "simulator": [
+        10501,
+        15285
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.95,
+      "realistic": 3.13,
+      "simulator": 6.0
+    },
+    "expMultiplier": 2.5
+  }
+}

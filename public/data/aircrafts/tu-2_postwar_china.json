@@ -1,0 +1,31 @@
+{
+  "id": "tu-2_postwar_china",
+  "economy": {
+    "researchCost": 54000,
+    "purchaseCost": 185000,
+    "crewTraining": 52000,
+    "expertTraining": 185000,
+    "aceTrainingGE": 940,
+    "aceTrainingRP": 480000,
+    "repairCost": {
+      "arcade": [
+        2530,
+        3320
+      ],
+      "realistic": [
+        7246,
+        9231
+      ],
+      "simulator": [
+        14186,
+        18071
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.98,
+      "realistic": 1.97,
+      "simulator": 5.09
+    },
+    "expMultiplier": 1.66
+  }
+}

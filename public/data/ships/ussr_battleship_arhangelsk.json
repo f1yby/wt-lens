@@ -1,0 +1,27 @@
+{
+  "id": "ussr_battleship_arhangelsk",
+  "economy": {
+    "researchCost": 350000,
+    "purchaseCost": 1050000,
+    "crewTraining": 300000,
+    "expertTraining": 1050000,
+    "aceTrainingGE": 2600,
+    "aceTrainingRP": 1010000,
+    "repairCost": {
+      "arcade": [
+        27493,
+        34496
+      ],
+      "realistic": [
+        33334,
+        41824
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 4.5,
+      "realistic": 6.0,
+      "simulator": 1.0
+    },
+    "expMultiplier": 2.26
+  }
+}

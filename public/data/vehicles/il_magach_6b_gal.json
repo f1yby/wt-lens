@@ -1,0 +1,232 @@
+{
+  "id": "il_magach_6b_gal",
+  "performance": {
+    "horsepower": 750.0,
+    "weight": 53.2,
+    "power_to_weight": 14.1,
+    "max_reverse_speed": 11.3,
+    "reload_time": 6.67,
+    "penetration": 430.2,
+    "max_speed": 47.7,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 22.5,
+    "has_stabilizer": true,
+    "stabilizer_type": "both",
+    "elevation_range": [
+      -10.0,
+      20.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": [
+      500,
+      300
+    ],
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": 583.1,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 30.0,
+    "mainGun": {
+      "name": "105mm_L7_Shot",
+      "caliber": 105.0,
+      "reloadTime": 6.67,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 8.67,
+        "expert": 7.67,
+        "ace": 6.67
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "105mm_imi_m152",
+        "localizedName": "M152",
+        "type": "heat_fs_tank",
+        "caliber": 105.0,
+        "mass": 10.5,
+        "muzzleVelocity": 1173.5,
+        "penetration0m": 400.0,
+        "explosiveMassKg": 0.97,
+        "explosiveType": "comp_b",
+        "tntEquivalent": 1.232
+      },
+      {
+        "name": "105mm_imi_m156",
+        "localizedName": "M156",
+        "type": "hesh_tank",
+        "caliber": 105.0,
+        "mass": 11.4,
+        "muzzleVelocity": 731.0,
+        "penetration0m": 127.0,
+        "explosiveMassKg": 2.2,
+        "explosiveType": "comp_a",
+        "tntEquivalent": 2.772
+      },
+      {
+        "name": "105mm_m111",
+        "localizedName": "M111",
+        "type": "apds_fs_tungsten_l10_l15_tank",
+        "caliber": 33.0,
+        "mass": 4.2,
+        "muzzleVelocity": 1455.0,
+        "lanzOdermatt": {
+          "workingLength": 327.0,
+          "density": 17500.0,
+          "material": "tungsten",
+          "Cx": 0.2676
+        },
+        "penetration0m": 337.9,
+        "penetrationData": {
+          "at0m": {
+            "angle0": 337.9,
+            "angle30": 292.6,
+            "angle60": 169.0
+          }
+        }
+      },
+      {
+        "name": "105mm_m416",
+        "localizedName": "M416",
+        "type": "smoke_tank",
+        "caliber": 105.0,
+        "mass": 11.6,
+        "muzzleVelocity": 731.5,
+        "explosiveMassKg": 0.05,
+        "explosiveType": "smoke_composition",
+        "tntEquivalent": 0.05
+      },
+      {
+        "name": "105mm_imi_m426",
+        "localizedName": "M426",
+        "type": "apds_fs_long_l30_tank",
+        "caliber": 24.0,
+        "mass": 4.4,
+        "muzzleVelocity": 1455.0,
+        "lanzOdermatt": {
+          "workingLength": 535.0,
+          "density": 17500.0,
+          "material": "tungsten",
+          "Cx": 0.5301
+        },
+        "penetration0m": 430.2,
+        "penetrationData": {
+          "at0m": {
+            "angle0": 430.2,
+            "angle30": 372.6,
+            "angle60": 215.1
+          }
+        }
+      }
+    ],
+    "penetrationData": {
+      "at0m": {
+        "angle0": 430.2,
+        "angle30": 372.6,
+        "angle60": 215.1
+      }
+    },
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2400.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 6,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      8.6,
+      11.4,
+      17.2,
+      25.0,
+      33.9,
+      47.7
+    ],
+    "reverse_gear_speeds": [
+      6.1,
+      11.3
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 52.45,
+    "track_width": 0.55,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_FN_MAG60_40",
+        "caliber": 7.6,
+        "ammo": 6000,
+        "reloadTime": 8.0,
+        "rateOfFire": 1000,
+        "bulletType": "ap_ball"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "12_7mm_M2_HB",
+        "caliber": 12.7,
+        "ammo": 1000,
+        "reloadTime": 8.0,
+        "rateOfFire": 575,
+        "bulletType": "ap_i_t_ball_M20"
+      },
+      {
+        "trigger": "gunner3",
+        "name": "7_62mm_FN_MAG60_40",
+        "caliber": 7.6,
+        "ammo": 1800,
+        "reloadTime": 8.0,
+        "rateOfFire": 1000,
+        "bulletType": "ap_ball"
+      },
+      {
+        "trigger": "gunner3",
+        "name": "7_62mm_FN_MAG60_40",
+        "caliber": 7.6,
+        "ammo": 1800,
+        "reloadTime": 8.0,
+        "rateOfFire": 1000,
+        "bulletType": "ap_ball"
+      }
+    ],
+    "main_gun_ammo": 63,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": true
+  },
+  "economy": {
+    "researchCost": 440000,
+    "purchaseCost": 560000,
+    "crewTraining": 150000,
+    "expertTraining": 520000,
+    "aceTrainingGE": 2100,
+    "aceTrainingRP": 950000,
+    "repairCost": {
+      "arcade": [
+        4101,
+        6103
+      ],
+      "realistic": [
+        4189,
+        6234
+      ],
+      "simulator": [
+        5353,
+        7965
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.48,
+      "realistic": 1.97,
+      "simulator": 2.32
+    },
+    "expMultiplier": 2.2
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "id": "re_2005_vdm",
+  "economy": {
+    "researchCost": 54000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 3850,
+    "crewTraining": 10000,
+    "expertTraining": 290000,
+    "aceTrainingGE": 940,
+    "aceTrainingRP": 960000,
+    "repairCost": {
+      "arcade": [
+        1688,
+        1688
+      ],
+      "realistic": [
+        3943,
+        3943
+      ],
+      "simulator": [
+        5387,
+        5387
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.86,
+      "realistic": 4.25,
+      "simulator": 8.82
+    },
+    "expMultiplier": 1.66,
+    "freeRepairs": 30
+  }
+}

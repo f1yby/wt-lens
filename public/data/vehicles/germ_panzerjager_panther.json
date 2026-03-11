@@ -1,0 +1,173 @@
+{
+  "id": "germ_panzerjager_panther",
+  "performance": {
+    "horsepower": 600.0,
+    "weight": 46.0,
+    "power_to_weight": 13.04,
+    "max_reverse_speed": 3.5,
+    "reload_time": 7.5,
+    "penetration": 287.1,
+    "max_speed": 45.8,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 8.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -8.0,
+      14.0
+    ],
+    "traverse_range": [
+      -11.0,
+      11.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 22.0,
+    "mainGun": {
+      "name": "88mm_PaK43",
+      "caliber": 88.0,
+      "reloadTime": 7.5,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 9.75,
+        "expert": 8.62,
+        "ace": 7.5
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "88mm_pzrg_39_43",
+        "localizedName": "PzGr 39/43",
+        "type": "apcbc_tank",
+        "caliber": 88.0,
+        "mass": 10.16,
+        "muzzleVelocity": 1000.0,
+        "deMarre": {
+          "fullCaliber": 88.0,
+          "isApcbc": true,
+          "explosiveMass": 0.064,
+          "Cx": 0.2623
+        },
+        "penetration0m": 237.5,
+        "explosiveMassKg": 0.064,
+        "explosiveType": "h10",
+        "tntEquivalent": 0.09
+      },
+      {
+        "name": "88mm_sprgr_43",
+        "localizedName": "Sprgr.43",
+        "type": "he_frag_tank",
+        "caliber": 88.0,
+        "mass": 9.4,
+        "muzzleVelocity": 820.0,
+        "explosiveMassKg": 1.0,
+        "explosiveType": "fp02",
+        "tntEquivalent": 1.0
+      },
+      {
+        "name": "88mm_grhl39",
+        "localizedName": "Hl.Gr 39",
+        "type": "heat_tank",
+        "caliber": 88.0,
+        "mass": 7.64,
+        "muzzleVelocity": 600.0,
+        "penetration0m": 110.0,
+        "explosiveMassKg": 0.646,
+        "explosiveType": "h5",
+        "tntEquivalent": 0.904
+      },
+      {
+        "name": "88mm_pzrg_40_43",
+        "localizedName": "PzGr 40/43",
+        "type": "apcr_tank",
+        "caliber": 35.0,
+        "mass": 7.3,
+        "muzzleVelocity": 1130.0,
+        "deMarre": {
+          "fullCaliber": 88.0,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "isApcr": true,
+          "coreCaliber": 35.0,
+          "coreMass": 2.0,
+          "Cx": 0.28
+        },
+        "penetration0m": 287.1
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2500.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 7,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      3.4,
+      6.9,
+      11.0,
+      17.3,
+      24.9,
+      35.1,
+      45.8
+    ],
+    "reverse_gear_speeds": [
+      3.5
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 45.5,
+    "track_width": 0.66,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_92mm_MG34",
+        "caliber": 7.9,
+        "ammo": 3000,
+        "reloadTime": 8.0,
+        "rateOfFire": 900,
+        "bulletType": "ap_ball"
+      }
+    ],
+    "main_gun_ammo": 49,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 46000,
+    "purchaseCost": 155000,
+    "crewTraining": 45000,
+    "expertTraining": 155000,
+    "aceTrainingGE": 630,
+    "aceTrainingRP": 440000,
+    "repairCost": {
+      "arcade": [
+        2436,
+        3164
+      ],
+      "realistic": [
+        2737,
+        3555
+      ],
+      "simulator": [
+        3594,
+        4668
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.04,
+      "realistic": 1.64,
+      "simulator": 2.16
+    },
+    "expMultiplier": 1.6
+  }
+}

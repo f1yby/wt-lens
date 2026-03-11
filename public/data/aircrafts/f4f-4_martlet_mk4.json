@@ -1,0 +1,33 @@
+{
+  "id": "f4f-4_martlet_mk4",
+  "economy": {
+    "researchCost": 9200,
+    "purchaseCost": 0,
+    "purchaseCostGold": 850,
+    "crewTraining": 3400,
+    "expertTraining": 23000,
+    "aceTrainingGE": 180,
+    "aceTrainingRP": 380000,
+    "repairCost": {
+      "arcade": [
+        909,
+        909
+      ],
+      "realistic": [
+        573,
+        573
+      ],
+      "simulator": [
+        1484,
+        1484
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.84,
+      "realistic": 1.51,
+      "simulator": 3.56
+    },
+    "expMultiplier": 1.18,
+    "freeRepairs": 30
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "id": "a5m4_hagiri",
+  "economy": {
+    "researchCost": 2900,
+    "purchaseCost": 0,
+    "purchaseCostGold": 250,
+    "crewTraining": 150,
+    "expertTraining": 1000,
+    "aceTrainingGE": 20,
+    "aceTrainingRP": 145000,
+    "repairCost": {
+      "arcade": [
+        323,
+        323
+      ],
+      "realistic": [
+        204,
+        204
+      ],
+      "simulator": [
+        149,
+        149
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.3,
+      "realistic": 0.5,
+      "simulator": 1.6
+    },
+    "expMultiplier": 0.75,
+    "freeRepairs": 30
+  }
+}

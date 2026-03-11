@@ -1,0 +1,157 @@
+{
+  "id": "germ_flakpanzer_IV_Ostwind_2_net",
+  "performance": {
+    "horsepower": 300.0,
+    "weight": 25.0,
+    "power_to_weight": 12.0,
+    "max_reverse_speed": 7.2,
+    "reload_time": 0.24,
+    "penetration": 49.7,
+    "max_speed": 38.7,
+    "crew_count": 5,
+    "elevation_speed": 20.0,
+    "traverse_speed": 35.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -10.0,
+      87.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 97.0,
+    "mainGun": {
+      "name": "37mm_FlaK44",
+      "caliber": 37.0,
+      "reloadTime": 0.24,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 0.31,
+        "expert": 0.28,
+        "ace": 0.24
+      },
+      "rateOfFire": 250,
+      "beltReloadTime": 0.24
+    },
+    "ammunitions": [
+      {
+        "name": "37mm_sprgr_18_belt",
+        "localizedName": "Sprgr. 18",
+        "type": "frag_i_t",
+        "caliber": 37.0,
+        "mass": 0.62,
+        "muzzleVelocity": 820.0,
+        "explosiveMassKg": 0.029,
+        "explosiveType": "np_10",
+        "tntEquivalent": 0.038
+      },
+      {
+        "name": "37mm_pzgr_belt",
+        "localizedName": "PzGr",
+        "type": "aphe",
+        "caliber": 37.0,
+        "mass": 0.685,
+        "muzzleVelocity": 770.0,
+        "deMarre": {
+          "fullCaliber": 37.0,
+          "isApcbc": false,
+          "explosiveMass": 0.013,
+          "Cx": 0.6
+        },
+        "penetration0m": 49.7,
+        "explosiveMassKg": 0.013,
+        "explosiveType": "petn",
+        "tntEquivalent": 0.017
+      },
+      {
+        "name": "37mm_mgr_18",
+        "localizedName": "M.Gr.18",
+        "type": "he_i_t",
+        "caliber": 37.0,
+        "mass": 0.55,
+        "muzzleVelocity": 914.0,
+        "explosiveMassKg": 0.09,
+        "explosiveType": "hta",
+        "tntEquivalent": 0.115
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 3000.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 6,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      4.1,
+      6.4,
+      11.1,
+      15.5,
+      25.8,
+      38.7
+    ],
+    "reverse_gear_speeds": [
+      7.2
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 24.7,
+    "track_width": 0.4,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_92mm_MG34",
+        "caliber": 7.9,
+        "ammo": 1800,
+        "reloadTime": 8.0,
+        "rateOfFire": 900,
+        "bulletType": "ap_ball"
+      }
+    ],
+    "main_gun_ammo": 496,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 20000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 1750,
+    "crewTraining": 10000,
+    "expertTraining": 210000,
+    "aceTrainingGE": 550,
+    "aceTrainingRP": 790000,
+    "repairCost": {
+      "arcade": [
+        1455,
+        1455
+      ],
+      "realistic": [
+        1066,
+        1066
+      ],
+      "simulator": [
+        1729,
+        1729
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.97,
+      "realistic": 2.56,
+      "simulator": 3.58
+    },
+    "expMultiplier": 1.54,
+    "freeRepairs": 30
+  }
+}

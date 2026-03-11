@@ -1,0 +1,27 @@
+{
+  "id": "us_destroyer_cf_adams_class_cf_adams",
+  "economy": {
+    "researchCost": 33000,
+    "purchaseCost": 115000,
+    "crewTraining": 33000,
+    "expertTraining": 115000,
+    "aceTrainingGE": 820,
+    "aceTrainingRP": 440000,
+    "repairCost": {
+      "arcade": [
+        4871,
+        6214
+      ],
+      "realistic": [
+        6115,
+        7800
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.89,
+      "realistic": 6.0,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.6
+  }
+}

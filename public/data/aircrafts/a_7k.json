@@ -1,0 +1,31 @@
+{
+  "id": "a_7k",
+  "economy": {
+    "researchCost": 260000,
+    "purchaseCost": 720000,
+    "crewTraining": 200000,
+    "expertTraining": 720000,
+    "aceTrainingGE": 3200,
+    "aceTrainingRP": 1210000,
+    "repairCost": {
+      "arcade": [
+        3580,
+        4891
+      ],
+      "realistic": [
+        8657,
+        11826
+      ],
+      "simulator": [
+        10849,
+        14821
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.82,
+      "realistic": 3.26,
+      "simulator": 6.0
+    },
+    "expMultiplier": 2.44
+  }
+}

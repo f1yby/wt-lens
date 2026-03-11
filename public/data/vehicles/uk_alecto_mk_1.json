@@ -1,0 +1,138 @@
+{
+  "id": "uk_alecto_mk_1",
+  "performance": {
+    "horsepower": 164.25,
+    "weight": 8.13,
+    "power_to_weight": 20.2,
+    "max_reverse_speed": 5.6,
+    "reload_time": 8.57,
+    "penetration": 110.0,
+    "max_speed": 50.3,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 10.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -5.0,
+      26.0
+    ],
+    "traverse_range": [
+      -15.0,
+      15.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 31.0,
+    "mainGun": {
+      "name": "95mm_QF_Mk1",
+      "caliber": 95.0,
+      "reloadTime": 8.57,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 11.14,
+        "expert": 9.86,
+        "ace": 8.57
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "95mm_shell_heat",
+        "localizedName": "Shell H.E./A.T.",
+        "type": "heat_tank",
+        "caliber": 95.0,
+        "mass": 6.72,
+        "muzzleVelocity": 502.0,
+        "penetration0m": 110.0,
+        "explosiveMassKg": 0.646,
+        "explosiveType": "pentolite",
+        "tntEquivalent": 0.814
+      },
+      {
+        "name": "95mm_shell_mk1a_he",
+        "localizedName": "Shell Mk.Ia",
+        "type": "he_frag_tank",
+        "caliber": 95.0,
+        "mass": 11.34,
+        "muzzleVelocity": 320.0,
+        "explosiveMassKg": 0.666,
+        "explosiveType": "amatol",
+        "tntEquivalent": 0.626
+      },
+      {
+        "name": "95mm_shell_se_mk1",
+        "localizedName": "Shell SE Mk,I",
+        "type": "smoke_tank",
+        "caliber": 95.0,
+        "mass": 11.34,
+        "muzzleVelocity": 320.0,
+        "explosiveMassKg": 0.05,
+        "explosiveType": "smoke_composition",
+        "tntEquivalent": 0.05
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2200.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 5,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      6.4,
+      13.1,
+      22.7,
+      37.1,
+      50.3
+    ],
+    "reverse_gear_speeds": [
+      5.6
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 7.83,
+    "track_width": 0.27,
+    "secondary_weapons": null,
+    "main_gun_ammo": 48,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 4000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 400,
+    "crewTraining": 450,
+    "expertTraining": 3000,
+    "aceTrainingGE": 45,
+    "aceTrainingRP": 220000,
+    "repairCost": {
+      "arcade": [
+        374,
+        374
+      ],
+      "realistic": [
+        140,
+        140
+      ],
+      "simulator": [
+        172,
+        172
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.42,
+      "realistic": 0.47,
+      "simulator": 0.58
+    },
+    "expMultiplier": 1.0,
+    "freeRepairs": 30
+  }
+}

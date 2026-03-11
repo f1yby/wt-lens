@@ -1,0 +1,115 @@
+{
+  "id": "il_ss_11_halftrack",
+  "performance": {
+    "horsepower": 148.0,
+    "weight": 8.55,
+    "power_to_weight": 17.31,
+    "max_reverse_speed": 17.4,
+    "reload_time": 1.0,
+    "penetration": 600.0,
+    "max_speed": 75.7,
+    "crew_count": 5,
+    "elevation_speed": 10.0,
+    "traverse_speed": 25.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -5.0,
+      20.0
+    ],
+    "traverse_range": [
+      0.0,
+      0.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 25.0,
+    "mainGun": {
+      "name": "164mm_lfk_ss11_rocket_launcher",
+      "caliber": 164.0,
+      "reloadTime": 1.0,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 1.3,
+        "expert": 1.15,
+        "ace": 1.0
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "164mm_lfk_ss_11",
+        "localizedName": "LFK SS.11",
+        "type": "atgm_tank",
+        "caliber": 164.0,
+        "mass": 30.0,
+        "muzzleVelocity": 220.0,
+        "penetration0m": 600.0
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 3000.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 8,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      6.2,
+      11.7,
+      15.4,
+      17.6,
+      29.1,
+      30.4,
+      44.3,
+      75.7
+    ],
+    "reverse_gear_speeds": [
+      6.9,
+      17.4
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 8.4,
+    "track_width": 0.28,
+    "secondary_weapons": null,
+    "main_gun_ammo": 6,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 31000,
+    "purchaseCost": 200000,
+    "crewTraining": 57000,
+    "expertTraining": 200000,
+    "aceTrainingGE": 800,
+    "aceTrainingRP": 520000,
+    "repairCost": {
+      "arcade": [
+        3693,
+        4675
+      ],
+      "realistic": [
+        4198,
+        5315
+      ],
+      "simulator": [
+        6000,
+        7595
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.24,
+      "realistic": 1.95,
+      "simulator": 2.38
+    },
+    "expMultiplier": 1.72
+  }
+}

@@ -1,0 +1,185 @@
+{
+  "id": "cn_type_69_2a",
+  "performance": {
+    "horsepower": 580.0,
+    "weight": 36.7,
+    "power_to_weight": 15.8,
+    "max_reverse_speed": 7.5,
+    "reload_time": 7.5,
+    "penetration": 390.0,
+    "max_speed": 50.0,
+    "crew_count": 5,
+    "elevation_speed": 4.5,
+    "traverse_speed": 15.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "both",
+    "elevation_range": [
+      -5.0,
+      18.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 23.0,
+    "mainGun": {
+      "name": "100mm_Type69_II",
+      "caliber": 100.0,
+      "reloadTime": 7.5,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 9.75,
+        "expert": 8.62,
+        "ace": 7.5
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "100mm_type1959",
+        "localizedName": "Type 59 APDS",
+        "type": "apds_early_tank",
+        "caliber": 56.0,
+        "mass": 3.18,
+        "muzzleVelocity": 1432.0,
+        "deMarre": {
+          "fullCaliber": 100.0,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "isApcr": true,
+          "coreCaliber": 56.0,
+          "coreMass": 2.13,
+          "Cx": 0.223
+        },
+        "penetration0m": 178.3
+      },
+      {
+        "name": "type_44_he",
+        "localizedName": "Type 44 HE",
+        "type": "he_frag_tank",
+        "caliber": 100.0,
+        "mass": 15.6,
+        "muzzleVelocity": 900.0,
+        "explosiveMassKg": 1.462,
+        "explosiveType": "tnt",
+        "tntEquivalent": 1.462
+      },
+      {
+        "name": "type_44_ap",
+        "localizedName": "Type 44 AP",
+        "type": "apcbc_tank",
+        "caliber": 100.0,
+        "mass": 15.88,
+        "muzzleVelocity": 887.0,
+        "deMarre": {
+          "fullCaliber": 100.0,
+          "isApcbc": true,
+          "explosiveMass": 0.065,
+          "Cx": 0.395
+        },
+        "penetration0m": 239.6,
+        "explosiveMassKg": 0.065,
+        "explosiveType": "a_ix_2",
+        "tntEquivalent": 0.091
+      },
+      {
+        "name": "100mm_type1973",
+        "localizedName": "Type 73 HEAT-FS",
+        "type": "heat_fs_tank",
+        "caliber": 100.0,
+        "mass": 10.05,
+        "muzzleVelocity": 955.0,
+        "penetration0m": 390.0,
+        "explosiveMassKg": 0.922,
+        "explosiveType": "rdx_tnt",
+        "tntEquivalent": 1.18
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2000.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 5,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      7.5,
+      16.1,
+      22.5,
+      31.5,
+      50.0
+    ],
+    "reverse_gear_speeds": [
+      7.5
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 36.0,
+    "track_width": 0.58,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_Type_59",
+        "caliber": 7.6,
+        "ammo": 3000,
+        "reloadTime": 8.0,
+        "rateOfFire": 600,
+        "bulletType": "ap_i_ball"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "12_7mm_Type_54",
+        "caliber": 12.7,
+        "ammo": 500,
+        "reloadTime": 8.0,
+        "rateOfFire": 600,
+        "bulletType": "ap_i_t_ball"
+      }
+    ],
+    "main_gun_ammo": 44,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": true,
+    "has_ess": true,
+    "has_laser_rangefinder": true
+  },
+  "economy": {
+    "researchCost": 120000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 8380,
+    "crewTraining": 10000,
+    "expertTraining": 550000,
+    "aceTrainingGE": 1300,
+    "aceTrainingRP": 1600000,
+    "repairCost": {
+      "arcade": [
+        3162,
+        3162
+      ],
+      "realistic": [
+        3446,
+        3446
+      ],
+      "simulator": [
+        4734,
+        4734
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.74,
+      "realistic": 4.06,
+      "simulator": 4.9
+    },
+    "expMultiplier": 2.08,
+    "freeRepairs": 30
+  }
+}

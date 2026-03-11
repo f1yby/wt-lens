@@ -1,0 +1,144 @@
+{
+  "id": "cn_zsl_92",
+  "performance": {
+    "horsepower": 320.0,
+    "weight": 15.8,
+    "power_to_weight": 20.25,
+    "max_reverse_speed": 7.5,
+    "reload_time": 25.0,
+    "penetration": 63.5,
+    "max_speed": 88.2,
+    "crew_count": 5,
+    "elevation_speed": 40.0,
+    "traverse_speed": 45.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -8.0,
+      52.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 60.0,
+    "mainGun": {
+      "name": "25mm_zpt90",
+      "caliber": 25.0,
+      "reloadTime": 25.0,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 32.5,
+        "expert": 28.75,
+        "ace": 25.0
+      },
+      "rateOfFire": 500,
+      "beltReloadTime": 25.0
+    },
+    "ammunitions": [
+      {
+        "name": "25mm_type_87_he",
+        "localizedName": "Type 87 HE",
+        "type": "frag_i_t",
+        "caliber": 25.0,
+        "mass": 0.25,
+        "muzzleVelocity": 1050.0,
+        "explosiveMassKg": 0.019,
+        "explosiveType": "a_ix_2",
+        "tntEquivalent": 0.027
+      },
+      {
+        "name": "25mm_type_87_api",
+        "localizedName": "Type 87 AP",
+        "type": "ap_t",
+        "caliber": 25.0,
+        "mass": 0.25,
+        "muzzleVelocity": 1050.0,
+        "deMarre": {
+          "fullCaliber": 25.0,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "Cx": 0.25
+        },
+        "penetration0m": 63.5
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2500.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 9,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      6.8,
+      9.9,
+      14.0,
+      18.7,
+      25.7,
+      34.1,
+      48.1,
+      64.3,
+      88.2
+    ],
+    "reverse_gear_speeds": [
+      7.5
+    ],
+    "steer_type": null,
+    "empty_weight": 15.0,
+    "track_width": 0.4,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_Type86",
+        "caliber": 7.6,
+        "ammo": 1000,
+        "reloadTime": 8.0,
+        "rateOfFire": 700,
+        "bulletType": "ap_i_ball"
+      }
+    ],
+    "main_gun_ammo": 400,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 82000,
+    "purchaseCost": 240000,
+    "crewTraining": 68000,
+    "expertTraining": 240000,
+    "aceTrainingGE": 990,
+    "aceTrainingRP": 620000,
+    "repairCost": {
+      "arcade": [
+        3460,
+        4721
+      ],
+      "realistic": [
+        3357,
+        4579
+      ],
+      "simulator": [
+        4942,
+        6743
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.36,
+      "realistic": 1.67,
+      "simulator": 2.41
+    },
+    "expMultiplier": 1.84
+  }
+}

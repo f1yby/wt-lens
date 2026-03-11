@@ -1,0 +1,184 @@
+{
+  "id": "us_m103",
+  "performance": {
+    "horsepower": 810.0,
+    "weight": 56.7,
+    "power_to_weight": 14.29,
+    "max_reverse_speed": 8.3,
+    "reload_time": 14.93,
+    "penetration": 380.0,
+    "max_speed": 33.2,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 24.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -8.0,
+      15.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 23.0,
+    "mainGun": {
+      "name": "120mm_M58",
+      "caliber": 120.0,
+      "reloadTime": 14.93,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 19.41,
+        "expert": 17.17,
+        "ace": 14.93
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "120mm_m358",
+        "localizedName": "M358 shot",
+        "type": "apbc_usa_tank",
+        "caliber": 120.0,
+        "mass": 23.1,
+        "muzzleVelocity": 1067.0,
+        "deMarre": {
+          "fullCaliber": 120.0,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "Cx": 0.24
+        },
+        "penetration0m": 301.5
+      },
+      {
+        "name": "120mm_m356",
+        "localizedName": "M356 shell",
+        "type": "he_frag_tank",
+        "caliber": 120.0,
+        "mass": 22.84,
+        "muzzleVelocity": 762.0,
+        "explosiveMassKg": 3.55,
+        "explosiveType": "comp_b",
+        "tntEquivalent": 4.508
+      },
+      {
+        "name": "120mm_m469",
+        "localizedName": "M469 shell",
+        "type": "heat_fs_tank",
+        "caliber": 120.0,
+        "mass": 23.81,
+        "muzzleVelocity": 1143.0,
+        "penetration0m": 380.0,
+        "explosiveMassKg": 2.04,
+        "explosiveType": "comp_b",
+        "tntEquivalent": 2.591
+      },
+      {
+        "name": "120mm_m357",
+        "localizedName": "M357",
+        "type": "smoke_tank",
+        "caliber": 120.0,
+        "mass": 22.9,
+        "muzzleVelocity": 762.0,
+        "explosiveMassKg": 0.05,
+        "explosiveType": "smoke_composition",
+        "tntEquivalent": 0.05
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2800.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 6,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      5.7,
+      8.1,
+      11.5,
+      14.7,
+      20.4,
+      33.2
+    ],
+    "reverse_gear_speeds": [
+      4.1,
+      8.3
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 56.2,
+    "track_width": 0.5,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "12_7mm_M2_HB",
+        "caliber": 12.7,
+        "ammo": 1000,
+        "reloadTime": 8.0,
+        "rateOfFire": 575,
+        "bulletType": "ap_i_t_ball_M20"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "7_62mm_M1919A4",
+        "caliber": 7.6,
+        "ammo": 4000,
+        "reloadTime": 8.0,
+        "rateOfFire": 500,
+        "bulletType": "ap_ball"
+      },
+      {
+        "trigger": "gunner3",
+        "name": "7_62mm_M1919A4",
+        "caliber": 7.6,
+        "ammo": 4000,
+        "reloadTime": 8.0,
+        "rateOfFire": 500,
+        "bulletType": "ap_ball"
+      }
+    ],
+    "main_gun_ammo": 33,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 105000,
+    "purchaseCost": 300000,
+    "crewTraining": 86000,
+    "expertTraining": 300000,
+    "aceTrainingGE": 1200,
+    "aceTrainingRP": 720000,
+    "repairCost": {
+      "arcade": [
+        5600,
+        7062
+      ],
+      "realistic": [
+        5931,
+        7479
+      ],
+      "simulator": [
+        9446,
+        11912
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.45,
+      "realistic": 2.02,
+      "simulator": 2.38
+    },
+    "expMultiplier": 1.96
+  }
+}

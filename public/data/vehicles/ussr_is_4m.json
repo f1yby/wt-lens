@@ -1,0 +1,189 @@
+{
+  "id": "ussr_is_4m",
+  "performance": {
+    "horsepower": 750.0,
+    "weight": 60.0,
+    "power_to_weight": 12.5,
+    "max_reverse_speed": 10.5,
+    "reload_time": 20.83,
+    "penetration": 230.6,
+    "max_speed": 42.6,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 10.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -3.0,
+      19.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 22.0,
+    "mainGun": {
+      "name": "122mm_D25T",
+      "caliber": 122.0,
+      "reloadTime": 20.83,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 27.08,
+        "expert": 23.95,
+        "ace": 20.83
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "122mm_br_471",
+        "localizedName": "BR-471",
+        "type": "aphe_tank",
+        "caliber": 122.0,
+        "mass": 25.0,
+        "muzzleVelocity": 795.0,
+        "deMarre": {
+          "fullCaliber": 122.0,
+          "isApcbc": false,
+          "explosiveMass": 0.16,
+          "Cx": 0.5947
+        },
+        "penetration0m": 205.7,
+        "explosiveMassKg": 0.16,
+        "explosiveType": "a_ix_2",
+        "tntEquivalent": 0.224
+      },
+      {
+        "name": "122mm_of_471",
+        "localizedName": "OF-471",
+        "type": "he_frag_tank",
+        "caliber": 122.0,
+        "mass": 25.0,
+        "muzzleVelocity": 795.0,
+        "explosiveMassKg": 3.6,
+        "explosiveType": "tnt",
+        "tntEquivalent": 3.6
+      },
+      {
+        "name": "122mm_br_471b",
+        "localizedName": "BR-471B",
+        "type": "aphebc_tank",
+        "caliber": 122.0,
+        "mass": 25.0,
+        "muzzleVelocity": 795.0,
+        "deMarre": {
+          "fullCaliber": 122.0,
+          "isApcbc": false,
+          "explosiveMass": 0.16,
+          "Cx": 0.3496
+        },
+        "penetration0m": 205.7,
+        "explosiveMassKg": 0.16,
+        "explosiveType": "a_ix_2",
+        "tntEquivalent": 0.224
+      },
+      {
+        "name": "122mm_br_471d",
+        "localizedName": "BR-471D",
+        "type": "apcbc_tank",
+        "caliber": 122.0,
+        "mass": 25.0,
+        "muzzleVelocity": 800.0,
+        "deMarre": {
+          "fullCaliber": 122.0,
+          "isApcbc": true,
+          "explosiveMass": 0.125,
+          "Cx": 0.35
+        },
+        "penetration0m": 230.6,
+        "explosiveMassKg": 0.125,
+        "explosiveType": "a_ix_2",
+        "tntEquivalent": 0.175
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2100.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 6,
+    "reverse_gears": 3,
+    "forward_gear_speeds": [
+      3.1,
+      6.9,
+      10.5,
+      17.0,
+      27.3,
+      42.6
+    ],
+    "reverse_gear_speeds": [
+      3.1,
+      6.9,
+      10.5
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 59.5,
+    "track_width": 0.65,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "12_7mm_DShK",
+        "caliber": 12.7,
+        "ammo": 1000,
+        "reloadTime": 8.0,
+        "rateOfFire": 600,
+        "bulletType": "ap_i_t_ball"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "12_7mm_DShK",
+        "caliber": 12.7,
+        "ammo": 250,
+        "reloadTime": 8.0,
+        "rateOfFire": 600,
+        "bulletType": "ap_i_t_ball"
+      }
+    ],
+    "main_gun_ammo": 30,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 120000,
+    "purchaseCost": 340000,
+    "crewTraining": 98000,
+    "expertTraining": 340000,
+    "aceTrainingGE": 1300,
+    "aceTrainingRP": 780000,
+    "repairCost": {
+      "arcade": [
+        5577,
+        7243
+      ],
+      "realistic": [
+        5906,
+        7670
+      ],
+      "simulator": [
+        9398,
+        12205
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.5,
+      "realistic": 2.09,
+      "simulator": 2.46
+    },
+    "expMultiplier": 2.02
+  }
+}

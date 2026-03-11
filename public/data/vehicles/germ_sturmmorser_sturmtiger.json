@@ -1,0 +1,128 @@
+{
+  "id": "germ_sturmmorser_sturmtiger",
+  "performance": {
+    "horsepower": 700.0,
+    "weight": 65.0,
+    "power_to_weight": 10.77,
+    "max_reverse_speed": 8.3,
+    "reload_time": 40.0,
+    "penetration": null,
+    "max_speed": 40.0,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 10.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -0.0,
+      72.0
+    ],
+    "traverse_range": [
+      -11.0,
+      11.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 72.0,
+    "mainGun": {
+      "name": "380mm_RW_61",
+      "caliber": 380.0,
+      "reloadTime": 40.0,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 52.0,
+        "expert": 46.0,
+        "ace": 40.0
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "380mm_sprgr4581",
+        "localizedName": "38 cm R Spgr.4581",
+        "type": "rocket_tank",
+        "caliber": 380.0,
+        "mass": 345.0,
+        "muzzleVelocity": 250.0
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 3000.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 8,
+    "reverse_gears": 4,
+    "forward_gear_speeds": [
+      2.8,
+      4.2,
+      6.1,
+      9.1,
+      13.9,
+      20.6,
+      30.1,
+      40.0
+    ],
+    "reverse_gear_speeds": [
+      2.7,
+      4.1,
+      5.9,
+      8.3
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 64.0,
+    "track_width": 0.65,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_92mm_MG34",
+        "caliber": 7.9,
+        "ammo": 3000,
+        "reloadTime": 8.0,
+        "rateOfFire": 900,
+        "bulletType": "ap_ball"
+      }
+    ],
+    "main_gun_ammo": 14,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 71000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 6090,
+    "crewTraining": 10000,
+    "expertTraining": 340000,
+    "aceTrainingGE": 890,
+    "aceTrainingRP": 1180000,
+    "repairCost": {
+      "arcade": [
+        2606,
+        2606
+      ],
+      "realistic": [
+        2936,
+        2936
+      ],
+      "simulator": [
+        3323,
+        3323
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.64,
+      "realistic": 4.14,
+      "simulator": 5.0
+    },
+    "expMultiplier": 1.84,
+    "freeRepairs": 30
+  }
+}

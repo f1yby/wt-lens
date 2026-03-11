@@ -1,0 +1,31 @@
+{
+  "id": "f-5e_fcu_thailand",
+  "economy": {
+    "researchCost": 550000,
+    "purchaseCost": 750000,
+    "crewTraining": 200000,
+    "expertTraining": 720000,
+    "aceTrainingGE": 3200,
+    "aceTrainingRP": 1210000,
+    "repairCost": {
+      "arcade": [
+        2947,
+        4065
+      ],
+      "realistic": [
+        8669,
+        11957
+      ],
+      "simulator": [
+        9429,
+        13006
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.02,
+      "realistic": 3.16,
+      "simulator": 6.0
+    },
+    "expMultiplier": 2.44
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "ussr_destroyer_7_besposhchadny",
+  "economy": {
+    "researchCost": 5300,
+    "purchaseCost": 5000,
+    "crewTraining": 1400,
+    "expertTraining": 5000,
+    "aceTrainingGE": 80,
+    "aceTrainingRP": 135000,
+    "repairCost": {
+      "arcade": [
+        633,
+        824
+      ],
+      "realistic": [
+        988,
+        1285
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.72,
+      "realistic": 1.24,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.06
+  }
+}

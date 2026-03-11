@@ -1,0 +1,31 @@
+{
+  "id": "spitfire_f24",
+  "economy": {
+    "researchCost": 35000,
+    "purchaseCost": 210000,
+    "crewTraining": 61000,
+    "expertTraining": 210000,
+    "aceTrainingGE": 1200,
+    "aceTrainingRP": 570000,
+    "repairCost": {
+      "arcade": [
+        3275,
+        4236
+      ],
+      "realistic": [
+        8314,
+        10445
+      ],
+      "simulator": [
+        12368,
+        15538
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.09,
+      "realistic": 2.96,
+      "simulator": 5.96
+    },
+    "expMultiplier": 1.78
+  }
+}

@@ -1,0 +1,130 @@
+{
+  "id": "germ_flakpanzer_38t_Gepard",
+  "performance": {
+    "horsepower": 150.0,
+    "weight": 9.8,
+    "power_to_weight": 15.31,
+    "max_reverse_speed": 6.1,
+    "reload_time": 3.0,
+    "penetration": 37.7,
+    "max_speed": 42.1,
+    "crew_count": 5,
+    "elevation_speed": 20.0,
+    "traverse_speed": 35.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -20.0,
+      90.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 110.0,
+    "mainGun": {
+      "name": "20mm_FlaK38",
+      "caliber": 20.0,
+      "reloadTime": 3.0,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 3.9,
+        "expert": 3.45,
+        "ace": 3.0
+      },
+      "rateOfFire": 480,
+      "beltReloadTime": 3.0
+    },
+    "ammunitions": [
+      {
+        "name": "20mm_sprgr",
+        "localizedName": "Sprgr.",
+        "type": "he_frag_i_t",
+        "caliber": 20.0,
+        "mass": 0.115,
+        "muzzleVelocity": 900.0,
+        "explosiveMassKg": 0.006,
+        "explosiveType": "np_10",
+        "tntEquivalent": 0.008
+      },
+      {
+        "name": "20mm_pzgr",
+        "localizedName": "PzGr",
+        "type": "ap_i_t",
+        "caliber": 20.0,
+        "mass": 0.148,
+        "muzzleVelocity": 800.0,
+        "deMarre": {
+          "fullCaliber": 20.0,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "Cx": 0.5198
+        },
+        "penetration0m": 37.7
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2600.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 5,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      4.0,
+      8.7,
+      17.1,
+      31.3,
+      42.1
+    ],
+    "reverse_gear_speeds": [
+      6.1
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 9.6,
+    "track_width": 0.25,
+    "secondary_weapons": null,
+    "main_gun_ammo": 1080,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 2000,
+    "purchaseCost": 2100,
+    "crewTraining": 600,
+    "expertTraining": 2100,
+    "aceTrainingGE": 45,
+    "aceTrainingRP": 110000,
+    "repairCost": {
+      "arcade": [
+        222,
+        286
+      ],
+      "realistic": [
+        186,
+        240
+      ],
+      "simulator": [
+        262,
+        337
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.17,
+      "realistic": 0.19,
+      "simulator": 0.23
+    },
+    "expMultiplier": 1.0
+  }
+}

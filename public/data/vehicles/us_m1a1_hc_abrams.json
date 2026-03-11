@@ -1,0 +1,228 @@
+{
+  "id": "us_m1a1_hc_abrams",
+  "performance": {
+    "horsepower": 1519.0,
+    "weight": 61.23,
+    "power_to_weight": 24.81,
+    "max_reverse_speed": 38.2,
+    "reload_time": 5.0,
+    "penetration": 629.1,
+    "max_speed": 68.3,
+    "crew_count": 5,
+    "elevation_speed": 24.0,
+    "traverse_speed": 40.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "both",
+    "elevation_range": [
+      -10.0,
+      20.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": [
+      500,
+      300
+    ],
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": 583.1,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 30.0,
+    "mainGun": {
+      "name": "120mm_M256_M1A2",
+      "caliber": 120.0,
+      "reloadTime": 5.0,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 6.5,
+        "expert": 5.75,
+        "ace": 5.0
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "120mm_m830",
+        "localizedName": "M830",
+        "type": "heat_fs_tank",
+        "caliber": 120.0,
+        "mass": 13.1,
+        "muzzleVelocity": 1140.0,
+        "penetration0m": 480.0,
+        "explosiveMassKg": 1.64,
+        "explosiveType": "comp_a",
+        "tntEquivalent": 2.066
+      },
+      {
+        "name": "120mm_m829",
+        "localizedName": "M829",
+        "type": "apds_fs_long_tank",
+        "caliber": 27.0,
+        "mass": 4.268,
+        "muzzleVelocity": 1670.0,
+        "lanzOdermatt": {
+          "workingLength": 460.0,
+          "density": 18600.0,
+          "material": "depletedUranium",
+          "Cx": 0.4603
+        },
+        "penetration0m": 469.3,
+        "penetrationData": {
+          "at0m": {
+            "angle0": 469.3,
+            "angle30": 406.4,
+            "angle60": 234.7
+          }
+        }
+      },
+      {
+        "name": "120mm_m830a1",
+        "localizedName": "M830A1",
+        "type": "heat_mp_vt_tank",
+        "caliber": 120.0,
+        "mass": 11.4,
+        "muzzleVelocity": 1410.0,
+        "penetration0m": 350.0,
+        "explosiveMassKg": 0.966,
+        "explosiveType": "comp_a",
+        "tntEquivalent": 1.217
+      },
+      {
+        "name": "120mm_m829a2",
+        "localizedName": "M829A2",
+        "type": "apds_fs_long_l30_tank",
+        "caliber": 22.0,
+        "mass": 4.921,
+        "muzzleVelocity": 1680.0,
+        "lanzOdermatt": {
+          "workingLength": 680.0,
+          "density": 18600.0,
+          "material": "depletedUranium",
+          "Cx": 0.7687
+        },
+        "penetration0m": 629.1,
+        "penetrationData": {
+          "at0m": {
+            "angle0": 629.1,
+            "angle30": 544.8,
+            "angle60": 314.6
+          }
+        }
+      },
+      {
+        "name": "120mm_m908",
+        "localizedName": "M908",
+        "type": "he_or_tank",
+        "caliber": 80.0,
+        "mass": 11.4,
+        "muzzleVelocity": 1410.0,
+        "penetration0m": 300.0,
+        "explosiveMassKg": 0.966,
+        "explosiveType": "comp_a",
+        "tntEquivalent": 1.217
+      }
+    ],
+    "penetrationData": {
+      "at0m": {
+        "angle0": 629.1,
+        "angle30": 544.8,
+        "angle60": 314.6
+      }
+    },
+    "autoLoader": false,
+    "engine_manufacturer": "honeywell",
+    "engine_model": "agt_1500",
+    "engine_type": "gasturbine",
+    "engine_max_rpm": 3000.0,
+    "transmission_manufacturer": "allison",
+    "transmission_model": "x_1100_3b",
+    "transmission_type": "auto",
+    "forward_gears": 8,
+    "reverse_gears": 4,
+    "forward_gear_speeds": [
+      8.4,
+      15.9,
+      21.0,
+      31.2,
+      38.2,
+      49.2,
+      58.4,
+      68.3
+    ],
+    "reverse_gear_speeds": [
+      5.6,
+      11.3,
+      17.6,
+      38.2
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 60.0,
+    "track_width": 0.635,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "12_7mm_M2_HB",
+        "caliber": 12.7,
+        "ammo": 900,
+        "reloadTime": 8.0,
+        "rateOfFire": 575,
+        "bulletType": "ap_i_t_ball_M20"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "7_62mm_M240",
+        "caliber": 7.6,
+        "ammo": 1400,
+        "reloadTime": 8.0,
+        "rateOfFire": 940,
+        "bulletType": "ap_ball"
+      },
+      {
+        "trigger": "gunner3",
+        "name": "7_62mm_M240",
+        "caliber": 7.6,
+        "ammo": 10000,
+        "reloadTime": 8.0,
+        "rateOfFire": 940,
+        "bulletType": "ap_ball"
+      }
+    ],
+    "main_gun_ammo": 40,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": true,
+    "has_ess": true,
+    "has_laser_rangefinder": true
+  },
+  "economy": {
+    "researchCost": 350000,
+    "purchaseCost": 950000,
+    "crewTraining": 270000,
+    "expertTraining": 950000,
+    "aceTrainingGE": 2200,
+    "aceTrainingRP": 1210000,
+    "repairCost": {
+      "arcade": [
+        4131,
+        6851
+      ],
+      "realistic": [
+        4037,
+        6695
+      ],
+      "simulator": [
+        5107,
+        8469
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.52,
+      "realistic": 1.91,
+      "simulator": 2.06
+    },
+    "expMultiplier": 2.44
+  }
+}

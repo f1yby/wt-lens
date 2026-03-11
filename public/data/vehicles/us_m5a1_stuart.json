@@ -1,0 +1,170 @@
+{
+  "id": "us_m5a1_stuart",
+  "performance": {
+    "horsepower": 296.0,
+    "weight": 15.7,
+    "power_to_weight": 18.85,
+    "max_reverse_speed": 14.7,
+    "reload_time": 2.86,
+    "penetration": 87.7,
+    "max_speed": 58.0,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 24.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "vertical",
+    "elevation_range": [
+      -12.0,
+      20.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 32.0,
+    "mainGun": {
+      "name": "37mm_M6",
+      "caliber": 37.0,
+      "reloadTime": 2.86,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 3.72,
+        "expert": 3.29,
+        "ace": 2.86
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "37mm_m74b1",
+        "localizedName": "M74B1 shot",
+        "type": "ap_tank",
+        "caliber": 37.0,
+        "mass": 0.87,
+        "muzzleVelocity": 883.0,
+        "deMarre": {
+          "fullCaliber": 37.0,
+          "isApcbc": false,
+          "explosiveMass": 0
+        },
+        "penetration0m": 79.0
+      },
+      {
+        "name": "37mm_m63",
+        "localizedName": "M63 shell",
+        "type": "sap_hei_tank",
+        "caliber": 37.0,
+        "mass": 0.73,
+        "muzzleVelocity": 792.0,
+        "deMarre": {
+          "fullCaliber": 37.0,
+          "isApcbc": false,
+          "explosiveMass": 0.038
+        },
+        "penetration0m": 44.8,
+        "explosiveMassKg": 0.038,
+        "explosiveType": "tnt",
+        "tntEquivalent": 0.038
+      },
+      {
+        "name": "37mm_m51b1",
+        "localizedName": "M51B1 shot",
+        "type": "apcbc_solid_medium_caliber_tank",
+        "caliber": 37.0,
+        "mass": 0.87,
+        "muzzleVelocity": 883.0,
+        "deMarre": {
+          "fullCaliber": 37.0,
+          "isApcbc": true,
+          "explosiveMass": 0
+        },
+        "penetration0m": 87.7
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 3200.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 8,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      8.9,
+      12.8,
+      17.8,
+      20.1,
+      25.6,
+      29.0,
+      40.2,
+      58.0
+    ],
+    "reverse_gear_speeds": [
+      8.9,
+      14.7
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 15.5,
+    "track_width": 0.294,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_M1919A4",
+        "caliber": 7.6,
+        "ammo": 3000,
+        "reloadTime": 8.0,
+        "rateOfFire": 500,
+        "bulletType": "ap_ball"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "7_62mm_M1919A4",
+        "caliber": 7.6,
+        "ammo": 3500,
+        "reloadTime": 8.0,
+        "rateOfFire": 500,
+        "bulletType": "ap_ball"
+      }
+    ],
+    "main_gun_ammo": 147,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 7900,
+    "purchaseCost": 10000,
+    "crewTraining": 3000,
+    "expertTraining": 10000,
+    "aceTrainingGE": 115,
+    "aceTrainingRP": 160000,
+    "repairCost": {
+      "arcade": [
+        340,
+        463
+      ],
+      "realistic": [
+        380,
+        518
+      ],
+      "simulator": [
+        477,
+        650
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.27,
+      "realistic": 0.32,
+      "simulator": 0.35
+    },
+    "expMultiplier": 1.12
+  }
+}

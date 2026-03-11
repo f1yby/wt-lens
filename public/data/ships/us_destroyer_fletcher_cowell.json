@@ -1,0 +1,29 @@
+{
+  "id": "us_destroyer_fletcher_cowell",
+  "economy": {
+    "researchCost": 25000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 4880,
+    "crewTraining": 10000,
+    "expertTraining": 135000,
+    "aceTrainingGE": 700,
+    "aceTrainingRP": 790000,
+    "repairCost": {
+      "arcade": [
+        2337,
+        2337
+      ],
+      "realistic": [
+        2371,
+        2371
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 5.29,
+      "realistic": 12.0,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.54,
+    "freeRepairs": 30
+  }
+}

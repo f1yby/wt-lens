@@ -1,0 +1,33 @@
+{
+  "id": "il_2_1942_luftwaffe",
+  "economy": {
+    "researchCost": 9200,
+    "purchaseCost": 0,
+    "purchaseCostGold": 850,
+    "crewTraining": 3400,
+    "expertTraining": 23000,
+    "aceTrainingGE": 180,
+    "aceTrainingRP": 380000,
+    "repairCost": {
+      "arcade": [
+        804,
+        804
+      ],
+      "realistic": [
+        415,
+        415
+      ],
+      "simulator": [
+        860,
+        860
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.84,
+      "realistic": 1.28,
+      "simulator": 2.77
+    },
+    "expMultiplier": 1.18,
+    "freeRepairs": 30
+  }
+}

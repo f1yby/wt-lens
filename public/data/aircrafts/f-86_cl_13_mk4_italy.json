@@ -1,0 +1,31 @@
+{
+  "id": "f-86_cl_13_mk4_italy",
+  "economy": {
+    "researchCost": 120000,
+    "purchaseCost": 340000,
+    "crewTraining": 98000,
+    "expertTraining": 340000,
+    "aceTrainingGE": 1800,
+    "aceTrainingRP": 780000,
+    "repairCost": {
+      "arcade": [
+        3541,
+        4746
+      ],
+      "realistic": [
+        9098,
+        12196
+      ],
+      "simulator": [
+        9836,
+        13186
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.29,
+      "realistic": 3.8,
+      "simulator": 6.0
+    },
+    "expMultiplier": 2.02
+  }
+}

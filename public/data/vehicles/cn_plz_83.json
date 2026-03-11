@@ -1,0 +1,145 @@
+{
+  "id": "cn_plz_83",
+  "performance": {
+    "horsepower": 520.0,
+    "weight": 30.0,
+    "power_to_weight": 17.33,
+    "max_reverse_speed": 8.5,
+    "reload_time": 13.33,
+    "penetration": null,
+    "max_speed": 56.1,
+    "crew_count": 5,
+    "elevation_speed": 10.0,
+    "traverse_speed": 10.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -5.0,
+      63.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 68.0,
+    "mainGun": {
+      "name": "152mm_pl_66_gai",
+      "caliber": 152.0,
+      "reloadTime": 13.33,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 17.33,
+        "expert": 15.33,
+        "ace": 13.33
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "152mm_ddb_1",
+        "localizedName": "DDB1/PL66-152",
+        "type": "he_frag_tank",
+        "caliber": 152.0,
+        "mass": 43.56,
+        "muzzleVelocity": 655.0,
+        "explosiveMassKg": 5.86,
+        "explosiveType": "tnt",
+        "tntEquivalent": 5.86
+      },
+      {
+        "name": "152mm_bee_7",
+        "localizedName": "BEE7-152",
+        "type": "he_frag_tank",
+        "caliber": 152.0,
+        "mass": 43.56,
+        "muzzleVelocity": 655.0,
+        "explosiveMassKg": 6.674,
+        "explosiveType": "comp_b_mod",
+        "tntEquivalent": 9.01
+      },
+      {
+        "name": "152mm_bee_7_vt",
+        "localizedName": "BEE7-152 (VT)",
+        "type": "he_frag_radio_fuse",
+        "caliber": 152.0,
+        "mass": 43.56,
+        "muzzleVelocity": 655.0,
+        "explosiveMassKg": 6.674,
+        "explosiveType": "comp_b_mod",
+        "tntEquivalent": 9.01
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2000.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 5,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      8.5,
+      18.2,
+      25.5,
+      35.8,
+      56.1
+    ],
+    "reverse_gear_speeds": [
+      8.5
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 29.0,
+    "track_width": 0.484,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner2",
+        "name": "12_7mm_QJC_88A",
+        "caliber": 12.7,
+        "ammo": 600,
+        "reloadTime": 5.0,
+        "rateOfFire": 600,
+        "bulletType": "ap_i_t_ball"
+      }
+    ],
+    "main_gun_ammo": 30,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 71000,
+    "purchaseCost": 210000,
+    "crewTraining": 61000,
+    "expertTraining": 210000,
+    "aceTrainingGE": 890,
+    "aceTrainingRP": 570000,
+    "repairCost": {
+      "arcade": [
+        3895,
+        4820
+      ],
+      "realistic": [
+        4375,
+        5415
+      ],
+      "simulator": [
+        5938,
+        7349
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.27,
+      "realistic": 1.99,
+      "simulator": 2.5
+    },
+    "expMultiplier": 1.78
+  }
+}

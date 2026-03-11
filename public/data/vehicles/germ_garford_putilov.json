@@ -1,0 +1,154 @@
+{
+  "id": "germ_garford_putilov",
+  "performance": {
+    "horsepower": 30.0,
+    "weight": 8.6,
+    "power_to_weight": 3.49,
+    "max_reverse_speed": 18.0,
+    "reload_time": 4.0,
+    "penetration": null,
+    "max_speed": 18.0,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 15.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -5.0,
+      15.0
+    ],
+    "traverse_range": [
+      -125.0,
+      140.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 20.0,
+    "mainGun": {
+      "name": "76mm_1910_16",
+      "caliber": 76.2,
+      "reloadTime": 4.0,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 5.2,
+        "expert": 4.6,
+        "ace": 4.0
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "76mm_1910_he",
+        "localizedName": "76 mm Granata",
+        "type": "he_frag_tank",
+        "caliber": 76.2,
+        "mass": 6.4,
+        "muzzleVelocity": 381.0,
+        "explosiveMassKg": 0.785,
+        "explosiveType": "tnt",
+        "tntEquivalent": 0.785
+      },
+      {
+        "name": "76mm_1910_shrapnel",
+        "localizedName": "76 mm Shrapnel",
+        "type": "shrapnel_tank",
+        "caliber": 76.2,
+        "mass": 6.5,
+        "muzzleVelocity": 381.0,
+        "explosiveMassKg": 0.085,
+        "explosiveType": "tnt",
+        "tntEquivalent": 0.085
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 1300.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 4,
+    "reverse_gears": 4,
+    "forward_gear_speeds": [
+      3.1,
+      6.0,
+      12.1,
+      18.0
+    ],
+    "reverse_gear_speeds": [
+      3.1,
+      6.0,
+      12.1,
+      18.0
+    ],
+    "steer_type": null,
+    "empty_weight": 8.0,
+    "track_width": 0.38,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner3",
+        "name": "7_92mm_mg08",
+        "caliber": 7.9,
+        "ammo": 2000,
+        "reloadTime": 5.0,
+        "rateOfFire": 500,
+        "bulletType": "ap_i_ball"
+      },
+      {
+        "trigger": "gunner1",
+        "name": "7_92mm_mg08",
+        "caliber": 7.9,
+        "ammo": 2000,
+        "reloadTime": 5.0,
+        "rateOfFire": 500,
+        "bulletType": "ap_i_ball"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "7_92mm_mg08",
+        "caliber": 7.9,
+        "ammo": 2000,
+        "reloadTime": 5.0,
+        "rateOfFire": 500,
+        "bulletType": "ap_i_ball"
+      }
+    ],
+    "main_gun_ammo": 44,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 2900,
+    "purchaseCost": 700,
+    "crewTraining": 200,
+    "expertTraining": 1000,
+    "aceTrainingGE": 20,
+    "aceTrainingRP": 96000,
+    "repairCost": {
+      "arcade": [
+        105,
+        136
+      ],
+      "realistic": [
+        94,
+        122
+      ],
+      "simulator": [
+        110,
+        143
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.1,
+      "realistic": 0.12,
+      "simulator": 0.16
+    },
+    "expMultiplier": 1.0
+  }
+}

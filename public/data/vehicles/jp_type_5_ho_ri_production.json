@@ -1,0 +1,135 @@
+{
+  "id": "jp_type_5_ho_ri_production",
+  "performance": {
+    "horsepower": 1100.0,
+    "weight": 65.0,
+    "power_to_weight": 16.92,
+    "max_reverse_speed": 8.6,
+    "reload_time": 8.57,
+    "penetration": 233.5,
+    "max_speed": 40.4,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 6.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -10.0,
+      20.0
+    ],
+    "traverse_range": [
+      -10.0,
+      10.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 30.0,
+    "mainGun": {
+      "name": "105mm_Type5",
+      "caliber": 105.0,
+      "reloadTime": 8.57,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 11.14,
+        "expert": 9.86,
+        "ace": 8.57
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "105mm_type2_aphe",
+        "localizedName": "Type 2 APHE",
+        "type": "aphe_tank",
+        "caliber": 105.0,
+        "mass": 16.0,
+        "muzzleVelocity": 1000.0,
+        "deMarre": {
+          "fullCaliber": 105.0,
+          "isApcbc": false,
+          "explosiveMass": 0.2,
+          "Cx": 0.54
+        },
+        "penetration0m": 233.5,
+        "explosiveMassKg": 0.2,
+        "explosiveType": "tnt",
+        "tntEquivalent": 0.2
+      },
+      {
+        "name": "105mm_exp_he",
+        "localizedName": "Experimental HE",
+        "type": "he_frag_tank",
+        "caliber": 105.0,
+        "mass": 16.0,
+        "muzzleVelocity": 920.0,
+        "explosiveMassKg": 2.52,
+        "explosiveType": "tnt",
+        "tntEquivalent": 2.52
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 1500.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 8,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      5.2,
+      8.6,
+      12.9,
+      16.2,
+      19.9,
+      23.5,
+      34.0,
+      40.4
+    ],
+    "reverse_gear_speeds": [
+      5.2,
+      8.6
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 64.7,
+    "track_width": 0.6,
+    "secondary_weapons": null,
+    "main_gun_ammo": 51,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 95000,
+    "purchaseCost": 270000,
+    "crewTraining": 78000,
+    "expertTraining": 270000,
+    "aceTrainingGE": 1100,
+    "aceTrainingRP": 670000,
+    "repairCost": {
+      "arcade": [
+        5297,
+        6556
+      ],
+      "realistic": [
+        5446,
+        6740
+      ],
+      "simulator": [
+        8857,
+        10962
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.48,
+      "realistic": 2.1,
+      "simulator": 2.44
+    },
+    "expMultiplier": 1.9
+  }
+}

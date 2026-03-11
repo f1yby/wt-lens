@@ -1,0 +1,27 @@
+{
+  "id": "us_destroyer_forrestsherman_class",
+  "economy": {
+    "researchCost": 46000,
+    "purchaseCost": 150000,
+    "crewTraining": 43000,
+    "expertTraining": 150000,
+    "aceTrainingGE": 940,
+    "aceTrainingRP": 480000,
+    "repairCost": {
+      "arcade": [
+        6072,
+        7745
+      ],
+      "realistic": [
+        7023,
+        8958
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 3.15,
+      "realistic": 6.0,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.66
+  }
+}

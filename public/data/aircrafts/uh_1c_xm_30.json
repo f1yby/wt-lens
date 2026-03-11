@@ -1,0 +1,33 @@
+{
+  "id": "uh_1c_xm_30",
+  "economy": {
+    "researchCost": 360000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 8910,
+    "crewTraining": 10000,
+    "expertTraining": 1600000,
+    "aceTrainingGE": 2000,
+    "aceTrainingRP": 1760000,
+    "repairCost": {
+      "arcade": [
+        4905,
+        4905
+      ],
+      "realistic": [
+        1359,
+        1359
+      ],
+      "simulator": [
+        2068,
+        2068
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.0,
+      "realistic": 6.0,
+      "simulator": 8.6
+    },
+    "expMultiplier": 2.2,
+    "freeRepairs": 30
+  }
+}

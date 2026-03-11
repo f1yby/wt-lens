@@ -1,0 +1,33 @@
+{
+  "id": "ucav_orion",
+  "economy": {
+    "researchCost": 210000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 9270,
+    "crewTraining": 10000,
+    "expertTraining": 940000,
+    "aceTrainingGE": 2800,
+    "aceTrainingRP": 2150000,
+    "repairCost": {
+      "arcade": [
+        4140,
+        4140
+      ],
+      "realistic": [
+        6124,
+        6124
+      ],
+      "simulator": [
+        7039,
+        7039
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.0,
+      "realistic": 6.09,
+      "simulator": 12.0
+    },
+    "expMultiplier": 2.32,
+    "freeRepairs": 30
+  }
+}

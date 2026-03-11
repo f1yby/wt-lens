@@ -1,0 +1,31 @@
+{
+  "id": "ki-45_tei",
+  "economy": {
+    "researchCost": 2900,
+    "purchaseCost": 700,
+    "crewTraining": 200,
+    "expertTraining": 1000,
+    "aceTrainingGE": 20,
+    "aceTrainingRP": 96000,
+    "repairCost": {
+      "arcade": [
+        98,
+        132
+      ],
+      "realistic": [
+        166,
+        217
+      ],
+      "simulator": [
+        208,
+        271
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.1,
+      "realistic": 0.21,
+      "simulator": 0.38
+    },
+    "expMultiplier": 1.0
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "id": "fr_destroyer_le_fantasque_class_le_triomphant",
+  "economy": {
+    "researchCost": 15000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 1300,
+    "crewTraining": 8300,
+    "expertTraining": 55000,
+    "aceTrainingGE": 400,
+    "aceTrainingRP": 570000,
+    "repairCost": {
+      "arcade": [
+        1336,
+        1336
+      ],
+      "realistic": [
+        2169,
+        2169
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 3.77,
+      "realistic": 9.25,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.36,
+    "freeRepairs": 30
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "id": "fw-190a-8_usa",
+  "economy": {
+    "researchCost": 54000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 3850,
+    "crewTraining": 10000,
+    "expertTraining": 290000,
+    "aceTrainingGE": 940,
+    "aceTrainingRP": 960000,
+    "repairCost": {
+      "arcade": [
+        1695,
+        1695
+      ],
+      "realistic": [
+        4645,
+        4645
+      ],
+      "simulator": [
+        5387,
+        5387
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.85,
+      "realistic": 4.5,
+      "simulator": 8.82
+    },
+    "expMultiplier": 1.66,
+    "freeRepairs": 30
+  }
+}

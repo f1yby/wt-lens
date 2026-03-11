@@ -1,0 +1,33 @@
+{
+  "id": "sea_hawk_fga50_netherlands",
+  "economy": {
+    "researchCost": 135000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 8560,
+    "crewTraining": 10000,
+    "expertTraining": 620000,
+    "aceTrainingGE": 2000,
+    "aceTrainingRP": 1660000,
+    "repairCost": {
+      "arcade": [
+        2218,
+        2218
+      ],
+      "realistic": [
+        6517,
+        6517
+      ],
+      "simulator": [
+        8519,
+        8519
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.6,
+      "realistic": 7.6,
+      "simulator": 12.0
+    },
+    "expMultiplier": 2.08,
+    "freeRepairs": 30
+  }
+}

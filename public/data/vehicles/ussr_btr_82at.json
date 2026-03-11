@@ -1,0 +1,128 @@
+{
+  "id": "ussr_btr_82at",
+  "performance": {
+    "horsepower": 300.0,
+    "weight": 16.0,
+    "power_to_weight": 18.75,
+    "max_reverse_speed": 10.8,
+    "reload_time": 1.0,
+    "penetration": null,
+    "max_speed": 79.6,
+    "crew_count": 5,
+    "elevation_speed": 30.0,
+    "traverse_speed": 35.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "both",
+    "elevation_range": [
+      -5.0,
+      45.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": [
+      800,
+      600
+    ],
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": 1000.0,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 50.0,
+    "mainGun": null,
+    "ammunitions": null,
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": "kamaz",
+    "engine_model": "740_13_300",
+    "engine_type": null,
+    "engine_max_rpm": 2600.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 10,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      5.6,
+      10.2,
+      10.8,
+      17.4,
+      19.7,
+      28.4,
+      31.8,
+      43.5,
+      52.0,
+      79.6
+    ],
+    "reverse_gear_speeds": [
+      5.9,
+      10.8
+    ],
+    "steer_type": null,
+    "empty_weight": 15.7,
+    "track_width": 0.4,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_PKT",
+        "caliber": 7.6,
+        "ammo": 2000,
+        "reloadTime": 8.0,
+        "rateOfFire": 700,
+        "bulletType": "ap_i_ball"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "152mm_9M133_btr_82at_launcher",
+        "caliber": 152.0,
+        "ammo": 4,
+        "reloadTime": 20.0,
+        "rateOfFire": 5,
+        "bulletType": "atgm_tandem_tank",
+        "maxDistance": 5500,
+        "maxSpeed": 320,
+        "guidanceType": "saclos",
+        "penetration": 1200,
+        "explosiveMass": 4.0,
+        "explosiveType": "ocfol"
+      }
+    ],
+    "main_gun_ammo": 300,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": true
+  },
+  "economy": {
+    "researchCost": 160000,
+    "purchaseCost": 450000,
+    "crewTraining": 130000,
+    "expertTraining": 450000,
+    "aceTrainingGE": 2000,
+    "aceTrainingRP": 890000,
+    "repairCost": {
+      "arcade": [
+        2993,
+        5335
+      ],
+      "realistic": [
+        2971,
+        5297
+      ],
+      "simulator": [
+        3639,
+        6487
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.26,
+      "realistic": 1.58,
+      "simulator": 2.04
+    },
+    "expMultiplier": 2.14
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "fr_cruiser_chateaurenault_class_guichen",
+  "economy": {
+    "researchCost": 13000,
+    "purchaseCost": 31000,
+    "crewTraining": 9000,
+    "expertTraining": 31000,
+    "aceTrainingGE": 320,
+    "aceTrainingRP": 250000,
+    "repairCost": {
+      "arcade": [
+        1904,
+        2429
+      ],
+      "realistic": [
+        2959,
+        3774
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.65,
+      "realistic": 3.8,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.3
+  }
+}

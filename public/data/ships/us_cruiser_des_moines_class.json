@@ -1,0 +1,29 @@
+{
+  "id": "us_cruiser_des_moines_class",
+  "economy": {
+    "researchCost": 110000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 8020,
+    "crewTraining": 10000,
+    "expertTraining": 550000,
+    "aceTrainingGE": 1500,
+    "aceTrainingRP": 1380000,
+    "repairCost": {
+      "arcade": [
+        5645,
+        5645
+      ],
+      "realistic": [
+        6105,
+        6105
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 9.0,
+      "realistic": 12.0,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.96,
+    "freeRepairs": 30
+  }
+}

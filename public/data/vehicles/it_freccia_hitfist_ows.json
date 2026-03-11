@@ -1,0 +1,203 @@
+{
+  "id": "it_freccia_hitfist_ows",
+  "performance": {
+    "horsepower": 550.0,
+    "weight": 30.5,
+    "power_to_weight": 18.03,
+    "max_reverse_speed": 22.5,
+    "reload_time": 15.0,
+    "penetration": 114.0,
+    "max_speed": 110.3,
+    "crew_count": 5,
+    "elevation_speed": 45.8,
+    "traverse_speed": 57.3,
+    "has_stabilizer": true,
+    "stabilizer_type": "both",
+    "elevation_range": [
+      -10.0,
+      75.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": [
+      800,
+      600
+    ],
+    "commander_thermal_resolution": [
+      800,
+      600
+    ],
+    "gunner_thermal_diagonal": 1000.0,
+    "commander_thermal_diagonal": 1000.0,
+    "stabilizer_value": 1,
+    "elevation_range_value": 85.0,
+    "mainGun": {
+      "name": "30mm_Bushmaster_2_Mk_44_freccia_ows",
+      "caliber": 30.0,
+      "reloadTime": 15.0,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 19.5,
+        "expert": 17.25,
+        "ace": 15.0
+      },
+      "rateOfFire": 200,
+      "beltReloadTime": 15.0
+    },
+    "ammunitions": [
+      {
+        "name": "30mm_mk320",
+        "localizedName": "MK320",
+        "type": "apds_autocannon",
+        "caliber": 18.0,
+        "mass": 0.19,
+        "muzzleVelocity": 1480.0,
+        "deMarre": {
+          "fullCaliber": 30.0,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "isApcr": true,
+          "coreCaliber": 18.0,
+          "coreMass": 0.19,
+          "Cx": 0.13
+        },
+        "penetration0m": 95.1
+      },
+      {
+        "name": "30mm_mk258",
+        "localizedName": "MK258",
+        "type": "apds_fs_long_tank",
+        "caliber": 9.0,
+        "mass": 0.17,
+        "muzzleVelocity": 1430.0,
+        "lanzOdermatt": {
+          "workingLength": 130.0,
+          "density": 17500.0,
+          "material": "tungsten",
+          "Cx": 0.3
+        },
+        "penetration0m": 114.0,
+        "penetrationData": {
+          "at0m": {
+            "angle0": 114.0,
+            "angle30": 98.7,
+            "angle60": 57.0
+          }
+        }
+      },
+      {
+        "name": "30mm_mk_266",
+        "localizedName": "MK266",
+        "type": "he_i_t",
+        "caliber": 30.0,
+        "mass": 0.362,
+        "muzzleVelocity": 1080.0,
+        "explosiveMassKg": 0.032,
+        "explosiveType": "hexal",
+        "tntEquivalent": 0.045
+      }
+    ],
+    "penetrationData": {
+      "at0m": {
+        "angle0": 114.0,
+        "angle30": 98.7,
+        "angle60": 57.0
+      }
+    },
+    "autoLoader": false,
+    "engine_manufacturer": "iveco",
+    "engine_model": "iveco_8262_6v",
+    "engine_type": null,
+    "engine_max_rpm": 2300.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 10,
+    "reverse_gears": 4,
+    "forward_gear_speeds": [
+      12.3,
+      15.4,
+      15.8,
+      21.6,
+      27.7,
+      34.7,
+      46.5,
+      58.2,
+      78.5,
+      110.3
+    ],
+    "reverse_gear_speeds": [
+      12.4,
+      15.8,
+      16.9,
+      22.5
+    ],
+    "steer_type": null,
+    "empty_weight": 29.7,
+    "track_width": 0.4,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_Beretta_MG42_59_600",
+        "caliber": 7.6,
+        "ammo": 1200,
+        "reloadTime": 8.0,
+        "rateOfFire": 800,
+        "bulletType": "ap_ball"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "110mm_Spike_freccia_rocket_launchr",
+        "caliber": 110.0,
+        "ammo": 10,
+        "reloadTime": 10.0,
+        "rateOfFire": 120,
+        "bulletType": "atgm_tandem_tank",
+        "maxDistance": 5500,
+        "maxSpeed": 180,
+        "guidanceType": "optical",
+        "penetration": 900,
+        "explosiveMass": 0.9,
+        "explosiveType": "lx14"
+      }
+    ],
+    "main_gun_ammo": 200,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": true
+  },
+  "economy": {
+    "researchCost": 540000,
+    "purchaseCost": 870000,
+    "crewTraining": 240000,
+    "expertTraining": 830000,
+    "aceTrainingGE": 2100,
+    "aceTrainingRP": 1140000,
+    "repairCost": {
+      "arcade": [
+        3925,
+        6641
+      ],
+      "realistic": [
+        3645,
+        6168
+      ],
+      "simulator": [
+        4361,
+        7379
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.39,
+      "realistic": 1.66,
+      "simulator": 2.2
+    },
+    "expMultiplier": 2.38
+  }
+}

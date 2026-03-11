@@ -1,0 +1,171 @@
+{
+  "id": "us_m50_ontos",
+  "performance": {
+    "horsepower": 145.0,
+    "weight": 8.3,
+    "power_to_weight": 17.47,
+    "max_reverse_speed": 16.1,
+    "reload_time": 0.5,
+    "penetration": 433.0,
+    "max_speed": 48.2,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 18.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -10.0,
+      20.0
+    ],
+    "traverse_range": [
+      -40.0,
+      40.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 30.0,
+    "mainGun": {
+      "name": "106mm_M40A1C",
+      "caliber": 106.0,
+      "reloadTime": 0.5,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 0.65,
+        "expert": 0.57,
+        "ace": 0.5
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "106mm_m344a1",
+        "localizedName": "M344A1",
+        "type": "heat_grenade_tank",
+        "caliber": 106.0,
+        "mass": 7.96,
+        "muzzleVelocity": 502.9,
+        "penetration0m": 433.0,
+        "explosiveMassKg": 1.26,
+        "explosiveType": "comp_b",
+        "tntEquivalent": 1.6
+      },
+      {
+        "name": "106mm_m361a1",
+        "localizedName": "M361A1",
+        "type": "hesh_tank",
+        "caliber": 106.0,
+        "mass": 7.95,
+        "muzzleVelocity": 498.3,
+        "penetration0m": 152.0,
+        "explosiveMassKg": 3.5,
+        "explosiveType": "comp_a",
+        "tntEquivalent": 4.41
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 3400.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 4,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      7.8,
+      11.8,
+      27.5,
+      48.2
+    ],
+    "reverse_gear_speeds": [
+      16.1
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 8.16,
+    "track_width": 0.26,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_M1919A4",
+        "caliber": 7.6,
+        "ammo": 1000,
+        "reloadTime": 8.0,
+        "rateOfFire": 500,
+        "bulletType": "ap_ball"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "12_7mm_M80_20",
+        "caliber": 12.7,
+        "ammo": 120,
+        "reloadTime": 2.5,
+        "rateOfFire": 300,
+        "bulletType": "he_ball"
+      },
+      {
+        "trigger": "gunner3",
+        "name": "12_7mm_M80_20",
+        "caliber": 12.7,
+        "ammo": 120,
+        "reloadTime": 2.5,
+        "rateOfFire": 300,
+        "bulletType": "he_ball"
+      },
+      {
+        "trigger": "gunner4",
+        "name": "12_7mm_M80_20",
+        "caliber": 12.7,
+        "ammo": 120,
+        "reloadTime": 2.5,
+        "rateOfFire": 300,
+        "bulletType": "he_ball"
+      },
+      {
+        "trigger": "gunner5",
+        "name": "12_7mm_M80_20",
+        "caliber": 12.7,
+        "ammo": 120,
+        "reloadTime": 2.5,
+        "rateOfFire": 300,
+        "bulletType": "he_ball"
+      }
+    ],
+    "main_gun_ammo": 18,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 31000,
+    "purchaseCost": 200000,
+    "crewTraining": 57000,
+    "expertTraining": 200000,
+    "aceTrainingGE": 800,
+    "aceTrainingRP": 520000,
+    "repairCost": {
+      "arcade": [
+        3571,
+        4675
+      ],
+      "realistic": [
+        4060,
+        5315
+      ],
+      "simulator": [
+        5802,
+        7595
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.24,
+      "realistic": 1.95,
+      "simulator": 2.38
+    },
+    "expMultiplier": 1.72
+  }
+}

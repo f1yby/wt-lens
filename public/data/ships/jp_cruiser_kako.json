@@ -1,0 +1,27 @@
+{
+  "id": "jp_cruiser_kako",
+  "economy": {
+    "researchCost": 25000,
+    "purchaseCost": 87000,
+    "crewTraining": 25000,
+    "expertTraining": 87000,
+    "aceTrainingGE": 700,
+    "aceTrainingRP": 390000,
+    "repairCost": {
+      "arcade": [
+        5749,
+        7790
+      ],
+      "realistic": [
+        5987,
+        8113
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 3.8,
+      "realistic": 6.0,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.54
+  }
+}

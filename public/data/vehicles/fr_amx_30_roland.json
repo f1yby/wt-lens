@@ -1,0 +1,122 @@
+{
+  "id": "fr_amx_30_roland",
+  "performance": {
+    "horsepower": 680.0,
+    "weight": 34.0,
+    "power_to_weight": 20.0,
+    "max_reverse_speed": 65.1,
+    "reload_time": 0.42,
+    "penetration": null,
+    "max_speed": 65.1,
+    "crew_count": 5,
+    "elevation_speed": 40.0,
+    "traverse_speed": 85.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -10.0,
+      35.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 45.0,
+    "mainGun": {
+      "name": "163mm_roland_launcher",
+      "caliber": 163.0,
+      "reloadTime": 0.42,
+      "autoLoader": true,
+      "reloadTimes": {
+        "base": 0.42,
+        "expert": 0.42,
+        "ace": 0.42
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "163mm_roland_1",
+        "localizedName": "Roland 1",
+        "type": "sam_tank",
+        "caliber": 163.0,
+        "mass": 65.0,
+        "muzzleVelocity": 550.0
+      },
+      {
+        "name": "163mm_roland_3",
+        "localizedName": "Roland 3",
+        "type": "sam_tank",
+        "caliber": 163.0,
+        "mass": 77.0,
+        "muzzleVelocity": 550.0
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": true,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2400.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 5,
+    "reverse_gears": 5,
+    "forward_gear_speeds": [
+      6.8,
+      14.8,
+      26.7,
+      43.4,
+      65.1
+    ],
+    "reverse_gear_speeds": [
+      6.8,
+      14.8,
+      26.7,
+      43.4,
+      65.1
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 33.2,
+    "track_width": 0.57,
+    "secondary_weapons": null,
+    "main_gun_ammo": 10,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 260000,
+    "purchaseCost": 710000,
+    "crewTraining": 200000,
+    "expertTraining": 710000,
+    "aceTrainingGE": 2100,
+    "aceTrainingRP": 1080000,
+    "repairCost": {
+      "arcade": [
+        4682,
+        6718
+      ],
+      "realistic": [
+        4477,
+        6424
+      ],
+      "simulator": [
+        4939,
+        7086
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.6,
+      "realistic": 1.91,
+      "simulator": 2.41
+    },
+    "expMultiplier": 2.32
+  }
+}

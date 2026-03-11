@@ -1,0 +1,129 @@
+{
+  "id": "ussr_zsu_29k",
+  "performance": {
+    "horsepower": 93.5,
+    "weight": 10.55,
+    "power_to_weight": 8.86,
+    "max_reverse_speed": 5.3,
+    "reload_time": 5.0,
+    "penetration": 121.2,
+    "max_speed": 44.0,
+    "crew_count": 5,
+    "elevation_speed": 6.0,
+    "traverse_speed": 11.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -3.0,
+      82.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 85.0,
+    "mainGun": {
+      "name": "76mm_3K",
+      "caliber": 76.2,
+      "reloadTime": 5.0,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 6.5,
+        "expert": 5.75,
+        "ace": 5.0
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "76mm_br_361",
+        "localizedName": "BR-361",
+        "type": "aphebc_tank",
+        "caliber": 76.2,
+        "mass": 6.61,
+        "muzzleVelocity": 813.0,
+        "deMarre": {
+          "fullCaliber": 76.2,
+          "isApcbc": false,
+          "explosiveMass": 0.15
+        },
+        "penetration0m": 121.2,
+        "explosiveMassKg": 0.15,
+        "explosiveType": "tnt",
+        "tntEquivalent": 0.15
+      },
+      {
+        "name": "76mm_o_361",
+        "localizedName": "O-361",
+        "type": "he_frag_dist_fuse",
+        "caliber": 76.2,
+        "mass": 6.61,
+        "muzzleVelocity": 813.0,
+        "explosiveMassKg": 0.621,
+        "explosiveType": "tnt",
+        "tntEquivalent": 0.621
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2400.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 4,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      6.0,
+      12.5,
+      23.3,
+      44.0
+    ],
+    "reverse_gear_speeds": [
+      5.3
+    ],
+    "steer_type": null,
+    "empty_weight": 10.25,
+    "track_width": 0.1,
+    "secondary_weapons": null,
+    "main_gun_ammo": 48,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 11000,
+    "purchaseCost": 22000,
+    "crewTraining": 6300,
+    "expertTraining": 22000,
+    "aceTrainingGE": 210,
+    "aceTrainingRP": 220000,
+    "repairCost": {
+      "arcade": [
+        722,
+        919
+      ],
+      "realistic": [
+        860,
+        1094
+      ],
+      "simulator": [
+        1045,
+        1329
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.51,
+      "realistic": 0.78,
+      "simulator": 0.98
+    },
+    "expMultiplier": 1.24
+  }
+}

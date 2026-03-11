@@ -1,0 +1,133 @@
+{
+  "id": "il_tcm_20",
+  "performance": {
+    "horsepower": 148.0,
+    "weight": 10.0,
+    "power_to_weight": 14.8,
+    "max_reverse_speed": 17.4,
+    "reload_time": 3.0,
+    "penetration": 38.2,
+    "max_speed": 75.7,
+    "crew_count": 5,
+    "elevation_speed": 67.0,
+    "traverse_speed": 72.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -10.0,
+      90.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 100.0,
+    "mainGun": {
+      "name": "20mm_Hispano_mk_5",
+      "caliber": 20.0,
+      "reloadTime": 3.0,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 3.9,
+        "expert": 3.45,
+        "ace": 3.0
+      },
+      "rateOfFire": 700,
+      "beltReloadTime": 3.0
+    },
+    "ammunitions": [
+      {
+        "name": "20mm_oerlikon_ap",
+        "localizedName": "AP-T",
+        "type": "ap_t",
+        "caliber": 20.0,
+        "mass": 0.14,
+        "muzzleVelocity": 830.0,
+        "deMarre": {
+          "fullCaliber": 20.0,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "Cx": 0.4986
+        },
+        "penetration0m": 38.2
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 3000.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 8,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      6.2,
+      11.7,
+      15.4,
+      17.6,
+      29.1,
+      30.4,
+      44.3,
+      75.7
+    ],
+    "reverse_gear_speeds": [
+      6.9,
+      17.4
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 9.9,
+    "track_width": 0.28,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner2",
+        "name": "7_62mm_M1919A4",
+        "caliber": 7.6,
+        "ammo": 1000,
+        "reloadTime": 8.0,
+        "rateOfFire": 500,
+        "bulletType": "ap_ball"
+      }
+    ],
+    "main_gun_ammo": 360,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 46000,
+    "purchaseCost": 155000,
+    "crewTraining": 45000,
+    "expertTraining": 155000,
+    "aceTrainingGE": 630,
+    "aceTrainingRP": 440000,
+    "repairCost": {
+      "arcade": [
+        2824,
+        3631
+      ],
+      "realistic": [
+        2285,
+        2937
+      ],
+      "simulator": [
+        3295,
+        4235
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.15,
+      "realistic": 1.39,
+      "simulator": 2.1
+    },
+    "expMultiplier": 1.6
+  }
+}

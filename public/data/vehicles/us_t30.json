@@ -1,0 +1,180 @@
+{
+  "id": "us_t30",
+  "performance": {
+    "horsepower": 810.0,
+    "weight": 65.14,
+    "power_to_weight": 12.43,
+    "max_reverse_speed": 13.5,
+    "reload_time": 23.98,
+    "penetration": 199.2,
+    "max_speed": 35.0,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 18.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -10.0,
+      15.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 25.0,
+    "mainGun": {
+      "name": "155mm_T7",
+      "caliber": 155.0,
+      "reloadTime": 23.98,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 31.17,
+        "expert": 27.58,
+        "ace": 23.98
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "155mm_m112b1",
+        "localizedName": "M112B1",
+        "type": "apbc_usa_tank",
+        "caliber": 155.0,
+        "mass": 45.36,
+        "muzzleVelocity": 670.0,
+        "deMarre": {
+          "fullCaliber": 155.0,
+          "isApcbc": false,
+          "explosiveMass": 0.653
+        },
+        "penetration0m": 179.2,
+        "explosiveMassKg": 0.653,
+        "explosiveType": "exp_d",
+        "tntEquivalent": 0.646
+      },
+      {
+        "name": "155mm_t29e1",
+        "localizedName": "T29E1",
+        "type": "apcbc_tank",
+        "caliber": 155.0,
+        "mass": 45.36,
+        "muzzleVelocity": 670.0,
+        "deMarre": {
+          "fullCaliber": 155.0,
+          "isApcbc": true,
+          "explosiveMass": 0.653
+        },
+        "penetration0m": 199.2,
+        "explosiveMassKg": 0.653,
+        "explosiveType": "exp_d",
+        "tntEquivalent": 0.646
+      },
+      {
+        "name": "155mm_m107",
+        "localizedName": "M107",
+        "type": "he_frag_tank",
+        "caliber": 155.0,
+        "mass": 43.1,
+        "muzzleVelocity": 717.0,
+        "explosiveMassKg": 6.96,
+        "explosiveType": "comp_b",
+        "tntEquivalent": 8.839
+      },
+      {
+        "name": "155mm_m110",
+        "localizedName": "M110",
+        "type": "smoke_tank",
+        "caliber": 155.0,
+        "mass": 44.63,
+        "muzzleVelocity": 717.0,
+        "explosiveMassKg": 0.05,
+        "explosiveType": "smoke_composition",
+        "tntEquivalent": 0.05
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2800.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 5,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      3.4,
+      8.3,
+      14.3,
+      23.1,
+      35.0
+    ],
+    "reverse_gear_speeds": [
+      4.6,
+      13.5
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 64.7,
+    "track_width": 0.5,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "12_7mm_M2_HB",
+        "caliber": 12.7,
+        "ammo": 1200,
+        "reloadTime": 8.0,
+        "rateOfFire": 575,
+        "bulletType": "ap_i_t_ball_M20"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "12_7mm_M2_HB",
+        "caliber": 12.7,
+        "ammo": 1000,
+        "reloadTime": 8.0,
+        "rateOfFire": 575,
+        "bulletType": "ap_i_t_ball_M20"
+      }
+    ],
+    "main_gun_ammo": 34,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 95000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 8020,
+    "crewTraining": 10000,
+    "expertTraining": 440000,
+    "aceTrainingGE": 1100,
+    "aceTrainingRP": 1380000,
+    "repairCost": {
+      "arcade": [
+        3725,
+        3725
+      ],
+      "realistic": [
+        3858,
+        3858
+      ],
+      "simulator": [
+        5280,
+        5280
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 3.01,
+      "realistic": 4.2,
+      "simulator": 4.8
+    },
+    "expMultiplier": 1.96,
+    "freeRepairs": 30
+  }
+}

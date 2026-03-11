@@ -1,0 +1,129 @@
+{
+  "id": "sw_pbv_301",
+  "performance": {
+    "horsepower": 150.0,
+    "weight": 11.5,
+    "power_to_weight": 13.04,
+    "max_reverse_speed": 6.8,
+    "reload_time": 8.0,
+    "penetration": 38.4,
+    "max_speed": 45.2,
+    "crew_count": 5,
+    "elevation_speed": 10.0,
+    "traverse_speed": 30.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -15.0,
+      48.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 63.0,
+    "mainGun": {
+      "name": "20mm_akan_m45_B",
+      "caliber": 20.0,
+      "reloadTime": 8.0,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 10.4,
+        "expert": 9.2,
+        "ace": 8.0
+      },
+      "rateOfFire": 725,
+      "beltReloadTime": 8.0
+    },
+    "ammunitions": [
+      {
+        "name": "20mm_slsgr_m42",
+        "localizedName": "slsgr m/42",
+        "type": "he_frag_i_t",
+        "caliber": 20.0,
+        "mass": 0.136,
+        "muzzleVelocity": 845.0,
+        "explosiveMassKg": 0.006,
+        "explosiveType": "petn",
+        "tntEquivalent": 0.008
+      },
+      {
+        "name": "20mm_slpgr_m42",
+        "localizedName": "slpgr m/42",
+        "type": "ap_t",
+        "caliber": 20.0,
+        "mass": 0.136,
+        "muzzleVelocity": 845.0,
+        "deMarre": {
+          "fullCaliber": 20.0,
+          "isApcbc": false,
+          "explosiveMass": 0
+        },
+        "penetration0m": 38.4
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 3200.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 5,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      4.4,
+      11.1,
+      20.1,
+      28.3,
+      45.2
+    ],
+    "reverse_gear_speeds": [
+      6.8
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 11.0,
+    "track_width": 0.365,
+    "secondary_weapons": null,
+    "main_gun_ammo": 480,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 7900,
+    "purchaseCost": 10000,
+    "crewTraining": 3000,
+    "expertTraining": 10000,
+    "aceTrainingGE": 115,
+    "aceTrainingRP": 160000,
+    "repairCost": {
+      "arcade": [
+        428,
+        579
+      ],
+      "realistic": [
+        361,
+        488
+      ],
+      "simulator": [
+        561,
+        759
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.33,
+      "realistic": 0.37,
+      "simulator": 0.48
+    },
+    "expMultiplier": 1.12
+  }
+}

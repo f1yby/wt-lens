@@ -1,0 +1,33 @@
+{
+  "id": "pyorremyrsky",
+  "economy": {
+    "researchCost": 33000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 1600,
+    "crewTraining": 10000,
+    "expertTraining": 165000,
+    "aceTrainingGE": 590,
+    "aceTrainingRP": 710000,
+    "repairCost": {
+      "arcade": [
+        689,
+        689
+      ],
+      "realistic": [
+        2214,
+        2214
+      ],
+      "simulator": [
+        2387,
+        2387
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.32,
+      "realistic": 3.48,
+      "simulator": 6.87
+    },
+    "expMultiplier": 1.48,
+    "freeRepairs": 30
+  }
+}

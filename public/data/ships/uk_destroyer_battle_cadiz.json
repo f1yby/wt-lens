@@ -1,0 +1,29 @@
+{
+  "id": "uk_destroyer_battle_cadiz",
+  "economy": {
+    "researchCost": 18000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 1450,
+    "crewTraining": 10000,
+    "expertTraining": 81000,
+    "aceTrainingGE": 500,
+    "aceTrainingRP": 640000,
+    "repairCost": {
+      "arcade": [
+        1616,
+        1616
+      ],
+      "realistic": [
+        2526,
+        2526
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 4.27,
+      "realistic": 10.47,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.42,
+    "freeRepairs": 30
+  }
+}

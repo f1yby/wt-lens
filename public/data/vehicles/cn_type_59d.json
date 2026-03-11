@@ -1,0 +1,193 @@
+{
+  "id": "cn_type_59d",
+  "performance": {
+    "horsepower": 520.0,
+    "weight": 36.5,
+    "power_to_weight": 14.25,
+    "max_reverse_speed": 7.5,
+    "reload_time": 7.5,
+    "penetration": 337.9,
+    "max_speed": 50.0,
+    "crew_count": 5,
+    "elevation_speed": 4.5,
+    "traverse_speed": 10.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "vertical",
+    "elevation_range": [
+      -4.5,
+      18.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 22.5,
+    "mainGun": {
+      "name": "105mm_Type_83",
+      "caliber": 105.0,
+      "reloadTime": 7.5,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 9.75,
+        "expert": 8.62,
+        "ace": 7.5
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "105mm_TYPE83_HEAT",
+        "localizedName": "Type-83 HEAT",
+        "type": "heat_fs_tank",
+        "caliber": 105.0,
+        "mass": 11.0,
+        "muzzleVelocity": 1173.5,
+        "penetration0m": 400.0,
+        "explosiveMassKg": 0.97,
+        "explosiveType": "comp_b",
+        "tntEquivalent": 1.232
+      },
+      {
+        "name": "105mm_TYPE83_HESH",
+        "localizedName": "Type-83 HESH",
+        "type": "hesh_tank",
+        "caliber": 105.0,
+        "mass": 11.2,
+        "muzzleVelocity": 731.5,
+        "penetration0m": 127.0,
+        "explosiveMassKg": 2.9937,
+        "explosiveType": "comp_a",
+        "tntEquivalent": 3.772
+      },
+      {
+        "name": "105mm_btm_1",
+        "localizedName": "BTM1",
+        "type": "sapcbc_tank",
+        "caliber": 105.0,
+        "mass": 16.2,
+        "muzzleVelocity": 803.0,
+        "deMarre": {
+          "fullCaliber": 105.0,
+          "isApcbc": true,
+          "explosiveMass": 1.5
+        },
+        "penetration0m": 150.1,
+        "explosiveMassKg": 1.5,
+        "explosiveType": "a_ix_2",
+        "tntEquivalent": 2.1
+      },
+      {
+        "name": "105mm_TYPE83_APDS",
+        "localizedName": "Type-83 APDS",
+        "type": "apds_fs_tungsten_l10_l15_tank",
+        "caliber": 33.0,
+        "mass": 4.2,
+        "muzzleVelocity": 1455.0,
+        "lanzOdermatt": {
+          "workingLength": 327.0,
+          "density": 17500.0,
+          "material": "tungsten",
+          "Cx": 0.2676
+        },
+        "penetration0m": 337.9,
+        "penetrationData": {
+          "at0m": {
+            "angle0": 337.9,
+            "angle30": 292.6,
+            "angle60": 169.0
+          }
+        }
+      }
+    ],
+    "penetrationData": {
+      "at0m": {
+        "angle0": 337.9,
+        "angle30": 292.6,
+        "angle60": 169.0
+      }
+    },
+    "autoLoader": false,
+    "engine_manufacturer": "CNGC",
+    "engine_model": "12150L",
+    "engine_type": null,
+    "engine_max_rpm": 2000.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 5,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      7.5,
+      16.1,
+      22.5,
+      31.5,
+      50.0
+    ],
+    "reverse_gear_speeds": [
+      7.5
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 36.0,
+    "track_width": 0.58,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_Type_59",
+        "caliber": 7.6,
+        "ammo": 3500,
+        "reloadTime": 8.0,
+        "rateOfFire": 600,
+        "bulletType": "ap_i_ball"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "12_7mm_Type_54",
+        "caliber": 12.7,
+        "ammo": 250,
+        "reloadTime": 8.0,
+        "rateOfFire": 600,
+        "bulletType": "ap_i_t_ball"
+      }
+    ],
+    "main_gun_ammo": 37,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": true
+  },
+  "economy": {
+    "researchCost": 135000,
+    "purchaseCost": 380000,
+    "crewTraining": 110000,
+    "expertTraining": 380000,
+    "aceTrainingGE": 1400,
+    "aceTrainingRP": 830000,
+    "repairCost": {
+      "arcade": [
+        4326,
+        5967
+      ],
+      "realistic": [
+        4492,
+        6195
+      ],
+      "simulator": [
+        5562,
+        7671
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.37,
+      "realistic": 1.9,
+      "simulator": 2.27
+    },
+    "expMultiplier": 2.08
+  }
+}

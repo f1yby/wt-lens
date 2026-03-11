@@ -1,0 +1,31 @@
+{
+  "id": "mig-17_china",
+  "economy": {
+    "researchCost": 61000,
+    "purchaseCost": 340000,
+    "crewTraining": 98000,
+    "expertTraining": 340000,
+    "aceTrainingGE": 1800,
+    "aceTrainingRP": 780000,
+    "repairCost": {
+      "arcade": [
+        2726,
+        4057
+      ],
+      "realistic": [
+        8118,
+        12081
+      ],
+      "simulator": [
+        8861,
+        13186
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.19,
+      "realistic": 3.8,
+      "simulator": 6.0
+    },
+    "expMultiplier": 2.02
+  }
+}

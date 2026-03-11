@@ -1,0 +1,33 @@
+{
+  "id": "boomerang_mkii",
+  "economy": {
+    "researchCost": 14000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 1320,
+    "crewTraining": 6900,
+    "expertTraining": 46000,
+    "aceTrainingGE": 320,
+    "aceTrainingRP": 500000,
+    "repairCost": {
+      "arcade": [
+        844,
+        844
+      ],
+      "realistic": [
+        3191,
+        3191
+      ],
+      "simulator": [
+        1730,
+        1730
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.08,
+      "realistic": 3.33,
+      "simulator": 4.79
+    },
+    "expMultiplier": 1.3,
+    "freeRepairs": 30
+  }
+}

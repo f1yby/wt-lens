@@ -1,0 +1,31 @@
+{
+  "id": "hunter_f6",
+  "economy": {
+    "researchCost": 190000,
+    "purchaseCost": 530000,
+    "crewTraining": 150000,
+    "expertTraining": 530000,
+    "aceTrainingGE": 2600,
+    "aceTrainingRP": 1010000,
+    "repairCost": {
+      "arcade": [
+        2855,
+        4180
+      ],
+      "realistic": [
+        10016,
+        14665
+      ],
+      "simulator": [
+        9367,
+        13715
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.25,
+      "realistic": 3.8,
+      "simulator": 6.0
+    },
+    "expMultiplier": 2.26
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "id": "ussr_su_100Y",
+  "performance": {
+    "horsepower": 850.0,
+    "weight": 64.0,
+    "power_to_weight": 13.28,
+    "max_reverse_speed": 4.1,
+    "reload_time": 19.23,
+    "penetration": 224.3,
+    "max_speed": 32.3,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 7.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -5.0,
+      15.0
+    ],
+    "traverse_range": [
+      -10.0,
+      10.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 20.0,
+    "mainGun": {
+      "name": "130mm_B13",
+      "caliber": 130.0,
+      "reloadTime": 19.23,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 25.0,
+        "expert": 22.11,
+        "ace": 19.23
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "130mm_pb_46a",
+        "localizedName": "PB-46A",
+        "type": "sapcbc_tank",
+        "caliber": 130.0,
+        "mass": 33.5,
+        "muzzleVelocity": 870.0,
+        "deMarre": {
+          "fullCaliber": 130.0,
+          "isApcbc": true,
+          "explosiveMass": 2.348,
+          "Cx": 0.35
+        },
+        "penetration0m": 224.3,
+        "explosiveMassKg": 2.348,
+        "explosiveType": "tnt",
+        "tntEquivalent": 2.348
+      },
+      {
+        "name": "130mm_of_46",
+        "localizedName": "OF-46",
+        "type": "he_frag_tank",
+        "caliber": 130.0,
+        "mass": 33.4,
+        "muzzleVelocity": 870.0,
+        "explosiveMassKg": 3.583,
+        "explosiveType": "tnt",
+        "tntEquivalent": 3.583
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 1850.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 4,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      4.2,
+      7.8,
+      14.7,
+      32.3
+    ],
+    "reverse_gear_speeds": [
+      4.1
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 63.5,
+    "track_width": 0.65,
+    "secondary_weapons": null,
+    "main_gun_ammo": 30,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 46000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 2980,
+    "crewTraining": 10000,
+    "expertTraining": 250000,
+    "aceTrainingGE": 630,
+    "aceTrainingRP": 870000,
+    "repairCost": {
+      "arcade": [
+        1455,
+        1455
+      ],
+      "realistic": [
+        1693,
+        1693
+      ],
+      "simulator": [
+        2335,
+        2335
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.13,
+      "realistic": 3.25,
+      "simulator": 4.13
+    },
+    "expMultiplier": 1.6,
+    "freeRepairs": 30
+  }
+}

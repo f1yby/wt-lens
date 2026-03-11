@@ -1,0 +1,27 @@
+{
+  "id": "germ_skr_pr50_karl_marx",
+  "economy": {
+    "researchCost": 460000,
+    "purchaseCost": 640000,
+    "crewTraining": 185000,
+    "expertTraining": 640000,
+    "aceTrainingGE": 1400,
+    "aceTrainingRP": 620000,
+    "repairCost": {
+      "arcade": [
+        9100,
+        11389
+      ],
+      "realistic": [
+        13070,
+        16358
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.14,
+      "realistic": 4.12,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.84
+  }
+}

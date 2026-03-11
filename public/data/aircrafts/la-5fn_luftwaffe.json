@@ -1,0 +1,33 @@
+{
+  "id": "la-5fn_luftwaffe",
+  "economy": {
+    "researchCost": 26000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 5250,
+    "crewTraining": 10000,
+    "expertTraining": 115000,
+    "aceTrainingGE": 500,
+    "aceTrainingRP": 640000,
+    "repairCost": {
+      "arcade": [
+        683,
+        683
+      ],
+      "realistic": [
+        5085,
+        5085
+      ],
+      "simulator": [
+        2100,
+        2100
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.2,
+      "realistic": 4.5,
+      "simulator": 6.15
+    },
+    "expMultiplier": 1.42,
+    "freeRepairs": 30
+  }
+}

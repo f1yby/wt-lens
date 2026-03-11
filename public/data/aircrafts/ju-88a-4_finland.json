@@ -1,0 +1,31 @@
+{
+  "id": "ju-88a-4_finland",
+  "economy": {
+    "researchCost": 9200,
+    "purchaseCost": 16000,
+    "crewTraining": 4500,
+    "expertTraining": 16000,
+    "aceTrainingGE": 180,
+    "aceTrainingRP": 190000,
+    "repairCost": {
+      "arcade": [
+        690,
+        896
+      ],
+      "realistic": [
+        1106,
+        1395
+      ],
+      "simulator": [
+        1765,
+        2226
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.43,
+      "realistic": 0.9,
+      "simulator": 1.83
+    },
+    "expMultiplier": 1.18
+  }
+}

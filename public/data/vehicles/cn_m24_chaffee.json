@@ -1,0 +1,182 @@
+{
+  "id": "cn_m24_chaffee",
+  "performance": {
+    "horsepower": 296.0,
+    "weight": 18.4,
+    "power_to_weight": 16.09,
+    "max_reverse_speed": 23.1,
+    "reload_time": 6.45,
+    "penetration": 104.0,
+    "max_speed": 56.4,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 24.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "vertical",
+    "elevation_range": [
+      -10.0,
+      15.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 25.0,
+    "mainGun": {
+      "name": "75mm_M6",
+      "caliber": 75.0,
+      "reloadTime": 6.45,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 8.38,
+        "expert": 7.42,
+        "ace": 6.45
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "75mm_m72",
+        "localizedName": "M72 shot",
+        "type": "ap_tank",
+        "caliber": 75.0,
+        "mass": 6.3,
+        "muzzleVelocity": 619.0,
+        "deMarre": {
+          "fullCaliber": 75.0,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "Cx": 0.5
+        },
+        "penetration0m": 91.0
+      },
+      {
+        "name": "75mm_m48",
+        "localizedName": "M48 shell",
+        "type": "he_frag_tank",
+        "caliber": 75.0,
+        "mass": 6.3,
+        "muzzleVelocity": 463.0,
+        "explosiveMassKg": 0.666,
+        "explosiveType": "tnt",
+        "tntEquivalent": 0.666
+      },
+      {
+        "name": "75mm_m61",
+        "localizedName": "M61 shot",
+        "type": "apcbc_tank",
+        "caliber": 75.0,
+        "mass": 6.79,
+        "muzzleVelocity": 618.0,
+        "deMarre": {
+          "fullCaliber": 75.0,
+          "isApcbc": true,
+          "explosiveMass": 0.065,
+          "Cx": 0.379
+        },
+        "penetration0m": 104.0,
+        "explosiveMassKg": 0.065,
+        "explosiveType": "exp_d",
+        "tntEquivalent": 0.064
+      },
+      {
+        "name": "75mm_m64",
+        "localizedName": "M64",
+        "type": "smoke_tank",
+        "caliber": 75.0,
+        "mass": 6.9,
+        "muzzleVelocity": 603.0,
+        "explosiveMassKg": 0.05,
+        "explosiveType": "smoke_composition",
+        "tntEquivalent": 0.05
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 3200.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 8,
+    "reverse_gears": 4,
+    "forward_gear_speeds": [
+      6.2,
+      9.5,
+      14.4,
+      15.6,
+      22.3,
+      24.1,
+      36.4,
+      56.4
+    ],
+    "reverse_gear_speeds": [
+      5.9,
+      9.1,
+      15.2,
+      23.1
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 18.2,
+    "track_width": 0.406,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_M1919A4",
+        "caliber": 7.6,
+        "ammo": 3750,
+        "reloadTime": 8.0,
+        "rateOfFire": 500,
+        "bulletType": "ap_ball"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "12_7mm_M2_HB",
+        "caliber": 12.7,
+        "ammo": 400,
+        "reloadTime": 8.0,
+        "rateOfFire": 575,
+        "bulletType": "ap_i_t_ball_M20"
+      }
+    ],
+    "main_gun_ammo": 48,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 14000,
+    "purchaseCost": 32000,
+    "crewTraining": 9200,
+    "expertTraining": 32000,
+    "aceTrainingGE": 270,
+    "aceTrainingRP": 250000,
+    "repairCost": {
+      "arcade": [
+        734,
+        1054
+      ],
+      "realistic": [
+        838,
+        1204
+      ],
+      "simulator": [
+        995,
+        1431
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.52,
+      "realistic": 0.68,
+      "simulator": 0.95
+    },
+    "expMultiplier": 1.3
+  }
+}

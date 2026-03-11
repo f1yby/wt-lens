@@ -1,0 +1,27 @@
+{
+  "id": "uk_corvette_peacock",
+  "economy": {
+    "researchCost": 280000,
+    "purchaseCost": 780000,
+    "crewTraining": 220000,
+    "expertTraining": 780000,
+    "aceTrainingGE": 1700,
+    "aceTrainingRP": 720000,
+    "repairCost": {
+      "arcade": [
+        5643,
+        6933
+      ],
+      "realistic": [
+        8864,
+        10890
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.3,
+      "realistic": 2.31,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.96
+  }
+}

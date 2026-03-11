@@ -1,0 +1,33 @@
+{
+  "id": "bf-109g-2_romania",
+  "economy": {
+    "researchCost": 26000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 1450,
+    "crewTraining": 10000,
+    "expertTraining": 115000,
+    "aceTrainingGE": 500,
+    "aceTrainingRP": 640000,
+    "repairCost": {
+      "arcade": [
+        700,
+        700
+      ],
+      "realistic": [
+        1441,
+        1441
+      ],
+      "simulator": [
+        2177,
+        2177
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.25,
+      "realistic": 2.91,
+      "simulator": 6.13
+    },
+    "expMultiplier": 1.42,
+    "freeRepairs": 30
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "id": "md_460_saar",
+  "economy": {
+    "researchCost": 96000,
+    "purchaseCost": 530000,
+    "crewTraining": 150000,
+    "expertTraining": 530000,
+    "aceTrainingGE": 2600,
+    "aceTrainingRP": 1010000,
+    "repairCost": {
+      "arcade": [
+        3343,
+        4543
+      ],
+      "realistic": [
+        9315,
+        12656
+      ],
+      "simulator": [
+        10606,
+        14411
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.3,
+      "realistic": 3.8,
+      "simulator": 6.0
+    },
+    "expMultiplier": 2.26
+  }
+}

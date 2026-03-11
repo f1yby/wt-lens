@@ -1,0 +1,33 @@
+{
+  "id": "bf-109f-4_hungary",
+  "economy": {
+    "researchCost": 33000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 1600,
+    "crewTraining": 10000,
+    "expertTraining": 165000,
+    "aceTrainingGE": 590,
+    "aceTrainingRP": 710000,
+    "repairCost": {
+      "arcade": [
+        689,
+        689
+      ],
+      "realistic": [
+        3022,
+        3022
+      ],
+      "simulator": [
+        2411,
+        2411
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.32,
+      "realistic": 3.84,
+      "simulator": 7.0
+    },
+    "expMultiplier": 1.48,
+    "freeRepairs": 30
+  }
+}

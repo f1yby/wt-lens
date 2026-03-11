@@ -1,0 +1,27 @@
+{
+  "id": "fr_frigate_croix_de_lorraine_class_la_surprise",
+  "economy": {
+    "researchCost": 75000,
+    "purchaseCost": 250000,
+    "crewTraining": 72000,
+    "expertTraining": 250000,
+    "aceTrainingGE": 940,
+    "aceTrainingRP": 480000,
+    "repairCost": {
+      "arcade": [
+        7067,
+        9015
+      ],
+      "realistic": [
+        10339,
+        13188
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.79,
+      "realistic": 4.53,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.66
+  }
+}

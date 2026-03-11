@@ -1,0 +1,162 @@
+{
+  "id": "ussr_t_70_1942",
+  "performance": {
+    "horsepower": 140.0,
+    "weight": 9.8,
+    "power_to_weight": 14.29,
+    "max_reverse_speed": 5.1,
+    "reload_time": 4.0,
+    "penetration": 95.5,
+    "max_speed": 45.0,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 6.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -6.0,
+      20.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 26.0,
+    "mainGun": {
+      "name": "45mm_20K",
+      "caliber": 45.0,
+      "reloadTime": 4.0,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 5.2,
+        "expert": 4.6,
+        "ace": 4.0
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "45mm_br_243",
+        "localizedName": "BR-240",
+        "type": "aphebc_tank",
+        "caliber": 45.0,
+        "mass": 1.43,
+        "muzzleVelocity": 760.0,
+        "deMarre": {
+          "fullCaliber": 45.0,
+          "isApcbc": false,
+          "explosiveMass": 0.019,
+          "Cx": 0.3984
+        },
+        "penetration0m": 69.9,
+        "explosiveMassKg": 0.019,
+        "explosiveType": "a_ix_2",
+        "tntEquivalent": 0.027
+      },
+      {
+        "name": "45mm_br_243sp",
+        "localizedName": "BR-240SP",
+        "type": "apbc_usa_tank",
+        "caliber": 45.0,
+        "mass": 1.43,
+        "muzzleVelocity": 757.0,
+        "deMarre": {
+          "fullCaliber": 45.0,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "Cx": 0.3984
+        },
+        "penetration0m": 73.1
+      },
+      {
+        "name": "45mm_br_243p",
+        "localizedName": "BR-240P",
+        "type": "apcr_tank",
+        "caliber": 20.0,
+        "mass": 0.85,
+        "muzzleVelocity": 985.0,
+        "deMarre": {
+          "fullCaliber": 45.0,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "isApcr": true,
+          "coreCaliber": 20.0,
+          "coreMass": 0.26,
+          "Cx": 0.4783
+        },
+        "penetration0m": 95.5
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 3400.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 4,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      7.0,
+      15.0,
+      25.1,
+      45.0
+    ],
+    "reverse_gear_speeds": [
+      5.1
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 9.7,
+    "track_width": 0.26,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_DT",
+        "caliber": 7.6,
+        "ammo": 945,
+        "reloadTime": 8.0,
+        "rateOfFire": 600,
+        "bulletType": "ap_i_ball"
+      }
+    ],
+    "main_gun_ammo": 90,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 5900,
+    "purchaseCost": 6300,
+    "crewTraining": 1800,
+    "expertTraining": 6300,
+    "aceTrainingGE": 75,
+    "aceTrainingRP": 135000,
+    "repairCost": {
+      "arcade": [
+        249,
+        321
+      ],
+      "realistic": [
+        286,
+        368
+      ],
+      "simulator": [
+        359,
+        462
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.19,
+      "realistic": 0.24,
+      "simulator": 0.26
+    },
+    "expMultiplier": 1.06
+  }
+}

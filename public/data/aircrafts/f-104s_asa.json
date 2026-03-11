@@ -1,0 +1,31 @@
+{
+  "id": "f-104s_asa",
+  "economy": {
+    "researchCost": 260000,
+    "purchaseCost": 720000,
+    "crewTraining": 200000,
+    "expertTraining": 720000,
+    "aceTrainingGE": 3200,
+    "aceTrainingRP": 1210000,
+    "repairCost": {
+      "arcade": [
+        3008,
+        4065
+      ],
+      "realistic": [
+        8848,
+        11957
+      ],
+      "simulator": [
+        9054,
+        12236
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.02,
+      "realistic": 3.16,
+      "simulator": 6.0
+    },
+    "expMultiplier": 2.44
+  }
+}

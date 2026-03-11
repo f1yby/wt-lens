@@ -1,0 +1,33 @@
+{
+  "id": "fiat_cr42_marcolin",
+  "economy": {
+    "researchCost": 4000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 400,
+    "crewTraining": 450,
+    "expertTraining": 3000,
+    "aceTrainingGE": 45,
+    "aceTrainingRP": 220000,
+    "repairCost": {
+      "arcade": [
+        491,
+        491
+      ],
+      "realistic": [
+        195,
+        195
+      ],
+      "simulator": [
+        733,
+        733
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.42,
+      "realistic": 0.68,
+      "simulator": 1.79
+    },
+    "expMultiplier": 1.0,
+    "freeRepairs": 30
+  }
+}

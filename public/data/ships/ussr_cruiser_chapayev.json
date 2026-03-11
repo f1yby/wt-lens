@@ -1,0 +1,27 @@
+{
+  "id": "ussr_cruiser_chapayev",
+  "economy": {
+    "researchCost": 46000,
+    "purchaseCost": 150000,
+    "crewTraining": 43000,
+    "expertTraining": 150000,
+    "aceTrainingGE": 940,
+    "aceTrainingRP": 480000,
+    "repairCost": {
+      "arcade": [
+        10089,
+        13086
+      ],
+      "realistic": [
+        9792,
+        12700
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 4.24,
+      "realistic": 6.0,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.66
+  }
+}

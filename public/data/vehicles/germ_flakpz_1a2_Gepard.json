@@ -1,0 +1,146 @@
+{
+  "id": "germ_flakpz_1a2_Gepard",
+  "performance": {
+    "horsepower": 830.0,
+    "weight": 47.5,
+    "power_to_weight": 17.47,
+    "max_reverse_speed": 25.1,
+    "reload_time": 1.0,
+    "penetration": 134.5,
+    "max_speed": 65.2,
+    "crew_count": 5,
+    "elevation_speed": 42.0,
+    "traverse_speed": 90.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "both",
+    "elevation_range": [
+      -5.0,
+      85.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 90.0,
+    "mainGun": {
+      "name": "35mm_Oerlikon_KDA",
+      "caliber": 35.0,
+      "reloadTime": 1.0,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 1.3,
+        "expert": 1.15,
+        "ace": 1.0
+      },
+      "rateOfFire": 550,
+      "beltReloadTime": 1.0
+    },
+    "ammunitions": [
+      {
+        "name": "35_228mm_apds_t",
+        "localizedName": "DM23",
+        "type": "apds_autocannon",
+        "caliber": 18.0,
+        "mass": 0.38,
+        "muzzleVelocity": 1400.0,
+        "deMarre": {
+          "fullCaliber": 35.0,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "isApcr": true,
+          "coreCaliber": 18.0,
+          "coreMass": 0.295,
+          "Cx": 0.25
+        },
+        "penetration0m": 134.5
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2200.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 8,
+    "reverse_gears": 4,
+    "forward_gear_speeds": [
+      7.0,
+      14.0,
+      18.0,
+      25.1,
+      30.5,
+      39.0,
+      48.8,
+      65.2
+    ],
+    "reverse_gear_speeds": [
+      7.0,
+      14.0,
+      18.0,
+      25.1
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 46.9,
+    "track_width": 0.55,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "70mm_FIM_92E_Stinger_launcher",
+        "caliber": 70.0,
+        "ammo": 4,
+        "reloadTime": 15.0,
+        "rateOfFire": 60,
+        "bulletType": "sam_tank",
+        "maxDistance": 10000,
+        "maxSpeed": 670,
+        "guidanceType": "optical",
+        "explosiveMass": 0.45,
+        "explosiveType": "hta"
+      }
+    ],
+    "main_gun_ammo": 340,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": true
+  },
+  "economy": {
+    "researchCost": 110000,
+    "purchaseCost": 620000,
+    "crewTraining": 175000,
+    "expertTraining": 620000,
+    "aceTrainingGE": 2100,
+    "aceTrainingRP": 1010000,
+    "repairCost": {
+      "arcade": [
+        5100,
+        7035
+      ],
+      "realistic": [
+        4719,
+        6510
+      ],
+      "simulator": [
+        4754,
+        6557
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.6,
+      "realistic": 1.94,
+      "simulator": 2.5
+    },
+    "expMultiplier": 2.26
+  }
+}

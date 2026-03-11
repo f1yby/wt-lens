@@ -1,0 +1,125 @@
+{
+  "id": "uk_fv4005",
+  "performance": {
+    "horsepower": 650.0,
+    "weight": 50.0,
+    "power_to_weight": 13.0,
+    "max_reverse_speed": 9.6,
+    "reload_time": 25.0,
+    "penetration": 228.0,
+    "max_speed": 28.0,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 18.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -7.0,
+      15.0
+    ],
+    "traverse_range": [
+      -45.0,
+      45.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 22.0,
+    "mainGun": {
+      "name": "183mm_QF_L4",
+      "caliber": 183.0,
+      "reloadTime": 25.0,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 32.5,
+        "expert": 28.75,
+        "ace": 25.0
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "183mm_hesh",
+        "localizedName": "Shell L1",
+        "type": "hesh_tank",
+        "caliber": 183.0,
+        "mass": 72.575,
+        "muzzleVelocity": 716.0,
+        "penetration0m": 228.0,
+        "explosiveMassKg": 17.0,
+        "explosiveType": "rdx_pwx",
+        "tntEquivalent": 21.76
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2550.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 5,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      3.2,
+      8.2,
+      13.2,
+      20.8,
+      28.0
+    ],
+    "reverse_gear_speeds": [
+      1.6,
+      9.6
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 49.5,
+    "track_width": 0.68,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_L3A1",
+        "caliber": 7.6,
+        "ammo": 3750,
+        "reloadTime": 8.0,
+        "rateOfFire": 500,
+        "bulletType": "ap_ball"
+      }
+    ],
+    "main_gun_ammo": 12,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 46000,
+    "purchaseCost": 155000,
+    "crewTraining": 45000,
+    "expertTraining": 155000,
+    "aceTrainingGE": 630,
+    "aceTrainingRP": 440000,
+    "repairCost": {
+      "arcade": [
+        2557,
+        3164
+      ],
+      "realistic": [
+        2909,
+        3600
+      ],
+      "simulator": [
+        4250,
+        5260
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.04,
+      "realistic": 1.63,
+      "simulator": 2.02
+    },
+    "expMultiplier": 1.6
+  }
+}

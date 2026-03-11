@@ -1,0 +1,27 @@
+{
+  "id": "uk_destroyer_daring_class_daring",
+  "economy": {
+    "researchCost": 11000,
+    "purchaseCost": 70000,
+    "crewTraining": 20000,
+    "expertTraining": 70000,
+    "aceTrainingGE": 590,
+    "aceTrainingRP": 360000,
+    "repairCost": {
+      "arcade": [
+        2854,
+        3654
+      ],
+      "realistic": [
+        4400,
+        5634
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.39,
+      "realistic": 5.85,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.48
+  }
+}

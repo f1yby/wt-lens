@@ -1,0 +1,27 @@
+{
+  "id": "fr_arras_class_arras",
+  "economy": {
+    "researchCost": 36000,
+    "purchaseCost": 115000,
+    "crewTraining": 33000,
+    "expertTraining": 115000,
+    "aceTrainingGE": 590,
+    "aceTrainingRP": 360000,
+    "repairCost": {
+      "arcade": [
+        1546,
+        1962
+      ],
+      "realistic": [
+        2400,
+        3046
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.84,
+      "realistic": 1.27,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.48
+  }
+}

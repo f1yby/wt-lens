@@ -1,0 +1,31 @@
+{
+  "id": "f-86_canadair_german",
+  "economy": {
+    "researchCost": 135000,
+    "purchaseCost": 380000,
+    "crewTraining": 110000,
+    "expertTraining": 380000,
+    "aceTrainingGE": 2000,
+    "aceTrainingRP": 830000,
+    "repairCost": {
+      "arcade": [
+        3670,
+        4920
+      ],
+      "realistic": [
+        9442,
+        12656
+      ],
+      "simulator": [
+        10098,
+        13536
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.28,
+      "realistic": 3.8,
+      "simulator": 6.0
+    },
+    "expMultiplier": 2.08
+  }
+}

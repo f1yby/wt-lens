@@ -1,0 +1,31 @@
+{
+  "id": "halifax_mk3",
+  "economy": {
+    "researchCost": 18000,
+    "purchaseCost": 47000,
+    "crewTraining": 13000,
+    "expertTraining": 47000,
+    "aceTrainingGE": 400,
+    "aceTrainingRP": 280000,
+    "repairCost": {
+      "arcade": [
+        972,
+        1343
+      ],
+      "realistic": [
+        1949,
+        2609
+      ],
+      "simulator": [
+        3816,
+        5108
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.69,
+      "realistic": 1.51,
+      "simulator": 2.78
+    },
+    "expMultiplier": 1.36
+  }
+}

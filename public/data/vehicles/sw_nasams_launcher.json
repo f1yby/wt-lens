@@ -1,0 +1,134 @@
+{
+  "id": "sw_nasams_launcher",
+  "performance": {
+    "horsepower": 380.0,
+    "weight": 13.7,
+    "power_to_weight": 27.74,
+    "max_reverse_speed": 8.8,
+    "reload_time": 0.5,
+    "penetration": null,
+    "max_speed": 100.3,
+    "crew_count": 5,
+    "elevation_speed": 0.0,
+    "traverse_speed": 100.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      0.0,
+      0.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 0.0,
+    "mainGun": {
+      "name": "178mm_nasams",
+      "caliber": 127.0,
+      "reloadTime": 0.5,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 0.65,
+        "expert": 0.57,
+        "ace": 0.5
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "us_aim_9x_block_2",
+        "localizedName": "us_aim_9x_block_2",
+        "type": "sam_tank",
+        "caliber": 127.0,
+        "mass": 88.0,
+        "muzzleVelocity": 780.0
+      },
+      {
+        "name": "us_aim_120c_7_sam",
+        "localizedName": "us_aim_120c_7_sam",
+        "type": "sam_tank",
+        "caliber": 177.8,
+        "mass": 161.0,
+        "muzzleVelocity": 780.0
+      },
+      {
+        "name": "us_amraam_er",
+        "localizedName": "AMRAAM-ER",
+        "type": "sam_tank",
+        "caliber": 254.0,
+        "mass": 279.0,
+        "muzzleVelocity": 920.0
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": "scania",
+    "engine_model": "dsc1122",
+    "engine_type": null,
+    "engine_max_rpm": 2100.0,
+    "transmission_manufacturer": "scania",
+    "transmission_model": "grs900r",
+    "transmission_type": "mech",
+    "forward_gears": 12,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      6.3,
+      8.2,
+      10.5,
+      13.5,
+      17.1,
+      22.0,
+      29.0,
+      37.3,
+      48.0,
+      61.6,
+      78.3,
+      100.3
+    ],
+    "reverse_gear_speeds": [
+      6.9,
+      8.8
+    ],
+    "steer_type": null,
+    "empty_weight": 13.0,
+    "track_width": 0.4,
+    "secondary_weapons": null,
+    "main_gun_ammo": 6,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 410000,
+    "purchaseCost": 1100000,
+    "crewTraining": 310000,
+    "expertTraining": 1100000,
+    "aceTrainingGE": 2300,
+    "aceTrainingRP": 1350000,
+    "repairCost": {
+      "arcade": [
+        6017,
+        7855
+      ],
+      "realistic": [
+        7309,
+        9542
+      ],
+      "simulator": [
+        8279,
+        10808
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.6,
+      "realistic": 2.1,
+      "simulator": 2.03
+    },
+    "expMultiplier": 2.56
+  }
+}

@@ -1,0 +1,181 @@
+{
+  "id": "it_semovente_m41_75_18",
+  "performance": {
+    "horsepower": 160.0,
+    "weight": 13.1,
+    "power_to_weight": 12.21,
+    "max_reverse_speed": 5.2,
+    "reload_time": 5.99,
+    "penetration": 100.0,
+    "max_speed": 33.3,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 14.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -12.0,
+      22.0
+    ],
+    "traverse_range": [
+      -18.0,
+      18.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 34.0,
+    "mainGun": {
+      "name": "75mm_Ansaldo_75_18_M34",
+      "caliber": 75.0,
+      "reloadTime": 5.99,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 7.79,
+        "expert": 6.89,
+        "ace": 5.99
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "75mm_gr_perforante_75",
+        "localizedName": "Granata Perforante da 75",
+        "type": "apcbc_tank",
+        "caliber": 75.0,
+        "mass": 6.42,
+        "muzzleVelocity": 425.0,
+        "deMarre": {
+          "fullCaliber": 75.0,
+          "isApcbc": true,
+          "explosiveMass": 0.27,
+          "Cx": 0.5
+        },
+        "penetration0m": 44.9,
+        "explosiveMassKg": 0.27,
+        "explosiveType": "tnt",
+        "tntEquivalent": 0.27
+      },
+      {
+        "name": "75mm_m32",
+        "localizedName": "Granata mod.32",
+        "type": "he_frag_tank",
+        "caliber": 75.0,
+        "mass": 6.35,
+        "muzzleVelocity": 450.0,
+        "explosiveMassKg": 0.61,
+        "explosiveType": "tnt",
+        "tntEquivalent": 0.61
+      },
+      {
+        "name": "75mm_gr_fumogena",
+        "localizedName": "Gr. Fumogena",
+        "type": "smoke_tank",
+        "caliber": 75.0,
+        "mass": 6.4,
+        "muzzleVelocity": 450.0,
+        "explosiveMassKg": 0.05,
+        "explosiveType": "smoke_composition",
+        "tntEquivalent": 0.05
+      },
+      {
+        "name": "75mm_gr_perforante_75_32",
+        "localizedName": "Granata Perforante mod.32",
+        "type": "apcbc_tank",
+        "caliber": 75.0,
+        "mass": 6.26,
+        "muzzleVelocity": 476.0,
+        "deMarre": {
+          "fullCaliber": 75.0,
+          "isApcbc": true,
+          "explosiveMass": 0.27,
+          "Cx": 0.5
+        },
+        "penetration0m": 51.8,
+        "explosiveMassKg": 0.27,
+        "explosiveType": "tnt",
+        "tntEquivalent": 0.27
+      },
+      {
+        "name": "75mm_eps_m42",
+        "localizedName": "EPS M42",
+        "type": "heat_tank",
+        "caliber": 75.0,
+        "mass": 5.3,
+        "muzzleVelocity": 399.0,
+        "penetration0m": 100.0,
+        "explosiveMassKg": 0.5,
+        "explosiveType": "rdx_tnt",
+        "tntEquivalent": 0.64
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 1900.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 4,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      6.8,
+      11.7,
+      20.1,
+      33.3
+    ],
+    "reverse_gear_speeds": [
+      5.2
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 12.6,
+    "track_width": 0.26,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "8mm_Breda_Mod38",
+        "caliber": 8.0,
+        "ammo": 504,
+        "reloadTime": 8.0,
+        "rateOfFire": 600,
+        "bulletType": "ap_i_t_ball"
+      }
+    ],
+    "main_gun_ammo": 43,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 7900,
+    "purchaseCost": 10000,
+    "crewTraining": 3000,
+    "expertTraining": 10000,
+    "aceTrainingGE": 115,
+    "aceTrainingRP": 160000,
+    "repairCost": {
+      "arcade": [
+        416,
+        516
+      ],
+      "realistic": [
+        465,
+        576
+      ],
+      "simulator": [
+        551,
+        682
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.3,
+      "realistic": 0.46,
+      "simulator": 0.56
+    },
+    "expMultiplier": 1.12
+  }
+}

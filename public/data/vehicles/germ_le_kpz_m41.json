@@ -1,0 +1,183 @@
+{
+  "id": "germ_le_kpz_m41",
+  "performance": {
+    "horsepower": 500.0,
+    "weight": 23.1,
+    "power_to_weight": 21.65,
+    "max_reverse_speed": 18.8,
+    "reload_time": 5.88,
+    "penetration": 254.0,
+    "max_speed": 72.4,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 24.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -10.0,
+      20.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 30.0,
+    "mainGun": {
+      "name": "76mm_KwK_M32",
+      "caliber": 76.2,
+      "reloadTime": 5.88,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 7.64,
+        "expert": 6.76,
+        "ace": 5.88
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "76mm_m319",
+        "localizedName": "M319 shot",
+        "type": "apcr_tank",
+        "caliber": 38.1,
+        "mass": 3.2,
+        "muzzleVelocity": 1234.0,
+        "deMarre": {
+          "fullCaliber": 76.2,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "isApcr": true,
+          "coreCaliber": 38.1,
+          "coreMass": 1.79,
+          "Cx": 0.28
+        },
+        "penetration0m": 208.3
+      },
+      {
+        "name": "76mm_m352",
+        "localizedName": "M352 shell",
+        "type": "he_frag_tank",
+        "caliber": 76.1,
+        "mass": 6.8,
+        "muzzleVelocity": 732.0,
+        "explosiveMassKg": 0.662,
+        "explosiveType": "comp_b",
+        "tntEquivalent": 0.841
+      },
+      {
+        "name": "76mm_m331a2",
+        "localizedName": "M331A2 shot",
+        "type": "apds_early_tank",
+        "caliber": 50.0,
+        "mass": 2.81,
+        "muzzleVelocity": 1257.0,
+        "deMarre": {
+          "fullCaliber": 76.2,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "isApcr": true,
+          "coreCaliber": 50.0,
+          "coreMass": 1.49,
+          "Cx": 0.2576
+        },
+        "penetration0m": 143.8
+      },
+      {
+        "name": "76mm_m496",
+        "localizedName": "M496 shell",
+        "type": "heat_fs_tank",
+        "caliber": 76.2,
+        "mass": 3.2,
+        "muzzleVelocity": 1082.0,
+        "penetration0m": 254.0,
+        "explosiveMassKg": 0.499,
+        "explosiveType": "comp_b",
+        "tntEquivalent": 0.634
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2800.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 4,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      7.2,
+      19.3,
+      39.4,
+      72.4
+    ],
+    "reverse_gear_speeds": [
+      10.3,
+      18.8
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 22.8,
+    "track_width": 0.53,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_M1919A4E1",
+        "caliber": 7.6,
+        "ammo": 5000,
+        "reloadTime": 8.0,
+        "rateOfFire": 500,
+        "bulletType": "ap_ball"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "12_7mm_M2_HB",
+        "caliber": 12.7,
+        "ammo": 2200,
+        "reloadTime": 8.0,
+        "rateOfFire": 575,
+        "bulletType": "ap_i_t_ball_M20"
+      }
+    ],
+    "main_gun_ammo": 65,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 63000,
+    "purchaseCost": 200000,
+    "crewTraining": 57000,
+    "expertTraining": 200000,
+    "aceTrainingGE": 800,
+    "aceTrainingRP": 520000,
+    "repairCost": {
+      "arcade": [
+        2504,
+        3599
+      ],
+      "realistic": [
+        3044,
+        4373
+      ],
+      "simulator": [
+        4078,
+        5860
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.14,
+      "realistic": 1.49,
+      "simulator": 1.93
+    },
+    "expMultiplier": 1.72
+  }
+}

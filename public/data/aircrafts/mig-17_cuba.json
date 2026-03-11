@@ -1,0 +1,33 @@
+{
+  "id": "mig-17_cuba",
+  "economy": {
+    "researchCost": 150000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 8730,
+    "crewTraining": 10000,
+    "expertTraining": 680000,
+    "aceTrainingGE": 2200,
+    "aceTrainingRP": 1780000,
+    "repairCost": {
+      "arcade": [
+        2272,
+        2272
+      ],
+      "realistic": [
+        5256,
+        5256
+      ],
+      "simulator": [
+        6833,
+        6833
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.52,
+      "realistic": 7.6,
+      "simulator": 12.0
+    },
+    "expMultiplier": 2.14,
+    "freeRepairs": 30
+  }
+}

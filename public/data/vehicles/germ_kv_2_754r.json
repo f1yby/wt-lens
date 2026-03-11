@@ -1,0 +1,159 @@
+{
+  "id": "germ_kv_2_754r",
+  "performance": {
+    "horsepower": 600.0,
+    "weight": 52.4,
+    "power_to_weight": 11.45,
+    "max_reverse_speed": 6.2,
+    "reload_time": 23.98,
+    "penetration": 105.9,
+    "max_speed": 34.4,
+    "crew_count": 5,
+    "elevation_speed": 3.0,
+    "traverse_speed": 6.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -5.0,
+      12.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 17.0,
+    "mainGun": {
+      "name": "152mm_M10T",
+      "caliber": 152.0,
+      "reloadTime": 23.98,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 31.17,
+        "expert": 27.58,
+        "ace": 23.98
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "152mm_g_530",
+        "localizedName": "G-530",
+        "type": "sapcbc_tank",
+        "caliber": 152.0,
+        "mass": 40.0,
+        "muzzleVelocity": 530.0,
+        "deMarre": {
+          "fullCaliber": 152.0,
+          "isApcbc": true,
+          "explosiveMass": 5.1
+        },
+        "penetration0m": 105.9,
+        "explosiveMassKg": 5.1,
+        "explosiveType": "tnt",
+        "tntEquivalent": 5.1
+      },
+      {
+        "name": "152mm_of_530",
+        "localizedName": "OF-530",
+        "type": "he_frag_tank",
+        "caliber": 152.0,
+        "mass": 40.0,
+        "muzzleVelocity": 530.0,
+        "explosiveMassKg": 5.82,
+        "explosiveType": "tnt",
+        "tntEquivalent": 5.82
+      },
+      {
+        "name": "152mm_pb_35",
+        "localizedName": "PB-35",
+        "type": "sapcbc_tank",
+        "caliber": 152.0,
+        "mass": 51.06,
+        "muzzleVelocity": 436.0,
+        "deMarre": {
+          "fullCaliber": 152.0,
+          "isApcbc": true,
+          "explosiveMass": 3.15
+        },
+        "penetration0m": 95.3,
+        "explosiveMassKg": 3.15,
+        "explosiveType": "a_ix_2",
+        "tntEquivalent": 4.41
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2000.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 5,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      4.1,
+      7.7,
+      12.6,
+      19.1,
+      34.4
+    ],
+    "reverse_gear_speeds": [
+      6.2
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 52.0,
+    "track_width": 0.7,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_DT",
+        "caliber": 7.6,
+        "ammo": 3087,
+        "reloadTime": 8.0,
+        "rateOfFire": 600,
+        "bulletType": "ap_i_ball"
+      }
+    ],
+    "main_gun_ammo": 36,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 40000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 1750,
+    "crewTraining": 10000,
+    "expertTraining": 210000,
+    "aceTrainingGE": 550,
+    "aceTrainingRP": 790000,
+    "repairCost": {
+      "arcade": [
+        1283,
+        1283
+      ],
+      "realistic": [
+        1352,
+        1352
+      ],
+      "simulator": [
+        1809,
+        1809
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.14,
+      "realistic": 3.01,
+      "simulator": 3.29
+    },
+    "expMultiplier": 1.54,
+    "freeRepairs": 30
+  }
+}

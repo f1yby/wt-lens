@@ -1,0 +1,33 @@
+{
+  "id": "whirlwind_p9",
+  "economy": {
+    "researchCost": 40000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 1750,
+    "crewTraining": 10000,
+    "expertTraining": 210000,
+    "aceTrainingGE": 700,
+    "aceTrainingRP": 790000,
+    "repairCost": {
+      "arcade": [
+        919,
+        919
+      ],
+      "realistic": [
+        3957,
+        3957
+      ],
+      "simulator": [
+        6656,
+        6656
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.47,
+      "realistic": 4.5,
+      "simulator": 7.59
+    },
+    "expMultiplier": 1.54,
+    "freeRepairs": 30
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "us_destroyer_somers",
+  "economy": {
+    "researchCost": 25000,
+    "purchaseCost": 87000,
+    "crewTraining": 25000,
+    "expertTraining": 87000,
+    "aceTrainingGE": 700,
+    "aceTrainingRP": 390000,
+    "repairCost": {
+      "arcade": [
+        3583,
+        4582
+      ],
+      "realistic": [
+        4978,
+        6366
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.62,
+      "realistic": 6.0,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.54
+  }
+}

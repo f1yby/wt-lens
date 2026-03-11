@@ -1,0 +1,113 @@
+{
+  "id": "ussr_tor_m1",
+  "performance": {
+    "horsepower": 780.0,
+    "weight": 37.0,
+    "power_to_weight": 21.08,
+    "max_reverse_speed": 65.0,
+    "reload_time": null,
+    "penetration": null,
+    "max_speed": 65.0,
+    "crew_count": 5,
+    "elevation_speed": null,
+    "traverse_speed": null,
+    "has_stabilizer": null,
+    "stabilizer_type": "none",
+    "elevation_range": null,
+    "traverse_range": null,
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": null,
+    "mainGun": null,
+    "ammunitions": null,
+    "penetrationData": null,
+    "autoLoader": null,
+    "engine_manufacturer": "chtz",
+    "engine_model": "v_84_DT",
+    "engine_type": null,
+    "engine_max_rpm": 2000.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 8,
+    "reverse_gears": 8,
+    "forward_gear_speeds": [
+      5.2,
+      10.4,
+      13.8,
+      20.5,
+      26.8,
+      38.8,
+      48.6,
+      65.0
+    ],
+    "reverse_gear_speeds": [
+      5.2,
+      10.4,
+      13.8,
+      20.5,
+      26.8,
+      38.8,
+      48.6,
+      65.0
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 36.5,
+    "track_width": 0.45,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "239mm_9M331",
+        "caliber": 239.0,
+        "ammo": 8,
+        "reloadTime": 1.0,
+        "rateOfFire": 30,
+        "bulletType": "sam_tank",
+        "maxDistance": 12000,
+        "maxSpeed": 850,
+        "guidanceType": "saclos",
+        "explosiveMass": 5.3,
+        "explosiveType": "a_ix_2"
+      }
+    ],
+    "main_gun_ammo": null,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 350000,
+    "purchaseCost": 950000,
+    "crewTraining": 270000,
+    "expertTraining": 950000,
+    "aceTrainingGE": 2200,
+    "aceTrainingRP": 1210000,
+    "repairCost": {
+      "arcade": [
+        5649,
+        7308
+      ],
+      "realistic": [
+        6613,
+        8555
+      ],
+      "simulator": [
+        7995,
+        10343
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.6,
+      "realistic": 2.1,
+      "simulator": 2.08
+    },
+    "expMultiplier": 2.44
+  }
+}

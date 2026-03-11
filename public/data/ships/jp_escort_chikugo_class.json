@@ -1,0 +1,27 @@
+{
+  "id": "jp_escort_chikugo_class",
+  "economy": {
+    "researchCost": 120000,
+    "purchaseCost": 360000,
+    "crewTraining": 105000,
+    "expertTraining": 360000,
+    "aceTrainingGE": 1200,
+    "aceTrainingRP": 570000,
+    "repairCost": {
+      "arcade": [
+        8909,
+        11364
+      ],
+      "realistic": [
+        12762,
+        16278
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 3.12,
+      "realistic": 5.07,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.78
+  }
+}

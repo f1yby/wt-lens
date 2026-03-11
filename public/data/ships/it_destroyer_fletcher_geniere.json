@@ -1,0 +1,29 @@
+{
+  "id": "it_destroyer_fletcher_geniere",
+  "economy": {
+    "researchCost": 13000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 1150,
+    "crewTraining": 6800,
+    "expertTraining": 45000,
+    "aceTrainingGE": 320,
+    "aceTrainingRP": 500000,
+    "repairCost": {
+      "arcade": [
+        1252,
+        1252
+      ],
+      "realistic": [
+        1877,
+        1877
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 3.3,
+      "realistic": 7.6,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.3,
+    "freeRepairs": 30
+  }
+}

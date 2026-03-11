@@ -1,0 +1,27 @@
+{
+  "id": "jp_destroyer_matsu",
+  "economy": {
+    "researchCost": 4000,
+    "purchaseCost": 2100,
+    "crewTraining": 600,
+    "expertTraining": 2100,
+    "aceTrainingGE": 45,
+    "aceTrainingRP": 110000,
+    "repairCost": {
+      "arcade": [
+        434,
+        554
+      ],
+      "realistic": [
+        682,
+        871
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.5,
+      "realistic": 0.86,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.0
+  }
+}

@@ -1,0 +1,150 @@
+{
+  "id": "us_t18_e2",
+  "performance": {
+    "horsepower": 250.0,
+    "weight": 24.04,
+    "power_to_weight": 10.4,
+    "max_reverse_speed": 32.7,
+    "reload_time": 4.0,
+    "penetration": 122.3,
+    "max_speed": 79.7,
+    "crew_count": 5,
+    "elevation_speed": 6.0,
+    "traverse_speed": 18.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "vertical",
+    "elevation_range": [
+      -10.0,
+      20.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 30.0,
+    "mainGun": {
+      "name": "57mm_M1",
+      "caliber": 57.0,
+      "reloadTime": 4.0,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 5.2,
+        "expert": 4.6,
+        "ace": 4.0
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "57mm_m70",
+        "localizedName": "M70",
+        "type": "ap_tank",
+        "caliber": 57.0,
+        "mass": 2.85,
+        "muzzleVelocity": 900.0,
+        "deMarre": {
+          "fullCaliber": 57.0,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "Cx": 0.5
+        },
+        "penetration0m": 118.7
+      },
+      {
+        "name": "57mm_m86",
+        "localizedName": "M86",
+        "type": "apcbc_tank",
+        "caliber": 57.0,
+        "mass": 3.29,
+        "muzzleVelocity": 822.0,
+        "deMarre": {
+          "fullCaliber": 57.0,
+          "isApcbc": true,
+          "explosiveMass": 0.042,
+          "Cx": 0.5
+        },
+        "penetration0m": 122.3,
+        "explosiveMassKg": 0.042,
+        "explosiveType": "exp_d",
+        "tntEquivalent": 0.042
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 3000.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 7,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      5.8,
+      10.9,
+      14.6,
+      18.7,
+      26.5,
+      37.9,
+      79.7
+    ],
+    "reverse_gear_speeds": [
+      18.7,
+      32.7
+    ],
+    "steer_type": null,
+    "empty_weight": 23.7,
+    "track_width": 0.35,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_M1919A4",
+        "caliber": 7.6,
+        "ammo": 3000,
+        "reloadTime": 8.0,
+        "rateOfFire": 500,
+        "bulletType": "ap_ball"
+      }
+    ],
+    "main_gun_ammo": 64,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 11000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 1000,
+    "crewTraining": 4800,
+    "expertTraining": 32000,
+    "aceTrainingGE": 210,
+    "aceTrainingRP": 440000,
+    "repairCost": {
+      "arcade": [
+        800,
+        800
+      ],
+      "realistic": [
+        458,
+        458
+      ],
+      "simulator": [
+        1317,
+        1317
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.02,
+      "realistic": 1.1,
+      "simulator": 1.53
+    },
+    "expMultiplier": 1.24,
+    "freeRepairs": 30
+  }
+}

@@ -1,0 +1,161 @@
+{
+  "id": "it_p_40",
+  "performance": {
+    "horsepower": 330.0,
+    "weight": 26.0,
+    "power_to_weight": 12.69,
+    "max_reverse_speed": 4.1,
+    "reload_time": 5.0,
+    "penetration": 100.0,
+    "max_speed": 40.4,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 14.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -10.0,
+      23.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 33.0,
+    "mainGun": {
+      "name": "75mm_Ansaldo_75_34",
+      "caliber": 75.0,
+      "reloadTime": 5.0,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 6.5,
+        "expert": 5.75,
+        "ace": 5.0
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "75_32_apcbc",
+        "localizedName": "Granata Perforante 75/32",
+        "type": "apcbc_tank",
+        "caliber": 75.0,
+        "mass": 6.35,
+        "muzzleVelocity": 637.0,
+        "deMarre": {
+          "fullCaliber": 75.0,
+          "isApcbc": true,
+          "explosiveMass": 0.27
+        },
+        "penetration0m": 79.4,
+        "explosiveMassKg": 0.27,
+        "explosiveType": "tnt",
+        "tntEquivalent": 0.27
+      },
+      {
+        "name": "75mm_m42_eps",
+        "localizedName": "EPS M42",
+        "type": "heat_tank",
+        "caliber": 75.0,
+        "mass": 5.3,
+        "muzzleVelocity": 552.0,
+        "penetration0m": 100.0,
+        "explosiveMassKg": 0.513,
+        "explosiveType": "rdx_tnt",
+        "tntEquivalent": 0.657
+      },
+      {
+        "name": "75_32_he",
+        "localizedName": "Granata 75/32",
+        "type": "he_frag_tank",
+        "caliber": 75.0,
+        "mass": 6.35,
+        "muzzleVelocity": 552.0,
+        "explosiveMassKg": 0.6,
+        "explosiveType": "tnt",
+        "tntEquivalent": 0.6
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2100.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 5,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      4.1,
+      7.9,
+      13.7,
+      23.6,
+      40.4
+    ],
+    "reverse_gear_speeds": [
+      4.1
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 25.7,
+    "track_width": 0.4,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "8mm_Breda_Mod38",
+        "caliber": 8.0,
+        "ammo": 288,
+        "reloadTime": 8.0,
+        "rateOfFire": 600,
+        "bulletType": "ap_i_t_ball"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "8mm_Breda_Mod38",
+        "caliber": 8.0,
+        "ammo": 288,
+        "reloadTime": 8.0,
+        "rateOfFire": 600,
+        "bulletType": "ap_i_t_ball"
+      }
+    ],
+    "main_gun_ammo": 63,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 14000,
+    "purchaseCost": 32000,
+    "crewTraining": 9200,
+    "expertTraining": 32000,
+    "aceTrainingGE": 270,
+    "aceTrainingRP": 250000,
+    "repairCost": {
+      "arcade": [
+        830,
+        1122
+      ],
+      "realistic": [
+        954,
+        1289
+      ],
+      "simulator": [
+        1186,
+        1603
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.54,
+      "realistic": 0.78,
+      "simulator": 0.91
+    },
+    "expMultiplier": 1.3
+  }
+}

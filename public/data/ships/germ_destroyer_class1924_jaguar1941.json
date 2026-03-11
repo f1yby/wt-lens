@@ -1,0 +1,29 @@
+{
+  "id": "germ_destroyer_class1924_jaguar1941",
+  "economy": {
+    "researchCost": 18000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 1450,
+    "crewTraining": 10000,
+    "expertTraining": 81000,
+    "aceTrainingGE": 500,
+    "aceTrainingRP": 640000,
+    "repairCost": {
+      "arcade": [
+        1610,
+        1610
+      ],
+      "realistic": [
+        2483,
+        2483
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 5.26,
+      "realistic": 9.12,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.42,
+    "freeRepairs": 30
+  }
+}

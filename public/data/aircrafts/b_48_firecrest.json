@@ -1,0 +1,31 @@
+{
+  "id": "b_48_firecrest",
+  "economy": {
+    "researchCost": 155000,
+    "purchaseCost": 32000,
+    "crewTraining": 9200,
+    "expertTraining": 32000,
+    "aceTrainingGE": 320,
+    "aceTrainingRP": 250000,
+    "repairCost": {
+      "arcade": [
+        756,
+        978
+      ],
+      "realistic": [
+        982,
+        1234
+      ],
+      "simulator": [
+        2356,
+        2959
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.53,
+      "realistic": 1.16,
+      "simulator": 1.92
+    },
+    "expMultiplier": 1.3
+  }
+}

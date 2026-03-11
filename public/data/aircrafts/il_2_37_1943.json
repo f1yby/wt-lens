@@ -1,0 +1,31 @@
+{
+  "id": "il_2_37_1943",
+  "economy": {
+    "researchCost": 5600,
+    "purchaseCost": 22000,
+    "crewTraining": 6300,
+    "expertTraining": 22000,
+    "aceTrainingGE": 250,
+    "aceTrainingRP": 220000,
+    "repairCost": {
+      "arcade": [
+        585,
+        786
+      ],
+      "realistic": [
+        780,
+        1017
+      ],
+      "simulator": [
+        1922,
+        2506
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.42,
+      "realistic": 0.89,
+      "simulator": 1.55
+    },
+    "expMultiplier": 1.24
+  }
+}

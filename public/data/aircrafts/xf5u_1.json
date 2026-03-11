@@ -1,0 +1,33 @@
+{
+  "id": "xf5u_1",
+  "economy": {
+    "researchCost": 63000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 4880,
+    "crewTraining": 10000,
+    "expertTraining": 320000,
+    "aceTrainingGE": 1100,
+    "aceTrainingRP": 1050000,
+    "repairCost": {
+      "arcade": [
+        1940,
+        1940
+      ],
+      "realistic": [
+        4247,
+        4247
+      ],
+      "simulator": [
+        6215,
+        6215
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.91,
+      "realistic": 4.56,
+      "simulator": 9.54
+    },
+    "expMultiplier": 1.72,
+    "freeRepairs": 30
+  }
+}

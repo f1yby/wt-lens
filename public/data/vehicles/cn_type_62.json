@@ -1,0 +1,198 @@
+{
+  "id": "cn_type_62",
+  "performance": {
+    "horsepower": 430.0,
+    "weight": 21.0,
+    "power_to_weight": 20.48,
+    "max_reverse_speed": 8.5,
+    "reload_time": 7.41,
+    "penetration": 300.0,
+    "max_speed": 59.7,
+    "crew_count": 5,
+    "elevation_speed": 10.0,
+    "traverse_speed": 10.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -5.0,
+      22.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 27.0,
+    "mainGun": {
+      "name": "85mm_Type_62_85_TC",
+      "caliber": 85.0,
+      "reloadTime": 7.41,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 9.63,
+        "expert": 8.52,
+        "ace": 7.41
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "type_56_apbc",
+        "localizedName": "Type 56 APBC",
+        "type": "aphebc_tank",
+        "caliber": 85.0,
+        "mass": 9.2,
+        "muzzleVelocity": 792.0,
+        "deMarre": {
+          "fullCaliber": 85.0,
+          "isApcbc": false,
+          "explosiveMass": 0.164,
+          "Cx": 0.3308
+        },
+        "penetration0m": 135.7,
+        "explosiveMassKg": 0.164,
+        "explosiveType": "tnt",
+        "tntEquivalent": 0.164
+      },
+      {
+        "name": "type_56_he",
+        "localizedName": "Type 56 HE",
+        "type": "he_frag_tank",
+        "caliber": 85.0,
+        "mass": 9.54,
+        "muzzleVelocity": 785.0,
+        "explosiveMassKg": 0.741,
+        "explosiveType": "tnt",
+        "tntEquivalent": 0.741
+      },
+      {
+        "name": "type_56_apc",
+        "localizedName": "Type 56 APCBC",
+        "type": "apcbc_tank",
+        "caliber": 85.0,
+        "mass": 9.2,
+        "muzzleVelocity": 792.0,
+        "deMarre": {
+          "fullCaliber": 85.0,
+          "isApcbc": true,
+          "explosiveMass": 0.05,
+          "Cx": 0.378
+        },
+        "penetration0m": 164.6,
+        "explosiveMassKg": 0.05,
+        "explosiveType": "a_ix_2",
+        "tntEquivalent": 0.07
+      },
+      {
+        "name": "type_56_hvap",
+        "localizedName": "Type 56 HVAP",
+        "type": "apcr_tank",
+        "caliber": 30.0,
+        "mass": 5.3,
+        "muzzleVelocity": 1020.0,
+        "deMarre": {
+          "fullCaliber": 85.0,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "isApcr": true,
+          "coreCaliber": 30.0,
+          "coreMass": 1.1,
+          "Cx": 0.3608
+        },
+        "penetration0m": 221.2
+      },
+      {
+        "name": "85mm_type1956",
+        "localizedName": "Type 56 HEAT-FS",
+        "type": "heat_fs_tank",
+        "caliber": 85.0,
+        "mass": 7.0,
+        "muzzleVelocity": 845.0,
+        "penetration0m": 300.0,
+        "explosiveMassKg": 0.68,
+        "explosiveType": "pentolite",
+        "tntEquivalent": 0.857
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 1800.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 5,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      7.9,
+      16.4,
+      22.4,
+      35.9,
+      59.7
+    ],
+    "reverse_gear_speeds": [
+      8.5
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 20.5,
+    "track_width": 0.58,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_Type_59",
+        "caliber": 7.6,
+        "ammo": 2000,
+        "reloadTime": 8.0,
+        "rateOfFire": 600,
+        "bulletType": "ap_i_ball"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "12_7mm_Type_54",
+        "caliber": 12.7,
+        "ammo": 500,
+        "reloadTime": 8.0,
+        "rateOfFire": 600,
+        "bulletType": "ap_i_t_ball"
+      }
+    ],
+    "main_gun_ammo": 47,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 35000,
+    "purchaseCost": 210000,
+    "crewTraining": 61000,
+    "expertTraining": 210000,
+    "aceTrainingGE": 890,
+    "aceTrainingRP": 570000,
+    "repairCost": {
+      "arcade": [
+        2669,
+        3834
+      ],
+      "realistic": [
+        3260,
+        4685
+      ],
+      "simulator": [
+        4368,
+        6276
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.11,
+      "realistic": 1.52,
+      "simulator": 1.95
+    },
+    "expMultiplier": 1.78
+  }
+}

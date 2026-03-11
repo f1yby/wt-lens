@@ -1,0 +1,33 @@
+{
+  "id": "tornado_ids_de_wtd61",
+  "economy": {
+    "researchCost": 230000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 9450,
+    "crewTraining": 10000,
+    "expertTraining": 1030000,
+    "aceTrainingGE": 3000,
+    "aceTrainingRP": 2280000,
+    "repairCost": {
+      "arcade": [
+        2441,
+        2441
+      ],
+      "realistic": [
+        5738,
+        5738
+      ],
+      "simulator": [
+        7318,
+        7318
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.66,
+      "realistic": 6.36,
+      "simulator": 12.0
+    },
+    "expMultiplier": 2.38,
+    "freeRepairs": 30
+  }
+}

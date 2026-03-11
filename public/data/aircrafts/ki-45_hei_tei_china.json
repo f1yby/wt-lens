@@ -1,0 +1,33 @@
+{
+  "id": "ki-45_hei_tei_china",
+  "economy": {
+    "researchCost": 14000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 1150,
+    "crewTraining": 6900,
+    "expertTraining": 46000,
+    "aceTrainingGE": 320,
+    "aceTrainingRP": 500000,
+    "repairCost": {
+      "arcade": [
+        1245,
+        1245
+      ],
+      "realistic": [
+        3968,
+        3968
+      ],
+      "simulator": [
+        1238,
+        1238
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.4,
+      "realistic": 4.7,
+      "simulator": 4.95
+    },
+    "expMultiplier": 1.3,
+    "freeRepairs": 30
+  }
+}

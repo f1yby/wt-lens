@@ -1,0 +1,161 @@
+{
+  "id": "germ_marder_clovis",
+  "performance": {
+    "horsepower": 720.0,
+    "weight": 30.0,
+    "power_to_weight": 24.0,
+    "max_reverse_speed": 74.7,
+    "reload_time": 5.0,
+    "penetration": 400.0,
+    "max_speed": 74.7,
+    "crew_count": 5,
+    "elevation_speed": 10.0,
+    "traverse_speed": 36.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -8.0,
+      12.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 20.0,
+    "mainGun": {
+      "name": "105mm_CN_105_G1",
+      "caliber": 105.0,
+      "reloadTime": 5.0,
+      "autoLoader": true,
+      "reloadTimes": {
+        "base": 5.0,
+        "expert": 5.0,
+        "ace": 5.0
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "105mm_occ_f1",
+        "localizedName": "OCC 105 F1",
+        "type": "heat_tank",
+        "caliber": 105.0,
+        "mass": 10.95,
+        "muzzleVelocity": 800.0,
+        "penetration0m": 400.0,
+        "explosiveMassKg": 0.78,
+        "explosiveType": "comp_b",
+        "tntEquivalent": 0.991
+      },
+      {
+        "name": "105mm_oe_f1_mle60",
+        "localizedName": "OE 105 F1 Mle.60",
+        "type": "he_frag_tank",
+        "caliber": 105.0,
+        "mass": 12.1,
+        "muzzleVelocity": 800.0,
+        "explosiveMassKg": 2.0,
+        "explosiveType": "tnt",
+        "tntEquivalent": 2.0
+      },
+      {
+        "name": "105mm_ofph_f1",
+        "localizedName": "OFPH 105 F1",
+        "type": "smoke_tank",
+        "caliber": 105.0,
+        "mass": 11.4,
+        "muzzleVelocity": 600.0,
+        "explosiveMassKg": 0.05,
+        "explosiveType": "smoke_composition",
+        "tntEquivalent": 0.05
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": true,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2200.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 8,
+    "reverse_gears": 8,
+    "forward_gear_speeds": [
+      8.6,
+      17.2,
+      22.8,
+      33.6,
+      40.3,
+      50.2,
+      60.0,
+      74.7
+    ],
+    "reverse_gear_speeds": [
+      8.6,
+      17.2,
+      22.8,
+      33.6,
+      40.3,
+      50.2,
+      60.0,
+      74.7
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 29.5,
+    "track_width": 0.45,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "20mm_M_693_marder_clovis",
+        "caliber": 20.0,
+        "ammo": 400,
+        "reloadTime": 10.0,
+        "rateOfFire": 700,
+        "bulletType": "he_frag_i_t"
+      }
+    ],
+    "main_gun_ammo": 38,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": true
+  },
+  "economy": {
+    "researchCost": 120000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 8380,
+    "crewTraining": 10000,
+    "expertTraining": 550000,
+    "aceTrainingGE": 1300,
+    "aceTrainingRP": 1550000,
+    "repairCost": {
+      "arcade": [
+        2300,
+        2300
+      ],
+      "realistic": [
+        2640,
+        2640
+      ],
+      "simulator": [
+        3201,
+        3201
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.29,
+      "realistic": 3.21,
+      "simulator": 3.9
+    },
+    "expMultiplier": 2.02,
+    "freeRepairs": 30
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "it_battleship_caio_duilio",
+  "economy": {
+    "researchCost": 220000,
+    "purchaseCost": 660000,
+    "crewTraining": 190000,
+    "expertTraining": 660000,
+    "aceTrainingGE": 2000,
+    "aceTrainingRP": 830000,
+    "repairCost": {
+      "arcade": [
+        26310,
+        33012
+      ],
+      "realistic": [
+        32365,
+        40609
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 4.5,
+      "realistic": 6.0,
+      "simulator": 1.0
+    },
+    "expMultiplier": 2.08
+  }
+}

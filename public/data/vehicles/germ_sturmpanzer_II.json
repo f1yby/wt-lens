@@ -1,0 +1,141 @@
+{
+  "id": "germ_sturmpanzer_II",
+  "performance": {
+    "horsepower": 155.0,
+    "weight": 16.0,
+    "power_to_weight": 9.69,
+    "max_reverse_speed": 8.4,
+    "reload_time": 11.11,
+    "penetration": 185.0,
+    "max_speed": 45.0,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 6.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -4.0,
+      40.0
+    ],
+    "traverse_range": [
+      -1.5,
+      6.5
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 44.0,
+    "mainGun": {
+      "name": "150mm_sIG_33",
+      "caliber": 150.0,
+      "reloadTime": 11.11,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 14.44,
+        "expert": 12.78,
+        "ace": 11.11
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "150mm_jgr_38",
+        "localizedName": "I.Gr.38",
+        "type": "he_frag_tank",
+        "caliber": 150.0,
+        "mass": 38.0,
+        "muzzleVelocity": 240.0,
+        "armorPowerTable": [
+          {
+            "penetration": 20.0,
+            "distance": 100.0
+          },
+          {
+            "penetration": 16.0,
+            "distance": 4000.0
+          },
+          {
+            "penetration": 0.0,
+            "distance": 10000.0
+          }
+        ],
+        "penetration0m": 20.0,
+        "explosiveMassKg": 8.6,
+        "explosiveType": "amatol",
+        "tntEquivalent": 8.084
+      },
+      {
+        "name": "150mm_jgr_39",
+        "localizedName": "I.Gr.39 HI/A",
+        "type": "heat_tank",
+        "caliber": 150.0,
+        "mass": 24.58,
+        "muzzleVelocity": 280.0,
+        "penetration0m": 185.0,
+        "explosiveMassKg": 4.16,
+        "explosiveType": "rdx_tnt",
+        "tntEquivalent": 5.325
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2600.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 6,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      2.7,
+      7.5,
+      12.9,
+      18.0,
+      30.0,
+      45.0
+    ],
+    "reverse_gear_speeds": [
+      8.4
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 15.7,
+    "track_width": 0.3,
+    "secondary_weapons": null,
+    "main_gun_ammo": 18,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 2900,
+    "purchaseCost": 700,
+    "crewTraining": 200,
+    "expertTraining": 1000,
+    "aceTrainingGE": 20,
+    "aceTrainingRP": 96000,
+    "repairCost": {
+      "arcade": [
+        90,
+        111
+      ],
+      "realistic": [
+        112,
+        139
+      ],
+      "simulator": [
+        126,
+        155
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.1,
+      "realistic": 0.17,
+      "simulator": 0.21
+    },
+    "expMultiplier": 1.0
+  }
+}

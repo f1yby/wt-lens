@@ -1,0 +1,31 @@
+{
+  "id": "firefly_mk1",
+  "economy": {
+    "researchCost": 18000,
+    "purchaseCost": 47000,
+    "crewTraining": 13000,
+    "expertTraining": 47000,
+    "aceTrainingGE": 400,
+    "aceTrainingRP": 280000,
+    "repairCost": {
+      "arcade": [
+        809,
+        1047
+      ],
+      "realistic": [
+        1164,
+        1462
+      ],
+      "simulator": [
+        2835,
+        3562
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.55,
+      "realistic": 1.13,
+      "simulator": 2.19
+    },
+    "expMultiplier": 1.36
+  }
+}

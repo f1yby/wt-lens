@@ -1,0 +1,131 @@
+{
+  "id": "germ_flakpanzer_IV_Wirbelwind",
+  "performance": {
+    "horsepower": 300.0,
+    "weight": 25.0,
+    "power_to_weight": 12.0,
+    "max_reverse_speed": 7.2,
+    "reload_time": 4.0,
+    "penetration": 37.7,
+    "max_speed": 38.7,
+    "crew_count": 5,
+    "elevation_speed": 20.0,
+    "traverse_speed": 60.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -10.0,
+      90.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 100.0,
+    "mainGun": {
+      "name": "20mm_FlaK38_wirbelwind",
+      "caliber": 20.0,
+      "reloadTime": 4.0,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 5.2,
+        "expert": 4.6,
+        "ace": 4.0
+      },
+      "rateOfFire": 480,
+      "beltReloadTime": 4.0
+    },
+    "ammunitions": [
+      {
+        "name": "20mm_sprgr",
+        "localizedName": "Sprgr.",
+        "type": "he_frag_i_t",
+        "caliber": 20.0,
+        "mass": 0.115,
+        "muzzleVelocity": 900.0,
+        "explosiveMassKg": 0.006,
+        "explosiveType": "np_10",
+        "tntEquivalent": 0.008
+      },
+      {
+        "name": "20mm_pzgr",
+        "localizedName": "PzGr",
+        "type": "ap_i_t",
+        "caliber": 20.0,
+        "mass": 0.148,
+        "muzzleVelocity": 800.0,
+        "deMarre": {
+          "fullCaliber": 20.0,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "Cx": 0.5198
+        },
+        "penetration0m": 37.7
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 3000.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 6,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      4.1,
+      6.4,
+      11.1,
+      15.5,
+      25.8,
+      38.7
+    ],
+    "reverse_gear_speeds": [
+      7.2
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 24.7,
+    "track_width": 0.4,
+    "secondary_weapons": null,
+    "main_gun_ammo": 800,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 13000,
+    "purchaseCost": 76000,
+    "crewTraining": 22000,
+    "expertTraining": 76000,
+    "aceTrainingGE": 400,
+    "aceTrainingRP": 320000,
+    "repairCost": {
+      "arcade": [
+        1475,
+        1896
+      ],
+      "realistic": [
+        1118,
+        1437
+      ],
+      "simulator": [
+        1689,
+        2170
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.85,
+      "realistic": 1.0,
+      "simulator": 1.52
+    },
+    "expMultiplier": 1.42
+  }
+}

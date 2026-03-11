@@ -1,7 +1,6 @@
 import type { ShipVehicle, ShipType, VehicleStats, GameMode, StatsMonthRange, EconomyData } from '../types';
 import { getDefaultStatsMonthRange, getMonthRangeCacheKey } from '../types';
-import { StatSharkEntry, cleanName, buildStatsMapByMonthRange, convertToVehicleStats } from './base';
-import { initStatsMonthService, isServiceInitialized } from '../services/statsMonthService';
+import { StatSharkEntry, cleanName, buildStatsMapByMonthRange, convertToVehicleStats, loadStatsForRange } from './base';
 
 interface ShipEntry {
   id: string;
@@ -16,39 +15,56 @@ interface ShipEntry {
   unreleased?: boolean;
   releaseDate?: string;
   ghost?: boolean;
+  // economy is NOT included in the index — load via loadShipDetail()
+}
+
+/** Detail entry loaded from ships/{id}.json */
+export interface ShipDetailEntry {
+  id: string;
   economy?: EconomyData;
 }
 
 // Cache for loaded raw data
-let statsData: StatSharkEntry[] | null = null;
 let shipsData: ShipEntry[] | null = null;
 // Cache for merged ships by month range (key: startMonth_endMonth)
 const shipsByMonthRange = new Map<string, ShipVehicle[]>();
+// Cache for individual ship detail data
+const shipDetailCache = new Map<string, ShipDetailEntry>();
 
 /**
- * Load stats data from JSON
- */
-async function loadStatsData(): Promise<StatSharkEntry[]> {
-  if (statsData) return statsData;
-  const response = await fetch('/wt-lens/data/stats.json');
-  statsData = await response.json();
-  
-  // Initialize stats month service with loaded data
-  if (!isServiceInitialized()) {
-    initStatsMonthService(statsData!);
-  }
-  
-  return statsData!;
-}
-
-/**
- * Load ship data from JSON
+ * Load ship data from ships-index.json (lightweight, no economy).
  */
 async function loadShipsData(): Promise<ShipEntry[]> {
   if (shipsData) return shipsData;
-  const response = await fetch('/wt-lens/data/ships.json');
+  const response = await fetch('/wt-lens/data/ships-index.json');
+  if (!response.ok) {
+    throw new Error(`Failed to load ships index: ${response.status}`);
+  }
   shipsData = await response.json();
   return shipsData!;
+}
+
+/**
+ * Load individual ship detail (economy data) from ships/{id}.json
+ */
+export async function loadShipDetail(shipId: string): Promise<ShipDetailEntry | null> {
+  if (shipDetailCache.has(shipId)) {
+    return shipDetailCache.get(shipId)!;
+  }
+  
+  try {
+    const response = await fetch(`/wt-lens/data/ships/${shipId}.json`);
+    if (!response.ok) {
+      console.warn(`Failed to load ship detail for ${shipId}: ${response.status}`);
+      return null;
+    }
+    const detail: ShipDetailEntry = await response.json();
+    shipDetailCache.set(shipId, detail);
+    return detail;
+  } catch (error) {
+    console.warn(`Failed to load detail for ${shipId}:`, error);
+    return null;
+  }
 }
 
 /**
@@ -115,7 +131,7 @@ function mergeShipsData(stats: StatSharkEntry[], ships: ShipEntry[], range?: Sta
       unreleased: shipEntry.unreleased ?? false,
       releaseDate: shipEntry.releaseDate,
       ghost: shipEntry.ghost ?? false,
-      economy: shipEntry.economy,
+      // economy is loaded on demand via loadShipDetail()
     };
 
     shipsList.push(shipVehicle);
@@ -129,9 +145,6 @@ function mergeShipsData(stats: StatSharkEntry[], ships: ShipEntry[], range?: Sta
  * @param range - Optional month range filter. Defaults to latest month if not specified.
  */
 export async function loadShips(range?: StatsMonthRange): Promise<ShipVehicle[]> {
-  // Load stats data first to ensure month service is initialized
-  const stats = await loadStatsData();
-  
   const targetRange = range ?? getDefaultStatsMonthRange();
   const cacheKey = getMonthRangeCacheKey(targetRange);
   
@@ -139,6 +152,9 @@ export async function loadShips(range?: StatsMonthRange): Promise<ShipVehicle[]>
   if (shipsByMonthRange.has(cacheKey)) {
     return shipsByMonthRange.get(cacheKey)!;
   }
+
+  // Load stats data appropriate for the month range
+  const stats = await loadStatsForRange(targetRange);
 
   const ships = await loadShipsData();
 

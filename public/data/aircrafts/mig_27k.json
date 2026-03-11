@@ -1,0 +1,31 @@
+{
+  "id": "mig_27k",
+  "economy": {
+    "researchCost": 130000,
+    "purchaseCost": 720000,
+    "crewTraining": 200000,
+    "expertTraining": 720000,
+    "aceTrainingGE": 3200,
+    "aceTrainingRP": 1210000,
+    "repairCost": {
+      "arcade": [
+        2777,
+        4065
+      ],
+      "realistic": [
+        8167,
+        11957
+      ],
+      "simulator": [
+        9562,
+        14001
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.02,
+      "realistic": 3.16,
+      "simulator": 5.39
+    },
+    "expMultiplier": 2.44
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "id": "fr_vcac_mephisto",
+  "performance": {
+    "horsepower": 300.0,
+    "weight": 11.92,
+    "power_to_weight": 25.17,
+    "max_reverse_speed": 13.3,
+    "reload_time": null,
+    "penetration": null,
+    "max_speed": 90.3,
+    "crew_count": 5,
+    "elevation_speed": null,
+    "traverse_speed": null,
+    "has_stabilizer": null,
+    "stabilizer_type": "none",
+    "elevation_range": null,
+    "traverse_range": null,
+    "gunner_thermal_resolution": [
+      500,
+      300
+    ],
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": 583.1,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": null,
+    "mainGun": null,
+    "ammunitions": null,
+    "penetrationData": null,
+    "autoLoader": null,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2200.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 12,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      7.8,
+      13.3,
+      15.5,
+      18.8,
+      26.5,
+      26.6,
+      32.1,
+      37.5,
+      45.1,
+      53.3,
+      64.2,
+      90.3
+    ],
+    "reverse_gear_speeds": [
+      5.5,
+      13.3
+    ],
+    "steer_type": null,
+    "empty_weight": 11.6,
+    "track_width": 0.4,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "136mm_mephisto_launcher",
+        "caliber": 136.0,
+        "ammo": 12,
+        "reloadTime": 15.0,
+        "rateOfFire": 60,
+        "bulletType": "atgm_tank",
+        "maxDistance": 4000,
+        "maxSpeed": 250,
+        "guidanceType": "saclos",
+        "penetration": 700,
+        "explosiveMass": 2.9,
+        "explosiveType": "comp_b"
+      }
+    ],
+    "main_gun_ammo": null,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 160000,
+    "purchaseCost": 450000,
+    "crewTraining": 130000,
+    "expertTraining": 450000,
+    "aceTrainingGE": 2000,
+    "aceTrainingRP": 890000,
+    "repairCost": {
+      "arcade": [
+        4265,
+        5874
+      ],
+      "realistic": [
+        4883,
+        6727
+      ],
+      "simulator": [
+        5172,
+        7125
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.6,
+      "realistic": 2.1,
+      "simulator": 2.5
+    },
+    "expMultiplier": 2.14
+  }
+}

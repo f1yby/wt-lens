@@ -1,0 +1,31 @@
+{
+  "id": "saab_sk60b",
+  "economy": {
+    "researchCost": 95000,
+    "purchaseCost": 270000,
+    "crewTraining": 78000,
+    "expertTraining": 270000,
+    "aceTrainingGE": 1500,
+    "aceTrainingRP": 670000,
+    "repairCost": {
+      "arcade": [
+        3220,
+        4614
+      ],
+      "realistic": [
+        6471,
+        9272
+      ],
+      "simulator": [
+        11147,
+        15971
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.18,
+      "realistic": 2.6,
+      "simulator": 6.0
+    },
+    "expMultiplier": 1.9
+  }
+}

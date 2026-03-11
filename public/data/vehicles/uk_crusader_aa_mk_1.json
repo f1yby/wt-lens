@@ -1,0 +1,129 @@
+{
+  "id": "uk_crusader_aa_mk_1",
+  "performance": {
+    "horsepower": 340.0,
+    "weight": 19.25,
+    "power_to_weight": 17.66,
+    "max_reverse_speed": 6.9,
+    "reload_time": 0.5,
+    "penetration": 72.5,
+    "max_speed": 43.7,
+    "crew_count": 5,
+    "elevation_speed": 25.0,
+    "traverse_speed": 40.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -5.0,
+      90.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 95.0,
+    "mainGun": {
+      "name": "40mm_Bofors_L60",
+      "caliber": 40.0,
+      "reloadTime": 0.5,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 0.65,
+        "expert": 0.57,
+        "ace": 0.5
+      },
+      "rateOfFire": 120,
+      "beltReloadTime": 0.5
+    },
+    "ammunitions": [
+      {
+        "name": "40mm_MkII",
+        "localizedName": "Mk.II",
+        "type": "frag_i_t",
+        "caliber": 40.0,
+        "mass": 0.829,
+        "muzzleVelocity": 874.0,
+        "explosiveMassKg": 0.063,
+        "explosiveType": "tnt",
+        "tntEquivalent": 0.063
+      },
+      {
+        "name": "40mm_M81A1",
+        "localizedName": "M81A1",
+        "type": "ap_t",
+        "caliber": 40.0,
+        "mass": 0.885,
+        "muzzleVelocity": 874.8,
+        "deMarre": {
+          "fullCaliber": 40.0,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "Cx": 0.3624
+        },
+        "penetration0m": 72.5
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 1500.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 4,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      5.8,
+      9.9,
+      22.3,
+      43.7
+    ],
+    "reverse_gear_speeds": [
+      6.9
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 19.0,
+    "track_width": 0.3,
+    "secondary_weapons": null,
+    "main_gun_ammo": 160,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 7900,
+    "purchaseCost": 10000,
+    "crewTraining": 3000,
+    "expertTraining": 10000,
+    "aceTrainingGE": 115,
+    "aceTrainingRP": 160000,
+    "repairCost": {
+      "arcade": [
+        520,
+        668
+      ],
+      "realistic": [
+        386,
+        496
+      ],
+      "simulator": [
+        602,
+        773
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.32,
+      "realistic": 0.36,
+      "simulator": 0.49
+    },
+    "expMultiplier": 1.12
+  }
+}

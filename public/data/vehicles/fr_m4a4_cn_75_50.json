@@ -1,0 +1,153 @@
+{
+  "id": "fr_m4a4_cn_75_50",
+  "performance": {
+    "horsepower": 400.0,
+    "weight": 34.3,
+    "power_to_weight": 11.66,
+    "max_reverse_speed": 4.9,
+    "reload_time": 7.5,
+    "penetration": 203.0,
+    "max_speed": 40.3,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 24.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -10.0,
+      25.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 35.0,
+    "mainGun": {
+      "name": "75mm_SA_50_M4A4",
+      "caliber": 75.0,
+      "reloadTime": 7.5,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 9.75,
+        "expert": 8.62,
+        "ace": 7.5
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "75mm_pot51a",
+        "localizedName": "POT-51A",
+        "type": "apbc_usa_tank",
+        "caliber": 75.0,
+        "mass": 6.4,
+        "muzzleVelocity": 1000.0,
+        "deMarre": {
+          "fullCaliber": 75.0,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "Cx": 0.4
+        },
+        "penetration0m": 182.7
+      },
+      {
+        "name": "75mm_pcot51p",
+        "localizedName": "PCOT-51P",
+        "type": "apcbc_solid_medium_caliber_tank",
+        "caliber": 75.0,
+        "mass": 6.4,
+        "muzzleVelocity": 1000.0,
+        "deMarre": {
+          "fullCaliber": 75.0,
+          "isApcbc": true,
+          "explosiveMass": 0,
+          "Cx": 0.4
+        },
+        "penetration0m": 203.0
+      },
+      {
+        "name": "75mm_sa50_he",
+        "localizedName": "OE Mle 1951",
+        "type": "he_frag_tank",
+        "caliber": 75.0,
+        "mass": 6.2,
+        "muzzleVelocity": 753.0,
+        "explosiveMassKg": 0.675,
+        "explosiveType": "tnt",
+        "tntEquivalent": 0.675
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2400.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 5,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      3.7,
+      9.0,
+      15.5,
+      25.1,
+      40.3
+    ],
+    "reverse_gear_speeds": [
+      4.9
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 34.0,
+    "track_width": 0.4,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_M1919A4",
+        "caliber": 7.6,
+        "ammo": 3000,
+        "reloadTime": 8.0,
+        "rateOfFire": 500,
+        "bulletType": "ap_ball"
+      }
+    ],
+    "main_gun_ammo": 62,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 33000,
+    "purchaseCost": 105000,
+    "crewTraining": 30000,
+    "expertTraining": 105000,
+    "aceTrainingGE": 470,
+    "aceTrainingRP": 360000,
+    "repairCost": {
+      "arcade": [
+        1248,
+        1604
+      ],
+      "realistic": [
+        1473,
+        1893
+      ],
+      "simulator": [
+        1877,
+        2412
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.76,
+      "realistic": 1.19,
+      "simulator": 1.4
+    },
+    "expMultiplier": 1.48
+  }
+}

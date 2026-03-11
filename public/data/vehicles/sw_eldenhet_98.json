@@ -1,0 +1,118 @@
+{
+  "id": "sw_eldenhet_98",
+  "performance": {
+    "horsepower": 285.0,
+    "weight": 9.5,
+    "power_to_weight": 30.0,
+    "max_reverse_speed": 10.1,
+    "reload_time": 2.0,
+    "penetration": null,
+    "max_speed": 65.1,
+    "crew_count": 5,
+    "elevation_speed": 0.0,
+    "traverse_speed": 0.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -0.0,
+      0.0
+    ],
+    "traverse_range": [
+      -0.0,
+      0.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 0.0,
+    "mainGun": {
+      "name": "127mm_IRIS_T",
+      "caliber": 127.0,
+      "reloadTime": 2.0,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 2.6,
+        "expert": 2.3,
+        "ace": 2.0
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "us_iris_t",
+        "localizedName": "RBS 98",
+        "type": "sam_tank",
+        "caliber": 127.0,
+        "mass": 88.0,
+        "muzzleVelocity": 710.0
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": "cummins",
+    "engine_model": "isbe_285",
+    "engine_type": "diesel",
+    "engine_max_rpm": 2000.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 12,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      8.0,
+      9.4,
+      13.6,
+      18.8,
+      21.1,
+      23.5,
+      27.5,
+      30.2,
+      34.1,
+      42.3,
+      56.4,
+      65.1
+    ],
+    "reverse_gear_speeds": [
+      8.4,
+      10.1
+    ],
+    "steer_type": "double_differential",
+    "empty_weight": 9.2,
+    "track_width": 0.45,
+    "secondary_weapons": null,
+    "main_gun_ammo": 4,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 410000,
+    "purchaseCost": 1100000,
+    "crewTraining": 310000,
+    "expertTraining": 1100000,
+    "aceTrainingGE": 2300,
+    "aceTrainingRP": 1350000,
+    "repairCost": {
+      "arcade": [
+        5852,
+        7855
+      ],
+      "realistic": [
+        7109,
+        9542
+      ],
+      "simulator": [
+        8052,
+        10808
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.6,
+      "realistic": 2.1,
+      "simulator": 2.03
+    },
+    "expMultiplier": 2.56
+  }
+}

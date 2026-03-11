@@ -1,0 +1,33 @@
+{
+  "id": "tiger_hap_france",
+  "economy": {
+    "researchCost": 390000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 7270,
+    "crewTraining": 10000,
+    "expertTraining": 1660000,
+    "aceTrainingGE": 2600,
+    "aceTrainingRP": 2020000,
+    "repairCost": {
+      "arcade": [
+        5359,
+        5359
+      ],
+      "realistic": [
+        3142,
+        3142
+      ],
+      "simulator": [
+        3992,
+        3992
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.0,
+      "realistic": 5.4,
+      "simulator": 7.11
+    },
+    "expMultiplier": 2.26,
+    "freeRepairs": 30
+  }
+}

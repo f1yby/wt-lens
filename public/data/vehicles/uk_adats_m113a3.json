@@ -1,0 +1,119 @@
+{
+  "id": "uk_adats_m113a3",
+  "performance": {
+    "horsepower": 279.0,
+    "weight": 16.6,
+    "power_to_weight": 16.81,
+    "max_reverse_speed": 14.8,
+    "reload_time": 0.5,
+    "penetration": 900.0,
+    "max_speed": 64.2,
+    "crew_count": 5,
+    "elevation_speed": 60.0,
+    "traverse_speed": 70.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -10.0,
+      85.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": [
+      500,
+      300
+    ],
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": 583.1,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 95.0,
+    "mainGun": {
+      "name": "152mm_MIM146_launcher",
+      "caliber": 152.0,
+      "reloadTime": 0.5,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 0.65,
+        "expert": 0.57,
+        "ace": 0.5
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "152mm_mim146",
+        "localizedName": "MIM-146",
+        "type": "atgm_tank",
+        "caliber": 152.0,
+        "mass": 51.0,
+        "muzzleVelocity": 1065.0,
+        "penetration0m": 900.0
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2800.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 6,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      8.4,
+      16.9,
+      22.4,
+      33.3,
+      43.8,
+      64.2
+    ],
+    "reverse_gear_speeds": [
+      7.4,
+      14.8
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 16.0,
+    "track_width": null,
+    "secondary_weapons": null,
+    "main_gun_ammo": 8,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": true
+  },
+  "economy": {
+    "researchCost": 400000,
+    "purchaseCost": 1080000,
+    "crewTraining": 310000,
+    "expertTraining": 1080000,
+    "aceTrainingGE": 2200,
+    "aceTrainingRP": 1280000,
+    "repairCost": {
+      "arcade": [
+        5489,
+        7978
+      ],
+      "realistic": [
+        6540,
+        9506
+      ],
+      "simulator": [
+        7338,
+        10666
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.6,
+      "realistic": 2.1,
+      "simulator": 2.01
+    },
+    "expMultiplier": 2.5
+  }
+}

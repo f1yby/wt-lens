@@ -1,0 +1,31 @@
+{
+  "id": "mosquito_fb_mk26_china",
+  "economy": {
+    "researchCost": 18000,
+    "purchaseCost": 47000,
+    "crewTraining": 13000,
+    "expertTraining": 47000,
+    "aceTrainingGE": 400,
+    "aceTrainingRP": 280000,
+    "repairCost": {
+      "arcade": [
+        720,
+        1010
+      ],
+      "realistic": [
+        1185,
+        1610
+      ],
+      "simulator": [
+        2551,
+        3466
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.54,
+      "realistic": 1.07,
+      "simulator": 2.15
+    },
+    "expMultiplier": 1.36
+  }
+}

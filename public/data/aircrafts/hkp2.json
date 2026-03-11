@@ -1,0 +1,31 @@
+{
+  "id": "hkp2",
+  "economy": {
+    "researchCost": 150000,
+    "purchaseCost": 490000,
+    "crewTraining": 140000,
+    "expertTraining": 490000,
+    "aceTrainingGE": 1800,
+    "aceTrainingRP": 780000,
+    "repairCost": {
+      "arcade": [
+        10253,
+        12832
+      ],
+      "realistic": [
+        2964,
+        3710
+      ],
+      "simulator": [
+        4996,
+        6253
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.0,
+      "realistic": 3.0,
+      "simulator": 4.3
+    },
+    "expMultiplier": 2.02
+  }
+}

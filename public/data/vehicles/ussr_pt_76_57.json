@@ -1,0 +1,152 @@
+{
+  "id": "ussr_pt_76_57",
+  "performance": {
+    "horsepower": 300.0,
+    "weight": 15.0,
+    "power_to_weight": 20.0,
+    "max_reverse_speed": 17.5,
+    "reload_time": 0.5,
+    "penetration": 151.4,
+    "max_speed": 60.1,
+    "crew_count": 5,
+    "elevation_speed": 35.0,
+    "traverse_speed": 35.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "both",
+    "elevation_range": [
+      -5.0,
+      35.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 40.0,
+    "mainGun": {
+      "name": "57mm_AU_220",
+      "caliber": 57.0,
+      "reloadTime": 0.5,
+      "autoLoader": true,
+      "reloadTimes": {
+        "base": 0.5,
+        "expert": 0.5,
+        "ace": 0.5
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "57mm_br_281u",
+        "localizedName": "BR-281U",
+        "type": "apcbc_tank",
+        "caliber": 57.0,
+        "mass": 2.8,
+        "muzzleVelocity": 1000.0,
+        "deMarre": {
+          "fullCaliber": 57.0,
+          "isApcbc": true,
+          "explosiveMass": 0.013,
+          "Cx": 0.377
+        },
+        "penetration0m": 151.4,
+        "explosiveMassKg": 0.013,
+        "explosiveType": "a_ix_2",
+        "tntEquivalent": 0.018
+      },
+      {
+        "name": "57mm_or_281u",
+        "localizedName": "OR-281U",
+        "type": "he_frag_tank",
+        "caliber": 57.0,
+        "mass": 2.8,
+        "muzzleVelocity": 1000.0,
+        "explosiveMassKg": 0.153,
+        "explosiveType": "a_ix_2",
+        "tntEquivalent": 0.214
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": true,
+    "engine_manufacturer": "transmash",
+    "engine_model": "utd_20",
+    "engine_type": null,
+    "engine_max_rpm": 2600.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 8,
+    "reverse_gears": 4,
+    "forward_gear_speeds": [
+      9.3,
+      12.0,
+      20.6,
+      35.1,
+      44.2,
+      49.7,
+      54.5,
+      60.1
+    ],
+    "reverse_gear_speeds": [
+      8.0,
+      10.2,
+      14.7,
+      17.5
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 14.7,
+    "track_width": 0.35,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_PKT",
+        "caliber": 7.6,
+        "ammo": 2000,
+        "reloadTime": 8.0,
+        "rateOfFire": 700,
+        "bulletType": "ap_i_ball"
+      }
+    ],
+    "main_gun_ammo": 100,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": true,
+    "has_ess": true,
+    "has_laser_rangefinder": true
+  },
+  "economy": {
+    "researchCost": 95000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 8020,
+    "crewTraining": 10000,
+    "expertTraining": 440000,
+    "aceTrainingGE": 1100,
+    "aceTrainingRP": 1340000,
+    "repairCost": {
+      "arcade": [
+        2189,
+        2189
+      ],
+      "realistic": [
+        2516,
+        2516
+      ],
+      "simulator": [
+        3056,
+        3056
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.18,
+      "realistic": 3.01,
+      "simulator": 3.66
+    },
+    "expMultiplier": 1.9,
+    "freeRepairs": 30
+  }
+}

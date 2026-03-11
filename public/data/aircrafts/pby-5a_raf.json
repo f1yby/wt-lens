@@ -1,0 +1,33 @@
+{
+  "id": "pby-5a_raf",
+  "economy": {
+    "researchCost": 5900,
+    "purchaseCost": 0,
+    "purchaseCostGold": 880,
+    "crewTraining": 1400,
+    "expertTraining": 9000,
+    "aceTrainingGE": 80,
+    "aceTrainingRP": 270000,
+    "repairCost": {
+      "arcade": [
+        212,
+        212
+      ],
+      "realistic": [
+        1570,
+        1570
+      ],
+      "simulator": [
+        1551,
+        1551
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.64,
+      "realistic": 2.16,
+      "simulator": 2.3
+    },
+    "expMultiplier": 1.06,
+    "freeRepairs": 30
+  }
+}

@@ -16,10 +16,10 @@ import Navbar from '../components/Navbar';
 import DistributionChart from '../components/DistributionChart';
 import { BRGridSelector } from '../components/VehicleFilter';
 import GameModeSelector from '../components/GameModeSelector';
-import { loadAircraft, getAircraftStatsByMode } from '../data/aircraft';
+import { loadAircraft, getAircraftStatsByMode, loadAircraftDetail } from '../data/aircraft';
 import EconomySection from '../components/EconomySection';
 import { AIRCRAFT_TYPE_LABELS, BATTLE_RATINGS, ECONOMIC_TYPE_GRADIENTS } from '../types';
-import type { AircraftVehicle, AircraftType, GameMode, MetricType } from '../types';
+import type { AircraftVehicle, AircraftType, GameMode, MetricType, EconomyData } from '../types';
 import { getAircraftImagePath, getFlagImagePath } from '../utils/paths';
 import { getBRGradientColor } from '../utils/chart';
 import { getWinRateColor } from '../utils/gameMode';
@@ -125,6 +125,7 @@ export default function AircraftDetailPage() {
   const [selectedTypes, setSelectedTypes] = useState<AircraftType[]>([]);
   const [brRange, setBrRange] = useState<[number, number] | null>(null);
   const [typesInitialized, setTypesInitialized] = useState(false);
+  const [economyData, setEconomyData] = useState<EconomyData | undefined>(undefined);
 
   // Use custom hook for game mode management
   const { gameMode, handleGameModeChange } = useGameMode();
@@ -141,6 +142,17 @@ export default function AircraftDetailPage() {
   }, []);
 
   const aircraft = aircraftList.find(a => a.id === id);
+
+  // Load economy data on demand when aircraft is found
+  useEffect(() => {
+    if (!aircraft) return;
+    setEconomyData(undefined);
+    loadAircraftDetail(aircraft.id).then(detail => {
+      if (detail?.economy) {
+        setEconomyData(detail.economy);
+      }
+    });
+  }, [aircraft?.id]);
 
   // Default selectedTypes to current aircraft's type
   useEffect(() => {
@@ -439,9 +451,9 @@ export default function AircraftDetailPage() {
         </Paper>
 
         {/* Economy Data Section */}
-        {aircraft.economy && (
+        {economyData && (
           <Box sx={{ mb: 3 }}>
-            <EconomySection economy={aircraft.economy} gameMode={gameMode} />
+            <EconomySection economy={economyData} gameMode={gameMode} />
           </Box>
         )}
 

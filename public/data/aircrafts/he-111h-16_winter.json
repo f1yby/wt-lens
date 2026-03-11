@@ -1,0 +1,31 @@
+{
+  "id": "he-111h-16_winter",
+  "economy": {
+    "researchCost": 6900,
+    "purchaseCost": 32000,
+    "crewTraining": 9200,
+    "expertTraining": 32000,
+    "aceTrainingGE": 320,
+    "aceTrainingRP": 250000,
+    "repairCost": {
+      "arcade": [
+        973,
+        1289
+      ],
+      "realistic": [
+        1704,
+        2190
+      ],
+      "simulator": [
+        3177,
+        4084
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.64,
+      "realistic": 1.42,
+      "simulator": 2.14
+    },
+    "expMultiplier": 1.3
+  }
+}

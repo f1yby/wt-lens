@@ -1,0 +1,29 @@
+{
+  "id": "uk_frigate_river",
+  "economy": {
+    "researchCost": 75000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 3850,
+    "crewTraining": 10000,
+    "expertTraining": 400000,
+    "aceTrainingGE": 940,
+    "aceTrainingRP": 960000,
+    "repairCost": {
+      "arcade": [
+        4632,
+        4632
+      ],
+      "realistic": [
+        6701,
+        6701
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 5.57,
+      "realistic": 9.06,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.66,
+    "freeRepairs": 30
+  }
+}

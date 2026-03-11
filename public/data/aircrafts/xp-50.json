@@ -1,0 +1,33 @@
+{
+  "id": "xp-50",
+  "economy": {
+    "researchCost": 33000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 1600,
+    "crewTraining": 10000,
+    "expertTraining": 165000,
+    "aceTrainingGE": 590,
+    "aceTrainingRP": 710000,
+    "repairCost": {
+      "arcade": [
+        687,
+        687
+      ],
+      "realistic": [
+        4715,
+        4715
+      ],
+      "simulator": [
+        2387,
+        2387
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.33,
+      "realistic": 4.5,
+      "simulator": 6.87
+    },
+    "expMultiplier": 1.48,
+    "freeRepairs": 30
+  }
+}

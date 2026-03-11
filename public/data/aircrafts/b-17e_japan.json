@@ -1,0 +1,33 @@
+{
+  "id": "b-17e_japan",
+  "economy": {
+    "researchCost": 54000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 4900,
+    "crewTraining": 10000,
+    "expertTraining": 290000,
+    "aceTrainingGE": 940,
+    "aceTrainingRP": 960000,
+    "repairCost": {
+      "arcade": [
+        1800,
+        1800
+      ],
+      "realistic": [
+        4277,
+        4277
+      ],
+      "simulator": [
+        8291,
+        8291
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.25,
+      "realistic": 5.39,
+      "simulator": 9.95
+    },
+    "expMultiplier": 1.66,
+    "freeRepairs": 30
+  }
+}

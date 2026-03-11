@@ -1,0 +1,31 @@
+{
+  "id": "i-16_chung_28",
+  "economy": {
+    "researchCost": 2900,
+    "purchaseCost": 700,
+    "crewTraining": 200,
+    "expertTraining": 1000,
+    "aceTrainingGE": 20,
+    "aceTrainingRP": 96000,
+    "repairCost": {
+      "arcade": [
+        103,
+        132
+      ],
+      "realistic": [
+        161,
+        201
+      ],
+      "simulator": [
+        113,
+        142
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.1,
+      "realistic": 0.22,
+      "simulator": 0.56
+    },
+    "expMultiplier": 1.0
+  }
+}

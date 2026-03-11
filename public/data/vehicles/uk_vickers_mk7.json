@@ -1,0 +1,197 @@
+{
+  "id": "uk_vickers_mk7",
+  "performance": {
+    "horsepower": 1500.0,
+    "weight": 54.64,
+    "power_to_weight": 27.45,
+    "max_reverse_speed": 32.7,
+    "reload_time": 6.0,
+    "penetration": 471.4,
+    "max_speed": 72.1,
+    "crew_count": 5,
+    "elevation_speed": 11.0,
+    "traverse_speed": 40.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "both",
+    "elevation_range": [
+      -10.0,
+      20.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": [
+      500,
+      300
+    ],
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": 583.1,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 30.0,
+    "mainGun": {
+      "name": "120mm_L11A5_Mk3_Vickers",
+      "caliber": 120.0,
+      "reloadTime": 6.0,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 7.8,
+        "expert": 6.9,
+        "ace": 6.0
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "120mm_l23a1",
+        "localizedName": "Shot L23A1",
+        "type": "apds_fs_long_tank",
+        "caliber": 29.0,
+        "mass": 3.89,
+        "muzzleVelocity": 1535.0,
+        "lanzOdermatt": {
+          "workingLength": 410.0,
+          "density": 17500.0,
+          "material": "tungsten",
+          "Cx": 0.3498
+        },
+        "penetration0m": 396.9,
+        "penetrationData": {
+          "at0m": {
+            "angle0": 396.9,
+            "angle30": 343.7,
+            "angle60": 198.5
+          }
+        }
+      },
+      {
+        "name": "120mm_l37a7",
+        "localizedName": "Shell L31A7",
+        "type": "hesh_tank",
+        "caliber": 120.0,
+        "mass": 17.34,
+        "muzzleVelocity": 670.0,
+        "penetration0m": 152.0,
+        "explosiveMassKg": 4.08,
+        "explosiveType": "rdx",
+        "tntEquivalent": 5.712
+      },
+      {
+        "name": "120mm_smoke_l34",
+        "localizedName": "L34",
+        "type": "smoke_tank",
+        "caliber": 120.0,
+        "mass": 17.1,
+        "muzzleVelocity": 670.0,
+        "explosiveMassKg": 0.05,
+        "explosiveType": "smoke_composition",
+        "tntEquivalent": 0.05
+      },
+      {
+        "name": "120mm_l26",
+        "localizedName": "L26",
+        "type": "apds_fs_long_tank",
+        "caliber": 26.7,
+        "mass": 4.3,
+        "muzzleVelocity": 1550.0,
+        "lanzOdermatt": {
+          "workingLength": 500.0,
+          "density": 18600.0,
+          "material": "depletedUranium",
+          "Cx": 0.4513
+        },
+        "penetration0m": 471.4,
+        "penetrationData": {
+          "at0m": {
+            "angle0": 471.4,
+            "angle30": 408.2,
+            "angle60": 235.7
+          }
+        }
+      }
+    ],
+    "penetrationData": {
+      "at0m": {
+        "angle0": 471.4,
+        "angle30": 408.2,
+        "angle60": 235.7
+      }
+    },
+    "autoLoader": false,
+    "engine_manufacturer": "mtu",
+    "engine_model": "mb_873_ka_501",
+    "engine_type": null,
+    "engine_max_rpm": 2600.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 8,
+    "reverse_gears": 4,
+    "forward_gear_speeds": [
+      8.0,
+      16.1,
+      21.5,
+      32.7,
+      38.7,
+      47.5,
+      57.2,
+      72.1
+    ],
+    "reverse_gear_speeds": [
+      8.0,
+      16.1,
+      21.5,
+      32.7
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 53.34,
+    "track_width": 0.55,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_L8A2",
+        "caliber": 7.6,
+        "ammo": 2000,
+        "reloadTime": 8.0,
+        "rateOfFire": 1000,
+        "bulletType": "ap_ball"
+      }
+    ],
+    "main_gun_ammo": 50,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": true
+  },
+  "economy": {
+    "researchCost": 300000,
+    "purchaseCost": 830000,
+    "crewTraining": 240000,
+    "expertTraining": 830000,
+    "aceTrainingGE": 2100,
+    "aceTrainingRP": 1140000,
+    "repairCost": {
+      "arcade": [
+        4561,
+        6787
+      ],
+      "realistic": [
+        4415,
+        6571
+      ],
+      "simulator": [
+        5165,
+        7687
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.53,
+      "realistic": 1.98,
+      "simulator": 2.49
+    },
+    "expMultiplier": 2.38
+  }
+}

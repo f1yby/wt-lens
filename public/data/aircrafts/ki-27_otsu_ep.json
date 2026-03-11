@@ -1,0 +1,33 @@
+{
+  "id": "ki-27_otsu_ep",
+  "economy": {
+    "researchCost": 4000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 250,
+    "crewTraining": 450,
+    "expertTraining": 3000,
+    "aceTrainingGE": 45,
+    "aceTrainingRP": 220000,
+    "repairCost": {
+      "arcade": [
+        431,
+        431
+      ],
+      "realistic": [
+        222,
+        222
+      ],
+      "simulator": [
+        193,
+        193
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.42,
+      "realistic": 0.61,
+      "simulator": 1.96
+    },
+    "expMultiplier": 1.0,
+    "freeRepairs": 30
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "id": "sunderland_mk3a",
+  "economy": {
+    "researchCost": 7900,
+    "purchaseCost": 10000,
+    "crewTraining": 3000,
+    "expertTraining": 10000,
+    "aceTrainingGE": 125,
+    "aceTrainingRP": 160000,
+    "repairCost": {
+      "arcade": [
+        454,
+        633
+      ],
+      "realistic": [
+        608,
+        821
+      ],
+      "simulator": [
+        865,
+        1169
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.4,
+      "realistic": 0.84,
+      "simulator": 1.61
+    },
+    "expMultiplier": 1.12
+  }
+}

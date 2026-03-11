@@ -1,0 +1,106 @@
+{
+  "id": "ussr_zsu_23_4m4",
+  "performance": {
+    "horsepower": 280.0,
+    "weight": 22.0,
+    "power_to_weight": 12.73,
+    "max_reverse_speed": 6.8,
+    "reload_time": 4.0,
+    "penetration": null,
+    "max_speed": 50.1,
+    "crew_count": 5,
+    "elevation_speed": 60.0,
+    "traverse_speed": 70.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "both",
+    "elevation_range": [
+      -4.0,
+      85.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 89.0,
+    "mainGun": null,
+    "ammunitions": null,
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2000.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 5,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      7.4,
+      13.1,
+      22.6,
+      35.4,
+      50.1
+    ],
+    "reverse_gear_speeds": [
+      6.8
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 21.32,
+    "track_width": 0.33,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "72mm_9s846_4_rocket_launcher",
+        "caliber": 72.0,
+        "ammo": 4,
+        "reloadTime": 15.0,
+        "rateOfFire": 120,
+        "bulletType": "sam_tank",
+        "maxDistance": 8000,
+        "maxSpeed": 590,
+        "guidanceType": "optical",
+        "explosiveMass": 0.4,
+        "explosiveType": "okfol_20"
+      }
+    ],
+    "main_gun_ammo": 500,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 190000,
+    "purchaseCost": 520000,
+    "crewTraining": 150000,
+    "expertTraining": 520000,
+    "aceTrainingGE": 2100,
+    "aceTrainingRP": 950000,
+    "repairCost": {
+      "arcade": [
+        5763,
+        7408
+      ],
+      "realistic": [
+        4920,
+        6324
+      ],
+      "simulator": [
+        5362,
+        6892
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.6,
+      "realistic": 2.0,
+      "simulator": 2.5
+    },
+    "expMultiplier": 2.2
+  }
+}

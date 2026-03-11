@@ -1,0 +1,31 @@
+{
+  "id": "iar_93b",
+  "economy": {
+    "researchCost": 170000,
+    "purchaseCost": 480000,
+    "crewTraining": 135000,
+    "expertTraining": 480000,
+    "aceTrainingGE": 2400,
+    "aceTrainingRP": 950000,
+    "repairCost": {
+      "arcade": [
+        2730,
+        4112
+      ],
+      "realistic": [
+        7908,
+        11911
+      ],
+      "simulator": [
+        9131,
+        13752
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.15,
+      "realistic": 3.34,
+      "simulator": 6.0
+    },
+    "expMultiplier": 2.2
+  }
+}

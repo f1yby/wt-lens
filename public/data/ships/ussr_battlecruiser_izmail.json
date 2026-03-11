@@ -1,0 +1,27 @@
+{
+  "id": "ussr_battlecruiser_izmail",
+  "economy": {
+    "researchCost": 180000,
+    "purchaseCost": 540000,
+    "crewTraining": 155000,
+    "expertTraining": 540000,
+    "aceTrainingGE": 1800,
+    "aceTrainingRP": 780000,
+    "repairCost": {
+      "arcade": [
+        26178,
+        32928
+      ],
+      "realistic": [
+        31739,
+        39923
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 4.5,
+      "realistic": 6.0,
+      "simulator": 1.0
+    },
+    "expMultiplier": 2.02
+  }
+}

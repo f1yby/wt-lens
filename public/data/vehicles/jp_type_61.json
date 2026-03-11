@@ -1,0 +1,193 @@
+{
+  "id": "jp_type_61",
+  "performance": {
+    "horsepower": 650.0,
+    "weight": 34.45,
+    "power_to_weight": 18.87,
+    "max_reverse_speed": 8.0,
+    "reload_time": 7.5,
+    "penetration": 320.0,
+    "max_speed": 45.1,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 24.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -10.0,
+      13.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 23.0,
+    "mainGun": {
+      "name": "90mm_Type61",
+      "caliber": 90.0,
+      "reloadTime": 7.5,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 9.75,
+        "expert": 8.62,
+        "ace": 7.5
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "90mm_m318a1",
+        "localizedName": "M318A1 shot",
+        "type": "apbc_usa_tank",
+        "caliber": 90.0,
+        "mass": 10.98,
+        "muzzleVelocity": 914.0,
+        "deMarre": {
+          "fullCaliber": 90.0,
+          "isApcbc": false,
+          "explosiveMass": 0
+        },
+        "penetration0m": 193.9
+      },
+      {
+        "name": "90mm_m82",
+        "localizedName": "M82 shot",
+        "type": "apcbc_tank",
+        "caliber": 90.0,
+        "mass": 10.91,
+        "muzzleVelocity": 853.4,
+        "deMarre": {
+          "fullCaliber": 90.0,
+          "isApcbc": true,
+          "explosiveMass": 0.14,
+          "Cx": 0.2766
+        },
+        "penetration0m": 185.4,
+        "explosiveMassKg": 0.14,
+        "explosiveType": "exp_d",
+        "tntEquivalent": 0.139
+      },
+      {
+        "name": "90mm_m431",
+        "localizedName": "M431 shell",
+        "type": "heat_fs_tank",
+        "caliber": 90.0,
+        "mass": 5.8,
+        "muzzleVelocity": 1216.0,
+        "penetration0m": 320.0,
+        "explosiveMassKg": 0.544,
+        "explosiveType": "comp_b",
+        "tntEquivalent": 0.691
+      },
+      {
+        "name": "90mm_m71",
+        "localizedName": "M71 shell",
+        "type": "he_frag_tank",
+        "caliber": 90.0,
+        "mass": 10.55,
+        "muzzleVelocity": 823.0,
+        "explosiveMassKg": 0.925,
+        "explosiveType": "tnt",
+        "tntEquivalent": 0.925
+      },
+      {
+        "name": "90mm_m313",
+        "localizedName": "M313",
+        "type": "smoke_tank",
+        "caliber": 90.0,
+        "mass": 10.7,
+        "muzzleVelocity": 821.0,
+        "explosiveMassKg": 0.05,
+        "explosiveType": "smoke_composition",
+        "tntEquivalent": 0.05
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2100.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 7,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      4.7,
+      6.9,
+      9.7,
+      14.2,
+      21.1,
+      30.5,
+      45.1
+    ],
+    "reverse_gear_speeds": [
+      5.4,
+      8.0
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 34.0,
+    "track_width": 0.53,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_M1919A4",
+        "caliber": 7.6,
+        "ammo": 4000,
+        "reloadTime": 8.0,
+        "rateOfFire": 500,
+        "bulletType": "ap_ball"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "12_7mm_M2_HB",
+        "caliber": 12.7,
+        "ammo": 600,
+        "reloadTime": 8.0,
+        "rateOfFire": 575,
+        "bulletType": "ap_i_t_ball_M20"
+      }
+    ],
+    "main_gun_ammo": 51,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 63000,
+    "purchaseCost": 200000,
+    "crewTraining": 57000,
+    "expertTraining": 200000,
+    "aceTrainingGE": 800,
+    "aceTrainingRP": 520000,
+    "repairCost": {
+      "arcade": [
+        3005,
+        4145
+      ],
+      "realistic": [
+        3607,
+        4976
+      ],
+      "simulator": [
+        4713,
+        6501
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.16,
+      "realistic": 1.76,
+      "simulator": 1.99
+    },
+    "expMultiplier": 1.72
+  }
+}

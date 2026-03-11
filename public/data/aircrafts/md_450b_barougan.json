@@ -1,0 +1,31 @@
+{
+  "id": "md_450b_barougan",
+  "economy": {
+    "researchCost": 53000,
+    "purchaseCost": 300000,
+    "crewTraining": 86000,
+    "expertTraining": 300000,
+    "aceTrainingGE": 1700,
+    "aceTrainingRP": 720000,
+    "repairCost": {
+      "arcade": [
+        3517,
+        4708
+      ],
+      "realistic": [
+        9760,
+        13066
+      ],
+      "simulator": [
+        12979,
+        17375
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.3,
+      "realistic": 3.61,
+      "simulator": 6.0
+    },
+    "expMultiplier": 1.96
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "id": "fr_destroyer_bourrasque_class_bourrasque",
+  "economy": {
+    "purchaseCost": 0,
+    "crewTraining": 0,
+    "expertTraining": 1000,
+    "aceTrainingGE": 10,
+    "aceTrainingRP": 80000,
+    "rewardMultiplier": {
+      "arcade": 0.18,
+      "realistic": 0.32,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.0
+  }
+}

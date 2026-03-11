@@ -1,0 +1,27 @@
+{
+  "id": "ussr_cruiser_maxim_gorky",
+  "economy": {
+    "researchCost": 145000,
+    "purchaseCost": 440000,
+    "crewTraining": 125000,
+    "expertTraining": 440000,
+    "aceTrainingGE": 1700,
+    "aceTrainingRP": 720000,
+    "repairCost": {
+      "arcade": [
+        12497,
+        16911
+      ],
+      "realistic": [
+        12829,
+        17361
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 4.5,
+      "realistic": 6.0,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.96
+  }
+}

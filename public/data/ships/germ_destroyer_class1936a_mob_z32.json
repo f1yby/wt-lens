@@ -1,0 +1,27 @@
+{
+  "id": "germ_destroyer_class1936a_mob_z32",
+  "economy": {
+    "researchCost": 13000,
+    "purchaseCost": 31000,
+    "crewTraining": 9000,
+    "expertTraining": 31000,
+    "aceTrainingGE": 320,
+    "aceTrainingRP": 250000,
+    "repairCost": {
+      "arcade": [
+        1886,
+        2453
+      ],
+      "realistic": [
+        2888,
+        3756
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.63,
+      "realistic": 3.99,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.3
+  }
+}

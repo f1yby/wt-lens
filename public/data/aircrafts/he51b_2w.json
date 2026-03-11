@@ -1,0 +1,33 @@
+{
+  "id": "he51b_2w",
+  "economy": {
+    "researchCost": 4000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 400,
+    "crewTraining": 450,
+    "expertTraining": 3000,
+    "aceTrainingGE": 45,
+    "aceTrainingRP": 220000,
+    "repairCost": {
+      "arcade": [
+        384,
+        384
+      ],
+      "realistic": [
+        187,
+        187
+      ],
+      "simulator": [
+        251,
+        251
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.42,
+      "realistic": 0.71,
+      "simulator": 2.6
+    },
+    "expMultiplier": 1.0,
+    "freeRepairs": 30
+  }
+}

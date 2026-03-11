@@ -1,0 +1,116 @@
+{
+  "id": "jp_type_98_ke_ni",
+  "performance": {
+    "horsepower": 130.0,
+    "weight": 7.2,
+    "power_to_weight": 18.06,
+    "max_reverse_speed": 7.2,
+    "reload_time": 3.33,
+    "penetration": 47.8,
+    "max_speed": 49.7,
+    "crew_count": 5,
+    "elevation_speed": 15.0,
+    "traverse_speed": 17.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "vertical",
+    "elevation_range": [
+      -15.0,
+      18.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 33.0,
+    "mainGun": {
+      "name": "37mm_Type100",
+      "caliber": 37.0,
+      "reloadTime": 3.33,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 4.33,
+        "expert": 3.83,
+        "ace": 3.33
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "37mm_type1_ap",
+        "localizedName": "Type 1 APHE",
+        "type": "aphe_tank",
+        "caliber": 37.0,
+        "mass": 0.72,
+        "muzzleVelocity": 700.0,
+        "deMarre": {
+          "fullCaliber": 37.0,
+          "isApcbc": false,
+          "explosiveMass": 0.008,
+          "Cx": 0.6
+        },
+        "penetration0m": 47.8,
+        "explosiveMassKg": 0.008,
+        "explosiveType": "rdx",
+        "tntEquivalent": 0.011
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2100.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 6,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      4.2,
+      4.8,
+      10.2,
+      20.2,
+      37.0,
+      49.7
+    ],
+    "reverse_gear_speeds": [
+      7.2
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 7.07,
+    "track_width": 0.3,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_7mm_Type_97",
+        "caliber": 7.7,
+        "ammo": 3000,
+        "reloadTime": 3.0,
+        "rateOfFire": 498,
+        "bulletType": "ap_ball"
+      }
+    ],
+    "main_gun_ammo": 110,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "purchaseCost": 0,
+    "crewTraining": 0,
+    "expertTraining": 1000,
+    "aceTrainingGE": 10,
+    "aceTrainingRP": 80000,
+    "rewardMultiplier": {
+      "arcade": 0.1,
+      "realistic": 0.1,
+      "simulator": 0.1
+    },
+    "expMultiplier": 1.0
+  }
+}

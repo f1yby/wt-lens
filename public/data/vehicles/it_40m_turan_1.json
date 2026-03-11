@@ -1,0 +1,160 @@
+{
+  "id": "it_40m_turan_1",
+  "performance": {
+    "horsepower": 260.0,
+    "weight": 18.7,
+    "power_to_weight": 13.9,
+    "max_reverse_speed": 43.0,
+    "reload_time": 2.78,
+    "penetration": 73.6,
+    "max_speed": 43.0,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 15.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "vertical",
+    "elevation_range": [
+      -10.0,
+      20.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 30.0,
+    "mainGun": {
+      "name": "40mm_41M",
+      "caliber": 40.0,
+      "reloadTime": 2.78,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 3.61,
+        "expert": 3.2,
+        "ace": 2.78
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "40mm_36m",
+        "localizedName": "36M",
+        "type": "aphebc_tank",
+        "caliber": 40.0,
+        "mass": 0.965,
+        "muzzleVelocity": 812.0,
+        "deMarre": {
+          "fullCaliber": 40.0,
+          "isApcbc": false,
+          "explosiveMass": 0.017
+        },
+        "penetration0m": 63.7,
+        "explosiveMassKg": 0.017,
+        "explosiveType": "tnt",
+        "tntEquivalent": 0.017
+      },
+      {
+        "name": "40mm_39m",
+        "localizedName": "39M",
+        "type": "he_frag_tank",
+        "caliber": 40.0,
+        "mass": 0.965,
+        "muzzleVelocity": 812.0,
+        "explosiveMassKg": 0.063,
+        "explosiveType": "tnt",
+        "tntEquivalent": 0.063
+      },
+      {
+        "name": "40mm_43m",
+        "localizedName": "43M",
+        "type": "apbc_usa_tank",
+        "caliber": 40.0,
+        "mass": 1.05,
+        "muzzleVelocity": 812.0,
+        "deMarre": {
+          "fullCaliber": 40.0,
+          "isApcbc": false,
+          "explosiveMass": 0
+        },
+        "penetration0m": 73.6
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2200.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 6,
+    "reverse_gears": 6,
+    "forward_gear_speeds": [
+      4.3,
+      6.0,
+      12.0,
+      20.0,
+      35.1,
+      43.0
+    ],
+    "reverse_gear_speeds": [
+      4.3,
+      6.0,
+      12.0,
+      20.0,
+      35.1,
+      43.0
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 18.2,
+    "track_width": 0.42,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "8mm_Gebauer_34_40M",
+        "caliber": 8.0,
+        "ammo": 3200,
+        "reloadTime": 8.0,
+        "rateOfFire": 900,
+        "bulletType": "ap_i_t_ball"
+      }
+    ],
+    "main_gun_ammo": 101,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 7900,
+    "purchaseCost": 10000,
+    "crewTraining": 3000,
+    "expertTraining": 10000,
+    "aceTrainingGE": 115,
+    "aceTrainingRP": 160000,
+    "repairCost": {
+      "arcade": [
+        397,
+        537
+      ],
+      "realistic": [
+        424,
+        573
+      ],
+      "simulator": [
+        532,
+        719
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.26,
+      "realistic": 0.38,
+      "simulator": 0.44
+    },
+    "expMultiplier": 1.12
+  }
+}

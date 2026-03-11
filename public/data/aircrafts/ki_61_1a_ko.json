@@ -1,0 +1,31 @@
+{
+  "id": "ki_61_1a_ko",
+  "economy": {
+    "researchCost": 4600,
+    "purchaseCost": 16000,
+    "crewTraining": 4500,
+    "expertTraining": 16000,
+    "aceTrainingGE": 180,
+    "aceTrainingRP": 190000,
+    "repairCost": {
+      "arcade": [
+        495,
+        647
+      ],
+      "realistic": [
+        1046,
+        1326
+      ],
+      "simulator": [
+        1407,
+        1784
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.31,
+      "realistic": 0.73,
+      "simulator": 1.52
+    },
+    "expMultiplier": 1.18
+  }
+}

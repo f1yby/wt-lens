@@ -1,0 +1,31 @@
+{
+  "id": "p-38l",
+  "economy": {
+    "researchCost": 27000,
+    "purchaseCost": 185000,
+    "crewTraining": 52000,
+    "expertTraining": 185000,
+    "aceTrainingGE": 940,
+    "aceTrainingRP": 480000,
+    "repairCost": {
+      "arcade": [
+        2109,
+        2946
+      ],
+      "realistic": [
+        5029,
+        6806
+      ],
+      "simulator": [
+        7425,
+        10048
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.88,
+      "realistic": 2.13,
+      "simulator": 4.47
+    },
+    "expMultiplier": 1.66
+  }
+}

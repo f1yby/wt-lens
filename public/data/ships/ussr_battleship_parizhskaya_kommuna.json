@@ -1,0 +1,27 @@
+{
+  "id": "ussr_battleship_parizhskaya_kommuna",
+  "economy": {
+    "researchCost": 145000,
+    "purchaseCost": 440000,
+    "crewTraining": 125000,
+    "expertTraining": 440000,
+    "aceTrainingGE": 1700,
+    "aceTrainingRP": 720000,
+    "repairCost": {
+      "arcade": [
+        26244,
+        32928
+      ],
+      "realistic": [
+        31819,
+        39923
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 4.5,
+      "realistic": 6.0,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.96
+  }
+}

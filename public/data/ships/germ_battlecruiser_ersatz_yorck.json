@@ -1,0 +1,27 @@
+{
+  "id": "germ_battlecruiser_ersatz_yorck",
+  "economy": {
+    "researchCost": 220000,
+    "purchaseCost": 660000,
+    "crewTraining": 190000,
+    "expertTraining": 660000,
+    "aceTrainingGE": 2000,
+    "aceTrainingRP": 830000,
+    "repairCost": {
+      "arcade": [
+        27390,
+        34496
+      ],
+      "realistic": [
+        33208,
+        41824
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 4.5,
+      "realistic": 6.0,
+      "simulator": 1.0
+    },
+    "expMultiplier": 2.08
+  }
+}

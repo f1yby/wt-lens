@@ -1,0 +1,29 @@
+{
+  "id": "it_destroyer_soldati_serie1",
+  "economy": {
+    "researchCost": 33000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 2980,
+    "crewTraining": 10000,
+    "expertTraining": 180000,
+    "aceTrainingGE": 820,
+    "aceTrainingRP": 870000,
+    "repairCost": {
+      "arcade": [
+        2905,
+        2905
+      ],
+      "realistic": [
+        3559,
+        3559
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 6.45,
+      "realistic": 12.0,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.6,
+    "freeRepairs": 30
+  }
+}

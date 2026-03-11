@@ -1,0 +1,31 @@
+{
+  "id": "p-51d-20-na_j26",
+  "economy": {
+    "researchCost": 18000,
+    "purchaseCost": 47000,
+    "crewTraining": 13000,
+    "expertTraining": 47000,
+    "aceTrainingGE": 400,
+    "aceTrainingRP": 280000,
+    "repairCost": {
+      "arcade": [
+        833,
+        1133
+      ],
+      "realistic": [
+        1909,
+        2519
+      ],
+      "simulator": [
+        3058,
+        4034
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.53,
+      "realistic": 1.28,
+      "simulator": 2.63
+    },
+    "expMultiplier": 1.36
+  }
+}

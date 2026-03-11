@@ -1,0 +1,107 @@
+{
+  "id": "il_spyder_aio",
+  "performance": {
+    "horsepower": 450.0,
+    "weight": 30.0,
+    "power_to_weight": 15.0,
+    "max_reverse_speed": 10.2,
+    "reload_time": null,
+    "penetration": null,
+    "max_speed": 84.6,
+    "crew_count": 5,
+    "elevation_speed": null,
+    "traverse_speed": null,
+    "has_stabilizer": null,
+    "stabilizer_type": "none",
+    "elevation_range": null,
+    "traverse_range": null,
+    "gunner_thermal_resolution": [
+      1200,
+      800
+    ],
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": 1442.2,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": null,
+    "mainGun": null,
+    "ammunitions": null,
+    "penetrationData": null,
+    "autoLoader": null,
+    "engine_manufacturer": "navistar",
+    "engine_model": "maxxforce_13",
+    "engine_type": "diesel",
+    "engine_max_rpm": 2100.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 6,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      12.1,
+      25.6,
+      37.0,
+      56.7,
+      74.6,
+      84.6
+    ],
+    "reverse_gear_speeds": [
+      10.2
+    ],
+    "steer_type": null,
+    "empty_weight": 29.5,
+    "track_width": 0.4,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "160mm_spyder_launcher",
+        "caliber": 160.0,
+        "ammo": 8,
+        "reloadTime": 0.5,
+        "rateOfFire": 120,
+        "bulletType": "sam_tank",
+        "maxDistance": 15000,
+        "maxSpeed": 710,
+        "guidanceType": "optical",
+        "explosiveMass": 5.0,
+        "explosiveType": "hbx"
+      }
+    ],
+    "main_gun_ammo": null,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": true
+  },
+  "economy": {
+    "researchCost": 410000,
+    "purchaseCost": 1100000,
+    "crewTraining": 310000,
+    "expertTraining": 1100000,
+    "aceTrainingGE": 2300,
+    "aceTrainingRP": 1350000,
+    "repairCost": {
+      "arcade": [
+        5561,
+        7855
+      ],
+      "realistic": [
+        6756,
+        9542
+      ],
+      "simulator": [
+        7652,
+        10808
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.6,
+      "realistic": 2.1,
+      "simulator": 2.03
+    },
+    "expMultiplier": 2.56
+  }
+}

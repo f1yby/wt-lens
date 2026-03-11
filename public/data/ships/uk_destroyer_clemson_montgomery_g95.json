@@ -1,0 +1,29 @@
+{
+  "id": "uk_destroyer_clemson_montgomery_g95",
+  "economy": {
+    "researchCost": 4000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 250,
+    "crewTraining": 450,
+    "expertTraining": 3000,
+    "aceTrainingGE": 45,
+    "aceTrainingRP": 220000,
+    "repairCost": {
+      "arcade": [
+        1309,
+        1309
+      ],
+      "realistic": [
+        1353,
+        1353
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.77,
+      "realistic": 2.48,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.0,
+    "freeRepairs": 30
+  }
+}

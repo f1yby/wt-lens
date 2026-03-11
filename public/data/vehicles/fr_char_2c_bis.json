@@ -1,0 +1,138 @@
+{
+  "id": "fr_char_2c_bis",
+  "performance": {
+    "horsepower": 500.0,
+    "weight": 70.0,
+    "power_to_weight": 7.14,
+    "max_reverse_speed": 15.0,
+    "reload_time": 17.24,
+    "penetration": null,
+    "max_speed": 15.0,
+    "crew_count": 5,
+    "elevation_speed": 10.0,
+    "traverse_speed": 10.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -15.0,
+      20.0
+    ],
+    "traverse_range": [
+      -100.0,
+      100.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 35.0,
+    "mainGun": {
+      "name": "155mm_Schneider_155_C",
+      "caliber": 155.0,
+      "reloadTime": 17.24,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 22.41,
+        "expert": 19.83,
+        "ace": 17.24
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "155mm_oa_mle14",
+        "localizedName": "OA Mle1914",
+        "type": "he_frag_tank",
+        "caliber": 155.0,
+        "mass": 43.2,
+        "muzzleVelocity": 210.0,
+        "explosiveMassKg": 10.2,
+        "explosiveType": "melinite",
+        "tntEquivalent": 10.812
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 1900.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 5,
+    "reverse_gears": 5,
+    "forward_gear_speeds": [
+      1.5,
+      3.6,
+      6.1,
+      9.9,
+      15.0
+    ],
+    "reverse_gear_speeds": [
+      1.5,
+      3.6,
+      6.1,
+      9.9,
+      15.0
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 69.0,
+    "track_width": 0.7,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "8mm_Hotchkiss_Mle1914",
+        "caliber": 8.0,
+        "ammo": 5000,
+        "reloadTime": 5.0,
+        "rateOfFire": 450,
+        "bulletType": "ap_i_t_ball"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "8mm_Hotchkiss_Mle1914",
+        "caliber": 8.0,
+        "ammo": 1000,
+        "reloadTime": 5.0,
+        "rateOfFire": 450,
+        "bulletType": "ap_i_t_ball"
+      }
+    ],
+    "main_gun_ammo": 24,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 5900,
+    "purchaseCost": 0,
+    "purchaseCostGold": 2100,
+    "crewTraining": 1400,
+    "expertTraining": 9000,
+    "aceTrainingGE": 75,
+    "aceTrainingRP": 270000,
+    "repairCost": {
+      "arcade": [
+        2086,
+        2086
+      ],
+      "realistic": [
+        328,
+        328
+      ],
+      "simulator": [
+        406,
+        406
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.6,
+      "realistic": 0.64,
+      "simulator": 0.75
+    },
+    "expMultiplier": 1.06,
+    "freeRepairs": 30
+  }
+}

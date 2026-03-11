@@ -1,0 +1,33 @@
+{
+  "id": "mi_24p_hungary",
+  "economy": {
+    "researchCost": 370000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 8730,
+    "crewTraining": 10000,
+    "expertTraining": 1620000,
+    "aceTrainingGE": 2200,
+    "aceTrainingRP": 1780000,
+    "repairCost": {
+      "arcade": [
+        5144,
+        5144
+      ],
+      "realistic": [
+        2772,
+        2772
+      ],
+      "simulator": [
+        3859,
+        3859
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.0,
+      "realistic": 5.78,
+      "simulator": 8.6
+    },
+    "expMultiplier": 2.14,
+    "freeRepairs": 30
+  }
+}

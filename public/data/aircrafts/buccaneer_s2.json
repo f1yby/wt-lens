@@ -1,0 +1,31 @@
+{
+  "id": "buccaneer_s2",
+  "economy": {
+    "researchCost": 170000,
+    "purchaseCost": 480000,
+    "crewTraining": 135000,
+    "expertTraining": 480000,
+    "aceTrainingGE": 2400,
+    "aceTrainingRP": 950000,
+    "repairCost": {
+      "arcade": [
+        3002,
+        4301
+      ],
+      "realistic": [
+        8535,
+        12229
+      ],
+      "simulator": [
+        9483,
+        13586
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.83,
+      "realistic": 3.23,
+      "simulator": 6.0
+    },
+    "expMultiplier": 2.2
+  }
+}

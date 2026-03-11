@@ -1,0 +1,31 @@
+{
+  "id": "ba_65_k14_l",
+  "economy": {
+    "researchCost": 2900,
+    "purchaseCost": 700,
+    "crewTraining": 200,
+    "expertTraining": 1000,
+    "aceTrainingGE": 20,
+    "aceTrainingRP": 96000,
+    "repairCost": {
+      "arcade": [
+        113,
+        153
+      ],
+      "realistic": [
+        108,
+        146
+      ],
+      "simulator": [
+        175,
+        235
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.1,
+      "realistic": 0.21,
+      "simulator": 0.45
+    },
+    "expMultiplier": 1.0
+  }
+}

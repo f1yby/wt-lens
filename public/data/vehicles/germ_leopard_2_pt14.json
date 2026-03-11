@@ -1,0 +1,221 @@
+{
+  "id": "germ_leopard_2_pt14",
+  "performance": {
+    "horsepower": 1500.0,
+    "weight": 50.5,
+    "power_to_weight": 29.7,
+    "max_reverse_speed": 72.1,
+    "reload_time": 4.0,
+    "penetration": 408.1,
+    "max_speed": 72.1,
+    "crew_count": 5,
+    "elevation_speed": 20.0,
+    "traverse_speed": 40.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "both",
+    "elevation_range": [
+      -9.0,
+      20.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 29.0,
+    "mainGun": {
+      "name": "120mm_Rheinmetall_L44_autoloader",
+      "caliber": 120.0,
+      "reloadTime": 4.0,
+      "autoLoader": true,
+      "reloadTimes": {
+        "base": 4.0,
+        "expert": 4.0,
+        "ace": 4.0
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "120mm_dm12",
+        "localizedName": "DM12",
+        "type": "heat_fs_tank",
+        "caliber": 120.0,
+        "mass": 13.5,
+        "muzzleVelocity": 1140.0,
+        "penetration0m": 480.0,
+        "explosiveMassKg": 1.64,
+        "explosiveType": "comp_b",
+        "tntEquivalent": 2.083
+      },
+      {
+        "name": "120mm_dm13",
+        "localizedName": "DM13",
+        "type": "apds_fs_tungsten_l10_l15_tank",
+        "caliber": 32.0,
+        "mass": 4.436,
+        "muzzleVelocity": 1650.0,
+        "armorPowerTable": [
+          {
+            "penetration": 393.0,
+            "distance": 10.0
+          },
+          {
+            "penetration": 390.0,
+            "distance": 100.0
+          },
+          {
+            "penetration": 384.0,
+            "distance": 500.0
+          },
+          {
+            "penetration": 376.0,
+            "distance": 1000.0
+          },
+          {
+            "penetration": 367.0,
+            "distance": 1500.0
+          },
+          {
+            "penetration": 359.0,
+            "distance": 2000.0
+          },
+          {
+            "penetration": 341.0,
+            "distance": 3000.0
+          },
+          {
+            "penetration": 5.0,
+            "distance": 10000.0
+          },
+          {
+            "penetration": 0.0,
+            "distance": 20000.0
+          }
+        ],
+        "penetration0m": 393.0
+      },
+      {
+        "name": "120mm_dm23",
+        "localizedName": "DM23",
+        "type": "apds_fs_tungsten_l10_l15_tank",
+        "caliber": 32.0,
+        "mass": 4.3,
+        "muzzleVelocity": 1640.0,
+        "lanzOdermatt": {
+          "workingLength": 360.0,
+          "density": 17500.0,
+          "material": "tungsten",
+          "Cx": 0.3056
+        },
+        "penetration0m": 408.1,
+        "penetrationData": {
+          "at0m": {
+            "angle0": 408.1,
+            "angle30": 353.4,
+            "angle60": 204.1
+          }
+        }
+      }
+    ],
+    "penetrationData": {
+      "at0m": {
+        "angle0": 408.1,
+        "angle30": 353.4,
+        "angle60": 204.1
+      }
+    },
+    "autoLoader": true,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2600.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 8,
+    "reverse_gears": 8,
+    "forward_gear_speeds": [
+      6.3,
+      9.1,
+      13.1,
+      18.0,
+      21.3,
+      32.3,
+      46.1,
+      72.1
+    ],
+    "reverse_gear_speeds": [
+      6.3,
+      9.1,
+      13.1,
+      18.0,
+      21.3,
+      32.3,
+      46.1,
+      72.1
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 48.5,
+    "track_width": 0.55,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_92mm_MG3",
+        "caliber": 7.6,
+        "ammo": 4000,
+        "reloadTime": 8.0,
+        "rateOfFire": 1200,
+        "bulletType": "ap_ball"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "7_92mm_MG3",
+        "caliber": 7.6,
+        "ammo": 2000,
+        "reloadTime": 8.0,
+        "rateOfFire": 1200,
+        "bulletType": "ap_ball"
+      }
+    ],
+    "main_gun_ammo": 41,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 260000,
+    "purchaseCost": 710000,
+    "crewTraining": 200000,
+    "expertTraining": 710000,
+    "aceTrainingGE": 2100,
+    "aceTrainingRP": 1080000,
+    "repairCost": {
+      "arcade": [
+        5020,
+        6580
+      ],
+      "realistic": [
+        4864,
+        6375
+      ],
+      "simulator": [
+        5935,
+        7779
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.59,
+      "realistic": 2.03,
+      "simulator": 2.47
+    },
+    "expMultiplier": 2.32
+  }
+}

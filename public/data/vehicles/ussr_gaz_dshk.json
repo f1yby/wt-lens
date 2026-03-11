@@ -1,0 +1,98 @@
+{
+  "id": "ussr_gaz_dshk",
+  "performance": {
+    "horsepower": 50.0,
+    "weight": 2.95,
+    "power_to_weight": 16.95,
+    "max_reverse_speed": 8.3,
+    "reload_time": null,
+    "penetration": null,
+    "max_speed": 65.0,
+    "crew_count": 5,
+    "elevation_speed": null,
+    "traverse_speed": null,
+    "has_stabilizer": null,
+    "stabilizer_type": "none",
+    "elevation_range": null,
+    "traverse_range": null,
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": null,
+    "mainGun": null,
+    "ammunitions": null,
+    "penetrationData": null,
+    "autoLoader": null,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2800.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 8,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      7.0,
+      10.2,
+      14.5,
+      21.0,
+      26.5,
+      38.5,
+      44.8,
+      65.0
+    ],
+    "reverse_gear_speeds": [
+      8.3
+    ],
+    "steer_type": null,
+    "empty_weight": 2.85,
+    "track_width": 0.1,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner0",
+        "name": "12_7mm_DShK_GAZ",
+        "caliber": 12.7,
+        "ammo": 1000,
+        "reloadTime": 8.0,
+        "rateOfFire": 600,
+        "bulletType": "ap_i_ball"
+      }
+    ],
+    "main_gun_ammo": null,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 4000,
+    "purchaseCost": 2100,
+    "crewTraining": 600,
+    "expertTraining": 2100,
+    "aceTrainingGE": 45,
+    "aceTrainingRP": 110000,
+    "repairCost": {
+      "arcade": [
+        198,
+        257
+      ],
+      "realistic": [
+        179,
+        232
+      ],
+      "simulator": [
+        261,
+        339
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.19,
+      "realistic": 0.19,
+      "simulator": 0.23
+    },
+    "expMultiplier": 1.0
+  }
+}

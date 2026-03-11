@@ -1,0 +1,98 @@
+{
+  "id": "uk_falcon",
+  "performance": {
+    "horsepower": 216.0,
+    "weight": 15.88,
+    "power_to_weight": 13.6,
+    "max_reverse_speed": 7.5,
+    "reload_time": 4.0,
+    "penetration": null,
+    "max_speed": 47.7,
+    "crew_count": 5,
+    "elevation_speed": 50.0,
+    "traverse_speed": 90.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "both",
+    "elevation_range": [
+      -10.0,
+      85.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 95.0,
+    "mainGun": null,
+    "ammunitions": null,
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2800.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 8,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      6.0,
+      11.9,
+      15.3,
+      21.2,
+      26.1,
+      34.0,
+      39.7,
+      47.7
+    ],
+    "reverse_gear_speeds": [
+      3.7,
+      7.5
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 15.0,
+    "track_width": null,
+    "secondary_weapons": null,
+    "main_gun_ammo": 340,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 105000,
+    "purchaseCost": 300000,
+    "crewTraining": 86000,
+    "expertTraining": 300000,
+    "aceTrainingGE": 1200,
+    "aceTrainingRP": 720000,
+    "repairCost": {
+      "arcade": [
+        4686,
+        6024
+      ],
+      "realistic": [
+        4000,
+        5142
+      ],
+      "simulator": [
+        5045,
+        6485
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.38,
+      "realistic": 1.76,
+      "simulator": 2.2
+    },
+    "expMultiplier": 1.96
+  }
+}

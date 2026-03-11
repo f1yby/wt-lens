@@ -1,0 +1,107 @@
+{
+  "id": "us_xm_800t",
+  "performance": {
+    "horsepower": 285.0,
+    "weight": 8.6,
+    "power_to_weight": 33.14,
+    "max_reverse_speed": 42.6,
+    "reload_time": 8.0,
+    "penetration": null,
+    "max_speed": 88.5,
+    "crew_count": 5,
+    "elevation_speed": 90.0,
+    "traverse_speed": 90.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "both",
+    "elevation_range": [
+      -20.0,
+      65.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 85.0,
+    "mainGun": null,
+    "ammunitions": null,
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2800.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 8,
+    "reverse_gears": 4,
+    "forward_gear_speeds": [
+      11.1,
+      22.1,
+      28.3,
+      39.3,
+      48.4,
+      63.0,
+      73.6,
+      88.5
+    ],
+    "reverse_gear_speeds": [
+      6.9,
+      13.9,
+      21.0,
+      42.6
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 8.35,
+    "track_width": 0.483,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_M60D",
+        "caliber": 7.6,
+        "ammo": 2000,
+        "reloadTime": 8.0,
+        "rateOfFire": 650,
+        "bulletType": "ap_ball"
+      }
+    ],
+    "main_gun_ammo": 500,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 135000,
+    "purchaseCost": 380000,
+    "crewTraining": 110000,
+    "expertTraining": 380000,
+    "aceTrainingGE": 1400,
+    "aceTrainingRP": 830000,
+    "repairCost": {
+      "arcade": [
+        3436,
+        4881
+      ],
+      "realistic": [
+        4045,
+        5746
+      ],
+      "simulator": [
+        5137,
+        7297
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.18,
+      "realistic": 1.72,
+      "simulator": 2.1
+    },
+    "expMultiplier": 2.08
+  }
+}

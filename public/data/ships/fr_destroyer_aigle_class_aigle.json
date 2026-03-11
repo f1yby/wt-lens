@@ -1,0 +1,29 @@
+{
+  "id": "fr_destroyer_aigle_class_aigle",
+  "economy": {
+    "researchCost": 9000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 850,
+    "crewTraining": 3400,
+    "expertTraining": 23000,
+    "aceTrainingGE": 180,
+    "aceTrainingRP": 380000,
+    "repairCost": {
+      "arcade": [
+        1906,
+        1906
+      ],
+      "realistic": [
+        1617,
+        1617
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.72,
+      "realistic": 5.11,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.18,
+    "freeRepairs": 30
+  }
+}

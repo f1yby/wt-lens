@@ -1,0 +1,31 @@
+{
+  "id": "g_55_serie1",
+  "economy": {
+    "researchCost": 46000,
+    "purchaseCost": 155000,
+    "crewTraining": 45000,
+    "expertTraining": 155000,
+    "aceTrainingGE": 820,
+    "aceTrainingRP": 440000,
+    "repairCost": {
+      "arcade": [
+        2033,
+        2668
+      ],
+      "realistic": [
+        4770,
+        6076
+      ],
+      "simulator": [
+        6433,
+        8195
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.85,
+      "realistic": 1.95,
+      "simulator": 4.11
+    },
+    "expMultiplier": 1.6
+  }
+}

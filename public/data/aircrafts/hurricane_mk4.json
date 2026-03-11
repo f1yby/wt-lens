@@ -1,0 +1,31 @@
+{
+  "id": "hurricane_mk4",
+  "economy": {
+    "researchCost": 7900,
+    "purchaseCost": 10000,
+    "crewTraining": 3000,
+    "expertTraining": 10000,
+    "aceTrainingGE": 125,
+    "aceTrainingRP": 160000,
+    "repairCost": {
+      "arcade": [
+        330,
+        439
+      ],
+      "realistic": [
+        436,
+        563
+      ],
+      "simulator": [
+        894,
+        1154
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.26,
+      "realistic": 0.56,
+      "simulator": 1.21
+    },
+    "expMultiplier": 1.12
+  }
+}

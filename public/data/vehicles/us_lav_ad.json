@@ -1,0 +1,125 @@
+{
+  "id": "us_lav_ad",
+  "performance": {
+    "horsepower": 275.0,
+    "weight": 13.4,
+    "power_to_weight": 20.52,
+    "max_reverse_speed": 17.6,
+    "reload_time": 20.0,
+    "penetration": null,
+    "max_speed": 100.0,
+    "crew_count": 5,
+    "elevation_speed": 45.0,
+    "traverse_speed": 57.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "both",
+    "elevation_range": [
+      -8.0,
+      60.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": [
+      800,
+      600
+    ],
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": 1000.0,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 68.0,
+    "mainGun": null,
+    "ammunitions": null,
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2800.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 10,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      6.2,
+      12.4,
+      17.2,
+      27.9,
+      35.2,
+      47.8,
+      57.5,
+      72.1,
+      83.8,
+      100.0
+    ],
+    "reverse_gear_speeds": [
+      8.8,
+      17.6
+    ],
+    "steer_type": null,
+    "empty_weight": 13.0,
+    "track_width": 0.4,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "70mm_FIM_92E_Stinger_LAV_launcher",
+        "caliber": 70.0,
+        "ammo": 16,
+        "reloadTime": 15.0,
+        "rateOfFire": 60,
+        "bulletType": "sam_tank",
+        "maxDistance": 10000,
+        "maxSpeed": 670,
+        "guidanceType": "optical",
+        "explosiveMass": 0.45,
+        "explosiveType": "hta"
+      },
+      {
+        "trigger": "gunner5",
+        "name": "66mm_modern_us_smoke_grenade_launcher",
+        "caliber": 0,
+        "ammo": 8,
+        "rateOfFire": 2400
+      }
+    ],
+    "main_gun_ammo": 1155,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": true
+  },
+  "economy": {
+    "researchCost": 260000,
+    "purchaseCost": 710000,
+    "crewTraining": 200000,
+    "expertTraining": 710000,
+    "aceTrainingGE": 2100,
+    "aceTrainingRP": 1080000,
+    "repairCost": {
+      "arcade": [
+        4524,
+        7035
+      ],
+      "realistic": [
+        4130,
+        6424
+      ],
+      "simulator": [
+        4556,
+        7086
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.6,
+      "realistic": 1.91,
+      "simulator": 2.41
+    },
+    "expMultiplier": 2.32
+  }
+}

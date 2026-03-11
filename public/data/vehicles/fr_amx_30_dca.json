@@ -1,0 +1,95 @@
+{
+  "id": "fr_amx_30_dca",
+  "performance": {
+    "horsepower": 680.0,
+    "weight": 36.0,
+    "power_to_weight": 18.89,
+    "max_reverse_speed": 65.1,
+    "reload_time": 30.0,
+    "penetration": null,
+    "max_speed": 65.1,
+    "crew_count": 5,
+    "elevation_speed": 45.0,
+    "traverse_speed": 80.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -8.0,
+      85.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 93.0,
+    "mainGun": null,
+    "ammunitions": null,
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2400.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 5,
+    "reverse_gears": 5,
+    "forward_gear_speeds": [
+      6.8,
+      14.8,
+      26.7,
+      43.4,
+      65.1
+    ],
+    "reverse_gear_speeds": [
+      6.8,
+      14.8,
+      26.7,
+      43.4,
+      65.1
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 35.2,
+    "track_width": 0.57,
+    "secondary_weapons": null,
+    "main_gun_ammo": 600,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": true
+  },
+  "economy": {
+    "researchCost": 135000,
+    "purchaseCost": 380000,
+    "crewTraining": 110000,
+    "expertTraining": 380000,
+    "aceTrainingGE": 1400,
+    "aceTrainingRP": 830000,
+    "repairCost": {
+      "arcade": [
+        4825,
+        6656
+      ],
+      "realistic": [
+        4118,
+        5680
+      ],
+      "simulator": [
+        5003,
+        6901
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.41,
+      "realistic": 1.86,
+      "simulator": 2.22
+    },
+    "expMultiplier": 2.08
+  }
+}

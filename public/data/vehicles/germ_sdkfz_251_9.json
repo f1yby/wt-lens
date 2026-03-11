@@ -1,0 +1,170 @@
+{
+  "id": "germ_sdkfz_251_9",
+  "performance": {
+    "horsepower": 100.0,
+    "weight": 8.0,
+    "power_to_weight": 12.5,
+    "max_reverse_speed": 10.7,
+    "reload_time": 3.33,
+    "penetration": 115.0,
+    "max_speed": 52.4,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 14.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -10.0,
+      16.0
+    ],
+    "traverse_range": [
+      -14.0,
+      14.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 26.0,
+    "mainGun": {
+      "name": "75mm_KwK51",
+      "caliber": 75.0,
+      "reloadTime": 3.33,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 4.33,
+        "expert": 3.83,
+        "ace": 3.33
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "75mm_pzgr_rot",
+        "localizedName": "K.Gr.rot Pz.",
+        "type": "apcbc_tank",
+        "caliber": 75.0,
+        "mass": 6.8,
+        "muzzleVelocity": 385.0,
+        "deMarre": {
+          "fullCaliber": 75.0,
+          "isApcbc": true,
+          "explosiveMass": 0.08,
+          "Cx": 0.5
+        },
+        "penetration0m": 52.0,
+        "explosiveMassKg": 0.08,
+        "explosiveType": "fp02_np10",
+        "tntEquivalent": 0.102
+      },
+      {
+        "name": "75mm_sprgr_34",
+        "localizedName": "Sprgr. 34",
+        "type": "he_frag_tank",
+        "caliber": 75.0,
+        "mass": 5.74,
+        "muzzleVelocity": 420.0,
+        "explosiveMassKg": 0.686,
+        "explosiveType": "tnt",
+        "tntEquivalent": 0.686
+      },
+      {
+        "name": "75mm_grhl_38_b",
+        "localizedName": "Hl.Gr 38B",
+        "type": "heat_tank",
+        "caliber": 75.0,
+        "mass": 4.57,
+        "muzzleVelocity": 450.0,
+        "penetration0m": 80.0,
+        "explosiveMassKg": 0.513,
+        "explosiveType": "h5",
+        "tntEquivalent": 0.718
+      },
+      {
+        "name": "75mm_grhl_38_c",
+        "localizedName": "Hl.Gr 38C",
+        "type": "heat_tank",
+        "caliber": 75.0,
+        "mass": 4.8,
+        "muzzleVelocity": 450.0,
+        "penetration0m": 115.0,
+        "explosiveMassKg": 0.515,
+        "explosiveType": "h5",
+        "tntEquivalent": 0.721
+      },
+      {
+        "name": "75mm_k_gr_rot_nb",
+        "localizedName": "K.Gr.Rot Nb.",
+        "type": "smoke_tank",
+        "caliber": 75.0,
+        "mass": 6.2,
+        "muzzleVelocity": 423.0,
+        "explosiveMassKg": 0.05,
+        "explosiveType": "smoke_composition",
+        "tntEquivalent": 0.05
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2800.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 8,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      6.4,
+      12.2,
+      16.0,
+      18.3,
+      30.2,
+      31.5,
+      45.9,
+      52.4
+    ],
+    "reverse_gear_speeds": [
+      5.5,
+      10.7
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 7.8,
+    "track_width": 0.28,
+    "secondary_weapons": null,
+    "main_gun_ammo": 38,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 3000,
+    "purchaseCost": 6300,
+    "crewTraining": 1800,
+    "expertTraining": 6300,
+    "aceTrainingGE": 75,
+    "aceTrainingRP": 135000,
+    "repairCost": {
+      "arcade": [
+        289,
+        358
+      ],
+      "realistic": [
+        321,
+        397
+      ],
+      "simulator": [
+        379,
+        469
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.23,
+      "realistic": 0.36,
+      "simulator": 0.45
+    },
+    "expMultiplier": 1.06
+  }
+}

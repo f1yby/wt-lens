@@ -1,0 +1,33 @@
+{
+  "id": "so_4050_vautour_2a_iaf",
+  "economy": {
+    "researchCost": 170000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 8910,
+    "crewTraining": 10000,
+    "expertTraining": 770000,
+    "aceTrainingGE": 2400,
+    "aceTrainingRP": 1900000,
+    "repairCost": {
+      "arcade": [
+        1885,
+        1885
+      ],
+      "realistic": [
+        7371,
+        7371
+      ],
+      "simulator": [
+        10681,
+        10681
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.09,
+      "realistic": 5.33,
+      "simulator": 12.0
+    },
+    "expMultiplier": 2.2,
+    "freeRepairs": 30
+  }
+}

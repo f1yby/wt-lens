@@ -1,0 +1,174 @@
+{
+  "id": "sw_strf_90b",
+  "performance": {
+    "horsepower": 550.0,
+    "weight": 23.1,
+    "power_to_weight": 23.81,
+    "max_reverse_speed": 45.2,
+    "reload_time": 0.2,
+    "penetration": 143.5,
+    "max_speed": 70.0,
+    "crew_count": 5,
+    "elevation_speed": 23.3,
+    "traverse_speed": 34.9,
+    "has_stabilizer": true,
+    "stabilizer_type": "both",
+    "elevation_range": [
+      -8.0,
+      27.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": [
+      800,
+      600
+    ],
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": 1000.0,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 35.0,
+    "mainGun": {
+      "name": "40mm_Kan_Strf",
+      "caliber": 40.0,
+      "reloadTime": 0.2,
+      "autoLoader": true,
+      "reloadTimes": {
+        "base": 0.2,
+        "expert": 0.2,
+        "ace": 0.2
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "40mm_slpprj_m90",
+        "localizedName": "slpprj m/90",
+        "type": "apds_fs_long_tank",
+        "caliber": 10.0,
+        "mass": 0.5,
+        "muzzleVelocity": 1465.0,
+        "lanzOdermatt": {
+          "workingLength": 165.0,
+          "density": 17500.0,
+          "material": "tungsten",
+          "Cx": 0.75
+        },
+        "penetration0m": 143.5,
+        "penetrationData": {
+          "at0m": {
+            "angle0": 143.5,
+            "angle30": 124.3,
+            "angle60": 71.8
+          }
+        }
+      },
+      {
+        "name": "40mm_slsgr_m90",
+        "localizedName": "slsgr m/90",
+        "type": "he_frag_tank",
+        "caliber": 40.0,
+        "mass": 0.96,
+        "muzzleVelocity": 988.0,
+        "explosiveMassKg": 0.109,
+        "explosiveType": "torpex",
+        "tntEquivalent": 0.131
+      },
+      {
+        "name": "40mm_kulsgr_m90",
+        "localizedName": "kulsgr m/90",
+        "type": "he_frag_radio_fuse",
+        "caliber": 40.0,
+        "mass": 0.88,
+        "muzzleVelocity": 1015.0,
+        "explosiveMassKg": 0.12,
+        "explosiveType": "octol",
+        "tntEquivalent": 0.15
+      }
+    ],
+    "penetrationData": {
+      "at0m": {
+        "angle0": 143.5,
+        "angle30": 124.3,
+        "angle60": 71.8
+      }
+    },
+    "autoLoader": true,
+    "engine_manufacturer": "scania",
+    "engine_model": "dsi_14",
+    "engine_type": null,
+    "engine_max_rpm": 2100.0,
+    "transmission_manufacturer": "perkins",
+    "transmission_model": "x_300",
+    "transmission_type": "auto",
+    "forward_gears": 8,
+    "reverse_gears": 4,
+    "forward_gear_speeds": [
+      6.2,
+      16.8,
+      24.7,
+      35.0,
+      45.8,
+      54.7,
+      63.7,
+      70.0
+    ],
+    "reverse_gear_speeds": [
+      6.2,
+      16.8,
+      24.7,
+      45.2
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 22.1,
+    "track_width": 0.533,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_Ksp_39_Strv",
+        "caliber": 7.6,
+        "ammo": 4000,
+        "reloadTime": 8.0,
+        "rateOfFire": 648,
+        "bulletType": "ap_ball"
+      }
+    ],
+    "main_gun_ammo": 234,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": true
+  },
+  "economy": {
+    "researchCost": 110000,
+    "purchaseCost": 620000,
+    "crewTraining": 175000,
+    "expertTraining": 620000,
+    "aceTrainingGE": 2100,
+    "aceTrainingRP": 1010000,
+    "repairCost": {
+      "arcade": [
+        3323,
+        5558
+      ],
+      "realistic": [
+        3252,
+        5439
+      ],
+      "simulator": [
+        4165,
+        6966
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.33,
+      "realistic": 1.68,
+      "simulator": 2.17
+    },
+    "expMultiplier": 2.26
+  }
+}

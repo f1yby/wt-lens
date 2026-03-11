@@ -1,0 +1,183 @@
+{
+  "id": "us_m551_76",
+  "performance": {
+    "horsepower": 300.0,
+    "weight": 15.2,
+    "power_to_weight": 19.74,
+    "max_reverse_speed": 14.7,
+    "reload_time": 5.88,
+    "penetration": 177.1,
+    "max_speed": 69.3,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 40.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "both",
+    "elevation_range": [
+      -8.0,
+      19.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 27.0,
+    "mainGun": {
+      "name": "76mm_M32",
+      "caliber": 76.2,
+      "reloadTime": 5.88,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 7.64,
+        "expert": 6.76,
+        "ace": 5.88
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "76mm_m339",
+        "localizedName": "M339 shot",
+        "type": "apbc_usa_tank",
+        "caliber": 76.2,
+        "mass": 6.6,
+        "muzzleVelocity": 975.0,
+        "deMarre": {
+          "fullCaliber": 76.2,
+          "isApcbc": false,
+          "explosiveMass": 0
+        },
+        "penetration0m": 177.1
+      },
+      {
+        "name": "76mm_m352",
+        "localizedName": "M352 shell",
+        "type": "he_frag_tank",
+        "caliber": 76.1,
+        "mass": 6.8,
+        "muzzleVelocity": 732.0,
+        "explosiveMassKg": 0.662,
+        "explosiveType": "comp_b",
+        "tntEquivalent": 0.841
+      },
+      {
+        "name": "76mm_m331a2",
+        "localizedName": "M331A2 shot",
+        "type": "apds_early_tank",
+        "caliber": 50.0,
+        "mass": 2.81,
+        "muzzleVelocity": 1257.0,
+        "deMarre": {
+          "fullCaliber": 76.2,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "isApcr": true,
+          "coreCaliber": 50.0,
+          "coreMass": 1.49,
+          "Cx": 0.2576
+        },
+        "penetration0m": 143.8
+      },
+      {
+        "name": "75mm_m361",
+        "localizedName": "M361",
+        "type": "smoke_tank",
+        "caliber": 76.0,
+        "mass": 7.1,
+        "muzzleVelocity": 713.0,
+        "explosiveMassKg": 0.05,
+        "explosiveType": "smoke_composition",
+        "tntEquivalent": 0.05
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2800.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 8,
+    "reverse_gears": 4,
+    "forward_gear_speeds": [
+      9.7,
+      11.2,
+      13.4,
+      16.6,
+      21.5,
+      30.8,
+      42.7,
+      69.3
+    ],
+    "reverse_gear_speeds": [
+      6.4,
+      7.9,
+      10.3,
+      14.7
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 14.6,
+    "track_width": 0.53,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_M73",
+        "caliber": 7.6,
+        "ammo": 3000,
+        "reloadTime": 8.0,
+        "rateOfFire": 500,
+        "bulletType": "ap_ball"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "12_7mm_M2_HB",
+        "caliber": 12.7,
+        "ammo": 1000,
+        "reloadTime": 8.0,
+        "rateOfFire": 575,
+        "bulletType": "ap_i_t_ball_M20"
+      }
+    ],
+    "main_gun_ammo": 23,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 63000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 4880,
+    "crewTraining": 10000,
+    "expertTraining": 320000,
+    "aceTrainingGE": 800,
+    "aceTrainingRP": 1050000,
+    "repairCost": {
+      "arcade": [
+        1848,
+        1848
+      ],
+      "realistic": [
+        2121,
+        2121
+      ],
+      "simulator": [
+        2914,
+        2914
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.27,
+      "realistic": 2.93,
+      "simulator": 3.76
+    },
+    "expMultiplier": 1.72,
+    "freeRepairs": 30
+  }
+}

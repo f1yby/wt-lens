@@ -1,0 +1,154 @@
+{
+  "id": "it_2s1",
+  "performance": {
+    "horsepower": 300.0,
+    "weight": 15.7,
+    "power_to_weight": 19.11,
+    "max_reverse_speed": 10.3,
+    "reload_time": 10.0,
+    "penetration": 400.0,
+    "max_speed": 60.1,
+    "crew_count": 5,
+    "elevation_speed": 5.5,
+    "traverse_speed": 10.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -3.0,
+      70.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 73.0,
+    "mainGun": {
+      "name": "122mm_2A31",
+      "caliber": 122.0,
+      "reloadTime": 10.0,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 13.0,
+        "expert": 11.5,
+        "ace": 10.0
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "122mm_3of24",
+        "localizedName": "122 mm 3OF24",
+        "type": "he_frag_tank",
+        "caliber": 122.0,
+        "mass": 27.2,
+        "muzzleVelocity": 686.0,
+        "explosiveMassKg": 3.97,
+        "explosiveType": "a_ix_2",
+        "tntEquivalent": 5.558
+      },
+      {
+        "name": "122mm_3of56",
+        "localizedName": "122 mm 3OF56",
+        "type": "he_frag_tank",
+        "caliber": 122.0,
+        "mass": 21.8,
+        "muzzleVelocity": 690.0,
+        "explosiveMassKg": 3.97,
+        "explosiveType": "a_ix_2",
+        "tntEquivalent": 5.558
+      },
+      {
+        "name": "122mm_zbk_10",
+        "localizedName": "3BK-10",
+        "type": "heat_fs_tank",
+        "caliber": 122.0,
+        "mass": 18.4,
+        "muzzleVelocity": 726.0,
+        "penetration0m": 400.0,
+        "explosiveMassKg": 1.334,
+        "explosiveType": "a_ix_1",
+        "tntEquivalent": 1.521
+      },
+      {
+        "name": "122mm_3of7_vt",
+        "localizedName": "122 mm 3OF7",
+        "type": "he_frag_radio_fuse",
+        "caliber": 122.0,
+        "mass": 27.2,
+        "muzzleVelocity": 686.0,
+        "explosiveMassKg": 3.97,
+        "explosiveType": "a_ix_2",
+        "tntEquivalent": 5.558
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2100.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 11,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      4.0,
+      8.0,
+      12.0,
+      16.6,
+      20.7,
+      30.0,
+      34.1,
+      42.8,
+      46.6,
+      57.3,
+      60.1
+    ],
+    "reverse_gear_speeds": [
+      6.3,
+      10.3
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 15.0,
+    "track_width": 0.484,
+    "secondary_weapons": null,
+    "main_gun_ammo": 40,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 54000,
+    "purchaseCost": 185000,
+    "crewTraining": 52000,
+    "expertTraining": 185000,
+    "aceTrainingGE": 710,
+    "aceTrainingRP": 480000,
+    "repairCost": {
+      "arcade": [
+        3007,
+        3722
+      ],
+      "realistic": [
+        3443,
+        4262
+      ],
+      "simulator": [
+        4617,
+        5714
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.14,
+      "realistic": 1.78,
+      "simulator": 2.35
+    },
+    "expMultiplier": 1.66
+  }
+}

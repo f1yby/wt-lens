@@ -1,0 +1,188 @@
+{
+  "id": "uk_sherman_vc_firefly",
+  "performance": {
+    "horsepower": 425.0,
+    "weight": 37.1,
+    "power_to_weight": 11.46,
+    "max_reverse_speed": 5.0,
+    "reload_time": 5.88,
+    "penetration": 190.6,
+    "max_speed": 40.4,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 24.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -4.5,
+      21.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 25.5,
+    "mainGun": {
+      "name": "76mm_17pdr_QF",
+      "caliber": 76.2,
+      "reloadTime": 5.88,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 7.64,
+        "expert": 6.76,
+        "ace": 5.88
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "76mm_shot_mk6_ap",
+        "localizedName": "Shot Mk.6",
+        "type": "ap_tank",
+        "caliber": 76.2,
+        "mass": 7.71,
+        "muzzleVelocity": 883.0,
+        "deMarre": {
+          "fullCaliber": 76.2,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "Cx": 0.4
+        },
+        "penetration0m": 171.6
+      },
+      {
+        "name": "76mm_shell_mk1_he",
+        "localizedName": "Shell Mk.1",
+        "type": "he_frag_tank",
+        "caliber": 76.2,
+        "mass": 6.98,
+        "muzzleVelocity": 883.0,
+        "explosiveMassKg": 0.58,
+        "explosiveType": "tnt",
+        "tntEquivalent": 0.58
+      },
+      {
+        "name": "76mm_shot_mk4_apc",
+        "localizedName": "Shot Mk.4",
+        "type": "apc_solid_medium_caliber_tank",
+        "caliber": 76.2,
+        "mass": 7.71,
+        "muzzleVelocity": 883.0,
+        "deMarre": {
+          "fullCaliber": 76.2,
+          "isApcbc": true,
+          "explosiveMass": 0,
+          "Cx": 0.4
+        },
+        "penetration0m": 190.6
+      },
+      {
+        "name": "76mm_shot_mk8_apcbc",
+        "localizedName": "Shot Mk.8",
+        "type": "apcbc_solid_medium_caliber_tank",
+        "caliber": 76.2,
+        "mass": 7.71,
+        "muzzleVelocity": 883.0,
+        "deMarre": {
+          "fullCaliber": 76.2,
+          "isApcbc": true,
+          "explosiveMass": 0,
+          "Cx": 0.4
+        },
+        "penetration0m": 190.6
+      },
+      {
+        "name": "76mm_shell_ss_mk1",
+        "localizedName": "17pdr Shell SS Mk.1",
+        "type": "smoke_tank",
+        "caliber": 76.0,
+        "mass": 8.44,
+        "muzzleVelocity": 229.0,
+        "explosiveMassKg": 0.05,
+        "explosiveType": "smoke_composition",
+        "tntEquivalent": 0.05
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2850.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 5,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      3.7,
+      9.0,
+      15.6,
+      25.2,
+      40.4
+    ],
+    "reverse_gear_speeds": [
+      5.0
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 36.8,
+    "track_width": 0.4,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_L3A1",
+        "caliber": 7.6,
+        "ammo": 5000,
+        "reloadTime": 8.0,
+        "rateOfFire": 500,
+        "bulletType": "ap_ball"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "12_7mm_M2_HB",
+        "caliber": 12.7,
+        "ammo": 800,
+        "reloadTime": 8.0,
+        "rateOfFire": 575,
+        "bulletType": "ap_i_t_ball_M20"
+      }
+    ],
+    "main_gun_ammo": 80,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 26000,
+    "purchaseCost": 76000,
+    "crewTraining": 22000,
+    "expertTraining": 76000,
+    "aceTrainingGE": 400,
+    "aceTrainingRP": 320000,
+    "repairCost": {
+      "arcade": [
+        816,
+        1422
+      ],
+      "realistic": [
+        959,
+        1671
+      ],
+      "simulator": [
+        1209,
+        2107
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.68,
+      "realistic": 1.06,
+      "simulator": 1.27
+    },
+    "expMultiplier": 1.42
+  }
+}

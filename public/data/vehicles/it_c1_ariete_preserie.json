@@ -1,0 +1,195 @@
+{
+  "id": "it_c1_ariete_preserie",
+  "performance": {
+    "horsepower": 1300.0,
+    "weight": 54.0,
+    "power_to_weight": 24.07,
+    "max_reverse_speed": 46.4,
+    "reload_time": 6.0,
+    "penetration": 481.5,
+    "max_speed": 65.0,
+    "crew_count": 5,
+    "elevation_speed": 20.0,
+    "traverse_speed": 40.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "both",
+    "elevation_range": [
+      -9.0,
+      20.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": [
+      500,
+      300
+    ],
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": 583.1,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 29.0,
+    "mainGun": {
+      "name": "120mm_OTO_Breda_120_44",
+      "caliber": 120.0,
+      "reloadTime": 6.0,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 7.8,
+        "expert": 6.9,
+        "ace": 6.0
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "120mm_dm12a1",
+        "localizedName": "DM12A1",
+        "type": "heat_fs_tank",
+        "caliber": 120.0,
+        "mass": 13.5,
+        "muzzleVelocity": 1140.0,
+        "penetration0m": 480.0,
+        "explosiveMassKg": 1.64,
+        "explosiveType": "comp_b",
+        "tntEquivalent": 2.083
+      },
+      {
+        "name": "120mm_dm23",
+        "localizedName": "DM23",
+        "type": "apds_fs_tungsten_l10_l15_tank",
+        "caliber": 32.0,
+        "mass": 4.3,
+        "muzzleVelocity": 1640.0,
+        "lanzOdermatt": {
+          "workingLength": 360.0,
+          "density": 17500.0,
+          "material": "tungsten",
+          "Cx": 0.3056
+        },
+        "penetration0m": 408.1,
+        "penetrationData": {
+          "at0m": {
+            "angle0": 408.1,
+            "angle30": 353.4,
+            "angle60": 204.1
+          }
+        }
+      },
+      {
+        "name": "120mm_dm33",
+        "localizedName": "DM33",
+        "type": "apds_fs_long_tank",
+        "caliber": 25.0,
+        "mass": 4.3,
+        "muzzleVelocity": 1640.0,
+        "lanzOdermatt": {
+          "workingLength": 510.0,
+          "density": 17500.0,
+          "material": "tungsten",
+          "Cx": 0.55
+        },
+        "penetration0m": 481.5,
+        "penetrationData": {
+          "at0m": {
+            "angle0": 481.5,
+            "angle30": 417.0,
+            "angle60": 240.8
+          }
+        }
+      }
+    ],
+    "penetrationData": {
+      "at0m": {
+        "angle0": 481.5,
+        "angle30": 417.0,
+        "angle60": 240.8
+      }
+    },
+    "autoLoader": false,
+    "engine_manufacturer": "fiat",
+    "engine_model": "mtca",
+    "engine_type": null,
+    "engine_max_rpm": 2300.0,
+    "transmission_manufacturer": "renk",
+    "transmission_model": "lsg_3000",
+    "transmission_type": "auto",
+    "forward_gears": 8,
+    "reverse_gears": 4,
+    "forward_gear_speeds": [
+      6.5,
+      14.0,
+      18.6,
+      25.0,
+      39.0,
+      46.4,
+      58.0,
+      65.0
+    ],
+    "reverse_gear_speeds": [
+      6.5,
+      14.6,
+      27.1,
+      46.4
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 52.5,
+    "track_width": 0.55,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_Beretta_MG42_59",
+        "caliber": 7.6,
+        "ammo": 4600,
+        "reloadTime": 8.0,
+        "rateOfFire": 800,
+        "bulletType": "ap_ball"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "7_62mm_Beretta_MG42_59",
+        "caliber": 7.6,
+        "ammo": 2000,
+        "reloadTime": 8.0,
+        "rateOfFire": 800,
+        "bulletType": "ap_ball"
+      }
+    ],
+    "main_gun_ammo": 42,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": true
+  },
+  "economy": {
+    "researchCost": 260000,
+    "purchaseCost": 710000,
+    "crewTraining": 200000,
+    "expertTraining": 710000,
+    "aceTrainingGE": 2100,
+    "aceTrainingRP": 1080000,
+    "repairCost": {
+      "arcade": [
+        4444,
+        6613
+      ],
+      "realistic": [
+        4306,
+        6409
+      ],
+      "simulator": [
+        5033,
+        7490
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.52,
+      "realistic": 1.95,
+      "simulator": 2.45
+    },
+    "expMultiplier": 2.32
+  }
+}

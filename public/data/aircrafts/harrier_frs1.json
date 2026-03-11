@@ -1,0 +1,31 @@
+{
+  "id": "harrier_frs1",
+  "economy": {
+    "researchCost": 520000,
+    "purchaseCost": 580000,
+    "crewTraining": 165000,
+    "expertTraining": 580000,
+    "aceTrainingGE": 2800,
+    "aceTrainingRP": 1080000,
+    "repairCost": {
+      "arcade": [
+        3288,
+        4814
+      ],
+      "realistic": [
+        8225,
+        12042
+      ],
+      "simulator": [
+        9865,
+        14443
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.81,
+      "realistic": 3.05,
+      "simulator": 6.0
+    },
+    "expMultiplier": 2.32
+  }
+}

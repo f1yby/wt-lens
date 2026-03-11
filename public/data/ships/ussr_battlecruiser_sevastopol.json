@@ -1,0 +1,29 @@
+{
+  "id": "ussr_battlecruiser_sevastopol",
+  "economy": {
+    "researchCost": 350000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 9090,
+    "crewTraining": 10000,
+    "expertTraining": 1720000,
+    "aceTrainingGE": 2600,
+    "aceTrainingRP": 2020000,
+    "repairCost": {
+      "arcade": [
+        16202,
+        16202
+      ],
+      "realistic": [
+        14935,
+        14935
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 9.0,
+      "realistic": 12.0,
+      "simulator": 1.0
+    },
+    "expMultiplier": 2.26,
+    "freeRepairs": 30
+  }
+}

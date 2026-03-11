@@ -1,0 +1,29 @@
+{
+  "id": "uk_destroyer_j_class",
+  "economy": {
+    "researchCost": 11000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 1000,
+    "crewTraining": 4800,
+    "expertTraining": 32000,
+    "aceTrainingGE": 250,
+    "aceTrainingRP": 440000,
+    "repairCost": {
+      "arcade": [
+        1687,
+        1687
+      ],
+      "realistic": [
+        1570,
+        1570
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 3.09,
+      "realistic": 6.37,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.24,
+    "freeRepairs": 30
+  }
+}

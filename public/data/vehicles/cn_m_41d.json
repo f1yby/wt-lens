@@ -1,0 +1,191 @@
+{
+  "id": "cn_m_41d",
+  "performance": {
+    "horsepower": 500.0,
+    "weight": 25.0,
+    "power_to_weight": 20.0,
+    "max_reverse_speed": 18.2,
+    "reload_time": 5.88,
+    "penetration": 268.4,
+    "max_speed": 72.0,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 24.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -10.0,
+      20.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": [
+      500,
+      300
+    ],
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": 583.1,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 30.0,
+    "mainGun": {
+      "name": "76mm_M32K1",
+      "caliber": 76.2,
+      "reloadTime": 5.88,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 7.64,
+        "expert": 6.76,
+        "ace": 5.88
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "76mm_m496",
+        "localizedName": "M496 shell",
+        "type": "heat_fs_tank",
+        "caliber": 76.2,
+        "mass": 3.2,
+        "muzzleVelocity": 1082.0,
+        "penetration0m": 254.0,
+        "explosiveMassKg": 0.499,
+        "explosiveType": "comp_b",
+        "tntEquivalent": 0.634
+      },
+      {
+        "name": "76mm_m352",
+        "localizedName": "M352 shell",
+        "type": "he_frag_tank",
+        "caliber": 76.1,
+        "mass": 6.8,
+        "muzzleVelocity": 732.0,
+        "explosiveMassKg": 0.662,
+        "explosiveType": "comp_b",
+        "tntEquivalent": 0.841
+      },
+      {
+        "name": "75mm_m361",
+        "localizedName": "M361",
+        "type": "smoke_tank",
+        "caliber": 76.0,
+        "mass": 7.1,
+        "muzzleVelocity": 713.0,
+        "explosiveMassKg": 0.05,
+        "explosiveType": "smoke_composition",
+        "tntEquivalent": 0.05
+      },
+      {
+        "name": "76mm_m464",
+        "localizedName": "M464",
+        "type": "apds_fs_long_tank",
+        "caliber": 20.6,
+        "mass": 1.63,
+        "muzzleVelocity": 1433.0,
+        "lanzOdermatt": {
+          "workingLength": 309.0,
+          "density": 17500.0,
+          "material": "tungsten",
+          "Cx": 0.607
+        },
+        "penetration0m": 268.4,
+        "penetrationData": {
+          "at0m": {
+            "angle0": 268.4,
+            "angle30": 232.4,
+            "angle60": 134.2
+          }
+        }
+      }
+    ],
+    "penetrationData": {
+      "at0m": {
+        "angle0": 268.4,
+        "angle30": 232.4,
+        "angle60": 134.2
+      }
+    },
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2100.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 6,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      3.8,
+      5.5,
+      14.8,
+      30.1,
+      55.4,
+      72.0
+    ],
+    "reverse_gear_speeds": [
+      7.9,
+      18.2
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 24.7,
+    "track_width": 0.53,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_M240",
+        "caliber": 7.6,
+        "ammo": 5000,
+        "reloadTime": 8.0,
+        "rateOfFire": 940,
+        "bulletType": "ap_ball"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "12_7mm_M2_HB",
+        "caliber": 12.7,
+        "ammo": 2200,
+        "reloadTime": 8.0,
+        "rateOfFire": 575,
+        "bulletType": "ap_i_t_ball_M20"
+      }
+    ],
+    "main_gun_ammo": 65,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": true
+  },
+  "economy": {
+    "researchCost": 135000,
+    "purchaseCost": 380000,
+    "crewTraining": 110000,
+    "expertTraining": 380000,
+    "aceTrainingGE": 1400,
+    "aceTrainingRP": 830000,
+    "repairCost": {
+      "arcade": [
+        2919,
+        4881
+      ],
+      "realistic": [
+        3353,
+        5607
+      ],
+      "simulator": [
+        4094,
+        6846
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.18,
+      "realistic": 1.65,
+      "simulator": 2.01
+    },
+    "expMultiplier": 2.08
+  }
+}

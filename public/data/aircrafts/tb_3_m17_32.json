@@ -1,0 +1,33 @@
+{
+  "id": "tb_3_m17_32",
+  "economy": {
+    "researchCost": 5900,
+    "purchaseCost": 0,
+    "purchaseCostGold": 550,
+    "crewTraining": 1400,
+    "expertTraining": 9000,
+    "aceTrainingGE": 80,
+    "aceTrainingRP": 270000,
+    "repairCost": {
+      "arcade": [
+        218,
+        218
+      ],
+      "realistic": [
+        299,
+        299
+      ],
+      "simulator": [
+        421,
+        421
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.67,
+      "realistic": 1.31,
+      "simulator": 2.42
+    },
+    "expMultiplier": 1.06,
+    "freeRepairs": 30
+  }
+}

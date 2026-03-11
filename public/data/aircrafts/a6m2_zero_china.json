@@ -1,0 +1,33 @@
+{
+  "id": "a6m2_zero_china",
+  "economy": {
+    "researchCost": 18000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 1300,
+    "crewTraining": 10000,
+    "expertTraining": 67000,
+    "aceTrainingGE": 400,
+    "aceTrainingRP": 570000,
+    "repairCost": {
+      "arcade": [
+        792,
+        792
+      ],
+      "realistic": [
+        3576,
+        3576
+      ],
+      "simulator": [
+        1741,
+        1741
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.14,
+      "realistic": 3.61,
+      "simulator": 5.54
+    },
+    "expMultiplier": 1.36,
+    "freeRepairs": 30
+  }
+}

@@ -1,0 +1,154 @@
+{
+  "id": "fr_char_2c",
+  "performance": {
+    "horsepower": 500.0,
+    "weight": 70.0,
+    "power_to_weight": 7.14,
+    "max_reverse_speed": 15.0,
+    "reload_time": 5.5,
+    "penetration": 66.2,
+    "max_speed": 15.0,
+    "crew_count": 5,
+    "elevation_speed": 10.0,
+    "traverse_speed": 10.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -20.0,
+      20.0
+    ],
+    "traverse_range": [
+      -140.0,
+      140.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 40.0,
+    "mainGun": {
+      "name": "75mm_APX_1897",
+      "caliber": 75.0,
+      "reloadTime": 5.5,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 7.15,
+        "expert": 6.32,
+        "ace": 5.5
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "75mm_mle1916",
+        "localizedName": "Mle1916",
+        "type": "aphe_tank",
+        "caliber": 75.0,
+        "mass": 7.44,
+        "muzzleVelocity": 558.0,
+        "deMarre": {
+          "fullCaliber": 75.0,
+          "isApcbc": false,
+          "explosiveMass": 0.35,
+          "Cx": 0.5
+        },
+        "penetration0m": 66.2,
+        "explosiveMassKg": 0.35,
+        "explosiveType": "tnt",
+        "tntEquivalent": 0.35
+      },
+      {
+        "name": "75mm_mle_1900_he",
+        "localizedName": "Mle1900",
+        "type": "he_frag_tank",
+        "caliber": 75.0,
+        "mass": 5.3,
+        "muzzleVelocity": 500.0,
+        "explosiveMassKg": 0.695,
+        "explosiveType": "tnt",
+        "tntEquivalent": 0.695
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 1900.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 5,
+    "reverse_gears": 5,
+    "forward_gear_speeds": [
+      1.5,
+      3.6,
+      6.1,
+      9.9,
+      15.0
+    ],
+    "reverse_gear_speeds": [
+      1.5,
+      3.6,
+      6.1,
+      9.9,
+      15.0
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 69.0,
+    "track_width": 0.7,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "8mm_Hotchkiss_Mle1914",
+        "caliber": 8.0,
+        "ammo": 5000,
+        "reloadTime": 5.0,
+        "rateOfFire": 450,
+        "bulletType": "ap_i_t_ball"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "8mm_Hotchkiss_Mle1914",
+        "caliber": 8.0,
+        "ammo": 5000,
+        "reloadTime": 5.0,
+        "rateOfFire": 450,
+        "bulletType": "ap_i_t_ball"
+      }
+    ],
+    "main_gun_ammo": 128,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 4600,
+    "purchaseCost": 16000,
+    "crewTraining": 4500,
+    "expertTraining": 16000,
+    "aceTrainingGE": 160,
+    "aceTrainingRP": 190000,
+    "repairCost": {
+      "arcade": [
+        954,
+        1181
+      ],
+      "realistic": [
+        943,
+        1167
+      ],
+      "simulator": [
+        1233,
+        1526
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.36,
+      "realistic": 0.55,
+      "simulator": 0.67
+    },
+    "expMultiplier": 1.18
+  }
+}

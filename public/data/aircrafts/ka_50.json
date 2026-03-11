@@ -1,0 +1,33 @@
+{
+  "id": "ka_50",
+  "economy": {
+    "researchCost": 400000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 9270,
+    "crewTraining": 10000,
+    "expertTraining": 1670000,
+    "aceTrainingGE": 2800,
+    "aceTrainingRP": 2150000,
+    "repairCost": {
+      "arcade": [
+        5744,
+        5744
+      ],
+      "realistic": [
+        3303,
+        3303
+      ],
+      "simulator": [
+        4093,
+        4093
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.0,
+      "realistic": 4.8,
+      "simulator": 7.32
+    },
+    "expMultiplier": 2.32,
+    "freeRepairs": 30
+  }
+}

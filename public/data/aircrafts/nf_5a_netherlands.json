@@ -1,0 +1,33 @@
+{
+  "id": "nf_5a_netherlands",
+  "economy": {
+    "researchCost": 210000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 9270,
+    "crewTraining": 10000,
+    "expertTraining": 940000,
+    "aceTrainingGE": 2800,
+    "aceTrainingRP": 2150000,
+    "repairCost": {
+      "arcade": [
+        2124,
+        2124
+      ],
+      "realistic": [
+        6206,
+        6206
+      ],
+      "simulator": [
+        5875,
+        5875
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.42,
+      "realistic": 6.28,
+      "simulator": 12.0
+    },
+    "expMultiplier": 2.32,
+    "freeRepairs": 30
+  }
+}

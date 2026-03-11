@@ -1,0 +1,29 @@
+{
+  "id": "jp_escort_akebono_class",
+  "economy": {
+    "researchCost": 61000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 2980,
+    "crewTraining": 10000,
+    "expertTraining": 360000,
+    "aceTrainingGE": 820,
+    "aceTrainingRP": 870000,
+    "repairCost": {
+      "arcade": [
+        3689,
+        3689
+      ],
+      "realistic": [
+        5306,
+        5306
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 5.11,
+      "realistic": 8.32,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.6,
+    "freeRepairs": 30
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "id": "uk_frigate_whitby",
+  "economy": {
+    "researchCost": 120000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 6090,
+    "crewTraining": 10000,
+    "expertTraining": 580000,
+    "aceTrainingGE": 1200,
+    "aceTrainingRP": 1140000,
+    "repairCost": {
+      "arcade": [
+        5461,
+        5461
+      ],
+      "realistic": [
+        7765,
+        7765
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 4.6,
+      "realistic": 8.59,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.78,
+    "freeRepairs": 30
+  }
+}

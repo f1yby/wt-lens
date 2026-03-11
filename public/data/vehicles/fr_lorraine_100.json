@@ -1,0 +1,128 @@
+{
+  "id": "fr_lorraine_100",
+  "performance": {
+    "horsepower": 600.0,
+    "weight": 32.6,
+    "power_to_weight": 18.4,
+    "max_reverse_speed": 3.1,
+    "reload_time": 8.57,
+    "penetration": 273.1,
+    "max_speed": 52.1,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 6.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -6.0,
+      19.0
+    ],
+    "traverse_range": [
+      -10.0,
+      10.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 25.0,
+    "mainGun": {
+      "name": "100mm_SA_47_CA",
+      "caliber": 100.0,
+      "reloadTime": 8.57,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 11.14,
+        "expert": 9.86,
+        "ace": 8.57
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "100mm_sa47_apcbc",
+        "localizedName": "100 mm Obus de rupture",
+        "type": "apcbc_solid_medium_caliber_tank",
+        "caliber": 100.0,
+        "mass": 15.0,
+        "muzzleVelocity": 1000.0,
+        "deMarre": {
+          "fullCaliber": 100.0,
+          "isApcbc": true,
+          "explosiveMass": 0,
+          "Cx": 0.26
+        },
+        "penetration0m": 273.1
+      },
+      {
+        "name": "100mm_sa47_he",
+        "localizedName": "100 mm Obus explosif",
+        "type": "he_frag_tank",
+        "caliber": 100.0,
+        "mass": 14.8,
+        "muzzleVelocity": 1000.0,
+        "explosiveMassKg": 1.4,
+        "explosiveType": "tnt",
+        "tntEquivalent": 1.4
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2500.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 5,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      5.9,
+      15.3,
+      24.5,
+      38.3,
+      52.1
+    ],
+    "reverse_gear_speeds": [
+      3.1
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 32.1,
+    "track_width": 0.55,
+    "secondary_weapons": null,
+    "main_gun_ammo": 40,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 54000,
+    "purchaseCost": 185000,
+    "crewTraining": 52000,
+    "expertTraining": 185000,
+    "aceTrainingGE": 710,
+    "aceTrainingRP": 480000,
+    "repairCost": {
+      "arcade": [
+        2955,
+        3657
+      ],
+      "realistic": [
+        3443,
+        4262
+      ],
+      "simulator": [
+        4617,
+        5714
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.14,
+      "realistic": 1.78,
+      "simulator": 2.35
+    },
+    "expMultiplier": 1.66
+  }
+}

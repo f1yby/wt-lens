@@ -1,0 +1,145 @@
+{
+  "id": "uk_g6_spg",
+  "performance": {
+    "horsepower": 550.0,
+    "weight": 46.0,
+    "power_to_weight": 11.96,
+    "max_reverse_speed": 7.8,
+    "reload_time": 14.93,
+    "penetration": null,
+    "max_speed": 85.4,
+    "crew_count": 5,
+    "elevation_speed": 28.6,
+    "traverse_speed": 28.6,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -5.0,
+      75.0
+    ],
+    "traverse_range": [
+      -40.0,
+      40.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 80.0,
+    "mainGun": {
+      "name": "155mm_G6_L45",
+      "caliber": 155.0,
+      "reloadTime": 14.93,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 19.41,
+        "expert": 17.17,
+        "ace": 14.93
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "155mm_m1",
+        "localizedName": "M1",
+        "type": "he_frag_tank",
+        "caliber": 155.0,
+        "mass": 45.5,
+        "muzzleVelocity": 897.0,
+        "explosiveMassKg": 8.7,
+        "explosiveType": "rdx_tnt",
+        "tntEquivalent": 11.136
+      },
+      {
+        "name": "155mm_g6_smoke",
+        "localizedName": "G6 Smoke",
+        "type": "smoke_tank",
+        "caliber": 155.0,
+        "mass": 45.7,
+        "muzzleVelocity": 897.0,
+        "explosiveMassKg": 0.05,
+        "explosiveType": "smoke_composition",
+        "tntEquivalent": 0.05
+      },
+      {
+        "name": "155mm_m1_pf",
+        "localizedName": "M1 (PF)",
+        "type": "he_frag_radio_fuse",
+        "caliber": 155.0,
+        "mass": 45.5,
+        "muzzleVelocity": 897.0,
+        "explosiveMassKg": 8.7,
+        "explosiveType": "rdx_tnt",
+        "tntEquivalent": 11.136
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2300.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 11,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      4.3,
+      7.8,
+      12.4,
+      17.4,
+      25.5,
+      30.5,
+      36.5,
+      43.8,
+      53.0,
+      76.2,
+      85.4
+    ],
+    "reverse_gear_speeds": [
+      4.3,
+      7.8
+    ],
+    "steer_type": null,
+    "empty_weight": 45.3,
+    "track_width": 0.4,
+    "secondary_weapons": null,
+    "main_gun_ammo": 41,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 54000,
+    "purchaseCost": 185000,
+    "crewTraining": 52000,
+    "expertTraining": 185000,
+    "aceTrainingGE": 710,
+    "aceTrainingRP": 480000,
+    "repairCost": {
+      "arcade": [
+        3258,
+        4270
+      ],
+      "realistic": [
+        3619,
+        4744
+      ],
+      "simulator": [
+        5320,
+        6972
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.17,
+      "realistic": 1.85,
+      "simulator": 2.11
+    },
+    "expMultiplier": 1.66
+  }
+}

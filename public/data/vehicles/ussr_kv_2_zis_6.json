@@ -1,0 +1,142 @@
+{
+  "id": "ussr_kv_2_zis_6",
+  "performance": {
+    "horsepower": 600.0,
+    "weight": 52.4,
+    "power_to_weight": 11.45,
+    "max_reverse_speed": 6.2,
+    "reload_time": 16.67,
+    "penetration": 154.9,
+    "max_speed": 34.4,
+    "crew_count": 5,
+    "elevation_speed": 3.0,
+    "traverse_speed": 6.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -5.0,
+      20.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 25.0,
+    "mainGun": {
+      "name": "107mm_ZIS6",
+      "caliber": 107.0,
+      "reloadTime": 16.67,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 21.67,
+        "expert": 19.17,
+        "ace": 16.67
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "107mm_b420",
+        "localizedName": "B-420",
+        "type": "aphebc_tank",
+        "caliber": 107.0,
+        "mass": 16.6,
+        "muzzleVelocity": 800.0,
+        "deMarre": {
+          "fullCaliber": 107.0,
+          "isApcbc": false,
+          "explosiveMass": 0.44
+        },
+        "penetration0m": 154.9,
+        "explosiveMassKg": 0.44,
+        "explosiveType": "tnt",
+        "tntEquivalent": 0.44
+      },
+      {
+        "name": "107mm_of_420",
+        "localizedName": "OF-420",
+        "type": "he_frag_tank",
+        "caliber": 107.0,
+        "mass": 17.2,
+        "muzzleVelocity": 720.0,
+        "explosiveMassKg": 2.15,
+        "explosiveType": "tnt",
+        "tntEquivalent": 2.15
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2000.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 5,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      4.1,
+      7.7,
+      12.6,
+      19.1,
+      34.4
+    ],
+    "reverse_gear_speeds": [
+      6.2
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 52.0,
+    "track_width": 0.7,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_DT",
+        "caliber": 7.6,
+        "ammo": 3087,
+        "reloadTime": 8.0,
+        "rateOfFire": 600,
+        "bulletType": "ap_i_ball"
+      }
+    ],
+    "main_gun_ammo": 36,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 54000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 3850,
+    "crewTraining": 10000,
+    "expertTraining": 290000,
+    "aceTrainingGE": 710,
+    "aceTrainingRP": 960000,
+    "repairCost": {
+      "arcade": [
+        1921,
+        1921
+      ],
+      "realistic": [
+        2085,
+        2085
+      ],
+      "simulator": [
+        2983,
+        2983
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.21,
+      "realistic": 3.32,
+      "simulator": 3.72
+    },
+    "expMultiplier": 1.66,
+    "freeRepairs": 30
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "id": "hurricane_mk1_late_ep",
+  "economy": {
+    "researchCost": 9200,
+    "purchaseCost": 0,
+    "purchaseCostGold": 850,
+    "crewTraining": 3400,
+    "expertTraining": 23000,
+    "aceTrainingGE": 180,
+    "aceTrainingRP": 380000,
+    "repairCost": {
+      "arcade": [
+        900,
+        900
+      ],
+      "realistic": [
+        2535,
+        2535
+      ],
+      "simulator": [
+        796,
+        796
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.84,
+      "realistic": 2.44,
+      "simulator": 3.27
+    },
+    "expMultiplier": 1.18,
+    "freeRepairs": 30
+  }
+}

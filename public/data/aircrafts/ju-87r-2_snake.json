@@ -1,0 +1,33 @@
+{
+  "id": "ju-87r-2_snake",
+  "economy": {
+    "researchCost": 4000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 400,
+    "crewTraining": 450,
+    "expertTraining": 3000,
+    "aceTrainingGE": 45,
+    "aceTrainingRP": 220000,
+    "repairCost": {
+      "arcade": [
+        147,
+        147
+      ],
+      "realistic": [
+        193,
+        193
+      ],
+      "simulator": [
+        2416,
+        2416
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.46,
+      "realistic": 0.9,
+      "simulator": 2.15
+    },
+    "expMultiplier": 1.0,
+    "freeRepairs": 30
+  }
+}

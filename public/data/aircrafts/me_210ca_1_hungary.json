@@ -1,0 +1,31 @@
+{
+  "id": "me_210ca_1_hungary",
+  "economy": {
+    "researchCost": 18000,
+    "purchaseCost": 47000,
+    "crewTraining": 13000,
+    "expertTraining": 47000,
+    "aceTrainingGE": 400,
+    "aceTrainingRP": 280000,
+    "repairCost": {
+      "arcade": [
+        827,
+        1095
+      ],
+      "realistic": [
+        1141,
+        1467
+      ],
+      "simulator": [
+        2486,
+        3195
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.59,
+      "realistic": 1.17,
+      "simulator": 2.28
+    },
+    "expMultiplier": 1.36
+  }
+}

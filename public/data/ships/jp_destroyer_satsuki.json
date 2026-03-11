@@ -1,0 +1,29 @@
+{
+  "id": "jp_destroyer_satsuki",
+  "economy": {
+    "researchCost": 2900,
+    "purchaseCost": 0,
+    "purchaseCostGold": 250,
+    "crewTraining": 150,
+    "expertTraining": 1000,
+    "aceTrainingGE": 20,
+    "aceTrainingRP": 145000,
+    "repairCost": {
+      "arcade": [
+        137,
+        137
+      ],
+      "realistic": [
+        236,
+        236
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.68,
+      "realistic": 1.17,
+      "simulator": 1.0
+    },
+    "expMultiplier": 0.75,
+    "freeRepairs": 30
+  }
+}

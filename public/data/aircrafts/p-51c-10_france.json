@@ -1,0 +1,33 @@
+{
+  "id": "p-51c-10_france",
+  "economy": {
+    "researchCost": 18000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 1300,
+    "crewTraining": 10000,
+    "expertTraining": 67000,
+    "aceTrainingGE": 400,
+    "aceTrainingRP": 570000,
+    "repairCost": {
+      "arcade": [
+        792,
+        792
+      ],
+      "realistic": [
+        2195,
+        2195
+      ],
+      "simulator": [
+        2134,
+        2134
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.14,
+      "realistic": 3.05,
+      "simulator": 7.0
+    },
+    "expMultiplier": 1.36,
+    "freeRepairs": 30
+  }
+}

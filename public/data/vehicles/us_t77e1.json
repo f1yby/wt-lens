@@ -1,0 +1,146 @@
+{
+  "id": "us_t77e1",
+  "performance": {
+    "horsepower": 296.0,
+    "weight": 18.4,
+    "power_to_weight": 16.09,
+    "max_reverse_speed": 23.1,
+    "reload_time": null,
+    "penetration": null,
+    "max_speed": 56.4,
+    "crew_count": 5,
+    "elevation_speed": null,
+    "traverse_speed": null,
+    "has_stabilizer": null,
+    "stabilizer_type": "none",
+    "elevation_range": null,
+    "traverse_range": null,
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": null,
+    "mainGun": null,
+    "ammunitions": null,
+    "penetrationData": null,
+    "autoLoader": null,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 3200.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 8,
+    "reverse_gears": 4,
+    "forward_gear_speeds": [
+      6.2,
+      9.5,
+      14.4,
+      15.6,
+      22.3,
+      24.1,
+      36.4,
+      56.4
+    ],
+    "reverse_gear_speeds": [
+      5.9,
+      9.1,
+      15.2,
+      23.1
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 18.2,
+    "track_width": 0.406,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner0",
+        "name": "12_7mm_m2_hb_t77e1",
+        "caliber": 12.7,
+        "ammo": 1100,
+        "reloadTime": 12.0,
+        "rateOfFire": 575,
+        "bulletType": "ap_i_t_ball_M20"
+      },
+      {
+        "trigger": "gunner0",
+        "name": "12_7mm_m2_hb_t77e1",
+        "caliber": 12.7,
+        "ammo": 1100,
+        "reloadTime": 12.0,
+        "rateOfFire": 575,
+        "bulletType": "ap_i_t_ball_M20"
+      },
+      {
+        "trigger": "gunner0",
+        "name": "12_7mm_m2_hb_t77e1",
+        "caliber": 12.7,
+        "ammo": 1100,
+        "reloadTime": 12.0,
+        "rateOfFire": 575,
+        "bulletType": "ap_i_t_ball_M20"
+      },
+      {
+        "trigger": "gunner0",
+        "name": "12_7mm_m2_hb_t77e1",
+        "caliber": 12.7,
+        "ammo": 1100,
+        "reloadTime": 12.0,
+        "rateOfFire": 575,
+        "bulletType": "ap_i_t_ball_M20"
+      },
+      {
+        "trigger": "gunner0",
+        "name": "12_7mm_m2_hb_t77e1",
+        "caliber": 12.7,
+        "ammo": 1100,
+        "reloadTime": 12.0,
+        "rateOfFire": 575,
+        "bulletType": "ap_i_t_ball_M20"
+      },
+      {
+        "trigger": "gunner0",
+        "name": "12_7mm_m2_hb_t77e1",
+        "caliber": 12.7,
+        "ammo": 1100,
+        "reloadTime": 12.0,
+        "rateOfFire": 575,
+        "bulletType": "ap_i_t_ball_M20"
+      }
+    ],
+    "main_gun_ammo": null,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 11000,
+    "purchaseCost": 22000,
+    "crewTraining": 6300,
+    "expertTraining": 22000,
+    "aceTrainingGE": 210,
+    "aceTrainingRP": 220000,
+    "repairCost": {
+      "arcade": [
+        859,
+        1105
+      ],
+      "realistic": [
+        699,
+        899
+      ],
+      "simulator": [
+        1073,
+        1379
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.55,
+      "realistic": 0.64,
+      "simulator": 0.97
+    },
+    "expMultiplier": 1.24
+  }
+}

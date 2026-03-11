@@ -1,0 +1,163 @@
+{
+  "id": "fr_vbci",
+  "performance": {
+    "horsepower": 550.0,
+    "weight": 28.0,
+    "power_to_weight": 19.64,
+    "max_reverse_speed": 21.4,
+    "reload_time": 8.0,
+    "penetration": 92.0,
+    "max_speed": 99.6,
+    "crew_count": 5,
+    "elevation_speed": 60.0,
+    "traverse_speed": 60.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "both",
+    "elevation_range": [
+      -7.0,
+      45.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": [
+      1200,
+      800
+    ],
+    "commander_thermal_resolution": [
+      1200,
+      800
+    ],
+    "gunner_thermal_diagonal": 1442.2,
+    "commander_thermal_diagonal": 1442.2,
+    "stabilizer_value": 1,
+    "elevation_range_value": 52.0,
+    "mainGun": {
+      "name": "25mm_cn25_m811",
+      "caliber": 25.0,
+      "reloadTime": 8.0,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 10.4,
+        "expert": 9.2,
+        "ace": 8.0
+      },
+      "rateOfFire": 400,
+      "beltReloadTime": 8.0
+    },
+    "ammunitions": [
+      {
+        "name": "25mm_pmb_09",
+        "localizedName": "PMB 090",
+        "type": "apds_fs_long_tank",
+        "caliber": 9.0,
+        "mass": 0.098,
+        "muzzleVelocity": 1385.0,
+        "lanzOdermatt": {
+          "workingLength": 100.0,
+          "density": 17500.0,
+          "material": "tungsten",
+          "Cx": 0.3
+        },
+        "penetration0m": 92.0,
+        "penetrationData": {
+          "at0m": {
+            "angle0": 92.0,
+            "angle30": 79.7,
+            "angle60": 46.0
+          }
+        }
+      }
+    ],
+    "penetrationData": {
+      "at0m": {
+        "angle0": 92.0,
+        "angle30": 79.7,
+        "angle60": 46.0
+      }
+    },
+    "autoLoader": false,
+    "engine_manufacturer": "volvo",
+    "engine_model": "d12",
+    "engine_type": null,
+    "engine_max_rpm": 2100.0,
+    "transmission_manufacturer": "zf",
+    "transmission_model": "7hp_902",
+    "transmission_type": "auto",
+    "forward_gears": 14,
+    "reverse_gears": 4,
+    "forward_gear_speeds": [
+      5.2,
+      10.5,
+      13.0,
+      17.1,
+      21.6,
+      29.2,
+      34.3,
+      41.4,
+      48.6,
+      58.8,
+      64.2,
+      70.8,
+      82.8,
+      99.6
+    ],
+    "reverse_gear_speeds": [
+      6.1,
+      12.1,
+      15.5,
+      21.4
+    ],
+    "steer_type": null,
+    "empty_weight": 27.0,
+    "track_width": 0.4,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_AAN_F1",
+        "caliber": 7.6,
+        "ammo": 4600,
+        "reloadTime": 8.0,
+        "rateOfFire": 900,
+        "bulletType": "ap_ball"
+      }
+    ],
+    "main_gun_ammo": 600,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": true
+  },
+  "economy": {
+    "researchCost": 190000,
+    "purchaseCost": 520000,
+    "crewTraining": 150000,
+    "expertTraining": 520000,
+    "aceTrainingGE": 2100,
+    "aceTrainingRP": 950000,
+    "repairCost": {
+      "arcade": [
+        3281,
+        5553
+      ],
+      "realistic": [
+        3156,
+        5340
+      ],
+      "simulator": [
+        4043,
+        6842
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.31,
+      "realistic": 1.64,
+      "simulator": 2.12
+    },
+    "expMultiplier": 2.2
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "id": "f2g-1",
+  "economy": {
+    "researchCost": 71000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 6090,
+    "crewTraining": 10000,
+    "expertTraining": 340000,
+    "aceTrainingGE": 1200,
+    "aceTrainingRP": 1180000,
+    "repairCost": {
+      "arcade": [
+        2302,
+        2302
+      ],
+      "realistic": [
+        5370,
+        5370
+      ],
+      "simulator": [
+        8534,
+        8534
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.14,
+      "realistic": 4.92,
+      "simulator": 12.0
+    },
+    "expMultiplier": 1.84,
+    "freeRepairs": 30
+  }
+}

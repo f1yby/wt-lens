@@ -1,0 +1,200 @@
+{
+  "id": "uk_vfm_5",
+  "performance": {
+    "horsepower": 575.0,
+    "weight": 19.75,
+    "power_to_weight": 29.11,
+    "max_reverse_speed": 15.0,
+    "reload_time": 6.67,
+    "penetration": 420.7,
+    "max_speed": 69.7,
+    "crew_count": 5,
+    "elevation_speed": 11.0,
+    "traverse_speed": 40.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "both",
+    "elevation_range": [
+      -10.0,
+      20.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 30.0,
+    "mainGun": {
+      "name": "105mm_LRF",
+      "caliber": 105.0,
+      "reloadTime": 6.67,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 8.67,
+        "expert": 7.67,
+        "ace": 6.67
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "105mm_m456a2",
+        "localizedName": "M456A2",
+        "type": "heat_fs_tank",
+        "caliber": 105.0,
+        "mass": 10.5,
+        "muzzleVelocity": 1173.5,
+        "penetration0m": 400.0,
+        "explosiveMassKg": 0.97,
+        "explosiveType": "comp_b",
+        "tntEquivalent": 1.232
+      },
+      {
+        "name": "105mm_m393a2",
+        "localizedName": "M393A2",
+        "type": "hesh_tank",
+        "caliber": 105.0,
+        "mass": 11.2,
+        "muzzleVelocity": 731.5,
+        "penetration0m": 127.0,
+        "explosiveMassKg": 2.9937,
+        "explosiveType": "comp_a",
+        "tntEquivalent": 3.772
+      },
+      {
+        "name": "105mm_c76a1",
+        "localizedName": "C76A1",
+        "type": "apds_fs_long_tank",
+        "caliber": 26.0,
+        "mass": 3.6,
+        "muzzleVelocity": 1509.0,
+        "lanzOdermatt": {
+          "workingLength": 375.0,
+          "density": 17500.0,
+          "material": "tungsten",
+          "Cx": 0.45
+        },
+        "penetration0m": 353.1,
+        "penetrationData": {
+          "at0m": {
+            "angle0": 353.1,
+            "angle30": 305.8,
+            "angle60": 176.6
+          }
+        }
+      },
+      {
+        "name": "105mm_dm33",
+        "localizedName": "DM33",
+        "type": "apds_fs_long_tank",
+        "caliber": 26.0,
+        "mass": 3.79,
+        "muzzleVelocity": 1455.0,
+        "lanzOdermatt": {
+          "workingLength": 510.0,
+          "density": 17500.0,
+          "material": "tungsten",
+          "Cx": 0.4
+        },
+        "penetration0m": 420.7,
+        "penetrationData": {
+          "at0m": {
+            "angle0": 420.7,
+            "angle30": 364.3,
+            "angle60": 210.4
+          }
+        }
+      }
+    ],
+    "penetrationData": {
+      "at0m": {
+        "angle0": 420.7,
+        "angle30": 364.3,
+        "angle60": 210.4
+      }
+    },
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2400.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 6,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      5.1,
+      10.2,
+      24.6,
+      48.3,
+      65.9,
+      69.7
+    ],
+    "reverse_gear_speeds": [
+      7.5,
+      15.0
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 19.0,
+    "track_width": 0.381,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_L8A2",
+        "caliber": 7.6,
+        "ammo": 4600,
+        "reloadTime": 8.0,
+        "rateOfFire": 1000,
+        "bulletType": "ap_ball"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "12_7mm_M2_HB",
+        "caliber": 12.7,
+        "ammo": 600,
+        "reloadTime": 8.0,
+        "rateOfFire": 575,
+        "bulletType": "ap_i_t_ball_M20"
+      }
+    ],
+    "main_gun_ammo": 41,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": true
+  },
+  "economy": {
+    "researchCost": 190000,
+    "purchaseCost": 520000,
+    "crewTraining": 150000,
+    "expertTraining": 520000,
+    "aceTrainingGE": 2100,
+    "aceTrainingRP": 950000,
+    "repairCost": {
+      "arcade": [
+        3556,
+        5462
+      ],
+      "realistic": [
+        3476,
+        5340
+      ],
+      "simulator": [
+        4454,
+        6842
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.3,
+      "realistic": 1.64,
+      "simulator": 2.12
+    },
+    "expMultiplier": 2.2
+  }
+}

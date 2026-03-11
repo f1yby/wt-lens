@@ -1,0 +1,126 @@
+{
+  "id": "fr_amc_35",
+  "performance": {
+    "horsepower": 180.0,
+    "weight": 14.5,
+    "power_to_weight": 12.41,
+    "max_reverse_speed": 5.8,
+    "reload_time": 3.0,
+    "penetration": 69.7,
+    "max_speed": 42.0,
+    "crew_count": 5,
+    "elevation_speed": 10.0,
+    "traverse_speed": 15.7,
+    "has_stabilizer": true,
+    "stabilizer_type": "vertical",
+    "elevation_range": [
+      -12.0,
+      14.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 26.0,
+    "mainGun": {
+      "name": "47mm_SA_35",
+      "caliber": 47.0,
+      "reloadTime": 3.0,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 3.9,
+        "expert": 3.45,
+        "ace": 3.0
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "47mm_mle1935",
+        "localizedName": "Mle1935",
+        "type": "apc_solid_medium_caliber_tank",
+        "caliber": 47.0,
+        "mass": 1.62,
+        "muzzleVelocity": 660.0,
+        "deMarre": {
+          "fullCaliber": 47.0,
+          "isApcbc": true,
+          "explosiveMass": 0,
+          "Cx": 0.6
+        },
+        "penetration0m": 69.7
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 1400.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 4,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      2.6,
+      6.5,
+      23.3,
+      42.0
+    ],
+    "reverse_gear_speeds": [
+      5.8
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 14.2,
+    "track_width": 0.28,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_5mm_MAC_31",
+        "caliber": 7.5,
+        "ammo": 1800,
+        "reloadTime": 5.0,
+        "rateOfFire": 550,
+        "bulletType": "ap_ball"
+      }
+    ],
+    "main_gun_ammo": 96,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 2900,
+    "purchaseCost": 700,
+    "crewTraining": 200,
+    "expertTraining": 1000,
+    "aceTrainingGE": 20,
+    "aceTrainingRP": 96000,
+    "repairCost": {
+      "arcade": [
+        100,
+        129
+      ],
+      "realistic": [
+        96,
+        123
+      ],
+      "simulator": [
+        112,
+        144
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.1,
+      "realistic": 0.12,
+      "simulator": 0.15
+    },
+    "expMultiplier": 1.0
+  }
+}

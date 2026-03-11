@@ -1,0 +1,264 @@
+{
+  "id": "us_m1_abrams_kvt",
+  "performance": {
+    "horsepower": 1519.0,
+    "weight": 55.7,
+    "power_to_weight": 27.27,
+    "max_reverse_speed": 38.2,
+    "reload_time": 5.0,
+    "penetration": 372.6,
+    "max_speed": 71.9,
+    "crew_count": 5,
+    "elevation_speed": 24.0,
+    "traverse_speed": 40.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "both",
+    "elevation_range": [
+      -10.0,
+      20.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": [
+      500,
+      300
+    ],
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": 583.1,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 30.0,
+    "mainGun": {
+      "name": "105mm_M68A1",
+      "caliber": 105.0,
+      "reloadTime": 5.0,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 6.5,
+        "expert": 5.75,
+        "ace": 5.0
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "105mm_m456a2",
+        "localizedName": "M456A2",
+        "type": "heat_fs_tank",
+        "caliber": 105.0,
+        "mass": 10.5,
+        "muzzleVelocity": 1173.5,
+        "penetration0m": 400.0,
+        "explosiveMassKg": 0.97,
+        "explosiveType": "comp_b",
+        "tntEquivalent": 1.232
+      },
+      {
+        "name": "105mm_m393a2",
+        "localizedName": "M393A2",
+        "type": "hesh_tank",
+        "caliber": 105.0,
+        "mass": 11.2,
+        "muzzleVelocity": 731.5,
+        "penetration0m": 127.0,
+        "explosiveMassKg": 2.9937,
+        "explosiveType": "comp_a",
+        "tntEquivalent": 3.772
+      },
+      {
+        "name": "105mm_m735",
+        "localizedName": "M735",
+        "type": "apds_fs_tungsten_l10_l15_tank",
+        "caliber": 31.8,
+        "mass": 3.719,
+        "muzzleVelocity": 1501.1,
+        "armorPowerTable": [
+          {
+            "penetration": 292.4,
+            "distance": 10.0
+          },
+          {
+            "penetration": 290.6,
+            "distance": 100.0
+          },
+          {
+            "penetration": 284.0,
+            "distance": 500.0
+          },
+          {
+            "penetration": 275.0,
+            "distance": 1000.0
+          },
+          {
+            "penetration": 265.9,
+            "distance": 1500.0
+          },
+          {
+            "penetration": 256.5,
+            "distance": 2000.0
+          },
+          {
+            "penetration": 246.7,
+            "distance": 2500.0
+          },
+          {
+            "penetration": 236.7,
+            "distance": 3000.0
+          },
+          {
+            "penetration": 215.5,
+            "distance": 4000.0
+          },
+          {
+            "penetration": 192.7,
+            "distance": 5000.0
+          },
+          {
+            "penetration": 50.0,
+            "distance": 10000.0
+          },
+          {
+            "penetration": 0.0,
+            "distance": 20000.0
+          }
+        ],
+        "penetration0m": 292.4
+      },
+      {
+        "name": "105mm_m416",
+        "localizedName": "M416",
+        "type": "smoke_tank",
+        "caliber": 105.0,
+        "mass": 11.6,
+        "muzzleVelocity": 731.5,
+        "explosiveMassKg": 0.05,
+        "explosiveType": "smoke_composition",
+        "tntEquivalent": 0.05
+      },
+      {
+        "name": "105mm_m774",
+        "localizedName": "M774",
+        "type": "apds_fs_long_tank",
+        "caliber": 26.0,
+        "mass": 3.4,
+        "muzzleVelocity": 1509.0,
+        "lanzOdermatt": {
+          "workingLength": 375.0,
+          "density": 18600.0,
+          "material": "depletedUranium",
+          "Cx": 0.45
+        },
+        "penetration0m": 372.6,
+        "penetrationData": {
+          "at0m": {
+            "angle0": 372.6,
+            "angle30": 322.7,
+            "angle60": 186.3
+          }
+        }
+      }
+    ],
+    "penetrationData": {
+      "at0m": {
+        "angle0": 372.6,
+        "angle30": 322.7,
+        "angle60": 186.3
+      }
+    },
+    "autoLoader": false,
+    "engine_manufacturer": "honeywell",
+    "engine_model": "agt_1500",
+    "engine_type": "gasturbine",
+    "engine_max_rpm": 3000.0,
+    "transmission_manufacturer": "allison",
+    "transmission_model": "x_1100_3b",
+    "transmission_type": "auto",
+    "forward_gears": 8,
+    "reverse_gears": 4,
+    "forward_gear_speeds": [
+      8.4,
+      15.9,
+      21.0,
+      31.2,
+      38.2,
+      49.2,
+      58.4,
+      71.9
+    ],
+    "reverse_gear_speeds": [
+      5.6,
+      11.3,
+      17.6,
+      38.2
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 54.7,
+    "track_width": 0.635,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "12_7mm_M2_HB",
+        "caliber": 12.7,
+        "ammo": 900,
+        "reloadTime": 8.0,
+        "rateOfFire": 575,
+        "bulletType": "ap_i_t_ball_M20"
+      },
+      {
+        "trigger": "gunner3",
+        "name": "7_62mm_M240",
+        "caliber": 7.6,
+        "ammo": 10000,
+        "reloadTime": 8.0,
+        "rateOfFire": 940,
+        "bulletType": "ap_ball"
+      },
+      {
+        "trigger": "gunner4",
+        "name": "66mm_modern_us_smoke_grenade_launcher",
+        "caliber": 0,
+        "ammo": 12,
+        "rateOfFire": 2400
+      }
+    ],
+    "main_gun_ammo": 55,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": false,
+    "has_ess": true,
+    "has_laser_rangefinder": true
+  },
+  "economy": {
+    "researchCost": 260000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 9270,
+    "crewTraining": 10000,
+    "expertTraining": 1160000,
+    "aceTrainingGE": 2100,
+    "aceTrainingRP": 2150000,
+    "repairCost": {
+      "arcade": [
+        3381,
+        3381
+      ],
+      "realistic": [
+        3259,
+        3259
+      ],
+      "simulator": [
+        3789,
+        3789
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.98,
+      "realistic": 3.86,
+      "simulator": 4.84
+    },
+    "expMultiplier": 2.32,
+    "freeRepairs": 30
+  }
+}

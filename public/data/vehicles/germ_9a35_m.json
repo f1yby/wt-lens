@@ -1,0 +1,116 @@
+{
+  "id": "germ_9a35_m",
+  "performance": {
+    "horsepower": 240.0,
+    "weight": 12.0,
+    "power_to_weight": 20.0,
+    "max_reverse_speed": 10.3,
+    "reload_time": null,
+    "penetration": null,
+    "max_speed": 61.5,
+    "crew_count": 5,
+    "elevation_speed": null,
+    "traverse_speed": null,
+    "has_stabilizer": null,
+    "stabilizer_type": "none",
+    "elevation_range": null,
+    "traverse_range": null,
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": null,
+    "mainGun": null,
+    "ammunitions": null,
+    "penetrationData": null,
+    "autoLoader": null,
+    "engine_manufacturer": "yamz",
+    "engine_model": "238v",
+    "engine_type": null,
+    "engine_max_rpm": 2100.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 11,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      4.0,
+      8.0,
+      12.0,
+      16.7,
+      20.7,
+      30.1,
+      34.1,
+      42.8,
+      46.8,
+      57.5,
+      61.5
+    ],
+    "reverse_gear_speeds": [
+      6.3,
+      10.3
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 12.0,
+    "track_width": 0.35,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner0",
+        "name": "120mm_9m37m_rocket_launcher",
+        "caliber": 120.0,
+        "ammo": 8,
+        "reloadTime": 15.0,
+        "rateOfFire": 60,
+        "bulletType": "sam_tank",
+        "maxDistance": 10000,
+        "maxSpeed": 700,
+        "guidanceType": "optical",
+        "explosiveMass": 1.1,
+        "explosiveType": "a_ix_2"
+      },
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_PKMB",
+        "caliber": 7.6,
+        "ammo": 1000,
+        "reloadTime": 8.0,
+        "rateOfFire": 700,
+        "bulletType": "ap_i_ball"
+      }
+    ],
+    "main_gun_ammo": null,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": true,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 350000,
+    "purchaseCost": 950000,
+    "crewTraining": 270000,
+    "expertTraining": 950000,
+    "aceTrainingGE": 2200,
+    "aceTrainingRP": 1210000,
+    "repairCost": {
+      "arcade": [
+        4992,
+        7012
+      ],
+      "realistic": [
+        4936,
+        6932
+      ],
+      "simulator": [
+        5654,
+        7941
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.6,
+      "realistic": 2.03,
+      "simulator": 2.44
+    },
+    "expMultiplier": 2.44
+  }
+}

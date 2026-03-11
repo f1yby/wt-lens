@@ -1,0 +1,136 @@
+{
+  "id": "it_as_42_metropolitana",
+  "performance": {
+    "horsepower": 110.0,
+    "weight": 6.0,
+    "power_to_weight": 18.33,
+    "max_reverse_speed": 21.7,
+    "reload_time": 3.0,
+    "penetration": 38.1,
+    "max_speed": 84.3,
+    "crew_count": 5,
+    "elevation_speed": 20.0,
+    "traverse_speed": 35.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -10.0,
+      80.0
+    ],
+    "traverse_range": [
+      -150.0,
+      150.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 90.0,
+    "mainGun": {
+      "name": "20mm_Breda_20_65_M35",
+      "caliber": 20.0,
+      "reloadTime": 3.0,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 3.9,
+        "expert": 3.45,
+        "ace": 3.0
+      },
+      "rateOfFire": 240,
+      "beltReloadTime": 3.0
+    },
+    "ammunitions": [
+      {
+        "name": "20mm_granata_m35",
+        "localizedName": "Granata mod.35",
+        "type": "he_frag_i_t",
+        "caliber": 20.0,
+        "mass": 0.135,
+        "muzzleVelocity": 830.0,
+        "explosiveMassKg": 0.003,
+        "explosiveType": "tnt",
+        "tntEquivalent": 0.003
+      },
+      {
+        "name": "20mm_perforante_m35_belt",
+        "localizedName": "Perforante mod.35",
+        "type": "ap_i_t",
+        "caliber": 20.0,
+        "mass": 0.14,
+        "muzzleVelocity": 832.0,
+        "deMarre": {
+          "fullCaliber": 20.0,
+          "isApcbc": false,
+          "explosiveMass": 0.001
+        },
+        "penetration0m": 38.1,
+        "explosiveMassKg": 0.001,
+        "explosiveType": "petn",
+        "tntEquivalent": 0.001
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2800.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 6,
+    "reverse_gears": 4,
+    "forward_gear_speeds": [
+      10.8,
+      14.5,
+      17.4,
+      28.9,
+      31.6,
+      84.3
+    ],
+    "reverse_gear_speeds": [
+      10.8,
+      14.5,
+      17.4,
+      21.7
+    ],
+    "steer_type": null,
+    "empty_weight": 5.5,
+    "track_width": 0.4,
+    "secondary_weapons": null,
+    "main_gun_ammo": 1200,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 2900,
+    "purchaseCost": 700,
+    "crewTraining": 200,
+    "expertTraining": 1000,
+    "aceTrainingGE": 20,
+    "aceTrainingRP": 96000,
+    "repairCost": {
+      "arcade": [
+        101,
+        131
+      ],
+      "realistic": [
+        89,
+        116
+      ],
+      "simulator": [
+        138,
+        179
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.12,
+      "realistic": 0.12,
+      "simulator": 0.15
+    },
+    "expMultiplier": 1.0
+  }
+}

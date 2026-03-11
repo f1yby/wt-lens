@@ -1,0 +1,29 @@
+{
+  "id": "uk_battleship_nelson",
+  "economy": {
+    "researchCost": 220000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 8560,
+    "crewTraining": 10000,
+    "expertTraining": 1070000,
+    "aceTrainingGE": 2000,
+    "aceTrainingRP": 1660000,
+    "repairCost": {
+      "arcade": [
+        19546,
+        19546
+      ],
+      "realistic": [
+        23097,
+        23097
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 8.26,
+      "realistic": 12.0,
+      "simulator": 1.0
+    },
+    "expMultiplier": 2.08,
+    "freeRepairs": 30
+  }
+}

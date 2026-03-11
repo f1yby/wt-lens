@@ -1,0 +1,127 @@
+{
+  "id": "uk_3_inch_gun_carrier",
+  "performance": {
+    "horsepower": 355.0,
+    "weight": 39.0,
+    "power_to_weight": 9.1,
+    "max_reverse_speed": 2.6,
+    "reload_time": 6.25,
+    "penetration": 131.4,
+    "max_speed": 25.7,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 4.5,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -10.0,
+      15.0
+    ],
+    "traverse_range": [
+      -5.0,
+      5.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 25.0,
+    "mainGun": {
+      "name": "76mm_QQF_3in_20cwt",
+      "caliber": 76.2,
+      "reloadTime": 6.25,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 8.12,
+        "expert": 7.19,
+        "ace": 6.25
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "76mm_shot_mk2_ap",
+        "localizedName": "Shot Mk.2",
+        "type": "ap_tank",
+        "caliber": 76.2,
+        "mass": 5.67,
+        "muzzleVelocity": 853.4,
+        "deMarre": {
+          "fullCaliber": 76.2,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "Cx": 0.6687
+        },
+        "penetration0m": 131.4
+      },
+      {
+        "name": "76mm_shell_he",
+        "localizedName": "Shell HE",
+        "type": "he_frag_tank",
+        "caliber": 76.2,
+        "mass": 7.26,
+        "muzzleVelocity": 609.0,
+        "explosiveMassKg": 0.53,
+        "explosiveType": "tnt",
+        "tntEquivalent": 0.53
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2200.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 4,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      2.6,
+      7.3,
+      13.0,
+      25.7
+    ],
+    "reverse_gear_speeds": [
+      2.6
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 38.32,
+    "track_width": 0.6,
+    "secondary_weapons": null,
+    "main_gun_ammo": 65,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 9200,
+    "purchaseCost": 16000,
+    "crewTraining": 4500,
+    "expertTraining": 16000,
+    "aceTrainingGE": 160,
+    "aceTrainingRP": 190000,
+    "repairCost": {
+      "arcade": [
+        596,
+        737
+      ],
+      "realistic": [
+        692,
+        856
+      ],
+      "simulator": [
+        808,
+        1000
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.39,
+      "realistic": 0.62,
+      "simulator": 0.75
+    },
+    "expMultiplier": 1.18
+  }
+}

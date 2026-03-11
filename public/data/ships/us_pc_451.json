@@ -1,0 +1,27 @@
+{
+  "id": "us_pc_451",
+  "economy": {
+    "researchCost": 7900,
+    "purchaseCost": 10000,
+    "crewTraining": 3000,
+    "expertTraining": 10000,
+    "aceTrainingGE": 125,
+    "aceTrainingRP": 160000,
+    "repairCost": {
+      "arcade": [
+        457,
+        565
+      ],
+      "realistic": [
+        684,
+        846
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.35,
+      "realistic": 0.43,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.12
+  }
+}

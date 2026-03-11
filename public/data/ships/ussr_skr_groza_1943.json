@@ -1,0 +1,27 @@
+{
+  "id": "ussr_skr_groza_1943",
+  "economy": {
+    "researchCost": 75000,
+    "purchaseCost": 250000,
+    "crewTraining": 72000,
+    "expertTraining": 250000,
+    "aceTrainingGE": 940,
+    "aceTrainingRP": 480000,
+    "repairCost": {
+      "arcade": [
+        6902,
+        8987
+      ],
+      "realistic": [
+        10128,
+        13188
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.88,
+      "realistic": 4.53,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.66
+  }
+}

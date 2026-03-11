@@ -1,0 +1,31 @@
+{
+  "id": "canberra_bmk2",
+  "economy": {
+    "researchCost": 105000,
+    "purchaseCost": 300000,
+    "crewTraining": 86000,
+    "expertTraining": 300000,
+    "aceTrainingGE": 1700,
+    "aceTrainingRP": 720000,
+    "repairCost": {
+      "arcade": [
+        3100,
+        4127
+      ],
+      "realistic": [
+        11210,
+        14927
+      ],
+      "simulator": [
+        16526,
+        22006
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.95,
+      "realistic": 2.97,
+      "simulator": 6.0
+    },
+    "expMultiplier": 1.96
+  }
+}

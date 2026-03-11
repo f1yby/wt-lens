@@ -1,0 +1,150 @@
+{
+  "id": "us_t55e1",
+  "performance": {
+    "horsepower": 296.0,
+    "weight": 13.7,
+    "power_to_weight": 21.61,
+    "max_reverse_speed": 53.3,
+    "reload_time": 5.0,
+    "penetration": 149.2,
+    "max_speed": 80.0,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 8.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -10.0,
+      15.0
+    ],
+    "traverse_range": [
+      -9.0,
+      9.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 25.0,
+    "mainGun": {
+      "name": "76mm_M7_for_M10",
+      "caliber": 76.2,
+      "reloadTime": 5.0,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 6.5,
+        "expert": 5.75,
+        "ace": 5.0
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "76mm_m79",
+        "localizedName": "M79 shot",
+        "type": "ap_tank",
+        "caliber": 76.2,
+        "mass": 6.8,
+        "muzzleVelocity": 792.0,
+        "deMarre": {
+          "fullCaliber": 76.2,
+          "isApcbc": false,
+          "explosiveMass": 0
+        },
+        "penetration0m": 134.3
+      },
+      {
+        "name": "76mm_m42a1",
+        "localizedName": "M42A1 shell",
+        "type": "he_frag_tank",
+        "caliber": 76.2,
+        "mass": 5.84,
+        "muzzleVelocity": 853.0,
+        "explosiveMassKg": 0.39,
+        "explosiveType": "tnt",
+        "tntEquivalent": 0.39
+      },
+      {
+        "name": "76mm_m62",
+        "localizedName": "M62 shell",
+        "type": "apcbc_tank",
+        "caliber": 76.2,
+        "mass": 7.0,
+        "muzzleVelocity": 792.0,
+        "deMarre": {
+          "fullCaliber": 76.2,
+          "isApcbc": true,
+          "explosiveMass": 0.065,
+          "Cx": 0.4
+        },
+        "penetration0m": 149.2,
+        "explosiveMassKg": 0.065,
+        "explosiveType": "exp_d",
+        "tntEquivalent": 0.064
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 3200.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 7,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      18.3,
+      24.4,
+      36.7,
+      41.9,
+      53.3,
+      73.3,
+      80.0
+    ],
+    "reverse_gear_speeds": [
+      26.7,
+      53.3
+    ],
+    "steer_type": null,
+    "empty_weight": 13.0,
+    "track_width": 0.4,
+    "secondary_weapons": null,
+    "main_gun_ammo": 42,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 40000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 1750,
+    "crewTraining": 10000,
+    "expertTraining": 210000,
+    "aceTrainingGE": 550,
+    "aceTrainingRP": 790000,
+    "repairCost": {
+      "arcade": [
+        1035,
+        1035
+      ],
+      "realistic": [
+        1249,
+        1249
+      ],
+      "simulator": [
+        1692,
+        1692
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.95,
+      "realistic": 2.94,
+      "simulator": 3.78
+    },
+    "expMultiplier": 1.54,
+    "freeRepairs": 30
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "id": "meteor_fmk8_belgium",
+  "economy": {
+    "researchCost": 120000,
+    "purchaseCost": 340000,
+    "crewTraining": 98000,
+    "expertTraining": 340000,
+    "aceTrainingGE": 1800,
+    "aceTrainingRP": 780000,
+    "repairCost": {
+      "arcade": [
+        3331,
+        4745
+      ],
+      "realistic": [
+        9354,
+        13326
+      ],
+      "simulator": [
+        11949,
+        17021
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.3,
+      "realistic": 3.76,
+      "simulator": 6.0
+    },
+    "expMultiplier": 2.02
+  }
+}

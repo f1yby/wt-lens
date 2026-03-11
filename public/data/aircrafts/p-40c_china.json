@@ -1,0 +1,33 @@
+{
+  "id": "p-40c_china",
+  "economy": {
+    "researchCost": 9200,
+    "purchaseCost": 0,
+    "purchaseCostGold": 850,
+    "crewTraining": 3400,
+    "expertTraining": 23000,
+    "aceTrainingGE": 180,
+    "aceTrainingRP": 380000,
+    "repairCost": {
+      "arcade": [
+        884,
+        884
+      ],
+      "realistic": [
+        834,
+        834
+      ],
+      "simulator": [
+        1061,
+        1061
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.84,
+      "realistic": 1.65,
+      "simulator": 3.98
+    },
+    "expMultiplier": 1.18,
+    "freeRepairs": 30
+  }
+}

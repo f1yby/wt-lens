@@ -1,0 +1,200 @@
+{
+  "id": "sw_cv_90120",
+  "performance": {
+    "horsepower": 815.0,
+    "weight": 35.0,
+    "power_to_weight": 23.29,
+    "max_reverse_speed": 40.2,
+    "reload_time": 5.0,
+    "penetration": 600.2,
+    "max_speed": 70.3,
+    "crew_count": 5,
+    "elevation_speed": 8.0,
+    "traverse_speed": 30.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "both",
+    "elevation_range": [
+      -8.0,
+      22.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": [
+      1200,
+      800
+    ],
+    "commander_thermal_resolution": [
+      1200,
+      800
+    ],
+    "gunner_thermal_diagonal": 1442.2,
+    "commander_thermal_diagonal": 1442.2,
+    "stabilizer_value": 1,
+    "elevation_range_value": 30.0,
+    "mainGun": {
+      "name": "120mm_ctg_l50",
+      "caliber": 120.0,
+      "reloadTime": 5.0,
+      "autoLoader": true,
+      "reloadTimes": {
+        "base": 5.0,
+        "expert": 5.0,
+        "ace": 5.0
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "120mm_dm12a1",
+        "localizedName": "DM12A1",
+        "type": "heat_fs_tank",
+        "caliber": 120.0,
+        "mass": 13.5,
+        "muzzleVelocity": 1170.0,
+        "penetration0m": 480.0,
+        "explosiveMassKg": 1.64,
+        "explosiveType": "comp_b",
+        "tntEquivalent": 2.083
+      },
+      {
+        "name": "120mm_dm23",
+        "localizedName": "DM23",
+        "type": "apds_fs_tungsten_l10_l15_tank",
+        "caliber": 32.0,
+        "mass": 4.3,
+        "muzzleVelocity": 1680.0,
+        "lanzOdermatt": {
+          "workingLength": 360.0,
+          "density": 17500.0,
+          "material": "tungsten",
+          "Cx": 0.3056
+        },
+        "penetration0m": 418.4,
+        "penetrationData": {
+          "at0m": {
+            "angle0": 418.4,
+            "angle30": 362.3,
+            "angle60": 209.2
+          }
+        }
+      },
+      {
+        "name": "120mm_slsgr_m95",
+        "localizedName": "slsgr m/95",
+        "type": "he_frag_fs_tank",
+        "caliber": 120.0,
+        "mass": 17.5,
+        "muzzleVelocity": 754.0,
+        "explosiveMassKg": 2.7,
+        "explosiveType": "comp_b",
+        "tntEquivalent": 3.429
+      },
+      {
+        "name": "120mm_slpprj_m95",
+        "localizedName": "slpprj m/95",
+        "type": "apds_fs_long_l30_tank",
+        "caliber": 25.0,
+        "mass": 5.6,
+        "muzzleVelocity": 1740.0,
+        "lanzOdermatt": {
+          "workingLength": 620.0,
+          "density": 17500.0,
+          "material": "tungsten",
+          "Cx": 0.73
+        },
+        "penetration0m": 600.2,
+        "penetrationData": {
+          "at0m": {
+            "angle0": 600.2,
+            "angle30": 519.8,
+            "angle60": 300.1
+          }
+        }
+      }
+    ],
+    "penetrationData": {
+      "at0m": {
+        "angle0": 600.2,
+        "angle30": 519.8,
+        "angle60": 300.1
+      }
+    },
+    "autoLoader": true,
+    "engine_manufacturer": "scania",
+    "engine_model": "di_16",
+    "engine_type": null,
+    "engine_max_rpm": 2350.0,
+    "transmission_manufacturer": "perkins",
+    "transmission_model": "x_300",
+    "transmission_type": "auto",
+    "forward_gears": 8,
+    "reverse_gears": 4,
+    "forward_gear_speeds": [
+      6.3,
+      16.9,
+      24.8,
+      35.1,
+      45.9,
+      54.9,
+      63.9,
+      70.3
+    ],
+    "reverse_gear_speeds": [
+      6.3,
+      16.9,
+      24.8,
+      40.2
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 34.3,
+    "track_width": 0.533,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "12_7mm_Ksp_m88",
+        "caliber": 12.7,
+        "ammo": 1200,
+        "reloadTime": 8.0,
+        "rateOfFire": 575,
+        "bulletType": "ap_i_t_ball_M20"
+      }
+    ],
+    "main_gun_ammo": 45,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": true
+  },
+  "economy": {
+    "researchCost": 400000,
+    "purchaseCost": 1080000,
+    "crewTraining": 310000,
+    "expertTraining": 1080000,
+    "aceTrainingGE": 2200,
+    "aceTrainingRP": 1280000,
+    "repairCost": {
+      "arcade": [
+        3529,
+        5901
+      ],
+      "realistic": [
+        3567,
+        5966
+      ],
+      "simulator": [
+        3769,
+        6303
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.36,
+      "realistic": 1.64,
+      "simulator": 2.06
+    },
+    "expMultiplier": 2.5
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "id": "do_217e_4",
+  "economy": {
+    "researchCost": 17000,
+    "purchaseCost": 105000,
+    "crewTraining": 30000,
+    "expertTraining": 105000,
+    "aceTrainingGE": 590,
+    "aceTrainingRP": 360000,
+    "repairCost": {
+      "arcade": [
+        1184,
+        1592
+      ],
+      "realistic": [
+        3082,
+        4018
+      ],
+      "simulator": [
+        5067,
+        6606
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.83,
+      "realistic": 2.03,
+      "simulator": 3.51
+    },
+    "expMultiplier": 1.48
+  }
+}

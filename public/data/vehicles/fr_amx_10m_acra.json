@@ -1,0 +1,139 @@
+{
+  "id": "fr_amx_10m_acra",
+  "performance": {
+    "horsepower": 280.0,
+    "weight": 15.0,
+    "power_to_weight": 18.67,
+    "max_reverse_speed": 60.1,
+    "reload_time": 7.46,
+    "penetration": 700.0,
+    "max_speed": 60.1,
+    "crew_count": 5,
+    "elevation_speed": 5.5,
+    "traverse_speed": 10.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -7.0,
+      15.0
+    ],
+    "traverse_range": [
+      -5.0,
+      5.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 22.0,
+    "mainGun": {
+      "name": "142mm_ACRA",
+      "caliber": 142.0,
+      "reloadTime": 7.46,
+      "autoLoader": true,
+      "reloadTimes": {
+        "base": 7.46,
+        "expert": 7.46,
+        "ace": 7.46
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "142mm_acra",
+        "localizedName": "MP ACRA",
+        "type": "atgm_tank",
+        "caliber": 142.0,
+        "mass": 16.5,
+        "muzzleVelocity": 500.0,
+        "penetration0m": 700.0
+      },
+      {
+        "name": "142mm_muc",
+        "localizedName": "MUC",
+        "type": "he_frag_tank",
+        "caliber": 142.0,
+        "mass": 20.0,
+        "muzzleVelocity": 700.0
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": true,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 3000.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 8,
+    "reverse_gears": 8,
+    "forward_gear_speeds": [
+      4.4,
+      8.8,
+      10.8,
+      13.9,
+      19.1,
+      30.5,
+      40.5,
+      60.1
+    ],
+    "reverse_gear_speeds": [
+      4.4,
+      8.8,
+      10.8,
+      13.9,
+      19.1,
+      30.5,
+      40.5,
+      60.1
+    ],
+    "steer_type": null,
+    "empty_weight": 14.5,
+    "track_width": 0.425,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner2",
+        "name": "20mm_M_693",
+        "caliber": 20.0,
+        "ammo": 500,
+        "reloadTime": 10.0,
+        "rateOfFire": 740,
+        "bulletType": "he_frag_i_t"
+      }
+    ],
+    "main_gun_ammo": 46,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 61000,
+    "purchaseCost": 340000,
+    "crewTraining": 98000,
+    "expertTraining": 340000,
+    "aceTrainingGE": 1300,
+    "aceTrainingRP": 780000,
+    "repairCost": {
+      "arcade": [
+        5531,
+        6845
+      ],
+      "realistic": [
+        5446,
+        6740
+      ],
+      "simulator": [
+        9017,
+        11160
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.57,
+      "realistic": 2.1,
+      "simulator": 2.5
+    },
+    "expMultiplier": 2.02
+  }
+}

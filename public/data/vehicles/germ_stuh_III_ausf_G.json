@@ -1,0 +1,167 @@
+{
+  "id": "germ_stuh_III_ausf_G",
+  "performance": {
+    "horsepower": 300.0,
+    "weight": 24.35,
+    "power_to_weight": 12.32,
+    "max_reverse_speed": 7.5,
+    "reload_time": 10.0,
+    "penetration": 115.0,
+    "max_speed": 40.3,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 12.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -6.0,
+      20.0
+    ],
+    "traverse_range": [
+      -10.0,
+      10.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 26.0,
+    "mainGun": {
+      "name": "105mm_StuH42",
+      "caliber": 105.0,
+      "reloadTime": 10.0,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 13.0,
+        "expert": 11.5,
+        "ace": 10.0
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "105mm_pzrg",
+        "localizedName": "PzGr",
+        "type": "aphe_tank",
+        "caliber": 105.0,
+        "mass": 14.0,
+        "muzzleVelocity": 480.0,
+        "deMarre": {
+          "fullCaliber": 105.0,
+          "isApcbc": false,
+          "explosiveMass": 0.238,
+          "Cx": 0.5
+        },
+        "penetration0m": 71.8,
+        "explosiveMassKg": 0.238,
+        "explosiveType": "fp02_np10",
+        "tntEquivalent": 0.302
+      },
+      {
+        "name": "105mm_fhgr",
+        "localizedName": "F.H.Gr.",
+        "type": "he_frag_tank",
+        "caliber": 105.0,
+        "mass": 14.81,
+        "muzzleVelocity": 472.0,
+        "explosiveMassKg": 1.75,
+        "explosiveType": "fp02",
+        "tntEquivalent": 1.75
+      },
+      {
+        "name": "105mm_grhl_39_b",
+        "localizedName": "Gr.39 rot Hl/B",
+        "type": "heat_tank",
+        "caliber": 105.0,
+        "mass": 12.35,
+        "muzzleVelocity": 495.0,
+        "penetration0m": 105.0,
+        "explosiveMassKg": 1.49,
+        "explosiveType": "h5",
+        "tntEquivalent": 2.086
+      },
+      {
+        "name": "105mm_grhl_39_c",
+        "localizedName": "Gr.39 rot Hl/C",
+        "type": "heat_tank",
+        "caliber": 105.0,
+        "mass": 12.35,
+        "muzzleVelocity": 495.0,
+        "penetration0m": 115.0,
+        "explosiveMassKg": 1.5,
+        "explosiveType": "h5",
+        "tntEquivalent": 2.1
+      },
+      {
+        "name": "105mm_f_h_gr_nb",
+        "localizedName": "F.H.Gr.Nb.",
+        "type": "smoke_tank",
+        "caliber": 105.0,
+        "mass": 14.0,
+        "muzzleVelocity": 480.0,
+        "explosiveMassKg": 0.05,
+        "explosiveType": "smoke_composition",
+        "tntEquivalent": 0.05
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 3000.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 6,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      4.7,
+      6.7,
+      11.5,
+      16.1,
+      26.9,
+      40.3
+    ],
+    "reverse_gear_speeds": [
+      7.5
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 24.05,
+    "track_width": 0.4,
+    "secondary_weapons": null,
+    "main_gun_ammo": 36,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 4600,
+    "purchaseCost": 16000,
+    "crewTraining": 4500,
+    "expertTraining": 16000,
+    "aceTrainingGE": 160,
+    "aceTrainingRP": 190000,
+    "repairCost": {
+      "arcade": [
+        545,
+        737
+      ],
+      "realistic": [
+        645,
+        873
+      ],
+      "simulator": [
+        756,
+        1023
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.39,
+      "realistic": 0.61,
+      "simulator": 0.75
+    },
+    "expMultiplier": 1.18
+  }
+}

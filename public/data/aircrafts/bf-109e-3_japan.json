@@ -1,0 +1,33 @@
+{
+  "id": "bf-109e-3_japan",
+  "economy": {
+    "researchCost": 11000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 1000,
+    "crewTraining": 4800,
+    "expertTraining": 32000,
+    "aceTrainingGE": 250,
+    "aceTrainingRP": 440000,
+    "repairCost": {
+      "arcade": [
+        950,
+        950
+      ],
+      "realistic": [
+        6433,
+        6433
+      ],
+      "simulator": [
+        1261,
+        1261
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.02,
+      "realistic": 4.48,
+      "simulator": 4.61
+    },
+    "expMultiplier": 1.24,
+    "freeRepairs": 30
+  }
+}

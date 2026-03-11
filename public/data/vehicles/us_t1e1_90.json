@@ -1,0 +1,198 @@
+{
+  "id": "us_t1e1_90",
+  "performance": {
+    "horsepower": 800.0,
+    "weight": 61.8,
+    "power_to_weight": 12.94,
+    "max_reverse_speed": 37.2,
+    "reload_time": 7.5,
+    "penetration": 185.4,
+    "max_speed": 37.2,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 18.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -10.0,
+      30.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 40.0,
+    "mainGun": {
+      "name": "90mm_T7",
+      "caliber": 90.0,
+      "reloadTime": 7.5,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 9.75,
+        "expert": 8.62,
+        "ace": 7.5
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "90mm_m77",
+        "localizedName": "M77 shot",
+        "type": "ap_tank",
+        "caliber": 90.0,
+        "mass": 10.61,
+        "muzzleVelocity": 822.0,
+        "deMarre": {
+          "fullCaliber": 90.0,
+          "isApcbc": false,
+          "explosiveMass": 0
+        },
+        "penetration0m": 162.6
+      },
+      {
+        "name": "90mm_m71",
+        "localizedName": "M71 shell",
+        "type": "he_frag_tank",
+        "caliber": 90.0,
+        "mass": 10.55,
+        "muzzleVelocity": 823.0,
+        "explosiveMassKg": 0.925,
+        "explosiveType": "comp_b",
+        "tntEquivalent": 1.175
+      },
+      {
+        "name": "90mm_m82",
+        "localizedName": "M82 shot",
+        "type": "apcbc_tank",
+        "caliber": 90.0,
+        "mass": 10.91,
+        "muzzleVelocity": 853.4,
+        "deMarre": {
+          "fullCaliber": 90.0,
+          "isApcbc": true,
+          "explosiveMass": 0.14,
+          "Cx": 0.2766
+        },
+        "penetration0m": 185.4,
+        "explosiveMassKg": 0.14,
+        "explosiveType": "exp_d",
+        "tntEquivalent": 0.139
+      },
+      {
+        "name": "90mm_m313",
+        "localizedName": "M313",
+        "type": "smoke_tank",
+        "caliber": 90.0,
+        "mass": 10.7,
+        "muzzleVelocity": 821.0,
+        "explosiveMassKg": 0.05,
+        "explosiveType": "smoke_composition",
+        "tntEquivalent": 0.05
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2300.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 6,
+    "reverse_gears": 6,
+    "forward_gear_speeds": [
+      2.6,
+      3.4,
+      8.3,
+      14.3,
+      23.2,
+      37.2
+    ],
+    "reverse_gear_speeds": [
+      2.6,
+      3.4,
+      8.3,
+      14.3,
+      23.2,
+      37.2
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 60.0,
+    "track_width": 0.66,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "37mm_M3_for_M6A1",
+        "caliber": 37.0,
+        "ammo": 202,
+        "rateOfFire": 21,
+        "bulletType": "ap_tank"
+      },
+      {
+        "trigger": "gunner3",
+        "name": "12_7mm_M2_HB",
+        "caliber": 12.7,
+        "ammo": 1000,
+        "reloadTime": 8.0,
+        "rateOfFire": 575,
+        "bulletType": "ap_i_t_ball_M20"
+      },
+      {
+        "trigger": "gunner4",
+        "name": "12_7mm_M2_HB",
+        "caliber": 12.7,
+        "ammo": 3000,
+        "reloadTime": 8.0,
+        "rateOfFire": 575,
+        "bulletType": "ap_i_t_ball_M20"
+      },
+      {
+        "trigger": "gunner4",
+        "name": "12_7mm_M2_HB",
+        "caliber": 12.7,
+        "ammo": 3000,
+        "reloadTime": 8.0,
+        "rateOfFire": 575,
+        "bulletType": "ap_i_t_ball_M20"
+      }
+    ],
+    "main_gun_ammo": 52,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 40000,
+    "purchaseCost": 135000,
+    "crewTraining": 39000,
+    "expertTraining": 135000,
+    "aceTrainingGE": 550,
+    "aceTrainingRP": 390000,
+    "repairCost": {
+      "arcade": [
+        2044,
+        2530
+      ],
+      "realistic": [
+        2197,
+        2719
+      ],
+      "simulator": [
+        3007,
+        3722
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.94,
+      "realistic": 1.43,
+      "simulator": 1.61
+    },
+    "expMultiplier": 1.54
+  }
+}

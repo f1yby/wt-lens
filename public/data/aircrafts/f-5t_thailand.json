@@ -1,0 +1,31 @@
+{
+  "id": "f-5t_thailand",
+  "economy": {
+    "researchCost": 260000,
+    "purchaseCost": 720000,
+    "crewTraining": 200000,
+    "expertTraining": 720000,
+    "aceTrainingGE": 3200,
+    "aceTrainingRP": 1210000,
+    "repairCost": {
+      "arcade": [
+        3100,
+        4190
+      ],
+      "realistic": [
+        8848,
+        11957
+      ],
+      "simulator": [
+        10360,
+        14001
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.99,
+      "realistic": 3.16,
+      "simulator": 5.39
+    },
+    "expMultiplier": 2.44
+  }
+}

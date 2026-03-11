@@ -1,0 +1,238 @@
+{
+  "id": "uk_khalid",
+  "performance": {
+    "horsepower": 1314.0,
+    "weight": 58.0,
+    "power_to_weight": 22.66,
+    "max_reverse_speed": 36.5,
+    "reload_time": 7.46,
+    "penetration": 410.0,
+    "max_speed": 55.8,
+    "crew_count": 5,
+    "elevation_speed": 22.5,
+    "traverse_speed": 22.5,
+    "has_stabilizer": true,
+    "stabilizer_type": "both",
+    "elevation_range": [
+      -10.0,
+      20.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 30.0,
+    "mainGun": {
+      "name": "120mm_OBL_Tk_L11",
+      "caliber": 120.0,
+      "reloadTime": 7.46,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 9.7,
+        "expert": 8.58,
+        "ace": 7.46
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "120mm_l15a3",
+        "localizedName": "Shot L15A3",
+        "type": "apds_l15_tank",
+        "caliber": 68.0,
+        "mass": 7.484,
+        "muzzleVelocity": 1371.6,
+        "deMarre": {
+          "fullCaliber": 120.0,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "isApcr": true,
+          "coreCaliber": 68.0,
+          "coreMass": 5.51,
+          "Cx": 0.1655
+        },
+        "penetration0m": 257.2
+      },
+      {
+        "name": "120mm_l37a7",
+        "localizedName": "Shell L31A7",
+        "type": "hesh_tank",
+        "caliber": 120.0,
+        "mass": 17.34,
+        "muzzleVelocity": 670.0,
+        "penetration0m": 152.0,
+        "explosiveMassKg": 4.08,
+        "explosiveType": "rdx",
+        "tntEquivalent": 5.712
+      },
+      {
+        "name": "120mm_l23",
+        "localizedName": "Shot L23",
+        "type": "apds_fs_long_tank",
+        "caliber": 29.0,
+        "mass": 3.89,
+        "muzzleVelocity": 1535.0,
+        "armorPowerTable": [
+          {
+            "penetration": 410.0,
+            "distance": 10.0
+          },
+          {
+            "penetration": 408.0,
+            "distance": 100.0
+          },
+          {
+            "penetration": 405.0,
+            "distance": 500.0
+          },
+          {
+            "penetration": 400.0,
+            "distance": 1000.0
+          },
+          {
+            "penetration": 390.0,
+            "distance": 1500.0
+          },
+          {
+            "penetration": 380.0,
+            "distance": 2000.0
+          },
+          {
+            "penetration": 360.0,
+            "distance": 2500.0
+          },
+          {
+            "penetration": 350.0,
+            "distance": 3000.0
+          },
+          {
+            "penetration": 320.0,
+            "distance": 3500.0
+          },
+          {
+            "penetration": 310.0,
+            "distance": 4000.0
+          },
+          {
+            "penetration": 300.0,
+            "distance": 4500.0
+          },
+          {
+            "penetration": 50.0,
+            "distance": 10000.0
+          },
+          {
+            "penetration": 0.0,
+            "distance": 20000.0
+          }
+        ],
+        "penetration0m": 410.0
+      },
+      {
+        "name": "120mm_smoke_l34",
+        "localizedName": "L34",
+        "type": "smoke_tank",
+        "caliber": 120.0,
+        "mass": 17.1,
+        "muzzleVelocity": 670.0,
+        "explosiveMassKg": 0.05,
+        "explosiveType": "smoke_composition",
+        "tntEquivalent": 0.05
+      }
+    ],
+    "penetrationData": {},
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2300.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 8,
+    "reverse_gears": 6,
+    "forward_gear_speeds": [
+      6.0,
+      14.7,
+      18.4,
+      24.8,
+      30.1,
+      38.4,
+      47.5,
+      55.8
+    ],
+    "reverse_gear_speeds": [
+      6.0,
+      14.7,
+      18.4,
+      22.9,
+      30.1,
+      36.5
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 57.0,
+    "track_width": 0.61,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_L8A2",
+        "caliber": 7.6,
+        "ammo": 6000,
+        "reloadTime": 8.0,
+        "rateOfFire": 1000,
+        "bulletType": "ap_ball"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "7_62mm_L37A2",
+        "caliber": 7.6,
+        "ammo": 2000,
+        "reloadTime": 8.0,
+        "rateOfFire": 650,
+        "bulletType": "ap_ball"
+      }
+    ],
+    "main_gun_ammo": 54,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": true
+  },
+  "economy": {
+    "researchCost": 190000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 8910,
+    "crewTraining": 10000,
+    "expertTraining": 850000,
+    "aceTrainingGE": 2100,
+    "aceTrainingRP": 1900000,
+    "repairCost": {
+      "arcade": [
+        3085,
+        3085
+      ],
+      "realistic": [
+        3148,
+        3148
+      ],
+      "simulator": [
+        3887,
+        3887
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.96,
+      "realistic": 3.93,
+      "simulator": 4.63
+    },
+    "expMultiplier": 2.2,
+    "freeRepairs": 30
+  }
+}

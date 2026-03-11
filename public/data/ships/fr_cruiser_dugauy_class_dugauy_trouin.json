@@ -1,0 +1,29 @@
+{
+  "id": "fr_cruiser_dugauy_class_dugauy_trouin",
+  "economy": {
+    "researchCost": 21000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 1600,
+    "crewTraining": 10000,
+    "expertTraining": 105000,
+    "aceTrainingGE": 590,
+    "aceTrainingRP": 710000,
+    "repairCost": {
+      "arcade": [
+        3089,
+        3089
+      ],
+      "realistic": [
+        2579,
+        2579
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 6.86,
+      "realistic": 12.0,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.48,
+    "freeRepairs": 30
+  }
+}

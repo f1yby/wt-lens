@@ -1,0 +1,33 @@
+{
+  "id": "hp52_hampden_tbmk1_ussr_utk1",
+  "economy": {
+    "researchCost": 5900,
+    "purchaseCost": 0,
+    "purchaseCostGold": 1370,
+    "crewTraining": 1400,
+    "expertTraining": 9000,
+    "aceTrainingGE": 80,
+    "aceTrainingRP": 270000,
+    "repairCost": {
+      "arcade": [
+        212,
+        212
+      ],
+      "realistic": [
+        318,
+        318
+      ],
+      "simulator": [
+        548,
+        548
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.64,
+      "realistic": 1.24,
+      "simulator": 2.3
+    },
+    "expMultiplier": 1.06,
+    "freeRepairs": 30
+  }
+}

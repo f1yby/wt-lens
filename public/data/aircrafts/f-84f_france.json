@@ -1,0 +1,31 @@
+{
+  "id": "f-84f_france",
+  "economy": {
+    "researchCost": 135000,
+    "purchaseCost": 380000,
+    "crewTraining": 110000,
+    "expertTraining": 380000,
+    "aceTrainingGE": 2000,
+    "aceTrainingRP": 830000,
+    "repairCost": {
+      "arcade": [
+        2902,
+        3922
+      ],
+      "realistic": [
+        8501,
+        11488
+      ],
+      "simulator": [
+        10207,
+        13793
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.08,
+      "realistic": 3.08,
+      "simulator": 6.0
+    },
+    "expMultiplier": 2.08
+  }
+}

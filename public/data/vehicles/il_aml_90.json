@@ -1,0 +1,161 @@
+{
+  "id": "il_aml_90",
+  "performance": {
+    "horsepower": 90.0,
+    "weight": 5.5,
+    "power_to_weight": 16.36,
+    "max_reverse_speed": 17.2,
+    "reload_time": 6.67,
+    "penetration": 350.0,
+    "max_speed": 90.6,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 18.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -8.0,
+      15.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 23.0,
+    "mainGun": {
+      "name": "90mm_DEFA_D921",
+      "caliber": 90.0,
+      "reloadTime": 6.67,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 8.67,
+        "expert": 7.67,
+        "ace": 6.67
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "90mm_occ_90_62",
+        "localizedName": "OCC 90-62",
+        "type": "heat_fs_tank",
+        "caliber": 90.0,
+        "mass": 3.65,
+        "muzzleVelocity": 800.0,
+        "penetration0m": 350.0,
+        "explosiveMassKg": 0.67,
+        "explosiveType": "comp_b",
+        "tntEquivalent": 0.851
+      },
+      {
+        "name": "90mm_ofum_ph90",
+        "localizedName": "OFUM PH90-F2",
+        "type": "smoke_tank",
+        "caliber": 90.0,
+        "mass": 5.4,
+        "muzzleVelocity": 640.0,
+        "explosiveMassKg": 0.05,
+        "explosiveType": "smoke_composition",
+        "tntEquivalent": 0.05
+      },
+      {
+        "name": "90mm_oe_90_f1",
+        "localizedName": "OE 90 F1",
+        "type": "he_frag_tank",
+        "caliber": 90.0,
+        "mass": 5.27,
+        "muzzleVelocity": 650.0,
+        "explosiveMassKg": 0.945,
+        "explosiveType": "tnt",
+        "tntEquivalent": 0.945
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 4700.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 10,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      12.9,
+      17.2,
+      20.7,
+      25.8,
+      29.5,
+      34.4,
+      37.6,
+      43.0,
+      59.0,
+      90.6
+    ],
+    "reverse_gear_speeds": [
+      12.9,
+      17.2
+    ],
+    "steer_type": null,
+    "empty_weight": 5.25,
+    "track_width": 0.4,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_AAN_F1",
+        "caliber": 7.6,
+        "ammo": 2200,
+        "reloadTime": 8.0,
+        "rateOfFire": 900,
+        "bulletType": "ap_ball"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "7_62mm_AAN_F1",
+        "caliber": 7.6,
+        "ammo": 2000,
+        "reloadTime": 8.0,
+        "rateOfFire": 900,
+        "bulletType": "ap_ball"
+      }
+    ],
+    "main_gun_ammo": 20,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 63000,
+    "purchaseCost": 200000,
+    "crewTraining": 57000,
+    "expertTraining": 200000,
+    "aceTrainingGE": 800,
+    "aceTrainingRP": 520000,
+    "repairCost": {
+      "arcade": [
+        2445,
+        3549
+      ],
+      "realistic": [
+        2954,
+        4287
+      ],
+      "simulator": [
+        3995,
+        5799
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.07,
+      "realistic": 1.44,
+      "simulator": 1.86
+    },
+    "expMultiplier": 1.72
+  }
+}

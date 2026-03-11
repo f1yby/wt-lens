@@ -1,7 +1,6 @@
-import type { Vehicle, Ammunition, MainGun, PenetrationData, GameMode, VehicleStats, StatsMonthRange, EconomyData } from '../types';
+import type { Vehicle, Ammunition, MainGun, PenetrationData, GameMode, VehicleStats, StatsMonthRange, EconomyData, VehicleIndexEntry, VehicleDetailEntry, StatsIndexEntry, StatsHistoryEntry } from '../types';
 import { getDefaultStatsMonthRange, getMonthRangeCacheKey } from '../types';
-import { StatSharkEntry, cleanName, buildStatsMapByMonthRange, convertToVehicleStats } from './base';
-import { initStatsMonthService, isServiceInitialized } from '../services/statsMonthService';
+import { StatSharkEntry, cleanName, buildStatsMapByMonthRange, convertToVehicleStats, loadStatsForRange } from './base';
 
 // Raw data types from JSON
 interface DatamineEntry {
@@ -86,35 +85,140 @@ interface DatamineEntry {
 }
 
 // Cache for loaded raw data
-let statsData: StatSharkEntry[] | null = null;
 let datamineData: DatamineEntry[] | null = null;
 // Cache for merged vehicles by month range (key: startMonth_endMonth)
 const vehiclesByMonthRange = new Map<string, Vehicle[]>();
 
-/**
- * Load stats data from JSON
- */
-async function loadStatsData(): Promise<StatSharkEntry[]> {
-  if (statsData) return statsData;
-  const response = await fetch('/wt-lens/data/stats.json');
-  statsData = await response.json();
-  
-  // Initialize stats month service with loaded data
-  if (!isServiceInitialized()) {
-    initStatsMonthService(statsData!);
-  }
-  
-  return statsData!;
-}
+// ============================================================
+// Split Data Caches (for optimized loading)
+// ============================================================
+let vehicleIndexData: VehicleIndexEntry[] | null = null;
+let statsIndexData: StatsIndexEntry[] | null = null;
+const vehicleDetailCache = new Map<string, VehicleDetailEntry>();
+const vehicleStatsHistoryCache = new Map<string, StatsHistoryEntry[]>();
 
 /**
- * Load datamine data from JSON
+ * Load datamine data from vehicles-index.json.
+ * Performance data is NOT included — use loadVehicleDetail() for individual vehicle details.
+ * This is sufficient for list pages (HomePage) that only need basic vehicle info + stats.
  */
 async function loadDatamineData(): Promise<DatamineEntry[]> {
   if (datamineData) return datamineData;
-  const response = await fetch('/wt-lens/data/datamine.json');
-  datamineData = await response.json();
+  
+  const index = await loadVehicleIndex();
+  
+  datamineData = index.map(entry => ({
+    id: entry.id,
+    name: entry.name,
+    localizedName: entry.localizedName,
+    nation: entry.nation,
+    rank: entry.rank,
+    battle_rating: entry.battleRating,
+    br: entry.br,
+    vehicle_type: entry.vehicleType,
+    economic_type: entry.economicType,
+    performance: {} as DatamineEntry['performance'],
+    imageUrl: entry.imageUrl ?? '',
+    source: 'split_index',
+    unreleased: entry.unreleased,
+    releaseDate: entry.releaseDate,
+    ghost: entry.ghost,
+  }));
+  
   return datamineData!;
+}
+
+// ============================================================
+// Split Mode Loading Functions
+// ============================================================
+
+/**
+ * Load vehicle index (lightweight, for list rendering)
+ */
+export async function loadVehicleIndex(): Promise<VehicleIndexEntry[]> {
+  if (vehicleIndexData) return vehicleIndexData;
+  
+  const response = await fetch('/wt-lens/data/vehicles-index.json');
+  if (!response.ok) {
+    throw new Error(`Failed to load vehicle index: ${response.status}`);
+  }
+  vehicleIndexData = await response.json();
+  return vehicleIndexData!;
+}
+
+/**
+ * Load stats index (latest month summary for list rendering)
+ */
+export async function loadStatsIndex(): Promise<StatsIndexEntry[]> {
+  if (statsIndexData) return statsIndexData;
+  
+  try {
+    const response = await fetch('/wt-lens/data/stats-index.json');
+    if (!response.ok) {
+      throw new Error(`Failed to load stats index: ${response.status}`);
+    }
+    const rawData = await response.json();
+    // Map snake_case to camelCase
+    statsIndexData = rawData.map((entry: Record<string, unknown>) => ({
+      id: entry.id,
+      mode: entry.mode,
+      battles: entry.battles,
+      winRate: entry.win_rate,
+      avgKillsPerSpawn: entry.avg_kills_per_spawn,
+      expPerSpawn: entry.exp_per_spawn,
+    }));
+    return statsIndexData!;
+  } catch (error) {
+    console.warn('Split stats mode unavailable:', error);
+    return [];
+  }
+}
+
+/**
+ * Load individual vehicle detail (performance + economy)
+ */
+export async function loadVehicleDetail(vehicleId: string): Promise<VehicleDetailEntry | null> {
+  // Check cache first
+  if (vehicleDetailCache.has(vehicleId)) {
+    return vehicleDetailCache.get(vehicleId)!;
+  }
+  
+  try {
+    const response = await fetch(`/wt-lens/data/vehicles/${vehicleId}.json`);
+    if (!response.ok) {
+      console.warn(`Failed to load vehicle detail for ${vehicleId}: ${response.status}`);
+      return null;
+    }
+    const detail: VehicleDetailEntry = await response.json();
+    vehicleDetailCache.set(vehicleId, detail);
+    return detail;
+  } catch (error) {
+    console.warn(`Failed to load detail for ${vehicleId}:`, error);
+    return null;
+  }
+}
+
+/**
+ * Load individual vehicle stats history (all months)
+ */
+export async function loadVehicleStatsHistory(vehicleId: string): Promise<StatsHistoryEntry[]> {
+  // Check cache first
+  if (vehicleStatsHistoryCache.has(vehicleId)) {
+    return vehicleStatsHistoryCache.get(vehicleId)!;
+  }
+  
+  try {
+    const response = await fetch(`/wt-lens/data/stats/${vehicleId}.json`);
+    if (!response.ok) {
+      throw new Error(`Failed to load stats history: ${response.status}`);
+    }
+    const history: StatsHistoryEntry[] = await response.json();
+    vehicleStatsHistoryCache.set(vehicleId, history);
+    return history;
+  } catch (error) {
+    console.warn(`Failed to load stats history for ${vehicleId}:`, error);
+    return [];
+  }
 }
 
 /**
@@ -243,9 +347,6 @@ function mergeVehicleData(stats: StatSharkEntry[], datamine: DatamineEntry[], ra
  * @param range - Optional month range filter. Defaults to latest month if not specified.
  */
 export async function loadVehicles(range?: StatsMonthRange): Promise<Vehicle[]> {
-  // Load stats data first to ensure month service is initialized
-  const stats = await loadStatsData();
-  
   const targetRange = range ?? getDefaultStatsMonthRange();
   const cacheKey = getMonthRangeCacheKey(targetRange);
   
@@ -253,6 +354,9 @@ export async function loadVehicles(range?: StatsMonthRange): Promise<Vehicle[]> 
   if (vehiclesByMonthRange.has(cacheKey)) {
     return vehiclesByMonthRange.get(cacheKey)!;
   }
+
+  // Load stats data appropriate for the month range
+  const stats = await loadStatsForRange(targetRange);
 
   const datamine = await loadDatamineData();
 

@@ -1,0 +1,33 @@
+{
+  "id": "p-51b_7_sweden",
+  "economy": {
+    "researchCost": 18000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 1300,
+    "crewTraining": 10000,
+    "expertTraining": 67000,
+    "aceTrainingGE": 400,
+    "aceTrainingRP": 570000,
+    "repairCost": {
+      "arcade": [
+        1600,
+        1600
+      ],
+      "realistic": [
+        3970,
+        3970
+      ],
+      "simulator": [
+        2134,
+        2134
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.42,
+      "realistic": 3.77,
+      "simulator": 7.0
+    },
+    "expMultiplier": 1.36,
+    "freeRepairs": 30
+  }
+}

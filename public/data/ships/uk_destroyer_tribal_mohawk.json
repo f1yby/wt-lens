@@ -1,0 +1,29 @@
+{
+  "id": "uk_destroyer_tribal_mohawk",
+  "economy": {
+    "researchCost": 13000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 1150,
+    "crewTraining": 6800,
+    "expertTraining": 45000,
+    "aceTrainingGE": 320,
+    "aceTrainingRP": 500000,
+    "repairCost": {
+      "arcade": [
+        2065,
+        2065
+      ],
+      "realistic": [
+        1980,
+        1980
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 3.68,
+      "realistic": 7.98,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.3,
+    "freeRepairs": 30
+  }
+}

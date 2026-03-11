@@ -1,0 +1,33 @@
+{
+  "id": "me_210_v22_japan",
+  "economy": {
+    "researchCost": 18000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 1300,
+    "crewTraining": 10000,
+    "expertTraining": 67000,
+    "aceTrainingGE": 400,
+    "aceTrainingRP": 570000,
+    "repairCost": {
+      "arcade": [
+        560,
+        560
+      ],
+      "realistic": [
+        654,
+        654
+      ],
+      "simulator": [
+        1546,
+        1546
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.22,
+      "realistic": 2.47,
+      "simulator": 5.05
+    },
+    "expMultiplier": 1.36,
+    "freeRepairs": 30
+  }
+}

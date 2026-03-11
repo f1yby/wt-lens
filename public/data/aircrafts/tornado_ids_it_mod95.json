@@ -1,0 +1,31 @@
+{
+  "id": "tornado_ids_it_mod95",
+  "economy": {
+    "researchCost": 260000,
+    "purchaseCost": 720000,
+    "crewTraining": 200000,
+    "expertTraining": 720000,
+    "aceTrainingGE": 3200,
+    "aceTrainingRP": 1210000,
+    "repairCost": {
+      "arcade": [
+        2888,
+        4362
+      ],
+      "realistic": [
+        7318,
+        11055
+      ],
+      "simulator": [
+        10388,
+        15692
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.86,
+      "realistic": 3.4,
+      "simulator": 6.0
+    },
+    "expMultiplier": 2.44
+  }
+}

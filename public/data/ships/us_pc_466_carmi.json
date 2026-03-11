@@ -1,0 +1,29 @@
+{
+  "id": "us_pc_466_carmi",
+  "economy": {
+    "researchCost": 14000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 1150,
+    "crewTraining": 6900,
+    "expertTraining": 46000,
+    "aceTrainingGE": 320,
+    "aceTrainingRP": 500000,
+    "repairCost": {
+      "arcade": [
+        1818,
+        1818
+      ],
+      "realistic": [
+        1971,
+        1971
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.89,
+      "realistic": 2.1,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.3,
+    "freeRepairs": 30
+  }
+}

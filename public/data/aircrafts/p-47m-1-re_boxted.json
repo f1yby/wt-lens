@@ -1,0 +1,33 @@
+{
+  "id": "p-47m-1-re_boxted",
+  "economy": {
+    "researchCost": 71000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 6090,
+    "crewTraining": 10000,
+    "expertTraining": 340000,
+    "aceTrainingGE": 1200,
+    "aceTrainingRP": 1140000,
+    "repairCost": {
+      "arcade": [
+        1929,
+        1929
+      ],
+      "realistic": [
+        4623,
+        4623
+      ],
+      "simulator": [
+        6896,
+        6896
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.95,
+      "realistic": 4.69,
+      "simulator": 9.94
+    },
+    "expMultiplier": 1.78,
+    "freeRepairs": 30
+  }
+}

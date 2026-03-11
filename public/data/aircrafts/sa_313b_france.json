@@ -1,0 +1,31 @@
+{
+  "id": "sa_313b_france",
+  "economy": {
+    "researchCost": 150000,
+    "purchaseCost": 490000,
+    "crewTraining": 140000,
+    "expertTraining": 490000,
+    "aceTrainingGE": 1800,
+    "aceTrainingRP": 780000,
+    "repairCost": {
+      "arcade": [
+        10163,
+        12832
+      ],
+      "realistic": [
+        2938,
+        3710
+      ],
+      "simulator": [
+        4952,
+        6253
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.0,
+      "realistic": 3.0,
+      "simulator": 4.3
+    },
+    "expMultiplier": 2.02
+  }
+}

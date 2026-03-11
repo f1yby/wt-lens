@@ -1,0 +1,137 @@
+{
+  "id": "cn_pgz_625_fb10",
+  "performance": {
+    "horsepower": 485.0,
+    "weight": 26.0,
+    "power_to_weight": 18.65,
+    "max_reverse_speed": 13.8,
+    "reload_time": 20.0,
+    "penetration": null,
+    "max_speed": 89.7,
+    "crew_count": 5,
+    "elevation_speed": 45.0,
+    "traverse_speed": 57.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "both",
+    "elevation_range": [
+      -4.0,
+      85.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": [
+      1200,
+      800
+    ],
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": 1442.2,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 89.0,
+    "mainGun": {
+      "name": "30mm_pgz_625",
+      "caliber": 30.0,
+      "reloadTime": 20.0,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 26.0,
+        "expert": 23.0,
+        "ace": 20.0
+      },
+      "rateOfFire": 4000,
+      "beltReloadTime": 20.0
+    },
+    "ammunitions": [
+      {
+        "name": "30mm_china_PTFP",
+        "localizedName": "30 mm PTFP",
+        "type": "ahead",
+        "caliber": 30.0,
+        "mass": 0.36,
+        "muzzleVelocity": 980.0,
+        "explosiveMassKg": 0.0005,
+        "explosiveType": "clx_663",
+        "tntEquivalent": 0.001
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": "wp_13",
+    "engine_type": null,
+    "engine_max_rpm": 2100.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 6,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      12.4,
+      23.5,
+      35.8,
+      54.7,
+      76.0,
+      89.7
+    ],
+    "reverse_gear_speeds": [
+      13.8
+    ],
+    "steer_type": null,
+    "empty_weight": 25.5,
+    "track_width": 0.4,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "130mm_FB_10_rocket_launcher",
+        "caliber": 130.0,
+        "ammo": 8,
+        "reloadTime": 15.0,
+        "rateOfFire": 60,
+        "bulletType": "sam_tank",
+        "maxDistance": 10000,
+        "maxSpeed": 670,
+        "guidanceType": "optical",
+        "explosiveMass": 1.05,
+        "explosiveType": "hta"
+      }
+    ],
+    "main_gun_ammo": 800,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": true
+  },
+  "economy": {
+    "researchCost": 410000,
+    "purchaseCost": 1100000,
+    "crewTraining": 310000,
+    "expertTraining": 1100000,
+    "aceTrainingGE": 2300,
+    "aceTrainingRP": 1350000,
+    "repairCost": {
+      "arcade": [
+        5223,
+        7855
+      ],
+      "realistic": [
+        6345,
+        9542
+      ],
+      "simulator": [
+        7187,
+        10808
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.6,
+      "realistic": 2.1,
+      "simulator": 2.03
+    },
+    "expMultiplier": 2.56
+  }
+}

@@ -1,0 +1,140 @@
+{
+  "id": "cn_qn506",
+  "performance": {
+    "horsepower": 520.0,
+    "weight": 30.0,
+    "power_to_weight": 17.33,
+    "max_reverse_speed": 7.2,
+    "reload_time": 1.0,
+    "penetration": null,
+    "max_speed": 50.1,
+    "crew_count": 5,
+    "elevation_speed": 15.0,
+    "traverse_speed": 40.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "both",
+    "elevation_range": [
+      -5.0,
+      52.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": [
+      800,
+      600
+    ],
+    "commander_thermal_resolution": [
+      800,
+      600
+    ],
+    "gunner_thermal_diagonal": 1000.0,
+    "commander_thermal_diagonal": 1000.0,
+    "stabilizer_value": 1,
+    "elevation_range_value": 57.0,
+    "mainGun": null,
+    "ammunitions": null,
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": "CNGC",
+    "engine_model": "12150L",
+    "engine_type": null,
+    "engine_max_rpm": 2200.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 5,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      7.2,
+      17.3,
+      25.0,
+      34.9,
+      50.1
+    ],
+    "reverse_gear_speeds": [
+      7.2
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 29.5,
+    "track_width": 0.58,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_Type86",
+        "caliber": 7.6,
+        "ammo": 1000,
+        "reloadTime": 8.0,
+        "rateOfFire": 700,
+        "bulletType": "ap_i_ball"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "70mm_QN201DD_rocket_launcher",
+        "caliber": 70.0,
+        "ammo": 20,
+        "reloadTime": 20.0,
+        "rateOfFire": 120,
+        "bulletType": "atgm_tank",
+        "maxDistance": 4000,
+        "maxSpeed": 450,
+        "guidanceType": "saclos",
+        "penetration": 200,
+        "explosiveMass": 0.6,
+        "explosiveType": "a_ix_1"
+      },
+      {
+        "trigger": "gunner3",
+        "name": "151mm_QN502CDD_rocket_launcher",
+        "caliber": 151.0,
+        "ammo": 4,
+        "reloadTime": 1.0,
+        "rateOfFire": 120,
+        "bulletType": "atgm_tandem_tank",
+        "maxDistance": 8000,
+        "maxSpeed": 205,
+        "guidanceType": "optical",
+        "penetration": 900,
+        "explosiveMass": 0.9,
+        "explosiveType": "a_ix_2"
+      }
+    ],
+    "main_gun_ammo": 200,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": true
+  },
+  "economy": {
+    "researchCost": 260000,
+    "purchaseCost": 710000,
+    "crewTraining": 200000,
+    "expertTraining": 710000,
+    "aceTrainingGE": 2100,
+    "aceTrainingRP": 1080000,
+    "repairCost": {
+      "arcade": [
+        3474,
+        5810
+      ],
+      "realistic": [
+        3327,
+        5564
+      ],
+      "simulator": [
+        4434,
+        7415
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.37,
+      "realistic": 1.73,
+      "simulator": 2.23
+    },
+    "expMultiplier": 2.32
+  }
+}

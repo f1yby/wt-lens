@@ -1,0 +1,31 @@
+{
+  "id": "lancaster_mr7_france",
+  "economy": {
+    "researchCost": 54000,
+    "purchaseCost": 185000,
+    "crewTraining": 52000,
+    "expertTraining": 185000,
+    "aceTrainingGE": 940,
+    "aceTrainingRP": 480000,
+    "repairCost": {
+      "arcade": [
+        2440,
+        3370
+      ],
+      "realistic": [
+        6673,
+        8933
+      ],
+      "simulator": [
+        13499,
+        18071
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.11,
+      "realistic": 2.17,
+      "simulator": 5.09
+    },
+    "expMultiplier": 1.66
+  }
+}

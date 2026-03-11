@@ -1,0 +1,33 @@
+{
+  "id": "ju-288c",
+  "economy": {
+    "researchCost": 63000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 4880,
+    "crewTraining": 10000,
+    "expertTraining": 320000,
+    "aceTrainingGE": 1100,
+    "aceTrainingRP": 1050000,
+    "repairCost": {
+      "arcade": [
+        1865,
+        1865
+      ],
+      "realistic": [
+        7127,
+        7127
+      ],
+      "simulator": [
+        10407,
+        10407
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.12,
+      "realistic": 4.5,
+      "simulator": 11.02
+    },
+    "expMultiplier": 1.72,
+    "freeRepairs": 30
+  }
+}

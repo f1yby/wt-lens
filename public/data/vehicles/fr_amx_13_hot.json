@@ -1,0 +1,161 @@
+{
+  "id": "fr_amx_13_hot",
+  "performance": {
+    "horsepower": 270.0,
+    "weight": 15.0,
+    "power_to_weight": 18.0,
+    "max_reverse_speed": 6.8,
+    "reload_time": 5.0,
+    "penetration": 203.0,
+    "max_speed": 60.7,
+    "crew_count": 5,
+    "elevation_speed": 4.5,
+    "traverse_speed": 30.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -6.0,
+      13.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 19.0,
+    "mainGun": {
+      "name": "75mm_SA_50",
+      "caliber": 75.0,
+      "reloadTime": 5.0,
+      "autoLoader": true,
+      "reloadTimes": {
+        "base": 5.0,
+        "expert": 5.0,
+        "ace": 5.0
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "75mm_pot51a",
+        "localizedName": "POT-51A",
+        "type": "apbc_usa_tank",
+        "caliber": 75.0,
+        "mass": 6.4,
+        "muzzleVelocity": 1000.0,
+        "deMarre": {
+          "fullCaliber": 75.0,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "Cx": 0.4
+        },
+        "penetration0m": 182.7
+      },
+      {
+        "name": "75mm_pcot51p",
+        "localizedName": "PCOT-51P",
+        "type": "apcbc_solid_medium_caliber_tank",
+        "caliber": 75.0,
+        "mass": 6.4,
+        "muzzleVelocity": 1000.0,
+        "deMarre": {
+          "fullCaliber": 75.0,
+          "isApcbc": true,
+          "explosiveMass": 0,
+          "Cx": 0.4
+        },
+        "penetration0m": 203.0
+      },
+      {
+        "name": "75mm_sa50_he",
+        "localizedName": "OE Mle 1951",
+        "type": "he_frag_tank",
+        "caliber": 75.0,
+        "mass": 6.2,
+        "muzzleVelocity": 753.0,
+        "explosiveMassKg": 0.675,
+        "explosiveType": "tnt",
+        "tntEquivalent": 0.675
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": true,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 3300.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 5,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      7.1,
+      15.8,
+      26.8,
+      42.4,
+      60.7
+    ],
+    "reverse_gear_speeds": [
+      6.8
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 14.5,
+    "track_width": 0.38,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_5mm_MAC_31",
+        "caliber": 7.5,
+        "ammo": 4950,
+        "reloadTime": 5.0,
+        "rateOfFire": 550,
+        "bulletType": "ap_ball"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "136mm_HOT_rocket_launcher",
+        "caliber": 0,
+        "ammo": 6,
+        "reloadTime": 10.0,
+        "rateOfFire": 60
+      }
+    ],
+    "main_gun_ammo": 36,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 81000,
+    "purchaseCost": 450000,
+    "crewTraining": 130000,
+    "expertTraining": 450000,
+    "aceTrainingGE": 2000,
+    "aceTrainingRP": 890000,
+    "repairCost": {
+      "arcade": [
+        3379,
+        5074
+      ],
+      "realistic": [
+        3819,
+        5734
+      ],
+      "simulator": [
+        4661,
+        6999
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.22,
+      "realistic": 1.7,
+      "simulator": 2.07
+    },
+    "expMultiplier": 2.14
+  }
+}

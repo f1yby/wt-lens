@@ -1,0 +1,150 @@
+{
+  "id": "germ_pzsfl_IVa_dickermax",
+  "performance": {
+    "horsepower": 180.0,
+    "weight": 22.0,
+    "power_to_weight": 8.18,
+    "max_reverse_speed": 5.2,
+    "reload_time": 8.99,
+    "penetration": 186.9,
+    "max_speed": 27.8,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 12.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -15.0,
+      10.0
+    ],
+    "traverse_range": [
+      -8.0,
+      8.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 25.0,
+    "mainGun": {
+      "name": "105mm_K18",
+      "caliber": 105.0,
+      "reloadTime": 8.99,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 11.69,
+        "expert": 10.34,
+        "ace": 8.99
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "105mm_pzrg",
+        "localizedName": "PzGr",
+        "type": "aphe_tank",
+        "caliber": 105.0,
+        "mass": 14.0,
+        "muzzleVelocity": 822.0,
+        "deMarre": {
+          "fullCaliber": 105.0,
+          "isApcbc": false,
+          "explosiveMass": 0.238,
+          "Cx": 0.28
+        },
+        "penetration0m": 154.9,
+        "explosiveMassKg": 0.238,
+        "explosiveType": "fp02_np10",
+        "tntEquivalent": 0.302
+      },
+      {
+        "name": "105mm_gr19",
+        "localizedName": "Gr.19",
+        "type": "he_frag_tank",
+        "caliber": 105.0,
+        "mass": 15.1,
+        "muzzleVelocity": 835.0,
+        "explosiveMassKg": 1.85,
+        "explosiveType": "fp02",
+        "tntEquivalent": 1.85
+      },
+      {
+        "name": "105mm_pzrg_rot",
+        "localizedName": "Pzgr.rot",
+        "type": "apcbc_tank",
+        "caliber": 105.0,
+        "mass": 15.56,
+        "muzzleVelocity": 822.0,
+        "deMarre": {
+          "fullCaliber": 105.0,
+          "isApcbc": true,
+          "explosiveMass": 0.25,
+          "Cx": 0.3281
+        },
+        "penetration0m": 186.9,
+        "explosiveMassKg": 0.25,
+        "explosiveType": "ph_salz_h10",
+        "tntEquivalent": 0.305
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 3200.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 6,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      2.8,
+      5.6,
+      8.0,
+      11.1,
+      18.6,
+      27.8
+    ],
+    "reverse_gear_speeds": [
+      5.2
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 20.7,
+    "track_width": 0.4,
+    "secondary_weapons": null,
+    "main_gun_ammo": 26,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 14000,
+    "purchaseCost": 32000,
+    "crewTraining": 9200,
+    "expertTraining": 32000,
+    "aceTrainingGE": 270,
+    "aceTrainingRP": 250000,
+    "repairCost": {
+      "arcade": [
+        915,
+        1132
+      ],
+      "realistic": [
+        1075,
+        1330
+      ],
+      "simulator": [
+        1306,
+        1616
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.6,
+      "realistic": 0.91,
+      "simulator": 1.15
+    },
+    "expMultiplier": 1.3
+  }
+}

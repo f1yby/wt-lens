@@ -1,0 +1,31 @@
+{
+  "id": "tbf-1c",
+  "economy": {
+    "researchCost": 4000,
+    "purchaseCost": 2100,
+    "crewTraining": 600,
+    "expertTraining": 2100,
+    "aceTrainingGE": 45,
+    "aceTrainingRP": 110000,
+    "repairCost": {
+      "arcade": [
+        227,
+        301
+      ],
+      "realistic": [
+        334,
+        429
+      ],
+      "simulator": [
+        551,
+        709
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.22,
+      "realistic": 0.43,
+      "simulator": 0.8
+    },
+    "expMultiplier": 1.0
+  }
+}

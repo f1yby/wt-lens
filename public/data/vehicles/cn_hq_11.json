@@ -1,0 +1,111 @@
+{
+  "id": "cn_hq_11",
+  "performance": {
+    "horsepower": 550.0,
+    "weight": 24.0,
+    "power_to_weight": 22.92,
+    "max_reverse_speed": 12.3,
+    "reload_time": 0.5,
+    "penetration": null,
+    "max_speed": 80.0,
+    "crew_count": 5,
+    "elevation_speed": 0.0,
+    "traverse_speed": 0.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -0.0,
+      0.0
+    ],
+    "traverse_range": [
+      -0.0,
+      0.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 0.0,
+    "mainGun": {
+      "name": "250mm_FM_3000",
+      "caliber": 250.0,
+      "reloadTime": 0.5,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 0.65,
+        "expert": 0.57,
+        "ace": 0.5
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "cn_fm_3000",
+        "localizedName": "FM-3000",
+        "type": "sam_tank",
+        "caliber": 250.0,
+        "mass": 583.0,
+        "muzzleVelocity": 1070.0
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2600.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 6,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      11.1,
+      20.9,
+      31.9,
+      48.8,
+      67.8,
+      80.0
+    ],
+    "reverse_gear_speeds": [
+      12.3
+    ],
+    "steer_type": null,
+    "empty_weight": 23.3,
+    "track_width": 0.4,
+    "secondary_weapons": null,
+    "main_gun_ammo": 8,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 420000,
+    "purchaseCost": 1120000,
+    "crewTraining": 320000,
+    "expertTraining": 1120000,
+    "aceTrainingGE": 2300,
+    "aceTrainingRP": 1430000,
+    "repairCost": {
+      "arcade": [
+        6095,
+        7855
+      ],
+      "realistic": [
+        7405,
+        9542
+      ],
+      "simulator": [
+        8419,
+        10850
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.6,
+      "realistic": 2.1,
+      "simulator": 2.04
+    },
+    "expMultiplier": 2.62
+  }
+}

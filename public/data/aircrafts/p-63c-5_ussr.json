@@ -1,0 +1,33 @@
+{
+  "id": "p-63c-5_ussr",
+  "economy": {
+    "researchCost": 46000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 2980,
+    "crewTraining": 10000,
+    "expertTraining": 250000,
+    "aceTrainingGE": 820,
+    "aceTrainingRP": 870000,
+    "repairCost": {
+      "arcade": [
+        1236,
+        1236
+      ],
+      "realistic": [
+        4123,
+        4123
+      ],
+      "simulator": [
+        4102,
+        4102
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.62,
+      "realistic": 4.5,
+      "simulator": 8.22
+    },
+    "expMultiplier": 1.6,
+    "freeRepairs": 30
+  }
+}

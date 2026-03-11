@@ -1,0 +1,194 @@
+{
+  "id": "uk_fv107_scimitar",
+  "performance": {
+    "horsepower": 195.0,
+    "weight": 7.76,
+    "power_to_weight": 25.13,
+    "max_reverse_speed": 80.9,
+    "reload_time": 0.8,
+    "penetration": 110.0,
+    "max_speed": 80.9,
+    "crew_count": 5,
+    "elevation_speed": 30.0,
+    "traverse_speed": 30.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -10.0,
+      40.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 50.0,
+    "mainGun": {
+      "name": "30mm_L21A1_RARDEN",
+      "caliber": 30.0,
+      "reloadTime": 0.8,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 1.04,
+        "expert": 0.92,
+        "ace": 0.8
+      },
+      "rateOfFire": 80,
+      "beltReloadTime": 0.8
+    },
+    "ammunitions": [
+      {
+        "name": "30_170mm_aphe_i",
+        "localizedName": "30x170 APHE-I",
+        "type": "sapi",
+        "caliber": 30.0,
+        "mass": 0.36,
+        "muzzleVelocity": 1080.0,
+        "deMarre": {
+          "fullCaliber": 30.0,
+          "isApcbc": false,
+          "explosiveMass": 0.018,
+          "Cx": 0.2635
+        },
+        "penetration0m": 52.8,
+        "explosiveMassKg": 0.018,
+        "explosiveType": "hexal",
+        "tntEquivalent": 0.025
+      },
+      {
+        "name": "30_170mm_he_i_t",
+        "localizedName": "30x170 HE-I-T",
+        "type": "he_i_t",
+        "caliber": 30.0,
+        "mass": 0.36,
+        "muzzleVelocity": 1080.0,
+        "explosiveMassKg": 0.05,
+        "explosiveType": "hexal",
+        "tntEquivalent": 0.07
+      },
+      {
+        "name": "30_170mm_apds_t",
+        "localizedName": "30х170 APDS-T",
+        "type": "apds_autocannon",
+        "caliber": 30.0,
+        "mass": 0.3,
+        "muzzleVelocity": 1175.0,
+        "armorPowerTable": [
+          {
+            "penetration": 110.0,
+            "distance": 10.0
+          },
+          {
+            "penetration": 101.0,
+            "distance": 100.0
+          },
+          {
+            "penetration": 95.0,
+            "distance": 500.0
+          },
+          {
+            "penetration": 69.0,
+            "distance": 1000.0
+          },
+          {
+            "penetration": 52.0,
+            "distance": 1500.0
+          },
+          {
+            "penetration": 41.0,
+            "distance": 2000.0
+          },
+          {
+            "penetration": 30.0,
+            "distance": 2500.0
+          },
+          {
+            "penetration": 5.0,
+            "distance": 5000.0
+          }
+        ],
+        "penetration0m": 110.0
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": "j60_no1_mk100b",
+    "engine_type": "petrol",
+    "engine_max_rpm": 5000.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 7,
+    "reverse_gears": 7,
+    "forward_gear_speeds": [
+      4.1,
+      9.7,
+      12.9,
+      21.5,
+      38.6,
+      51.5,
+      80.9
+    ],
+    "reverse_gear_speeds": [
+      4.1,
+      9.7,
+      12.9,
+      21.5,
+      38.6,
+      51.5,
+      80.9
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 7.56,
+    "track_width": 0.55,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_L37A2",
+        "caliber": 7.6,
+        "ammo": 3000,
+        "reloadTime": 8.0,
+        "rateOfFire": 650,
+        "bulletType": "ap_ball"
+      }
+    ],
+    "main_gun_ammo": 165,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 82000,
+    "purchaseCost": 240000,
+    "crewTraining": 68000,
+    "expertTraining": 240000,
+    "aceTrainingGE": 990,
+    "aceTrainingRP": 620000,
+    "repairCost": {
+      "arcade": [
+        2857,
+        4105
+      ],
+      "realistic": [
+        3324,
+        4776
+      ],
+      "simulator": [
+        4239,
+        6090
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.05,
+      "realistic": 1.51,
+      "simulator": 1.85
+    },
+    "expMultiplier": 1.84
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "id": "super_etendard_97",
+  "economy": {
+    "researchCost": 210000,
+    "purchaseCost": 580000,
+    "crewTraining": 165000,
+    "expertTraining": 580000,
+    "aceTrainingGE": 2800,
+    "aceTrainingRP": 1080000,
+    "repairCost": {
+      "arcade": [
+        3239,
+        4401
+      ],
+      "realistic": [
+        9403,
+        12776
+      ],
+      "simulator": [
+        10465,
+        14218
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.96,
+      "realistic": 3.11,
+      "simulator": 6.0
+    },
+    "expMultiplier": 2.32
+  }
+}

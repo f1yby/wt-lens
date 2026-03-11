@@ -1,0 +1,267 @@
+{
+  "id": "ussr_t_64a_1971",
+  "performance": {
+    "horsepower": 700.0,
+    "weight": 38.0,
+    "power_to_weight": 18.42,
+    "max_reverse_speed": 4.2,
+    "reload_time": 6.0,
+    "penetration": 440.0,
+    "max_speed": 60.6,
+    "crew_count": 5,
+    "elevation_speed": 3.5,
+    "traverse_speed": 20.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "both",
+    "elevation_range": [
+      -6.0,
+      14.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 20.0,
+    "mainGun": {
+      "name": "125mm_2A26",
+      "caliber": 125.0,
+      "reloadTime": 6.0,
+      "autoLoader": true,
+      "reloadTimes": {
+        "base": 6.0,
+        "expert": 6.0,
+        "ace": 6.0
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "125mm_3bk_12m",
+        "localizedName": "3BK12M",
+        "type": "heat_fs_tank",
+        "caliber": 125.0,
+        "mass": 19.0,
+        "muzzleVelocity": 905.0,
+        "penetration0m": 440.0,
+        "explosiveMassKg": 1.65,
+        "explosiveType": "a_ix_1",
+        "tntEquivalent": 1.881
+      },
+      {
+        "name": "125mm_3of_19",
+        "localizedName": "3OF19",
+        "type": "he_frag_fs_tank",
+        "caliber": 125.0,
+        "mass": 23.2,
+        "muzzleVelocity": 850.0,
+        "explosiveMassKg": 3.15,
+        "explosiveType": "tnt",
+        "tntEquivalent": 3.15
+      },
+      {
+        "name": "125mm_3bm9",
+        "localizedName": "3BM9",
+        "type": "apds_fs_full_body_steel_tank",
+        "caliber": 44.0,
+        "mass": 3.6,
+        "muzzleVelocity": 1800.0,
+        "lanzOdermatt": {
+          "workingLength": 410.0,
+          "density": 7760.0,
+          "material": "steel",
+          "Cx": 0.3105
+        },
+        "penetration0m": 210.4,
+        "penetrationData": {
+          "at0m": {
+            "angle0": 210.4,
+            "angle30": 182.2,
+            "angle60": 105.2
+          }
+        }
+      },
+      {
+        "name": "125mm_3of_26",
+        "localizedName": "3OF26",
+        "type": "he_frag_fs_tank",
+        "caliber": 125.0,
+        "mass": 23.0,
+        "muzzleVelocity": 850.0,
+        "explosiveMassKg": 3.402,
+        "explosiveType": "a_ix_2",
+        "tntEquivalent": 4.763
+      },
+      {
+        "name": "125mm_3bm15",
+        "localizedName": "3BM15",
+        "type": "apds_fs_tungsten_small_core_tank",
+        "caliber": 44.0,
+        "mass": 3.88,
+        "muzzleVelocity": 1780.0,
+        "armorPowerTable": [
+          {
+            "penetration": 440.0,
+            "distance": 10.0
+          },
+          {
+            "penetration": 430.0,
+            "distance": 100.0
+          },
+          {
+            "penetration": 420.0,
+            "distance": 500.0
+          },
+          {
+            "penetration": 410.0,
+            "distance": 1000.0
+          },
+          {
+            "penetration": 400.0,
+            "distance": 2000.0
+          },
+          {
+            "penetration": 375.0,
+            "distance": 3000.0
+          },
+          {
+            "penetration": 340.0,
+            "distance": 4000.0
+          },
+          {
+            "penetration": 50.0,
+            "distance": 10000.0
+          },
+          {
+            "penetration": 0.0,
+            "distance": 20000.0
+          }
+        ],
+        "penetration0m": 440.0
+      },
+      {
+        "name": "125mm_3bm22",
+        "localizedName": "3BM22",
+        "type": "apds_fs_tungsten_small_core_tank",
+        "caliber": 44.0,
+        "mass": 4.83,
+        "muzzleVelocity": 1760.0,
+        "armorPowerTable": [
+          {
+            "penetration": 425.0,
+            "distance": 10.0
+          },
+          {
+            "penetration": 420.0,
+            "distance": 100.0
+          },
+          {
+            "penetration": 415.0,
+            "distance": 500.0
+          },
+          {
+            "penetration": 405.0,
+            "distance": 1000.0
+          },
+          {
+            "penetration": 380.0,
+            "distance": 2000.0
+          },
+          {
+            "penetration": 360.0,
+            "distance": 3000.0
+          },
+          {
+            "penetration": 340.0,
+            "distance": 4000.0
+          },
+          {
+            "penetration": 10.0,
+            "distance": 10000.0
+          },
+          {
+            "penetration": 0.0,
+            "distance": 20000.0
+          }
+        ],
+        "penetration0m": 425.0
+      }
+    ],
+    "penetrationData": {},
+    "autoLoader": true,
+    "engine_manufacturer": "hpz",
+    "engine_model": "5tdf",
+    "engine_type": null,
+    "engine_max_rpm": 2800.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 7,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      7.4,
+      13.8,
+      17.4,
+      21.7,
+      29.9,
+      41.3,
+      60.6
+    ],
+    "reverse_gear_speeds": [
+      4.2
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 37.0,
+    "track_width": 0.54,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_PKT",
+        "caliber": 7.6,
+        "ammo": 2000,
+        "reloadTime": 8.0,
+        "rateOfFire": 700,
+        "bulletType": "ap_i_ball"
+      }
+    ],
+    "main_gun_ammo": 37,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": false,
+    "has_ess": true,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 190000,
+    "purchaseCost": 520000,
+    "crewTraining": 150000,
+    "expertTraining": 520000,
+    "aceTrainingGE": 2100,
+    "aceTrainingRP": 950000,
+    "repairCost": {
+      "arcade": [
+        4425,
+        6103
+      ],
+      "realistic": [
+        4520,
+        6234
+      ],
+      "simulator": [
+        5775,
+        7965
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.48,
+      "realistic": 1.97,
+      "simulator": 2.32
+    },
+    "expMultiplier": 2.2
+  }
+}

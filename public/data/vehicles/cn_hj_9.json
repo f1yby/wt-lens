@@ -1,0 +1,121 @@
+{
+  "id": "cn_hj_9",
+  "performance": {
+    "horsepower": 320.0,
+    "weight": 13.75,
+    "power_to_weight": 23.27,
+    "max_reverse_speed": 8.1,
+    "reload_time": 1.0,
+    "penetration": 1200.0,
+    "max_speed": 95.1,
+    "crew_count": 5,
+    "elevation_speed": 10.0,
+    "traverse_speed": 15.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "both",
+    "elevation_range": [
+      -10.0,
+      10.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": [
+      500,
+      300
+    ],
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": 583.1,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 20.0,
+    "mainGun": {
+      "name": "152mm_hj_9_launcher",
+      "caliber": 152.0,
+      "reloadTime": 1.0,
+      "autoLoader": true,
+      "reloadTimes": {
+        "base": 1.0,
+        "expert": 1.0,
+        "ace": 1.0
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "152mm_hj9",
+        "localizedName": "HJ-9",
+        "type": "atgm_tandem_tank",
+        "caliber": 152.0,
+        "mass": 37.0,
+        "muzzleVelocity": 305.0,
+        "penetration0m": 1200.0
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": true,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2500.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 9,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      7.3,
+      11.2,
+      15.7,
+      21.7,
+      27.7,
+      34.7,
+      54.0,
+      74.3,
+      95.1
+    ],
+    "reverse_gear_speeds": [
+      8.1
+    ],
+    "steer_type": null,
+    "empty_weight": 13.2,
+    "track_width": 0.4,
+    "secondary_weapons": null,
+    "main_gun_ammo": 12,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 110000,
+    "purchaseCost": 620000,
+    "crewTraining": 175000,
+    "expertTraining": 620000,
+    "aceTrainingGE": 2100,
+    "aceTrainingRP": 1010000,
+    "repairCost": {
+      "arcade": [
+        4586,
+        6316
+      ],
+      "realistic": [
+        5050,
+        6956
+      ],
+      "simulator": [
+        5740,
+        7907
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.6,
+      "realistic": 2.1,
+      "simulator": 2.5
+    },
+    "expMultiplier": 2.26
+  }
+}

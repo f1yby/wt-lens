@@ -1,0 +1,227 @@
+{
+  "id": "us_m1_ip_abrams",
+  "performance": {
+    "horsepower": 1519.0,
+    "weight": 56.8,
+    "power_to_weight": 26.74,
+    "max_reverse_speed": 38.2,
+    "reload_time": 5.0,
+    "penetration": 522.2,
+    "max_speed": 68.3,
+    "crew_count": 5,
+    "elevation_speed": 24.0,
+    "traverse_speed": 40.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "both",
+    "elevation_range": [
+      -10.0,
+      20.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": [
+      500,
+      300
+    ],
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": 583.1,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 30.0,
+    "mainGun": {
+      "name": "105mm_M68A1_IP",
+      "caliber": 105.0,
+      "reloadTime": 5.0,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 6.5,
+        "expert": 5.75,
+        "ace": 5.0
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "105mm_m456a2",
+        "localizedName": "M456A2",
+        "type": "heat_fs_tank",
+        "caliber": 105.0,
+        "mass": 10.5,
+        "muzzleVelocity": 1173.5,
+        "penetration0m": 400.0,
+        "explosiveMassKg": 0.97,
+        "explosiveType": "comp_b",
+        "tntEquivalent": 1.232
+      },
+      {
+        "name": "105mm_m393a2",
+        "localizedName": "M393A2",
+        "type": "hesh_tank",
+        "caliber": 105.0,
+        "mass": 11.2,
+        "muzzleVelocity": 731.5,
+        "penetration0m": 127.0,
+        "explosiveMassKg": 2.9937,
+        "explosiveType": "comp_a",
+        "tntEquivalent": 3.772
+      },
+      {
+        "name": "105mm_m416",
+        "localizedName": "M416",
+        "type": "smoke_tank",
+        "caliber": 105.0,
+        "mass": 11.6,
+        "muzzleVelocity": 731.5,
+        "explosiveMassKg": 0.05,
+        "explosiveType": "smoke_composition",
+        "tntEquivalent": 0.05
+      },
+      {
+        "name": "105mm_m900",
+        "localizedName": "M900",
+        "type": "apds_fs_long_l30_tank",
+        "caliber": 23.0,
+        "mass": 3.85,
+        "muzzleVelocity": 1505.0,
+        "lanzOdermatt": {
+          "workingLength": 603.0,
+          "density": 18600.0,
+          "material": "depletedUranium",
+          "Cx": 0.5525
+        },
+        "penetration0m": 522.2,
+        "penetrationData": {
+          "at0m": {
+            "angle0": 522.2,
+            "angle30": 452.2,
+            "angle60": 261.1
+          }
+        }
+      },
+      {
+        "name": "105mm_m833",
+        "localizedName": "M833",
+        "type": "apds_fs_long_tank",
+        "caliber": 24.0,
+        "mass": 3.7,
+        "muzzleVelocity": 1485.0,
+        "lanzOdermatt": {
+          "workingLength": 427.0,
+          "density": 18600.0,
+          "material": "depletedUranium",
+          "Cx": 0.45
+        },
+        "penetration0m": 393.6,
+        "penetrationData": {
+          "at0m": {
+            "angle0": 393.6,
+            "angle30": 340.9,
+            "angle60": 196.8
+          }
+        }
+      }
+    ],
+    "penetrationData": {
+      "at0m": {
+        "angle0": 522.2,
+        "angle30": 452.2,
+        "angle60": 261.1
+      }
+    },
+    "autoLoader": false,
+    "engine_manufacturer": "honeywell",
+    "engine_model": "agt_1500",
+    "engine_type": "gasturbine",
+    "engine_max_rpm": 3000.0,
+    "transmission_manufacturer": "allison",
+    "transmission_model": "x_1100_3b",
+    "transmission_type": "auto",
+    "forward_gears": 8,
+    "reverse_gears": 4,
+    "forward_gear_speeds": [
+      8.4,
+      15.9,
+      21.0,
+      31.2,
+      38.2,
+      49.2,
+      58.4,
+      68.3
+    ],
+    "reverse_gear_speeds": [
+      5.6,
+      11.3,
+      17.6,
+      38.2
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 55.8,
+    "track_width": 0.635,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "12_7mm_M2_HB",
+        "caliber": 12.7,
+        "ammo": 900,
+        "reloadTime": 8.0,
+        "rateOfFire": 575,
+        "bulletType": "ap_i_t_ball_M20"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "7_62mm_M240",
+        "caliber": 7.6,
+        "ammo": 1400,
+        "reloadTime": 8.0,
+        "rateOfFire": 940,
+        "bulletType": "ap_ball"
+      },
+      {
+        "trigger": "gunner3",
+        "name": "7_62mm_M240",
+        "caliber": 7.6,
+        "ammo": 10000,
+        "reloadTime": 8.0,
+        "rateOfFire": 940,
+        "bulletType": "ap_ball"
+      }
+    ],
+    "main_gun_ammo": 55,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": true,
+    "has_ess": true,
+    "has_laser_rangefinder": true
+  },
+  "economy": {
+    "researchCost": 175000,
+    "purchaseCost": 950000,
+    "crewTraining": 270000,
+    "expertTraining": 950000,
+    "aceTrainingGE": 2200,
+    "aceTrainingRP": 1210000,
+    "repairCost": {
+      "arcade": [
+        4302,
+        6787
+      ],
+      "realistic": [
+        4229,
+        6671
+      ],
+      "simulator": [
+        4958,
+        7820
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.55,
+      "realistic": 2.01,
+      "simulator": 2.4
+    },
+    "expMultiplier": 2.44
+  }
+}

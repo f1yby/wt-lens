@@ -1,0 +1,186 @@
+{
+  "id": "us_t25",
+  "performance": {
+    "horsepower": 500.0,
+    "weight": 38.2,
+    "power_to_weight": 13.09,
+    "max_reverse_speed": 50.1,
+    "reload_time": 7.5,
+    "penetration": 282.4,
+    "max_speed": 50.1,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 21.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -10.0,
+      20.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 30.0,
+    "mainGun": {
+      "name": "90mm_M3_without_MB",
+      "caliber": 90.0,
+      "reloadTime": 7.5,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 9.75,
+        "expert": 8.62,
+        "ace": 7.5
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "90mm_m77",
+        "localizedName": "M77 shot",
+        "type": "ap_tank",
+        "caliber": 90.0,
+        "mass": 10.61,
+        "muzzleVelocity": 822.0,
+        "deMarre": {
+          "fullCaliber": 90.0,
+          "isApcbc": false,
+          "explosiveMass": 0
+        },
+        "penetration0m": 162.6
+      },
+      {
+        "name": "90mm_m71",
+        "localizedName": "M71 shell",
+        "type": "he_frag_tank",
+        "caliber": 90.0,
+        "mass": 10.55,
+        "muzzleVelocity": 823.0,
+        "explosiveMassKg": 0.925,
+        "explosiveType": "comp_b",
+        "tntEquivalent": 1.175
+      },
+      {
+        "name": "90mm_m82",
+        "localizedName": "M82 shot",
+        "type": "apcbc_tank",
+        "caliber": 90.0,
+        "mass": 10.91,
+        "muzzleVelocity": 853.4,
+        "deMarre": {
+          "fullCaliber": 90.0,
+          "isApcbc": true,
+          "explosiveMass": 0.14,
+          "Cx": 0.2766
+        },
+        "penetration0m": 185.4,
+        "explosiveMassKg": 0.14,
+        "explosiveType": "exp_d",
+        "tntEquivalent": 0.139
+      },
+      {
+        "name": "90mm_m304",
+        "localizedName": "M304 shot",
+        "type": "apcr_tank",
+        "caliber": 38.1,
+        "mass": 7.62,
+        "muzzleVelocity": 1021.0,
+        "deMarre": {
+          "fullCaliber": 90.0,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "isApcr": true,
+          "coreCaliber": 38.1,
+          "coreMass": 3.6,
+          "Cx": 0.28
+        },
+        "penetration0m": 282.4
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2600.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 5,
+    "reverse_gears": 5,
+    "forward_gear_speeds": [
+      6.1,
+      8.2,
+      12.2,
+      28.6,
+      50.1
+    ],
+    "reverse_gear_speeds": [
+      6.1,
+      8.2,
+      12.2,
+      28.6,
+      50.1
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 37.8,
+    "track_width": 0.55,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_M1919A4",
+        "caliber": 7.6,
+        "ammo": 4500,
+        "reloadTime": 8.0,
+        "rateOfFire": 500,
+        "bulletType": "ap_ball"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "12_7mm_M2_HB",
+        "caliber": 12.7,
+        "ammo": 600,
+        "reloadTime": 8.0,
+        "rateOfFire": 575,
+        "bulletType": "ap_i_t_ball_M20"
+      }
+    ],
+    "main_gun_ammo": 50,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 27000,
+    "purchaseCost": 185000,
+    "crewTraining": 52000,
+    "expertTraining": 185000,
+    "aceTrainingGE": 710,
+    "aceTrainingRP": 480000,
+    "repairCost": {
+      "arcade": [
+        2787,
+        3583
+      ],
+      "realistic": [
+        3328,
+        4278
+      ],
+      "simulator": [
+        4279,
+        5500
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.07,
+      "realistic": 1.64,
+      "simulator": 1.9
+    },
+    "expMultiplier": 1.66
+  }
+}

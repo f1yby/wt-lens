@@ -1,0 +1,224 @@
+{
+  "id": "germ_begleitpanzer_57",
+  "performance": {
+    "horsepower": 600.0,
+    "weight": 28.5,
+    "power_to_weight": 21.05,
+    "max_reverse_speed": 75.1,
+    "reload_time": 0.3,
+    "penetration": 137.1,
+    "max_speed": 75.1,
+    "crew_count": 5,
+    "elevation_speed": 40.0,
+    "traverse_speed": 55.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "both",
+    "elevation_range": [
+      -8.0,
+      45.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": [
+      500,
+      300
+    ],
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": 583.1,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 53.0,
+    "mainGun": {
+      "name": "57mm_Bofors_L70_Mk_1",
+      "caliber": 57.0,
+      "reloadTime": 0.3,
+      "autoLoader": true,
+      "reloadTimes": {
+        "base": 0.3,
+        "expert": 0.3,
+        "ace": 0.3
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "57_438mm_ap",
+        "localizedName": "57х438 AP-T",
+        "type": "apcbc_tank",
+        "caliber": 57.0,
+        "mass": 2.7,
+        "muzzleVelocity": 950.0,
+        "deMarre": {
+          "fullCaliber": 57.0,
+          "isApcbc": true,
+          "explosiveMass": 0
+        },
+        "penetration0m": 137.1
+      },
+      {
+        "name": "57_438mm_sap",
+        "localizedName": "57х438 SAP",
+        "type": "sap_hei_tank",
+        "caliber": 57.0,
+        "mass": 2.7,
+        "muzzleVelocity": 950.0,
+        "deMarre": {
+          "fullCaliber": 57.0,
+          "isApcbc": false,
+          "explosiveMass": 0.3,
+          "Cx": 0.3377
+        },
+        "penetration0m": 92.5,
+        "explosiveMassKg": 0.3,
+        "explosiveType": "hexal",
+        "tntEquivalent": 0.42
+      },
+      {
+        "name": "57_438mm_he",
+        "localizedName": "57х438 HE-T",
+        "type": "he_frag_tank",
+        "caliber": 57.0,
+        "mass": 2.4,
+        "muzzleVelocity": 1020.0,
+        "explosiveMassKg": 0.45,
+        "explosiveType": "hexal",
+        "tntEquivalent": 0.63
+      },
+      {
+        "name": "57_438mm_he_vt",
+        "localizedName": "57х438 HE-VT",
+        "type": "he_frag_radio_fuse",
+        "caliber": 57.0,
+        "mass": 2.4,
+        "muzzleVelocity": 1020.0,
+        "armorPowerTable": [
+          {
+            "penetration": 2.0,
+            "distance": 10.0
+          },
+          {
+            "penetration": 2.0,
+            "distance": 100.0
+          },
+          {
+            "penetration": 1.5,
+            "distance": 500.0
+          },
+          {
+            "penetration": 1.0,
+            "distance": 1000.0
+          },
+          {
+            "penetration": 0.5,
+            "distance": 1450.0
+          },
+          {
+            "penetration": 0.0,
+            "distance": 1500.0
+          }
+        ],
+        "penetration0m": 2.0,
+        "explosiveMassKg": 0.45,
+        "explosiveType": "hexal",
+        "tntEquivalent": 0.63
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": true,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2200.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 8,
+    "reverse_gears": 8,
+    "forward_gear_speeds": [
+      8.7,
+      17.3,
+      22.9,
+      33.8,
+      40.5,
+      50.5,
+      60.4,
+      75.1
+    ],
+    "reverse_gear_speeds": [
+      8.7,
+      17.3,
+      22.9,
+      33.8,
+      40.5,
+      50.5,
+      60.4,
+      75.1
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 27.5,
+    "track_width": 0.45,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_92mm_MG3",
+        "caliber": 7.6,
+        "ammo": 5000,
+        "reloadTime": 8.0,
+        "rateOfFire": 1200,
+        "bulletType": "ap_ball"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "127mm_bgm_71_tow_begleitpanzer_launcher",
+        "caliber": 127.0,
+        "ammo": 6,
+        "reloadTime": 10.0,
+        "rateOfFire": 6,
+        "bulletType": "atgm_tank",
+        "maxDistance": 3000,
+        "maxSpeed": 299,
+        "guidanceType": "saclos",
+        "penetration": 430,
+        "explosiveMass": 2.36,
+        "explosiveType": "octol"
+      }
+    ],
+    "main_gun_ammo": 144,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": true
+  },
+  "economy": {
+    "researchCost": 190000,
+    "purchaseCost": 520000,
+    "crewTraining": 150000,
+    "expertTraining": 520000,
+    "aceTrainingGE": 2100,
+    "aceTrainingRP": 950000,
+    "repairCost": {
+      "arcade": [
+        3550,
+        5582
+      ],
+      "realistic": [
+        3396,
+        5340
+      ],
+      "simulator": [
+        4351,
+        6842
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.3,
+      "realistic": 1.64,
+      "simulator": 2.12
+    },
+    "expMultiplier": 2.2
+  }
+}

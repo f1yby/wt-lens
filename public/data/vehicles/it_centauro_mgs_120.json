@@ -1,0 +1,209 @@
+{
+  "id": "it_centauro_mgs_120",
+  "performance": {
+    "horsepower": 520.0,
+    "weight": 27.0,
+    "power_to_weight": 19.26,
+    "max_reverse_speed": 22.1,
+    "reload_time": 5.0,
+    "penetration": 588.6,
+    "max_speed": 110.0,
+    "crew_count": 5,
+    "elevation_speed": 28.6,
+    "traverse_speed": 28.6,
+    "has_stabilizer": true,
+    "stabilizer_type": "both",
+    "elevation_range": [
+      -6.0,
+      16.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": [
+      800,
+      600
+    ],
+    "commander_thermal_resolution": [
+      800,
+      600
+    ],
+    "gunner_thermal_diagonal": 1000.0,
+    "commander_thermal_diagonal": 1000.0,
+    "stabilizer_value": 1,
+    "elevation_range_value": 22.0,
+    "mainGun": {
+      "name": "120mm_OTO_Melara_120_45_MGS",
+      "caliber": 120.0,
+      "reloadTime": 5.0,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 6.5,
+        "expert": 5.75,
+        "ace": 5.0
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "120mm_dm12a1",
+        "localizedName": "DM12A1",
+        "type": "heat_fs_tank",
+        "caliber": 120.0,
+        "mass": 13.5,
+        "muzzleVelocity": 1140.0,
+        "penetration0m": 480.0,
+        "explosiveMassKg": 1.64,
+        "explosiveType": "comp_b",
+        "tntEquivalent": 2.083
+      },
+      {
+        "name": "120mm_dm33",
+        "localizedName": "DM33",
+        "type": "apds_fs_long_tank",
+        "caliber": 25.0,
+        "mass": 4.3,
+        "muzzleVelocity": 1640.0,
+        "lanzOdermatt": {
+          "workingLength": 510.0,
+          "density": 17500.0,
+          "material": "tungsten",
+          "Cx": 0.55
+        },
+        "penetration0m": 481.5,
+        "penetrationData": {
+          "at0m": {
+            "angle0": 481.5,
+            "angle30": 417.0,
+            "angle60": 240.8
+          }
+        }
+      },
+      {
+        "name": "120mm_m322",
+        "localizedName": "CL3143",
+        "type": "apds_fs_long_l30_tank",
+        "caliber": 25.0,
+        "mass": 5.6,
+        "muzzleVelocity": 1705.0,
+        "lanzOdermatt": {
+          "workingLength": 620.0,
+          "density": 17500.0,
+          "material": "tungsten",
+          "Cx": 0.73
+        },
+        "penetration0m": 588.6,
+        "penetrationData": {
+          "at0m": {
+            "angle0": 588.6,
+            "angle30": 509.7,
+            "angle60": 294.3
+          }
+        }
+      }
+    ],
+    "penetrationData": {
+      "at0m": {
+        "angle0": 588.6,
+        "angle30": 509.7,
+        "angle60": 294.3
+      }
+    },
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2400.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 10,
+    "reverse_gears": 4,
+    "forward_gear_speeds": [
+      12.6,
+      15.7,
+      16.2,
+      22.1,
+      28.4,
+      35.5,
+      47.5,
+      59.5,
+      80.3,
+      110.0
+    ],
+    "reverse_gear_speeds": [
+      12.7,
+      16.2,
+      17.3,
+      22.1
+    ],
+    "steer_type": null,
+    "empty_weight": 24.8,
+    "track_width": 0.4,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_Beretta_MG42_59",
+        "caliber": 7.6,
+        "ammo": 4600,
+        "reloadTime": 8.0,
+        "rateOfFire": 800,
+        "bulletType": "ap_ball"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "7_62mm_Beretta_MG42_59",
+        "caliber": 7.6,
+        "ammo": 2000,
+        "reloadTime": 8.0,
+        "rateOfFire": 800,
+        "bulletType": "ap_ball"
+      },
+      {
+        "trigger": "gunner3",
+        "name": "12_7mm_M2_HB",
+        "caliber": 12.7,
+        "ammo": 1200,
+        "reloadTime": 8.0,
+        "rateOfFire": 575,
+        "bulletType": "ap_i_t_ball_M20"
+      }
+    ],
+    "main_gun_ammo": 33,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": true
+  },
+  "economy": {
+    "researchCost": 350000,
+    "purchaseCost": 950000,
+    "crewTraining": 270000,
+    "expertTraining": 950000,
+    "aceTrainingGE": 2200,
+    "aceTrainingRP": 1210000,
+    "repairCost": {
+      "arcade": [
+        3467,
+        5867
+      ],
+      "realistic": [
+        3509,
+        5937
+      ],
+      "simulator": [
+        3697,
+        6256
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.35,
+      "realistic": 1.63,
+      "simulator": 2.04
+    },
+    "expMultiplier": 2.44
+  }
+}

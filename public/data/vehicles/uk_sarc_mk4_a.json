@@ -1,0 +1,174 @@
+{
+  "id": "uk_sarc_mk4_a",
+  "performance": {
+    "horsepower": 95.0,
+    "weight": 6.3,
+    "power_to_weight": 15.08,
+    "max_reverse_speed": 13.1,
+    "reload_time": 2.78,
+    "penetration": 89.0,
+    "max_speed": 84.1,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 16.4,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -5.0,
+      20.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 25.0,
+    "mainGun": {
+      "name": "40mm_QF_2pdr",
+      "caliber": 40.0,
+      "reloadTime": 2.78,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 3.61,
+        "expert": 3.2,
+        "ace": 2.78
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "40mm_shot_mk1_apt",
+        "localizedName": "Shot Mk.1 AP/T",
+        "type": "ap_tank",
+        "caliber": 40.0,
+        "mass": 1.08,
+        "muzzleVelocity": 792.0,
+        "deMarre": {
+          "fullCaliber": 40.0,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "Cx": 0.65
+        },
+        "penetration0m": 72.5
+      },
+      {
+        "name": "40mm_shot_mk1_apcbct",
+        "localizedName": "Shot Mk.IXB APCBC/T",
+        "type": "apcbc_solid_medium_caliber_tank",
+        "caliber": 40.0,
+        "mass": 1.242,
+        "muzzleVelocity": 792.0,
+        "deMarre": {
+          "fullCaliber": 40.0,
+          "isApcbc": true,
+          "explosiveMass": 0,
+          "Cx": 0.33
+        },
+        "penetration0m": 89.0
+      },
+      {
+        "name": "40mm_shot_mk1_aphv",
+        "localizedName": "Shot Mk.1 APHV/T",
+        "type": "ap_tank",
+        "caliber": 40.0,
+        "mass": 1.08,
+        "muzzleVelocity": 853.0,
+        "deMarre": {
+          "fullCaliber": 40.0,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "Cx": 0.65
+        },
+        "penetration0m": 80.6
+      },
+      {
+        "name": "40mm_shell_mk1_apt",
+        "localizedName": "Shell Mk.1 AP/T",
+        "type": "aphe_tank",
+        "caliber": 40.0,
+        "mass": 1.077,
+        "muzzleVelocity": 792.0,
+        "deMarre": {
+          "fullCaliber": 40.0,
+          "isApcbc": false,
+          "explosiveMass": 0.019,
+          "Cx": 0.6
+        },
+        "penetration0m": 66.4,
+        "explosiveMassKg": 0.019,
+        "explosiveType": "lyddit",
+        "tntEquivalent": 0.02
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 3000.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 4,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      13.1,
+      27.2,
+      49.8,
+      84.1
+    ],
+    "reverse_gear_speeds": [
+      13.1
+    ],
+    "steer_type": null,
+    "empty_weight": 6.0,
+    "track_width": 0.4,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_M1919A4",
+        "caliber": 7.6,
+        "ammo": 1000,
+        "reloadTime": 8.0,
+        "rateOfFire": 500,
+        "bulletType": "ap_ball"
+      }
+    ],
+    "main_gun_ammo": 37,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 2900,
+    "purchaseCost": 700,
+    "crewTraining": 200,
+    "expertTraining": 1000,
+    "aceTrainingGE": 20,
+    "aceTrainingRP": 96000,
+    "repairCost": {
+      "arcade": [
+        94,
+        129
+      ],
+      "realistic": [
+        90,
+        123
+      ],
+      "simulator": [
+        106,
+        144
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.1,
+      "realistic": 0.12,
+      "simulator": 0.15
+    },
+    "expMultiplier": 1.0
+  }
+}

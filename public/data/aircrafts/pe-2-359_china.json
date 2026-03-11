@@ -1,0 +1,31 @@
+{
+  "id": "pe-2-359_china",
+  "economy": {
+    "researchCost": 54000,
+    "purchaseCost": 185000,
+    "crewTraining": 52000,
+    "expertTraining": 185000,
+    "aceTrainingGE": 940,
+    "aceTrainingRP": 480000,
+    "repairCost": {
+      "arcade": [
+        2642,
+        3370
+      ],
+      "realistic": [
+        6567,
+        8376
+      ],
+      "simulator": [
+        10927,
+        13938
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.11,
+      "realistic": 2.7,
+      "simulator": 5.36
+    },
+    "expMultiplier": 1.66
+  }
+}

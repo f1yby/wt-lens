@@ -1,0 +1,166 @@
+{
+  "id": "fr_fcm_36",
+  "performance": {
+    "horsepower": 105.0,
+    "weight": 12.35,
+    "power_to_weight": 8.5,
+    "max_reverse_speed": 1.7,
+    "reload_time": 3.12,
+    "penetration": 36.0,
+    "max_speed": 24.0,
+    "crew_count": 5,
+    "elevation_speed": 15.0,
+    "traverse_speed": 14.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "vertical",
+    "elevation_range": [
+      -17.0,
+      20.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 37.0,
+    "mainGun": {
+      "name": "37mm_SA_18",
+      "caliber": 37.0,
+      "reloadTime": 3.12,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 4.06,
+        "expert": 3.59,
+        "ace": 3.12
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "37mm_mle1937",
+        "localizedName": "Mle1937",
+        "type": "apcr_tank",
+        "caliber": 37.0,
+        "mass": 0.5,
+        "muzzleVelocity": 600.0,
+        "armorPowerTable": [
+          {
+            "penetration": 36.0,
+            "distance": 10.0
+          },
+          {
+            "penetration": 33.0,
+            "distance": 100.0
+          },
+          {
+            "penetration": 30.0,
+            "distance": 250.0
+          },
+          {
+            "penetration": 24.0,
+            "distance": 500.0
+          },
+          {
+            "penetration": 19.0,
+            "distance": 750.0
+          },
+          {
+            "penetration": 16.0,
+            "distance": 1000.0
+          },
+          {
+            "penetration": 12.0,
+            "distance": 1250.0
+          },
+          {
+            "penetration": 8.0,
+            "distance": 1500.0
+          },
+          {
+            "penetration": 5.0,
+            "distance": 2000.0
+          },
+          {
+            "penetration": 5.0,
+            "distance": 2500.0
+          },
+          {
+            "penetration": 0.0,
+            "distance": 10000.0
+          }
+        ],
+        "penetration0m": 36.0
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 1650.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 5,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      1.7,
+      4.3,
+      8.3,
+      16.9,
+      24.0
+    ],
+    "reverse_gear_speeds": [
+      1.7
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 12.0,
+    "track_width": 0.55,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_5mm_MAC_31",
+        "caliber": 7.5,
+        "ammo": 3000,
+        "reloadTime": 5.0,
+        "rateOfFire": 550,
+        "bulletType": "ap_ball"
+      }
+    ],
+    "main_gun_ammo": 102,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "purchaseCost": 0,
+    "crewTraining": 200,
+    "expertTraining": 1000,
+    "aceTrainingGE": 20,
+    "aceTrainingRP": 96000,
+    "repairCost": {
+      "arcade": [
+        106,
+        136
+      ],
+      "realistic": [
+        95,
+        122
+      ],
+      "simulator": [
+        111,
+        143
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.1,
+      "realistic": 0.12,
+      "simulator": 0.16
+    },
+    "expMultiplier": 1.0
+  }
+}

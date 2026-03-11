@@ -1,0 +1,139 @@
+{
+  "id": "fr_amx_m4",
+  "performance": {
+    "horsepower": 1000.0,
+    "weight": 52.0,
+    "power_to_weight": 19.23,
+    "max_reverse_speed": 19.1,
+    "reload_time": 6.67,
+    "penetration": 259.2,
+    "max_speed": 51.4,
+    "crew_count": 5,
+    "elevation_speed": 5.0,
+    "traverse_speed": 24.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -10.0,
+      15.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 25.0,
+    "mainGun": {
+      "name": "90mm_SA47",
+      "caliber": 90.0,
+      "reloadTime": 6.67,
+      "autoLoader": true,
+      "reloadTimes": {
+        "base": 6.67,
+        "expert": 6.67,
+        "ace": 6.67
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "90mm_sa45_apc",
+        "localizedName": "PCO-50",
+        "type": "apcbc_solid_medium_caliber_tank",
+        "caliber": 90.0,
+        "mass": 11.2,
+        "muzzleVelocity": 1030.0,
+        "deMarre": {
+          "fullCaliber": 90.0,
+          "isApcbc": true,
+          "explosiveMass": 0,
+          "Cx": 0.26
+        },
+        "penetration0m": 259.2
+      },
+      {
+        "name": "90mm_sa45_he",
+        "localizedName": "90 mm Obus explosif",
+        "type": "he_frag_tank",
+        "caliber": 90.0,
+        "mass": 11.3,
+        "muzzleVelocity": 700.0,
+        "explosiveMassKg": 0.945,
+        "explosiveType": "tnt",
+        "tntEquivalent": 0.945
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": true,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2800.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 5,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      5.3,
+      11.7,
+      19.1,
+      30.3,
+      51.4
+    ],
+    "reverse_gear_speeds": [
+      5.3,
+      19.1
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 51.3,
+    "track_width": 0.74,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_5mm_MAC_31",
+        "caliber": 7.5,
+        "ammo": 5100,
+        "reloadTime": 5.0,
+        "rateOfFire": 550,
+        "bulletType": "ap_ball"
+      }
+    ],
+    "main_gun_ammo": 49,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 71000,
+    "purchaseCost": 210000,
+    "crewTraining": 61000,
+    "expertTraining": 210000,
+    "aceTrainingGE": 890,
+    "aceTrainingRP": 570000,
+    "repairCost": {
+      "arcade": [
+        3583,
+        4605
+      ],
+      "realistic": [
+        4192,
+        5388
+      ],
+      "simulator": [
+        5456,
+        7013
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.21,
+      "realistic": 1.83,
+      "simulator": 2.06
+    },
+    "expMultiplier": 1.78
+  }
+}

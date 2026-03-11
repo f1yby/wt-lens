@@ -1,0 +1,27 @@
+{
+  "id": "it_cruiser_etna_class",
+  "economy": {
+    "researchCost": 18000,
+    "purchaseCost": 55000,
+    "crewTraining": 16000,
+    "expertTraining": 55000,
+    "aceTrainingGE": 500,
+    "aceTrainingRP": 320000,
+    "repairCost": {
+      "arcade": [
+        4238,
+        5497
+      ],
+      "realistic": [
+        5381,
+        6979
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 3.07,
+      "realistic": 6.0,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.42
+  }
+}

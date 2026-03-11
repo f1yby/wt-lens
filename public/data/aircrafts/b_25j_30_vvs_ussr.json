@@ -1,0 +1,33 @@
+{
+  "id": "b_25j_30_vvs_ussr",
+  "economy": {
+    "researchCost": 26000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 1450,
+    "crewTraining": 10000,
+    "expertTraining": 115000,
+    "aceTrainingGE": 500,
+    "aceTrainingRP": 640000,
+    "repairCost": {
+      "arcade": [
+        824,
+        824
+      ],
+      "realistic": [
+        2198,
+        2198
+      ],
+      "simulator": [
+        2944,
+        2944
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.56,
+      "realistic": 3.78,
+      "simulator": 6.29
+    },
+    "expMultiplier": 1.42,
+    "freeRepairs": 30
+  }
+}

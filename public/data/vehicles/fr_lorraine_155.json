@@ -1,0 +1,151 @@
+{
+  "id": "fr_lorraine_155",
+  "performance": {
+    "horsepower": 600.0,
+    "weight": 29.95,
+    "power_to_weight": 20.03,
+    "max_reverse_speed": 7.1,
+    "reload_time": 20.0,
+    "penetration": 20.0,
+    "max_speed": 54.6,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 6.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -5.0,
+      67.0
+    ],
+    "traverse_range": [
+      -20.0,
+      20.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 72.0,
+    "mainGun": {
+      "name": "155mm_Obusier_Modele_1950",
+      "caliber": 155.0,
+      "reloadTime": 20.0,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 26.0,
+        "expert": 23.0,
+        "ace": 20.0
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "155mm_m107",
+        "localizedName": "M107",
+        "type": "he_frag_tank",
+        "caliber": 155.0,
+        "mass": 43.1,
+        "muzzleVelocity": 563.0,
+        "armorPowerTable": [
+          {
+            "penetration": 20.0,
+            "distance": 100.0
+          },
+          {
+            "penetration": 16.0,
+            "distance": 4000.0
+          },
+          {
+            "penetration": 0.0,
+            "distance": 10000.0
+          }
+        ],
+        "penetration0m": 20.0,
+        "explosiveMassKg": 6.98,
+        "explosiveType": "comp_b",
+        "tntEquivalent": 8.865
+      },
+      {
+        "name": "155mm_m110",
+        "localizedName": "M110",
+        "type": "smoke_tank",
+        "caliber": 155.0,
+        "mass": 40.8,
+        "muzzleVelocity": 563.0,
+        "explosiveMassKg": 0.05,
+        "explosiveType": "smoke_composition",
+        "tntEquivalent": 0.05
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2500.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 5,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      5.3,
+      12.9,
+      22.3,
+      36.0,
+      54.6
+    ],
+    "reverse_gear_speeds": [
+      7.1
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 29.45,
+    "track_width": 0.55,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "20mm_MG151_20",
+        "caliber": 20.0,
+        "ammo": 500,
+        "reloadTime": 10.0,
+        "rateOfFire": 700,
+        "bulletType": "he_frag_i_t"
+      }
+    ],
+    "main_gun_ammo": 30,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 33000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 1600,
+    "crewTraining": 10000,
+    "expertTraining": 165000,
+    "aceTrainingGE": 470,
+    "aceTrainingRP": 710000,
+    "repairCost": {
+      "arcade": [
+        835,
+        835
+      ],
+      "realistic": [
+        1033,
+        1033
+      ],
+      "simulator": [
+        1309,
+        1309
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.76,
+      "realistic": 2.65,
+      "simulator": 3.41
+    },
+    "expMultiplier": 1.48,
+    "freeRepairs": 30
+  }
+}

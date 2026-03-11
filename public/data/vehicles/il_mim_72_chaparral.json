@@ -1,0 +1,126 @@
+{
+  "id": "il_mim_72_chaparral",
+  "performance": {
+    "horsepower": 275.0,
+    "weight": 13.69,
+    "power_to_weight": 20.09,
+    "max_reverse_speed": 14.0,
+    "reload_time": 1.0,
+    "penetration": null,
+    "max_speed": 61.1,
+    "crew_count": 5,
+    "elevation_speed": 60.0,
+    "traverse_speed": 90.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -9.0,
+      90.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": [
+      500,
+      300
+    ],
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": 583.1,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 99.0,
+    "mainGun": {
+      "name": "127mm_MIM_72G_launcher",
+      "caliber": 127.0,
+      "reloadTime": 1.0,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 1.3,
+        "expert": 1.15,
+        "ace": 1.0
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "127mm_mim72e",
+        "localizedName": "MIM-72E",
+        "type": "sam_tank",
+        "caliber": 127.0,
+        "mass": 86.3,
+        "muzzleVelocity": 720.0
+      },
+      {
+        "name": "127mm_mim72g",
+        "localizedName": "MIM-72G",
+        "type": "sam_tank",
+        "caliber": 127.0,
+        "mass": 86.3,
+        "muzzleVelocity": 720.0
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2800.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 6,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      8.0,
+      16.0,
+      21.3,
+      31.6,
+      41.7,
+      61.1
+    ],
+    "reverse_gear_speeds": [
+      7.0,
+      14.0
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 13.34,
+    "track_width": 0.26,
+    "secondary_weapons": null,
+    "main_gun_ammo": 12,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 300000,
+    "purchaseCost": 830000,
+    "crewTraining": 240000,
+    "expertTraining": 830000,
+    "aceTrainingGE": 2100,
+    "aceTrainingRP": 1140000,
+    "repairCost": {
+      "arcade": [
+        4788,
+        6870
+      ],
+      "realistic": [
+        4739,
+        6799
+      ],
+      "simulator": [
+        5428,
+        7787
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.6,
+      "realistic": 1.98,
+      "simulator": 2.38
+    },
+    "expMultiplier": 2.38
+  }
+}

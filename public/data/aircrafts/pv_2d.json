@@ -1,0 +1,33 @@
+{
+  "id": "pv_2d",
+  "economy": {
+    "researchCost": 18000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 1300,
+    "crewTraining": 10000,
+    "expertTraining": 67000,
+    "aceTrainingGE": 400,
+    "aceTrainingRP": 570000,
+    "repairCost": {
+      "arcade": [
+        665,
+        665
+      ],
+      "realistic": [
+        1186,
+        1186
+      ],
+      "simulator": [
+        2091,
+        2091
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.38,
+      "realistic": 3.02,
+      "simulator": 4.98
+    },
+    "expMultiplier": 1.36,
+    "freeRepairs": 30
+  }
+}

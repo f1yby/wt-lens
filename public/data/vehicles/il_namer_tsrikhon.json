@@ -1,0 +1,208 @@
+{
+  "id": "il_namer_tsrikhon",
+  "performance": {
+    "horsepower": 1200.0,
+    "weight": 64.4,
+    "power_to_weight": 18.63,
+    "max_reverse_speed": 23.1,
+    "reload_time": 0.2,
+    "penetration": 114.0,
+    "max_speed": 53.6,
+    "crew_count": 5,
+    "elevation_speed": 23.3,
+    "traverse_speed": 34.9,
+    "has_stabilizer": true,
+    "stabilizer_type": "both",
+    "elevation_range": [
+      -14.0,
+      60.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": [
+      1200,
+      800
+    ],
+    "commander_thermal_resolution": [
+      1200,
+      800
+    ],
+    "gunner_thermal_diagonal": 1442.2,
+    "commander_thermal_diagonal": 1442.2,
+    "stabilizer_value": 1,
+    "elevation_range_value": 74.0,
+    "mainGun": {
+      "name": "30mm_Bushmaster_2_Mk_44_NAMER",
+      "caliber": 30.0,
+      "reloadTime": 0.2,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 0.26,
+        "expert": 0.23,
+        "ace": 0.2
+      },
+      "rateOfFire": 200,
+      "beltReloadTime": 0.2
+    },
+    "ammunitions": [
+      {
+        "name": "30mm_mk320",
+        "localizedName": "MK320",
+        "type": "apds_autocannon",
+        "caliber": 18.0,
+        "mass": 0.19,
+        "muzzleVelocity": 1480.0,
+        "deMarre": {
+          "fullCaliber": 30.0,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "isApcr": true,
+          "coreCaliber": 18.0,
+          "coreMass": 0.19,
+          "Cx": 0.13
+        },
+        "penetration0m": 95.1
+      },
+      {
+        "name": "30mm_mk258",
+        "localizedName": "MK258",
+        "type": "apds_fs_long_tank",
+        "caliber": 9.0,
+        "mass": 0.17,
+        "muzzleVelocity": 1430.0,
+        "lanzOdermatt": {
+          "workingLength": 130.0,
+          "density": 17500.0,
+          "material": "tungsten",
+          "Cx": 0.3
+        },
+        "penetration0m": 114.0,
+        "penetrationData": {
+          "at0m": {
+            "angle0": 114.0,
+            "angle30": 98.7,
+            "angle60": 57.0
+          }
+        }
+      },
+      {
+        "name": "30mm_mk_266",
+        "localizedName": "MK266",
+        "type": "he_i_t",
+        "caliber": 30.0,
+        "mass": 0.362,
+        "muzzleVelocity": 1080.0,
+        "explosiveMassKg": 0.032,
+        "explosiveType": "hexal",
+        "tntEquivalent": 0.045
+      }
+    ],
+    "penetrationData": {
+      "at0m": {
+        "angle0": 114.0,
+        "angle30": 98.7,
+        "angle60": 57.0
+      }
+    },
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2400.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 8,
+    "reverse_gears": 4,
+    "forward_gear_speeds": [
+      5.6,
+      11.3,
+      15.2,
+      23.1,
+      27.7,
+      34.6,
+      42.1,
+      53.6
+    ],
+    "reverse_gear_speeds": [
+      5.6,
+      11.3,
+      15.2,
+      23.1
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 62.9,
+    "track_width": 0.55,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "110mm_Spike_kf_41_rocket_launchr",
+        "caliber": 110.0,
+        "ammo": 4,
+        "reloadTime": 10.0,
+        "rateOfFire": 120,
+        "bulletType": "atgm_tandem_tank",
+        "maxDistance": 5500,
+        "maxSpeed": 180,
+        "guidanceType": "optical",
+        "penetration": 900,
+        "explosiveMass": 0.9,
+        "explosiveType": "lx14"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "7_62mm_FN_MAG60_40",
+        "caliber": 7.6,
+        "ammo": 400,
+        "reloadTime": 8.0,
+        "rateOfFire": 1000,
+        "bulletType": "ap_ball"
+      },
+      {
+        "trigger": "gunner3",
+        "name": "60mm_smoke_mortar_launcher",
+        "caliber": 0,
+        "ammo": 30,
+        "rateOfFire": 12
+      }
+    ],
+    "main_gun_ammo": 400,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": true,
+    "has_ess": true,
+    "has_laser_rangefinder": true
+  },
+  "economy": {
+    "researchCost": 400000,
+    "purchaseCost": 1080000,
+    "crewTraining": 310000,
+    "expertTraining": 1080000,
+    "aceTrainingGE": 2200,
+    "aceTrainingRP": 1280000,
+    "repairCost": {
+      "arcade": [
+        3502,
+        6254
+      ],
+      "realistic": [
+        3446,
+        6153
+      ],
+      "simulator": [
+        3662,
+        6539
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.29,
+      "realistic": 1.63,
+      "simulator": 2.08
+    },
+    "expMultiplier": 2.5
+  }
+}

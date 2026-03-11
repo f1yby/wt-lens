@@ -1,0 +1,31 @@
+{
+  "id": "tempest_mkv_vikkers",
+  "economy": {
+    "researchCost": 11000,
+    "purchaseCost": 22000,
+    "crewTraining": 6300,
+    "expertTraining": 22000,
+    "aceTrainingGE": 250,
+    "aceTrainingRP": 220000,
+    "repairCost": {
+      "arcade": [
+        582,
+        770
+      ],
+      "realistic": [
+        901,
+        1156
+      ],
+      "simulator": [
+        2008,
+        2578
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.41,
+      "realistic": 0.77,
+      "simulator": 1.58
+    },
+    "expMultiplier": 1.24
+  }
+}

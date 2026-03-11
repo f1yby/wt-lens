@@ -1,0 +1,223 @@
+{
+  "id": "sw_cv_90105_tml",
+  "performance": {
+    "horsepower": 670.0,
+    "weight": 25.0,
+    "power_to_weight": 26.8,
+    "max_reverse_speed": 40.1,
+    "reload_time": 5.0,
+    "penetration": 420.7,
+    "max_speed": 70.1,
+    "crew_count": 5,
+    "elevation_speed": 8.0,
+    "traverse_speed": 30.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "both",
+    "elevation_range": [
+      -10.0,
+      42.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": [
+      1200,
+      800
+    ],
+    "commander_thermal_resolution": [
+      1200,
+      800
+    ],
+    "gunner_thermal_diagonal": 1442.2,
+    "commander_thermal_diagonal": 1442.2,
+    "stabilizer_value": 1,
+    "elevation_range_value": 52.0,
+    "mainGun": {
+      "name": "105mm_XC8_L50",
+      "caliber": 105.0,
+      "reloadTime": 5.0,
+      "autoLoader": true,
+      "reloadTimes": {
+        "base": 5.0,
+        "expert": 5.0,
+        "ace": 5.0
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "105mm_m1061",
+        "localizedName": "M1061",
+        "type": "heat_fs_tank",
+        "caliber": 105.0,
+        "mass": 10.5,
+        "muzzleVelocity": 1173.5,
+        "penetration0m": 400.0,
+        "explosiveMassKg": 0.97,
+        "explosiveType": "comp_b",
+        "tntEquivalent": 1.232
+      },
+      {
+        "name": "105mm_m416",
+        "localizedName": "M416",
+        "type": "smoke_tank",
+        "caliber": 105.0,
+        "mass": 11.6,
+        "muzzleVelocity": 731.5,
+        "explosiveMassKg": 0.05,
+        "explosiveType": "smoke_composition",
+        "tntEquivalent": 0.05
+      },
+      {
+        "name": "105mm_m393a2",
+        "localizedName": "M393A2",
+        "type": "hesh_tank",
+        "caliber": 105.0,
+        "mass": 11.2,
+        "muzzleVelocity": 731.5,
+        "penetration0m": 127.0,
+        "explosiveMassKg": 2.9937,
+        "explosiveType": "comp_a",
+        "tntEquivalent": 3.772
+      },
+      {
+        "name": "105mm_dm23",
+        "localizedName": "DM23",
+        "type": "apds_fs_tungsten_l10_l15_tank",
+        "caliber": 33.0,
+        "mass": 4.2,
+        "muzzleVelocity": 1455.0,
+        "lanzOdermatt": {
+          "workingLength": 327.0,
+          "density": 17500.0,
+          "material": "tungsten",
+          "Cx": 0.2676
+        },
+        "penetration0m": 337.9,
+        "penetrationData": {
+          "at0m": {
+            "angle0": 337.9,
+            "angle30": 292.6,
+            "angle60": 169.0
+          }
+        }
+      },
+      {
+        "name": "105mm_dm33",
+        "localizedName": "DM33",
+        "type": "apds_fs_long_tank",
+        "caliber": 26.0,
+        "mass": 3.79,
+        "muzzleVelocity": 1455.0,
+        "lanzOdermatt": {
+          "workingLength": 510.0,
+          "density": 17500.0,
+          "material": "tungsten",
+          "Cx": 0.4
+        },
+        "penetration0m": 420.7,
+        "penetrationData": {
+          "at0m": {
+            "angle0": 420.7,
+            "angle30": 364.3,
+            "angle60": 210.4
+          }
+        }
+      },
+      {
+        "name": "105mm_falaric",
+        "localizedName": "Falarick 105",
+        "type": "atgm_tandem_tank",
+        "caliber": 105.0,
+        "mass": 24.0,
+        "muzzleVelocity": 370.0,
+        "penetration0m": 550.0
+      }
+    ],
+    "penetrationData": {
+      "at0m": {
+        "angle0": 420.7,
+        "angle30": 364.3,
+        "angle60": 210.4
+      }
+    },
+    "autoLoader": true,
+    "engine_manufacturer": "scania",
+    "engine_model": "dsi_14",
+    "engine_type": null,
+    "engine_max_rpm": 2200.0,
+    "transmission_manufacturer": "perkins",
+    "transmission_model": "x_300",
+    "transmission_type": "auto",
+    "forward_gears": 8,
+    "reverse_gears": 4,
+    "forward_gear_speeds": [
+      6.2,
+      16.9,
+      24.8,
+      35.1,
+      45.8,
+      54.8,
+      63.8,
+      70.1
+    ],
+    "reverse_gear_speeds": [
+      6.2,
+      16.9,
+      24.8,
+      40.1
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 24.1,
+    "track_width": 0.55,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_Ksp_58_Strv",
+        "caliber": 7.6,
+        "ammo": 1500,
+        "reloadTime": 8.0,
+        "rateOfFire": 600,
+        "bulletType": "ap_ball"
+      }
+    ],
+    "main_gun_ammo": 40,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": true
+  },
+  "economy": {
+    "researchCost": 260000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 9270,
+    "crewTraining": 10000,
+    "expertTraining": 1160000,
+    "aceTrainingGE": 2100,
+    "aceTrainingRP": 2150000,
+    "repairCost": {
+      "arcade": [
+        2993,
+        2993
+      ],
+      "realistic": [
+        2797,
+        2797
+      ],
+      "simulator": [
+        3683,
+        3683
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.75,
+      "realistic": 3.46,
+      "simulator": 4.41
+    },
+    "expMultiplier": 2.32,
+    "freeRepairs": 30
+  }
+}

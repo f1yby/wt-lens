@@ -1,0 +1,31 @@
+{
+  "id": "ah_64d_i_saraph",
+  "economy": {
+    "researchCost": 400000,
+    "purchaseCost": 1020000,
+    "crewTraining": 290000,
+    "expertTraining": 1020000,
+    "aceTrainingGE": 2800,
+    "aceTrainingRP": 1080000,
+    "repairCost": {
+      "arcade": [
+        9700,
+        14308
+      ],
+      "realistic": [
+        4580,
+        6756
+      ],
+      "simulator": [
+        5749,
+        8480
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.0,
+      "realistic": 2.25,
+      "simulator": 3.34
+    },
+    "expMultiplier": 2.32
+  }
+}

@@ -1,0 +1,165 @@
+{
+  "id": "uk_vickers_gbt_155",
+  "performance": {
+    "horsepower": 720.0,
+    "weight": 43.0,
+    "power_to_weight": 16.74,
+    "max_reverse_speed": 11.5,
+    "reload_time": 10.0,
+    "penetration": 20.0,
+    "max_speed": 49.9,
+    "crew_count": 5,
+    "elevation_speed": 15.0,
+    "traverse_speed": 12.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -5.0,
+      70.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 75.0,
+    "mainGun": {
+      "name": "155mm_L_39",
+      "caliber": 155.0,
+      "reloadTime": 10.0,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 13.0,
+        "expert": 11.5,
+        "ace": 10.0
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "155mm_m107",
+        "localizedName": "M107",
+        "type": "he_frag_tank",
+        "caliber": 155.0,
+        "mass": 43.1,
+        "muzzleVelocity": 940.0,
+        "armorPowerTable": [
+          {
+            "penetration": 20.0,
+            "distance": 100.0
+          },
+          {
+            "penetration": 16.0,
+            "distance": 4000.0
+          },
+          {
+            "penetration": 0.0,
+            "distance": 10000.0
+          }
+        ],
+        "penetration0m": 20.0,
+        "explosiveMassKg": 6.98,
+        "explosiveType": "comp_b",
+        "tntEquivalent": 8.865
+      },
+      {
+        "name": "155mm_m110",
+        "localizedName": "M110",
+        "type": "smoke_tank",
+        "caliber": 155.0,
+        "mass": 40.8,
+        "muzzleVelocity": 940.0,
+        "explosiveMassKg": 0.05,
+        "explosiveType": "smoke_composition",
+        "tntEquivalent": 0.05
+      },
+      {
+        "name": "155mm_m107_pf",
+        "localizedName": "M107 (PF)",
+        "type": "he_frag_radio_fuse",
+        "caliber": 155.0,
+        "mass": 43.1,
+        "muzzleVelocity": 940.0,
+        "explosiveMassKg": 6.98,
+        "explosiveType": "comp_b",
+        "tntEquivalent": 8.865
+      },
+      {
+        "name": "155mm_l15_a2",
+        "localizedName": "L15A2",
+        "type": "he_frag_tank",
+        "caliber": 155.0,
+        "mass": 43.5,
+        "muzzleVelocity": 940.0,
+        "explosiveMassKg": 11.3,
+        "explosiveType": "comp_b",
+        "tntEquivalent": 14.351
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2500.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 6,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      5.2,
+      9.0,
+      14.5,
+      22.7,
+      33.8,
+      49.9
+    ],
+    "reverse_gear_speeds": [
+      7.7,
+      11.5
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 42.0,
+    "track_width": 0.57,
+    "secondary_weapons": null,
+    "main_gun_ammo": 31,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 63000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 4880,
+    "crewTraining": 10000,
+    "expertTraining": 320000,
+    "aceTrainingGE": 800,
+    "aceTrainingRP": 1050000,
+    "repairCost": {
+      "arcade": [
+        2515,
+        2515
+      ],
+      "realistic": [
+        2733,
+        2733
+      ],
+      "simulator": [
+        3962,
+        3962
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.52,
+      "realistic": 3.99,
+      "simulator": 4.56
+    },
+    "expMultiplier": 1.72,
+    "freeRepairs": 30
+  }
+}

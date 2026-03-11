@@ -1,0 +1,31 @@
+{
+  "id": "lincoln_b2",
+  "economy": {
+    "researchCost": 54000,
+    "purchaseCost": 185000,
+    "crewTraining": 52000,
+    "expertTraining": 185000,
+    "aceTrainingGE": 940,
+    "aceTrainingRP": 480000,
+    "repairCost": {
+      "arcade": [
+        2256,
+        3182
+      ],
+      "realistic": [
+        6844,
+        9350
+      ],
+      "simulator": [
+        13602,
+        18582
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.09,
+      "realistic": 1.89,
+      "simulator": 5.08
+    },
+    "expMultiplier": 1.66
+  }
+}

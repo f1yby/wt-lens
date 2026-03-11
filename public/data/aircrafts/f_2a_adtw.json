@@ -1,0 +1,33 @@
+{
+  "id": "f_2a_adtw",
+  "economy": {
+    "researchCost": 320000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 9980,
+    "crewTraining": 10000,
+    "expertTraining": 1410000,
+    "aceTrainingGE": 3600,
+    "aceTrainingRP": 2700000,
+    "repairCost": {
+      "arcade": [
+        2301,
+        2301
+      ],
+      "realistic": [
+        6463,
+        6463
+      ],
+      "simulator": [
+        7542,
+        7542
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.89,
+      "realistic": 6.38,
+      "simulator": 10.0
+    },
+    "expMultiplier": 2.56,
+    "freeRepairs": 30
+  }
+}

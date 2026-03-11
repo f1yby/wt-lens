@@ -1,0 +1,129 @@
+{
+  "id": "fr_hotchkiss_h39_cambronne",
+  "performance": {
+    "horsepower": 120.0,
+    "weight": 12.1,
+    "power_to_weight": 9.92,
+    "max_reverse_speed": 6.7,
+    "reload_time": 4.0,
+    "penetration": 54.5,
+    "max_speed": 36.5,
+    "crew_count": 5,
+    "elevation_speed": 15.0,
+    "traverse_speed": 15.7,
+    "has_stabilizer": true,
+    "stabilizer_type": "vertical",
+    "elevation_range": [
+      -16.0,
+      20.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 36.0,
+    "mainGun": {
+      "name": "37mm_SA_38",
+      "caliber": 37.0,
+      "reloadTime": 4.0,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 5.2,
+        "expert": 4.6,
+        "ace": 4.0
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "37mm_mle1938",
+        "localizedName": "Mle1938",
+        "type": "apc_tank",
+        "caliber": 37.0,
+        "mass": 0.7,
+        "muzzleVelocity": 705.0,
+        "deMarre": {
+          "fullCaliber": 37.0,
+          "isApcbc": true,
+          "explosiveMass": 0,
+          "Cx": 0.6
+        },
+        "penetration0m": 54.5
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2800.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 5,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      3.5,
+      7.5,
+      14.8,
+      27.1,
+      36.5
+    ],
+    "reverse_gear_speeds": [
+      6.7
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 11.8,
+    "track_width": 0.28,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_5mm_MAC_31",
+        "caliber": 7.5,
+        "ammo": 2400,
+        "reloadTime": 5.0,
+        "rateOfFire": 550,
+        "bulletType": "ap_ball"
+      }
+    ],
+    "main_gun_ammo": 76,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 2900,
+    "purchaseCost": 0,
+    "purchaseCostGold": 250,
+    "crewTraining": 150,
+    "expertTraining": 1000,
+    "aceTrainingGE": 20,
+    "aceTrainingRP": 145000,
+    "repairCost": {
+      "arcade": [
+        322,
+        322
+      ],
+      "realistic": [
+        172,
+        172
+      ],
+      "simulator": [
+        847,
+        847
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.3,
+      "realistic": 0.3,
+      "simulator": 0.81
+    },
+    "expMultiplier": 0.75,
+    "freeRepairs": 30
+  }
+}

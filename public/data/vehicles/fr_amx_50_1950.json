@@ -1,0 +1,168 @@
+{
+  "id": "fr_amx_50_1950",
+  "performance": {
+    "horsepower": 1000.0,
+    "weight": 46.1,
+    "power_to_weight": 21.69,
+    "max_reverse_speed": 19.1,
+    "reload_time": 4.0,
+    "penetration": 209.6,
+    "max_speed": 51.4,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 36.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -6.0,
+      11.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 17.0,
+    "mainGun": {
+      "name": "90mm_Char_25t",
+      "caliber": 90.0,
+      "reloadTime": 4.0,
+      "autoLoader": true,
+      "reloadTimes": {
+        "base": 4.0,
+        "expert": 4.0,
+        "ace": 4.0
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "90mm_t33",
+        "localizedName": "T33 shot",
+        "type": "apbc_usa_tank",
+        "caliber": 90.0,
+        "mass": 10.91,
+        "muzzleVelocity": 930.0,
+        "deMarre": {
+          "fullCaliber": 90.0,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "Cx": 0.3186
+        },
+        "penetration0m": 197.9
+      },
+      {
+        "name": "90mm_m71a1",
+        "localizedName": "M71A1 shell",
+        "type": "he_frag_tank",
+        "caliber": 90.0,
+        "mass": 10.55,
+        "muzzleVelocity": 800.0,
+        "explosiveMassKg": 0.925,
+        "explosiveType": "comp_b",
+        "tntEquivalent": 1.175
+      },
+      {
+        "name": "90mm_m82",
+        "localizedName": "M82 shot",
+        "type": "apcbc_tank",
+        "caliber": 90.0,
+        "mass": 10.91,
+        "muzzleVelocity": 930.0,
+        "deMarre": {
+          "fullCaliber": 90.0,
+          "isApcbc": true,
+          "explosiveMass": 0.14,
+          "Cx": 0.2766
+        },
+        "penetration0m": 209.6,
+        "explosiveMassKg": 0.14,
+        "explosiveType": "exp_d",
+        "tntEquivalent": 0.139
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": true,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2800.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 5,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      5.3,
+      11.7,
+      19.1,
+      30.3,
+      51.4
+    ],
+    "reverse_gear_speeds": [
+      5.3,
+      19.1
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 45.4,
+    "track_width": 0.74,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_5mm_MAC_31",
+        "caliber": 7.5,
+        "ammo": 4800,
+        "reloadTime": 5.0,
+        "rateOfFire": 550,
+        "bulletType": "ap_ball"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "7_5mm_MAC_31",
+        "caliber": 7.5,
+        "ammo": 1200,
+        "reloadTime": 5.0,
+        "rateOfFire": 550,
+        "bulletType": "ap_ball"
+      }
+    ],
+    "main_gun_ammo": 52,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 105000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 8200,
+    "crewTraining": 10000,
+    "expertTraining": 490000,
+    "aceTrainingGE": 1200,
+    "aceTrainingRP": 1440000,
+    "repairCost": {
+      "arcade": [
+        2828,
+        2828
+      ],
+      "realistic": [
+        3241,
+        3241
+      ],
+      "simulator": [
+        4518,
+        4518
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.68,
+      "realistic": 4.04,
+      "simulator": 4.49
+    },
+    "expMultiplier": 1.96,
+    "freeRepairs": 30
+  }
+}

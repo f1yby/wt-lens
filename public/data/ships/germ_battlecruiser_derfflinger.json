@@ -1,0 +1,27 @@
+{
+  "id": "germ_battlecruiser_derfflinger",
+  "economy": {
+    "researchCost": 145000,
+    "purchaseCost": 440000,
+    "crewTraining": 125000,
+    "expertTraining": 440000,
+    "aceTrainingGE": 1700,
+    "aceTrainingRP": 720000,
+    "repairCost": {
+      "arcade": [
+        22688,
+        28574
+      ],
+      "realistic": [
+        28628,
+        36055
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 4.5,
+      "realistic": 6.0,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.96
+  }
+}

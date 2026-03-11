@@ -1,0 +1,241 @@
+{
+  "id": "jp_type_74_mod_g_kai",
+  "performance": {
+    "horsepower": 870.0,
+    "weight": 38.5,
+    "power_to_weight": 22.6,
+    "max_reverse_speed": 16.7,
+    "reload_time": 6.67,
+    "penetration": 405.6,
+    "max_speed": 53.1,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 24.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "both",
+    "elevation_range": [
+      -6.0,
+      9.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": [
+      500,
+      300
+    ],
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": 583.1,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 15.0,
+    "mainGun": {
+      "name": "105mm_L7A3_Type74kai",
+      "caliber": 105.0,
+      "reloadTime": 6.67,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 8.67,
+        "expert": 7.67,
+        "ace": 6.67
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "105mm_type91",
+        "localizedName": "Type 91",
+        "type": "heat_fs_tank",
+        "caliber": 105.0,
+        "mass": 9.4,
+        "muzzleVelocity": 1150.0,
+        "penetration0m": 400.0,
+        "explosiveMassKg": 1.2,
+        "explosiveType": "comp_b",
+        "tntEquivalent": 1.524
+      },
+      {
+        "name": "105mm_m735",
+        "localizedName": "M735",
+        "type": "apds_fs_tungsten_l10_l15_tank",
+        "caliber": 31.8,
+        "mass": 3.719,
+        "muzzleVelocity": 1501.1,
+        "armorPowerTable": [
+          {
+            "penetration": 292.4,
+            "distance": 10.0
+          },
+          {
+            "penetration": 290.6,
+            "distance": 100.0
+          },
+          {
+            "penetration": 284.0,
+            "distance": 500.0
+          },
+          {
+            "penetration": 275.0,
+            "distance": 1000.0
+          },
+          {
+            "penetration": 265.9,
+            "distance": 1500.0
+          },
+          {
+            "penetration": 256.5,
+            "distance": 2000.0
+          },
+          {
+            "penetration": 246.7,
+            "distance": 2500.0
+          },
+          {
+            "penetration": 236.7,
+            "distance": 3000.0
+          },
+          {
+            "penetration": 215.5,
+            "distance": 4000.0
+          },
+          {
+            "penetration": 192.7,
+            "distance": 5000.0
+          },
+          {
+            "penetration": 50.0,
+            "distance": 10000.0
+          },
+          {
+            "penetration": 0.0,
+            "distance": 20000.0
+          }
+        ],
+        "penetration0m": 292.4
+      },
+      {
+        "name": "105mm_m416",
+        "localizedName": "M416",
+        "type": "smoke_tank",
+        "caliber": 105.0,
+        "mass": 11.6,
+        "muzzleVelocity": 731.5,
+        "explosiveMassKg": 0.05,
+        "explosiveType": "smoke_composition",
+        "tntEquivalent": 0.05
+      },
+      {
+        "name": "105mm_type93",
+        "localizedName": "Type 93",
+        "type": "apds_fs_long_l30_tank",
+        "caliber": 21.6,
+        "mass": 3.4,
+        "muzzleVelocity": 1501.0,
+        "lanzOdermatt": {
+          "workingLength": 485.0,
+          "density": 17500.0,
+          "material": "tungsten",
+          "Cx": 0.53
+        },
+        "penetration0m": 405.6,
+        "penetrationData": {
+          "at0m": {
+            "angle0": 405.6,
+            "angle30": 351.3,
+            "angle60": 202.8
+          }
+        }
+      }
+    ],
+    "penetrationData": {
+      "at0m": {
+        "angle0": 405.6,
+        "angle30": 351.3,
+        "angle60": 202.8
+      }
+    },
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": "mitsubishi_10zf_22wt",
+    "engine_type": null,
+    "engine_max_rpm": 2200.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 6,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      5.6,
+      10.3,
+      15.7,
+      23.6,
+      35.5,
+      53.1
+    ],
+    "reverse_gear_speeds": [
+      7.4,
+      16.7
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 38.0,
+    "track_width": 0.55,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_Type74",
+        "caliber": 7.6,
+        "ammo": 4500,
+        "reloadTime": 8.0,
+        "rateOfFire": 700,
+        "bulletType": "ap_ball"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "12_7mm_M2_HB",
+        "caliber": 12.7,
+        "ammo": 600,
+        "reloadTime": 8.0,
+        "rateOfFire": 575,
+        "bulletType": "ap_i_t_ball_M20"
+      }
+    ],
+    "main_gun_ammo": 50,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": true
+  },
+  "economy": {
+    "researchCost": 160000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 8730,
+    "crewTraining": 10000,
+    "expertTraining": 730000,
+    "aceTrainingGE": 2000,
+    "aceTrainingRP": 1780000,
+    "repairCost": {
+      "arcade": [
+        3026,
+        3026
+      ],
+      "realistic": [
+        3103,
+        3103
+      ],
+      "simulator": [
+        3797,
+        3797
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.88,
+      "realistic": 3.83,
+      "simulator": 4.5
+    },
+    "expMultiplier": 2.14,
+    "freeRepairs": 30
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "id": "d_371_hs9",
+  "economy": {
+    "researchCost": 4000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 400,
+    "crewTraining": 450,
+    "expertTraining": 3000,
+    "aceTrainingGE": 45,
+    "aceTrainingRP": 220000,
+    "repairCost": {
+      "arcade": [
+        431,
+        431
+      ],
+      "realistic": [
+        195,
+        195
+      ],
+      "simulator": [
+        225,
+        225
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.42,
+      "realistic": 0.68,
+      "simulator": 2.41
+    },
+    "expMultiplier": 1.0,
+    "freeRepairs": 30
+  }
+}

@@ -1,0 +1,197 @@
+{
+  "id": "ussr_2s38",
+  "performance": {
+    "horsepower": 500.0,
+    "weight": 21.5,
+    "power_to_weight": 23.26,
+    "max_reverse_speed": 20.4,
+    "reload_time": 0.5,
+    "penetration": 224.7,
+    "max_speed": 70.1,
+    "crew_count": 5,
+    "elevation_speed": 40.0,
+    "traverse_speed": 60.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "both",
+    "elevation_range": [
+      -5.0,
+      75.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": [
+      1200,
+      800
+    ],
+    "commander_thermal_resolution": [
+      1200,
+      800
+    ],
+    "gunner_thermal_diagonal": 1442.2,
+    "commander_thermal_diagonal": 1442.2,
+    "stabilizer_value": 1,
+    "elevation_range_value": 80.0,
+    "mainGun": {
+      "name": "57mm_AU_220M",
+      "caliber": 57.0,
+      "reloadTime": 0.5,
+      "autoLoader": true,
+      "reloadTimes": {
+        "base": 0.5,
+        "expert": 0.5,
+        "ace": 0.5
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "57mm_br_281u",
+        "localizedName": "BR-281U",
+        "type": "apcbc_tank",
+        "caliber": 57.0,
+        "mass": 2.8,
+        "muzzleVelocity": 1000.0,
+        "deMarre": {
+          "fullCaliber": 57.0,
+          "isApcbc": true,
+          "explosiveMass": 0.013,
+          "Cx": 0.377
+        },
+        "penetration0m": 151.4,
+        "explosiveMassKg": 0.013,
+        "explosiveType": "a_ix_2",
+        "tntEquivalent": 0.018
+      },
+      {
+        "name": "57mm_or_281u",
+        "localizedName": "OR-281U",
+        "type": "he_frag_tank",
+        "caliber": 57.0,
+        "mass": 2.8,
+        "muzzleVelocity": 1000.0,
+        "explosiveMassKg": 0.153,
+        "explosiveType": "a_ix_2",
+        "tntEquivalent": 0.214
+      },
+      {
+        "name": "57mm_3ubr_22",
+        "localizedName": "3UBM22",
+        "type": "apds_fs_long_tank",
+        "caliber": 16.0,
+        "mass": 0.95,
+        "muzzleVelocity": 1500.0,
+        "lanzOdermatt": {
+          "workingLength": 245.0,
+          "density": 17500.0,
+          "material": "tungsten",
+          "Cx": 0.8
+        },
+        "penetration0m": 224.7,
+        "penetrationData": {
+          "at0m": {
+            "angle0": 224.7,
+            "angle30": 194.6,
+            "angle60": 112.4
+          }
+        }
+      },
+      {
+        "name": "57mm_3uo8",
+        "localizedName": "3UO8",
+        "type": "he_frag_radio_fuse",
+        "caliber": 57.0,
+        "mass": 2.8,
+        "muzzleVelocity": 1000.0,
+        "explosiveMassKg": 0.15,
+        "explosiveType": "a_ix_2",
+        "tntEquivalent": 0.21
+      }
+    ],
+    "penetrationData": {
+      "at0m": {
+        "angle0": 224.7,
+        "angle30": 194.6,
+        "angle60": 112.4
+      }
+    },
+    "autoLoader": true,
+    "engine_manufacturer": "transmash",
+    "engine_model": "utd_29",
+    "engine_type": null,
+    "engine_max_rpm": 2600.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 8,
+    "reverse_gears": 4,
+    "forward_gear_speeds": [
+      9.3,
+      14.0,
+      24.0,
+      41.0,
+      51.5,
+      58.0,
+      63.5,
+      70.1
+    ],
+    "reverse_gear_speeds": [
+      9.3,
+      11.9,
+      17.2,
+      20.4
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 21.2,
+    "track_width": 0.38,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_PKTM",
+        "caliber": 7.6,
+        "ammo": 750,
+        "reloadTime": 8.0,
+        "rateOfFire": 700,
+        "bulletType": "ap_i_ball"
+      }
+    ],
+    "main_gun_ammo": 148,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": true,
+    "has_ess": true,
+    "has_laser_rangefinder": true
+  },
+  "economy": {
+    "researchCost": 260000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 9270,
+    "crewTraining": 10000,
+    "expertTraining": 1160000,
+    "aceTrainingGE": 2100,
+    "aceTrainingRP": 2150000,
+    "repairCost": {
+      "arcade": [
+        2992,
+        2992
+      ],
+      "realistic": [
+        2797,
+        2797
+      ],
+      "simulator": [
+        3683,
+        3683
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.74,
+      "realistic": 3.46,
+      "simulator": 4.41
+    },
+    "expMultiplier": 2.32,
+    "freeRepairs": 30
+  }
+}

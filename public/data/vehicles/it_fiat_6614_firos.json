@@ -1,0 +1,117 @@
+{
+  "id": "it_fiat_6614_firos",
+  "performance": {
+    "horsepower": 160.0,
+    "weight": 8.7,
+    "power_to_weight": 18.39,
+    "max_reverse_speed": 19.4,
+    "reload_time": 0.4,
+    "penetration": 250.0,
+    "max_speed": 100.0,
+    "crew_count": 5,
+    "elevation_speed": 6.0,
+    "traverse_speed": 10.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -5.0,
+      45.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 50.0,
+    "mainGun": {
+      "name": "50mm_firos_6",
+      "caliber": 50.0,
+      "reloadTime": 0.4,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 0.52,
+        "expert": 0.46,
+        "ace": 0.4
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "50mm_arf_8m3",
+        "localizedName": "ARF/8M3",
+        "type": "heat_grenade_tank",
+        "caliber": 50.0,
+        "mass": 4.8,
+        "muzzleVelocity": 515.0,
+        "penetration0m": 250.0
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 3200.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 10,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      12.8,
+      18.0,
+      22.4,
+      31.6,
+      35.2,
+      49.5,
+      56.4,
+      71.1,
+      79.4,
+      100.0
+    ],
+    "reverse_gear_speeds": [
+      13.8,
+      19.4
+    ],
+    "steer_type": null,
+    "empty_weight": 8.5,
+    "track_width": 0.2,
+    "secondary_weapons": null,
+    "main_gun_ammo": 144,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 82000,
+    "purchaseCost": 240000,
+    "crewTraining": 68000,
+    "expertTraining": 240000,
+    "aceTrainingGE": 990,
+    "aceTrainingRP": 620000,
+    "repairCost": {
+      "arcade": [
+        2804,
+        4069
+      ],
+      "realistic": [
+        3291,
+        4776
+      ],
+      "simulator": [
+        4196,
+        6090
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.04,
+      "realistic": 1.51,
+      "simulator": 1.85
+    },
+    "expMultiplier": 1.84
+  }
+}

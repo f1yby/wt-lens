@@ -1,0 +1,27 @@
+{
+  "id": "us_sc_497",
+  "economy": {
+    "researchCost": 14000,
+    "purchaseCost": 32000,
+    "crewTraining": 9200,
+    "expertTraining": 32000,
+    "aceTrainingGE": 320,
+    "aceTrainingRP": 250000,
+    "repairCost": {
+      "arcade": [
+        961,
+        1188
+      ],
+      "realistic": [
+        1467,
+        1813
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.68,
+      "realistic": 0.85,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.3
+  }
+}

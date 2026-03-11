@@ -1,0 +1,148 @@
+{
+  "id": "sw_ikv_103",
+  "performance": {
+    "horsepower": 150.0,
+    "weight": 8.8,
+    "power_to_weight": 17.05,
+    "max_reverse_speed": 11.0,
+    "reload_time": 8.0,
+    "penetration": 400.0,
+    "max_speed": 52.9,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 8.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -16.0,
+      20.0
+    ],
+    "traverse_range": [
+      -10.0,
+      10.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 36.0,
+    "mainGun": {
+      "name": "105mm_kan_ikv",
+      "caliber": 105.0,
+      "reloadTime": 8.0,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 10.4,
+        "expert": 9.2,
+        "ace": 8.0
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "105mm_psgr_m49",
+        "localizedName": "psgr m/49",
+        "type": "heat_tank",
+        "caliber": 105.0,
+        "mass": 10.25,
+        "muzzleVelocity": 418.0,
+        "penetration0m": 240.0,
+        "explosiveMassKg": 0.95,
+        "explosiveType": "comp_b",
+        "tntEquivalent": 1.206
+      },
+      {
+        "name": "105mm_sgr_m34_lt",
+        "localizedName": "sgr m/34 LT",
+        "type": "he_frag_tank",
+        "caliber": 105.0,
+        "mass": 11.67,
+        "muzzleVelocity": 400.0,
+        "explosiveMassKg": 1.82,
+        "explosiveType": "tnt",
+        "tntEquivalent": 1.82
+      },
+      {
+        "name": "105mm_slpsgr_m65",
+        "localizedName": "slpsgr m/65",
+        "type": "heat_fs_tank",
+        "caliber": 105.0,
+        "mass": 10.2,
+        "muzzleVelocity": 530.0,
+        "penetration0m": 400.0,
+        "explosiveMassKg": 1.08,
+        "explosiveType": "comp_b",
+        "tntEquivalent": 1.372
+      },
+      {
+        "name": "105mm_rokgr_m49",
+        "localizedName": "rökgr m/49",
+        "type": "smoke_tank",
+        "caliber": 105.0,
+        "mass": 14.7,
+        "muzzleVelocity": 359.0,
+        "explosiveMassKg": 0.05,
+        "explosiveType": "smoke_composition",
+        "tntEquivalent": 0.05
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 3200.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 5,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      6.6,
+      12.6,
+      23.5,
+      36.4,
+      52.9
+    ],
+    "reverse_gear_speeds": [
+      11.0
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 8.6,
+    "track_width": null,
+    "secondary_weapons": null,
+    "main_gun_ammo": 24,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 17000,
+    "purchaseCost": 105000,
+    "crewTraining": 30000,
+    "expertTraining": 105000,
+    "aceTrainingGE": 470,
+    "aceTrainingRP": 360000,
+    "repairCost": {
+      "arcade": [
+        1335,
+        1652
+      ],
+      "realistic": [
+        1586,
+        1963
+      ],
+      "simulator": [
+        2017,
+        2496
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.88,
+      "realistic": 1.32,
+      "simulator": 1.69
+    },
+    "expMultiplier": 1.48
+  }
+}

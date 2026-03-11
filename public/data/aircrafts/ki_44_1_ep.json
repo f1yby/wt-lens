@@ -1,0 +1,33 @@
+{
+  "id": "ki_44_1_ep",
+  "economy": {
+    "researchCost": 9200,
+    "purchaseCost": 0,
+    "purchaseCostGold": 850,
+    "crewTraining": 3400,
+    "expertTraining": 23000,
+    "aceTrainingGE": 180,
+    "aceTrainingRP": 380000,
+    "repairCost": {
+      "arcade": [
+        900,
+        900
+      ],
+      "realistic": [
+        1780,
+        1780
+      ],
+      "simulator": [
+        1044,
+        1044
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.84,
+      "realistic": 2.06,
+      "simulator": 3.9
+    },
+    "expMultiplier": 1.18,
+    "freeRepairs": 30
+  }
+}

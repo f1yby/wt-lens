@@ -1,0 +1,217 @@
+{
+  "id": "germ_kpz_70",
+  "performance": {
+    "horsepower": 1500.0,
+    "weight": 51.7,
+    "power_to_weight": 29.01,
+    "max_reverse_speed": 64.0,
+    "reload_time": 6.0,
+    "penetration": 285.4,
+    "max_speed": 64.0,
+    "crew_count": 5,
+    "elevation_speed": 25.0,
+    "traverse_speed": 36.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "both",
+    "elevation_range": [
+      -10.0,
+      20.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 30.0,
+    "mainGun": {
+      "name": "152mm_XM150E5_KPz",
+      "caliber": 152.0,
+      "reloadTime": 6.0,
+      "autoLoader": true,
+      "reloadTimes": {
+        "base": 6.0,
+        "expert": 6.0,
+        "ace": 6.0
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "152mm_m409a1",
+        "localizedName": "M409A1",
+        "type": "heat_tank",
+        "caliber": 152.0,
+        "mass": 18.9,
+        "muzzleVelocity": 682.0,
+        "penetration0m": 380.0,
+        "explosiveMassKg": 2.85,
+        "explosiveType": "comp_b",
+        "tntEquivalent": 3.62
+      },
+      {
+        "name": "152mm_mgm_61c",
+        "localizedName": "MGM-51C",
+        "type": "atgm_tank",
+        "caliber": 152.0,
+        "mass": 27.8,
+        "muzzleVelocity": 286.0,
+        "penetration0m": 431.0
+      },
+      {
+        "name": "152mm_xm410e1",
+        "localizedName": "XM410E1",
+        "type": "smoke_tank",
+        "caliber": 152.0,
+        "mass": 18.9,
+        "muzzleVelocity": 754.0,
+        "explosiveMassKg": 0.05,
+        "explosiveType": "smoke_composition",
+        "tntEquivalent": 0.05
+      },
+      {
+        "name": "152mm_xm578e1",
+        "localizedName": "XM578E1",
+        "type": "apds_fs_tungsten_l10_l15_tank",
+        "caliber": 35.6,
+        "mass": 3.787,
+        "muzzleVelocity": 1508.8,
+        "armorPowerTable": [
+          {
+            "penetration": 285.4,
+            "distance": 10.0
+          },
+          {
+            "penetration": 281.3,
+            "distance": 100.0
+          },
+          {
+            "penetration": 269.6,
+            "distance": 500.0
+          },
+          {
+            "penetration": 254.4,
+            "distance": 1000.0
+          },
+          {
+            "penetration": 239.2,
+            "distance": 1500.0
+          },
+          {
+            "penetration": 223.2,
+            "distance": 2000.0
+          },
+          {
+            "penetration": 191.7,
+            "distance": 3000.0
+          },
+          {
+            "penetration": 160.7,
+            "distance": 4000.0
+          },
+          {
+            "penetration": 50.0,
+            "distance": 10000.0
+          },
+          {
+            "penetration": 0.0,
+            "distance": 20000.0
+          }
+        ],
+        "penetration0m": 285.4
+      }
+    ],
+    "penetrationData": {},
+    "autoLoader": true,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2600.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 8,
+    "reverse_gears": 8,
+    "forward_gear_speeds": [
+      6.3,
+      9.1,
+      13.1,
+      18.0,
+      21.3,
+      32.3,
+      46.1,
+      64.0
+    ],
+    "reverse_gear_speeds": [
+      6.3,
+      9.1,
+      13.1,
+      18.0,
+      21.3,
+      32.3,
+      46.1,
+      64.0
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 51.3,
+    "track_width": 0.635,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "20mm_Rh_202",
+        "caliber": 20.0,
+        "ammo": 750,
+        "reloadTime": 10.0,
+        "rateOfFire": 1030,
+        "bulletType": "he_frag_i_t"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "7_92mm_MG3",
+        "caliber": 7.6,
+        "ammo": 6000,
+        "reloadTime": 8.0,
+        "rateOfFire": 1200,
+        "bulletType": "ap_ball"
+      }
+    ],
+    "main_gun_ammo": 48,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": true
+  },
+  "economy": {
+    "researchCost": 190000,
+    "purchaseCost": 520000,
+    "crewTraining": 150000,
+    "expertTraining": 520000,
+    "aceTrainingGE": 2100,
+    "aceTrainingRP": 950000,
+    "repairCost": {
+      "arcade": [
+        4425,
+        6103
+      ],
+      "realistic": [
+        4388,
+        6052
+      ],
+      "simulator": [
+        5712,
+        7879
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.48,
+      "realistic": 1.96,
+      "simulator": 2.31
+    },
+    "expMultiplier": 2.2
+  }
+}

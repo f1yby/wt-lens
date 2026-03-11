@@ -1,0 +1,168 @@
+{
+  "id": "sw_strv_101",
+  "performance": {
+    "horsepower": 650.0,
+    "weight": 51.81,
+    "power_to_weight": 12.55,
+    "max_reverse_speed": 12.1,
+    "reload_time": 6.67,
+    "penetration": 204.5,
+    "max_speed": 34.7,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 20.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "both",
+    "elevation_range": [
+      -10.0,
+      20.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 30.0,
+    "mainGun": {
+      "name": "105mm_kan_strv_101",
+      "caliber": 105.0,
+      "reloadTime": 6.67,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 8.67,
+        "expert": 7.67,
+        "ace": 6.67
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "105mm_slpprj_m61",
+        "localizedName": "slpprj m/61",
+        "type": "apds_tank",
+        "caliber": 60.0,
+        "mass": 4.0,
+        "muzzleVelocity": 1478.3,
+        "deMarre": {
+          "fullCaliber": 105.0,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "isApcr": true,
+          "coreCaliber": 60.0,
+          "coreMass": 2.7,
+          "Cx": 0.1572
+        },
+        "penetration0m": 204.5
+      },
+      {
+        "name": "105mm_slspgr_m61",
+        "localizedName": "slspgr m/61",
+        "type": "hesh_tank",
+        "caliber": 105.0,
+        "mass": 11.4,
+        "muzzleVelocity": 720.0,
+        "penetration0m": 127.0,
+        "explosiveMassKg": 1.97,
+        "explosiveType": "rdx",
+        "tntEquivalent": 2.758
+      },
+      {
+        "name": "105mm_slsgr_m61",
+        "localizedName": "slsgr m/61A",
+        "type": "he_frag_tank",
+        "caliber": 105.0,
+        "mass": 15.5,
+        "muzzleVelocity": 650.0,
+        "explosiveMassKg": 1.83,
+        "explosiveType": "tnt",
+        "tntEquivalent": 1.83
+      },
+      {
+        "name": "105mm_rokgr_m61",
+        "localizedName": "rökgr m/61",
+        "type": "smoke_tank",
+        "caliber": 105.0,
+        "mass": 19.6,
+        "muzzleVelocity": 320.0,
+        "explosiveMassKg": 0.05,
+        "explosiveType": "smoke_composition",
+        "tntEquivalent": 0.05
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2550.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 5,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      4.0,
+      10.1,
+      16.3,
+      25.8,
+      34.7
+    ],
+    "reverse_gear_speeds": [
+      4.0,
+      12.1
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 51.27,
+    "track_width": 0.68,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "8mm_Ksp_m39_B",
+        "caliber": 7.6,
+        "ammo": 3000,
+        "reloadTime": 8.0,
+        "rateOfFire": 648,
+        "bulletType": "ap_ball"
+      }
+    ],
+    "main_gun_ammo": 70,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 105000,
+    "purchaseCost": 300000,
+    "crewTraining": 86000,
+    "expertTraining": 300000,
+    "aceTrainingGE": 1200,
+    "aceTrainingRP": 720000,
+    "repairCost": {
+      "arcade": [
+        4177,
+        5645
+      ],
+      "realistic": [
+        4653,
+        6288
+      ],
+      "simulator": [
+        6597,
+        8915
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.32,
+      "realistic": 1.98,
+      "simulator": 2.29
+    },
+    "expMultiplier": 1.96
+  }
+}

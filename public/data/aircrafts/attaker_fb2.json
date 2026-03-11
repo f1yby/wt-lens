@@ -1,0 +1,33 @@
+{
+  "id": "attaker_fb2",
+  "economy": {
+    "researchCost": 95000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 8020,
+    "crewTraining": 10000,
+    "expertTraining": 440000,
+    "aceTrainingGE": 1500,
+    "aceTrainingRP": 1340000,
+    "repairCost": {
+      "arcade": [
+        2343,
+        2343
+      ],
+      "realistic": [
+        6077,
+        6077
+      ],
+      "simulator": [
+        8417,
+        8417
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.6,
+      "realistic": 6.33,
+      "simulator": 12.0
+    },
+    "expMultiplier": 1.9,
+    "freeRepairs": 30
+  }
+}

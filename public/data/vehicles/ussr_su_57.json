@@ -1,0 +1,141 @@
+{
+  "id": "ussr_su_57",
+  "performance": {
+    "horsepower": 148.0,
+    "weight": 8.62,
+    "power_to_weight": 17.17,
+    "max_reverse_speed": 17.4,
+    "reload_time": 4.0,
+    "penetration": 122.3,
+    "max_speed": 75.7,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 7.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -5.0,
+      15.0
+    ],
+    "traverse_range": [
+      -26.0,
+      26.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 20.0,
+    "mainGun": {
+      "name": "57mm_M1_open_turret",
+      "caliber": 57.0,
+      "reloadTime": 4.0,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 5.2,
+        "expert": 4.6,
+        "ace": 4.0
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "57mm_m70",
+        "localizedName": "M70",
+        "type": "ap_tank",
+        "caliber": 57.0,
+        "mass": 2.85,
+        "muzzleVelocity": 900.0,
+        "deMarre": {
+          "fullCaliber": 57.0,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "Cx": 0.5
+        },
+        "penetration0m": 118.7
+      },
+      {
+        "name": "57mm_m86",
+        "localizedName": "M86",
+        "type": "apcbc_tank",
+        "caliber": 57.0,
+        "mass": 3.29,
+        "muzzleVelocity": 822.0,
+        "deMarre": {
+          "fullCaliber": 57.0,
+          "isApcbc": true,
+          "explosiveMass": 0.042,
+          "Cx": 0.5
+        },
+        "penetration0m": 122.3,
+        "explosiveMassKg": 0.042,
+        "explosiveType": "exp_d",
+        "tntEquivalent": 0.042
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 3000.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 8,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      6.2,
+      11.7,
+      15.4,
+      17.6,
+      29.1,
+      30.4,
+      44.3,
+      75.7
+    ],
+    "reverse_gear_speeds": [
+      6.9,
+      17.4
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 8.42,
+    "track_width": 0.28,
+    "secondary_weapons": null,
+    "main_gun_ammo": 99,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 5900,
+    "purchaseCost": 0,
+    "purchaseCostGold": 550,
+    "crewTraining": 1400,
+    "expertTraining": 9000,
+    "aceTrainingGE": 75,
+    "aceTrainingRP": 270000,
+    "repairCost": {
+      "arcade": [
+        559,
+        559
+      ],
+      "realistic": [
+        231,
+        231
+      ],
+      "simulator": [
+        277,
+        277
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.6,
+      "realistic": 0.69,
+      "simulator": 0.85
+    },
+    "expMultiplier": 1.06,
+    "freeRepairs": 30
+  }
+}

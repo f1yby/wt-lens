@@ -1,0 +1,164 @@
+{
+  "id": "uk_rooikat_76",
+  "performance": {
+    "horsepower": 567.0,
+    "weight": 26.5,
+    "power_to_weight": 21.4,
+    "max_reverse_speed": 36.6,
+    "reload_time": 6.67,
+    "penetration": 321.0,
+    "max_speed": 120.3,
+    "crew_count": 5,
+    "elevation_speed": 5.0,
+    "traverse_speed": 40.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "both",
+    "elevation_range": [
+      -10.0,
+      20.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 30.0,
+    "mainGun": {
+      "name": "76mm_GT_4",
+      "caliber": 76.0,
+      "reloadTime": 6.67,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 8.67,
+        "expert": 7.67,
+        "ace": 6.67
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "76mm_oto_apfsds",
+        "localizedName": "76/62 APFSDS",
+        "type": "apds_fs_long_tank",
+        "caliber": 26.0,
+        "mass": 2.175,
+        "muzzleVelocity": 1615.0,
+        "lanzOdermatt": {
+          "workingLength": 285.0,
+          "density": 17500.0,
+          "material": "tungsten",
+          "Cx": 0.33
+        },
+        "penetration0m": 321.0,
+        "penetrationData": {
+          "at0m": {
+            "angle0": 321.0,
+            "angle30": 278.0,
+            "angle60": 160.5
+          }
+        }
+      },
+      {
+        "name": "76mm_gt4_he",
+        "localizedName": "76/62 HE",
+        "type": "he_frag_tank",
+        "caliber": 76.0,
+        "mass": 6.3,
+        "muzzleVelocity": 915.0,
+        "explosiveMassKg": 0.673,
+        "explosiveType": "comp_a",
+        "tntEquivalent": 0.848
+      }
+    ],
+    "penetrationData": {
+      "at0m": {
+        "angle0": 321.0,
+        "angle30": 278.0,
+        "angle60": 160.5
+      }
+    },
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2400.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 12,
+    "reverse_gears": 4,
+    "forward_gear_speeds": [
+      9.9,
+      12.7,
+      17.7,
+      25.5,
+      36.6,
+      47.9,
+      54.6,
+      63.2,
+      74.2,
+      89.0,
+      98.9,
+      120.3
+    ],
+    "reverse_gear_speeds": [
+      12.7,
+      17.7,
+      25.5,
+      36.6
+    ],
+    "steer_type": null,
+    "empty_weight": 26.0,
+    "track_width": 0.4,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_Browning_MG4",
+        "caliber": 7.6,
+        "ammo": 3750,
+        "reloadTime": 8.0,
+        "rateOfFire": 500,
+        "bulletType": "ap_ball"
+      }
+    ],
+    "main_gun_ammo": 48,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": true,
+    "has_ess": true,
+    "has_laser_rangefinder": true
+  },
+  "economy": {
+    "researchCost": 81000,
+    "purchaseCost": 450000,
+    "crewTraining": 130000,
+    "expertTraining": 450000,
+    "aceTrainingGE": 2000,
+    "aceTrainingRP": 890000,
+    "repairCost": {
+      "arcade": [
+        3181,
+        5249
+      ],
+      "realistic": [
+        3406,
+        5621
+      ],
+      "simulator": [
+        4082,
+        6736
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.25,
+      "realistic": 1.63,
+      "simulator": 2.03
+    },
+    "expMultiplier": 2.14
+  }
+}

@@ -1,0 +1,152 @@
+{
+  "id": "cn_plz_05",
+  "performance": {
+    "horsepower": 800.0,
+    "weight": 43.0,
+    "power_to_weight": 18.6,
+    "max_reverse_speed": 14.2,
+    "reload_time": 7.5,
+    "penetration": 255.2,
+    "max_speed": 60.0,
+    "crew_count": 5,
+    "elevation_speed": 10.0,
+    "traverse_speed": 10.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -3.0,
+      65.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 68.0,
+    "mainGun": {
+      "name": "155mm_PL05",
+      "caliber": 155.0,
+      "reloadTime": 7.5,
+      "autoLoader": true,
+      "reloadTimes": {
+        "base": 7.5,
+        "expert": 7.5,
+        "ace": 7.5
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "155mm_plz_05_he",
+        "localizedName": "Type 05 HE",
+        "type": "he_frag_tank",
+        "caliber": 155.0,
+        "mass": 47.0,
+        "muzzleVelocity": 933.0,
+        "explosiveMassKg": 8.4,
+        "explosiveType": "dhl_1",
+        "tntEquivalent": 11.76
+      },
+      {
+        "name": "155mm_plz_05_he_vt",
+        "localizedName": "Type 05 HE(VT)",
+        "type": "he_frag_radio_fuse",
+        "caliber": 155.0,
+        "mass": 47.0,
+        "muzzleVelocity": 933.0,
+        "explosiveMassKg": 8.4,
+        "explosiveType": "dhl_1",
+        "tntEquivalent": 11.76
+      },
+      {
+        "name": "155mm_bea_1",
+        "localizedName": "BEA1-155",
+        "type": "sapcbc_tank",
+        "caliber": 155.0,
+        "mass": 45.5,
+        "muzzleVelocity": 933.0,
+        "deMarre": {
+          "fullCaliber": 155.0,
+          "isApcbc": true,
+          "explosiveMass": 5.1
+        },
+        "penetration0m": 255.2,
+        "explosiveMassKg": 5.1,
+        "explosiveType": "tnt",
+        "tntEquivalent": 5.1
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": true,
+    "engine_manufacturer": null,
+    "engine_model": "8v_150",
+    "engine_type": null,
+    "engine_max_rpm": 2000.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 6,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      9.3,
+      17.8,
+      18.4,
+      30.5,
+      44.8,
+      60.0
+    ],
+    "reverse_gear_speeds": [
+      14.2
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 42.0,
+    "track_width": 0.4,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner2",
+        "name": "12_7mm_QJC_88A",
+        "caliber": 12.7,
+        "ammo": 600,
+        "reloadTime": 5.0,
+        "rateOfFire": 600,
+        "bulletType": "ap_i_t_ball"
+      }
+    ],
+    "main_gun_ammo": 30,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": true
+  },
+  "economy": {
+    "researchCost": 95000,
+    "purchaseCost": 270000,
+    "crewTraining": 78000,
+    "expertTraining": 270000,
+    "aceTrainingGE": 1100,
+    "aceTrainingRP": 670000,
+    "repairCost": {
+      "arcade": [
+        4654,
+        6165
+      ],
+      "realistic": [
+        4879,
+        6462
+      ],
+      "simulator": [
+        7978,
+        10567
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.53,
+      "realistic": 2.1,
+      "simulator": 2.5
+    },
+    "expMultiplier": 1.9
+  }
+}

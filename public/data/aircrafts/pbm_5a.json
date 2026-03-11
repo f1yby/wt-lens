@@ -1,0 +1,33 @@
+{
+  "id": "pbm_5a",
+  "economy": {
+    "researchCost": 18000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 1300,
+    "crewTraining": 10000,
+    "expertTraining": 67000,
+    "aceTrainingGE": 400,
+    "aceTrainingRP": 570000,
+    "repairCost": {
+      "arcade": [
+        681,
+        681
+      ],
+      "realistic": [
+        1186,
+        1186
+      ],
+      "simulator": [
+        2289,
+        2289
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.41,
+      "realistic": 3.02,
+      "simulator": 4.96
+    },
+    "expMultiplier": 1.36,
+    "freeRepairs": 30
+  }
+}

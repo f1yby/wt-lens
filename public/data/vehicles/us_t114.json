@@ -1,0 +1,128 @@
+{
+  "id": "us_t114",
+  "performance": {
+    "horsepower": 160.0,
+    "weight": 6.6,
+    "power_to_weight": 24.24,
+    "max_reverse_speed": 13.1,
+    "reload_time": 2.5,
+    "penetration": 433.0,
+    "max_speed": 59.4,
+    "crew_count": 5,
+    "elevation_speed": 7.0,
+    "traverse_speed": 20.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -10.0,
+      20.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 30.0,
+    "mainGun": {
+      "name": "106mm_M40A1C_T114",
+      "caliber": 106.0,
+      "reloadTime": 2.5,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 3.25,
+        "expert": 2.88,
+        "ace": 2.5
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "106mm_m344a1",
+        "localizedName": "M344A1",
+        "type": "heat_grenade_tank",
+        "caliber": 106.0,
+        "mass": 10.0,
+        "muzzleVelocity": 502.0,
+        "penetration0m": 433.0,
+        "explosiveMassKg": 1.26,
+        "explosiveType": "comp_b",
+        "tntEquivalent": 1.6
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 4600.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 7,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      14.5,
+      17.7,
+      22.6,
+      28.4,
+      38.3,
+      46.8,
+      59.4
+    ],
+    "reverse_gear_speeds": [
+      13.1
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 6.3,
+    "track_width": 0.5,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "12_7mm_M80_20",
+        "caliber": 12.7,
+        "ammo": 160,
+        "reloadTime": 2.5,
+        "rateOfFire": 300,
+        "bulletType": "he_ball"
+      }
+    ],
+    "main_gun_ammo": 20,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 95000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 8020,
+    "crewTraining": 10000,
+    "expertTraining": 440000,
+    "aceTrainingGE": 1100,
+    "aceTrainingRP": 1340000,
+    "repairCost": {
+      "arcade": [
+        2157,
+        2157
+      ],
+      "realistic": [
+        2661,
+        2661
+      ],
+      "simulator": [
+        3520,
+        3520
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.25,
+      "realistic": 3.16,
+      "simulator": 4.02
+    },
+    "expMultiplier": 1.9,
+    "freeRepairs": 30
+  }
+}

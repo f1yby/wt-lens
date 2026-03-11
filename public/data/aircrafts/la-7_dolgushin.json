@@ -1,0 +1,33 @@
+{
+  "id": "la-7_dolgushin",
+  "economy": {
+    "researchCost": 46000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 3850,
+    "crewTraining": 10000,
+    "expertTraining": 250000,
+    "aceTrainingGE": 820,
+    "aceTrainingRP": 870000,
+    "repairCost": {
+      "arcade": [
+        1243,
+        1243
+      ],
+      "realistic": [
+        4282,
+        4282
+      ],
+      "simulator": [
+        4263,
+        4263
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.61,
+      "realistic": 4.36,
+      "simulator": 8.08
+    },
+    "expMultiplier": 1.6,
+    "freeRepairs": 30
+  }
+}

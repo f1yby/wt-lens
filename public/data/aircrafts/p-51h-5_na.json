@@ -1,0 +1,31 @@
+{
+  "id": "p-51h-5_na",
+  "economy": {
+    "researchCost": 54000,
+    "purchaseCost": 185000,
+    "crewTraining": 52000,
+    "expertTraining": 185000,
+    "aceTrainingGE": 940,
+    "aceTrainingRP": 480000,
+    "repairCost": {
+      "arcade": [
+        2495,
+        3395
+      ],
+      "realistic": [
+        6107,
+        8057
+      ],
+      "simulator": [
+        9526,
+        12568
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.97,
+      "realistic": 2.21,
+      "simulator": 5.32
+    },
+    "expMultiplier": 1.66
+  }
+}

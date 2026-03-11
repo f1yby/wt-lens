@@ -1,0 +1,33 @@
+{
+  "id": "arado-196a-5",
+  "economy": {
+    "researchCost": 4000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 400,
+    "crewTraining": 450,
+    "expertTraining": 3000,
+    "aceTrainingGE": 45,
+    "aceTrainingRP": 220000,
+    "repairCost": {
+      "arcade": [
+        148,
+        148
+      ],
+      "realistic": [
+        193,
+        193
+      ],
+      "simulator": [
+        5506,
+        5506
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.44,
+      "realistic": 0.9,
+      "simulator": 1.63
+    },
+    "expMultiplier": 1.0,
+    "freeRepairs": 30
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "id": "jp_cruiser_myoko",
+  "economy": {
+    "researchCost": 73000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 7480,
+    "crewTraining": 10000,
+    "expertTraining": 370000,
+    "aceTrainingGE": 1200,
+    "aceTrainingRP": 1180000,
+    "repairCost": {
+      "arcade": [
+        6448,
+        6448
+      ],
+      "realistic": [
+        5670,
+        5670
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 9.0,
+      "realistic": 12.0,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.84,
+    "freeRepairs": 30
+  }
+}

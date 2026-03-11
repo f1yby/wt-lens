@@ -1,0 +1,33 @@
+{
+  "id": "g_lynx",
+  "economy": {
+    "researchCost": 360000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 7860,
+    "crewTraining": 10000,
+    "expertTraining": 1600000,
+    "aceTrainingGE": 2000,
+    "aceTrainingRP": 1710000,
+    "repairCost": {
+      "arcade": [
+        4992,
+        4992
+      ],
+      "realistic": [
+        3200,
+        3200
+      ],
+      "simulator": [
+        3998,
+        3998
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.0,
+      "realistic": 5.11,
+      "simulator": 7.74
+    },
+    "expMultiplier": 2.14,
+    "freeRepairs": 30
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "id": "yak_1_litvyak",
+  "economy": {
+    "researchCost": 7900,
+    "purchaseCost": 0,
+    "purchaseCostGold": 700,
+    "crewTraining": 2300,
+    "expertTraining": 15000,
+    "aceTrainingGE": 125,
+    "aceTrainingRP": 320000,
+    "repairCost": {
+      "arcade": [
+        236,
+        236
+      ],
+      "realistic": [
+        451,
+        451
+      ],
+      "simulator": [
+        631,
+        631
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.48,
+      "realistic": 1.17,
+      "simulator": 2.34
+    },
+    "expMultiplier": 1.12,
+    "freeRepairs": 30
+  }
+}

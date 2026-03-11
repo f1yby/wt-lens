@@ -1,0 +1,166 @@
+{
+  "id": "germ_pzkpfw_38t_na",
+  "performance": {
+    "horsepower": 220.0,
+    "weight": 11.5,
+    "power_to_weight": 19.13,
+    "max_reverse_speed": 8.8,
+    "reload_time": 3.33,
+    "penetration": 89.0,
+    "max_speed": 60.3,
+    "crew_count": 5,
+    "elevation_speed": 15.0,
+    "traverse_speed": 25.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "vertical",
+    "elevation_range": [
+      -10.0,
+      25.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 35.0,
+    "mainGun": {
+      "name": "37mm_KwK38_t",
+      "caliber": 37.0,
+      "reloadTime": 3.33,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 4.33,
+        "expert": 3.83,
+        "ace": 3.33
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "37mm_pzgr_t",
+        "localizedName": "Pzgr. 34(t)",
+        "type": "apc_tank",
+        "caliber": 37.0,
+        "mass": 0.85,
+        "muzzleVelocity": 741.0,
+        "deMarre": {
+          "fullCaliber": 37.0,
+          "isApcbc": true,
+          "explosiveMass": 0.013,
+          "Cx": 0.6
+        },
+        "penetration0m": 62.8,
+        "explosiveMassKg": 0.013,
+        "explosiveType": "petn",
+        "tntEquivalent": 0.017
+      },
+      {
+        "name": "37mm_pzgr_t_umg",
+        "localizedName": "Pzgr.(t) umg.",
+        "type": "apc_tank",
+        "caliber": 37.0,
+        "mass": 0.815,
+        "muzzleVelocity": 750.0,
+        "deMarre": {
+          "fullCaliber": 37.0,
+          "isApcbc": true,
+          "explosiveMass": 0.013,
+          "Cx": 0.6
+        },
+        "penetration0m": 61.7,
+        "explosiveMassKg": 0.013,
+        "explosiveType": "petn",
+        "tntEquivalent": 0.017
+      },
+      {
+        "name": "37mm_pzgr_40_37_t",
+        "localizedName": "PzGr. 40",
+        "type": "apcr_tank",
+        "caliber": 16.0,
+        "mass": 0.368,
+        "muzzleVelocity": 1020.0,
+        "deMarre": {
+          "fullCaliber": 37.0,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "isApcr": true,
+          "coreCaliber": 16.0,
+          "coreMass": 0.23,
+          "Cx": 0.47
+        },
+        "penetration0m": 89.0
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2200.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 5,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      5.9,
+      14.8,
+      23.7,
+      37.7,
+      60.3
+    ],
+    "reverse_gear_speeds": [
+      8.8
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 11.0,
+    "track_width": 0.25,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_92mm_MG34",
+        "caliber": 7.9,
+        "ammo": 2100,
+        "reloadTime": 8.0,
+        "rateOfFire": 900,
+        "bulletType": "ap_ball"
+      }
+    ],
+    "main_gun_ammo": 60,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 3000,
+    "purchaseCost": 6300,
+    "crewTraining": 1800,
+    "expertTraining": 6300,
+    "aceTrainingGE": 75,
+    "aceTrainingRP": 135000,
+    "repairCost": {
+      "arcade": [
+        257,
+        330
+      ],
+      "realistic": [
+        294,
+        378
+      ],
+      "simulator": [
+        368,
+        473
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.19,
+      "realistic": 0.24,
+      "simulator": 0.25
+    },
+    "expMultiplier": 1.06
+  }
+}

@@ -1,0 +1,159 @@
+{
+  "id": "ussr_t_34_85_d_5t",
+  "performance": {
+    "horsepower": 500.0,
+    "weight": 32.0,
+    "power_to_weight": 15.62,
+    "max_reverse_speed": 8.4,
+    "reload_time": 8.33,
+    "penetration": 148.1,
+    "max_speed": 55.0,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 25.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -5.0,
+      28.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 33.0,
+    "mainGun": {
+      "name": "85mm_D5T",
+      "caliber": 85.0,
+      "reloadTime": 8.33,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 10.83,
+        "expert": 9.58,
+        "ace": 8.33
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "85mm_br_365k",
+        "localizedName": "BR-365K",
+        "type": "aphe_tank",
+        "caliber": 85.0,
+        "mass": 9.2,
+        "muzzleVelocity": 792.0,
+        "deMarre": {
+          "fullCaliber": 85.0,
+          "isApcbc": false,
+          "explosiveMass": 0.05,
+          "Cx": 0.6106
+        },
+        "penetration0m": 148.1,
+        "explosiveMassKg": 0.05,
+        "explosiveType": "a_ix_2",
+        "tntEquivalent": 0.07
+      },
+      {
+        "name": "85mm_o_365k",
+        "localizedName": "O-365K",
+        "type": "he_frag_tank",
+        "caliber": 85.0,
+        "mass": 9.54,
+        "muzzleVelocity": 785.0,
+        "explosiveMassKg": 0.741,
+        "explosiveType": "tnt",
+        "tntEquivalent": 0.741
+      },
+      {
+        "name": "85mm_br_365a",
+        "localizedName": "BR-365",
+        "type": "aphebc_tank",
+        "caliber": 85.0,
+        "mass": 9.2,
+        "muzzleVelocity": 792.0,
+        "deMarre": {
+          "fullCaliber": 85.0,
+          "isApcbc": false,
+          "explosiveMass": 0.164,
+          "Cx": 0.3308
+        },
+        "penetration0m": 135.7,
+        "explosiveMassKg": 0.164,
+        "explosiveType": "tnt",
+        "tntEquivalent": 0.164
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 1800.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 5,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      7.5,
+      16.0,
+      22.4,
+      34.2,
+      55.0
+    ],
+    "reverse_gear_speeds": [
+      8.4
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 31.4,
+    "track_width": 0.5,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_DT",
+        "caliber": 7.6,
+        "ammo": 1890,
+        "reloadTime": 8.0,
+        "rateOfFire": 600,
+        "bulletType": "ap_i_ball"
+      }
+    ],
+    "main_gun_ammo": 56,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 33000,
+    "purchaseCost": 105000,
+    "crewTraining": 30000,
+    "expertTraining": 105000,
+    "aceTrainingGE": 470,
+    "aceTrainingRP": 360000,
+    "repairCost": {
+      "arcade": [
+        1248,
+        1604
+      ],
+      "realistic": [
+        1496,
+        1923
+      ],
+      "simulator": [
+        1916,
+        2463
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.76,
+      "realistic": 1.21,
+      "simulator": 1.44
+    },
+    "expMultiplier": 1.48
+  }
+}

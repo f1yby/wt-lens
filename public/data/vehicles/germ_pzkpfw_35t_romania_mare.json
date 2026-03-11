@@ -1,0 +1,174 @@
+{
+  "id": "germ_pzkpfw_35t_romania_mare",
+  "performance": {
+    "horsepower": 120.0,
+    "weight": 10.5,
+    "power_to_weight": 11.43,
+    "max_reverse_speed": 33.5,
+    "reload_time": 3.33,
+    "penetration": 84.0,
+    "max_speed": 33.5,
+    "crew_count": 5,
+    "elevation_speed": 15.0,
+    "traverse_speed": 25.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "vertical",
+    "elevation_range": [
+      -10.0,
+      25.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 35.0,
+    "mainGun": {
+      "name": "37mm_KwK34_t",
+      "caliber": 37.0,
+      "reloadTime": 3.33,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 4.33,
+        "expert": 3.83,
+        "ace": 3.33
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "37mm_pzgr_t",
+        "localizedName": "Pzgr. 34(t)",
+        "type": "apc_tank",
+        "caliber": 37.0,
+        "mass": 0.85,
+        "muzzleVelocity": 675.0,
+        "deMarre": {
+          "fullCaliber": 37.0,
+          "isApcbc": true,
+          "explosiveMass": 0.013,
+          "Cx": 0.6
+        },
+        "penetration0m": 55.0,
+        "explosiveMassKg": 0.013,
+        "explosiveType": "petn",
+        "tntEquivalent": 0.017
+      },
+      {
+        "name": "37mm_pzgr_t_umg",
+        "localizedName": "Pzgr.(t) umg.",
+        "type": "apc_tank",
+        "caliber": 37.0,
+        "mass": 0.815,
+        "muzzleVelocity": 675.0,
+        "deMarre": {
+          "fullCaliber": 37.0,
+          "isApcbc": true,
+          "explosiveMass": 0.013,
+          "Cx": 0.6
+        },
+        "penetration0m": 53.1,
+        "explosiveMassKg": 0.013,
+        "explosiveType": "petn",
+        "tntEquivalent": 0.017
+      },
+      {
+        "name": "37mm_pzgr_40_37_t",
+        "localizedName": "PzGr. 40",
+        "type": "apcr_tank",
+        "caliber": 16.0,
+        "mass": 0.368,
+        "muzzleVelocity": 980.0,
+        "deMarre": {
+          "fullCaliber": 37.0,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "isApcr": true,
+          "coreCaliber": 16.0,
+          "coreMass": 0.23,
+          "Cx": 0.47
+        },
+        "penetration0m": 84.0
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 1800.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 6,
+    "reverse_gears": 6,
+    "forward_gear_speeds": [
+      2.8,
+      3.2,
+      6.9,
+      13.6,
+      24.9,
+      33.5
+    ],
+    "reverse_gear_speeds": [
+      2.8,
+      3.2,
+      6.9,
+      13.6,
+      24.9,
+      33.5
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 10.3,
+    "track_width": 0.33,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_92mm_ZB_VZ37",
+        "caliber": 7.9,
+        "ammo": 1800,
+        "reloadTime": 8.0,
+        "rateOfFire": 768,
+        "bulletType": "ap_ball"
+      }
+    ],
+    "main_gun_ammo": 72,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 4000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 400,
+    "crewTraining": 450,
+    "expertTraining": 3000,
+    "aceTrainingGE": 45,
+    "aceTrainingRP": 220000,
+    "repairCost": {
+      "arcade": [
+        409,
+        409
+      ],
+      "realistic": [
+        573,
+        573
+      ],
+      "simulator": [
+        837,
+        837
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.42,
+      "realistic": 0.62,
+      "simulator": 0.93
+    },
+    "expMultiplier": 1.0,
+    "freeRepairs": 30
+  }
+}

@@ -1,0 +1,159 @@
+{
+  "id": "fr_amx_30_auf_1",
+  "performance": {
+    "horsepower": 680.0,
+    "weight": 43.5,
+    "power_to_weight": 15.63,
+    "max_reverse_speed": 65.1,
+    "reload_time": 7.5,
+    "penetration": null,
+    "max_speed": 65.1,
+    "crew_count": 5,
+    "elevation_speed": 5.0,
+    "traverse_speed": 10.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -5.0,
+      66.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 71.0,
+    "mainGun": {
+      "name": "155mm_GCT_F1",
+      "caliber": 155.0,
+      "reloadTime": 7.5,
+      "autoLoader": true,
+      "reloadTimes": {
+        "base": 7.5,
+        "expert": 7.5,
+        "ace": 7.5
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "155mm_oe_155_56_he",
+        "localizedName": "OE 155 56",
+        "type": "he_frag_tank",
+        "caliber": 155.0,
+        "mass": 43.75,
+        "muzzleVelocity": 810.0,
+        "explosiveMassKg": 6.8,
+        "explosiveType": "tnt",
+        "tntEquivalent": 6.8
+      },
+      {
+        "name": "155mm_m107_pf",
+        "localizedName": "M107 (PF)",
+        "type": "he_frag_radio_fuse",
+        "caliber": 155.0,
+        "mass": 43.1,
+        "muzzleVelocity": 580.0,
+        "explosiveMassKg": 6.98,
+        "explosiveType": "comp_b",
+        "tntEquivalent": 8.865
+      },
+      {
+        "name": "155mm_m110",
+        "localizedName": "M110",
+        "type": "smoke_tank",
+        "caliber": 155.0,
+        "mass": 40.8,
+        "muzzleVelocity": 563.0,
+        "explosiveMassKg": 0.05,
+        "explosiveType": "smoke_composition",
+        "tntEquivalent": 0.05
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": true,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2400.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 10,
+    "reverse_gears": 10,
+    "forward_gear_speeds": [
+      4.0,
+      6.9,
+      10.0,
+      10.8,
+      17.3,
+      17.4,
+      26.0,
+      27.1,
+      43.4,
+      65.1
+    ],
+    "reverse_gear_speeds": [
+      4.0,
+      6.9,
+      10.0,
+      10.8,
+      17.3,
+      17.4,
+      26.0,
+      27.1,
+      43.4,
+      65.1
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 42.7,
+    "track_width": 0.57,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner2",
+        "name": "12_7mm_M2_HB",
+        "caliber": 12.7,
+        "ammo": 800,
+        "reloadTime": 8.0,
+        "rateOfFire": 575,
+        "bulletType": "ap_i_t_ball_M20"
+      }
+    ],
+    "main_gun_ammo": 42,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 82000,
+    "purchaseCost": 240000,
+    "crewTraining": 68000,
+    "expertTraining": 240000,
+    "aceTrainingGE": 990,
+    "aceTrainingRP": 620000,
+    "repairCost": {
+      "arcade": [
+        4343,
+        5640
+      ],
+      "realistic": [
+        4836,
+        6281
+      ],
+      "simulator": [
+        7157,
+        9295
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.35,
+      "realistic": 2.1,
+      "simulator": 2.44
+    },
+    "expMultiplier": 1.84
+  }
+}

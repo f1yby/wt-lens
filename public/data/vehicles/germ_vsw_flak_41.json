@@ -1,0 +1,152 @@
+{
+  "id": "germ_vsw_flak_41",
+  "performance": {
+    "horsepower": 340.0,
+    "weight": 26.0,
+    "power_to_weight": 13.08,
+    "max_reverse_speed": 5.5,
+    "reload_time": 4.0,
+    "penetration": 285.3,
+    "max_speed": 58.1,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 10.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -3.0,
+      90.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 93.0,
+    "mainGun": {
+      "name": "88mm_Flak41",
+      "caliber": 88.0,
+      "reloadTime": 4.0,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 5.2,
+        "expert": 4.6,
+        "ace": 4.0
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "88mm_pzrg_39_43",
+        "localizedName": "PzGr 39/43",
+        "type": "apcbc_tank",
+        "caliber": 88.0,
+        "mass": 10.16,
+        "muzzleVelocity": 980.0,
+        "deMarre": {
+          "fullCaliber": 88.0,
+          "isApcbc": true,
+          "explosiveMass": 0.064,
+          "Cx": 0.2623
+        },
+        "penetration0m": 230.8,
+        "explosiveMassKg": 0.064,
+        "explosiveType": "h10",
+        "tntEquivalent": 0.09
+      },
+      {
+        "name": "88mm_sprgr_flak_41",
+        "localizedName": "Sprgr. Flak 41",
+        "type": "he_frag_dist_fuse",
+        "caliber": 88.0,
+        "mass": 9.4,
+        "muzzleVelocity": 1000.0,
+        "explosiveMassKg": 1.0,
+        "explosiveType": "fp60_40",
+        "tntEquivalent": 1.0
+      },
+      {
+        "name": "88mm_pzrg_40_43",
+        "localizedName": "PzGr 40/43",
+        "type": "apcr_tank",
+        "caliber": 35.0,
+        "mass": 7.3,
+        "muzzleVelocity": 1125.0,
+        "deMarre": {
+          "fullCaliber": 88.0,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "isApcr": true,
+          "coreCaliber": 35.0,
+          "coreMass": 2.0,
+          "Cx": 0.28
+        },
+        "penetration0m": 285.3
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 3600.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 6,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      5.7,
+      11.5,
+      18.2,
+      28.6,
+      41.2,
+      58.1
+    ],
+    "reverse_gear_speeds": [
+      5.5
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 25.5,
+    "track_width": 0.66,
+    "secondary_weapons": null,
+    "main_gun_ammo": 48,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 54000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 3850,
+    "crewTraining": 10000,
+    "expertTraining": 290000,
+    "aceTrainingGE": 710,
+    "aceTrainingRP": 960000,
+    "repairCost": {
+      "arcade": [
+        1725,
+        1725
+      ],
+      "realistic": [
+        2104,
+        2104
+      ],
+      "simulator": [
+        2820,
+        2820
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.29,
+      "realistic": 3.58,
+      "simulator": 4.63
+    },
+    "expMultiplier": 1.66,
+    "freeRepairs": 30
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "id": "mig-15bis_nr23_china",
+  "economy": {
+    "researchCost": 105000,
+    "purchaseCost": 300000,
+    "crewTraining": 86000,
+    "expertTraining": 300000,
+    "aceTrainingGE": 1700,
+    "aceTrainingRP": 720000,
+    "repairCost": {
+      "arcade": [
+        2798,
+        4164
+      ],
+      "realistic": [
+        8052,
+        11983
+      ],
+      "simulator": [
+        9167,
+        13641
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.18,
+      "realistic": 3.71,
+      "simulator": 6.0
+    },
+    "expMultiplier": 1.96
+  }
+}

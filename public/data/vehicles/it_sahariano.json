@@ -1,0 +1,141 @@
+{
+  "id": "it_sahariano",
+  "performance": {
+    "horsepower": 275.0,
+    "weight": 13.5,
+    "power_to_weight": 20.37,
+    "max_reverse_speed": 4.5,
+    "reload_time": 4.0,
+    "penetration": 62.6,
+    "max_speed": 60.2,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 14.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -10.0,
+      20.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 30.0,
+    "mainGun": {
+      "name": "47mm_Ansaldo_47_40_M38",
+      "caliber": 47.0,
+      "reloadTime": 4.0,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 5.2,
+        "expert": 4.6,
+        "ace": 4.0
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "47mm_m39_apc",
+        "localizedName": "Granata Perforante mod.39",
+        "type": "aphe_tank",
+        "caliber": 47.0,
+        "mass": 1.44,
+        "muzzleVelocity": 755.0,
+        "deMarre": {
+          "fullCaliber": 47.0,
+          "isApcbc": false,
+          "explosiveMass": 0.03,
+          "Cx": 0.3
+        },
+        "penetration0m": 62.6,
+        "explosiveMassKg": 0.03,
+        "explosiveType": "tnt",
+        "tntEquivalent": 0.03
+      },
+      {
+        "name": "47mm_m35_he",
+        "localizedName": "Granata mod.35",
+        "type": "he_frag_tank",
+        "caliber": 47.0,
+        "mass": 2.37,
+        "muzzleVelocity": 364.0,
+        "explosiveMassKg": 0.15,
+        "explosiveType": "tnt",
+        "tntEquivalent": 0.15
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2100.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 3,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      15.7,
+      31.8,
+      60.2
+    ],
+    "reverse_gear_speeds": [
+      4.5
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 13.0,
+    "track_width": 0.2,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "8mm_Breda_Mod38",
+        "caliber": 8.0,
+        "ammo": 288,
+        "reloadTime": 8.0,
+        "rateOfFire": 600,
+        "bulletType": "ap_i_t_ball"
+      }
+    ],
+    "main_gun_ammo": 122,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 9200,
+    "purchaseCost": 0,
+    "purchaseCostGold": 850,
+    "crewTraining": 3400,
+    "expertTraining": 23000,
+    "aceTrainingGE": 160,
+    "aceTrainingRP": 380000,
+    "repairCost": {
+      "arcade": [
+        424,
+        424
+      ],
+      "realistic": [
+        404,
+        404
+      ],
+      "simulator": [
+        505,
+        505
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.72,
+      "realistic": 1.0,
+      "simulator": 1.16
+    },
+    "expMultiplier": 1.18,
+    "freeRepairs": 30
+  }
+}

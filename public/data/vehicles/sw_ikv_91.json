@@ -1,0 +1,148 @@
+{
+  "id": "sw_ikv_91",
+  "performance": {
+    "horsepower": 330.0,
+    "weight": 16.3,
+    "power_to_weight": 20.25,
+    "max_reverse_speed": 11.4,
+    "reload_time": 6.0,
+    "penetration": 400.0,
+    "max_speed": 64.0,
+    "crew_count": 5,
+    "elevation_speed": 15.0,
+    "traverse_speed": 25.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -10.0,
+      15.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 25.0,
+    "mainGun": {
+      "name": "90mm_Bofors_ikv",
+      "caliber": 90.0,
+      "reloadTime": 6.0,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 7.8,
+        "expert": 6.9,
+        "ace": 6.0
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "90mm_slpsgr_m72",
+        "localizedName": "slpsgr m/72",
+        "type": "heat_fs_tank",
+        "caliber": 90.0,
+        "mass": 4.5,
+        "muzzleVelocity": 825.0,
+        "penetration0m": 400.0,
+        "explosiveMassKg": 0.6,
+        "explosiveType": "octol",
+        "tntEquivalent": 0.75
+      },
+      {
+        "name": "90mm_slsgr_m72",
+        "localizedName": "slsgr m/72",
+        "type": "he_frag_tank",
+        "caliber": 90.0,
+        "mass": 6.67,
+        "muzzleVelocity": 600.0,
+        "explosiveMassKg": 1.46,
+        "explosiveType": "comp_b",
+        "tntEquivalent": 1.854
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2200.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 8,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      8.6,
+      17.2,
+      22.1,
+      30.7,
+      36.6,
+      45.4,
+      53.0,
+      64.0
+    ],
+    "reverse_gear_speeds": [
+      5.5,
+      11.4
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 16.0,
+    "track_width": 0.55,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "8mm_Ksp_m39_B",
+        "caliber": 7.6,
+        "ammo": 2000,
+        "reloadTime": 8.0,
+        "rateOfFire": 648,
+        "bulletType": "ap_ball"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "8mm_Ksp_m39_B",
+        "caliber": 7.6,
+        "ammo": 2250,
+        "reloadTime": 8.0,
+        "rateOfFire": 648,
+        "bulletType": "ap_ball"
+      }
+    ],
+    "main_gun_ammo": 59,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": true
+  },
+  "economy": {
+    "researchCost": 95000,
+    "purchaseCost": 270000,
+    "crewTraining": 78000,
+    "expertTraining": 270000,
+    "aceTrainingGE": 1100,
+    "aceTrainingRP": 670000,
+    "repairCost": {
+      "arcade": [
+        2990,
+        4391
+      ],
+      "realistic": [
+        3578,
+        5254
+      ],
+      "simulator": [
+        4862,
+        7140
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.13,
+      "realistic": 1.58,
+      "simulator": 2.05
+    },
+    "expMultiplier": 1.9
+  }
+}

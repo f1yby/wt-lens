@@ -1,0 +1,27 @@
+{
+  "id": "it_ciclone_class_ghibli",
+  "economy": {
+    "researchCost": 220000,
+    "purchaseCost": 640000,
+    "crewTraining": 185000,
+    "expertTraining": 640000,
+    "aceTrainingGE": 1400,
+    "aceTrainingRP": 620000,
+    "repairCost": {
+      "arcade": [
+        8906,
+        11389
+      ],
+      "realistic": [
+        12792,
+        16358
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.14,
+      "realistic": 4.12,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.84
+  }
+}

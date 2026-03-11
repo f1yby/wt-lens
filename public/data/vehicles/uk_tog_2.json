@@ -1,0 +1,151 @@
+{
+  "id": "uk_tog_2",
+  "performance": {
+    "horsepower": 600.0,
+    "weight": 72.5,
+    "power_to_weight": 8.28,
+    "max_reverse_speed": 14.0,
+    "reload_time": 5.99,
+    "penetration": 204.1,
+    "max_speed": 14.0,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 33.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -10.0,
+      20.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 30.0,
+    "mainGun": {
+      "name": "94mm_qf_28pdr",
+      "caliber": 94.0,
+      "reloadTime": 5.99,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 7.79,
+        "expert": 6.89,
+        "ace": 5.99
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "94mm_shot_mk1",
+        "localizedName": "Shot Mk.1",
+        "type": "apcbc_solid_medium_caliber_tank",
+        "caliber": 94.0,
+        "mass": 14.5,
+        "muzzleVelocity": 792.0,
+        "deMarre": {
+          "fullCaliber": 94.0,
+          "isApcbc": true,
+          "explosiveMass": 0,
+          "Cx": 0.3
+        },
+        "penetration0m": 204.1
+      },
+      {
+        "name": "94mm_shell_mk1",
+        "localizedName": "Shell Mk.1",
+        "type": "he_frag_tank",
+        "caliber": 94.0,
+        "mass": 12.7,
+        "muzzleVelocity": 792.0,
+        "explosiveMassKg": 0.92,
+        "explosiveType": "tnt",
+        "tntEquivalent": 0.92
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2200.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 5,
+    "reverse_gears": 5,
+    "forward_gear_speeds": [
+      1.4,
+      3.3,
+      5.7,
+      9.2,
+      14.0
+    ],
+    "reverse_gear_speeds": [
+      1.4,
+      3.3,
+      5.7,
+      9.2,
+      14.0
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 71.0,
+    "track_width": 0.8,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_92mm_BESA",
+        "caliber": 7.9,
+        "ammo": 4950,
+        "reloadTime": 8.0,
+        "rateOfFire": 600,
+        "bulletType": "ap_i_ball"
+      },
+      {
+        "trigger": "gunner3",
+        "name": "50mm_uk_smoke_mortar_launcher",
+        "caliber": 0,
+        "ammo": 12,
+        "rateOfFire": 12
+      }
+    ],
+    "main_gun_ammo": 68,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 46000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 2980,
+    "crewTraining": 10000,
+    "expertTraining": 250000,
+    "aceTrainingGE": 630,
+    "aceTrainingRP": 870000,
+    "repairCost": {
+      "arcade": [
+        1595,
+        1595
+      ],
+      "realistic": [
+        1768,
+        1768
+      ],
+      "simulator": [
+        2443,
+        2443
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.03,
+      "realistic": 3.1,
+      "simulator": 3.4
+    },
+    "expMultiplier": 1.6,
+    "freeRepairs": 30
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "id": "avenger_mk1",
+  "economy": {
+    "researchCost": 11000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 1000,
+    "crewTraining": 4800,
+    "expertTraining": 32000,
+    "aceTrainingGE": 250,
+    "aceTrainingRP": 440000,
+    "repairCost": {
+      "arcade": [
+        546,
+        546
+      ],
+      "realistic": [
+        2654,
+        2654
+      ],
+      "simulator": [
+        1206,
+        1206
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.51,
+      "realistic": 4.27,
+      "simulator": 5.4
+    },
+    "expMultiplier": 1.24,
+    "freeRepairs": 30
+  }
+}

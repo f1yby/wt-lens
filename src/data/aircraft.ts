@@ -1,7 +1,6 @@
 import type { AircraftVehicle, AircraftType, VehicleStats, GameMode, StatsMonthRange, EconomyData } from '../types';
 import { getDefaultStatsMonthRange, getMonthRangeCacheKey } from '../types';
-import { StatSharkEntry, cleanName, buildStatsMapByMonthRange, convertToVehicleStats } from './base';
-import { initStatsMonthService, isServiceInitialized } from '../services/statsMonthService';
+import { StatSharkEntry, cleanName, buildStatsMapByMonthRange, convertToVehicleStats, loadStatsForRange } from './base';
 
 interface AircraftEntry {
   id: string;
@@ -17,39 +16,56 @@ interface AircraftEntry {
   unreleased?: boolean;
   releaseDate?: string;
   ghost?: boolean;
+  // economy is NOT included in the index — load via loadAircraftDetail()
+}
+
+/** Detail entry loaded from aircrafts/{id}.json */
+export interface AircraftDetailEntry {
+  id: string;
   economy?: EconomyData;
 }
 
 // Cache for loaded raw data
-let statsData: StatSharkEntry[] | null = null;
 let aircraftData: AircraftEntry[] | null = null;
 // Cache for merged aircraft by month range (key: startMonth_endMonth)
 const aircraftByMonthRange = new Map<string, AircraftVehicle[]>();
+// Cache for individual aircraft detail data
+const aircraftDetailCache = new Map<string, AircraftDetailEntry>();
 
 /**
- * Load stats data from JSON
- */
-async function loadStatsData(): Promise<StatSharkEntry[]> {
-  if (statsData) return statsData;
-  const response = await fetch('/wt-lens/data/stats.json');
-  statsData = await response.json();
-  
-  // Initialize stats month service with loaded data
-  if (!isServiceInitialized()) {
-    initStatsMonthService(statsData!);
-  }
-  
-  return statsData!;
-}
-
-/**
- * Load aircraft data from JSON
+ * Load aircraft data from aircraft-index.json (lightweight, no economy).
  */
 async function loadAircraftData(): Promise<AircraftEntry[]> {
   if (aircraftData) return aircraftData;
-  const response = await fetch('/wt-lens/data/aircraft.json');
+  const response = await fetch('/wt-lens/data/aircraft-index.json');
+  if (!response.ok) {
+    throw new Error(`Failed to load aircraft index: ${response.status}`);
+  }
   aircraftData = await response.json();
   return aircraftData!;
+}
+
+/**
+ * Load individual aircraft detail (economy data) from aircrafts/{id}.json
+ */
+export async function loadAircraftDetail(aircraftId: string): Promise<AircraftDetailEntry | null> {
+  if (aircraftDetailCache.has(aircraftId)) {
+    return aircraftDetailCache.get(aircraftId)!;
+  }
+  
+  try {
+    const response = await fetch(`/wt-lens/data/aircrafts/${aircraftId}.json`);
+    if (!response.ok) {
+      console.warn(`Failed to load aircraft detail for ${aircraftId}: ${response.status}`);
+      return null;
+    }
+    const detail: AircraftDetailEntry = await response.json();
+    aircraftDetailCache.set(aircraftId, detail);
+    return detail;
+  } catch (error) {
+    console.warn(`Failed to load detail for ${aircraftId}:`, error);
+    return null;
+  }
 }
 
 /**
@@ -117,7 +133,7 @@ function mergeAircraftData(stats: StatSharkEntry[], aircraft: AircraftEntry[], r
       unreleased: aircraftEntry.unreleased ?? false,
       releaseDate: aircraftEntry.releaseDate,
       ghost: aircraftEntry.ghost ?? false,
-      economy: aircraftEntry.economy,
+      // economy is loaded on demand via loadAircraftDetail()
     };
 
     aircraftList.push(aircraftVehicle);
@@ -131,9 +147,6 @@ function mergeAircraftData(stats: StatSharkEntry[], aircraft: AircraftEntry[], r
  * @param range - Optional month range filter. Defaults to latest month if not specified.
  */
 export async function loadAircraft(range?: StatsMonthRange): Promise<AircraftVehicle[]> {
-  // Load stats data first to ensure month service is initialized
-  const stats = await loadStatsData();
-  
   const targetRange = range ?? getDefaultStatsMonthRange();
   const cacheKey = getMonthRangeCacheKey(targetRange);
   
@@ -141,6 +154,9 @@ export async function loadAircraft(range?: StatsMonthRange): Promise<AircraftVeh
   if (aircraftByMonthRange.has(cacheKey)) {
     return aircraftByMonthRange.get(cacheKey)!;
   }
+
+  // Load stats data appropriate for the month range
+  const stats = await loadStatsForRange(targetRange);
 
   const aircraft = await loadAircraftData();
 

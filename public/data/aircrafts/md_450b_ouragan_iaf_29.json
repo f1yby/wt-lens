@@ -1,0 +1,33 @@
+{
+  "id": "md_450b_ouragan_iaf_29",
+  "economy": {
+    "researchCost": 95000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 8020,
+    "crewTraining": 10000,
+    "expertTraining": 440000,
+    "aceTrainingGE": 1500,
+    "aceTrainingRP": 1340000,
+    "repairCost": {
+      "arcade": [
+        2367,
+        2367
+      ],
+      "realistic": [
+        6492,
+        6492
+      ],
+      "simulator": [
+        8210,
+        8210
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.55,
+      "realistic": 6.99,
+      "simulator": 12.0
+    },
+    "expMultiplier": 1.9,
+    "freeRepairs": 30
+  }
+}

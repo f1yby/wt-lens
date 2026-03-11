@@ -1,0 +1,33 @@
+{
+  "id": "b_10b",
+  "economy": {
+    "researchCost": 4000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 400,
+    "crewTraining": 450,
+    "expertTraining": 3000,
+    "aceTrainingGE": 45,
+    "aceTrainingRP": 220000,
+    "repairCost": {
+      "arcade": [
+        147,
+        147
+      ],
+      "realistic": [
+        314,
+        314
+      ],
+      "simulator": [
+        329,
+        329
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.46,
+      "realistic": 1.0,
+      "simulator": 1.63
+    },
+    "expMultiplier": 1.0,
+    "freeRepairs": 30
+  }
+}

@@ -1,0 +1,163 @@
+{
+  "id": "us_rdf_lt",
+  "performance": {
+    "horsepower": 350.0,
+    "weight": 13.4,
+    "power_to_weight": 26.12,
+    "max_reverse_speed": 10.1,
+    "reload_time": 0.86,
+    "penetration": 275.8,
+    "max_speed": 64.4,
+    "crew_count": 5,
+    "elevation_speed": 60.0,
+    "traverse_speed": 60.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "both",
+    "elevation_range": [
+      -15.0,
+      40.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": [
+      500,
+      300
+    ],
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": 583.1,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 55.0,
+    "mainGun": {
+      "name": "75mm_XM274_Ares",
+      "caliber": 75.0,
+      "reloadTime": 0.86,
+      "autoLoader": true,
+      "reloadTimes": {
+        "base": 0.86,
+        "expert": 0.86,
+        "ace": 0.86
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "75mm_xm885",
+        "localizedName": "XM885",
+        "type": "apds_fs_tungsten_l10_l15_tank",
+        "caliber": 26.0,
+        "mass": 2.27,
+        "muzzleVelocity": 1463.0,
+        "lanzOdermatt": {
+          "workingLength": 270.0,
+          "density": 17500.0,
+          "material": "tungsten",
+          "Cx": 0.5
+        },
+        "penetration0m": 275.8,
+        "penetrationData": {
+          "at0m": {
+            "angle0": 275.8,
+            "angle30": 238.8,
+            "angle60": 137.9
+          }
+        }
+      },
+      {
+        "name": "75mm_xm884",
+        "localizedName": "XM884",
+        "type": "he_frag_radio_fuse",
+        "caliber": 75.0,
+        "mass": 6.3,
+        "muzzleVelocity": 910.0,
+        "explosiveMassKg": 0.745,
+        "explosiveType": "comp_a",
+        "tntEquivalent": 0.939
+      }
+    ],
+    "penetrationData": {
+      "at0m": {
+        "angle0": 275.8,
+        "angle30": 238.8,
+        "angle60": 137.9
+      }
+    },
+    "autoLoader": true,
+    "engine_manufacturer": "general_motors",
+    "engine_model": "6v_53t",
+    "engine_type": null,
+    "engine_max_rpm": 2800.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 8,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      8.0,
+      16.1,
+      20.6,
+      28.6,
+      35.2,
+      45.8,
+      53.6,
+      64.4
+    ],
+    "reverse_gear_speeds": [
+      5.1,
+      10.1
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 13.0,
+    "track_width": 0.445,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_M240",
+        "caliber": 7.6,
+        "ammo": 2600,
+        "reloadTime": 8.0,
+        "rateOfFire": 940,
+        "bulletType": "ap_ball"
+      }
+    ],
+    "main_gun_ammo": 60,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": true
+  },
+  "economy": {
+    "researchCost": 350000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 9620,
+    "crewTraining": 10000,
+    "expertTraining": 1560000,
+    "aceTrainingGE": 2200,
+    "aceTrainingRP": 2420000,
+    "repairCost": {
+      "arcade": [
+        2833,
+        2833
+      ],
+      "realistic": [
+        2963,
+        2963
+      ],
+      "simulator": [
+        3178,
+        3178
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.7,
+      "realistic": 3.21,
+      "simulator": 3.98
+    },
+    "expMultiplier": 2.44,
+    "freeRepairs": 30
+  }
+}

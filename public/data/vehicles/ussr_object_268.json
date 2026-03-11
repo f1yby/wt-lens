@@ -1,0 +1,160 @@
+{
+  "id": "ussr_object_268",
+  "performance": {
+    "horsepower": 750.0,
+    "weight": 50.0,
+    "power_to_weight": 15.0,
+    "max_reverse_speed": 9.9,
+    "reload_time": 17.14,
+    "penetration": 250.0,
+    "max_speed": 50.2,
+    "crew_count": 5,
+    "elevation_speed": 2.0,
+    "traverse_speed": 8.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -5.0,
+      15.0
+    ],
+    "traverse_range": [
+      -6.0,
+      6.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 20.0,
+    "mainGun": {
+      "name": "152mm_M64",
+      "caliber": 152.0,
+      "reloadTime": 17.14,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 22.28,
+        "expert": 19.71,
+        "ace": 17.14
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "152mm_br_540b",
+        "localizedName": "BR-540B",
+        "type": "aphebc_tank",
+        "caliber": 152.0,
+        "mass": 48.96,
+        "muzzleVelocity": 760.0,
+        "deMarre": {
+          "fullCaliber": 152.0,
+          "isApcbc": false,
+          "explosiveMass": 0.48,
+          "Cx": 0.3958
+        },
+        "penetration0m": 239.7,
+        "explosiveMassKg": 0.48,
+        "explosiveType": "a_ix_2",
+        "tntEquivalent": 0.672
+      },
+      {
+        "name": "152mm_of_540",
+        "localizedName": "OF-540",
+        "type": "he_frag_tank",
+        "caliber": 152.0,
+        "mass": 43.56,
+        "muzzleVelocity": 750.0,
+        "explosiveMassKg": 5.86,
+        "explosiveType": "tnt",
+        "tntEquivalent": 5.86
+      },
+      {
+        "name": "152mm_bp_540",
+        "localizedName": "BP-540",
+        "type": "heat_tank",
+        "caliber": 152.0,
+        "mass": 27.4,
+        "muzzleVelocity": 770.0,
+        "penetration0m": 250.0,
+        "explosiveMassKg": 3.839,
+        "explosiveType": "a_ix_1",
+        "tntEquivalent": 4.376
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2100.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 8,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      5.2,
+      7.3,
+      9.9,
+      13.7,
+      19.2,
+      26.6,
+      36.1,
+      50.2
+    ],
+    "reverse_gear_speeds": [
+      5.2,
+      9.9
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 49.5,
+    "track_width": 0.65,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "14_5mm_KPVT",
+        "caliber": 14.5,
+        "ammo": 500,
+        "reloadTime": 8.0,
+        "rateOfFire": 600,
+        "bulletType": "ap_i_t_ball"
+      }
+    ],
+    "main_gun_ammo": 35,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 48000,
+    "purchaseCost": 270000,
+    "crewTraining": 78000,
+    "expertTraining": 270000,
+    "aceTrainingGE": 1100,
+    "aceTrainingRP": 670000,
+    "repairCost": {
+      "arcade": [
+        4949,
+        6556
+      ],
+      "realistic": [
+        4855,
+        6430
+      ],
+      "simulator": [
+        6815,
+        9026
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.48,
+      "realistic": 2.1,
+      "simulator": 2.5
+    },
+    "expMultiplier": 1.9
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "id": "su_34",
+  "economy": {
+    "researchCost": 350000,
+    "purchaseCost": 940000,
+    "crewTraining": 270000,
+    "expertTraining": 940000,
+    "aceTrainingGE": 3700,
+    "aceTrainingRP": 1380000,
+    "repairCost": {
+      "arcade": [
+        3969,
+        5687
+      ],
+      "realistic": [
+        8904,
+        12756
+      ],
+      "simulator": [
+        12292,
+        17611
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.79,
+      "realistic": 2.91,
+      "simulator": 5.3
+    },
+    "expMultiplier": 2.62
+  }
+}

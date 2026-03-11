@@ -1,0 +1,31 @@
+{
+  "id": "f-86k_late_german",
+  "economy": {
+    "researchCost": 170000,
+    "purchaseCost": 480000,
+    "crewTraining": 135000,
+    "expertTraining": 480000,
+    "aceTrainingGE": 2400,
+    "aceTrainingRP": 950000,
+    "repairCost": {
+      "arcade": [
+        3389,
+        4543
+      ],
+      "realistic": [
+        9442,
+        12656
+      ],
+      "simulator": [
+        10159,
+        13618
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.3,
+      "realistic": 3.8,
+      "simulator": 6.0
+    },
+    "expMultiplier": 2.2
+  }
+}

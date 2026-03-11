@@ -1,0 +1,33 @@
+{
+  "id": "a-26c-45-dt",
+  "economy": {
+    "researchCost": 54000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 3850,
+    "crewTraining": 10000,
+    "expertTraining": 290000,
+    "aceTrainingGE": 940,
+    "aceTrainingRP": 960000,
+    "repairCost": {
+      "arcade": [
+        1642,
+        1642
+      ],
+      "realistic": [
+        5085,
+        5085
+      ],
+      "simulator": [
+        8291,
+        8291
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.18,
+      "realistic": 4.5,
+      "simulator": 9.95
+    },
+    "expMultiplier": 1.66,
+    "freeRepairs": 30
+  }
+}

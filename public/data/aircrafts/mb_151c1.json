@@ -1,0 +1,33 @@
+{
+  "id": "mb_151c1",
+  "economy": {
+    "researchCost": 5900,
+    "purchaseCost": 0,
+    "purchaseCostGold": 550,
+    "crewTraining": 1400,
+    "expertTraining": 9000,
+    "aceTrainingGE": 80,
+    "aceTrainingRP": 270000,
+    "repairCost": {
+      "arcade": [
+        164,
+        164
+      ],
+      "realistic": [
+        299,
+        299
+      ],
+      "simulator": [
+        342,
+        342
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.37,
+      "realistic": 0.93,
+      "simulator": 1.99
+    },
+    "expMultiplier": 1.06,
+    "freeRepairs": 30
+  }
+}

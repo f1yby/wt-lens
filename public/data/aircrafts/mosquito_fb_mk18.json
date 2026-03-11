@@ -1,0 +1,31 @@
+{
+  "id": "mosquito_fb_mk18",
+  "economy": {
+    "researchCost": 17000,
+    "purchaseCost": 105000,
+    "crewTraining": 30000,
+    "expertTraining": 105000,
+    "aceTrainingGE": 590,
+    "aceTrainingRP": 360000,
+    "repairCost": {
+      "arcade": [
+        970,
+        1407
+      ],
+      "realistic": [
+        1340,
+        1880
+      ],
+      "simulator": [
+        3077,
+        4316
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.74,
+      "realistic": 1.47,
+      "simulator": 2.81
+    },
+    "expMultiplier": 1.48
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "germ_artilleriefahrprahm_typ_d1",
+  "economy": {
+    "researchCost": 61000,
+    "purchaseCost": 230000,
+    "crewTraining": 65000,
+    "expertTraining": 230000,
+    "aceTrainingGE": 820,
+    "aceTrainingRP": 440000,
+    "repairCost": {
+      "arcade": [
+        2927,
+        3715
+      ],
+      "realistic": [
+        4577,
+        5809
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.31,
+      "realistic": 1.69,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.6
+  }
+}

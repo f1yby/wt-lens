@@ -1,0 +1,138 @@
+{
+  "id": "jp_btr_3e1",
+  "performance": {
+    "horsepower": 326.0,
+    "weight": 16.5,
+    "power_to_weight": 19.76,
+    "max_reverse_speed": 12.9,
+    "reload_time": 15.0,
+    "penetration": null,
+    "max_speed": 99.9,
+    "crew_count": 5,
+    "elevation_speed": 14.0,
+    "traverse_speed": 35.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "both",
+    "elevation_range": [
+      -5.0,
+      45.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": [
+      800,
+      600
+    ],
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": 1000.0,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 50.0,
+    "mainGun": null,
+    "ammunitions": null,
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": "mtu",
+    "engine_model": "6r_106_td_21",
+    "engine_type": null,
+    "engine_max_rpm": 2200.0,
+    "transmission_manufacturer": "allison",
+    "transmission_model": "3200_sp",
+    "transmission_type": "auto",
+    "forward_gears": 11,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      9.3,
+      18.6,
+      24.3,
+      34.9,
+      39.7,
+      46.1,
+      53.9,
+      64.9,
+      74.2,
+      86.6,
+      99.9
+    ],
+    "reverse_gear_speeds": [
+      6.5,
+      12.9
+    ],
+    "steer_type": null,
+    "empty_weight": 16.0,
+    "track_width": 0.4,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_PKTM",
+        "caliber": 7.6,
+        "ammo": 2000,
+        "reloadTime": 8.0,
+        "rateOfFire": 700,
+        "bulletType": "ap_i_ball"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "130mm_barrier_launcher",
+        "caliber": 130.0,
+        "ammo": 6,
+        "reloadTime": 20.0,
+        "rateOfFire": 120,
+        "bulletType": "atgm_tandem_tank",
+        "maxDistance": 5000,
+        "maxSpeed": 280,
+        "guidanceType": "saclos",
+        "penetration": 800,
+        "explosiveMass": 2.0,
+        "explosiveType": "ocfol"
+      },
+      {
+        "trigger": "gunner4",
+        "name": "30mm_AG_17",
+        "caliber": 30.0,
+        "ammo": 87,
+        "reloadTime": 1.0,
+        "rateOfFire": 400,
+        "bulletType": "he_frag_vog"
+      }
+    ],
+    "main_gun_ammo": 400,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": true
+  },
+  "economy": {
+    "researchCost": 160000,
+    "purchaseCost": 450000,
+    "crewTraining": 130000,
+    "expertTraining": 450000,
+    "aceTrainingGE": 2000,
+    "aceTrainingRP": 890000,
+    "repairCost": {
+      "arcade": [
+        3153,
+        5335
+      ],
+      "realistic": [
+        3130,
+        5297
+      ],
+      "simulator": [
+        3833,
+        6487
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.26,
+      "realistic": 1.58,
+      "simulator": 2.04
+    },
+    "expMultiplier": 2.14
+  }
+}

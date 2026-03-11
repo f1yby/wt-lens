@@ -1,0 +1,27 @@
+{
+  "id": "ussr_cruiser_kirov",
+  "economy": {
+    "researchCost": 33000,
+    "purchaseCost": 115000,
+    "crewTraining": 33000,
+    "expertTraining": 115000,
+    "aceTrainingGE": 820,
+    "aceTrainingRP": 440000,
+    "repairCost": {
+      "arcade": [
+        7929,
+        10730
+      ],
+      "realistic": [
+        7994,
+        10817
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 3.94,
+      "realistic": 6.0,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.6
+  }
+}

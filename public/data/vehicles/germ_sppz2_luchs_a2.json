@@ -1,0 +1,117 @@
+{
+  "id": "germ_sppz2_luchs_a2",
+  "performance": {
+    "horsepower": 390.0,
+    "weight": 19.9,
+    "power_to_weight": 19.6,
+    "max_reverse_speed": 89.7,
+    "reload_time": 8.0,
+    "penetration": null,
+    "max_speed": 89.7,
+    "crew_count": 5,
+    "elevation_speed": 60.0,
+    "traverse_speed": 60.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -15.0,
+      69.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": [
+      500,
+      300
+    ],
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": 583.1,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 84.0,
+    "mainGun": null,
+    "ammunitions": null,
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2500.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 8,
+    "reverse_gears": 8,
+    "forward_gear_speeds": [
+      8.5,
+      17.0,
+      21.9,
+      30.7,
+      38.8,
+      52.8,
+      66.4,
+      89.7
+    ],
+    "reverse_gear_speeds": [
+      8.7,
+      17.3,
+      22.4,
+      31.5,
+      39.7,
+      53.7,
+      67.7,
+      89.7
+    ],
+    "steer_type": null,
+    "empty_weight": 19.4,
+    "track_width": 0.4,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner2",
+        "name": "7_92mm_MG3",
+        "caliber": 7.6,
+        "ammo": 800,
+        "reloadTime": 8.0,
+        "rateOfFire": 1200,
+        "bulletType": "ap_ball"
+      }
+    ],
+    "main_gun_ammo": 500,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 95000,
+    "purchaseCost": 270000,
+    "crewTraining": 78000,
+    "expertTraining": 270000,
+    "aceTrainingGE": 1100,
+    "aceTrainingRP": 670000,
+    "repairCost": {
+      "arcade": [
+        2798,
+        4400
+      ],
+      "realistic": [
+        3341,
+        5254
+      ],
+      "simulator": [
+        4551,
+        7156
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.09,
+      "realistic": 1.58,
+      "simulator": 2.01
+    },
+    "expMultiplier": 1.9
+  }
+}

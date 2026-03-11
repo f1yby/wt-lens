@@ -1,0 +1,135 @@
+{
+  "id": "germ_flakpanzer_V_Coelian",
+  "performance": {
+    "horsepower": 600.0,
+    "weight": 44.8,
+    "power_to_weight": 13.39,
+    "max_reverse_speed": 3.3,
+    "reload_time": 0.38,
+    "penetration": 78.3,
+    "max_speed": 45.8,
+    "crew_count": 5,
+    "elevation_speed": 20.0,
+    "traverse_speed": 60.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -5.0,
+      90.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 95.0,
+    "mainGun": {
+      "name": "37mm_gerat_341",
+      "caliber": 37.0,
+      "reloadTime": 0.38,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 0.49,
+        "expert": 0.44,
+        "ace": 0.38
+      },
+      "rateOfFire": 250,
+      "beltReloadTime": 0.38
+    },
+    "ammunitions": [
+      {
+        "name": "37mm_sprgr_341",
+        "localizedName": "Sprgr.",
+        "type": "frag_i_t",
+        "caliber": 37.0,
+        "mass": 0.725,
+        "muzzleVelocity": 1040.0,
+        "explosiveMassKg": 0.065,
+        "explosiveType": "np_10",
+        "tntEquivalent": 0.085
+      },
+      {
+        "name": "37mm_pzgr_341",
+        "localizedName": "Pzgr.",
+        "type": "aphe",
+        "caliber": 37.0,
+        "mass": 0.82,
+        "muzzleVelocity": 1000.0,
+        "deMarre": {
+          "fullCaliber": 37.0,
+          "isApcbc": false,
+          "explosiveMass": 0.022,
+          "Cx": 0.45
+        },
+        "penetration0m": 78.3,
+        "explosiveMassKg": 0.022,
+        "explosiveType": "np_15",
+        "tntEquivalent": 0.029
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2500.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 7,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      3.4,
+      6.9,
+      11.0,
+      17.3,
+      24.9,
+      35.1,
+      45.8
+    ],
+    "reverse_gear_speeds": [
+      3.3
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 44.4,
+    "track_width": 0.66,
+    "secondary_weapons": null,
+    "main_gun_ammo": 750,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 71000,
+    "purchaseCost": 210000,
+    "crewTraining": 61000,
+    "expertTraining": 210000,
+    "aceTrainingGE": 890,
+    "aceTrainingRP": 570000,
+    "repairCost": {
+      "arcade": [
+        3265,
+        4412
+      ],
+      "realistic": [
+        3410,
+        4608
+      ],
+      "simulator": [
+        5174,
+        6992
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.32,
+      "realistic": 1.58,
+      "simulator": 2.27
+    },
+    "expMultiplier": 1.78
+  }
+}

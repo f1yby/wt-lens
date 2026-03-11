@@ -1,0 +1,170 @@
+{
+  "id": "ussr_smk",
+  "performance": {
+    "horsepower": 850.0,
+    "weight": 55.0,
+    "power_to_weight": 15.45,
+    "max_reverse_speed": 4.4,
+    "reload_time": 6.25,
+    "penetration": 77.5,
+    "max_speed": 35.3,
+    "crew_count": 5,
+    "elevation_speed": 3.0,
+    "traverse_speed": 15.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -7.0,
+      35.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 42.0,
+    "mainGun": {
+      "name": "76mm_L11_SMK",
+      "caliber": 76.2,
+      "reloadTime": 6.25,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 8.12,
+        "expert": 7.19,
+        "ace": 6.25
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "76mm_br_350a",
+        "localizedName": "BR-350A (MD-5 fuze)",
+        "type": "aphebc_tank",
+        "caliber": 76.2,
+        "mass": 6.3,
+        "muzzleVelocity": 612.0,
+        "deMarre": {
+          "fullCaliber": 76.2,
+          "isApcbc": false,
+          "explosiveMass": 0.15,
+          "Cx": 0.3598
+        },
+        "penetration0m": 77.5,
+        "explosiveMassKg": 0.15,
+        "explosiveType": "tnt",
+        "tntEquivalent": 0.15
+      },
+      {
+        "name": "76mm_of_350m",
+        "localizedName": "OF-350M",
+        "type": "he_frag_tank",
+        "caliber": 76.2,
+        "mass": 6.2,
+        "muzzleVelocity": 612.0,
+        "explosiveMassKg": 0.621,
+        "explosiveType": "tnt",
+        "tntEquivalent": 0.621
+      },
+      {
+        "name": "76mm_sh_354t",
+        "localizedName": "Sh-354T",
+        "type": "shrapnel_tank",
+        "caliber": 76.2,
+        "mass": 6.44,
+        "muzzleVelocity": 612.0,
+        "explosiveMassKg": 0.085,
+        "explosiveType": "tnt",
+        "tntEquivalent": 0.085
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 1850.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 4,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      4.6,
+      8.5,
+      16.1,
+      35.3
+    ],
+    "reverse_gear_speeds": [
+      4.4
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 54.6,
+    "track_width": 0.6,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "45mm_20K_for_T_35",
+        "caliber": 45.0,
+        "ammo": 300,
+        "rateOfFire": 20,
+        "bulletType": "aphebc_tank"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "12_7mm_DK",
+        "caliber": 12.7,
+        "ammo": 600,
+        "reloadTime": 8.0,
+        "rateOfFire": 600,
+        "bulletType": "ap_i_ball"
+      },
+      {
+        "trigger": "gunner3",
+        "name": "7_62mm_DT",
+        "caliber": 7.6,
+        "ammo": 1890,
+        "reloadTime": 8.0,
+        "rateOfFire": 600,
+        "bulletType": "ap_i_ball"
+      }
+    ],
+    "main_gun_ammo": 113,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 18000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 1300,
+    "crewTraining": 10000,
+    "expertTraining": 67000,
+    "aceTrainingGE": 330,
+    "aceTrainingRP": 570000,
+    "repairCost": {
+      "arcade": [
+        824,
+        824
+      ],
+      "realistic": [
+        796,
+        796
+      ],
+      "simulator": [
+        2418,
+        2418
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.53,
+      "realistic": 2.15,
+      "simulator": 2.85
+    },
+    "expMultiplier": 1.36,
+    "freeRepairs": 30
+  }
+}

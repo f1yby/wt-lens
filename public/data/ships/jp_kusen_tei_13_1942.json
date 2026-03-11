@@ -1,0 +1,29 @@
+{
+  "id": "jp_kusen_tei_13_1942",
+  "economy": {
+    "researchCost": 7900,
+    "purchaseCost": 0,
+    "purchaseCostGold": 700,
+    "crewTraining": 2300,
+    "expertTraining": 15000,
+    "aceTrainingGE": 125,
+    "aceTrainingRP": 320000,
+    "repairCost": {
+      "arcade": [
+        834,
+        834
+      ],
+      "realistic": [
+        581,
+        581
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.97,
+      "realistic": 0.93,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.12,
+    "freeRepairs": 30
+  }
+}

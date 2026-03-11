@@ -1,0 +1,33 @@
+{
+  "id": "he_219a_7",
+  "economy": {
+    "researchCost": 46000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 2980,
+    "crewTraining": 10000,
+    "expertTraining": 250000,
+    "aceTrainingGE": 820,
+    "aceTrainingRP": 870000,
+    "repairCost": {
+      "arcade": [
+        1127,
+        1127
+      ],
+      "realistic": [
+        1990,
+        1990
+      ],
+      "simulator": [
+        3829,
+        3829
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.76,
+      "realistic": 3.08,
+      "simulator": 8.33
+    },
+    "expMultiplier": 1.6,
+    "freeRepairs": 30
+  }
+}

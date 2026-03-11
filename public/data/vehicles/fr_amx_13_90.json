@@ -1,0 +1,146 @@
+{
+  "id": "fr_amx_13_90",
+  "performance": {
+    "horsepower": 270.0,
+    "weight": 14.5,
+    "power_to_weight": 18.62,
+    "max_reverse_speed": 6.8,
+    "reload_time": 5.0,
+    "penetration": 350.0,
+    "max_speed": 60.7,
+    "crew_count": 5,
+    "elevation_speed": 4.5,
+    "traverse_speed": 30.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -6.0,
+      13.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 19.0,
+    "mainGun": {
+      "name": "90mm_CN_90_F3",
+      "caliber": 90.0,
+      "reloadTime": 5.0,
+      "autoLoader": true,
+      "reloadTimes": {
+        "base": 5.0,
+        "expert": 5.0,
+        "ace": 5.0
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "90mm_occ_90_62",
+        "localizedName": "OCC 90-62",
+        "type": "heat_fs_tank",
+        "caliber": 90.0,
+        "mass": 3.65,
+        "muzzleVelocity": 950.0,
+        "penetration0m": 350.0,
+        "explosiveMassKg": 0.67,
+        "explosiveType": "comp_b",
+        "tntEquivalent": 0.851
+      },
+      {
+        "name": "90mm_ofum_ph90",
+        "localizedName": "OFUM PH90-F2",
+        "type": "smoke_tank",
+        "caliber": 90.0,
+        "mass": 10.2,
+        "muzzleVelocity": 750.0,
+        "explosiveMassKg": 0.05,
+        "explosiveType": "smoke_composition",
+        "tntEquivalent": 0.05
+      },
+      {
+        "name": "90mm_oe_90_f1",
+        "localizedName": "OE 90 F1",
+        "type": "he_frag_tank",
+        "caliber": 90.0,
+        "mass": 10.45,
+        "muzzleVelocity": 750.0,
+        "explosiveMassKg": 0.945,
+        "explosiveType": "tnt",
+        "tntEquivalent": 0.945
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": true,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 3300.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 5,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      7.1,
+      15.8,
+      26.8,
+      42.4,
+      60.7
+    ],
+    "reverse_gear_speeds": [
+      6.8
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 14.0,
+    "track_width": 0.38,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_5mm_MAC_31",
+        "caliber": 7.5,
+        "ammo": 4950,
+        "reloadTime": 5.0,
+        "rateOfFire": 550,
+        "bulletType": "ap_ball"
+      }
+    ],
+    "main_gun_ammo": 34,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 53000,
+    "purchaseCost": 300000,
+    "crewTraining": 86000,
+    "expertTraining": 300000,
+    "aceTrainingGE": 1200,
+    "aceTrainingRP": 720000,
+    "repairCost": {
+      "arcade": [
+        3124,
+        4488
+      ],
+      "realistic": [
+        3741,
+        5375
+      ],
+      "simulator": [
+        5088,
+        7311
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.12,
+      "realistic": 1.63,
+      "simulator": 2.07
+    },
+    "expMultiplier": 1.96
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "id": "mi_28a_sweden",
+  "economy": {
+    "researchCost": 400000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 9270,
+    "crewTraining": 10000,
+    "expertTraining": 1670000,
+    "aceTrainingGE": 2800,
+    "aceTrainingRP": 2150000,
+    "repairCost": {
+      "arcade": [
+        5544,
+        5544
+      ],
+      "realistic": [
+        3241,
+        3241
+      ],
+      "simulator": [
+        4007,
+        4007
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.0,
+      "realistic": 5.2,
+      "simulator": 8.41
+    },
+    "expMultiplier": 2.32,
+    "freeRepairs": 30
+  }
+}

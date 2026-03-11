@@ -1,0 +1,31 @@
+{
+  "id": "seafire_mk17",
+  "economy": {
+    "researchCost": 46000,
+    "purchaseCost": 155000,
+    "crewTraining": 45000,
+    "expertTraining": 155000,
+    "aceTrainingGE": 820,
+    "aceTrainingRP": 440000,
+    "repairCost": {
+      "arcade": [
+        2044,
+        2668
+      ],
+      "realistic": [
+        4821,
+        6110
+      ],
+      "simulator": [
+        7104,
+        9004
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.85,
+      "realistic": 1.94,
+      "simulator": 4.08
+    },
+    "expMultiplier": 1.6
+  }
+}

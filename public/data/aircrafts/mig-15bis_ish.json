@@ -1,0 +1,33 @@
+{
+  "id": "mig-15bis_ish",
+  "economy": {
+    "researchCost": 120000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 8560,
+    "crewTraining": 10000,
+    "expertTraining": 550000,
+    "aceTrainingGE": 1800,
+    "aceTrainingRP": 1600000,
+    "repairCost": {
+      "arcade": [
+        2290,
+        2290
+      ],
+      "realistic": [
+        6331,
+        6331
+      ],
+      "simulator": [
+        7577,
+        7577
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.52,
+      "realistic": 7.6,
+      "simulator": 12.0
+    },
+    "expMultiplier": 2.08,
+    "freeRepairs": 30
+  }
+}

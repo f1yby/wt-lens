@@ -1,0 +1,152 @@
+{
+  "id": "cn_su_76m_1943",
+  "performance": {
+    "horsepower": 140.0,
+    "weight": 10.5,
+    "power_to_weight": 13.33,
+    "max_reverse_speed": 5.3,
+    "reload_time": 5.0,
+    "penetration": 86.7,
+    "max_speed": 30.5,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 7.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -5.0,
+      15.0
+    ],
+    "traverse_range": [
+      -15.0,
+      15.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 20.0,
+    "mainGun": {
+      "name": "76mm_ZIS3",
+      "caliber": 76.2,
+      "reloadTime": 5.0,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 6.5,
+        "expert": 5.75,
+        "ace": 5.0
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "76mm_br_350a",
+        "localizedName": "BR-350A (MD-5 fuze)",
+        "type": "aphebc_tank",
+        "caliber": 76.2,
+        "mass": 6.3,
+        "muzzleVelocity": 662.0,
+        "deMarre": {
+          "fullCaliber": 76.2,
+          "isApcbc": false,
+          "explosiveMass": 0.15,
+          "Cx": 0.3598
+        },
+        "penetration0m": 86.7,
+        "explosiveMassKg": 0.15,
+        "explosiveType": "tnt",
+        "tntEquivalent": 0.15
+      },
+      {
+        "name": "76mm_of_350m",
+        "localizedName": "OF-350M",
+        "type": "he_frag_tank",
+        "caliber": 76.2,
+        "mass": 6.2,
+        "muzzleVelocity": 680.0,
+        "explosiveMassKg": 0.621,
+        "explosiveType": "tnt",
+        "tntEquivalent": 0.621
+      },
+      {
+        "name": "76mm_sh_354t",
+        "localizedName": "Sh-354T",
+        "type": "shrapnel_tank",
+        "caliber": 76.2,
+        "mass": 6.44,
+        "muzzleVelocity": 618.0,
+        "explosiveMassKg": 0.085,
+        "explosiveType": "tnt",
+        "tntEquivalent": 0.085
+      },
+      {
+        "name": "76mm_d350a",
+        "localizedName": "D-350A",
+        "type": "smoke_tank",
+        "caliber": 76.0,
+        "mass": 6.45,
+        "muzzleVelocity": 680.0,
+        "explosiveMassKg": 0.05,
+        "explosiveType": "smoke_composition",
+        "tntEquivalent": 0.05
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 3400.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 4,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      6.1,
+      10.7,
+      21.9,
+      30.5
+    ],
+    "reverse_gear_speeds": [
+      5.3
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 10.3,
+    "track_width": null,
+    "secondary_weapons": null,
+    "main_gun_ammo": 60,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 5900,
+    "purchaseCost": 6300,
+    "crewTraining": 1800,
+    "expertTraining": 6300,
+    "aceTrainingGE": 75,
+    "aceTrainingRP": 135000,
+    "repairCost": {
+      "arcade": [
+        308,
+        381
+      ],
+      "realistic": [
+        330,
+        409
+      ],
+      "simulator": [
+        414,
+        512
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.22,
+      "realistic": 0.33,
+      "simulator": 0.41
+    },
+    "expMultiplier": 1.06
+  }
+}

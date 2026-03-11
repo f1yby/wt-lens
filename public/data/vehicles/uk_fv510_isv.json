@@ -1,0 +1,214 @@
+{
+  "id": "uk_fv510_isv",
+  "performance": {
+    "horsepower": 550.0,
+    "weight": 25.9,
+    "power_to_weight": 21.24,
+    "max_reverse_speed": 79.8,
+    "reload_time": 0.8,
+    "penetration": 110.0,
+    "max_speed": 79.8,
+    "crew_count": 5,
+    "elevation_speed": 30.0,
+    "traverse_speed": 60.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -10.0,
+      45.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": [
+      800,
+      600
+    ],
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": 1000.0,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 55.0,
+    "mainGun": {
+      "name": "30mm_L21A1_RARDEN",
+      "caliber": 30.0,
+      "reloadTime": 0.8,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 1.04,
+        "expert": 0.92,
+        "ace": 0.8
+      },
+      "rateOfFire": 80,
+      "beltReloadTime": 0.8
+    },
+    "ammunitions": [
+      {
+        "name": "30_170mm_aphe_i",
+        "localizedName": "30x170 APHE-I",
+        "type": "sapi",
+        "caliber": 30.0,
+        "mass": 0.36,
+        "muzzleVelocity": 1080.0,
+        "deMarre": {
+          "fullCaliber": 30.0,
+          "isApcbc": false,
+          "explosiveMass": 0.018,
+          "Cx": 0.2635
+        },
+        "penetration0m": 52.8,
+        "explosiveMassKg": 0.018,
+        "explosiveType": "hexal",
+        "tntEquivalent": 0.025
+      },
+      {
+        "name": "30_170mm_he_i_t",
+        "localizedName": "30x170 HE-I-T",
+        "type": "he_i_t",
+        "caliber": 30.0,
+        "mass": 0.36,
+        "muzzleVelocity": 1080.0,
+        "explosiveMassKg": 0.05,
+        "explosiveType": "hexal",
+        "tntEquivalent": 0.07
+      },
+      {
+        "name": "30_170mm_apds_t",
+        "localizedName": "30х170 APDS-T",
+        "type": "apds_autocannon",
+        "caliber": 30.0,
+        "mass": 0.3,
+        "muzzleVelocity": 1175.0,
+        "armorPowerTable": [
+          {
+            "penetration": 110.0,
+            "distance": 10.0
+          },
+          {
+            "penetration": 101.0,
+            "distance": 100.0
+          },
+          {
+            "penetration": 95.0,
+            "distance": 500.0
+          },
+          {
+            "penetration": 69.0,
+            "distance": 1000.0
+          },
+          {
+            "penetration": 52.0,
+            "distance": 1500.0
+          },
+          {
+            "penetration": 41.0,
+            "distance": 2000.0
+          },
+          {
+            "penetration": 30.0,
+            "distance": 2500.0
+          },
+          {
+            "penetration": 5.0,
+            "distance": 5000.0
+          }
+        ],
+        "penetration0m": 110.0
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2300.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 9,
+    "reverse_gears": 4,
+    "forward_gear_speeds": [
+      6.9,
+      13.0,
+      15.7,
+      18.8,
+      24.1,
+      29.2,
+      35.8,
+      53.4,
+      79.8
+    ],
+    "reverse_gear_speeds": [
+      13.0,
+      24.1,
+      35.8,
+      79.8
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 25.4,
+    "track_width": 0.35,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_L94A1",
+        "caliber": 7.6,
+        "ammo": 2000,
+        "reloadTime": 8.0,
+        "rateOfFire": 600,
+        "bulletType": "ap_ball"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "103mm_MILAN_rocket_launcher",
+        "caliber": 0,
+        "ammo": 8,
+        "reloadTime": 10.0,
+        "rateOfFire": 5
+      },
+      {
+        "trigger": "gunner4",
+        "name": "66mm_modern_uk_smoke_grenade_launcher",
+        "caliber": 0,
+        "ammo": 8,
+        "rateOfFire": 2400
+      }
+    ],
+    "main_gun_ammo": 225,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": true
+  },
+  "economy": {
+    "researchCost": 135000,
+    "purchaseCost": 380000,
+    "crewTraining": 110000,
+    "expertTraining": 380000,
+    "aceTrainingGE": 1400,
+    "aceTrainingRP": 830000,
+    "repairCost": {
+      "arcade": [
+        2662,
+        4948
+      ],
+      "realistic": [
+        3016,
+        5607
+      ],
+      "simulator": [
+        3683,
+        6846
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.18,
+      "realistic": 1.65,
+      "simulator": 2.01
+    },
+    "expMultiplier": 2.08
+  }
+}

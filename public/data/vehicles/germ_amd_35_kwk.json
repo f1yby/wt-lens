@@ -1,0 +1,142 @@
+{
+  "id": "germ_amd_35_kwk",
+  "performance": {
+    "horsepower": 105.0,
+    "weight": 8.2,
+    "power_to_weight": 12.8,
+    "max_reverse_speed": 42.3,
+    "reload_time": 4.0,
+    "penetration": 116.0,
+    "max_speed": 71.6,
+    "crew_count": 5,
+    "elevation_speed": 10.0,
+    "traverse_speed": 15.7,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -12.0,
+      14.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 26.0,
+    "mainGun": {
+      "name": "50mm_KwK38_open_turret",
+      "caliber": 50.0,
+      "reloadTime": 4.0,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 5.2,
+        "expert": 4.6,
+        "ace": 4.0
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "50mm_pzgr_39",
+        "localizedName": "PzGr 39",
+        "type": "apc_tank",
+        "caliber": 50.0,
+        "mass": 2.05,
+        "muzzleVelocity": 685.0,
+        "deMarre": {
+          "fullCaliber": 50.0,
+          "isApcbc": true,
+          "explosiveMass": 0.017,
+          "Cx": 0.6
+        },
+        "penetration0m": 80.2,
+        "explosiveMassKg": 0.017,
+        "explosiveType": "np_10",
+        "tntEquivalent": 0.022
+      },
+      {
+        "name": "50mm_pzgr_40",
+        "localizedName": "PzGr 40",
+        "type": "apcr_tank",
+        "caliber": 21.0,
+        "mass": 0.9,
+        "muzzleVelocity": 1050.0,
+        "deMarre": {
+          "fullCaliber": 50.0,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "isApcr": true,
+          "coreCaliber": 21.0,
+          "coreMass": 0.335,
+          "Cx": 0.47
+        },
+        "penetration0m": 116.0
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2000.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 4,
+    "reverse_gears": 4,
+    "forward_gear_speeds": [
+      13.8,
+      24.2,
+      40.6,
+      71.6
+    ],
+    "reverse_gear_speeds": [
+      8.0,
+      14.3,
+      23.3,
+      42.3
+    ],
+    "steer_type": null,
+    "empty_weight": 8.0,
+    "track_width": 0.4,
+    "secondary_weapons": null,
+    "main_gun_ammo": 26,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 4000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 400,
+    "crewTraining": 450,
+    "expertTraining": 3000,
+    "aceTrainingGE": 45,
+    "aceTrainingRP": 220000,
+    "repairCost": {
+      "arcade": [
+        121,
+        121
+      ],
+      "realistic": [
+        130,
+        130
+      ],
+      "simulator": [
+        146,
+        146
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.28,
+      "realistic": 0.36,
+      "simulator": 0.41
+    },
+    "expMultiplier": 1.0,
+    "freeRepairs": 30
+  }
+}

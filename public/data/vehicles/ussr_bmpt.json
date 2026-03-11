@@ -1,0 +1,151 @@
+{
+  "id": "ussr_bmpt",
+  "performance": {
+    "horsepower": 1000.0,
+    "weight": 48.0,
+    "power_to_weight": 20.83,
+    "max_reverse_speed": 4.2,
+    "reload_time": 1.0,
+    "penetration": null,
+    "max_speed": 60.0,
+    "crew_count": 5,
+    "elevation_speed": 10.0,
+    "traverse_speed": 45.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "both",
+    "elevation_range": [
+      -5.0,
+      45.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": [
+      800,
+      600
+    ],
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": 1000.0,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 50.0,
+    "mainGun": null,
+    "ammunitions": null,
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": "chtz",
+    "engine_model": "v_92s2",
+    "engine_type": null,
+    "engine_max_rpm": 2000.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 7,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      7.3,
+      13.6,
+      17.2,
+      21.5,
+      29.6,
+      40.9,
+      60.0
+    ],
+    "reverse_gear_speeds": [
+      4.2
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 47.5,
+    "track_width": 0.584,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner7",
+        "name": "30mm_2A42_BMPT",
+        "caliber": 30.0,
+        "ammo": 425,
+        "reloadTime": 1.0,
+        "rateOfFire": 550,
+        "bulletType": "ap_t"
+      },
+      {
+        "trigger": "gunner1",
+        "name": "130mm_9M120_BMPT_launcher",
+        "caliber": 130.0,
+        "ammo": 4,
+        "reloadTime": 0.5,
+        "rateOfFire": 120,
+        "bulletType": "atgm_tandem_tank",
+        "maxDistance": 6000,
+        "maxSpeed": 550,
+        "guidanceType": "saclos",
+        "penetration": 800,
+        "explosiveMass": 2.82,
+        "explosiveType": "ocfol"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "7_62mm_PKT",
+        "caliber": 7.6,
+        "ammo": 2000,
+        "reloadTime": 8.0,
+        "rateOfFire": 700,
+        "bulletType": "ap_i_ball"
+      },
+      {
+        "trigger": "gunner4",
+        "name": "30mm_AG_30",
+        "caliber": 30.0,
+        "ammo": 300,
+        "reloadTime": 1.0,
+        "rateOfFire": 400,
+        "bulletType": "he_frag_vog"
+      },
+      {
+        "trigger": "gunner5",
+        "name": "30mm_AG_30",
+        "caliber": 30.0,
+        "ammo": 300,
+        "reloadTime": 1.0,
+        "rateOfFire": 400,
+        "bulletType": "he_frag_vog"
+      }
+    ],
+    "main_gun_ammo": 425,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": true,
+    "has_ess": true,
+    "has_laser_rangefinder": true
+  },
+  "economy": {
+    "researchCost": 300000,
+    "purchaseCost": 830000,
+    "crewTraining": 240000,
+    "expertTraining": 830000,
+    "aceTrainingGE": 2100,
+    "aceTrainingRP": 1140000,
+    "repairCost": {
+      "arcade": [
+        4652,
+        8235
+      ],
+      "realistic": [
+        3227,
+        5712
+      ],
+      "simulator": [
+        4497,
+        7960
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.46,
+      "realistic": 1.56,
+      "simulator": 2.12
+    },
+    "expMultiplier": 2.38
+  }
+}

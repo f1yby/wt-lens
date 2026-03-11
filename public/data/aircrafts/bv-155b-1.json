@@ -1,0 +1,33 @@
+{
+  "id": "bv-155b-1",
+  "economy": {
+    "researchCost": 26000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 1450,
+    "crewTraining": 10000,
+    "expertTraining": 115000,
+    "aceTrainingGE": 500,
+    "aceTrainingRP": 640000,
+    "repairCost": {
+      "arcade": [
+        888,
+        888
+      ],
+      "realistic": [
+        1313,
+        1313
+      ],
+      "simulator": [
+        2229,
+        2229
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.27,
+      "realistic": 2.97,
+      "simulator": 6.83
+    },
+    "expMultiplier": 1.42,
+    "freeRepairs": 30
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "id": "ah_2_rooivalk",
+  "economy": {
+    "researchCost": 360000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 8560,
+    "crewTraining": 10000,
+    "expertTraining": 1600000,
+    "aceTrainingGE": 2000,
+    "aceTrainingRP": 1710000,
+    "repairCost": {
+      "arcade": [
+        5276,
+        5276
+      ],
+      "realistic": [
+        3301,
+        3301
+      ],
+      "simulator": [
+        4317,
+        4317
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.0,
+      "realistic": 4.42,
+      "simulator": 6.16
+    },
+    "expMultiplier": 2.14,
+    "freeRepairs": 30
+  }
+}

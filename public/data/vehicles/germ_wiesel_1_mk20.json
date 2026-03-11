@@ -1,0 +1,99 @@
+{
+  "id": "germ_wiesel_1_mk20",
+  "performance": {
+    "horsepower": 87.0,
+    "weight": 2.9,
+    "power_to_weight": 30.0,
+    "max_reverse_speed": 38.2,
+    "reload_time": 8.0,
+    "penetration": null,
+    "max_speed": 79.9,
+    "crew_count": 5,
+    "elevation_speed": 60.0,
+    "traverse_speed": 60.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -10.0,
+      45.0
+    ],
+    "traverse_range": [
+      -110.0,
+      110.0
+    ],
+    "gunner_thermal_resolution": [
+      1200,
+      800
+    ],
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": 1442.2,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 55.0,
+    "mainGun": null,
+    "ammunitions": null,
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 4500.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 6,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      16.1,
+      32.2,
+      40.4,
+      54.1,
+      64.5,
+      79.9
+    ],
+    "reverse_gear_speeds": [
+      19.1,
+      38.2
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 2.8,
+    "track_width": 0.2,
+    "secondary_weapons": null,
+    "main_gun_ammo": 400,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": true
+  },
+  "economy": {
+    "researchCost": 82000,
+    "purchaseCost": 240000,
+    "crewTraining": 68000,
+    "expertTraining": 240000,
+    "aceTrainingGE": 990,
+    "aceTrainingRP": 620000,
+    "repairCost": {
+      "arcade": [
+        3245,
+        4872
+      ],
+      "realistic": [
+        3076,
+        4619
+      ],
+      "simulator": [
+        4652,
+        6985
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.44,
+      "realistic": 1.78,
+      "simulator": 2.45
+    },
+    "expMultiplier": 1.84
+  }
+}

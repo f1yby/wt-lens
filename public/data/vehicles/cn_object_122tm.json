@@ -1,0 +1,240 @@
+{
+  "id": "cn_object_122tm",
+  "performance": {
+    "horsepower": 650.0,
+    "weight": 37.5,
+    "power_to_weight": 17.33,
+    "max_reverse_speed": 7.4,
+    "reload_time": 9.23,
+    "penetration": 350.0,
+    "max_speed": 55.1,
+    "crew_count": 5,
+    "elevation_speed": 5.0,
+    "traverse_speed": 20.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "both",
+    "elevation_range": [
+      -6.0,
+      18.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 24.0,
+    "mainGun": {
+      "name": "120mm_122TM",
+      "caliber": 120.0,
+      "reloadTime": 9.23,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 12.0,
+        "expert": 10.61,
+        "ace": 9.23
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "120mm_122tm_steel",
+        "localizedName": "120-I",
+        "type": "apds_fs_full_body_steel_tank",
+        "caliber": 42.0,
+        "mass": 4.3,
+        "muzzleVelocity": 1580.0,
+        "lanzOdermatt": {
+          "workingLength": 475.0,
+          "density": 7760.0,
+          "material": "steel",
+          "Cx": 0.395
+        },
+        "penetration0m": 167.6,
+        "penetrationData": {
+          "at0m": {
+            "angle0": 167.6,
+            "angle30": 145.1,
+            "angle60": 83.8
+          }
+        }
+      },
+      {
+        "name": "120mm_122tm_he",
+        "localizedName": "120-HE",
+        "type": "he_frag_fs_tank",
+        "caliber": 120.0,
+        "mass": 16.5,
+        "muzzleVelocity": 940.0,
+        "explosiveMassKg": 2.763,
+        "explosiveType": "tnt",
+        "tntEquivalent": 2.763
+      },
+      {
+        "name": "120mm_122tm_tungsten",
+        "localizedName": "120-II",
+        "type": "apds_fs_tungsten_small_core_tank",
+        "caliber": 42.0,
+        "mass": 4.3,
+        "muzzleVelocity": 1580.0,
+        "armorPowerTable": [
+          {
+            "penetration": 350.0,
+            "distance": 10.0
+          },
+          {
+            "penetration": 347.0,
+            "distance": 100.0
+          },
+          {
+            "penetration": 322.0,
+            "distance": 500.0
+          },
+          {
+            "penetration": 300.0,
+            "distance": 1000.0
+          },
+          {
+            "penetration": 283.0,
+            "distance": 1500.0
+          },
+          {
+            "penetration": 270.0,
+            "distance": 2000.0
+          },
+          {
+            "penetration": 251.0,
+            "distance": 2500.0
+          },
+          {
+            "penetration": 240.0,
+            "distance": 3000.0
+          },
+          {
+            "penetration": 211.0,
+            "distance": 3500.0
+          },
+          {
+            "penetration": 183.0,
+            "distance": 4000.0
+          },
+          {
+            "penetration": 143.0,
+            "distance": 4500.0
+          },
+          {
+            "penetration": 50.0,
+            "distance": 10000.0
+          },
+          {
+            "penetration": 0.0,
+            "distance": 20000.0
+          }
+        ],
+        "penetration0m": 350.0
+      },
+      {
+        "name": "120mm_122tm_heat",
+        "localizedName": "120-HEAT",
+        "type": "heat_fs_tank",
+        "caliber": 120.0,
+        "mass": 15.0,
+        "muzzleVelocity": 1000.0,
+        "penetration0m": 470.0,
+        "explosiveMassKg": 1.35,
+        "explosiveType": "rdx_tnt",
+        "tntEquivalent": 1.728
+      }
+    ],
+    "penetrationData": {},
+    "autoLoader": false,
+    "engine_manufacturer": "CNGC",
+    "engine_model": "12150L",
+    "engine_type": null,
+    "engine_max_rpm": 2000.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 5,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      7.4,
+      17.7,
+      24.1,
+      35.7,
+      55.1
+    ],
+    "reverse_gear_speeds": [
+      7.4
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 37.0,
+    "track_width": 0.58,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "120mm_302_atgm_rocket_launcher",
+        "caliber": 0,
+        "ammo": 4,
+        "reloadTime": 10.0,
+        "rateOfFire": 30
+      },
+      {
+        "trigger": "gunner2",
+        "name": "7_62mm_Type_59",
+        "caliber": 7.6,
+        "ammo": 3000,
+        "reloadTime": 8.0,
+        "rateOfFire": 600,
+        "bulletType": "ap_i_ball"
+      },
+      {
+        "trigger": "gunner3",
+        "name": "12_7mm_Type_54",
+        "caliber": 12.7,
+        "ammo": 500,
+        "reloadTime": 8.0,
+        "rateOfFire": 600,
+        "bulletType": "ap_i_t_ball"
+      }
+    ],
+    "main_gun_ammo": 40,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": false,
+    "has_ess": true,
+    "has_laser_rangefinder": true
+  },
+  "economy": {
+    "researchCost": 400000,
+    "purchaseCost": 450000,
+    "crewTraining": 130000,
+    "expertTraining": 450000,
+    "aceTrainingGE": 2000,
+    "aceTrainingRP": 890000,
+    "repairCost": {
+      "arcade": [
+        4484,
+        6185
+      ],
+      "realistic": [
+        4879,
+        6729
+      ],
+      "simulator": [
+        6235,
+        8600
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.38,
+      "realistic": 2.0,
+      "simulator": 2.44
+    },
+    "expMultiplier": 2.14
+  }
+}

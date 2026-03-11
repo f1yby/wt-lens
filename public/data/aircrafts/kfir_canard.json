@@ -1,0 +1,33 @@
+{
+  "id": "kfir_canard",
+  "economy": {
+    "researchCost": 230000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 9450,
+    "crewTraining": 10000,
+    "expertTraining": 1030000,
+    "aceTrainingGE": 3000,
+    "aceTrainingRP": 2280000,
+    "repairCost": {
+      "arcade": [
+        2158,
+        2158
+      ],
+      "realistic": [
+        6318,
+        6318
+      ],
+      "simulator": [
+        6362,
+        6362
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.48,
+      "realistic": 6.44,
+      "simulator": 12.0
+    },
+    "expMultiplier": 2.38,
+    "freeRepairs": 30
+  }
+}

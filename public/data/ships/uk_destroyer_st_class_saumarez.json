@@ -1,0 +1,27 @@
+{
+  "id": "uk_destroyer_st_class_saumarez",
+  "economy": {
+    "researchCost": 4000,
+    "purchaseCost": 2100,
+    "crewTraining": 600,
+    "expertTraining": 2100,
+    "aceTrainingGE": 45,
+    "aceTrainingRP": 110000,
+    "repairCost": {
+      "arcade": [
+        442,
+        575
+      ],
+      "realistic": [
+        685,
+        892
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.41,
+      "realistic": 0.94,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.0
+  }
+}

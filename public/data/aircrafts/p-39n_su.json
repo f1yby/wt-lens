@@ -1,0 +1,33 @@
+{
+  "id": "p-39n_su",
+  "economy": {
+    "researchCost": 18000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 1300,
+    "crewTraining": 10000,
+    "expertTraining": 67000,
+    "aceTrainingGE": 400,
+    "aceTrainingRP": 570000,
+    "repairCost": {
+      "arcade": [
+        1027,
+        1027
+      ],
+      "realistic": [
+        5611,
+        5611
+      ],
+      "simulator": [
+        1746,
+        1746
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.27,
+      "realistic": 4.7,
+      "simulator": 6.25
+    },
+    "expMultiplier": 1.36,
+    "freeRepairs": 30
+  }
+}

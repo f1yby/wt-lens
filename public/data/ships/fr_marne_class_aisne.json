@@ -1,0 +1,29 @@
+{
+  "id": "fr_marne_class_aisne",
+  "economy": {
+    "researchCost": 48000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 1750,
+    "crewTraining": 10000,
+    "expertTraining": 290000,
+    "aceTrainingGE": 700,
+    "aceTrainingRP": 790000,
+    "repairCost": {
+      "arcade": [
+        2837,
+        2837
+      ],
+      "realistic": [
+        3929,
+        3929
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 4.66,
+      "realistic": 7.57,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.54,
+    "freeRepairs": 30
+  }
+}

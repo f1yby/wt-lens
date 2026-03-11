@@ -1,0 +1,31 @@
+{
+  "id": "so_4050_vautour_2a_israel_iaf",
+  "economy": {
+    "researchCost": 150000,
+    "purchaseCost": 420000,
+    "crewTraining": 120000,
+    "expertTraining": 420000,
+    "aceTrainingGE": 2200,
+    "aceTrainingRP": 890000,
+    "repairCost": {
+      "arcade": [
+        2811,
+        3820
+      ],
+      "realistic": [
+        10703,
+        14543
+      ],
+      "simulator": [
+        15618,
+        21220
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.02,
+      "realistic": 2.59,
+      "simulator": 6.0
+    },
+    "expMultiplier": 2.14
+  }
+}

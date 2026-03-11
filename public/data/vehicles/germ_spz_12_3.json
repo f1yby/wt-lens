@@ -1,0 +1,150 @@
+{
+  "id": "germ_spz_12_3",
+  "performance": {
+    "horsepower": 240.0,
+    "weight": 16.0,
+    "power_to_weight": 15.0,
+    "max_reverse_speed": 14.2,
+    "reload_time": 10.0,
+    "penetration": 433.0,
+    "max_speed": 61.9,
+    "crew_count": 5,
+    "elevation_speed": 6.0,
+    "traverse_speed": 10.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -17.0,
+      65.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 82.0,
+    "mainGun": {
+      "name": "106mm_M40A1_LGS",
+      "caliber": 106.0,
+      "reloadTime": 10.0,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 13.0,
+        "expert": 11.5,
+        "ace": 10.0
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "106mm_m344a1",
+        "localizedName": "M344A1",
+        "type": "heat_grenade_tank",
+        "caliber": 106.0,
+        "mass": 7.96,
+        "muzzleVelocity": 502.9,
+        "penetration0m": 433.0,
+        "explosiveMassKg": 1.26,
+        "explosiveType": "comp_b",
+        "tntEquivalent": 1.6
+      },
+      {
+        "name": "106mm_m361a1",
+        "localizedName": "M361A1",
+        "type": "hesh_tank",
+        "caliber": 106.0,
+        "mass": 7.95,
+        "muzzleVelocity": 498.3,
+        "penetration0m": 152.0,
+        "explosiveMassKg": 3.5,
+        "explosiveType": "comp_a",
+        "tntEquivalent": 4.41
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 3750.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 8,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      5.2,
+      7.5,
+      10.9,
+      15.7,
+      22.4,
+      32.2,
+      47.4,
+      61.9
+    ],
+    "reverse_gear_speeds": [
+      14.2
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 15.5,
+    "track_width": 0.4,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "12_7mm_M80",
+        "caliber": 12.7,
+        "ammo": 120,
+        "reloadTime": 2.5,
+        "rateOfFire": 300,
+        "bulletType": "he_ball"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "20mm_MK_20_1",
+        "caliber": 20.0,
+        "ammo": 600,
+        "reloadTime": 7.0,
+        "rateOfFire": 1030,
+        "bulletType": "apcr_t"
+      }
+    ],
+    "main_gun_ammo": 28,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 95000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 8020,
+    "crewTraining": 10000,
+    "expertTraining": 440000,
+    "aceTrainingGE": 1100,
+    "aceTrainingRP": 1340000,
+    "repairCost": {
+      "arcade": [
+        2161,
+        2161
+      ],
+      "realistic": [
+        2638,
+        2638
+      ],
+      "simulator": [
+        3608,
+        3608
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.38,
+      "realistic": 3.24,
+      "simulator": 4.16
+    },
+    "expMultiplier": 1.9,
+    "freeRepairs": 30
+  }
+}

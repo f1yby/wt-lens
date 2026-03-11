@@ -1,0 +1,219 @@
+{
+  "id": "sw_strv_121",
+  "performance": {
+    "horsepower": 1500.0,
+    "weight": 55.15,
+    "power_to_weight": 27.2,
+    "max_reverse_speed": 31.0,
+    "reload_time": 6.0,
+    "penetration": 408.1,
+    "max_speed": 68.2,
+    "crew_count": 5,
+    "elevation_speed": 40.0,
+    "traverse_speed": 40.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "both",
+    "elevation_range": [
+      -9.0,
+      20.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": [
+      500,
+      300
+    ],
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": 583.1,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 29.0,
+    "mainGun": {
+      "name": "120mm_kan_Strv_121",
+      "caliber": 120.0,
+      "reloadTime": 6.0,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 7.8,
+        "expert": 6.9,
+        "ace": 6.0
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "120mm_dm13",
+        "localizedName": "DM13",
+        "type": "apds_fs_tungsten_l10_l15_tank",
+        "caliber": 32.0,
+        "mass": 4.436,
+        "muzzleVelocity": 1650.0,
+        "armorPowerTable": [
+          {
+            "penetration": 393.0,
+            "distance": 10.0
+          },
+          {
+            "penetration": 390.0,
+            "distance": 100.0
+          },
+          {
+            "penetration": 384.0,
+            "distance": 500.0
+          },
+          {
+            "penetration": 376.0,
+            "distance": 1000.0
+          },
+          {
+            "penetration": 367.0,
+            "distance": 1500.0
+          },
+          {
+            "penetration": 359.0,
+            "distance": 2000.0
+          },
+          {
+            "penetration": 341.0,
+            "distance": 3000.0
+          },
+          {
+            "penetration": 5.0,
+            "distance": 10000.0
+          },
+          {
+            "penetration": 0.0,
+            "distance": 20000.0
+          }
+        ],
+        "penetration0m": 393.0
+      },
+      {
+        "name": "120mm_slsgr_m95",
+        "localizedName": "slsgr m/95",
+        "type": "he_frag_fs_tank",
+        "caliber": 120.0,
+        "mass": 17.5,
+        "muzzleVelocity": 736.0,
+        "explosiveMassKg": 2.7,
+        "explosiveType": "comp_b",
+        "tntEquivalent": 3.429
+      },
+      {
+        "name": "120mm_dm23",
+        "localizedName": "DM23",
+        "type": "apds_fs_tungsten_l10_l15_tank",
+        "caliber": 32.0,
+        "mass": 4.3,
+        "muzzleVelocity": 1640.0,
+        "lanzOdermatt": {
+          "workingLength": 360.0,
+          "density": 17500.0,
+          "material": "tungsten",
+          "Cx": 0.3056
+        },
+        "penetration0m": 408.1,
+        "penetrationData": {
+          "at0m": {
+            "angle0": 408.1,
+            "angle30": 353.4,
+            "angle60": 204.1
+          }
+        }
+      }
+    ],
+    "penetrationData": {
+      "at0m": {
+        "angle0": 408.1,
+        "angle30": 353.4,
+        "angle60": 204.1
+      }
+    },
+    "autoLoader": false,
+    "engine_manufacturer": "mtu",
+    "engine_model": "mb_873_ka_501",
+    "engine_type": null,
+    "engine_max_rpm": 2600.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 8,
+    "reverse_gears": 4,
+    "forward_gear_speeds": [
+      7.6,
+      15.2,
+      20.4,
+      31.0,
+      36.7,
+      44.9,
+      54.2,
+      68.2
+    ],
+    "reverse_gear_speeds": [
+      7.6,
+      15.2,
+      20.4,
+      31.0
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 53.85,
+    "track_width": 0.55,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_ksp_m94",
+        "caliber": 7.6,
+        "ammo": 4600,
+        "reloadTime": 8.0,
+        "rateOfFire": 1200,
+        "bulletType": "ap_ball"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "7_62mm_ksp_m94",
+        "caliber": 7.6,
+        "ammo": 2000,
+        "reloadTime": 8.0,
+        "rateOfFire": 1200,
+        "bulletType": "ap_ball"
+      }
+    ],
+    "main_gun_ammo": 42,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": true
+  },
+  "economy": {
+    "researchCost": 300000,
+    "purchaseCost": 830000,
+    "crewTraining": 240000,
+    "expertTraining": 830000,
+    "aceTrainingGE": 2100,
+    "aceTrainingRP": 1140000,
+    "repairCost": {
+      "arcade": [
+        4350,
+        6787
+      ],
+      "realistic": [
+        4212,
+        6571
+      ],
+      "simulator": [
+        4927,
+        7687
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.53,
+      "realistic": 1.98,
+      "simulator": 2.49
+    },
+    "expMultiplier": 2.38
+  }
+}

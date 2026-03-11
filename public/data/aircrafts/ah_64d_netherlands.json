@@ -1,0 +1,33 @@
+{
+  "id": "ah_64d_netherlands",
+  "economy": {
+    "researchCost": 400000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 9270,
+    "crewTraining": 10000,
+    "expertTraining": 1670000,
+    "aceTrainingGE": 2800,
+    "aceTrainingRP": 2150000,
+    "repairCost": {
+      "arcade": [
+        5744,
+        5744
+      ],
+      "realistic": [
+        3796,
+        3796
+      ],
+      "simulator": [
+        4320,
+        4320
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.0,
+      "realistic": 3.94,
+      "simulator": 6.69
+    },
+    "expMultiplier": 2.32,
+    "freeRepairs": 30
+  }
+}

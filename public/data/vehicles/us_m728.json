@@ -1,0 +1,140 @@
+{
+  "id": "us_m728",
+  "performance": {
+    "horsepower": 750.0,
+    "weight": 53.2,
+    "power_to_weight": 14.1,
+    "max_reverse_speed": 8.3,
+    "reload_time": 21.28,
+    "penetration": 203.0,
+    "max_speed": 47.7,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 20.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -10.0,
+      20.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 30.0,
+    "mainGun": {
+      "name": "165mm_M135",
+      "caliber": 165.0,
+      "reloadTime": 21.28,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 27.66,
+        "expert": 24.47,
+        "ace": 21.28
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "165mm_m123",
+        "localizedName": "M123",
+        "type": "hesh_tank",
+        "caliber": 165.0,
+        "mass": 28.3,
+        "muzzleVelocity": 259.0,
+        "penetration0m": 203.0,
+        "explosiveMassKg": 15.9,
+        "explosiveType": "comp_a",
+        "tntEquivalent": 20.034
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2400.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 6,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      8.6,
+      11.4,
+      17.2,
+      25.0,
+      33.9,
+      47.7
+    ],
+    "reverse_gear_speeds": [
+      6.1,
+      8.3
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 52.2,
+    "track_width": 0.55,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_M73",
+        "caliber": 7.6,
+        "ammo": 3750,
+        "reloadTime": 8.0,
+        "rateOfFire": 500,
+        "bulletType": "ap_ball"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "12_7mm_M85",
+        "caliber": 12.7,
+        "ammo": 720,
+        "reloadTime": 8.0,
+        "rateOfFire": 625,
+        "bulletType": "ap_i_ball_M8"
+      }
+    ],
+    "main_gun_ammo": 30,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": false,
+    "has_ess": true,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 105000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 8200,
+    "crewTraining": 10000,
+    "expertTraining": 490000,
+    "aceTrainingGE": 1200,
+    "aceTrainingRP": 1440000,
+    "repairCost": {
+      "arcade": [
+        2851,
+        2851
+      ],
+      "realistic": [
+        3232,
+        3232
+      ],
+      "simulator": [
+        4306,
+        4306
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.58,
+      "realistic": 4.05,
+      "simulator": 4.47
+    },
+    "expMultiplier": 1.96,
+    "freeRepairs": 30
+  }
+}

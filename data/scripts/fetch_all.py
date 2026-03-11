@@ -1407,73 +1407,68 @@ def fetch_all_ships(copy_images: bool = True) -> list[dict[str, Any]]:
 # Save Functions
 # ============================================================
 
-def save_ground_vehicles(vehicles: list[VehicleData], output_path: Path):
-    """Save ground vehicle data to JSON file"""
-    output_path.parent.mkdir(parents=True, exist_ok=True)
+# Fields to include in the index file (lightweight, for list rendering)
+# Ground vehicles use snake_case keys
+GROUND_INDEX_FIELDS = {
+    'id', 'name', 'localizedName', 'nation', 'rank', 'battle_rating', 'br',
+    'vehicle_type', 'economic_type', 'imageUrl', 'unreleased', 'releaseDate', 'ghost'
+}
 
-    data = [vehicle_data_to_dict(v) for v in vehicles]
-
-    with open(output_path, 'w', encoding='utf-8') as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
-
-    print(f"Saved {len(vehicles)} vehicles to {output_path}")
+# Aircraft/Ships use camelCase keys — exclude heavy fields (economy)
+AIRCRAFT_SHIP_HEAVY_FIELDS = {'economy'}
 
 
-def save_performance_cache(vehicles: list[VehicleData], output_path: Path):
-    """Save performance data cache for fast lookup"""
-    output_path.parent.mkdir(parents=True, exist_ok=True)
-
-    cache: dict[str, dict[str, Any]] = {
-        v.id: {
-            "horsepower": v.performance.horsepower,
-            "weight": v.performance.weight,
-            "power_to_weight": v.performance.power_to_weight,
-            "max_reverse_speed": v.performance.max_reverse_speed,
-            "reload_time": v.performance.reload_time,
-            "penetration": v.performance.penetration,
-            "max_speed": v.performance.max_speed,
-            "crew_count": v.performance.crew_count,
-            "elevation_speed": v.performance.elevation_speed,
-            "traverse_speed": v.performance.traverse_speed,
-            "has_stabilizer": v.performance.has_stabilizer,
-            "stabilizer_type": v.performance.stabilizer_type,
-            "elevation_range": v.performance.elevation_range,
-            "traverse_range": v.performance.traverse_range,
-            "gunner_thermal_resolution": v.performance.gunner_thermal_resolution,
-            "commander_thermal_resolution": v.performance.commander_thermal_resolution,
-            "gunner_thermal_diagonal": v.performance.gunner_thermal_diagonal,
-            "commander_thermal_diagonal": v.performance.commander_thermal_diagonal,
-            "stabilizer_value": v.performance.stabilizer_value,
-            "elevation_range_value": v.performance.elevation_range_value,
-            # Extended fields
-            "engine_manufacturer": v.performance.engine_manufacturer,
-            "engine_model": v.performance.engine_model,
-            "engine_type": v.performance.engine_type,
-            "engine_max_rpm": v.performance.engine_max_rpm,
-            "transmission_manufacturer": v.performance.transmission_manufacturer,
-            "transmission_model": v.performance.transmission_model,
-            "transmission_type": v.performance.transmission_type,
-            "forward_gears": v.performance.forward_gears,
-            "reverse_gears": v.performance.reverse_gears,
-            "forward_gear_speeds": v.performance.forward_gear_speeds,
-            "reverse_gear_speeds": v.performance.reverse_gear_speeds,
-            "steer_type": v.performance.steer_type,
-            "empty_weight": v.performance.empty_weight,
-            "track_width": v.performance.track_width,
-            "secondary_weapons": v.performance.secondary_weapons,
-            "main_gun_ammo": v.performance.main_gun_ammo,
-            "driver_nv_resolution": v.performance.driver_nv_resolution,
-            "has_smoke_grenades": v.performance.has_smoke_grenades,
-            "has_ess": v.performance.has_ess,
-            "has_laser_rangefinder": v.performance.has_laser_rangefinder,
-        }
-        for v in vehicles
+def _split_vehicle_data(vehicle_dict: dict[str, Any]) -> tuple[dict[str, Any], dict[str, Any]]:
+    """Split vehicle data into index entry and detail entry.
+    
+    Returns:
+        (index_entry, detail_entry) tuple
+    """
+    index_entry = {k: v for k, v in vehicle_dict.items() if k in GROUND_INDEX_FIELDS}
+    
+    # Detail entry contains id + heavy fields (performance, economy)
+    detail_entry = {
+        'id': vehicle_dict['id'],
+        'performance': vehicle_dict.get('performance'),
+        'economy': vehicle_dict.get('economy'),
     }
+    
+    return index_entry, detail_entry
 
-    with open(output_path, 'w', encoding='utf-8') as f:
-        json.dump(cache, f, ensure_ascii=False, indent=2)
 
-    print(f"Saved performance cache to {output_path}")
+def save_ground_vehicles_split(vehicles: list[VehicleData], output_dir: Path):
+    """Save ground vehicle data in split format (index + per-vehicle files).
+    
+    Creates:
+        - vehicles-index.json: Lightweight index for list rendering
+        - vehicles/{id}.json: Individual vehicle detail files
+    """
+    output_dir.mkdir(parents=True, exist_ok=True)
+    vehicles_dir = output_dir / "vehicles"
+    vehicles_dir.mkdir(parents=True, exist_ok=True)
+    
+    index_entries: list[dict[str, Any]] = []
+    
+    for v in vehicles:
+        vehicle_dict = vehicle_data_to_dict(v)
+        index_entry, detail_entry = _split_vehicle_data(vehicle_dict)
+        
+        index_entries.append(index_entry)
+        
+        # Save individual vehicle detail file
+        detail_path = vehicles_dir / f"{v.id}.json"
+        with open(detail_path, 'w', encoding='utf-8') as f:
+            json.dump(detail_entry, f, ensure_ascii=False, indent=2)
+    
+    # Save index file
+    index_path = output_dir / "vehicles-index.json"
+    with open(index_path, 'w', encoding='utf-8') as f:
+        json.dump(index_entries, f, ensure_ascii=False, indent=2)
+    
+    print(f"Saved split data: {len(index_entries)} index entries + {len(vehicles)} detail files")
+    print(f"  Index: {index_path}")
+    print(f"  Details: {vehicles_dir}/")
+
 
 
 def save_data(data: list[dict[str, Any]], output_path: Path, data_type: str):
@@ -1484,6 +1479,84 @@ def save_data(data: list[dict[str, Any]], output_path: Path, data_type: str):
         json.dump(data, f, ensure_ascii=False, indent=2)
     
     print(f"Saved {len(data)} {data_type} to {output_path}")
+
+
+def _split_aircraft_ship_data(
+    entry: dict[str, Any],
+) -> tuple[dict[str, Any], dict[str, Any]]:
+    """Split aircraft/ship entry into index entry and detail entry.
+    
+    Returns:
+        (index_entry, detail_entry) tuple
+    """
+    index_entry = {k: v for k, v in entry.items() if k not in AIRCRAFT_SHIP_HEAVY_FIELDS}
+    detail_entry = {
+        'id': entry['id'],
+        'economy': entry.get('economy'),
+    }
+    return index_entry, detail_entry
+
+
+def save_aircraft_split(aircraft: list[dict[str, Any]], output_dir: Path):
+    """Save aircraft data in split format (index + per-aircraft files).
+    
+    Creates:
+        - aircraft-index.json: Lightweight index for list rendering
+        - aircrafts/{id}.json: Individual aircraft detail files (economy)
+    """
+    output_dir.mkdir(parents=True, exist_ok=True)
+    detail_dir = output_dir / "aircrafts"
+    detail_dir.mkdir(parents=True, exist_ok=True)
+    
+    index_entries: list[dict[str, Any]] = []
+    
+    for entry in aircraft:
+        index_entry, detail_entry = _split_aircraft_ship_data(entry)
+        index_entries.append(index_entry)
+        
+        # Save individual detail file
+        detail_path = detail_dir / f"{entry['id']}.json"
+        with open(detail_path, 'w', encoding='utf-8') as f:
+            json.dump(detail_entry, f, ensure_ascii=False, indent=2)
+    
+    index_path = output_dir / "aircraft-index.json"
+    with open(index_path, 'w', encoding='utf-8') as f:
+        json.dump(index_entries, f, ensure_ascii=False, indent=2)
+    
+    print(f"Saved aircraft split: {len(index_entries)} index + {len(aircraft)} detail files")
+    print(f"  Index: {index_path}")
+    print(f"  Details: {detail_dir}/")
+
+
+def save_ships_split(ships: list[dict[str, Any]], output_dir: Path):
+    """Save ship data in split format (index + per-ship files).
+    
+    Creates:
+        - ships-index.json: Lightweight index for list rendering
+        - ships/{id}.json: Individual ship detail files (economy)
+    """
+    output_dir.mkdir(parents=True, exist_ok=True)
+    detail_dir = output_dir / "ships"
+    detail_dir.mkdir(parents=True, exist_ok=True)
+    
+    index_entries: list[dict[str, Any]] = []
+    
+    for entry in ships:
+        index_entry, detail_entry = _split_aircraft_ship_data(entry)
+        index_entries.append(index_entry)
+        
+        # Save individual detail file
+        detail_path = detail_dir / f"{entry['id']}.json"
+        with open(detail_path, 'w', encoding='utf-8') as f:
+            json.dump(detail_entry, f, ensure_ascii=False, indent=2)
+    
+    index_path = output_dir / "ships-index.json"
+    with open(index_path, 'w', encoding='utf-8') as f:
+        json.dump(index_entries, f, ensure_ascii=False, indent=2)
+    
+    print(f"Saved ships split: {len(index_entries)} index + {len(ships)} detail files")
+    print(f"  Index: {index_path}")
+    print(f"  Details: {detail_dir}/")
 
 
 # ============================================================
@@ -1547,7 +1620,10 @@ Examples:
             return 1
         
         ground_vehicles = fetch_all_ground_vehicles(copy_images=copy_images)
-        save_ground_vehicles(ground_vehicles, PUBLIC_DATA_PATH / "datamine.json")
+        
+        # Save split format (index + per-vehicle files)
+        save_ground_vehicles_split(ground_vehicles, PUBLIC_DATA_PATH)
+        
         save_performance_cache(ground_vehicles, PUBLIC_DATA_PATH / "vehicle_performance.json")
         
         # Copy nation flags
@@ -1563,7 +1639,7 @@ Examples:
         print("AIRCRAFT")
         print("="*60)
         aircraft = fetch_all_aircraft(copy_images=copy_images)
-        save_data(aircraft, PUBLIC_DATA_PATH / "aircraft.json", "aircraft")
+        save_aircraft_split(aircraft, PUBLIC_DATA_PATH)
         results['aircraft'] = len(aircraft)
     
     # Ships
@@ -1572,7 +1648,7 @@ Examples:
         print("SHIPS")
         print("="*60)
         ships = fetch_all_ships(copy_images=copy_images)
-        save_data(ships, PUBLIC_DATA_PATH / "ships.json", "ships")
+        save_ships_split(ships, PUBLIC_DATA_PATH)
         results['ships'] = len(ships)
     
     # Summary

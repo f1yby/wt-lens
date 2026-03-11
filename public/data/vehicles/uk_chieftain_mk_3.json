@@ -1,0 +1,176 @@
+{
+  "id": "uk_chieftain_mk_3",
+  "performance": {
+    "horsepower": 660.0,
+    "weight": 54.1,
+    "power_to_weight": 12.2,
+    "max_reverse_speed": 11.3,
+    "reload_time": 7.46,
+    "penetration": 257.2,
+    "max_speed": 48.8,
+    "crew_count": 5,
+    "elevation_speed": 5.0,
+    "traverse_speed": 20.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "both",
+    "elevation_range": [
+      -10.0,
+      20.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 30.0,
+    "mainGun": {
+      "name": "120mm_OBL_Tk_L11",
+      "caliber": 120.0,
+      "reloadTime": 7.46,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 9.7,
+        "expert": 8.58,
+        "ace": 7.46
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "120mm_l15a3",
+        "localizedName": "Shot L15A3",
+        "type": "apds_l15_tank",
+        "caliber": 68.0,
+        "mass": 7.484,
+        "muzzleVelocity": 1371.6,
+        "deMarre": {
+          "fullCaliber": 120.0,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "isApcr": true,
+          "coreCaliber": 68.0,
+          "coreMass": 5.51,
+          "Cx": 0.1655
+        },
+        "penetration0m": 257.2
+      },
+      {
+        "name": "120mm_l37a7",
+        "localizedName": "Shell L31A7",
+        "type": "hesh_tank",
+        "caliber": 120.0,
+        "mass": 17.34,
+        "muzzleVelocity": 670.0,
+        "penetration0m": 152.0,
+        "explosiveMassKg": 4.08,
+        "explosiveType": "rdx",
+        "tntEquivalent": 5.712
+      },
+      {
+        "name": "120mm_smoke_l34",
+        "localizedName": "L34",
+        "type": "smoke_tank",
+        "caliber": 120.0,
+        "mass": 17.1,
+        "muzzleVelocity": 670.0,
+        "explosiveMassKg": 0.05,
+        "explosiveType": "smoke_composition",
+        "tntEquivalent": 0.05
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2625.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 6,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      5.1,
+      8.8,
+      14.2,
+      22.2,
+      33.1,
+      48.8
+    ],
+    "reverse_gear_speeds": [
+      7.5,
+      11.3
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 53.1,
+    "track_width": 0.61,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_L8A1",
+        "caliber": 7.6,
+        "ammo": 6000,
+        "reloadTime": 8.0,
+        "rateOfFire": 1000,
+        "bulletType": "ap_ball"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "12_7mm_L21A1",
+        "caliber": 12.7,
+        "ammo": 588,
+        "reloadTime": 0.5,
+        "rateOfFire": 300,
+        "bulletType": "he_ball"
+      },
+      {
+        "trigger": "gunner3",
+        "name": "7_62mm_L37A1",
+        "caliber": 7.6,
+        "ammo": 2000,
+        "reloadTime": 8.0,
+        "rateOfFire": 650,
+        "bulletType": "ap_ball"
+      }
+    ],
+    "main_gun_ammo": 53,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 135000,
+    "purchaseCost": 380000,
+    "crewTraining": 110000,
+    "expertTraining": 380000,
+    "aceTrainingGE": 1400,
+    "aceTrainingRP": 830000,
+    "repairCost": {
+      "arcade": [
+        4141,
+        5967
+      ],
+      "realistic": [
+        4583,
+        6603
+      ],
+      "simulator": [
+        5858,
+        8441
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.37,
+      "realistic": 1.95,
+      "simulator": 2.38
+    },
+    "expMultiplier": 2.08
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "id": "jp_cruiser_yubari",
+  "economy": {
+    "researchCost": 25000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 1750,
+    "crewTraining": 10000,
+    "expertTraining": 135000,
+    "aceTrainingGE": 700,
+    "aceTrainingRP": 790000,
+    "repairCost": {
+      "arcade": [
+        3716,
+        3716
+      ],
+      "realistic": [
+        3187,
+        3187
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 8.04,
+      "realistic": 12.0,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.54,
+    "freeRepairs": 30
+  }
+}

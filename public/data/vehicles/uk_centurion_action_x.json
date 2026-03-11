@@ -1,0 +1,170 @@
+{
+  "id": "uk_centurion_action_x",
+  "performance": {
+    "horsepower": 650.0,
+    "weight": 50.8,
+    "power_to_weight": 12.8,
+    "max_reverse_speed": 12.1,
+    "reload_time": 6.25,
+    "penetration": 239.1,
+    "max_speed": 34.7,
+    "crew_count": 5,
+    "elevation_speed": 4.5,
+    "traverse_speed": 18.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "both",
+    "elevation_range": [
+      -10.0,
+      20.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 30.0,
+    "mainGun": {
+      "name": "84mm_QQF_20pdr_Mk_I",
+      "caliber": 83.4,
+      "reloadTime": 6.25,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 8.12,
+        "expert": 7.19,
+        "ace": 6.25
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "83mm_shot_mk1",
+        "localizedName": "Shot Mk.1",
+        "type": "apcbc_solid_medium_caliber_tank",
+        "caliber": 83.4,
+        "mass": 9.072,
+        "muzzleVelocity": 1021.1,
+        "deMarre": {
+          "fullCaliber": 83.4,
+          "isApcbc": true,
+          "explosiveMass": 0,
+          "Cx": 0.28
+        },
+        "penetration0m": 239.1
+      },
+      {
+        "name": "83mm_shell_mk1",
+        "localizedName": "Shell Mk.1",
+        "type": "he_frag_tank",
+        "caliber": 83.4,
+        "mass": 7.835,
+        "muzzleVelocity": 609.6,
+        "explosiveMassKg": 1.13,
+        "explosiveType": "rdx_tnt",
+        "tntEquivalent": 1.446
+      },
+      {
+        "name": "83mm_shot_mk3",
+        "localizedName": "Shot Mk.3",
+        "type": "apds_early_tank",
+        "caliber": 53.0,
+        "mass": 3.22,
+        "muzzleVelocity": 1432.6,
+        "deMarre": {
+          "fullCaliber": 83.4,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "isApcr": true,
+          "coreCaliber": 53.0,
+          "coreMass": 2.1,
+          "Cx": 0.1914
+        },
+        "penetration0m": 189.5
+      },
+      {
+        "name": "83mm_shell_ss_mk1",
+        "localizedName": "20pdr Shell SS Mk.1",
+        "type": "smoke_tank",
+        "caliber": 83.4,
+        "mass": 10.131,
+        "muzzleVelocity": 251.5,
+        "explosiveMassKg": 0.05,
+        "explosiveType": "smoke_composition",
+        "tntEquivalent": 0.05
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2550.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 5,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      4.0,
+      10.1,
+      16.3,
+      25.8,
+      34.7
+    ],
+    "reverse_gear_speeds": [
+      4.0,
+      12.1
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 50.26,
+    "track_width": 0.68,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_L3A1",
+        "caliber": 7.6,
+        "ammo": 3750,
+        "reloadTime": 8.0,
+        "rateOfFire": 500,
+        "bulletType": "ap_ball"
+      }
+    ],
+    "main_gun_ammo": 63,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 95000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 6090,
+    "crewTraining": 10000,
+    "expertTraining": 440000,
+    "aceTrainingGE": 1100,
+    "aceTrainingRP": 1340000,
+    "repairCost": {
+      "arcade": [
+        2743,
+        2743
+      ],
+      "realistic": [
+        3158,
+        3158
+      ],
+      "simulator": [
+        4414,
+        4414
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.59,
+      "realistic": 3.91,
+      "simulator": 4.35
+    },
+    "expMultiplier": 1.9,
+    "freeRepairs": 30
+  }
+}

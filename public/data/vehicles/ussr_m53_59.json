@@ -1,0 +1,137 @@
+{
+  "id": "ussr_m53_59",
+  "performance": {
+    "horsepower": 110.0,
+    "weight": 10.3,
+    "power_to_weight": 10.68,
+    "max_reverse_speed": 9.3,
+    "reload_time": 6.0,
+    "penetration": 91.8,
+    "max_speed": 60.0,
+    "crew_count": 5,
+    "elevation_speed": 35.0,
+    "traverse_speed": 40.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -10.0,
+      85.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 95.0,
+    "mainGun": {
+      "name": "30mm_ZK_453",
+      "caliber": 30.0,
+      "reloadTime": 6.0,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 7.8,
+        "expert": 6.9,
+        "ace": 6.0
+      },
+      "rateOfFire": 450,
+      "beltReloadTime": 6.0
+    },
+    "ammunitions": [
+      {
+        "name": "30mm_jfsv_53_he",
+        "localizedName": "30-JFSv-53",
+        "type": "frag_i_t",
+        "caliber": 30.0,
+        "mass": 0.453,
+        "muzzleVelocity": 1000.0,
+        "explosiveMassKg": 0.041,
+        "explosiveType": "a_ix_2",
+        "tntEquivalent": 0.057
+      },
+      {
+        "name": "30mm_jpzsv_53_59",
+        "localizedName": "30-JPZSv-53/59",
+        "type": "apcr_t",
+        "caliber": 16.1,
+        "mass": 0.425,
+        "muzzleVelocity": 1000.0,
+        "deMarre": {
+          "fullCaliber": 30.0,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "isApcr": true,
+          "coreCaliber": 16.1,
+          "coreMass": 0.231,
+          "Cx": 0.2873
+        },
+        "penetration0m": 91.8
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2200.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 8,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      3.2,
+      6.5,
+      9.5,
+      12.8,
+      18.7,
+      20.6,
+      33.5,
+      60.0
+    ],
+    "reverse_gear_speeds": [
+      3.2,
+      9.3
+    ],
+    "steer_type": null,
+    "empty_weight": 10.0,
+    "track_width": 0.1,
+    "secondary_weapons": null,
+    "main_gun_ammo": 200,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 63000,
+    "purchaseCost": 200000,
+    "crewTraining": 57000,
+    "expertTraining": 200000,
+    "aceTrainingGE": 800,
+    "aceTrainingRP": 520000,
+    "repairCost": {
+      "arcade": [
+        4487,
+        5820
+      ],
+      "realistic": [
+        3300,
+        4281
+      ],
+      "simulator": [
+        4997,
+        6482
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.24,
+      "realistic": 1.53,
+      "simulator": 2.19
+    },
+    "expMultiplier": 1.72
+  }
+}

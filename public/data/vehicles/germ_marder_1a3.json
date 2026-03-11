@@ -1,0 +1,132 @@
+{
+  "id": "germ_marder_1a3",
+  "performance": {
+    "horsepower": 600.0,
+    "weight": 33.5,
+    "power_to_weight": 17.91,
+    "max_reverse_speed": 75.1,
+    "reload_time": 8.0,
+    "penetration": null,
+    "max_speed": 75.1,
+    "crew_count": 5,
+    "elevation_speed": 60.0,
+    "traverse_speed": 60.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -17.0,
+      65.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": [
+      500,
+      300
+    ],
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": 583.1,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 82.0,
+    "mainGun": null,
+    "ammunitions": null,
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2200.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 8,
+    "reverse_gears": 8,
+    "forward_gear_speeds": [
+      8.7,
+      17.3,
+      22.9,
+      33.8,
+      40.5,
+      50.5,
+      60.4,
+      75.1
+    ],
+    "reverse_gear_speeds": [
+      8.7,
+      17.3,
+      22.9,
+      33.8,
+      40.5,
+      50.5,
+      60.4,
+      75.1
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 32.7,
+    "track_width": 0.45,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_92mm_MG3",
+        "caliber": 7.6,
+        "ammo": 4400,
+        "reloadTime": 8.0,
+        "rateOfFire": 1200,
+        "bulletType": "ap_ball"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "103mm_milan_launcher",
+        "caliber": 103.0,
+        "ammo": 4,
+        "reloadTime": 10.0,
+        "rateOfFire": 5,
+        "bulletType": "atgm_tank",
+        "maxDistance": 2000,
+        "maxSpeed": 200,
+        "guidanceType": "saclos",
+        "penetration": 530,
+        "explosiveMass": 1.4,
+        "explosiveType": "comp_b"
+      }
+    ],
+    "main_gun_ammo": 1200,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": true
+  },
+  "economy": {
+    "researchCost": 105000,
+    "purchaseCost": 300000,
+    "crewTraining": 86000,
+    "expertTraining": 300000,
+    "aceTrainingGE": 1200,
+    "aceTrainingRP": 720000,
+    "repairCost": {
+      "arcade": [
+        2834,
+        4513
+      ],
+      "realistic": [
+        3279,
+        5221
+      ],
+      "simulator": [
+        4173,
+        6645
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.11,
+      "realistic": 1.61,
+      "simulator": 1.97
+    },
+    "expMultiplier": 1.96
+  }
+}

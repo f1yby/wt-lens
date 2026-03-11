@@ -1,0 +1,138 @@
+{
+  "id": "it_m11_39",
+  "performance": {
+    "horsepower": 130.0,
+    "weight": 11.0,
+    "power_to_weight": 11.82,
+    "max_reverse_speed": 4.9,
+    "reload_time": 3.12,
+    "penetration": 35.0,
+    "max_speed": 33.7,
+    "crew_count": 5,
+    "elevation_speed": 15.0,
+    "traverse_speed": 14.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -8.0,
+      15.0
+    ],
+    "traverse_range": [
+      -15.0,
+      15.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 23.0,
+    "mainGun": {
+      "name": "37mm_Vickers_Terni_37_40_M18",
+      "caliber": 37.0,
+      "reloadTime": 3.12,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 4.06,
+        "expert": 3.59,
+        "ace": 3.12
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "37mm_perforante",
+        "localizedName": "Granata Perforante da 37 mm",
+        "type": "aphe_tank",
+        "caliber": 37.0,
+        "mass": 0.698,
+        "muzzleVelocity": 640.0,
+        "deMarre": {
+          "fullCaliber": 37.0,
+          "isApcbc": false,
+          "explosiveMass": 0.023,
+          "Cx": 0.6
+        },
+        "penetration0m": 35.0,
+        "explosiveMassKg": 0.023,
+        "explosiveType": "tnt",
+        "tntEquivalent": 0.023
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 1800.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 4,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      6.4,
+      11.1,
+      19.1,
+      33.7
+    ],
+    "reverse_gear_speeds": [
+      4.9
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 10.8,
+    "track_width": 0.25,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "8mm_Breda_Mod38",
+        "caliber": 8.0,
+        "ammo": 720,
+        "reloadTime": 8.0,
+        "rateOfFire": 600,
+        "bulletType": "ap_i_t_ball"
+      },
+      {
+        "trigger": "gunner1",
+        "name": "8mm_Breda_Mod38",
+        "caliber": 8.0,
+        "ammo": 720,
+        "reloadTime": 8.0,
+        "rateOfFire": 600,
+        "bulletType": "ap_i_t_ball"
+      }
+    ],
+    "main_gun_ammo": 84,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 2900,
+    "purchaseCost": 700,
+    "crewTraining": 200,
+    "expertTraining": 1000,
+    "aceTrainingGE": 20,
+    "aceTrainingRP": 96000,
+    "repairCost": {
+      "arcade": [
+        106,
+        136
+      ],
+      "realistic": [
+        95,
+        122
+      ],
+      "simulator": [
+        111,
+        143
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.1,
+      "realistic": 0.12,
+      "simulator": 0.16
+    },
+    "expMultiplier": 1.0
+  }
+}

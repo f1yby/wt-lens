@@ -1,0 +1,31 @@
+{
+  "id": "i_185_m71_standard",
+  "economy": {
+    "researchCost": 26000,
+    "purchaseCost": 76000,
+    "crewTraining": 22000,
+    "expertTraining": 76000,
+    "aceTrainingGE": 500,
+    "aceTrainingRP": 320000,
+    "repairCost": {
+      "arcade": [
+        1006,
+        1301
+      ],
+      "realistic": [
+        2308,
+        2899
+      ],
+      "simulator": [
+        3481,
+        4373
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.59,
+      "realistic": 1.45,
+      "simulator": 3.07
+    },
+    "expMultiplier": 1.42
+  }
+}

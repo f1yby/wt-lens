@@ -1,0 +1,33 @@
+{
+  "id": "f4u-1a_japan",
+  "economy": {
+    "researchCost": 14000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 1150,
+    "crewTraining": 6900,
+    "expertTraining": 46000,
+    "aceTrainingGE": 320,
+    "aceTrainingRP": 500000,
+    "repairCost": {
+      "arcade": [
+        755,
+        755
+      ],
+      "realistic": [
+        4618,
+        4618
+      ],
+      "simulator": [
+        1754,
+        1754
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.08,
+      "realistic": 3.96,
+      "simulator": 5.85
+    },
+    "expMultiplier": 1.3,
+    "freeRepairs": 30
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "id": "f-86f-30_china",
+  "economy": {
+    "researchCost": 105000,
+    "purchaseCost": 300000,
+    "crewTraining": 86000,
+    "expertTraining": 300000,
+    "aceTrainingGE": 1700,
+    "aceTrainingRP": 720000,
+    "repairCost": {
+      "arcade": [
+        3459,
+        4637
+      ],
+      "realistic": [
+        8939,
+        11983
+      ],
+      "simulator": [
+        10176,
+        13641
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.25,
+      "realistic": 3.71,
+      "simulator": 6.0
+    },
+    "expMultiplier": 1.96
+  }
+}

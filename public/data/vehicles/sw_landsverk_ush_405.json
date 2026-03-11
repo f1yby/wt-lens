@@ -1,0 +1,136 @@
+{
+  "id": "sw_landsverk_ush_405",
+  "performance": {
+    "horsepower": 90.0,
+    "weight": 5.65,
+    "power_to_weight": 15.93,
+    "max_reverse_speed": 9.2,
+    "reload_time": 0.4,
+    "penetration": 330.0,
+    "max_speed": 73.3,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 20.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -10.0,
+      20.0
+    ],
+    "traverse_range": [
+      0.0,
+      0.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 30.0,
+    "mainGun": {
+      "name": "81mm_Oerlikon_Typ_3Z_8Dla",
+      "caliber": 81.0,
+      "reloadTime": 0.4,
+      "autoLoader": true,
+      "reloadTimes": {
+        "base": 0.4,
+        "expert": 0.4,
+        "ace": 0.4
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "81mm_pl03",
+        "localizedName": "Pl-3",
+        "type": "heat_grenade_tank",
+        "caliber": 81.0,
+        "mass": 13.2,
+        "muzzleVelocity": 820.0,
+        "penetration0m": 330.0
+      },
+      {
+        "name": "81mm_ssk032",
+        "localizedName": "SSK 032",
+        "type": "he_grenade_tank",
+        "caliber": 81.0,
+        "mass": 19.7,
+        "muzzleVelocity": 820.0
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": true,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 3000.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 6,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      11.0,
+      16.5,
+      18.8,
+      24.0,
+      37.7,
+      73.3
+    ],
+    "reverse_gear_speeds": [
+      8.2,
+      9.2
+    ],
+    "steer_type": null,
+    "empty_weight": 5.5,
+    "track_width": 0.4,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "81mm_Oerlikon_Typ_3Z_8Dla",
+        "caliber": 81.0,
+        "ammo": 9,
+        "reloadTime": 2.0,
+        "rateOfFire": 150,
+        "bulletType": "heat_grenade_tank",
+        "maxDistance": 6000,
+        "maxSpeed": 820,
+        "penetration": 330,
+        "explosiveMass": 1.0,
+        "explosiveType": "tnt"
+      }
+    ],
+    "main_gun_ammo": 9,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 105000,
+    "purchaseCost": 300000,
+    "crewTraining": 86000,
+    "expertTraining": 300000,
+    "aceTrainingGE": 1200,
+    "aceTrainingRP": 720000,
+    "repairCost": {
+      "arcade": [
+        3335,
+        4488
+      ],
+      "realistic": [
+        3879,
+        5221
+      ],
+      "simulator": [
+        4937,
+        6645
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.12,
+      "realistic": 1.61,
+      "simulator": 1.97
+    },
+    "expMultiplier": 1.96
+  }
+}

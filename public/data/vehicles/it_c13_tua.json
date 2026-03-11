@@ -1,0 +1,117 @@
+{
+  "id": "it_c13_tua",
+  "performance": {
+    "horsepower": 360.0,
+    "weight": 16.5,
+    "power_to_weight": 21.82,
+    "max_reverse_speed": 11.6,
+    "reload_time": 0.5,
+    "penetration": 630.0,
+    "max_speed": 70.2,
+    "crew_count": 5,
+    "elevation_speed": 25.0,
+    "traverse_speed": 45.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -30.0,
+      35.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": [
+      500,
+      300
+    ],
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": 583.1,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 65.0,
+    "mainGun": {
+      "name": "127mm_iTOW_launcher",
+      "caliber": 127.0,
+      "reloadTime": 0.5,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 0.65,
+        "expert": 0.57,
+        "ace": 0.5
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "127mm_i_tow",
+        "localizedName": "I-TOW",
+        "type": "atgm_tank",
+        "caliber": 127.0,
+        "mass": 37.0,
+        "muzzleVelocity": 296.0,
+        "penetration0m": 630.0
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": "isotta_fraschini",
+    "engine_model": "id38ss",
+    "engine_type": null,
+    "engine_max_rpm": 2800.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 5,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      19.9,
+      30.5,
+      41.3,
+      56.1,
+      70.2
+    ],
+    "reverse_gear_speeds": [
+      11.6
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 16.3,
+    "track_width": null,
+    "secondary_weapons": null,
+    "main_gun_ammo": 10,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 400000,
+    "purchaseCost": 470000,
+    "crewTraining": 130000,
+    "expertTraining": 450000,
+    "aceTrainingGE": 2000,
+    "aceTrainingRP": 890000,
+    "repairCost": {
+      "arcade": [
+        4664,
+        5874
+      ],
+      "realistic": [
+        5341,
+        6727
+      ],
+      "simulator": [
+        5657,
+        7125
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.6,
+      "realistic": 2.1,
+      "simulator": 2.5
+    },
+    "expMultiplier": 2.14
+  }
+}

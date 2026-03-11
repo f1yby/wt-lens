@@ -1,0 +1,27 @@
+{
+  "id": "germ_cruiser_elbing",
+  "economy": {
+    "researchCost": 21000,
+    "purchaseCost": 70000,
+    "crewTraining": 20000,
+    "expertTraining": 70000,
+    "aceTrainingGE": 590,
+    "aceTrainingRP": 360000,
+    "repairCost": {
+      "arcade": [
+        4746,
+        6053
+      ],
+      "realistic": [
+        5377,
+        6859
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 3.43,
+      "realistic": 6.0,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.48
+  }
+}

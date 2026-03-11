@@ -1,0 +1,27 @@
+{
+  "id": "uk_destroyer_tribal",
+  "economy": {
+    "researchCost": 9000,
+    "purchaseCost": 16000,
+    "crewTraining": 4500,
+    "expertTraining": 16000,
+    "aceTrainingGE": 180,
+    "aceTrainingRP": 190000,
+    "repairCost": {
+      "arcade": [
+        1194,
+        1555
+      ],
+      "realistic": [
+        1870,
+        2435
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.05,
+      "realistic": 2.42,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.18
+  }
+}

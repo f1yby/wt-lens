@@ -1,0 +1,33 @@
+{
+  "id": "h-75a-2_finland",
+  "economy": {
+    "researchCost": 7900,
+    "purchaseCost": 0,
+    "purchaseCostGold": 700,
+    "crewTraining": 2300,
+    "expertTraining": 15000,
+    "aceTrainingGE": 125,
+    "aceTrainingRP": 320000,
+    "repairCost": {
+      "arcade": [
+        560,
+        560
+      ],
+      "realistic": [
+        477,
+        477
+      ],
+      "simulator": [
+        602,
+        602
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.6,
+      "realistic": 1.16,
+      "simulator": 2.36
+    },
+    "expMultiplier": 1.12,
+    "freeRepairs": 30
+  }
+}

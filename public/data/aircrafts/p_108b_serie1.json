@@ -1,0 +1,31 @@
+{
+  "id": "p_108b_serie1",
+  "economy": {
+    "researchCost": 18000,
+    "purchaseCost": 47000,
+    "crewTraining": 13000,
+    "expertTraining": 47000,
+    "aceTrainingGE": 400,
+    "aceTrainingRP": 280000,
+    "repairCost": {
+      "arcade": [
+        987,
+        1384
+      ],
+      "realistic": [
+        1752,
+        2381
+      ],
+      "simulator": [
+        3060,
+        4157
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.71,
+      "realistic": 1.54,
+      "simulator": 2.49
+    },
+    "expMultiplier": 1.36
+  }
+}

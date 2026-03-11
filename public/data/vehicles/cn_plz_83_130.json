@@ -1,0 +1,163 @@
+{
+  "id": "cn_plz_83_130",
+  "performance": {
+    "horsepower": 520.0,
+    "weight": 30.0,
+    "power_to_weight": 17.33,
+    "max_reverse_speed": 8.5,
+    "reload_time": 11.9,
+    "penetration": 328.3,
+    "max_speed": 56.1,
+    "crew_count": 5,
+    "elevation_speed": 10.0,
+    "traverse_speed": 10.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -5.0,
+      65.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 70.0,
+    "mainGun": {
+      "name": "130mm_pl_59a_gai",
+      "caliber": 130.0,
+      "reloadTime": 11.9,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 15.47,
+        "expert": 13.68,
+        "ace": 11.9
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "130mm_br_482b",
+        "localizedName": "BR-482B",
+        "type": "apcbc_tank",
+        "caliber": 130.0,
+        "mass": 33.4,
+        "muzzleVelocity": 930.0,
+        "deMarre": {
+          "fullCaliber": 130.0,
+          "isApcbc": true,
+          "explosiveMass": 0.115,
+          "Cx": 0.3594
+        },
+        "penetration0m": 328.3,
+        "explosiveMassKg": 0.115,
+        "explosiveType": "a_ix_2",
+        "tntEquivalent": 0.161
+      },
+      {
+        "name": "130mm_djb_1",
+        "localizedName": "DJB2/PL59A-130",
+        "type": "he_frag_tank",
+        "caliber": 130.0,
+        "mass": 33.4,
+        "muzzleVelocity": 930.0,
+        "explosiveMassKg": 3.74,
+        "explosiveType": "tnt",
+        "tntEquivalent": 3.74
+      },
+      {
+        "name": "130mm_djb_1_vt",
+        "localizedName": "DJB3/PL59A-130",
+        "type": "he_frag_radio_fuse",
+        "caliber": 130.0,
+        "mass": 33.4,
+        "muzzleVelocity": 930.0,
+        "explosiveMassKg": 3.69,
+        "explosiveType": "tnt",
+        "tntEquivalent": 3.69
+      },
+      {
+        "name": "130mm_djb_1_smoke",
+        "localizedName": "Type 59-1 Smoke",
+        "type": "smoke_tank",
+        "caliber": 130.0,
+        "mass": 32.47,
+        "muzzleVelocity": 935.0,
+        "explosiveMassKg": 0.272,
+        "explosiveType": "smoke_composition",
+        "tntEquivalent": 0.272
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2000.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 5,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      8.5,
+      18.2,
+      25.5,
+      35.8,
+      56.1
+    ],
+    "reverse_gear_speeds": [
+      8.5
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 29.0,
+    "track_width": 0.484,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner2",
+        "name": "12_7mm_Type_54",
+        "caliber": 12.7,
+        "ammo": 600,
+        "reloadTime": 8.0,
+        "rateOfFire": 600,
+        "bulletType": "ap_i_t_ball"
+      }
+    ],
+    "main_gun_ammo": 38,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 95000,
+    "purchaseCost": 270000,
+    "crewTraining": 78000,
+    "expertTraining": 270000,
+    "aceTrainingGE": 1100,
+    "aceTrainingRP": 670000,
+    "repairCost": {
+      "arcade": [
+        5297,
+        6556
+      ],
+      "realistic": [
+        5446,
+        6740
+      ],
+      "simulator": [
+        8857,
+        10962
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.48,
+      "realistic": 2.1,
+      "simulator": 2.44
+    },
+    "expMultiplier": 1.9
+  }
+}

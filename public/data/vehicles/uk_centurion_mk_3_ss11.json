@@ -1,0 +1,178 @@
+{
+  "id": "uk_centurion_mk_3_ss11",
+  "performance": {
+    "horsepower": 650.0,
+    "weight": 50.8,
+    "power_to_weight": 12.8,
+    "max_reverse_speed": 11.9,
+    "reload_time": 6.25,
+    "penetration": 239.1,
+    "max_speed": 34.7,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 20.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "both",
+    "elevation_range": [
+      -10.0,
+      20.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 30.0,
+    "mainGun": {
+      "name": "84mm_kan_strv81",
+      "caliber": 83.4,
+      "reloadTime": 6.25,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 8.12,
+        "expert": 7.19,
+        "ace": 6.25
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "83mm_slpprj",
+        "localizedName": "slpprj",
+        "type": "apcbc_solid_medium_caliber_tank",
+        "caliber": 83.4,
+        "mass": 9.072,
+        "muzzleVelocity": 1021.1,
+        "deMarre": {
+          "fullCaliber": 83.4,
+          "isApcbc": true,
+          "explosiveMass": 0,
+          "Cx": 0.28
+        },
+        "penetration0m": 239.1
+      },
+      {
+        "name": "83mm_slsgr_m53",
+        "localizedName": "slsgr m/53",
+        "type": "he_frag_tank",
+        "caliber": 83.4,
+        "mass": 7.88,
+        "muzzleVelocity": 609.6,
+        "explosiveMassKg": 1.21,
+        "explosiveType": "comp_b",
+        "tntEquivalent": 1.537
+      },
+      {
+        "name": "83mm_pvlng_m54",
+        "localizedName": "slpprj m/54",
+        "type": "apds_early_tank",
+        "caliber": 53.0,
+        "mass": 3.22,
+        "muzzleVelocity": 1432.6,
+        "deMarre": {
+          "fullCaliber": 83.4,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "isApcr": true,
+          "coreCaliber": 53.0,
+          "coreMass": 2.1,
+          "Cx": 0.1914
+        },
+        "penetration0m": 189.5
+      },
+      {
+        "name": "83mm_rokgr_m53",
+        "localizedName": "rökgr m/53",
+        "type": "smoke_tank",
+        "caliber": 83.4,
+        "mass": 10.131,
+        "muzzleVelocity": 251.5,
+        "explosiveMassKg": 0.05,
+        "explosiveType": "smoke_composition",
+        "tntEquivalent": 0.05
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2550.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 5,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      4.0,
+      10.1,
+      16.3,
+      25.8,
+      34.7
+    ],
+    "reverse_gear_speeds": [
+      2.0,
+      11.9
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 50.26,
+    "track_width": 0.68,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_92mm_BESA",
+        "caliber": 7.9,
+        "ammo": 3600,
+        "reloadTime": 8.0,
+        "rateOfFire": 600,
+        "bulletType": "ap_i_ball"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "164mm_s11_rocket_launcher",
+        "caliber": 0,
+        "ammo": 3,
+        "reloadTime": 10.0,
+        "rateOfFire": 60
+      }
+    ],
+    "main_gun_ammo": 65,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 71000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 6090,
+    "crewTraining": 10000,
+    "expertTraining": 340000,
+    "aceTrainingGE": 890,
+    "aceTrainingRP": 1180000,
+    "repairCost": {
+      "arcade": [
+        2656,
+        2656
+      ],
+      "realistic": [
+        3061,
+        3061
+      ],
+      "simulator": [
+        4259,
+        4259
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.51,
+      "realistic": 3.79,
+      "simulator": 4.21
+    },
+    "expMultiplier": 1.84,
+    "freeRepairs": 30
+  }
+}

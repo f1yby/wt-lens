@@ -1,0 +1,213 @@
+{
+  "id": "ussr_t_44",
+  "performance": {
+    "horsepower": 520.0,
+    "weight": 31.0,
+    "power_to_weight": 16.77,
+    "max_reverse_speed": 8.8,
+    "reload_time": 7.41,
+    "penetration": 222.6,
+    "max_speed": 58.8,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 25.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -5.0,
+      20.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 25.0,
+    "mainGun": {
+      "name": "85mm_ZiS_S_53",
+      "caliber": 85.0,
+      "reloadTime": 7.41,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 9.63,
+        "expert": 8.52,
+        "ace": 7.41
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "85mm_br_365k",
+        "localizedName": "BR-365K",
+        "type": "aphe_tank",
+        "caliber": 85.0,
+        "mass": 9.2,
+        "muzzleVelocity": 792.0,
+        "deMarre": {
+          "fullCaliber": 85.0,
+          "isApcbc": false,
+          "explosiveMass": 0.05,
+          "Cx": 0.6106
+        },
+        "penetration0m": 148.1,
+        "explosiveMassKg": 0.05,
+        "explosiveType": "a_ix_2",
+        "tntEquivalent": 0.07
+      },
+      {
+        "name": "85mm_o_365k",
+        "localizedName": "O-365K",
+        "type": "he_frag_tank",
+        "caliber": 85.0,
+        "mass": 9.54,
+        "muzzleVelocity": 785.0,
+        "explosiveMassKg": 0.741,
+        "explosiveType": "tnt",
+        "tntEquivalent": 0.741
+      },
+      {
+        "name": "85mm_br_365a",
+        "localizedName": "BR-365",
+        "type": "aphebc_tank",
+        "caliber": 85.0,
+        "mass": 9.2,
+        "muzzleVelocity": 792.0,
+        "deMarre": {
+          "fullCaliber": 85.0,
+          "isApcbc": false,
+          "explosiveMass": 0.164,
+          "Cx": 0.3308
+        },
+        "penetration0m": 135.7,
+        "explosiveMassKg": 0.164,
+        "explosiveType": "tnt",
+        "tntEquivalent": 0.164
+      },
+      {
+        "name": "85mm_br_367",
+        "localizedName": "BR-367",
+        "type": "apcbc_tank",
+        "caliber": 85.0,
+        "mass": 9.2,
+        "muzzleVelocity": 792.0,
+        "deMarre": {
+          "fullCaliber": 85.0,
+          "isApcbc": true,
+          "explosiveMass": 0.05,
+          "Cx": 0.378
+        },
+        "penetration0m": 164.6,
+        "explosiveMassKg": 0.05,
+        "explosiveType": "a_ix_2",
+        "tntEquivalent": 0.07
+      },
+      {
+        "name": "85mm_br_365p",
+        "localizedName": "BR-365P",
+        "type": "apcr_tank",
+        "caliber": 28.0,
+        "mass": 4.99,
+        "muzzleVelocity": 1050.0,
+        "deMarre": {
+          "fullCaliber": 85.0,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "isApcr": true,
+          "coreCaliber": 28.0,
+          "coreMass": 0.648,
+          "Cx": 0.4779
+        },
+        "penetration0m": 222.6
+      },
+      {
+        "name": "85mm_br_367p",
+        "localizedName": "BR-367P",
+        "type": "apcr_tank",
+        "caliber": 30.0,
+        "mass": 5.3,
+        "muzzleVelocity": 1020.0,
+        "deMarre": {
+          "fullCaliber": 85.0,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "isApcr": true,
+          "coreCaliber": 30.0,
+          "coreMass": 1.1,
+          "Cx": 0.3608
+        },
+        "penetration0m": 221.2
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": "chtz",
+    "engine_model": "v_44",
+    "engine_type": null,
+    "engine_max_rpm": 2000.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 5,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      8.8,
+      18.9,
+      26.5,
+      37.0,
+      58.8
+    ],
+    "reverse_gear_speeds": [
+      8.8
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 30.5,
+    "track_width": 0.58,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_DT",
+        "caliber": 7.6,
+        "ammo": 1890,
+        "reloadTime": 8.0,
+        "rateOfFire": 600,
+        "bulletType": "ap_i_ball"
+      }
+    ],
+    "main_gun_ammo": 58,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 71000,
+    "purchaseCost": 210000,
+    "crewTraining": 61000,
+    "expertTraining": 210000,
+    "aceTrainingGE": 890,
+    "aceTrainingRP": 570000,
+    "repairCost": {
+      "arcade": [
+        3583,
+        4605
+      ],
+      "realistic": [
+        4192,
+        5388
+      ],
+      "simulator": [
+        5456,
+        7013
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.21,
+      "realistic": 1.83,
+      "simulator": 2.06
+    },
+    "expMultiplier": 1.78
+  }
+}

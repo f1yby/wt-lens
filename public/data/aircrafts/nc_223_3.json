@@ -1,0 +1,31 @@
+{
+  "id": "nc_223_3",
+  "economy": {
+    "researchCost": 7900,
+    "purchaseCost": 10000,
+    "crewTraining": 3000,
+    "expertTraining": 10000,
+    "aceTrainingGE": 125,
+    "aceTrainingRP": 160000,
+    "repairCost": {
+      "arcade": [
+        495,
+        647
+      ],
+      "realistic": [
+        797,
+        1011
+      ],
+      "simulator": [
+        1194,
+        1513
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.35,
+      "realistic": 0.69,
+      "simulator": 1.49
+    },
+    "expMultiplier": 1.12
+  }
+}

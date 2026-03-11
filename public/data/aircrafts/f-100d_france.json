@@ -1,0 +1,31 @@
+{
+  "id": "f-100d_france",
+  "economy": {
+    "researchCost": 190000,
+    "purchaseCost": 530000,
+    "crewTraining": 150000,
+    "expertTraining": 530000,
+    "aceTrainingGE": 2600,
+    "aceTrainingRP": 1010000,
+    "repairCost": {
+      "arcade": [
+        3151,
+        4258
+      ],
+      "realistic": [
+        10118,
+        13673
+      ],
+      "simulator": [
+        10149,
+        13715
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.29,
+      "realistic": 3.8,
+      "simulator": 6.0
+    },
+    "expMultiplier": 2.26
+  }
+}

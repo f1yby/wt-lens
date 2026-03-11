@@ -1,0 +1,190 @@
+{
+  "id": "cn_zts_63_1980",
+  "performance": {
+    "horsepower": 400.0,
+    "weight": 18.4,
+    "power_to_weight": 21.74,
+    "max_reverse_speed": 8.0,
+    "reload_time": 7.41,
+    "penetration": 226.8,
+    "max_speed": 64.1,
+    "crew_count": 5,
+    "elevation_speed": 10.0,
+    "traverse_speed": 10.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -5.0,
+      22.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 27.0,
+    "mainGun": {
+      "name": "85mm_Type_63",
+      "caliber": 85.0,
+      "reloadTime": 7.41,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 9.63,
+        "expert": 8.52,
+        "ace": 7.41
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "85mm_type1956",
+        "localizedName": "Type 56 HEAT-FS",
+        "type": "heat_fs_tank",
+        "caliber": 85.0,
+        "mass": 7.0,
+        "muzzleVelocity": 845.0,
+        "penetration0m": 300.0,
+        "explosiveMassKg": 0.68,
+        "explosiveType": "pentolite",
+        "tntEquivalent": 0.857
+      },
+      {
+        "name": "type_56_he",
+        "localizedName": "Type 56 HE",
+        "type": "he_frag_tank",
+        "caliber": 85.0,
+        "mass": 9.54,
+        "muzzleVelocity": 785.0,
+        "explosiveMassKg": 0.741,
+        "explosiveType": "tnt",
+        "tntEquivalent": 0.741
+      },
+      {
+        "name": "type_56_apc",
+        "localizedName": "Type 56 APCBC",
+        "type": "apcbc_tank",
+        "caliber": 85.0,
+        "mass": 9.2,
+        "muzzleVelocity": 792.0,
+        "deMarre": {
+          "fullCaliber": 85.0,
+          "isApcbc": true,
+          "explosiveMass": 0.05,
+          "Cx": 0.378
+        },
+        "penetration0m": 164.6,
+        "explosiveMassKg": 0.05,
+        "explosiveType": "a_ix_2",
+        "tntEquivalent": 0.07
+      },
+      {
+        "name": "85mm_djw_85",
+        "localizedName": "DJW85",
+        "type": "apds_fs_long_tank",
+        "caliber": 25.0,
+        "mass": 2.1,
+        "muzzleVelocity": 1290.0,
+        "lanzOdermatt": {
+          "workingLength": 275.0,
+          "density": 17500.0,
+          "material": "tungsten",
+          "Cx": 0.3264
+        },
+        "penetration0m": 226.8,
+        "penetrationData": {
+          "at0m": {
+            "angle0": 226.8,
+            "angle30": 196.4,
+            "angle60": 113.4
+          }
+        }
+      }
+    ],
+    "penetrationData": {
+      "at0m": {
+        "angle0": 226.8,
+        "angle30": 196.4,
+        "angle60": 113.4
+      }
+    },
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2000.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 5,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      8.0,
+      21.1,
+      30.8,
+      48.0,
+      64.1
+    ],
+    "reverse_gear_speeds": [
+      8.0
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 18.0,
+    "track_width": null,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_Type_59",
+        "caliber": 7.6,
+        "ammo": 2000,
+        "reloadTime": 8.0,
+        "rateOfFire": 600,
+        "bulletType": "ap_i_ball"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "12_7mm_Type_54",
+        "caliber": 12.7,
+        "ammo": 500,
+        "reloadTime": 8.0,
+        "rateOfFire": 600,
+        "bulletType": "ap_i_t_ball"
+      }
+    ],
+    "main_gun_ammo": 47,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": true
+  },
+  "economy": {
+    "researchCost": 95000,
+    "purchaseCost": 270000,
+    "crewTraining": 78000,
+    "expertTraining": 270000,
+    "aceTrainingGE": 1100,
+    "aceTrainingRP": 670000,
+    "repairCost": {
+      "arcade": [
+        3163,
+        4400
+      ],
+      "realistic": [
+        3777,
+        5254
+      ],
+      "simulator": [
+        5145,
+        7156
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.09,
+      "realistic": 1.58,
+      "simulator": 2.01
+    },
+    "expMultiplier": 1.9
+  }
+}

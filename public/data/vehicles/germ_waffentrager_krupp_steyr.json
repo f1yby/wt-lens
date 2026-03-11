@@ -1,0 +1,167 @@
+{
+  "id": "germ_waffentrager_krupp_steyr",
+  "performance": {
+    "horsepower": 140.0,
+    "weight": 17.0,
+    "power_to_weight": 8.24,
+    "max_reverse_speed": 6.5,
+    "reload_time": 8.55,
+    "penetration": 287.1,
+    "max_speed": 34.8,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 14.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -8.0,
+      45.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 53.0,
+    "mainGun": {
+      "name": "88mm_PaK43_open_turret",
+      "caliber": 88.0,
+      "reloadTime": 8.55,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 11.12,
+        "expert": 9.83,
+        "ace": 8.55
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "88mm_pzrg_39_43",
+        "localizedName": "PzGr 39/43",
+        "type": "apcbc_tank",
+        "caliber": 88.0,
+        "mass": 10.16,
+        "muzzleVelocity": 1000.0,
+        "deMarre": {
+          "fullCaliber": 88.0,
+          "isApcbc": true,
+          "explosiveMass": 0.064,
+          "Cx": 0.2623
+        },
+        "penetration0m": 237.5,
+        "explosiveMassKg": 0.064,
+        "explosiveType": "h10",
+        "tntEquivalent": 0.09
+      },
+      {
+        "name": "88mm_sprgr_43",
+        "localizedName": "Sprgr.43",
+        "type": "he_frag_tank",
+        "caliber": 88.0,
+        "mass": 9.4,
+        "muzzleVelocity": 820.0,
+        "explosiveMassKg": 1.0,
+        "explosiveType": "fp02",
+        "tntEquivalent": 1.0
+      },
+      {
+        "name": "88mm_grhl39",
+        "localizedName": "Hl.Gr 39",
+        "type": "heat_tank",
+        "caliber": 88.0,
+        "mass": 7.64,
+        "muzzleVelocity": 600.0,
+        "penetration0m": 110.0,
+        "explosiveMassKg": 0.646,
+        "explosiveType": "h5",
+        "tntEquivalent": 0.904
+      },
+      {
+        "name": "88mm_pzrg_40_43",
+        "localizedName": "PzGr 40/43",
+        "type": "apcr_tank",
+        "caliber": 35.0,
+        "mass": 7.3,
+        "muzzleVelocity": 1130.0,
+        "deMarre": {
+          "fullCaliber": 88.0,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "isApcr": true,
+          "coreCaliber": 35.0,
+          "coreMass": 2.0,
+          "Cx": 0.28
+        },
+        "penetration0m": 287.1
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 3000.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 8,
+    "reverse_gears": 4,
+    "forward_gear_speeds": [
+      2.2,
+      3.2,
+      4.7,
+      7.0,
+      10.8,
+      16.0,
+      23.3,
+      34.8
+    ],
+    "reverse_gear_speeds": [
+      2.1,
+      3.1,
+      4.6,
+      6.5
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 16.0,
+    "track_width": 0.44,
+    "secondary_weapons": null,
+    "main_gun_ammo": 30,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 20000,
+    "purchaseCost": 135000,
+    "crewTraining": 39000,
+    "expertTraining": 135000,
+    "aceTrainingGE": 550,
+    "aceTrainingRP": 390000,
+    "repairCost": {
+      "arcade": [
+        1814,
+        2245
+      ],
+      "realistic": [
+        2135,
+        2642
+      ],
+      "simulator": [
+        2951,
+        3652
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.96,
+      "realistic": 1.5,
+      "simulator": 1.94
+    },
+    "expMultiplier": 1.54
+  }
+}

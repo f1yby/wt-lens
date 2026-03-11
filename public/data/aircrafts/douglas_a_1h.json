@@ -1,0 +1,33 @@
+{
+  "id": "douglas_a_1h",
+  "economy": {
+    "researchCost": 71000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 6090,
+    "crewTraining": 10000,
+    "expertTraining": 340000,
+    "aceTrainingGE": 1200,
+    "aceTrainingRP": 1180000,
+    "repairCost": {
+      "arcade": [
+        2285,
+        2285
+      ],
+      "realistic": [
+        3652,
+        3652
+      ],
+      "simulator": [
+        5651,
+        5651
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.27,
+      "realistic": 4.11,
+      "simulator": 12.0
+    },
+    "expMultiplier": 1.84,
+    "freeRepairs": 30
+  }
+}

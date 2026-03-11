@@ -1,0 +1,33 @@
+{
+  "id": "f-104s_cb",
+  "economy": {
+    "researchCost": 210000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 9270,
+    "crewTraining": 10000,
+    "expertTraining": 940000,
+    "aceTrainingGE": 2800,
+    "aceTrainingRP": 2150000,
+    "repairCost": {
+      "arcade": [
+        1960,
+        1960
+      ],
+      "realistic": [
+        5812,
+        5812
+      ],
+      "simulator": [
+        6208,
+        6208
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.2,
+      "realistic": 6.08,
+      "simulator": 12.0
+    },
+    "expMultiplier": 2.32,
+    "freeRepairs": 30
+  }
+}

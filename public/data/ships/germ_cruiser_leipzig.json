@@ -1,0 +1,27 @@
+{
+  "id": "germ_cruiser_leipzig",
+  "economy": {
+    "researchCost": 46000,
+    "purchaseCost": 150000,
+    "crewTraining": 43000,
+    "expertTraining": 150000,
+    "aceTrainingGE": 940,
+    "aceTrainingRP": 480000,
+    "repairCost": {
+      "arcade": [
+        10065,
+        13054
+      ],
+      "realistic": [
+        10127,
+        13135
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 4.33,
+      "realistic": 6.0,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.66
+  }
+}

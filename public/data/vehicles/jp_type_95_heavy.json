@@ -1,0 +1,162 @@
+{
+  "id": "jp_type_95_heavy",
+  "performance": {
+    "horsepower": 290.0,
+    "weight": 26.0,
+    "power_to_weight": 11.15,
+    "max_reverse_speed": 4.6,
+    "reload_time": 4.0,
+    "penetration": 80.0,
+    "max_speed": 23.0,
+    "crew_count": 5,
+    "elevation_speed": 10.0,
+    "traverse_speed": 15.2,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -10.0,
+      22.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 32.0,
+    "mainGun": {
+      "name": "70mm_Type94",
+      "caliber": 70.0,
+      "reloadTime": 4.0,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 5.2,
+        "expert": 4.6,
+        "ace": 4.0
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "70mm_type3",
+        "localizedName": "Type 3 HEAT",
+        "type": "heat_tank",
+        "caliber": 70.0,
+        "mass": 3.35,
+        "muzzleVelocity": 200.0,
+        "penetration0m": 80.0,
+        "explosiveMassKg": 0.47,
+        "explosiveType": "rdx_tnt",
+        "tntEquivalent": 0.602
+      },
+      {
+        "name": "70mm_type95_ap",
+        "localizedName": "Type 95 APHE",
+        "type": "aphe_tank",
+        "caliber": 70.0,
+        "mass": 4.45,
+        "muzzleVelocity": 300.0,
+        "deMarre": {
+          "fullCaliber": 70.0,
+          "isApcbc": false,
+          "explosiveMass": 0.17,
+          "Cx": 0.35
+        },
+        "penetration0m": 20.9,
+        "explosiveMassKg": 0.17,
+        "explosiveType": "oshiyaku",
+        "tntEquivalent": 0.17
+      },
+      {
+        "name": "70mm_type92_he",
+        "localizedName": "Type 92 HE",
+        "type": "he_frag_tank",
+        "caliber": 70.0,
+        "mass": 3.81,
+        "muzzleVelocity": 348.0,
+        "explosiveMassKg": 0.59,
+        "explosiveType": "tnt",
+        "tntEquivalent": 0.59
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 1600.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 4,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      4.5,
+      8.2,
+      13.6,
+      23.0
+    ],
+    "reverse_gear_speeds": [
+      4.6
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 25.5,
+    "track_width": 0.38,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "37mm_type_94",
+        "caliber": 37.0,
+        "ammo": 150,
+        "rateOfFire": 21,
+        "bulletType": "aphe_tank"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "7_7mm_Type_97",
+        "caliber": 7.7,
+        "ammo": 1960,
+        "reloadTime": 3.0,
+        "rateOfFire": 498,
+        "bulletType": "ap_ball"
+      }
+    ],
+    "main_gun_ammo": 100,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 5900,
+    "purchaseCost": 0,
+    "purchaseCostGold": 1370,
+    "crewTraining": 1400,
+    "expertTraining": 9000,
+    "aceTrainingGE": 75,
+    "aceTrainingRP": 270000,
+    "repairCost": {
+      "arcade": [
+        3307,
+        3307
+      ],
+      "realistic": [
+        423,
+        423
+      ],
+      "simulator": [
+        725,
+        725
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.6,
+      "realistic": 0.64,
+      "simulator": 0.84
+    },
+    "expMultiplier": 1.06,
+    "freeRepairs": 30
+  }
+}

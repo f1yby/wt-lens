@@ -1,0 +1,130 @@
+{
+  "id": "sw_pvrbv_551",
+  "performance": {
+    "horsepower": 136.0,
+    "weight": 9.7,
+    "power_to_weight": 14.02,
+    "max_reverse_speed": 6.7,
+    "reload_time": 10.0,
+    "penetration": 800.0,
+    "max_speed": 38.1,
+    "crew_count": 5,
+    "elevation_speed": 25.0,
+    "traverse_speed": 25.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -13.0,
+      25.0
+    ],
+    "traverse_range": [
+      -120.0,
+      120.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 38.0,
+    "mainGun": {
+      "name": "127mm_Rbs_55_tow_launcher",
+      "caliber": 127.0,
+      "reloadTime": 10.0,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 13.0,
+        "expert": 11.5,
+        "ace": 10.0
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "127mm_rb_55_b",
+        "localizedName": "RB 55B",
+        "type": "atgm_tank",
+        "caliber": 127.0,
+        "mass": 37.0,
+        "muzzleVelocity": 296.0,
+        "penetration0m": 630.0
+      },
+      {
+        "name": "152mm_rb_55_c",
+        "localizedName": "RB 55C",
+        "type": "atgm_tank",
+        "caliber": 152.0,
+        "mass": 37.0,
+        "muzzleVelocity": 329.0,
+        "penetration0m": 800.0
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 5200.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 4,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      6.9,
+      13.1,
+      24.4,
+      38.1
+    ],
+    "reverse_gear_speeds": [
+      6.7
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 9.5,
+    "track_width": 0.3,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "66mm_modern_smoke_grenade_launcher",
+        "caliber": 0,
+        "ammo": 6,
+        "rateOfFire": 2400
+      }
+    ],
+    "main_gun_ammo": 8,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 105000,
+    "purchaseCost": 300000,
+    "crewTraining": 86000,
+    "expertTraining": 300000,
+    "aceTrainingGE": 1200,
+    "aceTrainingRP": 720000,
+    "repairCost": {
+      "arcade": [
+        4739,
+        5751
+      ],
+      "realistic": [
+        5291,
+        6421
+      ],
+      "simulator": [
+        6608,
+        8020
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.56,
+      "realistic": 2.1,
+      "simulator": 2.5
+    },
+    "expMultiplier": 1.96
+  }
+}

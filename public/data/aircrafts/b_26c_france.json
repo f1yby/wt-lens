@@ -1,0 +1,31 @@
+{
+  "id": "b_26c_france",
+  "economy": {
+    "researchCost": 18000,
+    "purchaseCost": 47000,
+    "crewTraining": 13000,
+    "expertTraining": 47000,
+    "aceTrainingGE": 400,
+    "aceTrainingRP": 280000,
+    "repairCost": {
+      "arcade": [
+        939,
+        1324
+      ],
+      "realistic": [
+        2293,
+        3133
+      ],
+      "simulator": [
+        3943,
+        5387
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.69,
+      "realistic": 1.61,
+      "simulator": 3.2
+    },
+    "expMultiplier": 1.36
+  }
+}

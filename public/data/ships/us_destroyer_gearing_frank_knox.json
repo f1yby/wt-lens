@@ -1,0 +1,29 @@
+{
+  "id": "us_destroyer_gearing_frank_knox",
+  "economy": {
+    "researchCost": 21000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 1600,
+    "crewTraining": 10000,
+    "expertTraining": 105000,
+    "aceTrainingGE": 590,
+    "aceTrainingRP": 710000,
+    "repairCost": {
+      "arcade": [
+        4166,
+        4166
+      ],
+      "realistic": [
+        2883,
+        2883
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 6.0,
+      "realistic": 11.69,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.48,
+    "freeRepairs": 30
+  }
+}

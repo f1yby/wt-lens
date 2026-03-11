@@ -1,0 +1,33 @@
+{
+  "id": "i-153_m62_zhukovskiy",
+  "economy": {
+    "researchCost": 4000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 400,
+    "crewTraining": 450,
+    "expertTraining": 3000,
+    "aceTrainingGE": 45,
+    "aceTrainingRP": 220000,
+    "repairCost": {
+      "arcade": [
+        556,
+        556
+      ],
+      "realistic": [
+        276,
+        276
+      ],
+      "simulator": [
+        306,
+        306
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.42,
+      "realistic": 0.61,
+      "simulator": 1.27
+    },
+    "expMultiplier": 1.0,
+    "freeRepairs": 30
+  }
+}

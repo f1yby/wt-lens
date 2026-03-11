@@ -1,0 +1,27 @@
+{
+  "id": "uk_destroyer_hunt_2series",
+  "economy": {
+    "researchCost": 5300,
+    "purchaseCost": 5000,
+    "crewTraining": 1400,
+    "expertTraining": 5000,
+    "aceTrainingGE": 80,
+    "aceTrainingRP": 135000,
+    "repairCost": {
+      "arcade": [
+        634,
+        822
+      ],
+      "realistic": [
+        1007,
+        1307
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.65,
+      "realistic": 1.27,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.06
+  }
+}

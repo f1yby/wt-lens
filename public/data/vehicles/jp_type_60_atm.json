@@ -1,0 +1,134 @@
+{
+  "id": "jp_type_60_atm",
+  "performance": {
+    "horsepower": 220.0,
+    "weight": 12.0,
+    "power_to_weight": 18.33,
+    "max_reverse_speed": 17.7,
+    "reload_time": null,
+    "penetration": null,
+    "max_speed": 45.1,
+    "crew_count": 5,
+    "elevation_speed": null,
+    "traverse_speed": null,
+    "has_stabilizer": null,
+    "stabilizer_type": "none",
+    "elevation_range": null,
+    "traverse_range": null,
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": null,
+    "mainGun": null,
+    "ammunitions": null,
+    "penetrationData": null,
+    "autoLoader": null,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2400.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 6,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      7.5,
+      15.0,
+      19.8,
+      28.9,
+      35.2,
+      45.1
+    ],
+    "reverse_gear_speeds": [
+      7.5,
+      17.7
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 11.7,
+    "track_width": 0.4,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "120mm_type_64_mat_launcher",
+        "caliber": 120.0,
+        "ammo": 3,
+        "reloadTime": 10.0,
+        "rateOfFire": 3,
+        "bulletType": "atgm_tank",
+        "maxDistance": 2000,
+        "maxSpeed": 85,
+        "penetration": 500,
+        "explosiveMass": 3.47,
+        "explosiveType": "comp_b"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "120mm_type_64_mat_launcher",
+        "caliber": 120.0,
+        "ammo": 3,
+        "reloadTime": 10.0,
+        "rateOfFire": 3,
+        "bulletType": "atgm_tank",
+        "maxDistance": 2000,
+        "maxSpeed": 85,
+        "penetration": 500,
+        "explosiveMass": 3.47,
+        "explosiveType": "comp_b"
+      },
+      {
+        "trigger": "gunner3",
+        "name": "12_7mm_M2_HB",
+        "caliber": 12.7,
+        "ammo": 800,
+        "reloadTime": 8.0,
+        "rateOfFire": 575,
+        "bulletType": "ap_i_t_ball_M20"
+      },
+      {
+        "trigger": "gunner4",
+        "name": "7_62mm_M1919A4",
+        "caliber": 7.6,
+        "ammo": 1500,
+        "reloadTime": 8.0,
+        "rateOfFire": 500,
+        "bulletType": "ap_ball"
+      }
+    ],
+    "main_gun_ammo": null,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 35000,
+    "purchaseCost": 210000,
+    "crewTraining": 61000,
+    "expertTraining": 210000,
+    "aceTrainingGE": 890,
+    "aceTrainingRP": 570000,
+    "repairCost": {
+      "arcade": [
+        4115,
+        5061
+      ],
+      "realistic": [
+        4659,
+        5731
+      ],
+      "simulator": [
+        6667,
+        8201
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.29,
+      "realistic": 2.02,
+      "simulator": 2.47
+    },
+    "expMultiplier": 1.78
+  }
+}

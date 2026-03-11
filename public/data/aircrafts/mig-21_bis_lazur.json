@@ -1,0 +1,33 @@
+{
+  "id": "mig-21_bis_lazur",
+  "economy": {
+    "researchCost": 230000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 9450,
+    "crewTraining": 10000,
+    "expertTraining": 1030000,
+    "aceTrainingGE": 3000,
+    "aceTrainingRP": 2280000,
+    "repairCost": {
+      "arcade": [
+        1980,
+        1980
+      ],
+      "realistic": [
+        5933,
+        5933
+      ],
+      "simulator": [
+        5969,
+        5969
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.25,
+      "realistic": 6.24,
+      "simulator": 12.0
+    },
+    "expMultiplier": 2.38,
+    "freeRepairs": 30
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "id": "hs-129b-2",
+  "economy": {
+    "researchCost": 4600,
+    "purchaseCost": 16000,
+    "crewTraining": 4500,
+    "expertTraining": 16000,
+    "aceTrainingGE": 180,
+    "aceTrainingRP": 190000,
+    "repairCost": {
+      "arcade": [
+        406,
+        601
+      ],
+      "realistic": [
+        566,
+        809
+      ],
+      "simulator": [
+        1206,
+        1726
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.31,
+      "realistic": 0.68,
+      "simulator": 1.39
+    },
+    "expMultiplier": 1.18
+  }
+}

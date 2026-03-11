@@ -1,0 +1,186 @@
+{
+  "id": "sw_a_34_comet",
+  "performance": {
+    "horsepower": 600.0,
+    "weight": 33.5,
+    "power_to_weight": 17.91,
+    "max_reverse_speed": 3.0,
+    "reload_time": 7.41,
+    "penetration": 161.1,
+    "max_speed": 51.5,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 21.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -12.0,
+      20.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 32.0,
+    "mainGun": {
+      "name": "77mm_QQF_Mk_II_L50",
+      "caliber": 76.2,
+      "reloadTime": 7.41,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 9.63,
+        "expert": 8.52,
+        "ace": 7.41
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "76mm_shot_mk6_ap",
+        "localizedName": "Shot Mk.6",
+        "type": "ap_tank",
+        "caliber": 76.2,
+        "mass": 7.71,
+        "muzzleVelocity": 784.9,
+        "deMarre": {
+          "fullCaliber": 76.2,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "Cx": 0.4
+        },
+        "penetration0m": 145.0
+      },
+      {
+        "name": "76mm_shell_mk1_he",
+        "localizedName": "Shell Mk.1",
+        "type": "he_frag_tank",
+        "caliber": 76.2,
+        "mass": 6.98,
+        "muzzleVelocity": 495.3,
+        "explosiveMassKg": 0.58,
+        "explosiveType": "tnt",
+        "tntEquivalent": 0.58
+      },
+      {
+        "name": "76mm_shot_mk4_apc",
+        "localizedName": "Shot Mk.4",
+        "type": "apc_solid_medium_caliber_tank",
+        "caliber": 76.2,
+        "mass": 7.71,
+        "muzzleVelocity": 784.9,
+        "deMarre": {
+          "fullCaliber": 76.2,
+          "isApcbc": true,
+          "explosiveMass": 0,
+          "Cx": 0.4
+        },
+        "penetration0m": 161.1
+      },
+      {
+        "name": "76mm_shot_mk8_apcbc",
+        "localizedName": "Shot Mk.8",
+        "type": "apcbc_solid_medium_caliber_tank",
+        "caliber": 76.2,
+        "mass": 7.71,
+        "muzzleVelocity": 784.9,
+        "deMarre": {
+          "fullCaliber": 76.2,
+          "isApcbc": true,
+          "explosiveMass": 0,
+          "Cx": 0.4
+        },
+        "penetration0m": 161.1
+      },
+      {
+        "name": "76mm_shot_sv_mk1_apds",
+        "localizedName": "Shot SV Mk.1",
+        "type": "apds_early_tank",
+        "caliber": 49.5,
+        "mass": 2.477,
+        "muzzleVelocity": 1036.3,
+        "deMarre": {
+          "fullCaliber": 76.2,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "isApcr": true,
+          "coreCaliber": 49.5,
+          "coreMass": 1.7373,
+          "Cx": 0.2576
+        },
+        "penetration0m": 108.7
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2550.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 5,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      5.9,
+      15.1,
+      24.2,
+      38.3,
+      51.5
+    ],
+    "reverse_gear_speeds": [
+      3.0
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 32.97,
+    "track_width": 0.457,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_92mm_BESA",
+        "caliber": 7.9,
+        "ammo": 5175,
+        "reloadTime": 8.0,
+        "rateOfFire": 600,
+        "bulletType": "ap_i_ball"
+      }
+    ],
+    "main_gun_ammo": 61,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 20000,
+    "purchaseCost": 135000,
+    "crewTraining": 39000,
+    "expertTraining": 135000,
+    "aceTrainingGE": 550,
+    "aceTrainingRP": 390000,
+    "repairCost": {
+      "arcade": [
+        1506,
+        2036
+      ],
+      "realistic": [
+        1806,
+        2441
+      ],
+      "simulator": [
+        2365,
+        3197
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.84,
+      "realistic": 1.34,
+      "simulator": 1.6
+    },
+    "expMultiplier": 1.54
+  }
+}

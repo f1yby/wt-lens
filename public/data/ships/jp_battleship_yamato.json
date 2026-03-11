@@ -1,0 +1,27 @@
+{
+  "id": "jp_battleship_yamato",
+  "economy": {
+    "researchCost": 400000,
+    "purchaseCost": 1150000,
+    "crewTraining": 330000,
+    "expertTraining": 1150000,
+    "aceTrainingGE": 2800,
+    "aceTrainingRP": 1080000,
+    "repairCost": {
+      "arcade": [
+        32070,
+        41813
+      ],
+      "realistic": [
+        35797,
+        46672
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 4.5,
+      "realistic": 6.0,
+      "simulator": 1.0
+    },
+    "expMultiplier": 2.32
+  }
+}

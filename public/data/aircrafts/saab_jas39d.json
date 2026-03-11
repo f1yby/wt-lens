@@ -1,0 +1,31 @@
+{
+  "id": "saab_jas39d",
+  "economy": {
+    "researchCost": 600000,
+    "purchaseCost": 990000,
+    "crewTraining": 270000,
+    "expertTraining": 940000,
+    "aceTrainingGE": 3700,
+    "aceTrainingRP": 1380000,
+    "repairCost": {
+      "arcade": [
+        3013,
+        4464
+      ],
+      "realistic": [
+        8668,
+        12842
+      ],
+      "simulator": [
+        10216,
+        15135
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.95,
+      "realistic": 3.21,
+      "simulator": 5.04
+    },
+    "expMultiplier": 2.62
+  }
+}

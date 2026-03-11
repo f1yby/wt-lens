@@ -1,0 +1,27 @@
+{
+  "id": "fr_marne_class_marne",
+  "economy": {
+    "researchCost": 48000,
+    "purchaseCost": 180000,
+    "crewTraining": 52000,
+    "expertTraining": 180000,
+    "aceTrainingGE": 700,
+    "aceTrainingRP": 390000,
+    "repairCost": {
+      "arcade": [
+        4351,
+        5550
+      ],
+      "realistic": [
+        6286,
+        8018
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.41,
+      "realistic": 3.79,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.54
+  }
+}

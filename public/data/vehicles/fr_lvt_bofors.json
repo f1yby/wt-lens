@@ -1,0 +1,151 @@
+{
+  "id": "fr_lvt_bofors",
+  "performance": {
+    "horsepower": 250.0,
+    "weight": 17.0,
+    "power_to_weight": 14.71,
+    "max_reverse_speed": 4.8,
+    "reload_time": 0.5,
+    "penetration": 72.5,
+    "max_speed": 39.9,
+    "crew_count": 5,
+    "elevation_speed": 20.0,
+    "traverse_speed": 35.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -3.0,
+      87.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 90.0,
+    "mainGun": {
+      "name": "40mm_Bofors_L60",
+      "caliber": 40.0,
+      "reloadTime": 0.5,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 0.65,
+        "expert": 0.57,
+        "ace": 0.5
+      },
+      "rateOfFire": 120,
+      "beltReloadTime": 0.5
+    },
+    "ammunitions": [
+      {
+        "name": "40mm_MkII",
+        "localizedName": "Mk.II",
+        "type": "frag_i_t",
+        "caliber": 40.0,
+        "mass": 0.829,
+        "muzzleVelocity": 874.0,
+        "explosiveMassKg": 0.063,
+        "explosiveType": "tnt",
+        "tntEquivalent": 0.063
+      },
+      {
+        "name": "40mm_M81A1",
+        "localizedName": "M81A1",
+        "type": "ap_t",
+        "caliber": 40.0,
+        "mass": 0.885,
+        "muzzleVelocity": 874.8,
+        "deMarre": {
+          "fullCaliber": 40.0,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "Cx": 0.3624
+        },
+        "penetration0m": 72.5
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2400.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 5,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      5.5,
+      10.4,
+      17.1,
+      27.0,
+      39.9
+    ],
+    "reverse_gear_speeds": [
+      4.8
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 16.5,
+    "track_width": 0.4,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "12_7mm_M2_HB",
+        "caliber": 12.7,
+        "ammo": 1200,
+        "reloadTime": 8.0,
+        "rateOfFire": 575,
+        "bulletType": "ap_i_t_ball_M20"
+      },
+      {
+        "trigger": "gunner1",
+        "name": "12_7mm_M2_HB",
+        "caliber": 12.7,
+        "ammo": 1200,
+        "reloadTime": 8.0,
+        "rateOfFire": 575,
+        "bulletType": "ap_i_t_ball_M20"
+      }
+    ],
+    "main_gun_ammo": 384,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 7900,
+    "purchaseCost": 0,
+    "purchaseCostGold": 700,
+    "crewTraining": 2300,
+    "expertTraining": 15000,
+    "aceTrainingGE": 115,
+    "aceTrainingRP": 320000,
+    "repairCost": {
+      "arcade": [
+        886,
+        886
+      ],
+      "realistic": [
+        409,
+        409
+      ],
+      "simulator": [
+        1525,
+        1525
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.72,
+      "realistic": 0.72,
+      "simulator": 1.53
+    },
+    "expMultiplier": 1.12,
+    "freeRepairs": 30
+  }
+}

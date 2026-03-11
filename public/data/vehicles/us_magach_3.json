@@ -1,0 +1,181 @@
+{
+  "id": "us_magach_3",
+  "performance": {
+    "horsepower": 750.0,
+    "weight": 49.87,
+    "power_to_weight": 15.04,
+    "max_reverse_speed": 8.0,
+    "reload_time": 6.67,
+    "penetration": 400.0,
+    "max_speed": 48.0,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 24.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -9.0,
+      19.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 28.0,
+    "mainGun": {
+      "name": "105mm_M68_Magach",
+      "caliber": 105.0,
+      "reloadTime": 6.67,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 8.67,
+        "expert": 7.67,
+        "ace": 6.67
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "105mm_m392a2",
+        "localizedName": "M392A2",
+        "type": "apds_tank",
+        "caliber": 60.0,
+        "mass": 4.0,
+        "muzzleVelocity": 1478.3,
+        "deMarre": {
+          "fullCaliber": 105.0,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "isApcr": true,
+          "coreCaliber": 60.0,
+          "coreMass": 2.7,
+          "Cx": 0.1572
+        },
+        "penetration0m": 204.5
+      },
+      {
+        "name": "105mm_imi_m156",
+        "localizedName": "M156",
+        "type": "hesh_tank",
+        "caliber": 105.0,
+        "mass": 11.4,
+        "muzzleVelocity": 731.0,
+        "penetration0m": 127.0,
+        "explosiveMassKg": 2.2,
+        "explosiveType": "comp_a",
+        "tntEquivalent": 2.772
+      },
+      {
+        "name": "105mm_imi_m152",
+        "localizedName": "M152",
+        "type": "heat_fs_tank",
+        "caliber": 105.0,
+        "mass": 10.5,
+        "muzzleVelocity": 1173.5,
+        "penetration0m": 400.0,
+        "explosiveMassKg": 0.97,
+        "explosiveType": "comp_b",
+        "tntEquivalent": 1.232
+      },
+      {
+        "name": "105mm_m416",
+        "localizedName": "M416",
+        "type": "smoke_tank",
+        "caliber": 105.0,
+        "mass": 11.6,
+        "muzzleVelocity": 731.5,
+        "explosiveMassKg": 0.05,
+        "explosiveType": "smoke_composition",
+        "tntEquivalent": 0.05
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2400.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 6,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      8.3,
+      11.7,
+      16.6,
+      21.3,
+      29.5,
+      48.0
+    ],
+    "reverse_gear_speeds": [
+      6.0,
+      8.0
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 49.12,
+    "track_width": 0.5,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_M1919A4",
+        "caliber": 7.6,
+        "ammo": 1250,
+        "reloadTime": 8.0,
+        "rateOfFire": 500,
+        "bulletType": "ap_ball"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "7_62mm_M73",
+        "caliber": 7.6,
+        "ammo": 6000,
+        "reloadTime": 8.0,
+        "rateOfFire": 500,
+        "bulletType": "ap_ball"
+      }
+    ],
+    "main_gun_ammo": 57,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 120000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 8380,
+    "crewTraining": 10000,
+    "expertTraining": 550000,
+    "aceTrainingGE": 1300,
+    "aceTrainingRP": 1600000,
+    "repairCost": {
+      "arcade": [
+        3150,
+        3150
+      ],
+      "realistic": [
+        3584,
+        3584
+      ],
+      "simulator": [
+        4896,
+        4896
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.8,
+      "realistic": 4.2,
+      "simulator": 4.87
+    },
+    "expMultiplier": 2.08,
+    "freeRepairs": 30
+  }
+}

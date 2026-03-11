@@ -1,0 +1,33 @@
+{
+  "id": "su_30mk2v_venezuela",
+  "economy": {
+    "researchCost": 350000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 10160,
+    "crewTraining": 10000,
+    "expertTraining": 1540000,
+    "aceTrainingGE": 3700,
+    "aceTrainingRP": 2750000,
+    "repairCost": {
+      "arcade": [
+        2298,
+        2298
+      ],
+      "realistic": [
+        6506,
+        6506
+      ],
+      "simulator": [
+        7583,
+        7583
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.9,
+      "realistic": 6.43,
+      "simulator": 10.08
+    },
+    "expMultiplier": 2.62,
+    "freeRepairs": 30
+  }
+}

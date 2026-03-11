@@ -1,0 +1,31 @@
+{
+  "id": "me-262a-1a_u4",
+  "economy": {
+    "researchCost": 71000,
+    "purchaseCost": 210000,
+    "crewTraining": 61000,
+    "expertTraining": 210000,
+    "aceTrainingGE": 1200,
+    "aceTrainingRP": 570000,
+    "repairCost": {
+      "arcade": [
+        2974,
+        3842
+      ],
+      "realistic": [
+        5926,
+        7656
+      ],
+      "simulator": [
+        8305,
+        10730
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.12,
+      "realistic": 2.22,
+      "simulator": 6.0
+    },
+    "expMultiplier": 1.78
+  }
+}

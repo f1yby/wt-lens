@@ -1,0 +1,29 @@
+{
+  "id": "ussr_cruiser_kerch",
+  "economy": {
+    "researchCost": 73000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 6090,
+    "crewTraining": 10000,
+    "expertTraining": 370000,
+    "aceTrainingGE": 1200,
+    "aceTrainingRP": 1140000,
+    "repairCost": {
+      "arcade": [
+        6432,
+        6432
+      ],
+      "realistic": [
+        5948,
+        5948
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 9.0,
+      "realistic": 12.0,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.78,
+    "freeRepairs": 30
+  }
+}

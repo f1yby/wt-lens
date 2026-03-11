@@ -1,0 +1,31 @@
+{
+  "id": "jaguar_a",
+  "economy": {
+    "researchCost": 230000,
+    "purchaseCost": 630000,
+    "crewTraining": 180000,
+    "expertTraining": 630000,
+    "aceTrainingGE": 3000,
+    "aceTrainingRP": 1140000,
+    "repairCost": {
+      "arcade": [
+        3158,
+        4577
+      ],
+      "realistic": [
+        8733,
+        12657
+      ],
+      "simulator": [
+        9989,
+        14477
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.9,
+      "realistic": 3.17,
+      "simulator": 6.0
+    },
+    "expMultiplier": 2.38
+  }
+}

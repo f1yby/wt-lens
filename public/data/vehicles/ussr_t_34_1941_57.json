@@ -1,0 +1,158 @@
+{
+  "id": "ussr_t_34_1941_57",
+  "performance": {
+    "horsepower": 500.0,
+    "weight": 28.27,
+    "power_to_weight": 17.69,
+    "max_reverse_speed": 6.9,
+    "reload_time": 5.0,
+    "penetration": 145.7,
+    "max_speed": 48.9,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 25.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -5.0,
+      28.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 33.0,
+    "mainGun": {
+      "name": "57mm_ZIS4",
+      "caliber": 57.0,
+      "reloadTime": 5.0,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 6.5,
+        "expert": 5.75,
+        "ace": 5.0
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "57mm_br_271",
+        "localizedName": "BR-271",
+        "type": "aphebc_tank",
+        "caliber": 57.0,
+        "mass": 3.14,
+        "muzzleVelocity": 990.0,
+        "deMarre": {
+          "fullCaliber": 57.0,
+          "isApcbc": false,
+          "explosiveMass": 0.014,
+          "Cx": 0.372
+        },
+        "penetration0m": 145.7,
+        "explosiveMassKg": 0.014,
+        "explosiveType": "a_ix_2",
+        "tntEquivalent": 0.02
+      },
+      {
+        "name": "57mm_o_271",
+        "localizedName": "O-271",
+        "type": "he_frag_tank",
+        "caliber": 57.0,
+        "mass": 3.72,
+        "muzzleVelocity": 700.0,
+        "explosiveMassKg": 0.22,
+        "explosiveType": "tnt",
+        "tntEquivalent": 0.22
+      },
+      {
+        "name": "57mm_br_271k",
+        "localizedName": "BR-271К",
+        "type": "aphe_tank",
+        "caliber": 57.0,
+        "mass": 3.14,
+        "muzzleVelocity": 990.0,
+        "deMarre": {
+          "fullCaliber": 57.0,
+          "isApcbc": false,
+          "explosiveMass": 0.018,
+          "Cx": 0.5934
+        },
+        "penetration0m": 145.7,
+        "explosiveMassKg": 0.018,
+        "explosiveType": "a_ix_2",
+        "tntEquivalent": 0.025
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 1800.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 4,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      7.4,
+      15.5,
+      25.5,
+      48.9
+    ],
+    "reverse_gear_speeds": [
+      6.9
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 28.15,
+    "track_width": 0.55,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_DT",
+        "caliber": 7.6,
+        "ammo": 1890,
+        "reloadTime": 8.0,
+        "rateOfFire": 600,
+        "bulletType": "ap_i_ball"
+      }
+    ],
+    "main_gun_ammo": 77,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 26000,
+    "purchaseCost": 76000,
+    "crewTraining": 22000,
+    "expertTraining": 76000,
+    "aceTrainingGE": 400,
+    "aceTrainingRP": 320000,
+    "repairCost": {
+      "arcade": [
+        1115,
+        1433
+      ],
+      "realistic": [
+        1300,
+        1671
+      ],
+      "simulator": [
+        1640,
+        2107
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.68,
+      "realistic": 1.06,
+      "simulator": 1.27
+    },
+    "expMultiplier": 1.42
+  }
+}

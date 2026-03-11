@@ -1,0 +1,31 @@
+{
+  "id": "me_210a_1",
+  "economy": {
+    "researchCost": 11000,
+    "purchaseCost": 22000,
+    "crewTraining": 6300,
+    "expertTraining": 22000,
+    "aceTrainingGE": 250,
+    "aceTrainingRP": 220000,
+    "repairCost": {
+      "arcade": [
+        602,
+        798
+      ],
+      "realistic": [
+        791,
+        1017
+      ],
+      "simulator": [
+        1704,
+        2190
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.44,
+      "realistic": 0.89,
+      "simulator": 1.83
+    },
+    "expMultiplier": 1.24
+  }
+}

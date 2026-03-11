@@ -1,0 +1,33 @@
+{
+  "id": "ah_64a_greece_usa",
+  "economy": {
+    "researchCost": 400000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 9270,
+    "crewTraining": 10000,
+    "expertTraining": 1670000,
+    "aceTrainingGE": 2800,
+    "aceTrainingRP": 2150000,
+    "repairCost": {
+      "arcade": [
+        5544,
+        5544
+      ],
+      "realistic": [
+        4368,
+        4368
+      ],
+      "simulator": [
+        4093,
+        4093
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.0,
+      "realistic": 5.3,
+      "simulator": 7.32
+    },
+    "expMultiplier": 2.32,
+    "freeRepairs": 30
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "id": "sw_stormpjas_fm43_44",
+  "performance": {
+    "horsepower": 160.0,
+    "weight": 10.0,
+    "power_to_weight": 16.0,
+    "max_reverse_speed": 5.3,
+    "reload_time": 14.99,
+    "penetration": null,
+    "max_speed": 43.0,
+    "crew_count": 5,
+    "elevation_speed": 5.0,
+    "traverse_speed": 8.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -4.0,
+      10.0
+    ],
+    "traverse_range": [
+      -12.0,
+      12.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 14.0,
+    "mainGun": {
+      "name": "150mm_kan_fm43_44",
+      "caliber": 150.0,
+      "reloadTime": 14.99,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 19.49,
+        "expert": 17.24,
+        "ace": 14.99
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "150mm_sgr_m38",
+        "localizedName": "sgr m/38",
+        "type": "he_frag_tank",
+        "caliber": 150.0,
+        "mass": 37.0,
+        "muzzleVelocity": 285.0,
+        "explosiveMassKg": 5.8,
+        "explosiveType": "tnt",
+        "tntEquivalent": 5.8
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2300.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 6,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      4.8,
+      6.8,
+      11.7,
+      16.3,
+      27.2,
+      43.0
+    ],
+    "reverse_gear_speeds": [
+      5.3
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 9.7,
+    "track_width": 0.25,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "8mm_Ksp_m36",
+        "caliber": 8.0,
+        "ammo": 2000,
+        "reloadTime": 8.0,
+        "rateOfFire": 648,
+        "bulletType": "ap_i_t_ball"
+      }
+    ],
+    "main_gun_ammo": 10,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 7900,
+    "purchaseCost": 10000,
+    "crewTraining": 3000,
+    "expertTraining": 10000,
+    "aceTrainingGE": 115,
+    "aceTrainingRP": 160000,
+    "repairCost": {
+      "arcade": [
+        412,
+        510
+      ],
+      "realistic": [
+        436,
+        540
+      ],
+      "simulator": [
+        529,
+        655
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.3,
+      "realistic": 0.46,
+      "simulator": 0.57
+    },
+    "expMultiplier": 1.12
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "id": "he-162a-1",
+  "economy": {
+    "researchCost": 95000,
+    "purchaseCost": 270000,
+    "crewTraining": 78000,
+    "expertTraining": 270000,
+    "aceTrainingGE": 1500,
+    "aceTrainingRP": 670000,
+    "repairCost": {
+      "arcade": [
+        3897,
+        4939
+      ],
+      "realistic": [
+        8602,
+        10902
+      ],
+      "simulator": [
+        14011,
+        17758
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.27,
+      "realistic": 2.54,
+      "simulator": 6.0
+    },
+    "expMultiplier": 1.9
+  }
+}

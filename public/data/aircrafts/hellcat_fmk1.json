@@ -1,0 +1,33 @@
+{
+  "id": "hellcat_fmk1",
+  "economy": {
+    "researchCost": 18000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 1300,
+    "crewTraining": 10000,
+    "expertTraining": 67000,
+    "aceTrainingGE": 400,
+    "aceTrainingRP": 570000,
+    "repairCost": {
+      "arcade": [
+        570,
+        570
+      ],
+      "realistic": [
+        1161,
+        1161
+      ],
+      "simulator": [
+        1795,
+        1795
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.14,
+      "realistic": 2.67,
+      "simulator": 5.46
+    },
+    "expMultiplier": 1.36,
+    "freeRepairs": 30
+  }
+}

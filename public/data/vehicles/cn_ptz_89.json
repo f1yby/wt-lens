@@ -1,0 +1,154 @@
+{
+  "id": "cn_ptz_89",
+  "performance": {
+    "horsepower": 520.0,
+    "weight": 30.0,
+    "power_to_weight": 17.33,
+    "max_reverse_speed": 7.8,
+    "reload_time": 5.0,
+    "penetration": 443.5,
+    "max_speed": 55.1,
+    "crew_count": 5,
+    "elevation_speed": 5.0,
+    "traverse_speed": 18.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "both",
+    "elevation_range": [
+      -5.0,
+      18.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 23.0,
+    "mainGun": {
+      "name": "120mm_PTZ89",
+      "caliber": 120.0,
+      "reloadTime": 5.0,
+      "autoLoader": true,
+      "reloadTimes": {
+        "base": 5.0,
+        "expert": 5.0,
+        "ace": 5.0
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "120mm_dyw_1",
+        "localizedName": "DYW1",
+        "type": "apds_fs_long_tank",
+        "caliber": 34.0,
+        "mass": 4.45,
+        "muzzleVelocity": 1740.0,
+        "lanzOdermatt": {
+          "workingLength": 360.0,
+          "density": 17500.0,
+          "material": "tungsten",
+          "Cx": 0.241
+        },
+        "penetration0m": 443.5,
+        "penetrationData": {
+          "at0m": {
+            "angle0": 443.5,
+            "angle30": 384.1,
+            "angle60": 221.8
+          }
+        }
+      },
+      {
+        "name": "120mm_dys_120",
+        "localizedName": "DYS120",
+        "type": "he_frag_fs_tank",
+        "caliber": 120.0,
+        "mass": 19.5,
+        "muzzleVelocity": 900.0,
+        "explosiveMassKg": 2.485,
+        "explosiveType": "tnt",
+        "tntEquivalent": 2.485
+      }
+    ],
+    "penetrationData": {
+      "at0m": {
+        "angle0": 443.5,
+        "angle30": 384.1,
+        "angle60": 221.8
+      }
+    },
+    "autoLoader": true,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2000.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 5,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      7.8,
+      16.3,
+      24.6,
+      37.0,
+      55.1
+    ],
+    "reverse_gear_speeds": [
+      7.8
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 29.0,
+    "track_width": 0.48,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "12_7mm_QJC_88A",
+        "caliber": 12.7,
+        "ammo": 600,
+        "reloadTime": 5.0,
+        "rateOfFire": 600,
+        "bulletType": "ap_i_t_ball"
+      }
+    ],
+    "main_gun_ammo": 30,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": true
+  },
+  "economy": {
+    "researchCost": 94000,
+    "purchaseCost": 520000,
+    "crewTraining": 150000,
+    "expertTraining": 520000,
+    "aceTrainingGE": 2100,
+    "aceTrainingRP": 950000,
+    "repairCost": {
+      "arcade": [
+        4595,
+        6286
+      ],
+      "realistic": [
+        5085,
+        6956
+      ],
+      "simulator": [
+        5780,
+        7907
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.59,
+      "realistic": 2.1,
+      "simulator": 2.5
+    },
+    "expMultiplier": 2.2
+  }
+}

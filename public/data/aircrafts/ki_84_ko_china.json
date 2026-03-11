@@ -1,0 +1,33 @@
+{
+  "id": "ki_84_ko_china",
+  "economy": {
+    "researchCost": 54000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 3850,
+    "crewTraining": 10000,
+    "expertTraining": 290000,
+    "aceTrainingGE": 940,
+    "aceTrainingRP": 960000,
+    "repairCost": {
+      "arcade": [
+        1688,
+        1688
+      ],
+      "realistic": [
+        4756,
+        4756
+      ],
+      "simulator": [
+        5236,
+        5236
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.86,
+      "realistic": 4.56,
+      "simulator": 8.8
+    },
+    "expMultiplier": 1.66,
+    "freeRepairs": 30
+  }
+}

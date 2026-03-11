@@ -1,0 +1,31 @@
+{
+  "id": "il-10_1946_china",
+  "economy": {
+    "researchCost": 46000,
+    "purchaseCost": 155000,
+    "crewTraining": 45000,
+    "expertTraining": 155000,
+    "aceTrainingGE": 820,
+    "aceTrainingRP": 440000,
+    "repairCost": {
+      "arcade": [
+        1810,
+        2376
+      ],
+      "realistic": [
+        3135,
+        3994
+      ],
+      "simulator": [
+        6236,
+        7944
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.89,
+      "realistic": 1.53,
+      "simulator": 5.73
+    },
+    "expMultiplier": 1.6
+  }
+}

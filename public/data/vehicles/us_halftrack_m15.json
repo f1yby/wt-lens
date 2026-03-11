@@ -1,0 +1,152 @@
+{
+  "id": "us_halftrack_m15",
+  "performance": {
+    "horsepower": 148.0,
+    "weight": 9.0,
+    "power_to_weight": 16.44,
+    "max_reverse_speed": 17.4,
+    "reload_time": 2.0,
+    "penetration": 48.2,
+    "max_speed": 75.7,
+    "crew_count": 5,
+    "elevation_speed": 20.0,
+    "traverse_speed": 25.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -5.0,
+      85.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 90.0,
+    "mainGun": {
+      "name": "37mm_M1A2",
+      "caliber": 37.0,
+      "reloadTime": 2.0,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 2.6,
+        "expert": 2.3,
+        "ace": 2.0
+      },
+      "rateOfFire": 120,
+      "beltReloadTime": 2.0
+    },
+    "ammunitions": [
+      {
+        "name": "37mm_m54",
+        "localizedName": "M54 shell",
+        "type": "he_frag_i_t",
+        "caliber": 37.0,
+        "mass": 0.608,
+        "muzzleVelocity": 792.0,
+        "explosiveMassKg": 0.0454,
+        "explosiveType": "tetryl",
+        "tntEquivalent": 0.054
+      },
+      {
+        "name": "37mm_m59a1",
+        "localizedName": "M59A1 shot",
+        "type": "apc_t",
+        "caliber": 37.0,
+        "mass": 0.87,
+        "muzzleVelocity": 625.0,
+        "deMarre": {
+          "fullCaliber": 37.0,
+          "isApcbc": false,
+          "explosiveMass": 0
+        },
+        "penetration0m": 48.2
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 3000.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 8,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      6.2,
+      11.7,
+      15.4,
+      17.6,
+      29.1,
+      30.4,
+      44.3,
+      75.7
+    ],
+    "reverse_gear_speeds": [
+      6.9,
+      17.4
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 8.85,
+    "track_width": 0.28,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "12_7mm_M2_HB_for_M15",
+        "caliber": 12.7,
+        "ammo": 1800,
+        "reloadTime": 8.0,
+        "rateOfFire": 575,
+        "bulletType": "ap_i_t_ball_M20"
+      },
+      {
+        "trigger": "gunner1",
+        "name": "12_7mm_M2_HB_for_M15",
+        "caliber": 12.7,
+        "ammo": 1800,
+        "reloadTime": 8.0,
+        "rateOfFire": 575,
+        "bulletType": "ap_i_t_ball_M20"
+      }
+    ],
+    "main_gun_ammo": 240,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 4000,
+    "purchaseCost": 2100,
+    "crewTraining": 600,
+    "expertTraining": 2100,
+    "aceTrainingGE": 45,
+    "aceTrainingRP": 110000,
+    "repairCost": {
+      "arcade": [
+        222,
+        286
+      ],
+      "realistic": [
+        195,
+        251
+      ],
+      "simulator": [
+        276,
+        355
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.17,
+      "realistic": 0.19,
+      "simulator": 0.23
+    },
+    "expMultiplier": 1.0
+  }
+}

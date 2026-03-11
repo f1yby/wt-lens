@@ -1,0 +1,27 @@
+{
+  "id": "uk_minelayer_abdiel_class_abdiel",
+  "economy": {
+    "researchCost": 11000,
+    "purchaseCost": 22000,
+    "crewTraining": 6300,
+    "expertTraining": 22000,
+    "aceTrainingGE": 250,
+    "aceTrainingRP": 220000,
+    "repairCost": {
+      "arcade": [
+        2372,
+        3077
+      ],
+      "realistic": [
+        3582,
+        4646
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.05,
+      "realistic": 3.28,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.24
+  }
+}

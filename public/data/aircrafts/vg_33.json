@@ -1,0 +1,31 @@
+{
+  "id": "vg_33",
+  "economy": {
+    "researchCost": 9200,
+    "purchaseCost": 16000,
+    "crewTraining": 4500,
+    "expertTraining": 16000,
+    "aceTrainingGE": 180,
+    "aceTrainingRP": 190000,
+    "repairCost": {
+      "arcade": [
+        495,
+        647
+      ],
+      "realistic": [
+        995,
+        1261
+      ],
+      "simulator": [
+        1407,
+        1784
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.31,
+      "realistic": 0.75,
+      "simulator": 1.52
+    },
+    "expMultiplier": 1.18
+  }
+}

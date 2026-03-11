@@ -1,7 +1,7 @@
 /**
  * Stats Month Service
  * 
- * 从 stats.json 数据中自动提取可用月份，动态生成月份配置。
+ * 从 stats-meta.json 中加载可用月份列表，动态生成月份配置。
  * 无需手动维护 TypeScript 类型定义。
  */
 

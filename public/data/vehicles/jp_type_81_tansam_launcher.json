@@ -1,0 +1,125 @@
+{
+  "id": "jp_type_81_tansam_launcher",
+  "performance": {
+    "horsepower": 285.0,
+    "weight": 12.0,
+    "power_to_weight": 23.75,
+    "max_reverse_speed": 12.0,
+    "reload_time": 1.0,
+    "penetration": null,
+    "max_speed": 90.1,
+    "crew_count": 5,
+    "elevation_speed": 40.0,
+    "traverse_speed": 100.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -5.0,
+      85.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": [
+      500,
+      300
+    ],
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": 583.1,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 90.0,
+    "mainGun": {
+      "name": "160mm_sam_1c_slave_launcher",
+      "caliber": 80.0,
+      "reloadTime": 1.0,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 1.3,
+        "expert": 1.15,
+        "ace": 1.0
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "160mm_sam_1c",
+        "localizedName": "Type 81C",
+        "type": "sam_tank",
+        "caliber": 80.0,
+        "mass": 105.0,
+        "muzzleVelocity": 955.0
+      },
+      {
+        "name": "160mm_sam_arh_1c",
+        "localizedName": "Type 81C ARH",
+        "type": "sam_tank",
+        "caliber": 80.0,
+        "mass": 105.0,
+        "muzzleVelocity": 955.0
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2300.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 6,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      17.4,
+      29.9,
+      38.3,
+      54.1,
+      76.1,
+      90.1
+    ],
+    "reverse_gear_speeds": [
+      12.0
+    ],
+    "steer_type": null,
+    "empty_weight": 11.5,
+    "track_width": 0.4,
+    "secondary_weapons": null,
+    "main_gun_ammo": 8,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": true
+  },
+  "economy": {
+    "researchCost": 400000,
+    "purchaseCost": 1080000,
+    "crewTraining": 310000,
+    "expertTraining": 1080000,
+    "aceTrainingGE": 2200,
+    "aceTrainingRP": 1280000,
+    "repairCost": {
+      "arcade": [
+        5302,
+        7855
+      ],
+      "realistic": [
+        6441,
+        9542
+      ],
+      "simulator": [
+        7239,
+        10725
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.6,
+      "realistic": 2.1,
+      "simulator": 2.01
+    },
+    "expMultiplier": 2.5
+  }
+}

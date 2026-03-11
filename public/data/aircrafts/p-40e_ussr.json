@@ -1,0 +1,33 @@
+{
+  "id": "p-40e_ussr",
+  "economy": {
+    "researchCost": 7900,
+    "purchaseCost": 0,
+    "purchaseCostGold": 700,
+    "crewTraining": 2300,
+    "expertTraining": 15000,
+    "aceTrainingGE": 125,
+    "aceTrainingRP": 320000,
+    "repairCost": {
+      "arcade": [
+        867,
+        867
+      ],
+      "realistic": [
+        2167,
+        2167
+      ],
+      "simulator": [
+        902,
+        902
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.72,
+      "realistic": 1.93,
+      "simulator": 3.81
+    },
+    "expMultiplier": 1.12,
+    "freeRepairs": 30
+  }
+}

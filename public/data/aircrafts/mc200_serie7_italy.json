@@ -1,0 +1,31 @@
+{
+  "id": "mc200_serie7_italy",
+  "economy": {
+    "researchCost": 4600,
+    "purchaseCost": 16000,
+    "crewTraining": 4500,
+    "expertTraining": 16000,
+    "aceTrainingGE": 180,
+    "aceTrainingRP": 190000,
+    "repairCost": {
+      "arcade": [
+        450,
+        625
+      ],
+      "realistic": [
+        934,
+        1257
+      ],
+      "simulator": [
+        1252,
+        1686
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.32,
+      "realistic": 0.76,
+      "simulator": 1.53
+    },
+    "expMultiplier": 1.18
+  }
+}

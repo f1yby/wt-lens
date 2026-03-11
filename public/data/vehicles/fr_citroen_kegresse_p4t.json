@@ -1,0 +1,123 @@
+{
+  "id": "fr_citroen_kegresse_p4t",
+  "performance": {
+    "horsepower": 20.0,
+    "weight": 2.15,
+    "power_to_weight": 9.3,
+    "max_reverse_speed": 7.1,
+    "reload_time": null,
+    "penetration": null,
+    "max_speed": 40.2,
+    "crew_count": 5,
+    "elevation_speed": null,
+    "traverse_speed": null,
+    "has_stabilizer": null,
+    "stabilizer_type": "none",
+    "elevation_range": null,
+    "traverse_range": null,
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": null,
+    "mainGun": null,
+    "ammunitions": null,
+    "penetrationData": null,
+    "autoLoader": null,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2100.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 6,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      4.1,
+      5.5,
+      8.2,
+      16.5,
+      33.0,
+      40.2
+    ],
+    "reverse_gear_speeds": [
+      7.1
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 2.0,
+    "track_width": 0.2,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner0",
+        "name": "13_2mm_Hotchkiss_Mle_1930",
+        "caliber": 13.2,
+        "ammo": 360,
+        "reloadTime": 6.0,
+        "rateOfFire": 450,
+        "bulletType": "ap_ball_M2"
+      },
+      {
+        "trigger": "gunner0",
+        "name": "13_2mm_Hotchkiss_Mle_1930",
+        "caliber": 13.2,
+        "ammo": 360,
+        "reloadTime": 6.0,
+        "rateOfFire": 450,
+        "bulletType": "ap_ball_M2"
+      },
+      {
+        "trigger": "gunner0",
+        "name": "13_2mm_Hotchkiss_Mle_1930",
+        "caliber": 13.2,
+        "ammo": 360,
+        "reloadTime": 6.0,
+        "rateOfFire": 450,
+        "bulletType": "ap_ball_M2"
+      },
+      {
+        "trigger": "gunner0",
+        "name": "13_2mm_Hotchkiss_Mle_1930",
+        "caliber": 13.2,
+        "ammo": 360,
+        "reloadTime": 6.0,
+        "rateOfFire": 450,
+        "bulletType": "ap_ball_M2"
+      }
+    ],
+    "main_gun_ammo": null,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 2900,
+    "purchaseCost": 700,
+    "crewTraining": 200,
+    "expertTraining": 1000,
+    "aceTrainingGE": 20,
+    "aceTrainingRP": 96000,
+    "repairCost": {
+      "arcade": [
+        102,
+        131
+      ],
+      "realistic": [
+        90,
+        116
+      ],
+      "simulator": [
+        139,
+        179
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.12,
+      "realistic": 0.12,
+      "simulator": 0.15
+    },
+    "expMultiplier": 1.0
+  }
+}

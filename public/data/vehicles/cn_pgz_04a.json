@@ -1,0 +1,171 @@
+{
+  "id": "cn_pgz_04a",
+  "performance": {
+    "horsepower": 383.0,
+    "weight": 22.7,
+    "power_to_weight": 16.87,
+    "max_reverse_speed": 17.3,
+    "reload_time": 4.0,
+    "penetration": 63.5,
+    "max_speed": 55.3,
+    "crew_count": 5,
+    "elevation_speed": 60.0,
+    "traverse_speed": 80.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "both",
+    "elevation_range": [
+      -5.0,
+      85.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": [
+      800,
+      600
+    ],
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": 1000.0,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 90.0,
+    "mainGun": {
+      "name": "25mm_PG87_PGZ",
+      "caliber": 25.0,
+      "reloadTime": 4.0,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 5.2,
+        "expert": 4.6,
+        "ace": 4.0
+      },
+      "rateOfFire": 600,
+      "beltReloadTime": 4.0
+    },
+    "ammunitions": [
+      {
+        "name": "25mm_type_87_he",
+        "localizedName": "Type 87 HE",
+        "type": "frag_i_t",
+        "caliber": 25.0,
+        "mass": 0.25,
+        "muzzleVelocity": 1050.0,
+        "explosiveMassKg": 0.019,
+        "explosiveType": "a_ix_2",
+        "tntEquivalent": 0.027
+      },
+      {
+        "name": "25mm_type_87_api",
+        "localizedName": "Type 87 AP",
+        "type": "ap_t",
+        "caliber": 25.0,
+        "mass": 0.25,
+        "muzzleVelocity": 1050.0,
+        "deMarre": {
+          "fullCaliber": 25.0,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "Cx": 0.25
+        },
+        "penetration0m": 63.5
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2500.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 6,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      9.3,
+      12.3,
+      16.0,
+      28.5,
+      44.4,
+      55.3
+    ],
+    "reverse_gear_speeds": [
+      12.3,
+      17.3
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 22.0,
+    "track_width": 0.33,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner2",
+        "name": "25mm_PG87_PGZ",
+        "caliber": 25.0,
+        "ammo": 258,
+        "reloadTime": 4.0,
+        "rateOfFire": 600,
+        "bulletType": "ap_t"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "25mm_PG87_PGZ",
+        "caliber": 25.0,
+        "ammo": 258,
+        "reloadTime": 4.0,
+        "rateOfFire": 600,
+        "bulletType": "ap_t"
+      },
+      {
+        "trigger": "gunner1",
+        "name": "72mm_HN_6_launcher",
+        "caliber": 72.0,
+        "ammo": 4,
+        "reloadTime": 15.0,
+        "rateOfFire": 60,
+        "bulletType": "sam_tank",
+        "maxDistance": 10000,
+        "maxSpeed": 600,
+        "guidanceType": "optical",
+        "explosiveMass": 0.6,
+        "explosiveType": "a_ix_2"
+      }
+    ],
+    "main_gun_ammo": 258,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": true
+  },
+  "economy": {
+    "researchCost": 190000,
+    "purchaseCost": 520000,
+    "crewTraining": 150000,
+    "expertTraining": 520000,
+    "aceTrainingGE": 2100,
+    "aceTrainingRP": 950000,
+    "repairCost": {
+      "arcade": [
+        4728,
+        7035
+      ],
+      "realistic": [
+        4250,
+        6324
+      ],
+      "simulator": [
+        4631,
+        6892
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.6,
+      "realistic": 2.0,
+      "simulator": 2.5
+    },
+    "expMultiplier": 2.2
+  }
+}

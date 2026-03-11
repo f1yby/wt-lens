@@ -1,0 +1,27 @@
+{
+  "id": "it_destroyer_navigatori_class_verazzano",
+  "economy": {
+    "researchCost": 15000,
+    "purchaseCost": 38000,
+    "crewTraining": 11000,
+    "expertTraining": 38000,
+    "aceTrainingGE": 400,
+    "aceTrainingRP": 280000,
+    "repairCost": {
+      "arcade": [
+        2113,
+        2744
+      ],
+      "realistic": [
+        3336,
+        4332
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.91,
+      "realistic": 4.4,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.36
+  }
+}

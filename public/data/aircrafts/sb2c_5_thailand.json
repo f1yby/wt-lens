@@ -1,0 +1,33 @@
+{
+  "id": "sb2c_5_thailand",
+  "economy": {
+    "researchCost": 18000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 1300,
+    "crewTraining": 10000,
+    "expertTraining": 67000,
+    "aceTrainingGE": 400,
+    "aceTrainingRP": 570000,
+    "repairCost": {
+      "arcade": [
+        681,
+        681
+      ],
+      "realistic": [
+        1186,
+        1186
+      ],
+      "simulator": [
+        2457,
+        2457
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.41,
+      "realistic": 3.02,
+      "simulator": 5.1
+    },
+    "expMultiplier": 1.36,
+    "freeRepairs": 30
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "id": "p-47d_23_ra_china_rocaf",
+  "economy": {
+    "researchCost": 18000,
+    "purchaseCost": 47000,
+    "crewTraining": 13000,
+    "expertTraining": 47000,
+    "aceTrainingGE": 400,
+    "aceTrainingRP": 280000,
+    "repairCost": {
+      "arcade": [
+        848,
+        1154
+      ],
+      "realistic": [
+        1825,
+        2408
+      ],
+      "simulator": [
+        2704,
+        3568
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.53,
+      "realistic": 1.31,
+      "simulator": 2.73
+    },
+    "expMultiplier": 1.36
+  }
+}

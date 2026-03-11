@@ -1,0 +1,27 @@
+{
+  "id": "it_battleship_littorio_class_littorio",
+  "economy": {
+    "researchCost": 410000,
+    "purchaseCost": 1190000,
+    "crewTraining": 340000,
+    "expertTraining": 1190000,
+    "aceTrainingGE": 3000,
+    "aceTrainingRP": 1140000,
+    "repairCost": {
+      "arcade": [
+        32070,
+        41813
+      ],
+      "realistic": [
+        35797,
+        46672
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 4.5,
+      "realistic": 6.0,
+      "simulator": 1.0
+    },
+    "expMultiplier": 2.38
+  }
+}

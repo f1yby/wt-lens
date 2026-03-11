@@ -1,0 +1,33 @@
+{
+  "id": "b7a2_homare_23",
+  "economy": {
+    "researchCost": 33000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 1600,
+    "crewTraining": 10000,
+    "expertTraining": 165000,
+    "aceTrainingGE": 590,
+    "aceTrainingRP": 710000,
+    "repairCost": {
+      "arcade": [
+        900,
+        900
+      ],
+      "realistic": [
+        1540,
+        1540
+      ],
+      "simulator": [
+        3179,
+        3179
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.79,
+      "realistic": 3.82,
+      "simulator": 6.45
+    },
+    "expMultiplier": 1.48,
+    "freeRepairs": 30
+  }
+}

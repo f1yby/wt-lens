@@ -1,0 +1,124 @@
+{
+  "id": "us_m3_bradley",
+  "performance": {
+    "horsepower": 507.0,
+    "weight": 22.29,
+    "power_to_weight": 22.75,
+    "max_reverse_speed": 16.3,
+    "reload_time": 0.2,
+    "penetration": null,
+    "max_speed": 77.4,
+    "crew_count": 5,
+    "elevation_speed": 60.0,
+    "traverse_speed": 60.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "both",
+    "elevation_range": [
+      -9.0,
+      59.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": [
+      500,
+      300
+    ],
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": 583.1,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 68.0,
+    "mainGun": null,
+    "ammunitions": null,
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2600.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 6,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      5.5,
+      11.0,
+      26.6,
+      52.4,
+      71.4,
+      77.4
+    ],
+    "reverse_gear_speeds": [
+      8.1,
+      16.3
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 21.6,
+    "track_width": null,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_M240",
+        "caliber": 7.6,
+        "ammo": 4400,
+        "reloadTime": 8.0,
+        "rateOfFire": 940,
+        "bulletType": "ap_ball"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "127mm_TOW_rocket_launcher",
+        "caliber": 127.0,
+        "ammo": 12,
+        "reloadTime": 10.0,
+        "rateOfFire": 120,
+        "bulletType": "atgm_tank",
+        "maxDistance": 3000,
+        "maxSpeed": 299,
+        "guidanceType": "saclos",
+        "penetration": 430,
+        "explosiveMass": 2.36,
+        "explosiveType": "octol"
+      }
+    ],
+    "main_gun_ammo": 1500,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": true,
+    "has_ess": true,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 160000,
+    "purchaseCost": 450000,
+    "crewTraining": 130000,
+    "expertTraining": 450000,
+    "aceTrainingGE": 2000,
+    "aceTrainingRP": 890000,
+    "repairCost": {
+      "arcade": [
+        2917,
+        5074
+      ],
+      "realistic": [
+        3297,
+        5734
+      ],
+      "simulator": [
+        4024,
+        6999
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.22,
+      "realistic": 1.7,
+      "simulator": 2.07
+    },
+    "expMultiplier": 2.14
+  }
+}

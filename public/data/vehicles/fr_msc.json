@@ -1,0 +1,175 @@
+{
+  "id": "fr_msc",
+  "performance": {
+    "horsepower": 1500.0,
+    "weight": 53.9,
+    "power_to_weight": 27.83,
+    "max_reverse_speed": 37.9,
+    "reload_time": 6.0,
+    "penetration": 425.0,
+    "max_speed": 70.3,
+    "crew_count": 5,
+    "elevation_speed": 30.0,
+    "traverse_speed": 40.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "both",
+    "elevation_range": [
+      -8.0,
+      20.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": [
+      500,
+      300
+    ],
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": 583.1,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 28.0,
+    "mainGun": {
+      "name": "120mm_giat_cn120_26_f1_msc",
+      "caliber": 120.0,
+      "reloadTime": 6.0,
+      "autoLoader": true,
+      "reloadTimes": {
+        "base": 6.0,
+        "expert": 6.0,
+        "ace": 6.0
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "120mm_occ_120_g1",
+        "localizedName": "OCC 120 G1",
+        "type": "heat_fs_tank",
+        "caliber": 120.0,
+        "mass": 14.4,
+        "muzzleVelocity": 1100.0,
+        "penetration0m": 480.0,
+        "explosiveMassKg": 1.64,
+        "explosiveType": "comp_b",
+        "tntEquivalent": 2.083
+      },
+      {
+        "name": "120mm_ofl_120_g1",
+        "localizedName": "OFL 120 G1",
+        "type": "apds_fs_long_tank",
+        "caliber": 26.0,
+        "mass": 3.8,
+        "muzzleVelocity": 1780.0,
+        "lanzOdermatt": {
+          "workingLength": 380.0,
+          "density": 17500.0,
+          "material": "tungsten",
+          "Cx": 0.49
+        },
+        "penetration0m": 425.0,
+        "penetrationData": {
+          "at0m": {
+            "angle0": 425.0,
+            "angle30": 368.1,
+            "angle60": 212.5
+          }
+        }
+      }
+    ],
+    "penetrationData": {
+      "at0m": {
+        "angle0": 425.0,
+        "angle30": 368.1,
+        "angle60": 212.5
+      }
+    },
+    "autoLoader": true,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2500.0,
+    "transmission_manufacturer": "sesm",
+    "transmission_model": "esm_500",
+    "transmission_type": "auto",
+    "forward_gears": 10,
+    "reverse_gears": 4,
+    "forward_gear_speeds": [
+      4.7,
+      9.5,
+      11.9,
+      16.0,
+      19.6,
+      25.2,
+      32.5,
+      45.6,
+      55.9,
+      70.3
+    ],
+    "reverse_gear_speeds": [
+      6.7,
+      13.4,
+      19.8,
+      37.9
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 53.0,
+    "track_width": 0.55,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "12_7mm_M2_HB_for_leclerc",
+        "caliber": 12.7,
+        "ammo": 800,
+        "reloadTime": 8.0,
+        "rateOfFire": 575,
+        "bulletType": "ap_i_t_ball_M20"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "7_62mm_AAN_F1",
+        "caliber": 7.6,
+        "ammo": 2000,
+        "reloadTime": 8.0,
+        "rateOfFire": 900,
+        "bulletType": "ap_ball"
+      }
+    ],
+    "main_gun_ammo": 35,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": true
+  },
+  "economy": {
+    "researchCost": 260000,
+    "purchaseCost": 710000,
+    "crewTraining": 200000,
+    "expertTraining": 710000,
+    "aceTrainingGE": 2100,
+    "aceTrainingRP": 1080000,
+    "repairCost": {
+      "arcade": [
+        4377,
+        6513
+      ],
+      "realistic": [
+        4309,
+        6413
+      ],
+      "simulator": [
+        5068,
+        7542
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.47,
+      "realistic": 1.91,
+      "simulator": 2.29
+    },
+    "expMultiplier": 2.32
+  }
+}

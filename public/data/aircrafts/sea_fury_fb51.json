@@ -1,0 +1,31 @@
+{
+  "id": "sea_fury_fb51",
+  "economy": {
+    "researchCost": 54000,
+    "purchaseCost": 185000,
+    "crewTraining": 52000,
+    "expertTraining": 185000,
+    "aceTrainingGE": 940,
+    "aceTrainingRP": 480000,
+    "repairCost": {
+      "arcade": [
+        2561,
+        3314
+      ],
+      "realistic": [
+        5963,
+        7491
+      ],
+      "simulator": [
+        8784,
+        11036
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.93,
+      "realistic": 2.09,
+      "simulator": 4.44
+    },
+    "expMultiplier": 1.66
+  }
+}

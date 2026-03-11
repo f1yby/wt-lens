@@ -1,0 +1,31 @@
+{
+  "id": "ms_405c1",
+  "economy": {
+    "researchCost": 4000,
+    "purchaseCost": 2100,
+    "crewTraining": 600,
+    "expertTraining": 2100,
+    "aceTrainingGE": 45,
+    "aceTrainingRP": 110000,
+    "repairCost": {
+      "arcade": [
+        156,
+        218
+      ],
+      "realistic": [
+        333,
+        453
+      ],
+      "simulator": [
+        325,
+        442
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.12,
+      "realistic": 0.31,
+      "simulator": 0.69
+    },
+    "expMultiplier": 1.0
+  }
+}

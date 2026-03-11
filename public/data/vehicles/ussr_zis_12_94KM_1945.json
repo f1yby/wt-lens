@@ -1,0 +1,128 @@
+{
+  "id": "ussr_zis_12_94KM_1945",
+  "performance": {
+    "horsepower": 70.0,
+    "weight": 2.95,
+    "power_to_weight": 23.73,
+    "max_reverse_speed": 6.5,
+    "reload_time": 0.2,
+    "penetration": 57.3,
+    "max_speed": 50.8,
+    "crew_count": 5,
+    "elevation_speed": 20.0,
+    "traverse_speed": 35.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -10.0,
+      85.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 95.0,
+    "mainGun": {
+      "name": "25mm_72K",
+      "caliber": 25.0,
+      "reloadTime": 0.2,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 0.26,
+        "expert": 0.23,
+        "ace": 0.2
+      },
+      "rateOfFire": 240,
+      "beltReloadTime": 0.2
+    },
+    "ammunitions": [
+      {
+        "name": "25mm_ozr_132",
+        "localizedName": "OZR-132",
+        "type": "frag_i_t",
+        "caliber": 25.0,
+        "mass": 0.288,
+        "muzzleVelocity": 910.0,
+        "explosiveMassKg": 0.013,
+        "explosiveType": "tnt",
+        "tntEquivalent": 0.013
+      },
+      {
+        "name": "25mm_br_132",
+        "localizedName": "BR-132",
+        "type": "ap_t",
+        "caliber": 25.0,
+        "mass": 0.295,
+        "muzzleVelocity": 900.0,
+        "deMarre": {
+          "fullCaliber": 25.0,
+          "isApcbc": false,
+          "explosiveMass": 0
+        },
+        "penetration0m": 57.3
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2200.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 4,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      7.9,
+      16.4,
+      30.0,
+      50.8
+    ],
+    "reverse_gear_speeds": [
+      6.5
+    ],
+    "steer_type": null,
+    "empty_weight": 2.85,
+    "track_width": 0.1,
+    "secondary_weapons": null,
+    "main_gun_ammo": 280,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 11000,
+    "purchaseCost": 22000,
+    "crewTraining": 6300,
+    "expertTraining": 22000,
+    "aceTrainingGE": 210,
+    "aceTrainingRP": 220000,
+    "repairCost": {
+      "arcade": [
+        852,
+        1105
+      ],
+      "realistic": [
+        687,
+        891
+      ],
+      "simulator": [
+        1061,
+        1376
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.55,
+      "realistic": 0.62,
+      "simulator": 0.84
+    },
+    "expMultiplier": 1.24
+  }
+}

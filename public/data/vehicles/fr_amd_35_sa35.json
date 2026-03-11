@@ -1,0 +1,132 @@
+{
+  "id": "fr_amd_35_sa35",
+  "performance": {
+    "horsepower": 105.0,
+    "weight": 8.2,
+    "power_to_weight": 12.8,
+    "max_reverse_speed": 42.3,
+    "reload_time": 3.0,
+    "penetration": 69.7,
+    "max_speed": 71.6,
+    "crew_count": 5,
+    "elevation_speed": 6.0,
+    "traverse_speed": 25.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -12.0,
+      20.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 32.0,
+    "mainGun": {
+      "name": "47mm_SA_35",
+      "caliber": 47.0,
+      "reloadTime": 3.0,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 3.9,
+        "expert": 3.45,
+        "ace": 3.0
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "47mm_mle1935",
+        "localizedName": "Mle1935",
+        "type": "apc_solid_medium_caliber_tank",
+        "caliber": 47.0,
+        "mass": 1.62,
+        "muzzleVelocity": 660.0,
+        "deMarre": {
+          "fullCaliber": 47.0,
+          "isApcbc": true,
+          "explosiveMass": 0,
+          "Cx": 0.6
+        },
+        "penetration0m": 69.7
+      },
+      {
+        "name": "47mm_mle1935_he",
+        "localizedName": "Mle1935 HE",
+        "type": "he_frag_tank",
+        "caliber": 47.0,
+        "mass": 1.41,
+        "muzzleVelocity": 590.0,
+        "explosiveMassKg": 0.143,
+        "explosiveType": "tnt",
+        "tntEquivalent": 0.143
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2000.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 4,
+    "reverse_gears": 4,
+    "forward_gear_speeds": [
+      13.8,
+      24.2,
+      40.6,
+      71.6
+    ],
+    "reverse_gear_speeds": [
+      8.0,
+      14.3,
+      23.3,
+      42.3
+    ],
+    "steer_type": null,
+    "empty_weight": 8.0,
+    "track_width": 0.4,
+    "secondary_weapons": null,
+    "main_gun_ammo": 30,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 4000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 400,
+    "crewTraining": 450,
+    "expertTraining": 3000,
+    "aceTrainingGE": 45,
+    "aceTrainingRP": 220000,
+    "repairCost": {
+      "arcade": [
+        438,
+        438
+      ],
+      "realistic": [
+        338,
+        338
+      ],
+      "simulator": [
+        691,
+        691
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.42,
+      "realistic": 0.47,
+      "simulator": 0.68
+    },
+    "expMultiplier": 1.0,
+    "freeRepairs": 30
+  }
+}

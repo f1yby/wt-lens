@@ -1,0 +1,29 @@
+{
+  "id": "uk_destroyer_v_class_valhalla",
+  "economy": {
+    "researchCost": 5300,
+    "purchaseCost": 0,
+    "purchaseCostGold": 550,
+    "crewTraining": 1100,
+    "expertTraining": 7100,
+    "aceTrainingGE": 80,
+    "aceTrainingRP": 270000,
+    "repairCost": {
+      "arcade": [
+        395,
+        395
+      ],
+      "realistic": [
+        798,
+        798
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.52,
+      "realistic": 2.66,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.06,
+    "freeRepairs": 30
+  }
+}

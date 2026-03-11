@@ -1,0 +1,31 @@
+{
+  "id": "mb_175t",
+  "economy": {
+    "researchCost": 14000,
+    "purchaseCost": 32000,
+    "crewTraining": 9200,
+    "expertTraining": 32000,
+    "aceTrainingGE": 320,
+    "aceTrainingRP": 250000,
+    "repairCost": {
+      "arcade": [
+        976,
+        1376
+      ],
+      "realistic": [
+        1539,
+        2103
+      ],
+      "simulator": [
+        2719,
+        3715
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.67,
+      "realistic": 1.33,
+      "simulator": 2.15
+    },
+    "expMultiplier": 1.3
+  }
+}

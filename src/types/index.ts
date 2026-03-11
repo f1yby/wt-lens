@@ -177,6 +177,77 @@ export interface PenetrationData {
   };
 }
 
+// ============================================================================
+// Split Data Types (for optimized loading)
+// ============================================================================
+
+/**
+ * 载具索引条目（用于列表展示，轻量级）
+ * 
+ * 对应 vehicles-index.json 中的条目结构
+ */
+export interface VehicleIndexEntry {
+  id: string;
+  name: string;
+  localizedName: string;
+  nation: Nation;
+  rank: number;
+  /** Main battle rating (realistic mode) */
+  battleRating: number;
+  /** Battle rating for each game mode */
+  br?: Record<GameMode, number>;
+  vehicleType: GroundVehicleType;
+  economicType: EconomicType;
+  imageUrl?: string;
+  unreleased?: boolean;
+  releaseDate?: string;
+  ghost?: boolean;
+}
+
+/**
+ * 载具详情数据（按需加载，包含重数据）
+ * 
+ * 对应 vehicles/{id}.json 文件结构
+ */
+export interface VehicleDetailEntry {
+  id: string;
+  performance: Vehicle['performance'];
+  economy?: EconomyData;
+}
+
+/**
+ * 统计数据索引条目（最新月份的汇总数据）
+ * 
+ * 对应 stats-index.json 中的条目结构
+ */
+export interface StatsIndexEntry {
+  id: string;
+  mode: GameMode;
+  battles: number;
+  winRate: number;
+  avgKillsPerSpawn: number;
+  expPerSpawn: number;
+}
+
+/**
+ * 单车统计历史数据条目
+ * 
+ * 对应 stats/{id}.json 文件中的条目结构
+ */
+export interface StatsHistoryEntry {
+  id: string;
+  mode: string;  // 'arcade' | 'realistic' | 'simulator'
+  battles: number;
+  win_rate: number;
+  avg_kills_per_spawn: number;
+  exp_per_spawn: number;
+  month: string;  // e.g., 'diff_2026_february_march'
+}
+
+// ============================================================================
+// Main Vehicle Types
+// ============================================================================
+
 export interface Vehicle {
   id: string;
   name: string;

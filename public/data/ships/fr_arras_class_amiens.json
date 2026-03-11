@@ -1,0 +1,29 @@
+{
+  "id": "fr_arras_class_amiens",
+  "economy": {
+    "researchCost": 36000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 1600,
+    "crewTraining": 10000,
+    "expertTraining": 180000,
+    "aceTrainingGE": 590,
+    "aceTrainingRP": 710000,
+    "repairCost": {
+      "arcade": [
+        1035,
+        1035
+      ],
+      "realistic": [
+        1444,
+        1444
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.68,
+      "realistic": 2.54,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.48,
+    "freeRepairs": 30
+  }
+}

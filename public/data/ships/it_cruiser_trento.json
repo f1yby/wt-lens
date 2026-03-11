@@ -1,0 +1,27 @@
+{
+  "id": "it_cruiser_trento",
+  "economy": {
+    "researchCost": 33000,
+    "purchaseCost": 115000,
+    "crewTraining": 33000,
+    "expertTraining": 115000,
+    "aceTrainingGE": 820,
+    "aceTrainingRP": 440000,
+    "repairCost": {
+      "arcade": [
+        7914,
+        10724
+      ],
+      "realistic": [
+        8185,
+        11090
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 3.97,
+      "realistic": 6.0,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.6
+  }
+}

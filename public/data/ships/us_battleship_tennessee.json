@@ -1,0 +1,27 @@
+{
+  "id": "us_battleship_tennessee",
+  "economy": {
+    "researchCost": 300000,
+    "purchaseCost": 900000,
+    "crewTraining": 260000,
+    "expertTraining": 900000,
+    "aceTrainingGE": 2400,
+    "aceTrainingRP": 950000,
+    "repairCost": {
+      "arcade": [
+        26458,
+        34496
+      ],
+      "realistic": [
+        32079,
+        41824
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 4.5,
+      "realistic": 6.0,
+      "simulator": 1.0
+    },
+    "expMultiplier": 2.2
+  }
+}

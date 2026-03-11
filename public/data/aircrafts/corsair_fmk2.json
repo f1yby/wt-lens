@@ -1,0 +1,33 @@
+{
+  "id": "corsair_fmk2",
+  "economy": {
+    "researchCost": 14000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 1150,
+    "crewTraining": 6900,
+    "expertTraining": 46000,
+    "aceTrainingGE": 320,
+    "aceTrainingRP": 500000,
+    "repairCost": {
+      "arcade": [
+        766,
+        766
+      ],
+      "realistic": [
+        1034,
+        1034
+      ],
+      "simulator": [
+        1678,
+        1678
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.08,
+      "realistic": 2.37,
+      "simulator": 4.69
+    },
+    "expMultiplier": 1.3,
+    "freeRepairs": 30
+  }
+}

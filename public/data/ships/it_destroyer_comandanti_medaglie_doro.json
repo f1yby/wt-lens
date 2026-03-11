@@ -1,0 +1,27 @@
+{
+  "id": "it_destroyer_comandanti_medaglie_doro",
+  "economy": {
+    "researchCost": 7000,
+    "purchaseCost": 8700,
+    "crewTraining": 2500,
+    "expertTraining": 8700,
+    "aceTrainingGE": 125,
+    "aceTrainingRP": 160000,
+    "repairCost": {
+      "arcade": [
+        855,
+        1092
+      ],
+      "realistic": [
+        1353,
+        1729
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.88,
+      "realistic": 1.73,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.12
+  }
+}

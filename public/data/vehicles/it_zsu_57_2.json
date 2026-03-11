@@ -1,0 +1,146 @@
+{
+  "id": "it_zsu_57_2",
+  "performance": {
+    "horsepower": 520.0,
+    "weight": 28.0,
+    "power_to_weight": 18.57,
+    "max_reverse_speed": 7.5,
+    "reload_time": 0.5,
+    "penetration": 151.4,
+    "max_speed": 50.0,
+    "crew_count": 5,
+    "elevation_speed": 20.0,
+    "traverse_speed": 36.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -5.0,
+      85.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 90.0,
+    "mainGun": {
+      "name": "57mm_S_68",
+      "caliber": 57.0,
+      "reloadTime": 0.5,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 0.65,
+        "expert": 0.57,
+        "ace": 0.5
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "57mm_br_281sp",
+        "localizedName": "BR-281SP",
+        "type": "apcbc_tank",
+        "caliber": 57.0,
+        "mass": 2.8,
+        "muzzleVelocity": 1000.0,
+        "deMarre": {
+          "fullCaliber": 57.0,
+          "isApcbc": true,
+          "explosiveMass": 0,
+          "Cx": 0.377
+        },
+        "penetration0m": 151.4
+      },
+      {
+        "name": "57mm_or_281u_belt",
+        "localizedName": "OR-281U",
+        "type": "he_frag_tank",
+        "caliber": 57.0,
+        "mass": 2.8,
+        "muzzleVelocity": 1000.0,
+        "explosiveMassKg": 0.153,
+        "explosiveType": "a_ix_2",
+        "tntEquivalent": 0.214
+      },
+      {
+        "name": "57mm_br_281u_belt",
+        "localizedName": "BR-281U",
+        "type": "apcbc_tank",
+        "caliber": 57.0,
+        "mass": 2.8,
+        "muzzleVelocity": 1000.0,
+        "deMarre": {
+          "fullCaliber": 57.0,
+          "isApcbc": true,
+          "explosiveMass": 0.013,
+          "Cx": 0.377
+        },
+        "penetration0m": 151.4,
+        "explosiveMassKg": 0.013,
+        "explosiveType": "a_ix_2",
+        "tntEquivalent": 0.018
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2000.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 5,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      7.5,
+      16.1,
+      22.5,
+      31.5,
+      50.0
+    ],
+    "reverse_gear_speeds": [
+      7.5
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 27.7,
+    "track_width": 0.58,
+    "secondary_weapons": null,
+    "main_gun_ammo": 148,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 82000,
+    "purchaseCost": 240000,
+    "crewTraining": 68000,
+    "expertTraining": 240000,
+    "aceTrainingGE": 990,
+    "aceTrainingRP": 620000,
+    "repairCost": {
+      "arcade": [
+        3791,
+        4872
+      ],
+      "realistic": [
+        3593,
+        4619
+      ],
+      "simulator": [
+        5434,
+        6985
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.44,
+      "realistic": 1.78,
+      "simulator": 2.45
+    },
+    "expMultiplier": 1.84
+  }
+}

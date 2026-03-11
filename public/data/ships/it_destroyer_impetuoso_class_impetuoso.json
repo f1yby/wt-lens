@@ -1,0 +1,27 @@
+{
+  "id": "it_destroyer_impetuoso_class_impetuoso",
+  "economy": {
+    "researchCost": 13000,
+    "purchaseCost": 31000,
+    "crewTraining": 9000,
+    "expertTraining": 31000,
+    "aceTrainingGE": 320,
+    "aceTrainingRP": 250000,
+    "repairCost": {
+      "arcade": [
+        1856,
+        2376
+      ],
+      "realistic": [
+        2871,
+        3676
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.81,
+      "realistic": 3.54,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.3
+  }
+}

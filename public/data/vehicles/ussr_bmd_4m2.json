@@ -1,0 +1,124 @@
+{
+  "id": "ussr_bmd_4m2",
+  "performance": {
+    "horsepower": 500.0,
+    "weight": 14.3,
+    "power_to_weight": 34.97,
+    "max_reverse_speed": 20.4,
+    "reload_time": 1.0,
+    "penetration": null,
+    "max_speed": 70.1,
+    "crew_count": 5,
+    "elevation_speed": 60.0,
+    "traverse_speed": 60.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "both",
+    "elevation_range": [
+      -6.0,
+      60.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": [
+      800,
+      600
+    ],
+    "commander_thermal_resolution": [
+      800,
+      600
+    ],
+    "gunner_thermal_diagonal": 1000.0,
+    "commander_thermal_diagonal": 1000.0,
+    "stabilizer_value": 1,
+    "elevation_range_value": 66.0,
+    "mainGun": null,
+    "ammunitions": null,
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": "transmash",
+    "engine_model": "utd_29",
+    "engine_type": null,
+    "engine_max_rpm": 2600.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 8,
+    "reverse_gears": 4,
+    "forward_gear_speeds": [
+      9.3,
+      14.0,
+      24.0,
+      41.0,
+      51.5,
+      58.0,
+      63.5,
+      70.1
+    ],
+    "reverse_gear_speeds": [
+      9.3,
+      11.9,
+      17.2,
+      20.4
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 14.0,
+    "track_width": 0.38,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "100mm_2A70_BMP_autoloader",
+        "caliber": 100.0,
+        "ammo": 44,
+        "rateOfFire": 15,
+        "bulletType": "he_frag_tank"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "7_62mm_PKTM",
+        "caliber": 7.6,
+        "ammo": 2000,
+        "reloadTime": 8.0,
+        "rateOfFire": 700,
+        "bulletType": "ap_i_ball"
+      }
+    ],
+    "main_gun_ammo": 500,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": true,
+    "has_ess": true,
+    "has_laser_rangefinder": true
+  },
+  "economy": {
+    "researchCost": 220000,
+    "purchaseCost": 620000,
+    "crewTraining": 175000,
+    "expertTraining": 620000,
+    "aceTrainingGE": 2100,
+    "aceTrainingRP": 1010000,
+    "repairCost": {
+      "arcade": [
+        3199,
+        5712
+      ],
+      "realistic": [
+        3046,
+        5440
+      ],
+      "simulator": [
+        4067,
+        7263
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.34,
+      "realistic": 1.68,
+      "simulator": 2.17
+    },
+    "expMultiplier": 2.26
+  }
+}

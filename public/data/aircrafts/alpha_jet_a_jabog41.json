@@ -1,0 +1,33 @@
+{
+  "id": "alpha_jet_a_jabog41",
+  "economy": {
+    "researchCost": 170000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 8910,
+    "crewTraining": 10000,
+    "expertTraining": 770000,
+    "aceTrainingGE": 2400,
+    "aceTrainingRP": 1900000,
+    "repairCost": {
+      "arcade": [
+        2059,
+        2059
+      ],
+      "realistic": [
+        5949,
+        5949
+      ],
+      "simulator": [
+        6727,
+        6727
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.29,
+      "realistic": 6.81,
+      "simulator": 12.0
+    },
+    "expMultiplier": 2.2,
+    "freeRepairs": 30
+  }
+}

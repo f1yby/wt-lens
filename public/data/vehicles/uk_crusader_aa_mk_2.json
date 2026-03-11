@@ -1,0 +1,128 @@
+{
+  "id": "uk_crusader_aa_mk_2",
+  "performance": {
+    "horsepower": 340.0,
+    "weight": 19.56,
+    "power_to_weight": 17.38,
+    "max_reverse_speed": 6.9,
+    "reload_time": 6.0,
+    "penetration": 38.2,
+    "max_speed": 43.7,
+    "crew_count": 5,
+    "elevation_speed": 25.0,
+    "traverse_speed": 70.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -5.0,
+      87.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 92.0,
+    "mainGun": {
+      "name": "20mm_Oerlikon",
+      "caliber": 20.0,
+      "reloadTime": 6.0,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 7.8,
+        "expert": 6.9,
+        "ace": 6.0
+      },
+      "rateOfFire": 450,
+      "beltReloadTime": 6.0
+    },
+    "ammunitions": [
+      {
+        "name": "20mm_oerlikon_ap",
+        "localizedName": "AP-T",
+        "type": "ap_t",
+        "caliber": 20.0,
+        "mass": 0.14,
+        "muzzleVelocity": 830.0,
+        "deMarre": {
+          "fullCaliber": 20.0,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "Cx": 0.4986
+        },
+        "penetration0m": 38.2
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 1500.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 4,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      5.8,
+      9.9,
+      22.3,
+      43.7
+    ],
+    "reverse_gear_speeds": [
+      6.9
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 19.3,
+    "track_width": null,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_7mm_vickers_k",
+        "caliber": 7.7,
+        "ammo": 600,
+        "reloadTime": 8.0,
+        "rateOfFire": 948,
+        "bulletType": "i_t_ball"
+      }
+    ],
+    "main_gun_ammo": 600,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 13000,
+    "purchaseCost": 76000,
+    "crewTraining": 22000,
+    "expertTraining": 76000,
+    "aceTrainingGE": 400,
+    "aceTrainingRP": 320000,
+    "repairCost": {
+      "arcade": [
+        1493,
+        1919
+      ],
+      "realistic": [
+        1118,
+        1437
+      ],
+      "simulator": [
+        1689,
+        2170
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.84,
+      "realistic": 1.0,
+      "simulator": 1.52
+    },
+    "expMultiplier": 1.42
+  }
+}

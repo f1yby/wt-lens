@@ -1,0 +1,29 @@
+{
+  "id": "uk_destroyer_g_garland",
+  "economy": {
+    "researchCost": 9000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 850,
+    "crewTraining": 3400,
+    "expertTraining": 23000,
+    "aceTrainingGE": 180,
+    "aceTrainingRP": 380000,
+    "repairCost": {
+      "arcade": [
+        799,
+        799
+      ],
+      "realistic": [
+        2264,
+        2264
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.56,
+      "realistic": 5.14,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.18,
+    "freeRepairs": 30
+  }
+}

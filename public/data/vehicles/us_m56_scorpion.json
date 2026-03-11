@@ -1,0 +1,165 @@
+{
+  "id": "us_m56_scorpion",
+  "performance": {
+    "horsepower": 200.0,
+    "weight": 7.03,
+    "power_to_weight": 28.45,
+    "max_reverse_speed": 18.9,
+    "reload_time": 6.0,
+    "penetration": 320.0,
+    "max_speed": 45.0,
+    "crew_count": 5,
+    "elevation_speed": 6.0,
+    "traverse_speed": 6.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -10.0,
+      15.0
+    ],
+    "traverse_range": [
+      -30.0,
+      30.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 25.0,
+    "mainGun": {
+      "name": "90mm_M54",
+      "caliber": 90.0,
+      "reloadTime": 6.0,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 7.8,
+        "expert": 6.9,
+        "ace": 6.0
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "90mm_m332",
+        "localizedName": "M332 shot",
+        "type": "apcr_tank",
+        "caliber": 38.1,
+        "mass": 5.7,
+        "muzzleVelocity": 1165.0,
+        "deMarre": {
+          "fullCaliber": 90.0,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "isApcr": true,
+          "coreCaliber": 38.1,
+          "coreMass": 3.6,
+          "Cx": 0.2
+        },
+        "penetration0m": 298.4
+      },
+      {
+        "name": "90mm_m431",
+        "localizedName": "M431 shell",
+        "type": "heat_fs_tank",
+        "caliber": 90.0,
+        "mass": 5.8,
+        "muzzleVelocity": 1216.0,
+        "penetration0m": 320.0,
+        "explosiveMassKg": 0.544,
+        "explosiveType": "comp_b",
+        "tntEquivalent": 0.691
+      },
+      {
+        "name": "90mm_m71",
+        "localizedName": "M71 shell",
+        "type": "he_frag_tank",
+        "caliber": 90.0,
+        "mass": 10.55,
+        "muzzleVelocity": 823.0,
+        "explosiveMassKg": 0.925,
+        "explosiveType": "comp_b",
+        "tntEquivalent": 1.175
+      },
+      {
+        "name": "90mm_m313",
+        "localizedName": "M313",
+        "type": "smoke_tank",
+        "caliber": 90.0,
+        "mass": 10.7,
+        "muzzleVelocity": 821.0,
+        "explosiveMassKg": 0.05,
+        "explosiveType": "smoke_composition",
+        "tntEquivalent": 0.05
+      },
+      {
+        "name": "90mm_t142e3",
+        "localizedName": "T142E3",
+        "type": "hesh_tank",
+        "caliber": 90.0,
+        "mass": 10.6,
+        "muzzleVelocity": 792.0,
+        "penetration0m": 102.0,
+        "explosiveMassKg": 2.12,
+        "explosiveType": "comp_a",
+        "tntEquivalent": 2.671
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 3000.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 4,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      7.3,
+      11.0,
+      25.7,
+      45.0
+    ],
+    "reverse_gear_speeds": [
+      18.9
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 6.9,
+    "track_width": 0.55,
+    "secondary_weapons": null,
+    "main_gun_ammo": 29,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 54000,
+    "purchaseCost": 185000,
+    "crewTraining": 52000,
+    "expertTraining": 185000,
+    "aceTrainingGE": 710,
+    "aceTrainingRP": 480000,
+    "repairCost": {
+      "arcade": [
+        2843,
+        3722
+      ],
+      "realistic": [
+        3493,
+        4573
+      ],
+      "simulator": [
+        4916,
+        6435
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.14,
+      "realistic": 1.8,
+      "simulator": 2.2
+    },
+    "expMultiplier": 1.66
+  }
+}

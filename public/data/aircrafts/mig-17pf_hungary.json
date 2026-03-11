@@ -1,0 +1,31 @@
+{
+  "id": "mig-17pf_hungary",
+  "economy": {
+    "researchCost": 150000,
+    "purchaseCost": 420000,
+    "crewTraining": 120000,
+    "expertTraining": 420000,
+    "aceTrainingGE": 2200,
+    "aceTrainingRP": 890000,
+    "repairCost": {
+      "arcade": [
+        3079,
+        4436
+      ],
+      "realistic": [
+        8783,
+        12656
+      ],
+      "simulator": [
+        9576,
+        13798
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.26,
+      "realistic": 3.8,
+      "simulator": 6.0
+    },
+    "expMultiplier": 2.14
+  }
+}

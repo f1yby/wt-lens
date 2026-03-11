@@ -1,0 +1,33 @@
+{
+  "id": "p-36a_rasmussen",
+  "economy": {
+    "researchCost": 4000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 400,
+    "crewTraining": 450,
+    "expertTraining": 3000,
+    "aceTrainingGE": 45,
+    "aceTrainingRP": 220000,
+    "repairCost": {
+      "arcade": [
+        431,
+        431
+      ],
+      "realistic": [
+        512,
+        512
+      ],
+      "simulator": [
+        333,
+        333
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.42,
+      "realistic": 0.88,
+      "simulator": 1.38
+    },
+    "expMultiplier": 1.0,
+    "freeRepairs": 30
+  }
+}

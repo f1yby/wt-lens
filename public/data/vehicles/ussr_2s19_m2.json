@@ -1,0 +1,180 @@
+{
+  "id": "ussr_2s19_m2",
+  "performance": {
+    "horsepower": 840.0,
+    "weight": 42.7,
+    "power_to_weight": 19.67,
+    "max_reverse_speed": 4.2,
+    "reload_time": 6.0,
+    "penetration": 250.0,
+    "max_speed": 60.3,
+    "crew_count": 5,
+    "elevation_speed": 5.5,
+    "traverse_speed": 10.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -4.0,
+      68.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 72.0,
+    "mainGun": {
+      "name": "152mm_2A65_m2",
+      "caliber": 152.0,
+      "reloadTime": 6.0,
+      "autoLoader": true,
+      "reloadTimes": {
+        "base": 6.0,
+        "expert": 6.0,
+        "ace": 6.0
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "152mm_3of25",
+        "localizedName": "3OF25",
+        "type": "he_frag_tank",
+        "caliber": 152.0,
+        "mass": 43.56,
+        "muzzleVelocity": 655.0,
+        "explosiveMassKg": 6.57,
+        "explosiveType": "a_ix_2",
+        "tntEquivalent": 9.198
+      },
+      {
+        "name": "152mm_br_540b",
+        "localizedName": "BR-540B",
+        "type": "aphebc_tank",
+        "caliber": 152.0,
+        "mass": 48.96,
+        "muzzleVelocity": 610.0,
+        "deMarre": {
+          "fullCaliber": 152.0,
+          "isApcbc": false,
+          "explosiveMass": 0.48,
+          "Cx": 0.3958
+        },
+        "penetration0m": 175.1,
+        "explosiveMassKg": 0.48,
+        "explosiveType": "a_ix_2",
+        "tntEquivalent": 0.672
+      },
+      {
+        "name": "152mm_bp_540",
+        "localizedName": "BP-540",
+        "type": "heat_tank",
+        "caliber": 152.0,
+        "mass": 27.4,
+        "muzzleVelocity": 700.0,
+        "penetration0m": 250.0,
+        "explosiveMassKg": 3.839,
+        "explosiveType": "a_ix_1",
+        "tntEquivalent": 4.376
+      },
+      {
+        "name": "152mm_3of45",
+        "localizedName": "3OF45",
+        "type": "he_frag_tank",
+        "caliber": 152.0,
+        "mass": 43.56,
+        "muzzleVelocity": 810.0,
+        "explosiveMassKg": 7.65,
+        "explosiveType": "a_ix_2",
+        "tntEquivalent": 10.71
+      },
+      {
+        "name": "152mm_3of45_vt",
+        "localizedName": "3OF45 (PF)",
+        "type": "he_frag_radio_fuse",
+        "caliber": 152.0,
+        "mass": 43.56,
+        "muzzleVelocity": 810.0,
+        "explosiveMassKg": 7.65,
+        "explosiveType": "a_ix_2",
+        "tntEquivalent": 10.71
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": true,
+    "engine_manufacturer": "chtz",
+    "engine_model": "v_84_amc",
+    "engine_type": null,
+    "engine_max_rpm": 2000.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 7,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      7.4,
+      13.7,
+      17.3,
+      21.7,
+      29.8,
+      41.1,
+      60.3
+    ],
+    "reverse_gear_speeds": [
+      4.2
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 41.4,
+    "track_width": 0.484,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner2",
+        "name": "12_7mm_6P50_Kord_t_72",
+        "caliber": 12.7,
+        "ammo": 300,
+        "reloadTime": 5.0,
+        "rateOfFire": 700,
+        "bulletType": "ap_i_t_ball"
+      }
+    ],
+    "main_gun_ammo": 50,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": true,
+    "has_ess": true,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 280000,
+    "purchaseCost": 320000,
+    "crewTraining": 86000,
+    "expertTraining": 300000,
+    "aceTrainingGE": 1200,
+    "aceTrainingRP": 720000,
+    "repairCost": {
+      "arcade": [
+        4732,
+        6684
+      ],
+      "realistic": [
+        4772,
+        6740
+      ],
+      "simulator": [
+        7901,
+        11160
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.52,
+      "realistic": 2.1,
+      "simulator": 2.5
+    },
+    "expMultiplier": 1.96
+  }
+}

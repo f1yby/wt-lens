@@ -1,0 +1,31 @@
+{
+  "id": "i-16_type17_china",
+  "economy": {
+    "researchCost": 9200,
+    "purchaseCost": 16000,
+    "crewTraining": 4500,
+    "expertTraining": 16000,
+    "aceTrainingGE": 180,
+    "aceTrainingRP": 190000,
+    "repairCost": {
+      "arcade": [
+        493,
+        643
+      ],
+      "realistic": [
+        1046,
+        1326
+      ],
+      "simulator": [
+        1407,
+        1784
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.3,
+      "realistic": 0.73,
+      "simulator": 1.52
+    },
+    "expMultiplier": 1.18
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "id": "la-9_china",
+  "economy": {
+    "researchCost": 54000,
+    "purchaseCost": 185000,
+    "crewTraining": 52000,
+    "expertTraining": 185000,
+    "aceTrainingGE": 940,
+    "aceTrainingRP": 480000,
+    "repairCost": {
+      "arcade": [
+        2675,
+        3461
+      ],
+      "realistic": [
+        6089,
+        7650
+      ],
+      "simulator": [
+        9156,
+        11502
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.06,
+      "realistic": 2.13,
+      "simulator": 4.57
+    },
+    "expMultiplier": 1.66
+  }
+}

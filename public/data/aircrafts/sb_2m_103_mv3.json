@@ -1,0 +1,31 @@
+{
+  "id": "sb_2m_103_mv3",
+  "economy": {
+    "researchCost": 3000,
+    "purchaseCost": 6300,
+    "crewTraining": 1800,
+    "expertTraining": 6300,
+    "aceTrainingGE": 80,
+    "aceTrainingRP": 135000,
+    "repairCost": {
+      "arcade": [
+        352,
+        487
+      ],
+      "realistic": [
+        466,
+        624
+      ],
+      "simulator": [
+        828,
+        1108
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.27,
+      "realistic": 0.62,
+      "simulator": 1.09
+    },
+    "expMultiplier": 1.06
+  }
+}

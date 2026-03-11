@@ -1,0 +1,29 @@
+{
+  "id": "us_destroyer_bagley_class_helm",
+  "economy": {
+    "researchCost": 9000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 850,
+    "crewTraining": 3400,
+    "expertTraining": 23000,
+    "aceTrainingGE": 180,
+    "aceTrainingRP": 380000,
+    "repairCost": {
+      "arcade": [
+        765,
+        765
+      ],
+      "realistic": [
+        1258,
+        1258
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.3,
+      "realistic": 4.51,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.18,
+    "freeRepairs": 30
+  }
+}

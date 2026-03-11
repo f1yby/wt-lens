@@ -1,0 +1,169 @@
+{
+  "id": "us_t54e2",
+  "performance": {
+    "horsepower": 810.0,
+    "weight": 49.4,
+    "power_to_weight": 16.4,
+    "max_reverse_speed": 8.4,
+    "reload_time": 10.0,
+    "penetration": 380.0,
+    "max_speed": 43.4,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 21.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -10.0,
+      20.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 30.0,
+    "mainGun": {
+      "name": "105mm_t140e3",
+      "caliber": 105.0,
+      "reloadTime": 10.0,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 13.0,
+        "expert": 11.5,
+        "ace": 10.0
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "105mm_t182e1",
+        "localizedName": "T182E1",
+        "type": "apbc_usa_tank",
+        "caliber": 105.0,
+        "mass": 15.9,
+        "muzzleVelocity": 1067.0,
+        "deMarre": {
+          "fullCaliber": 105.0,
+          "isApcbc": false,
+          "explosiveMass": 0
+        },
+        "penetration0m": 266.8
+      },
+      {
+        "name": "105mm_t298e1",
+        "localizedName": "T298E1",
+        "type": "heat_fs_tank",
+        "caliber": 105.0,
+        "mass": 10.2,
+        "muzzleVelocity": 1128.0,
+        "penetration0m": 380.0,
+        "explosiveMassKg": 1.2,
+        "explosiveType": "comp_b",
+        "tntEquivalent": 1.524
+      },
+      {
+        "name": "105mm_t279",
+        "localizedName": "T279",
+        "type": "apds_early_tank",
+        "caliber": 66.0,
+        "mass": 4.5,
+        "muzzleVelocity": 1554.0,
+        "deMarre": {
+          "fullCaliber": 105.0,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "isApcr": true,
+          "coreCaliber": 66.0,
+          "coreMass": 2.7,
+          "Cx": 0.1914
+        },
+        "penetration0m": 208.7
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2800.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 6,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      7.5,
+      10.5,
+      15.0,
+      19.2,
+      26.6,
+      43.4
+    ],
+    "reverse_gear_speeds": [
+      5.5,
+      8.4
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 48.4,
+    "track_width": 0.5,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_M1919A4",
+        "caliber": 7.6,
+        "ammo": 4750,
+        "reloadTime": 8.0,
+        "rateOfFire": 500,
+        "bulletType": "ap_ball"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "12_7mm_M2_HB",
+        "caliber": 12.7,
+        "ammo": 1800,
+        "reloadTime": 8.0,
+        "rateOfFire": 575,
+        "bulletType": "ap_i_t_ball_M20"
+      }
+    ],
+    "main_gun_ammo": 39,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 120000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 8380,
+    "crewTraining": 10000,
+    "expertTraining": 550000,
+    "aceTrainingGE": 1300,
+    "aceTrainingRP": 1550000,
+    "repairCost": {
+      "arcade": [
+        2897,
+        2897
+      ],
+      "realistic": [
+        3301,
+        3301
+      ],
+      "simulator": [
+        4496,
+        4496
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.72,
+      "realistic": 4.08,
+      "simulator": 4.73
+    },
+    "expMultiplier": 2.02,
+    "freeRepairs": 30
+  }
+}

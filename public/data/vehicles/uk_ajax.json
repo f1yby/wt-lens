@@ -1,0 +1,188 @@
+{
+  "id": "uk_ajax",
+  "performance": {
+    "horsepower": 816.0,
+    "weight": 38.0,
+    "power_to_weight": 21.47,
+    "max_reverse_speed": 35.5,
+    "reload_time": 0.3,
+    "penetration": 157.2,
+    "max_speed": 70.5,
+    "crew_count": 5,
+    "elevation_speed": 30.0,
+    "traverse_speed": 60.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "both",
+    "elevation_range": [
+      -10.0,
+      45.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": [
+      1200,
+      800
+    ],
+    "commander_thermal_resolution": [
+      1200,
+      800
+    ],
+    "gunner_thermal_diagonal": 1442.2,
+    "commander_thermal_diagonal": 1442.2,
+    "stabilizer_value": 1,
+    "elevation_range_value": 55.0,
+    "mainGun": {
+      "name": "40mm_CTC",
+      "caliber": 40.0,
+      "reloadTime": 0.3,
+      "autoLoader": true,
+      "reloadTimes": {
+        "base": 0.3,
+        "expert": 0.3,
+        "ace": 0.3
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "40mm_gpr_ke_t_apfsds",
+        "localizedName": "OFLT",
+        "type": "apds_fs_long_tank",
+        "caliber": 11.7,
+        "mass": 0.34,
+        "muzzleVelocity": 1510.0,
+        "lanzOdermatt": {
+          "workingLength": 165.0,
+          "density": 17550.0,
+          "material": "tungsten",
+          "Cx": 0.3715
+        },
+        "penetration0m": 157.2,
+        "penetrationData": {
+          "at0m": {
+            "angle0": 157.2,
+            "angle30": 136.1,
+            "angle60": 78.6
+          }
+        }
+      },
+      {
+        "name": "40mm_gpr_pd_t_he",
+        "localizedName": "OET",
+        "type": "he_frag_tank",
+        "caliber": 40.0,
+        "mass": 0.98,
+        "muzzleVelocity": 1000.0,
+        "explosiveMassKg": 0.115,
+        "explosiveType": "hmx",
+        "tntEquivalent": 0.173
+      },
+      {
+        "name": "40mm_gpr_ab_t_he",
+        "localizedName": "OET CHR",
+        "type": "he_frag_dist_fuse",
+        "caliber": 40.0,
+        "mass": 0.98,
+        "muzzleVelocity": 1000.0,
+        "explosiveMassKg": 0.115,
+        "explosiveType": "hmx",
+        "tntEquivalent": 0.173
+      },
+      {
+        "name": "40mm_ke_ab_ahead",
+        "localizedName": "PPM CHR",
+        "type": "ahead_tank",
+        "caliber": 40.0,
+        "mass": 1.4,
+        "muzzleVelocity": 900.0,
+        "explosiveMassKg": 0.0008,
+        "explosiveType": "clx_663",
+        "tntEquivalent": 0.001
+      }
+    ],
+    "penetrationData": {
+      "at0m": {
+        "angle0": 157.2,
+        "angle30": 136.1,
+        "angle60": 78.6
+      }
+    },
+    "autoLoader": true,
+    "engine_manufacturer": "rolls-royce",
+    "engine_model": "mtu_8v_199_te21",
+    "engine_type": null,
+    "engine_max_rpm": 2300.0,
+    "transmission_manufacturer": "renk",
+    "transmission_model": "hswl_256b",
+    "transmission_type": "auto",
+    "forward_gears": 6,
+    "reverse_gears": 6,
+    "forward_gear_speeds": [
+      9.3,
+      20.0,
+      25.7,
+      36.1,
+      60.5,
+      70.5
+    ],
+    "reverse_gear_speeds": [
+      9.3,
+      11.9,
+      15.5,
+      20.8,
+      26.4,
+      35.5
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 37.0,
+    "track_width": 0.35,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_L94A1",
+        "caliber": 7.6,
+        "ammo": 4000,
+        "reloadTime": 8.0,
+        "rateOfFire": 600,
+        "bulletType": "ap_ball"
+      }
+    ],
+    "main_gun_ammo": 191,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": true
+  },
+  "economy": {
+    "researchCost": 260000,
+    "purchaseCost": 710000,
+    "crewTraining": 200000,
+    "expertTraining": 710000,
+    "aceTrainingGE": 2100,
+    "aceTrainingRP": 1080000,
+    "repairCost": {
+      "arcade": [
+        3579,
+        5985
+      ],
+      "realistic": [
+        3415,
+        5711
+      ],
+      "simulator": [
+        4548,
+        7605
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.38,
+      "realistic": 1.72,
+      "simulator": 2.21
+    },
+    "expMultiplier": 2.32
+  }
+}

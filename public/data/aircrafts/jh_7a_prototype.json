@@ -1,0 +1,33 @@
+{
+  "id": "jh_7a_prototype",
+  "economy": {
+    "researchCost": 290000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 9800,
+    "crewTraining": 10000,
+    "expertTraining": 1280000,
+    "aceTrainingGE": 3400,
+    "aceTrainingRP": 2560000,
+    "repairCost": {
+      "arcade": [
+        2833,
+        2833
+      ],
+      "realistic": [
+        6255,
+        6255
+      ],
+      "simulator": [
+        8763,
+        8763
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.55,
+      "realistic": 5.73,
+      "simulator": 10.43
+    },
+    "expMultiplier": 2.5,
+    "freeRepairs": 30
+  }
+}

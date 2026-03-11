@@ -1,0 +1,33 @@
+{
+  "id": "a2d",
+  "economy": {
+    "researchCost": 95000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 6900,
+    "crewTraining": 10000,
+    "expertTraining": 440000,
+    "aceTrainingGE": 1500,
+    "aceTrainingRP": 1340000,
+    "repairCost": {
+      "arcade": [
+        1754,
+        1754
+      ],
+      "realistic": [
+        4631,
+        4631
+      ],
+      "simulator": [
+        6557,
+        6557
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.97,
+      "realistic": 5.2,
+      "simulator": 12.0
+    },
+    "expMultiplier": 1.9,
+    "freeRepairs": 30
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "id": "us_sl_amraam_fcs",
+  "performance": {
+    "horsepower": 160.0,
+    "weight": 4.2,
+    "power_to_weight": 38.1,
+    "max_reverse_speed": 40.8,
+    "reload_time": null,
+    "penetration": null,
+    "max_speed": 113.1,
+    "crew_count": 5,
+    "elevation_speed": null,
+    "traverse_speed": null,
+    "has_stabilizer": null,
+    "stabilizer_type": "none",
+    "elevation_range": null,
+    "traverse_range": null,
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": null,
+    "mainGun": null,
+    "ammunitions": null,
+    "penetrationData": null,
+    "autoLoader": null,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 3400.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 8,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      17.1,
+      34.2,
+      43.2,
+      58.5,
+      69.3,
+      84.9,
+      97.0,
+      113.1
+    ],
+    "reverse_gear_speeds": [
+      20.4,
+      40.8
+    ],
+    "steer_type": null,
+    "empty_weight": 3.96,
+    "track_width": 0.4,
+    "secondary_weapons": null,
+    "main_gun_ammo": null,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 410000,
+    "purchaseCost": 1100000,
+    "crewTraining": 310000,
+    "expertTraining": 1100000,
+    "aceTrainingGE": 2300,
+    "aceTrainingRP": 1350000,
+    "repairCost": {
+      "arcade": [
+        6017,
+        7855
+      ],
+      "realistic": [
+        7309,
+        9542
+      ],
+      "simulator": [
+        8279,
+        10808
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.6,
+      "realistic": 2.1,
+      "simulator": 2.03
+    },
+    "expMultiplier": 2.56
+  }
+}

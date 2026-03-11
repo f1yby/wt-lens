@@ -1,0 +1,31 @@
+{
+  "id": "f_222_2",
+  "economy": {
+    "researchCost": 4000,
+    "purchaseCost": 2100,
+    "crewTraining": 600,
+    "expertTraining": 2100,
+    "aceTrainingGE": 45,
+    "aceTrainingRP": 110000,
+    "repairCost": {
+      "arcade": [
+        218,
+        301
+      ],
+      "realistic": [
+        384,
+        514
+      ],
+      "simulator": [
+        404,
+        541
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.22,
+      "realistic": 0.38,
+      "simulator": 0.84
+    },
+    "expMultiplier": 1.0
+  }
+}

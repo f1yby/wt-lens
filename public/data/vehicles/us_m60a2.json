@@ -1,0 +1,158 @@
+{
+  "id": "us_m60a2",
+  "performance": {
+    "horsepower": 750.0,
+    "weight": 51.9,
+    "power_to_weight": 14.45,
+    "max_reverse_speed": 8.3,
+    "reload_time": 12.0,
+    "penetration": 431.0,
+    "max_speed": 47.7,
+    "crew_count": 5,
+    "elevation_speed": 40.0,
+    "traverse_speed": 40.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "both",
+    "elevation_range": [
+      -10.0,
+      20.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 30.0,
+    "mainGun": {
+      "name": "152mm_M162",
+      "caliber": 152.0,
+      "reloadTime": 12.0,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 15.6,
+        "expert": 13.8,
+        "ace": 12.0
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "152mm_m409a1",
+        "localizedName": "M409A1",
+        "type": "heat_tank",
+        "caliber": 152.0,
+        "mass": 18.9,
+        "muzzleVelocity": 682.0,
+        "penetration0m": 380.0,
+        "explosiveMassKg": 2.85,
+        "explosiveType": "comp_b",
+        "tntEquivalent": 3.62
+      },
+      {
+        "name": "152mm_m657a2",
+        "localizedName": "M657A2",
+        "type": "he_frag_tank",
+        "caliber": 152.0,
+        "mass": 22.0,
+        "muzzleVelocity": 682.0,
+        "explosiveMassKg": 4.3,
+        "explosiveType": "tnt",
+        "tntEquivalent": 4.3
+      },
+      {
+        "name": "152mm_mgm_61b",
+        "localizedName": "MGM-51B Shillelagh",
+        "type": "atgm_tank",
+        "caliber": 152.0,
+        "mass": 27.8,
+        "muzzleVelocity": 286.0,
+        "penetration0m": 431.0
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2400.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 6,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      8.6,
+      11.4,
+      17.2,
+      25.0,
+      33.9,
+      47.7
+    ],
+    "reverse_gear_speeds": [
+      6.1,
+      8.3
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 51.0,
+    "track_width": 0.5,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "12_7mm_M85",
+        "caliber": 12.7,
+        "ammo": 1080,
+        "reloadTime": 8.0,
+        "rateOfFire": 625,
+        "bulletType": "ap_i_ball_M8"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "7_62mm_M73",
+        "caliber": 7.6,
+        "ammo": 5500,
+        "reloadTime": 8.0,
+        "rateOfFire": 500,
+        "bulletType": "ap_ball"
+      }
+    ],
+    "main_gun_ammo": 46,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": true
+  },
+  "economy": {
+    "researchCost": 135000,
+    "purchaseCost": 380000,
+    "crewTraining": 110000,
+    "expertTraining": 380000,
+    "aceTrainingGE": 1400,
+    "aceTrainingRP": 830000,
+    "repairCost": {
+      "arcade": [
+        4477,
+        6175
+      ],
+      "realistic": [
+        4952,
+        6831
+      ],
+      "simulator": [
+        6792,
+        9368
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.37,
+      "realistic": 2.03,
+      "simulator": 2.45
+    },
+    "expMultiplier": 2.08
+  }
+}

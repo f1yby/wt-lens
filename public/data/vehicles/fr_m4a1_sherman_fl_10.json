@@ -1,0 +1,140 @@
+{
+  "id": "fr_m4a1_sherman_fl_10",
+  "performance": {
+    "horsepower": 400.0,
+    "weight": 30.3,
+    "power_to_weight": 13.2,
+    "max_reverse_speed": 5.0,
+    "reload_time": 5.0,
+    "penetration": 182.7,
+    "max_speed": 38.6,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 30.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -6.0,
+      9.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 15.0,
+    "mainGun": {
+      "name": "75mm_SA_50",
+      "caliber": 75.0,
+      "reloadTime": 5.0,
+      "autoLoader": true,
+      "reloadTimes": {
+        "base": 5.0,
+        "expert": 5.0,
+        "ace": 5.0
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "75mm_pot51a",
+        "localizedName": "POT-51A",
+        "type": "apbc_usa_tank",
+        "caliber": 75.0,
+        "mass": 6.4,
+        "muzzleVelocity": 1000.0,
+        "deMarre": {
+          "fullCaliber": 75.0,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "Cx": 0.4
+        },
+        "penetration0m": 182.7
+      },
+      {
+        "name": "75mm_sa50_he",
+        "localizedName": "OE Mle 1951",
+        "type": "he_frag_tank",
+        "caliber": 75.0,
+        "mass": 6.2,
+        "muzzleVelocity": 753.0,
+        "explosiveMassKg": 0.675,
+        "explosiveType": "tnt",
+        "tntEquivalent": 0.675
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": true,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2400.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 5,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      3.7,
+      9.1,
+      15.8,
+      25.4,
+      38.6
+    ],
+    "reverse_gear_speeds": [
+      5.0
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 30.0,
+    "track_width": 0.4,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_5mm_MAC_31",
+        "caliber": 7.5,
+        "ammo": 4950,
+        "reloadTime": 5.0,
+        "rateOfFire": 550,
+        "bulletType": "ap_ball"
+      }
+    ],
+    "main_gun_ammo": 60,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 46000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 2980,
+    "crewTraining": 10000,
+    "expertTraining": 250000,
+    "aceTrainingGE": 630,
+    "aceTrainingRP": 870000,
+    "repairCost": {
+      "arcade": [
+        1339,
+        1339
+      ],
+      "realistic": [
+        1536,
+        1536
+      ],
+      "simulator": [
+        1907,
+        1907
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.84,
+      "realistic": 2.89,
+      "simulator": 3.4
+    },
+    "expMultiplier": 1.6,
+    "freeRepairs": 30
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "id": "mc-205_serie3",
+  "economy": {
+    "researchCost": 46000,
+    "purchaseCost": 155000,
+    "crewTraining": 45000,
+    "expertTraining": 155000,
+    "aceTrainingGE": 820,
+    "aceTrainingRP": 440000,
+    "repairCost": {
+      "arcade": [
+        2024,
+        2656
+      ],
+      "realistic": [
+        4605,
+        5866
+      ],
+      "simulator": [
+        6057,
+        7717
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.81,
+      "realistic": 1.96,
+      "simulator": 4.18
+    },
+    "expMultiplier": 1.6
+  }
+}

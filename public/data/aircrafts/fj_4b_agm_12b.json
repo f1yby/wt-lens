@@ -1,0 +1,31 @@
+{
+  "id": "fj_4b_agm_12b",
+  "economy": {
+    "researchCost": 210000,
+    "purchaseCost": 580000,
+    "crewTraining": 165000,
+    "expertTraining": 580000,
+    "aceTrainingGE": 2800,
+    "aceTrainingRP": 1080000,
+    "repairCost": {
+      "arcade": [
+        3163,
+        4275
+      ],
+      "realistic": [
+        9212,
+        12449
+      ],
+      "simulator": [
+        10620,
+        14351
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.21,
+      "realistic": 3.6,
+      "simulator": 6.0
+    },
+    "expMultiplier": 2.32
+  }
+}

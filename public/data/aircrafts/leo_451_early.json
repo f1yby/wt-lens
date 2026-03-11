@@ -1,0 +1,31 @@
+{
+  "id": "leo_451_early",
+  "economy": {
+    "researchCost": 9200,
+    "purchaseCost": 16000,
+    "crewTraining": 4500,
+    "expertTraining": 16000,
+    "aceTrainingGE": 180,
+    "aceTrainingRP": 190000,
+    "repairCost": {
+      "arcade": [
+        633,
+        896
+      ],
+      "realistic": [
+        1017,
+        1395
+      ],
+      "simulator": [
+        1675,
+        2299
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.43,
+      "realistic": 0.9,
+      "simulator": 1.56
+    },
+    "expMultiplier": 1.18
+  }
+}

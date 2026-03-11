@@ -1,0 +1,158 @@
+{
+  "id": "uk_a1e1_independent",
+  "performance": {
+    "horsepower": 370.0,
+    "weight": 32.0,
+    "power_to_weight": 11.56,
+    "max_reverse_speed": 4.0,
+    "reload_time": 3.03,
+    "penetration": 49.6,
+    "max_speed": 32.0,
+    "crew_count": 5,
+    "elevation_speed": 7.0,
+    "traverse_speed": 10.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "vertical",
+    "elevation_range": [
+      -4.0,
+      20.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 24.0,
+    "mainGun": {
+      "name": "47mm_OQF_3pdr",
+      "caliber": 47.0,
+      "reloadTime": 3.03,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 3.94,
+        "expert": 3.48,
+        "ace": 3.03
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "47mm_aphe",
+        "localizedName": "Shell Mk.I",
+        "type": "aphe_tank",
+        "caliber": 47.0,
+        "mass": 1.65,
+        "muzzleVelocity": 563.0,
+        "deMarre": {
+          "fullCaliber": 47.0,
+          "isApcbc": false,
+          "explosiveMass": 0.015,
+          "Cx": 0.6
+        },
+        "penetration0m": 49.6,
+        "explosiveMassKg": 0.015,
+        "explosiveType": "lyddit",
+        "tntEquivalent": 0.016
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2800.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 4,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      5.3,
+      9.1,
+      16.0,
+      32.0
+    ],
+    "reverse_gear_speeds": [
+      4.0
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 31.0,
+    "track_width": 0.25,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_7mm_Vikkers",
+        "caliber": 7.7,
+        "ammo": 4000,
+        "reloadTime": 8.0,
+        "rateOfFire": 390,
+        "bulletType": "i_t_ball"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "7_7mm_Vikkers",
+        "caliber": 7.7,
+        "ammo": 4000,
+        "reloadTime": 8.0,
+        "rateOfFire": 390,
+        "bulletType": "i_t_ball"
+      },
+      {
+        "trigger": "gunner3",
+        "name": "7_7mm_Vikkers",
+        "caliber": 7.7,
+        "ammo": 4000,
+        "reloadTime": 8.0,
+        "rateOfFire": 390,
+        "bulletType": "i_t_ball"
+      },
+      {
+        "trigger": "gunner4",
+        "name": "7_7mm_Vikkers",
+        "caliber": 7.7,
+        "ammo": 4000,
+        "reloadTime": 8.0,
+        "rateOfFire": 390,
+        "bulletType": "i_t_ball"
+      }
+    ],
+    "main_gun_ammo": 201,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 7900,
+    "purchaseCost": 0,
+    "purchaseCostGold": 2100,
+    "crewTraining": 2300,
+    "expertTraining": 15000,
+    "aceTrainingGE": 115,
+    "aceTrainingRP": 320000,
+    "repairCost": {
+      "arcade": [
+        3621,
+        3621
+      ],
+      "realistic": [
+        567,
+        567
+      ],
+      "simulator": [
+        1277,
+        1277
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.72,
+      "realistic": 0.89,
+      "simulator": 1.24
+    },
+    "expMultiplier": 1.12,
+    "freeRepairs": 30
+  }
+}

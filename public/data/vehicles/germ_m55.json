@@ -1,0 +1,125 @@
+{
+  "id": "germ_m55",
+  "performance": {
+    "horsepower": 810.0,
+    "weight": 44.0,
+    "power_to_weight": 18.41,
+    "max_reverse_speed": 22.5,
+    "reload_time": 29.94,
+    "penetration": null,
+    "max_speed": 56.1,
+    "crew_count": 5,
+    "elevation_speed": 7.5,
+    "traverse_speed": 10.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -5.0,
+      65.0
+    ],
+    "traverse_range": [
+      -30.0,
+      30.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 70.0,
+    "mainGun": {
+      "name": "203mm_m47",
+      "caliber": 203.0,
+      "reloadTime": 29.94,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 38.92,
+        "expert": 34.43,
+        "ace": 29.94
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "203mm_m106",
+        "localizedName": "M106",
+        "type": "he_frag_tank",
+        "caliber": 203.0,
+        "mass": 104.0,
+        "muzzleVelocity": 594.0,
+        "explosiveMassKg": 17.6,
+        "explosiveType": "comp_b",
+        "tntEquivalent": 22.352
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2800.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 6,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      9.7,
+      13.6,
+      19.4,
+      24.8,
+      34.4,
+      56.1
+    ],
+    "reverse_gear_speeds": [
+      7.1,
+      22.5
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 43.5,
+    "track_width": 0.58,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner2",
+        "name": "12_7mm_M2_HB",
+        "caliber": 12.7,
+        "ammo": 900,
+        "reloadTime": 8.0,
+        "rateOfFire": 575,
+        "bulletType": "ap_i_t_ball_M20"
+      }
+    ],
+    "main_gun_ammo": 10,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 18000,
+    "purchaseCost": 47000,
+    "crewTraining": 13000,
+    "expertTraining": 47000,
+    "aceTrainingGE": 330,
+    "aceTrainingRP": 280000,
+    "repairCost": {
+      "arcade": [
+        1017,
+        1258
+      ],
+      "realistic": [
+        1230,
+        1522
+      ],
+      "simulator": [
+        1567,
+        1940
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.69,
+      "realistic": 1.05,
+      "simulator": 1.34
+    },
+    "expMultiplier": 1.36
+  }
+}

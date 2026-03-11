@@ -1,0 +1,27 @@
+{
+  "id": "uk_destroyer_restigouche_class_terranova",
+  "economy": {
+    "researchCost": 280000,
+    "purchaseCost": 780000,
+    "crewTraining": 220000,
+    "expertTraining": 780000,
+    "aceTrainingGE": 1700,
+    "aceTrainingRP": 720000,
+    "repairCost": {
+      "arcade": [
+        9753,
+        12441
+      ],
+      "realistic": [
+        14017,
+        17880
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.28,
+      "realistic": 4.39,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.96
+  }
+}

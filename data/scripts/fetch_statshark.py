@@ -5,8 +5,25 @@ Fetch War Thunder vehicle statistics from StatShark API
 
 import argparse
 import json
+import re
 import requests
 from pathlib import Path
+
+
+# Month name -> number mapping (note: "febuary" is the original typo in data)
+MONTH_NAME_TO_NUMBER: dict[str, int] = {
+    'january': 1, 'febuary': 2, 'february': 2, 'march': 3, 'april': 4,
+    'may': 5, 'june': 6, 'july': 7, 'august': 8, 'september': 9,
+    'october': 10, 'november': 11, 'december': 12,
+}
+
+
+def _month_sort_key(month_id: str) -> tuple[int, int]:
+    """Parse month ID to (year, month) tuple for sorting."""
+    m = re.match(r'diff_(\d{4})_([a-z]+)_([a-z]+)', month_id)
+    if m:
+        return (int(m.group(1)), MONTH_NAME_TO_NUMBER.get(m.group(2), 0))
+    return (0, 0)
 
 
 # 可用的 diff 月份列表（按时间从早到晚排序）
@@ -141,20 +158,77 @@ def parse_vehicle_stats(data: dict) -> list:
     return vehicles
 
 
-def save_stats(vehicles: list, output_path: str):
-    """Save parsed stats to JSON file"""
-    Path(output_path).parent.mkdir(parents=True, exist_ok=True)
+def save_stats_split(vehicles: list, output_dir: str):
+    """Save parsed stats in split format (index + per-vehicle files).
     
-    with open(output_path, 'w', encoding='utf-8') as f:
-        json.dump(vehicles, f, ensure_ascii=False, indent=2)
+    Creates:
+        - stats-index.json: Summary with latest month stats for each vehicle
+        - stats/{id}.json: Individual vehicle files with all historical data
+    """
+    output_path = Path(output_dir)
+    output_path.mkdir(parents=True, exist_ok=True)
+    stats_dir = output_path / "stats"
+    stats_dir.mkdir(parents=True, exist_ok=True)
     
-    print(f"Saved {len(vehicles)} vehicle stats to {output_path}")
+    # Group stats by vehicle ID
+    stats_by_vehicle: dict[str, list[dict]] = {}
+    for entry in vehicles:
+        vid = entry['id']
+        if vid not in stats_by_vehicle:
+            stats_by_vehicle[vid] = []
+        stats_by_vehicle[vid].append(entry)
+    
+    # Find the latest month for index generation
+    all_months = sorted(set(e['month'] for e in vehicles))
+    latest_month = all_months[-1] if all_months else None
+    
+    # Generate index (latest month stats per vehicle)
+    index_entries: list[dict] = []
+    
+    for vid, entries in stats_by_vehicle.items():
+        # Save individual vehicle file with all historical data
+        vehicle_stats_path = stats_dir / f"{vid}.json"
+        with open(vehicle_stats_path, 'w', encoding='utf-8') as f:
+            json.dump(entries, f, ensure_ascii=False, indent=2)
+        
+        # For index: extract latest month data (all modes)
+        if latest_month:
+            latest_entries = [e for e in entries if e['month'] == latest_month]
+            for entry in latest_entries:
+                index_entries.append({
+                    'id': entry['id'],
+                    'mode': entry['mode'],
+                    'battles': entry['battles'],
+                    'win_rate': entry['win_rate'],
+                    'avg_kills_per_spawn': entry['avg_kills_per_spawn'],
+                    'exp_per_spawn': entry['exp_per_spawn'],
+                })
+    
+    # Save index file
+    index_path = output_path / "stats-index.json"
+    with open(index_path, 'w', encoding='utf-8') as f:
+        json.dump(index_entries, f, ensure_ascii=False, indent=2)
+    
+    # Save stats-meta.json (month list + latest month identifier)
+    all_months = sorted(set(e['month'] for e in vehicles if e.get('month')), key=_month_sort_key)
+    meta = {
+        "months": all_months,
+        "latestMonth": all_months[-1] if all_months else None,
+    }
+    meta_path = output_path / "stats-meta.json"
+    with open(meta_path, 'w', encoding='utf-8') as f:
+        json.dump(meta, f, ensure_ascii=False, indent=2)
+    
+    print(f"Saved split stats: {len(index_entries)} index entries + {len(stats_by_vehicle)} vehicle files")
+    print(f"  Index: {index_path}")
+    print(f"  Meta: {meta_path} ({len(all_months)} months)")
+    print(f"  Details: {stats_dir}/")
 
 
 def rebuild_stats_from_raw() -> list:
-    """Rebuild stats.json from all raw data files in data/raw/.
+    """Rebuild stats from all raw data files in data/raw/.
     
-    This ensures stats.json always contains ALL months, not just the latest fetch.
+    This ensures stats always contains ALL months, not just the latest fetch.
     Returns the combined vehicle stats list.
     """
     raw_dir = Path(__file__).parent.parent / "raw"
@@ -222,17 +296,17 @@ def main():
             json.dump(raw_data, f, ensure_ascii=False, indent=2)
         print(f"  Saved raw data to {raw_path}")
     
-    # Always rebuild stats.json from ALL raw files to include all months
-    print("\nRebuilding stats.json from all raw data files...")
+    # Always rebuild from ALL raw files to include all months
+    print("\nRebuilding stats from all raw data files...")
     all_vehicles = rebuild_stats_from_raw()
     
     if not all_vehicles:
         print("No data found in raw files")
         return 1
     
-    # Save final stats (contains ALL months)
-    output_path = Path(__file__).parent.parent.parent / "public" / "data" / "stats.json"
-    save_stats(all_vehicles, str(output_path))
+    # Save split format (index + per-vehicle files + meta)
+    split_output_dir = Path(__file__).parent.parent.parent / "public" / "data"
+    save_stats_split(all_vehicles, str(split_output_dir))
     
     # Optionally update ghost vehicle list
     if args.update_ghosts:
@@ -244,16 +318,27 @@ def main():
 def update_ghost_vehicles(all_stats: list[dict]) -> None:
     """Detect ghost vehicles and update GHOST_VEHICLE_IDS in fetch_utils.py.
     
-    Ghost vehicles are those present in datamine JSON files but with 0 total battles
+    Ghost vehicles are those present in vehicle data files but with 0 total battles
     across ALL months and ALL game modes in the stats data, AND not found on WT Wiki.
     """
     import re as re_mod
 
     public_data = Path(__file__).parent.parent.parent / "public" / "data"
 
-    # Load all vehicle IDs from datamine JSONs
+    # Load all vehicle IDs from data files
+    # Ground vehicles: vehicles-index.json (split format)
+    # Aircraft/ships: monolithic JSON files
     datamine_ids: set[str] = set()
-    for fname in ['datamine.json', 'aircraft.json', 'ships.json']:
+    
+    # Ground vehicles from split index
+    vehicles_index_path = public_data / 'vehicles-index.json'
+    if vehicles_index_path.exists():
+        data = json.load(open(vehicles_index_path, encoding="utf-8"))
+        for v in data:
+            datamine_ids.add(v['id'])
+    
+    # Aircraft and ships from monolithic files
+    for fname in ['aircraft.json', 'ships.json']:
         fpath = public_data / fname
         if fpath.exists():
             data = json.load(open(fpath, encoding="utf-8"))
@@ -266,13 +351,21 @@ def update_ghost_vehicles(all_stats: list[dict]) -> None:
         if entry.get('battles', 0) > 0:
             ids_with_battles.add(entry['id'])
 
-    # Ghost candidates: in datamine but 0 battles across all stats
+    # Ghost candidates: in data but 0 battles across all stats
     ghost_candidates = datamine_ids - ids_with_battles
 
     # Filter out unreleased vehicles (they naturally have 0 battles)
-    # A vehicle is "unreleased" if it has unreleased=true in any of the JSON files
     unreleased_ids: set[str] = set()
-    for fname in ['datamine.json', 'aircraft.json', 'ships.json']:
+    
+    # Ground vehicles from split index
+    if vehicles_index_path.exists():
+        data = json.load(open(vehicles_index_path, encoding="utf-8"))
+        for v in data:
+            if v.get('unreleased'):
+                unreleased_ids.add(v['id'])
+    
+    # Aircraft and ships
+    for fname in ['aircraft.json', 'ships.json']:
         fpath = public_data / fname
         if fpath.exists():
             data = json.load(open(fpath, encoding="utf-8"))
@@ -323,7 +416,15 @@ def update_ghost_vehicles(all_stats: list[dict]) -> None:
     # Build the new GHOST_VEHICLE_IDS block
     # Load localized names for comments
     name_map: dict[str, str] = {}
-    for fname in ['datamine.json', 'aircraft.json', 'ships.json']:
+    
+    # Ground vehicles from split index
+    if vehicles_index_path.exists():
+        data = json.load(open(vehicles_index_path, encoding="utf-8"))
+        for v in data:
+            name_map[v['id']] = v.get('localizedName', v['id'])
+    
+    # Aircraft and ships
+    for fname in ['aircraft.json', 'ships.json']:
         fpath = public_data / fname
         if fpath.exists():
             data = json.load(open(fpath, encoding="utf-8"))

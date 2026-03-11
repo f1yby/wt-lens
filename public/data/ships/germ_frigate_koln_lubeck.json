@@ -1,0 +1,29 @@
+{
+  "id": "germ_frigate_koln_lubeck",
+  "economy": {
+    "researchCost": 250000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 8020,
+    "crewTraining": 10000,
+    "expertTraining": 1140000,
+    "aceTrainingGE": 1500,
+    "aceTrainingRP": 1380000,
+    "repairCost": {
+      "arcade": [
+        6619,
+        6619
+      ],
+      "realistic": [
+        9535,
+        9535
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 4.44,
+      "realistic": 8.62,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.96,
+    "freeRepairs": 30
+  }
+}

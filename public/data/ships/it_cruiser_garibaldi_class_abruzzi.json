@@ -1,0 +1,27 @@
+{
+  "id": "it_cruiser_garibaldi_class_abruzzi",
+  "economy": {
+    "researchCost": 90000,
+    "purchaseCost": 280000,
+    "crewTraining": 80000,
+    "expertTraining": 280000,
+    "aceTrainingGE": 1400,
+    "aceTrainingRP": 620000,
+    "repairCost": {
+      "arcade": [
+        12444,
+        16162
+      ],
+      "realistic": [
+        12564,
+        16317
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 4.5,
+      "realistic": 6.0,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.84
+  }
+}

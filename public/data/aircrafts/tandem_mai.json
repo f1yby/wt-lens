@@ -1,0 +1,33 @@
+{
+  "id": "tandem_mai",
+  "economy": {
+    "researchCost": 5900,
+    "purchaseCost": 0,
+    "purchaseCostGold": 550,
+    "crewTraining": 1400,
+    "expertTraining": 9000,
+    "aceTrainingGE": 80,
+    "aceTrainingRP": 270000,
+    "repairCost": {
+      "arcade": [
+        690,
+        690
+      ],
+      "realistic": [
+        213,
+        213
+      ],
+      "simulator": [
+        437,
+        437
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.6,
+      "realistic": 0.88,
+      "simulator": 1.88
+    },
+    "expMultiplier": 1.06,
+    "freeRepairs": 30
+  }
+}

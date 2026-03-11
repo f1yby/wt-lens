@@ -1,0 +1,33 @@
+{
+  "id": "amx_a_1a_brazil",
+  "economy": {
+    "researchCost": 230000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 9450,
+    "crewTraining": 10000,
+    "expertTraining": 1030000,
+    "aceTrainingGE": 3000,
+    "aceTrainingRP": 2280000,
+    "repairCost": {
+      "arcade": [
+        2441,
+        2441
+      ],
+      "realistic": [
+        6249,
+        6249
+      ],
+      "simulator": [
+        7210,
+        7210
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.66,
+      "realistic": 6.25,
+      "simulator": 12.0
+    },
+    "expMultiplier": 2.38,
+    "freeRepairs": 30
+  }
+}

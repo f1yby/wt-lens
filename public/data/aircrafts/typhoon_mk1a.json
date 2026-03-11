@@ -1,0 +1,31 @@
+{
+  "id": "typhoon_mk1a",
+  "economy": {
+    "researchCost": 9200,
+    "purchaseCost": 16000,
+    "crewTraining": 4500,
+    "expertTraining": 16000,
+    "aceTrainingGE": 180,
+    "aceTrainingRP": 190000,
+    "repairCost": {
+      "arcade": [
+        470,
+        649
+      ],
+      "realistic": [
+        982,
+        1314
+      ],
+      "simulator": [
+        1332,
+        1784
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.31,
+      "realistic": 0.75,
+      "simulator": 1.52
+    },
+    "expMultiplier": 1.18
+  }
+}

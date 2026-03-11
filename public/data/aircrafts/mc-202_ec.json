@@ -1,0 +1,31 @@
+{
+  "id": "mc-202_ec",
+  "economy": {
+    "researchCost": 18000,
+    "purchaseCost": 47000,
+    "crewTraining": 13000,
+    "expertTraining": 47000,
+    "aceTrainingGE": 400,
+    "aceTrainingRP": 280000,
+    "repairCost": {
+      "arcade": [
+        818,
+        1154
+      ],
+      "realistic": [
+        1820,
+        2487
+      ],
+      "simulator": [
+        2349,
+        3210
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.53,
+      "realistic": 1.3,
+      "simulator": 2.78
+    },
+    "expMultiplier": 1.36
+  }
+}

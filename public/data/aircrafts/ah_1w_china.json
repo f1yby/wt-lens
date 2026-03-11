@@ -1,0 +1,31 @@
+{
+  "id": "ah_1w_china",
+  "economy": {
+    "researchCost": 390000,
+    "purchaseCost": 1010000,
+    "crewTraining": 290000,
+    "expertTraining": 1010000,
+    "aceTrainingGE": 2600,
+    "aceTrainingRP": 1010000,
+    "repairCost": {
+      "arcade": [
+        8404,
+        13599
+      ],
+      "realistic": [
+        3956,
+        6401
+      ],
+      "simulator": [
+        5132,
+        8305
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.0,
+      "realistic": 2.43,
+      "simulator": 3.25
+    },
+    "expMultiplier": 2.26
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "id": "jp_type_87_rcv_prot",
+  "performance": {
+    "horsepower": 305.0,
+    "weight": 15.0,
+    "power_to_weight": 20.33,
+    "max_reverse_speed": 11.3,
+    "reload_time": 8.0,
+    "penetration": null,
+    "max_speed": 100.4,
+    "crew_count": 5,
+    "elevation_speed": 60.0,
+    "traverse_speed": 60.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "both",
+    "elevation_range": [
+      -10.0,
+      45.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 55.0,
+    "mainGun": null,
+    "ammunitions": null,
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2700.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 12,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      8.2,
+      11.8,
+      15.1,
+      19.6,
+      24.5,
+      30.4,
+      38.2,
+      48.4,
+      61.7,
+      78.3,
+      92.1,
+      100.4
+    ],
+    "reverse_gear_speeds": [
+      8.2,
+      11.3
+    ],
+    "steer_type": null,
+    "empty_weight": 14.5,
+    "track_width": 0.4,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_Type74",
+        "caliber": 7.6,
+        "ammo": 4000,
+        "reloadTime": 8.0,
+        "rateOfFire": 700,
+        "bulletType": "ap_ball"
+      }
+    ],
+    "main_gun_ammo": 400,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 105000,
+    "purchaseCost": 300000,
+    "crewTraining": 86000,
+    "expertTraining": 300000,
+    "aceTrainingGE": 1200,
+    "aceTrainingRP": 720000,
+    "repairCost": {
+      "arcade": [
+        3092,
+        4488
+      ],
+      "realistic": [
+        3703,
+        5375
+      ],
+      "simulator": [
+        5037,
+        7311
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.12,
+      "realistic": 1.63,
+      "simulator": 2.07
+    },
+    "expMultiplier": 1.96
+  }
+}

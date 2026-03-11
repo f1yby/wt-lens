@@ -1,0 +1,119 @@
+{
+  "id": "ussr_zprk_2s6",
+  "performance": {
+    "horsepower": 710.0,
+    "weight": 34.0,
+    "power_to_weight": 20.88,
+    "max_reverse_speed": 64.7,
+    "reload_time": 4.0,
+    "penetration": null,
+    "max_speed": 64.7,
+    "crew_count": 5,
+    "elevation_speed": 80.0,
+    "traverse_speed": 80.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "both",
+    "elevation_range": [
+      -9.0,
+      85.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 94.0,
+    "mainGun": null,
+    "ammunitions": null,
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": "chtz",
+    "engine_model": "v_46_2s1",
+    "engine_type": null,
+    "engine_max_rpm": 2000.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 8,
+    "reverse_gears": 8,
+    "forward_gear_speeds": [
+      5.2,
+      10.4,
+      13.7,
+      20.4,
+      26.6,
+      38.6,
+      48.3,
+      64.7
+    ],
+    "reverse_gear_speeds": [
+      5.2,
+      10.4,
+      13.7,
+      20.4,
+      26.6,
+      38.6,
+      48.3,
+      64.7
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 33.0,
+    "track_width": 0.498,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "152mm_9M311_rocket_launcher",
+        "caliber": 152.0,
+        "ammo": 8,
+        "reloadTime": 1.0,
+        "rateOfFire": 120,
+        "bulletType": "sam_tank",
+        "maxDistance": 8000,
+        "maxSpeed": 910,
+        "guidanceType": "saclos",
+        "explosiveMass": 3.0,
+        "explosiveType": "a_ix_2"
+      }
+    ],
+    "main_gun_ammo": 484,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 300000,
+    "purchaseCost": 830000,
+    "crewTraining": 240000,
+    "expertTraining": 830000,
+    "aceTrainingGE": 2100,
+    "aceTrainingRP": 1140000,
+    "repairCost": {
+      "arcade": [
+        5034,
+        7012
+      ],
+      "realistic": [
+        5491,
+        7648
+      ],
+      "simulator": [
+        6134,
+        8544
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.6,
+      "realistic": 2.1,
+      "simulator": 2.32
+    },
+    "expMultiplier": 2.38
+  }
+}

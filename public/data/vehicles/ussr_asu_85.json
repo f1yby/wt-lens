@@ -1,0 +1,156 @@
+{
+  "id": "ussr_asu_85",
+  "performance": {
+    "horsepower": 210.0,
+    "weight": 15.92,
+    "power_to_weight": 13.19,
+    "max_reverse_speed": 5.4,
+    "reload_time": 6.0,
+    "penetration": 300.0,
+    "max_speed": 44.7,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 7.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -4.5,
+      15.0
+    ],
+    "traverse_range": [
+      -15.0,
+      15.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 19.5,
+    "mainGun": {
+      "name": "85mm_D70",
+      "caliber": 85.0,
+      "reloadTime": 6.0,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 7.8,
+        "expert": 6.9,
+        "ace": 6.0
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "85mm_br_372",
+        "localizedName": "BR-372",
+        "type": "apcbc_tank",
+        "caliber": 85.0,
+        "mass": 9.3,
+        "muzzleVelocity": 1040.0,
+        "deMarre": {
+          "fullCaliber": 85.0,
+          "isApcbc": true,
+          "explosiveMass": 0.05,
+          "Cx": 0.25
+        },
+        "penetration0m": 244.8,
+        "explosiveMassKg": 0.05,
+        "explosiveType": "a_ix_2",
+        "tntEquivalent": 0.07
+      },
+      {
+        "name": "85mm_of_372",
+        "localizedName": "OF-372",
+        "type": "he_frag_tank",
+        "caliber": 85.0,
+        "mass": 9.66,
+        "muzzleVelocity": 1010.0,
+        "explosiveMassKg": 0.74,
+        "explosiveType": "tnt",
+        "tntEquivalent": 0.74
+      },
+      {
+        "name": "85mm_3bk7",
+        "localizedName": "3BK7",
+        "type": "heat_fs_tank",
+        "caliber": 85.0,
+        "mass": 7.22,
+        "muzzleVelocity": 925.0,
+        "penetration0m": 300.0,
+        "explosiveMassKg": 0.935,
+        "explosiveType": "a_ix_1",
+        "tntEquivalent": 1.066
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2000.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 5,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      5.9,
+      10.9,
+      20.3,
+      32.1,
+      44.7
+    ],
+    "reverse_gear_speeds": [
+      5.4
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 15.52,
+    "track_width": 0.35,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_SGMT",
+        "caliber": 7.6,
+        "ammo": 2000,
+        "reloadTime": 8.0,
+        "rateOfFire": 600,
+        "bulletType": "ap_i_ball"
+      }
+    ],
+    "main_gun_ammo": 39,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 63000,
+    "purchaseCost": 200000,
+    "crewTraining": 57000,
+    "expertTraining": 200000,
+    "aceTrainingGE": 800,
+    "aceTrainingRP": 520000,
+    "repairCost": {
+      "arcade": [
+        3184,
+        4479
+      ],
+      "realistic": [
+        3563,
+        5012
+      ],
+      "simulator": [
+        4964,
+        6982
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.23,
+      "realistic": 1.92,
+      "simulator": 2.49
+    },
+    "expMultiplier": 1.72
+  }
+}

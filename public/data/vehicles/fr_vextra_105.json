@@ -1,0 +1,214 @@
+{
+  "id": "fr_vextra_105",
+  "performance": {
+    "horsepower": 700.0,
+    "weight": 28.0,
+    "power_to_weight": 25.0,
+    "max_reverse_speed": 19.2,
+    "reload_time": 6.67,
+    "penetration": 445.5,
+    "max_speed": 120.3,
+    "crew_count": 5,
+    "elevation_speed": 30.0,
+    "traverse_speed": 40.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "both",
+    "elevation_range": [
+      -6.0,
+      15.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": [
+      800,
+      600
+    ],
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": 1000.0,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 21.0,
+    "mainGun": {
+      "name": "105mm_giat_105_g1",
+      "caliber": 105.0,
+      "reloadTime": 6.67,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 8.67,
+        "expert": 7.67,
+        "ace": 6.67
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "105mm_occ_f3",
+        "localizedName": "OCC 105 F3",
+        "type": "heat_fs_tank",
+        "caliber": 105.0,
+        "mass": 5.65,
+        "muzzleVelocity": 1120.0,
+        "penetration0m": 350.0,
+        "explosiveMassKg": 0.78,
+        "explosiveType": "comp_b",
+        "tntEquivalent": 0.991
+      },
+      {
+        "name": "105mm_oe_60",
+        "localizedName": "OE 105-60",
+        "type": "he_frag_tank",
+        "caliber": 105.0,
+        "mass": 7.1,
+        "muzzleVelocity": 690.0,
+        "explosiveMassKg": 2.0,
+        "explosiveType": "tnt",
+        "tntEquivalent": 2.0
+      },
+      {
+        "name": "105mm_ofl_105_f1",
+        "localizedName": "OFL 105 F1",
+        "type": "apds_fs_long_tank",
+        "caliber": 26.0,
+        "mass": 3.8,
+        "muzzleVelocity": 1500.0,
+        "lanzOdermatt": {
+          "workingLength": 380.0,
+          "density": 17500.0,
+          "material": "tungsten",
+          "Cx": 0.49
+        },
+        "penetration0m": 353.6,
+        "penetrationData": {
+          "at0m": {
+            "angle0": 353.6,
+            "angle30": 306.2,
+            "angle60": 176.8
+          }
+        }
+      },
+      {
+        "name": "105mm_ofl_g2",
+        "localizedName": "OFL 105 G2",
+        "type": "apds_fs_long_l30_tank",
+        "caliber": 21.0,
+        "mass": 4.0,
+        "muzzleVelocity": 1500.0,
+        "lanzOdermatt": {
+          "workingLength": 545.0,
+          "density": 17500.0,
+          "material": "tungsten",
+          "Cx": 0.8933
+        },
+        "penetration0m": 445.5,
+        "penetrationData": {
+          "at0m": {
+            "angle0": 445.5,
+            "angle30": 385.8,
+            "angle60": 222.8
+          }
+        }
+      },
+      {
+        "name": "105mm_o_fum_ph_f3",
+        "localizedName": "O-FUM-PH-105 F3",
+        "type": "smoke_tank",
+        "caliber": 105.0,
+        "mass": 7.1,
+        "muzzleVelocity": 800.0,
+        "explosiveMassKg": 0.05,
+        "explosiveType": "smoke_composition",
+        "tntEquivalent": 0.05
+      }
+    ],
+    "penetrationData": {
+      "at0m": {
+        "angle0": 445.5,
+        "angle30": 385.8,
+        "angle60": 222.8
+      }
+    },
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2600.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 14,
+    "reverse_gears": 4,
+    "forward_gear_speeds": [
+      6.0,
+      9.6,
+      11.9,
+      13.9,
+      19.2,
+      20.1,
+      27.8,
+      29.2,
+      40.3,
+      42.2,
+      58.4,
+      60.2,
+      84.3,
+      120.3
+    ],
+    "reverse_gear_speeds": [
+      6.7,
+      9.6,
+      13.3,
+      19.2
+    ],
+    "steer_type": null,
+    "empty_weight": 27.0,
+    "track_width": 0.4,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner2",
+        "name": "7_62mm_AAN_F1",
+        "caliber": 7.6,
+        "ammo": 2000,
+        "reloadTime": 8.0,
+        "rateOfFire": 900,
+        "bulletType": "ap_ball"
+      }
+    ],
+    "main_gun_ammo": 35,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": true
+  },
+  "economy": {
+    "researchCost": 260000,
+    "purchaseCost": 710000,
+    "crewTraining": 200000,
+    "expertTraining": 710000,
+    "aceTrainingGE": 2100,
+    "aceTrainingRP": 1080000,
+    "repairCost": {
+      "arcade": [
+        3347,
+        5810
+      ],
+      "realistic": [
+        3205,
+        5564
+      ],
+      "simulator": [
+        4271,
+        7415
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.37,
+      "realistic": 1.73,
+      "simulator": 2.23
+    },
+    "expMultiplier": 2.32
+  }
+}

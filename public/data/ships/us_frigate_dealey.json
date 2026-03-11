@@ -1,0 +1,27 @@
+{
+  "id": "us_frigate_dealey",
+  "economy": {
+    "researchCost": 280000,
+    "purchaseCost": 780000,
+    "crewTraining": 220000,
+    "expertTraining": 780000,
+    "aceTrainingGE": 1700,
+    "aceTrainingRP": 720000,
+    "repairCost": {
+      "arcade": [
+        10411,
+        12666
+      ],
+      "realistic": [
+        15015,
+        18267
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.53,
+      "realistic": 4.73,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.96
+  }
+}

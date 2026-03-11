@@ -1,0 +1,31 @@
+{
+  "id": "mi_35p",
+  "economy": {
+    "researchCost": 540000,
+    "purchaseCost": 1080000,
+    "crewTraining": 300000,
+    "expertTraining": 1030000,
+    "aceTrainingGE": 3000,
+    "aceTrainingRP": 1140000,
+    "repairCost": {
+      "arcade": [
+        8770,
+        14967
+      ],
+      "realistic": [
+        4568,
+        7795
+      ],
+      "simulator": [
+        5071,
+        8655
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.0,
+      "realistic": 2.02,
+      "simulator": 3.43
+    },
+    "expMultiplier": 2.38
+  }
+}

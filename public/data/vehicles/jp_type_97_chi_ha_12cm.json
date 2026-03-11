@@ -1,0 +1,135 @@
+{
+  "id": "jp_type_97_chi_ha_12cm",
+  "performance": {
+    "horsepower": 200.0,
+    "weight": 16.0,
+    "power_to_weight": 12.5,
+    "max_reverse_speed": 11.8,
+    "reload_time": 10.0,
+    "penetration": null,
+    "max_speed": 40.1,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 6.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -10.0,
+      15.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 25.0,
+    "mainGun": {
+      "name": "120mm_Navy_Short_Gun",
+      "caliber": 120.0,
+      "reloadTime": 10.0,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 13.0,
+        "expert": 11.5,
+        "ace": 10.0
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "120mm_type88_mod4_fuze",
+        "localizedName": "Short Ordinary HE",
+        "type": "he_frag_tank",
+        "caliber": 120.0,
+        "mass": 13.0,
+        "muzzleVelocity": 290.0,
+        "explosiveMassKg": 2.515,
+        "explosiveType": "tp_91",
+        "tntEquivalent": 2.641
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2000.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 5,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      4.5,
+      8.1,
+      14.1,
+      24.6,
+      40.1
+    ],
+    "reverse_gear_speeds": [
+      6.6,
+      11.8
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 15.87,
+    "track_width": 0.25,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_7mm_Type_97",
+        "caliber": 7.7,
+        "ammo": 3000,
+        "reloadTime": 3.0,
+        "rateOfFire": 498,
+        "bulletType": "ap_ball"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "7_7mm_Type_97",
+        "caliber": 7.7,
+        "ammo": 1000,
+        "reloadTime": 3.0,
+        "rateOfFire": 498,
+        "bulletType": "ap_ball"
+      }
+    ],
+    "main_gun_ammo": 23,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 7900,
+    "purchaseCost": 0,
+    "purchaseCostGold": 1000,
+    "crewTraining": 2300,
+    "expertTraining": 15000,
+    "aceTrainingGE": 115,
+    "aceTrainingRP": 320000,
+    "repairCost": {
+      "arcade": [
+        934,
+        934
+      ],
+      "realistic": [
+        498,
+        498
+      ],
+      "simulator": [
+        1235,
+        1235
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.72,
+      "realistic": 0.92,
+      "simulator": 1.33
+    },
+    "expMultiplier": 1.12,
+    "freeRepairs": 30
+  }
+}

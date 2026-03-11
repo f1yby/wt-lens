@@ -1,0 +1,157 @@
+{
+  "id": "jp_type_60_sprg",
+  "performance": {
+    "horsepower": 150.0,
+    "weight": 8.0,
+    "power_to_weight": 18.75,
+    "max_reverse_speed": 15.0,
+    "reload_time": 10.0,
+    "penetration": 433.0,
+    "max_speed": 55.0,
+    "crew_count": 5,
+    "elevation_speed": 6.0,
+    "traverse_speed": 10.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -20.0,
+      15.0
+    ],
+    "traverse_range": [
+      -30.0,
+      30.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 35.0,
+    "mainGun": {
+      "name": "106mm_Type_60B",
+      "caliber": 106.0,
+      "reloadTime": 10.0,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 13.0,
+        "expert": 11.5,
+        "ace": 10.0
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "106mm_m344a1",
+        "localizedName": "M344A1",
+        "type": "heat_grenade_tank",
+        "caliber": 106.0,
+        "mass": 7.96,
+        "muzzleVelocity": 502.9,
+        "penetration0m": 433.0,
+        "explosiveMassKg": 1.26,
+        "explosiveType": "comp_b",
+        "tntEquivalent": 1.6
+      },
+      {
+        "name": "106mm_m361a1",
+        "localizedName": "M361A1",
+        "type": "hesh_tank",
+        "caliber": 106.0,
+        "mass": 7.95,
+        "muzzleVelocity": 498.3,
+        "penetration0m": 152.0,
+        "explosiveMassKg": 3.5,
+        "explosiveType": "comp_a",
+        "tntEquivalent": 4.41
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2800.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 8,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      7.6,
+      12.9,
+      13.5,
+      19.7,
+      23.0,
+      30.7,
+      35.2,
+      55.0
+    ],
+    "reverse_gear_speeds": [
+      8.4,
+      15.0
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 7.7,
+    "track_width": 0.26,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "106mm_Type_60B",
+        "caliber": 106.0,
+        "ammo": 5,
+        "rateOfFire": 6,
+        "bulletType": "heat_grenade_tank"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "12_7mm_Type_60B",
+        "caliber": 12.7,
+        "ammo": 40,
+        "reloadTime": 2.5,
+        "rateOfFire": 300,
+        "bulletType": "he_ball"
+      },
+      {
+        "trigger": "gunner3",
+        "name": "12_7mm_Type_60B",
+        "caliber": 12.7,
+        "ammo": 40,
+        "reloadTime": 2.5,
+        "rateOfFire": 300,
+        "bulletType": "he_ball"
+      }
+    ],
+    "main_gun_ammo": 5,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 63000,
+    "purchaseCost": 200000,
+    "crewTraining": 57000,
+    "expertTraining": 200000,
+    "aceTrainingGE": 800,
+    "aceTrainingRP": 520000,
+    "repairCost": {
+      "arcade": [
+        3571,
+        4675
+      ],
+      "realistic": [
+        4060,
+        5315
+      ],
+      "simulator": [
+        5802,
+        7595
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.24,
+      "realistic": 1.95,
+      "simulator": 2.38
+    },
+    "expMultiplier": 1.72
+  }
+}

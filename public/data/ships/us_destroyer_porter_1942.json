@@ -1,0 +1,29 @@
+{
+  "id": "us_destroyer_porter_1942",
+  "economy": {
+    "researchCost": 25000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 1750,
+    "crewTraining": 10000,
+    "expertTraining": 135000,
+    "aceTrainingGE": 700,
+    "aceTrainingRP": 790000,
+    "repairCost": {
+      "arcade": [
+        3824,
+        3824
+      ],
+      "realistic": [
+        1871,
+        1871
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 6.0,
+      "realistic": 12.0,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.54,
+    "freeRepairs": 30
+  }
+}

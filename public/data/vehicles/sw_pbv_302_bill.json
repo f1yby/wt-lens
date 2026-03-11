@@ -1,0 +1,155 @@
+{
+  "id": "sw_pbv_302_bill",
+  "performance": {
+    "horsepower": 270.0,
+    "weight": 14.0,
+    "power_to_weight": 19.29,
+    "max_reverse_speed": 11.4,
+    "reload_time": 5.0,
+    "penetration": 50.6,
+    "max_speed": 66.0,
+    "crew_count": 5,
+    "elevation_speed": 10.0,
+    "traverse_speed": 30.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -10.0,
+      50.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 60.0,
+    "mainGun": {
+      "name": "20mm_akan_m47_D",
+      "caliber": 20.0,
+      "reloadTime": 5.0,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 6.5,
+        "expert": 5.75,
+        "ace": 5.0
+      },
+      "rateOfFire": 480,
+      "beltReloadTime": 5.0
+    },
+    "ammunitions": [
+      {
+        "name": "20mm_slsgr_71",
+        "localizedName": "slsgr m/71",
+        "type": "he_frag_i_t",
+        "caliber": 20.0,
+        "mass": 0.121,
+        "muzzleVelocity": 855.0,
+        "explosiveMassKg": 0.039,
+        "explosiveType": "tnt",
+        "tntEquivalent": 0.039
+      },
+      {
+        "name": "20mm_slpprj_m68",
+        "localizedName": "slpprj m/68",
+        "type": "apcr_t",
+        "caliber": 12.0,
+        "mass": 0.133,
+        "muzzleVelocity": 885.0,
+        "deMarre": {
+          "fullCaliber": 20.0,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "isApcr": true,
+          "coreCaliber": 12.0,
+          "coreMass": 0.1
+        },
+        "penetration0m": 50.6
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2200.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 8,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      6.2,
+      8.8,
+      12.8,
+      16.8,
+      24.4,
+      35.0,
+      50.1,
+      66.0
+    ],
+    "reverse_gear_speeds": [
+      7.5,
+      11.4
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 13.5,
+    "track_width": 0.38,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "150mm_Rbs_56_BILL_Pbv_launcher",
+        "caliber": 150.0,
+        "ammo": 7,
+        "reloadTime": 10.0,
+        "rateOfFire": 6,
+        "bulletType": "atgm_tank",
+        "maxDistance": 2200,
+        "maxSpeed": 250,
+        "guidanceType": "saclos",
+        "penetration": 510,
+        "explosiveMass": 2.08,
+        "explosiveType": "comp_b"
+      }
+    ],
+    "main_gun_ammo": 540,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 81000,
+    "purchaseCost": 450000,
+    "crewTraining": 130000,
+    "expertTraining": 450000,
+    "aceTrainingGE": 2000,
+    "aceTrainingRP": 890000,
+    "repairCost": {
+      "arcade": [
+        4523,
+        5874
+      ],
+      "realistic": [
+        5179,
+        6727
+      ],
+      "simulator": [
+        5486,
+        7125
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.6,
+      "realistic": 2.1,
+      "simulator": 2.5
+    },
+    "expMultiplier": 2.14
+  }
+}

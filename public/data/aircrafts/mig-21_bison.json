@@ -1,0 +1,33 @@
+{
+  "id": "mig-21_bison",
+  "economy": {
+    "researchCost": 320000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 9980,
+    "crewTraining": 10000,
+    "expertTraining": 1410000,
+    "aceTrainingGE": 3600,
+    "aceTrainingRP": 2700000,
+    "repairCost": {
+      "arcade": [
+        2083,
+        2083
+      ],
+      "realistic": [
+        6315,
+        6315
+      ],
+      "simulator": [
+        7096,
+        7096
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.01,
+      "realistic": 6.38,
+      "simulator": 10.98
+    },
+    "expMultiplier": 2.56,
+    "freeRepairs": 30
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "fr_destroyer_hunt_3series",
+  "economy": {
+    "researchCost": 4000,
+    "purchaseCost": 2100,
+    "crewTraining": 600,
+    "expertTraining": 2100,
+    "aceTrainingGE": 45,
+    "aceTrainingRP": 110000,
+    "repairCost": {
+      "arcade": [
+        435,
+        566
+      ],
+      "realistic": [
+        679,
+        885
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.45,
+      "realistic": 0.88,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.0
+  }
+}

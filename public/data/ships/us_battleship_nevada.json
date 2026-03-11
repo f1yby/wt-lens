@@ -1,0 +1,27 @@
+{
+  "id": "us_battleship_nevada",
+  "economy": {
+    "researchCost": 260000,
+    "purchaseCost": 780000,
+    "crewTraining": 220000,
+    "expertTraining": 780000,
+    "aceTrainingGE": 2200,
+    "aceTrainingRP": 890000,
+    "repairCost": {
+      "arcade": [
+        25320,
+        33012
+      ],
+      "realistic": [
+        31147,
+        40609
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 4.5,
+      "realistic": 6.0,
+      "simulator": 1.0
+    },
+    "expMultiplier": 2.14
+  }
+}

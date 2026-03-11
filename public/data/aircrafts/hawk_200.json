@@ -1,0 +1,31 @@
+{
+  "id": "hawk_200",
+  "economy": {
+    "researchCost": 230000,
+    "purchaseCost": 630000,
+    "crewTraining": 180000,
+    "expertTraining": 630000,
+    "aceTrainingGE": 3000,
+    "aceTrainingRP": 1140000,
+    "repairCost": {
+      "arcade": [
+        3166,
+        4798
+      ],
+      "realistic": [
+        8109,
+        12287
+      ],
+      "simulator": [
+        9705,
+        14705
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.8,
+      "realistic": 3.13,
+      "simulator": 6.0
+    },
+    "expMultiplier": 2.38
+  }
+}

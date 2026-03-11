@@ -1,0 +1,158 @@
+{
+  "id": "ussr_object_248",
+  "performance": {
+    "horsepower": 520.0,
+    "weight": 46.5,
+    "power_to_weight": 11.18,
+    "max_reverse_speed": 13.5,
+    "reload_time": 8.55,
+    "penetration": 218.4,
+    "max_speed": 35.0,
+    "crew_count": 5,
+    "elevation_speed": 5.0,
+    "traverse_speed": 14.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -3.0,
+      18.5
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 21.5,
+    "mainGun": {
+      "name": "100mm_C34",
+      "caliber": 100.0,
+      "reloadTime": 8.55,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 11.12,
+        "expert": 9.83,
+        "ace": 8.55
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "100mm_br_412b",
+        "localizedName": "BR-412B",
+        "type": "aphebc_tank",
+        "caliber": 100.0,
+        "mass": 15.88,
+        "muzzleVelocity": 895.0,
+        "deMarre": {
+          "fullCaliber": 100.0,
+          "isApcbc": false,
+          "explosiveMass": 0.065,
+          "Cx": 0.395
+        },
+        "penetration0m": 218.4,
+        "explosiveMassKg": 0.065,
+        "explosiveType": "a_ix_2",
+        "tntEquivalent": 0.091
+      },
+      {
+        "name": "100mm_of_412",
+        "localizedName": "OF-412",
+        "type": "he_frag_tank",
+        "caliber": 100.0,
+        "mass": 15.6,
+        "muzzleVelocity": 900.0,
+        "explosiveMassKg": 1.462,
+        "explosiveType": "tnt",
+        "tntEquivalent": 1.462
+      },
+      {
+        "name": "100mm_3d3",
+        "localizedName": "3D3",
+        "type": "smoke_tank",
+        "caliber": 100.0,
+        "mass": 15.6,
+        "muzzleVelocity": 880.0,
+        "explosiveMassKg": 0.05,
+        "explosiveType": "smoke_composition",
+        "tntEquivalent": 0.05
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2000.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 8,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      3.5,
+      5.0,
+      7.2,
+      9.9,
+      11.7,
+      17.7,
+      25.2,
+      35.0
+    ],
+    "reverse_gear_speeds": [
+      3.8,
+      13.5
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 46.1,
+    "track_width": 0.7,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_DT",
+        "caliber": 7.6,
+        "ammo": 2331,
+        "reloadTime": 8.0,
+        "rateOfFire": 600,
+        "bulletType": "ap_i_ball"
+      }
+    ],
+    "main_gun_ammo": 31,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 71000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 6090,
+    "crewTraining": 10000,
+    "expertTraining": 340000,
+    "aceTrainingGE": 890,
+    "aceTrainingRP": 1180000,
+    "repairCost": {
+      "arcade": [
+        3282,
+        3282
+      ],
+      "realistic": [
+        3401,
+        3401
+      ],
+      "simulator": [
+        4645,
+        4645
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.82,
+      "realistic": 3.94,
+      "simulator": 4.5
+    },
+    "expMultiplier": 1.84,
+    "freeRepairs": 30
+  }
+}

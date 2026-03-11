@@ -1,0 +1,27 @@
+{
+  "id": "ussr_skr_pr35",
+  "economy": {
+    "researchCost": 520000,
+    "purchaseCost": 700000,
+    "crewTraining": 200000,
+    "expertTraining": 700000,
+    "aceTrainingGE": 1500,
+    "aceTrainingRP": 670000,
+    "repairCost": {
+      "arcade": [
+        9841,
+        12090
+      ],
+      "realistic": [
+        14301,
+        17569
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.15,
+      "realistic": 4.18,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.9
+  }
+}

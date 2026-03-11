@@ -1,0 +1,204 @@
+{
+  "id": "cn_ztz_88a",
+  "performance": {
+    "horsepower": 730.0,
+    "weight": 38.5,
+    "power_to_weight": 18.96,
+    "max_reverse_speed": 8.9,
+    "reload_time": 7.5,
+    "penetration": 351.7,
+    "max_speed": 57.2,
+    "crew_count": 5,
+    "elevation_speed": 6.0,
+    "traverse_speed": 20.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "both",
+    "elevation_range": [
+      -4.5,
+      18.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 22.5,
+    "mainGun": {
+      "name": "105mm_ZPL94",
+      "caliber": 105.0,
+      "reloadTime": 7.5,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 9.75,
+        "expert": 8.62,
+        "ace": 7.5
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "105mm_TYPE83_HEAT",
+        "localizedName": "Type-83 HEAT",
+        "type": "heat_fs_tank",
+        "caliber": 105.0,
+        "mass": 11.0,
+        "muzzleVelocity": 1200.0,
+        "penetration0m": 400.0,
+        "explosiveMassKg": 0.97,
+        "explosiveType": "comp_b",
+        "tntEquivalent": 1.232
+      },
+      {
+        "name": "105mm_TYPE83_HESH",
+        "localizedName": "Type-83 HESH",
+        "type": "hesh_tank",
+        "caliber": 105.0,
+        "mass": 11.2,
+        "muzzleVelocity": 750.0,
+        "penetration0m": 127.0,
+        "explosiveMassKg": 2.9937,
+        "explosiveType": "comp_a",
+        "tntEquivalent": 3.772
+      },
+      {
+        "name": "105mm_btm_1",
+        "localizedName": "BTM1",
+        "type": "sapcbc_tank",
+        "caliber": 105.0,
+        "mass": 16.2,
+        "muzzleVelocity": 803.0,
+        "deMarre": {
+          "fullCaliber": 105.0,
+          "isApcbc": true,
+          "explosiveMass": 1.5
+        },
+        "penetration0m": 150.1,
+        "explosiveMassKg": 1.5,
+        "explosiveType": "a_ix_2",
+        "tntEquivalent": 2.1
+      },
+      {
+        "name": "105mm_TYPE83_APDS",
+        "localizedName": "Type-83 APDS",
+        "type": "apds_fs_tungsten_l10_l15_tank",
+        "caliber": 33.0,
+        "mass": 4.2,
+        "muzzleVelocity": 1500.0,
+        "lanzOdermatt": {
+          "workingLength": 327.0,
+          "density": 17500.0,
+          "material": "tungsten",
+          "Cx": 0.2676
+        },
+        "penetration0m": 351.7,
+        "penetrationData": {
+          "at0m": {
+            "angle0": 351.7,
+            "angle30": 304.6,
+            "angle60": 175.9
+          }
+        }
+      },
+      {
+        "name": "105mm_dtb_1_he",
+        "localizedName": "DTB-1",
+        "type": "he_frag_radio_fuse",
+        "caliber": 105.0,
+        "mass": 16.2,
+        "muzzleVelocity": 825.0,
+        "explosiveMassKg": 1.661,
+        "explosiveType": "tnt",
+        "tntEquivalent": 1.661
+      }
+    ],
+    "penetrationData": {
+      "at0m": {
+        "angle0": 351.7,
+        "angle30": 304.6,
+        "angle60": 175.9
+      }
+    },
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2000.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 5,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      8.9,
+      19.2,
+      26.8,
+      38.1,
+      57.2
+    ],
+    "reverse_gear_speeds": [
+      8.9
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 38.0,
+    "track_width": 0.65,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_Type_59",
+        "caliber": 7.6,
+        "ammo": 2500,
+        "reloadTime": 8.0,
+        "rateOfFire": 600,
+        "bulletType": "ap_i_ball"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "12_7mm_Type_54",
+        "caliber": 12.7,
+        "ammo": 500,
+        "reloadTime": 8.0,
+        "rateOfFire": 600,
+        "bulletType": "ap_i_t_ball"
+      }
+    ],
+    "main_gun_ammo": 45,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": true,
+    "has_ess": true,
+    "has_laser_rangefinder": true
+  },
+  "economy": {
+    "researchCost": 94000,
+    "purchaseCost": 520000,
+    "crewTraining": 150000,
+    "expertTraining": 520000,
+    "aceTrainingGE": 2100,
+    "aceTrainingRP": 950000,
+    "repairCost": {
+      "arcade": [
+        4278,
+        6228
+      ],
+      "realistic": [
+        4442,
+        6466
+      ],
+      "simulator": [
+        5496,
+        8000
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.45,
+      "realistic": 2.01,
+      "simulator": 2.4
+    },
+    "expMultiplier": 2.2
+  }
+}

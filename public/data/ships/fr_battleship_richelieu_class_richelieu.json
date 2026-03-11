@@ -1,0 +1,27 @@
+{
+  "id": "fr_battleship_richelieu_class_richelieu",
+  "economy": {
+    "researchCost": 400000,
+    "purchaseCost": 1150000,
+    "crewTraining": 330000,
+    "expertTraining": 1150000,
+    "aceTrainingGE": 2800,
+    "aceTrainingRP": 1080000,
+    "repairCost": {
+      "arcade": [
+        33325,
+        41813
+      ],
+      "realistic": [
+        37198,
+        46672
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 4.5,
+      "realistic": 6.0,
+      "simulator": 1.0
+    },
+    "expMultiplier": 2.32
+  }
+}

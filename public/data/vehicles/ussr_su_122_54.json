@@ -1,0 +1,219 @@
+{
+  "id": "ussr_su_122_54",
+  "performance": {
+    "horsepower": 520.0,
+    "weight": 36.0,
+    "power_to_weight": 14.44,
+    "max_reverse_speed": 7.5,
+    "reload_time": 12.35,
+    "penetration": 400.0,
+    "max_speed": 50.0,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 7.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -4.0,
+      16.0
+    ],
+    "traverse_range": [
+      -8.0,
+      8.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 20.0,
+    "mainGun": {
+      "name": "122mm_D49",
+      "caliber": 122.0,
+      "reloadTime": 12.35,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 16.05,
+        "expert": 14.2,
+        "ace": 12.35
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "122mm_br_471",
+        "localizedName": "BR-471",
+        "type": "aphe_tank",
+        "caliber": 122.0,
+        "mass": 25.0,
+        "muzzleVelocity": 795.0,
+        "deMarre": {
+          "fullCaliber": 122.0,
+          "isApcbc": false,
+          "explosiveMass": 0.16,
+          "Cx": 0.5947
+        },
+        "penetration0m": 205.7,
+        "explosiveMassKg": 0.16,
+        "explosiveType": "a_ix_2",
+        "tntEquivalent": 0.224
+      },
+      {
+        "name": "122mm_of_471",
+        "localizedName": "OF-471",
+        "type": "he_frag_tank",
+        "caliber": 122.0,
+        "mass": 25.0,
+        "muzzleVelocity": 795.0,
+        "explosiveMassKg": 3.6,
+        "explosiveType": "tnt",
+        "tntEquivalent": 3.6
+      },
+      {
+        "name": "122mm_br_471b",
+        "localizedName": "BR-471B",
+        "type": "aphebc_tank",
+        "caliber": 122.0,
+        "mass": 25.0,
+        "muzzleVelocity": 795.0,
+        "deMarre": {
+          "fullCaliber": 122.0,
+          "isApcbc": false,
+          "explosiveMass": 0.16,
+          "Cx": 0.3496
+        },
+        "penetration0m": 205.7,
+        "explosiveMassKg": 0.16,
+        "explosiveType": "a_ix_2",
+        "tntEquivalent": 0.224
+      },
+      {
+        "name": "122mm_br_471d",
+        "localizedName": "BR-471D",
+        "type": "apcbc_tank",
+        "caliber": 122.0,
+        "mass": 25.0,
+        "muzzleVelocity": 800.0,
+        "deMarre": {
+          "fullCaliber": 122.0,
+          "isApcbc": true,
+          "explosiveMass": 0.125,
+          "Cx": 0.35
+        },
+        "penetration0m": 230.6,
+        "explosiveMassKg": 0.125,
+        "explosiveType": "a_ix_2",
+        "tntEquivalent": 0.175
+      },
+      {
+        "name": "122mm_zbm_7",
+        "localizedName": "3BM-7",
+        "type": "apds_tank",
+        "caliber": 58.0,
+        "mass": 4.5,
+        "muzzleVelocity": 1400.0,
+        "deMarre": {
+          "fullCaliber": 122.0,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "isApcr": true,
+          "coreCaliber": 58.0,
+          "coreMass": 2.81,
+          "Cx": 0.2281
+        },
+        "penetration0m": 208.7
+      },
+      {
+        "name": "122mm_zbk_10",
+        "localizedName": "3BK-10",
+        "type": "heat_fs_tank",
+        "caliber": 122.0,
+        "mass": 18.4,
+        "muzzleVelocity": 820.0,
+        "penetration0m": 400.0,
+        "explosiveMassKg": 1.334,
+        "explosiveType": "a_ix_1",
+        "tntEquivalent": 1.521
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2000.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 5,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      7.5,
+      16.1,
+      22.5,
+      31.5,
+      50.0
+    ],
+    "reverse_gear_speeds": [
+      7.5
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 35.7,
+    "track_width": 0.58,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "14_5mm_KPVT",
+        "caliber": 14.5,
+        "ammo": 300,
+        "reloadTime": 8.0,
+        "rateOfFire": 600,
+        "bulletType": "ap_i_t_ball"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "14_5mm_KPVT",
+        "caliber": 14.5,
+        "ammo": 300,
+        "reloadTime": 8.0,
+        "rateOfFire": 600,
+        "bulletType": "ap_i_t_ball"
+      }
+    ],
+    "main_gun_ammo": 35,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 82000,
+    "purchaseCost": 240000,
+    "crewTraining": 68000,
+    "expertTraining": 240000,
+    "aceTrainingGE": 990,
+    "aceTrainingRP": 620000,
+    "repairCost": {
+      "arcade": [
+        4090,
+        5417
+      ],
+      "realistic": [
+        4624,
+        6124
+      ],
+      "simulator": [
+        6532,
+        8652
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.33,
+      "realistic": 2.08,
+      "simulator": 2.5
+    },
+    "expMultiplier": 1.84
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "id": "ussr_destroyer_pr56_blagorodny",
+  "economy": {
+    "researchCost": 33000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 2980,
+    "crewTraining": 10000,
+    "expertTraining": 180000,
+    "aceTrainingGE": 820,
+    "aceTrainingRP": 870000,
+    "repairCost": {
+      "arcade": [
+        2918,
+        2918
+      ],
+      "realistic": [
+        2295,
+        2295
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 5.76,
+      "realistic": 12.0,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.6,
+    "freeRepairs": 30
+  }
+}

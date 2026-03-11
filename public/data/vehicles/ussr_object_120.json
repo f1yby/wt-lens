@@ -1,0 +1,178 @@
+{
+  "id": "ussr_object_120",
+  "performance": {
+    "horsepower": 480.0,
+    "weight": 27.0,
+    "power_to_weight": 17.78,
+    "max_reverse_speed": 15.3,
+    "reload_time": 10.0,
+    "penetration": 405.0,
+    "max_speed": 63.7,
+    "crew_count": 5,
+    "elevation_speed": 10.0,
+    "traverse_speed": 20.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -5.0,
+      15.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 20.0,
+    "mainGun": {
+      "name": "152mm_M69",
+      "caliber": 152.0,
+      "reloadTime": 10.0,
+      "autoLoader": true,
+      "reloadTimes": {
+        "base": 10.0,
+        "expert": 10.0,
+        "ace": 10.0
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "152mm_m69_heat",
+        "localizedName": "152 mm HEAT-FS",
+        "type": "heat_fs_tank",
+        "caliber": 152.0,
+        "mass": 35.0,
+        "muzzleVelocity": 1000.0,
+        "penetration0m": 480.0,
+        "explosiveMassKg": 3.8,
+        "explosiveType": "a_ix_1",
+        "tntEquivalent": 4.332
+      },
+      {
+        "name": "152mm_m69_apds_fs",
+        "localizedName": "152 mm APDS-FS",
+        "type": "apds_fs_tank",
+        "caliber": 52.0,
+        "mass": 8.0,
+        "muzzleVelocity": 1750.0,
+        "armorPowerTable": [
+          {
+            "penetration": 405.0,
+            "distance": 10.0
+          },
+          {
+            "penetration": 400.0,
+            "distance": 100.0
+          },
+          {
+            "penetration": 385.0,
+            "distance": 500.0
+          },
+          {
+            "penetration": 370.0,
+            "distance": 1000.0
+          },
+          {
+            "penetration": 340.0,
+            "distance": 2000.0
+          },
+          {
+            "penetration": 310.0,
+            "distance": 3000.0
+          },
+          {
+            "penetration": 280.0,
+            "distance": 4000.0
+          },
+          {
+            "penetration": 100.0,
+            "distance": 10000.0
+          },
+          {
+            "penetration": 0.0,
+            "distance": 20000.0
+          }
+        ],
+        "penetration0m": 405.0
+      },
+      {
+        "name": "152mm_m69_he_fs",
+        "localizedName": "152 mm HE",
+        "type": "he_frag_tank",
+        "caliber": 152.0,
+        "mass": 43.5,
+        "muzzleVelocity": 960.0,
+        "explosiveMassKg": 5.9,
+        "explosiveType": "tnt",
+        "tntEquivalent": 5.9
+      }
+    ],
+    "penetrationData": {},
+    "autoLoader": true,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2000.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 5,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      7.8,
+      16.3,
+      24.6,
+      50.8,
+      63.7
+    ],
+    "reverse_gear_speeds": [
+      7.4,
+      15.3
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 26.6,
+    "track_width": 0.412,
+    "secondary_weapons": null,
+    "main_gun_ammo": 22,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 135000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 8560,
+    "crewTraining": 10000,
+    "expertTraining": 620000,
+    "aceTrainingGE": 1400,
+    "aceTrainingRP": 1710000,
+    "repairCost": {
+      "arcade": [
+        3284,
+        3284
+      ],
+      "realistic": [
+        1922,
+        1922
+      ],
+      "simulator": [
+        4785,
+        4785
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 3.2,
+      "realistic": 4.2,
+      "simulator": 5.0
+    },
+    "expMultiplier": 2.14,
+    "freeRepairs": 30
+  }
+}

@@ -1,0 +1,159 @@
+{
+  "id": "ussr_m3c",
+  "performance": {
+    "horsepower": 400.0,
+    "weight": 27.68,
+    "power_to_weight": 14.45,
+    "max_reverse_speed": 5.0,
+    "reload_time": 2.86,
+    "penetration": 87.7,
+    "max_speed": 38.6,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 18.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "vertical",
+    "elevation_range": [
+      -7.0,
+      60.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 67.0,
+    "mainGun": {
+      "name": "37mm_M5_for_M3_Lee",
+      "caliber": 37.0,
+      "reloadTime": 2.86,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 3.72,
+        "expert": 3.29,
+        "ace": 2.86
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "37mm_m74b1",
+        "localizedName": "M74B1 shot",
+        "type": "ap_tank",
+        "caliber": 37.0,
+        "mass": 0.87,
+        "muzzleVelocity": 883.0,
+        "deMarre": {
+          "fullCaliber": 37.0,
+          "isApcbc": false,
+          "explosiveMass": 0
+        },
+        "penetration0m": 79.0
+      },
+      {
+        "name": "37mm_m51b1",
+        "localizedName": "M51B1 shot",
+        "type": "apcbc_solid_medium_caliber_tank",
+        "caliber": 37.0,
+        "mass": 0.87,
+        "muzzleVelocity": 883.0,
+        "deMarre": {
+          "fullCaliber": 37.0,
+          "isApcbc": true,
+          "explosiveMass": 0
+        },
+        "penetration0m": 87.7
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2400.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 5,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      3.8,
+      9.1,
+      15.8,
+      25.5,
+      38.6
+    ],
+    "reverse_gear_speeds": [
+      5.0
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 27.48,
+    "track_width": 0.4,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "75mm_M2",
+        "caliber": 75.0,
+        "ammo": 50,
+        "rateOfFire": 13,
+        "bulletType": "ap_tank"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "7_62mm_M1919A4",
+        "caliber": 7.6,
+        "ammo": 3000,
+        "reloadTime": 8.0,
+        "rateOfFire": 500,
+        "bulletType": "ap_ball"
+      },
+      {
+        "trigger": "gunner3",
+        "name": "7_62mm_M1919A4",
+        "caliber": 7.6,
+        "ammo": 3000,
+        "reloadTime": 8.0,
+        "rateOfFire": 500,
+        "bulletType": "ap_ball"
+      }
+    ],
+    "main_gun_ammo": 179,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 9200,
+    "purchaseCost": 0,
+    "purchaseCostGold": 850,
+    "crewTraining": 3400,
+    "expertTraining": 23000,
+    "aceTrainingGE": 160,
+    "aceTrainingRP": 380000,
+    "repairCost": {
+      "arcade": [
+        848,
+        848
+      ],
+      "realistic": [
+        404,
+        404
+      ],
+      "simulator": [
+        505,
+        505
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.84,
+      "realistic": 1.0,
+      "simulator": 1.16
+    },
+    "expMultiplier": 1.18,
+    "freeRepairs": 30
+  }
+}

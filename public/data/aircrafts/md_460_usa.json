@@ -1,0 +1,31 @@
+{
+  "id": "md_460_usa",
+  "economy": {
+    "researchCost": 135000,
+    "purchaseCost": 380000,
+    "crewTraining": 110000,
+    "expertTraining": 380000,
+    "aceTrainingGE": 2000,
+    "aceTrainingRP": 830000,
+    "repairCost": {
+      "arcade": [
+        3343,
+        4543
+      ],
+      "realistic": [
+        9315,
+        12656
+      ],
+      "simulator": [
+        10349,
+        14061
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.3,
+      "realistic": 3.8,
+      "simulator": 6.0
+    },
+    "expMultiplier": 2.08
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "germ_sf40_schwere_flakkampffaehre",
+  "economy": {
+    "researchCost": 18000,
+    "purchaseCost": 47000,
+    "crewTraining": 13000,
+    "expertTraining": 47000,
+    "aceTrainingGE": 400,
+    "aceTrainingRP": 280000,
+    "repairCost": {
+      "arcade": [
+        1360,
+        1681
+      ],
+      "realistic": [
+        2091,
+        2585
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.85,
+      "realistic": 1.1,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.36
+  }
+}

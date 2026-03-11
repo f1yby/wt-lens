@@ -1,0 +1,27 @@
+{
+  "id": "fr_frigate_corse_class_brestois",
+  "economy": {
+    "researchCost": 320000,
+    "purchaseCost": 860000,
+    "crewTraining": 250000,
+    "expertTraining": 860000,
+    "aceTrainingGE": 1800,
+    "aceTrainingRP": 780000,
+    "repairCost": {
+      "arcade": [
+        9980,
+        12666
+      ],
+      "realistic": [
+        14496,
+        18396
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.29,
+      "realistic": 4.45,
+      "simulator": 1.0
+    },
+    "expMultiplier": 2.02
+  }
+}

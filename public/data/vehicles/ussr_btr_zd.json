@@ -1,0 +1,112 @@
+{
+  "id": "ussr_btr_zd",
+  "performance": {
+    "horsepower": 240.0,
+    "weight": 9.0,
+    "power_to_weight": 26.67,
+    "max_reverse_speed": 6.4,
+    "reload_time": 10.0,
+    "penetration": null,
+    "max_speed": 61.1,
+    "crew_count": 5,
+    "elevation_speed": 40.0,
+    "traverse_speed": 60.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -10.0,
+      90.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 100.0,
+    "mainGun": null,
+    "ammunitions": null,
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2400.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 4,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      8.5,
+      24.6,
+      40.7,
+      61.1
+    ],
+    "reverse_gear_speeds": [
+      6.4
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 8.7,
+    "track_width": 0.26,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner3",
+        "name": "7_62mm_PKT",
+        "caliber": 7.6,
+        "ammo": 500,
+        "reloadTime": 8.0,
+        "rateOfFire": 700,
+        "bulletType": "ap_i_ball"
+      },
+      {
+        "trigger": "gunner4",
+        "name": "7_62mm_PKT",
+        "caliber": 7.6,
+        "ammo": 500,
+        "reloadTime": 8.0,
+        "rateOfFire": 700,
+        "bulletType": "ap_i_ball"
+      }
+    ],
+    "main_gun_ammo": 250,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": true,
+    "has_ess": true,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 46000,
+    "purchaseCost": 155000,
+    "crewTraining": 45000,
+    "expertTraining": 155000,
+    "aceTrainingGE": 630,
+    "aceTrainingRP": 440000,
+    "repairCost": {
+      "arcade": [
+        2548,
+        3631
+      ],
+      "realistic": [
+        2103,
+        2996
+      ],
+      "simulator": [
+        3253,
+        4633
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.15,
+      "realistic": 1.41,
+      "simulator": 1.96
+    },
+    "expMultiplier": 1.6
+  }
+}

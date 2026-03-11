@@ -1,0 +1,143 @@
+{
+  "id": "jp_type_3_ho_ni_I",
+  "performance": {
+    "horsepower": 200.0,
+    "weight": 15.0,
+    "power_to_weight": 13.33,
+    "max_reverse_speed": 11.8,
+    "reload_time": 5.0,
+    "penetration": 102.3,
+    "max_speed": 40.1,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 16.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -15.0,
+      20.0
+    ],
+    "traverse_range": [
+      -11.0,
+      11.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 35.0,
+    "mainGun": {
+      "name": "75mm_Type90",
+      "caliber": 75.0,
+      "reloadTime": 5.0,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 6.5,
+        "expert": 5.75,
+        "ace": 5.0
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "75mm_type1_ap",
+        "localizedName": "Type 1 APHE",
+        "type": "aphe_tank",
+        "caliber": 75.0,
+        "mass": 6.605,
+        "muzzleVelocity": 668.0,
+        "deMarre": {
+          "fullCaliber": 75.0,
+          "isApcbc": false,
+          "explosiveMass": 0.065,
+          "Cx": 0.4
+        },
+        "penetration0m": 102.3,
+        "explosiveMassKg": 0.065,
+        "explosiveType": "rdx",
+        "tntEquivalent": 0.091
+      },
+      {
+        "name": "75mm_type94_he",
+        "localizedName": "Type 94 HE",
+        "type": "he_frag_tank",
+        "caliber": 75.0,
+        "mass": 6.02,
+        "muzzleVelocity": 522.0,
+        "explosiveMassKg": 0.81,
+        "explosiveType": "tnt",
+        "tntEquivalent": 0.81
+      },
+      {
+        "name": "75mm_type90_smoke",
+        "localizedName": "Type 90 Smoke",
+        "type": "smoke_tank",
+        "caliber": 75.0,
+        "mass": 5.72,
+        "muzzleVelocity": 570.0,
+        "explosiveMassKg": 0.1,
+        "explosiveType": "smoke_composition",
+        "tntEquivalent": 0.1
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2000.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 5,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      4.5,
+      8.1,
+      14.1,
+      24.6,
+      40.1
+    ],
+    "reverse_gear_speeds": [
+      6.6,
+      11.8
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 14.7,
+    "track_width": 0.25,
+    "secondary_weapons": null,
+    "main_gun_ammo": 40,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 7900,
+    "purchaseCost": 10000,
+    "crewTraining": 3000,
+    "expertTraining": 10000,
+    "aceTrainingGE": 115,
+    "aceTrainingRP": 160000,
+    "repairCost": {
+      "arcade": [
+        416,
+        516
+      ],
+      "realistic": [
+        465,
+        576
+      ],
+      "simulator": [
+        551,
+        682
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.3,
+      "realistic": 0.46,
+      "simulator": 0.56
+    },
+    "expMultiplier": 1.12
+  }
+}

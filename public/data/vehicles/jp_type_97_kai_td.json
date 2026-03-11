@@ -1,0 +1,151 @@
+{
+  "id": "jp_type_97_kai_td",
+  "performance": {
+    "horsepower": 200.0,
+    "weight": 15.8,
+    "power_to_weight": 12.66,
+    "max_reverse_speed": 11.8,
+    "reload_time": 3.33,
+    "penetration": 77.2,
+    "max_speed": 40.1,
+    "crew_count": 5,
+    "elevation_speed": 10.0,
+    "traverse_speed": 15.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "vertical",
+    "elevation_range": [
+      -15.0,
+      20.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 35.0,
+    "mainGun": {
+      "name": "47mm_Type1",
+      "caliber": 47.0,
+      "reloadTime": 3.33,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 4.33,
+        "expert": 3.83,
+        "ace": 3.33
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "47mm_type1_ap",
+        "localizedName": "Type 1 APHE",
+        "type": "aphe_tank",
+        "caliber": 47.0,
+        "mass": 1.49,
+        "muzzleVelocity": 808.0,
+        "deMarre": {
+          "fullCaliber": 47.0,
+          "isApcbc": false,
+          "explosiveMass": 0.014,
+          "Cx": 0.28
+        },
+        "penetration0m": 77.2,
+        "explosiveMassKg": 0.014,
+        "explosiveType": "rdx",
+        "tntEquivalent": 0.02
+      },
+      {
+        "name": "47mm_type1_he",
+        "localizedName": "Type 1 HE",
+        "type": "he_frag_tank",
+        "caliber": 47.0,
+        "mass": 1.4,
+        "muzzleVelocity": 822.0,
+        "explosiveMassKg": 0.087,
+        "explosiveType": "picric_acid_tnt",
+        "tntEquivalent": 0.086
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2000.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 5,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      4.5,
+      8.1,
+      14.1,
+      24.6,
+      40.1
+    ],
+    "reverse_gear_speeds": [
+      6.6,
+      11.8
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 15.67,
+    "track_width": 0.25,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_7mm_Type_97",
+        "caliber": 7.7,
+        "ammo": 3000,
+        "reloadTime": 3.0,
+        "rateOfFire": 498,
+        "bulletType": "ap_ball"
+      },
+      {
+        "trigger": "gunner3",
+        "name": "7_7mm_Type_97",
+        "caliber": 7.7,
+        "ammo": 1000,
+        "reloadTime": 3.0,
+        "rateOfFire": 498,
+        "bulletType": "ap_ball"
+      }
+    ],
+    "main_gun_ammo": 104,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 7900,
+    "purchaseCost": 10000,
+    "crewTraining": 3000,
+    "expertTraining": 10000,
+    "aceTrainingGE": 115,
+    "aceTrainingRP": 160000,
+    "repairCost": {
+      "arcade": [
+        417,
+        537
+      ],
+      "realistic": [
+        446,
+        573
+      ],
+      "simulator": [
+        559,
+        719
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.26,
+      "realistic": 0.38,
+      "simulator": 0.44
+    },
+    "expMultiplier": 1.12
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "id": "tornado_ids_de_assta1",
+  "economy": {
+    "researchCost": 260000,
+    "purchaseCost": 720000,
+    "crewTraining": 200000,
+    "expertTraining": 720000,
+    "aceTrainingGE": 3200,
+    "aceTrainingRP": 1210000,
+    "repairCost": {
+      "arcade": [
+        2936,
+        4362
+      ],
+      "realistic": [
+        7440,
+        11055
+      ],
+      "simulator": [
+        11347,
+        16861
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.86,
+      "realistic": 3.4,
+      "simulator": 5.91
+    },
+    "expMultiplier": 2.44
+  }
+}

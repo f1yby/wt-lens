@@ -1,0 +1,134 @@
+{
+  "id": "it_semovente_m43_105_leoncello",
+  "performance": {
+    "horsepower": 185.0,
+    "weight": 15.7,
+    "power_to_weight": 11.78,
+    "max_reverse_speed": 3.3,
+    "reload_time": 10.0,
+    "penetration": 120.0,
+    "max_speed": 38.3,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 14.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -10.0,
+      16.0
+    ],
+    "traverse_range": [
+      -18.0,
+      18.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 26.0,
+    "mainGun": {
+      "name": "105mm_Ansaldo_105_25",
+      "caliber": 105.0,
+      "reloadTime": 10.0,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 13.0,
+        "expert": 11.5,
+        "ace": 10.0
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "105mm_gr_perforante",
+        "localizedName": "Granata Perforante da 105",
+        "type": "apc_tank",
+        "caliber": 105.0,
+        "mass": 15.65,
+        "muzzleVelocity": 500.0,
+        "deMarre": {
+          "fullCaliber": 105.0,
+          "isApcbc": true,
+          "explosiveMass": 0.275,
+          "Cx": 0.5
+        },
+        "penetration0m": 91.0,
+        "explosiveMassKg": 0.275,
+        "explosiveType": "tnt",
+        "tntEquivalent": 0.275
+      },
+      {
+        "name": "105mm_ep_m43",
+        "localizedName": "Effetto Pronto mod.43",
+        "type": "heat_tank",
+        "caliber": 105.0,
+        "mass": 14.0,
+        "muzzleVelocity": 510.0,
+        "penetration0m": 120.0,
+        "explosiveMassKg": 1.8,
+        "explosiveType": "rdx_tnt",
+        "tntEquivalent": 2.304
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2400.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 5,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      3.3,
+      7.8,
+      15.5,
+      27.5,
+      38.3
+    ],
+    "reverse_gear_speeds": [
+      3.3
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 15.2,
+    "track_width": 0.26,
+    "secondary_weapons": null,
+    "main_gun_ammo": 48,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 18000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 1300,
+    "crewTraining": 10000,
+    "expertTraining": 67000,
+    "aceTrainingGE": 330,
+    "aceTrainingRP": 570000,
+    "repairCost": {
+      "arcade": [
+        736,
+        736
+      ],
+      "realistic": [
+        881,
+        881
+      ],
+      "simulator": [
+        1779,
+        1779
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.43,
+      "realistic": 2.3,
+      "simulator": 3.19
+    },
+    "expMultiplier": 1.36,
+    "freeRepairs": 30
+  }
+}

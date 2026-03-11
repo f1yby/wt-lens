@@ -1,0 +1,33 @@
+{
+  "id": "hawk_209_indonesia",
+  "economy": {
+    "researchCost": 260000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 9620,
+    "crewTraining": 10000,
+    "expertTraining": 1170000,
+    "aceTrainingGE": 3200,
+    "aceTrainingRP": 2420000,
+    "repairCost": {
+      "arcade": [
+        2482,
+        2482
+      ],
+      "realistic": [
+        6471,
+        6471
+      ],
+      "simulator": [
+        7209,
+        7209
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.7,
+      "realistic": 6.5,
+      "simulator": 12.0
+    },
+    "expMultiplier": 2.44,
+    "freeRepairs": 30
+  }
+}

@@ -1,0 +1,150 @@
+{
+  "id": "it_otobreda_sidam_25_mistral",
+  "performance": {
+    "horsepower": 212.0,
+    "weight": 14.3,
+    "power_to_weight": 14.83,
+    "max_reverse_speed": 14.8,
+    "reload_time": 1.0,
+    "penetration": 86.7,
+    "max_speed": 64.3,
+    "crew_count": 5,
+    "elevation_speed": 90.0,
+    "traverse_speed": 120.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "both",
+    "elevation_range": [
+      -5.0,
+      87.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 92.0,
+    "mainGun": {
+      "name": "25mm_Oerlikon_KBA",
+      "caliber": 25.0,
+      "reloadTime": 1.0,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 1.3,
+        "expert": 1.15,
+        "ace": 1.0
+      },
+      "rateOfFire": 550,
+      "beltReloadTime": 1.0
+    },
+    "ammunitions": [
+      {
+        "name": "25mm_m792",
+        "localizedName": "M792",
+        "type": "he_i_t",
+        "caliber": 25.0,
+        "mass": 0.185,
+        "muzzleVelocity": 1100.0,
+        "explosiveMassKg": 0.032,
+        "explosiveType": "hexal",
+        "tntEquivalent": 0.045
+      },
+      {
+        "name": "25mm_m791",
+        "localizedName": "M791",
+        "type": "apds_autocannon",
+        "caliber": 13.5,
+        "mass": 0.134,
+        "muzzleVelocity": 1330.0,
+        "deMarre": {
+          "fullCaliber": 25.0,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "isApcr": true,
+          "coreCaliber": 13.5,
+          "coreMass": 0.134,
+          "Cx": 0.2
+        },
+        "penetration0m": 86.7
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2800.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 6,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      11.1,
+      16.9,
+      22.9,
+      33.1,
+      48.0,
+      64.3
+    ],
+    "reverse_gear_speeds": [
+      11.1,
+      14.8
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 14.0,
+    "track_width": null,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "90mm_atam_mistral_rocket_launcher",
+        "caliber": 90.0,
+        "ammo": 6,
+        "reloadTime": 15.0,
+        "rateOfFire": 120,
+        "bulletType": "sam_tank",
+        "maxDistance": 10000,
+        "maxSpeed": 850,
+        "guidanceType": "optical",
+        "explosiveMass": 1.11,
+        "explosiveType": "hbx"
+      }
+    ],
+    "main_gun_ammo": 165,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": true
+  },
+  "economy": {
+    "researchCost": 220000,
+    "purchaseCost": 620000,
+    "crewTraining": 175000,
+    "expertTraining": 620000,
+    "aceTrainingGE": 2100,
+    "aceTrainingRP": 1010000,
+    "repairCost": {
+      "arcade": [
+        5126,
+        6718
+      ],
+      "realistic": [
+        4967,
+        6510
+      ],
+      "simulator": [
+        5003,
+        6557
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.6,
+      "realistic": 1.94,
+      "simulator": 2.5
+    },
+    "expMultiplier": 2.26
+  }
+}

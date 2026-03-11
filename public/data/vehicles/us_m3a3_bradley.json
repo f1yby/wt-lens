@@ -1,0 +1,165 @@
+{
+  "id": "us_m3a3_bradley",
+  "performance": {
+    "horsepower": 600.0,
+    "weight": 29.94,
+    "power_to_weight": 20.04,
+    "max_reverse_speed": 14.9,
+    "reload_time": 0.2,
+    "penetration": 101.0,
+    "max_speed": 66.4,
+    "crew_count": 5,
+    "elevation_speed": 60.0,
+    "traverse_speed": 60.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "both",
+    "elevation_range": [
+      -9.0,
+      59.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": [
+      800,
+      600
+    ],
+    "commander_thermal_resolution": [
+      800,
+      600
+    ],
+    "gunner_thermal_diagonal": 1000.0,
+    "commander_thermal_diagonal": 1000.0,
+    "stabilizer_value": 1,
+    "elevation_range_value": 68.0,
+    "mainGun": {
+      "name": "25mm_M242",
+      "caliber": 25.0,
+      "reloadTime": 0.2,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 0.26,
+        "expert": 0.23,
+        "ace": 0.2
+      },
+      "rateOfFire": 201,
+      "beltReloadTime": 0.2
+    },
+    "ammunitions": [
+      {
+        "name": "25mm_m919",
+        "localizedName": "M919",
+        "type": "apds_fs_long_tank",
+        "caliber": 9.0,
+        "mass": 0.098,
+        "muzzleVelocity": 1385.0,
+        "lanzOdermatt": {
+          "workingLength": 100.0,
+          "density": 18600.0,
+          "material": "depletedUranium",
+          "Cx": 0.3
+        },
+        "penetration0m": 101.0,
+        "penetrationData": {
+          "at0m": {
+            "angle0": 101.0,
+            "angle30": 87.5,
+            "angle60": 50.5
+          }
+        }
+      }
+    ],
+    "penetrationData": {
+      "at0m": {
+        "angle0": 101.0,
+        "angle30": 87.5,
+        "angle60": 50.5
+      }
+    },
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2600.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 6,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      5.1,
+      10.1,
+      24.5,
+      48.2,
+      65.7,
+      66.4
+    ],
+    "reverse_gear_speeds": [
+      7.5,
+      14.9
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 29.0,
+    "track_width": null,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_M240",
+        "caliber": 7.6,
+        "ammo": 4400,
+        "reloadTime": 8.0,
+        "rateOfFire": 940,
+        "bulletType": "ap_ball"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "127mm_BGM_71_tow_M3A3_launcher",
+        "caliber": 152.0,
+        "ammo": 12,
+        "reloadTime": 10.0,
+        "rateOfFire": 120,
+        "bulletType": "atgm_tank",
+        "maxDistance": 3750,
+        "maxSpeed": 329,
+        "guidanceType": "saclos",
+        "penetration": 800,
+        "explosiveMass": 3.13,
+        "explosiveType": "lx14"
+      }
+    ],
+    "main_gun_ammo": 1500,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": true,
+    "has_ess": true,
+    "has_laser_rangefinder": true
+  },
+  "economy": {
+    "researchCost": 260000,
+    "purchaseCost": 710000,
+    "crewTraining": 200000,
+    "expertTraining": 710000,
+    "aceTrainingGE": 2100,
+    "aceTrainingRP": 1080000,
+    "repairCost": {
+      "arcade": [
+        3254,
+        5810
+      ],
+      "realistic": [
+        3116,
+        5564
+      ],
+      "simulator": [
+        4152,
+        7415
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.37,
+      "realistic": 1.73,
+      "simulator": 2.23
+    },
+    "expMultiplier": 2.32
+  }
+}

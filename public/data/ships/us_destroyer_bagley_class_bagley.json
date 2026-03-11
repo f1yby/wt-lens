@@ -1,0 +1,27 @@
+{
+  "id": "us_destroyer_bagley_class_bagley",
+  "economy": {
+    "researchCost": 7000,
+    "purchaseCost": 8700,
+    "crewTraining": 2500,
+    "expertTraining": 8700,
+    "aceTrainingGE": 125,
+    "aceTrainingRP": 160000,
+    "repairCost": {
+      "arcade": [
+        854,
+        1092
+      ],
+      "realistic": [
+        1352,
+        1729
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.88,
+      "realistic": 1.73,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.12
+  }
+}

@@ -1,0 +1,169 @@
+{
+  "id": "it_dardo_vcc",
+  "performance": {
+    "horsepower": 520.0,
+    "weight": 23.5,
+    "power_to_weight": 22.13,
+    "max_reverse_speed": 31.9,
+    "reload_time": 8.0,
+    "penetration": 92.0,
+    "max_speed": 70.0,
+    "crew_count": 5,
+    "elevation_speed": 28.6,
+    "traverse_speed": 57.3,
+    "has_stabilizer": true,
+    "stabilizer_type": "both",
+    "elevation_range": [
+      -10.0,
+      60.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": [
+      500,
+      300
+    ],
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": 583.1,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 70.0,
+    "mainGun": {
+      "name": "25mm_Oerlikon_KBA_Dardo",
+      "caliber": 25.0,
+      "reloadTime": 8.0,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 10.4,
+        "expert": 9.2,
+        "ace": 8.0
+      },
+      "rateOfFire": 560,
+      "beltReloadTime": 8.0
+    },
+    "ammunitions": [
+      {
+        "name": "25mm_pmb_09",
+        "localizedName": "PMB 090",
+        "type": "apds_fs_long_tank",
+        "caliber": 9.0,
+        "mass": 0.098,
+        "muzzleVelocity": 1385.0,
+        "lanzOdermatt": {
+          "workingLength": 100.0,
+          "density": 17500.0,
+          "material": "tungsten",
+          "Cx": 0.3
+        },
+        "penetration0m": 92.0,
+        "penetrationData": {
+          "at0m": {
+            "angle0": 92.0,
+            "angle30": 79.7,
+            "angle60": 46.0
+          }
+        }
+      }
+    ],
+    "penetrationData": {
+      "at0m": {
+        "angle0": 92.0,
+        "angle30": 79.7,
+        "angle60": 46.0
+      }
+    },
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2300.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 8,
+    "reverse_gears": 4,
+    "forward_gear_speeds": [
+      5.7,
+      15.3,
+      22.5,
+      31.9,
+      41.6,
+      49.8,
+      57.9,
+      70.0
+    ],
+    "reverse_gear_speeds": [
+      5.7,
+      15.3,
+      22.5,
+      31.9
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 23.0,
+    "track_width": null,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_Beretta_MG42_59",
+        "caliber": 7.6,
+        "ammo": 1200,
+        "reloadTime": 8.0,
+        "rateOfFire": 800,
+        "bulletType": "ap_ball"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "127mm_BGM_71_tow_M3A3_launcher",
+        "caliber": 152.0,
+        "ammo": 8,
+        "reloadTime": 10.0,
+        "rateOfFire": 120,
+        "bulletType": "atgm_tank",
+        "maxDistance": 3750,
+        "maxSpeed": 329,
+        "guidanceType": "saclos",
+        "penetration": 800,
+        "explosiveMass": 3.13,
+        "explosiveType": "lx14"
+      }
+    ],
+    "main_gun_ammo": 400,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": true
+  },
+  "economy": {
+    "researchCost": 260000,
+    "purchaseCost": 710000,
+    "crewTraining": 200000,
+    "expertTraining": 710000,
+    "aceTrainingGE": 2100,
+    "aceTrainingRP": 1080000,
+    "repairCost": {
+      "arcade": [
+        3474,
+        5810
+      ],
+      "realistic": [
+        3327,
+        5564
+      ],
+      "simulator": [
+        4434,
+        7415
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.37,
+      "realistic": 1.73,
+      "simulator": 2.23
+    },
+    "expMultiplier": 2.32
+  }
+}

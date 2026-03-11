@@ -1,0 +1,31 @@
+{
+  "id": "f-86_cl_13b_mk6",
+  "economy": {
+    "researchCost": 86000,
+    "purchaseCost": 480000,
+    "crewTraining": 135000,
+    "expertTraining": 480000,
+    "aceTrainingGE": 2400,
+    "aceTrainingRP": 950000,
+    "repairCost": {
+      "arcade": [
+        3221,
+        4318
+      ],
+      "realistic": [
+        10200,
+        13673
+      ],
+      "simulator": [
+        10159,
+        13618
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.26,
+      "realistic": 3.8,
+      "simulator": 6.0
+    },
+    "expMultiplier": 2.2
+  }
+}

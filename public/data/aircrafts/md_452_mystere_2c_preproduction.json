@@ -1,0 +1,31 @@
+{
+  "id": "md_452_mystere_2c_preproduction",
+  "economy": {
+    "researchCost": 61000,
+    "purchaseCost": 340000,
+    "crewTraining": 98000,
+    "expertTraining": 340000,
+    "aceTrainingGE": 1800,
+    "aceTrainingRP": 780000,
+    "repairCost": {
+      "arcade": [
+        3142,
+        4269
+      ],
+      "realistic": [
+        9434,
+        12818
+      ],
+      "simulator": [
+        10241,
+        13915
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.22,
+      "realistic": 3.8,
+      "simulator": 6.0
+    },
+    "expMultiplier": 2.02
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "id": "us_battleship_colorado_class_maryland",
+  "economy": {
+    "researchCost": 260000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 8730,
+    "crewTraining": 10000,
+    "expertTraining": 1270000,
+    "aceTrainingGE": 2200,
+    "aceTrainingRP": 1780000,
+    "repairCost": {
+      "arcade": [
+        19994,
+        19994
+      ],
+      "realistic": [
+        21587,
+        21587
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 8.5,
+      "realistic": 12.0,
+      "simulator": 1.0
+    },
+    "expMultiplier": 2.14,
+    "freeRepairs": 30
+  }
+}

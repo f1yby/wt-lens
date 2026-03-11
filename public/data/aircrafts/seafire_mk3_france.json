@@ -1,0 +1,31 @@
+{
+  "id": "seafire_mk3_france",
+  "economy": {
+    "researchCost": 46000,
+    "purchaseCost": 155000,
+    "crewTraining": 45000,
+    "expertTraining": 155000,
+    "aceTrainingGE": 820,
+    "aceTrainingRP": 440000,
+    "repairCost": {
+      "arcade": [
+        2034,
+        2656
+      ],
+      "realistic": [
+        4794,
+        6076
+      ],
+      "simulator": [
+        6713,
+        8509
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.81,
+      "realistic": 1.95,
+      "simulator": 4.04
+    },
+    "expMultiplier": 1.6
+  }
+}

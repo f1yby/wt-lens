@@ -1,0 +1,33 @@
+{
+  "id": "meteor_fmk8_reaper",
+  "economy": {
+    "researchCost": 120000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 8380,
+    "crewTraining": 10000,
+    "expertTraining": 550000,
+    "aceTrainingGE": 1800,
+    "aceTrainingRP": 1550000,
+    "repairCost": {
+      "arcade": [
+        2338,
+        2338
+      ],
+      "realistic": [
+        6726,
+        6726
+      ],
+      "simulator": [
+        8349,
+        8349
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.6,
+      "realistic": 7.51,
+      "simulator": 12.0
+    },
+    "expMultiplier": 2.02,
+    "freeRepairs": 30
+  }
+}

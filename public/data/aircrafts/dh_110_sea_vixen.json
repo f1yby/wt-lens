@@ -1,0 +1,33 @@
+{
+  "id": "dh_110_sea_vixen",
+  "economy": {
+    "researchCost": 120000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 8560,
+    "crewTraining": 10000,
+    "expertTraining": 550000,
+    "aceTrainingGE": 1800,
+    "aceTrainingRP": 1600000,
+    "repairCost": {
+      "arcade": [
+        2376,
+        2376
+      ],
+      "realistic": [
+        5919,
+        5919
+      ],
+      "simulator": [
+        8510,
+        8510
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.6,
+      "realistic": 7.6,
+      "simulator": 12.0
+    },
+    "expMultiplier": 2.08,
+    "freeRepairs": 30
+  }
+}

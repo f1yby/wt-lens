@@ -1,0 +1,156 @@
+{
+  "id": "it_fiat_6616_cockerill",
+  "performance": {
+    "horsepower": 160.0,
+    "weight": 8.5,
+    "power_to_weight": 18.82,
+    "max_reverse_speed": 19.4,
+    "reload_time": 6.67,
+    "penetration": 250.0,
+    "max_speed": 100.0,
+    "crew_count": 5,
+    "elevation_speed": 10.0,
+    "traverse_speed": 30.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -9.0,
+      27.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 36.0,
+    "mainGun": {
+      "name": "90mm_Cockerill_Mk_3",
+      "caliber": 90.0,
+      "reloadTime": 6.67,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 8.67,
+        "expert": 7.67,
+        "ace": 6.67
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "90mm_m620a1",
+        "localizedName": "M620A1",
+        "type": "heat_fs_tank",
+        "caliber": 90.0,
+        "mass": 4.1,
+        "muzzleVelocity": 890.0,
+        "penetration0m": 250.0,
+        "explosiveMassKg": 0.56,
+        "explosiveType": "octol",
+        "tntEquivalent": 0.7
+      },
+      {
+        "name": "90mm_m618a1",
+        "localizedName": "M618A1",
+        "type": "smoke_tank",
+        "caliber": 90.0,
+        "mass": 5.3,
+        "muzzleVelocity": 714.0,
+        "explosiveMassKg": 0.05,
+        "explosiveType": "smoke_composition",
+        "tntEquivalent": 0.05
+      },
+      {
+        "name": "90mm_m625a1",
+        "localizedName": "M625A1",
+        "type": "hesh_tank",
+        "caliber": 90.0,
+        "mass": 4.5,
+        "muzzleVelocity": 800.0,
+        "penetration0m": 102.0,
+        "explosiveMassKg": 1.2,
+        "explosiveType": "comp_a",
+        "tntEquivalent": 1.512
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 3200.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 10,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      12.8,
+      18.0,
+      22.4,
+      31.6,
+      35.2,
+      49.5,
+      56.4,
+      71.1,
+      79.4,
+      100.0
+    ],
+    "reverse_gear_speeds": [
+      13.8,
+      19.4
+    ],
+    "steer_type": null,
+    "empty_weight": 8.0,
+    "track_width": 0.2,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_Beretta_MG42_59",
+        "caliber": 7.6,
+        "ammo": 800,
+        "reloadTime": 8.0,
+        "rateOfFire": 800,
+        "bulletType": "ap_ball"
+      }
+    ],
+    "main_gun_ammo": 28,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 71000,
+    "purchaseCost": 210000,
+    "crewTraining": 61000,
+    "expertTraining": 210000,
+    "aceTrainingGE": 890,
+    "aceTrainingRP": 570000,
+    "repairCost": {
+      "arcade": [
+        2666,
+        3869
+      ],
+      "realistic": [
+        3248,
+        4715
+      ],
+      "simulator": [
+        4359,
+        6327
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.19,
+      "realistic": 1.54,
+      "simulator": 2.0
+    },
+    "expMultiplier": 1.78
+  }
+}

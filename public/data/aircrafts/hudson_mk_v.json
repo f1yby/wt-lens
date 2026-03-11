@@ -1,0 +1,33 @@
+{
+  "id": "hudson_mk_v",
+  "economy": {
+    "researchCost": 7900,
+    "purchaseCost": 0,
+    "purchaseCostGold": 700,
+    "crewTraining": 2300,
+    "expertTraining": 15000,
+    "aceTrainingGE": 125,
+    "aceTrainingRP": 320000,
+    "repairCost": {
+      "arcade": [
+        458,
+        458
+      ],
+      "realistic": [
+        735,
+        735
+      ],
+      "simulator": [
+        675,
+        675
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.79,
+      "realistic": 1.75,
+      "simulator": 3.15
+    },
+    "expMultiplier": 1.12,
+    "freeRepairs": 30
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "id": "il_2_m82",
+  "economy": {
+    "researchCost": 26000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 1450,
+    "crewTraining": 10000,
+    "expertTraining": 115000,
+    "aceTrainingGE": 500,
+    "aceTrainingRP": 640000,
+    "repairCost": {
+      "arcade": [
+        623,
+        623
+      ],
+      "realistic": [
+        1629,
+        1629
+      ],
+      "simulator": [
+        1752,
+        1752
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.38,
+      "realistic": 3.29,
+      "simulator": 5.72
+    },
+    "expMultiplier": 1.42,
+    "freeRepairs": 30
+  }
+}

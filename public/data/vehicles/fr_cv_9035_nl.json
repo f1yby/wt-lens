@@ -1,0 +1,204 @@
+{
+  "id": "fr_cv_9035_nl",
+  "performance": {
+    "horsepower": 815.0,
+    "weight": 34.0,
+    "power_to_weight": 23.97,
+    "max_reverse_speed": 40.0,
+    "reload_time": 10.0,
+    "penetration": 131.3,
+    "max_speed": 70.0,
+    "crew_count": 5,
+    "elevation_speed": 23.3,
+    "traverse_speed": 34.9,
+    "has_stabilizer": true,
+    "stabilizer_type": "both",
+    "elevation_range": [
+      -8.0,
+      37.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": [
+      1200,
+      800
+    ],
+    "commander_thermal_resolution": [
+      1200,
+      800
+    ],
+    "gunner_thermal_diagonal": 1442.2,
+    "commander_thermal_diagonal": 1442.2,
+    "stabilizer_value": 1,
+    "elevation_range_value": 45.0,
+    "mainGun": {
+      "name": "35mm_bushmaster_3",
+      "caliber": 35.0,
+      "reloadTime": 10.0,
+      "autoLoader": true,
+      "reloadTimes": {
+        "base": 10.0,
+        "expert": 10.0,
+        "ace": 10.0
+      },
+      "rateOfFire": 200,
+      "beltReloadTime": 10.0
+    },
+    "ammunitions": [
+      {
+        "name": "35_228mm_apds_t",
+        "localizedName": "DM23",
+        "type": "apds_autocannon",
+        "caliber": 18.0,
+        "mass": 0.38,
+        "muzzleVelocity": 1400.0,
+        "deMarre": {
+          "fullCaliber": 35.0,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "isApcr": true,
+          "coreCaliber": 18.0,
+          "coreMass": 0.295,
+          "Cx": 0.25
+        },
+        "penetration0m": 134.5
+      },
+      {
+        "name": "35_228mm_aphe_i",
+        "localizedName": "DM13",
+        "type": "ap_i_t",
+        "caliber": 35.0,
+        "mass": 0.55,
+        "muzzleVelocity": 1175.0,
+        "deMarre": {
+          "fullCaliber": 35.0,
+          "isApcbc": false,
+          "explosiveMass": 0.022,
+          "Cx": 0.246
+        },
+        "penetration0m": 68.3,
+        "explosiveMassKg": 0.022,
+        "explosiveType": "hexal",
+        "tntEquivalent": 0.031
+      },
+      {
+        "name": "35_228mm_he_i_t",
+        "localizedName": "DM11A1",
+        "type": "he_i_t",
+        "caliber": 35.0,
+        "mass": 0.55,
+        "muzzleVelocity": 1175.0,
+        "explosiveMassKg": 0.12,
+        "explosiveType": "hexal",
+        "tntEquivalent": 0.168
+      },
+      {
+        "name": "35mm_pmc343",
+        "localizedName": "35 mm APDS-FS",
+        "type": "apds_fs_long_tank",
+        "caliber": 12.0,
+        "mass": 0.25,
+        "muzzleVelocity": 1400.0,
+        "lanzOdermatt": {
+          "workingLength": 145.0,
+          "density": 17500.0,
+          "material": "tungsten",
+          "Cx": 0.2522
+        },
+        "penetration0m": 131.3,
+        "penetrationData": {
+          "at0m": {
+            "angle0": 131.3,
+            "angle30": 113.7,
+            "angle60": 65.7
+          }
+        }
+      }
+    ],
+    "penetrationData": {
+      "at0m": {
+        "angle0": 131.3,
+        "angle30": 113.7,
+        "angle60": 65.7
+      }
+    },
+    "autoLoader": true,
+    "engine_manufacturer": "scania",
+    "engine_model": "ds_16",
+    "engine_type": null,
+    "engine_max_rpm": 2350.0,
+    "transmission_manufacturer": "perkins",
+    "transmission_model": "x_300",
+    "transmission_type": "auto",
+    "forward_gears": 8,
+    "reverse_gears": 4,
+    "forward_gear_speeds": [
+      6.2,
+      16.8,
+      24.7,
+      35.0,
+      45.8,
+      54.7,
+      63.7,
+      70.0
+    ],
+    "reverse_gear_speeds": [
+      6.2,
+      16.8,
+      24.7,
+      40.0
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 33.0,
+    "track_width": 0.533,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_FN_MAG60_40",
+        "caliber": 7.6,
+        "ammo": 4000,
+        "reloadTime": 8.0,
+        "rateOfFire": 1000,
+        "bulletType": "ap_ball"
+      }
+    ],
+    "main_gun_ammo": 210,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": true
+  },
+  "economy": {
+    "researchCost": 540000,
+    "purchaseCost": 870000,
+    "crewTraining": 240000,
+    "expertTraining": 830000,
+    "aceTrainingGE": 2100,
+    "aceTrainingRP": 1140000,
+    "repairCost": {
+      "arcade": [
+        3552,
+        5941
+      ],
+      "realistic": [
+        3387,
+        5663
+      ],
+      "simulator": [
+        4525,
+        7567
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.41,
+      "realistic": 1.77,
+      "simulator": 2.29
+    },
+    "expMultiplier": 2.38
+  }
+}

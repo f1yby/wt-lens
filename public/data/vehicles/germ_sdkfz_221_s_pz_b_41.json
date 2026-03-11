@@ -1,0 +1,120 @@
+{
+  "id": "germ_sdkfz_221_s_pz_b_41",
+  "performance": {
+    "horsepower": 75.0,
+    "weight": 4.0,
+    "power_to_weight": 18.75,
+    "max_reverse_speed": 15.0,
+    "reload_time": 3.0,
+    "penetration": 87.0,
+    "max_speed": 80.0,
+    "crew_count": 5,
+    "elevation_speed": 20.0,
+    "traverse_speed": 35.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "vertical",
+    "elevation_range": [
+      -10.0,
+      20.0
+    ],
+    "traverse_range": [
+      -20.0,
+      2.5
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 30.0,
+    "mainGun": {
+      "name": "28_20mm_s_Pz_B_41",
+      "caliber": 20.0,
+      "reloadTime": 3.0,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 3.9,
+        "expert": 3.45,
+        "ace": 3.0
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "28_20mm_pzgr41",
+        "localizedName": "2.8/2cm Pzgr.41",
+        "type": "apcr_tank",
+        "caliber": 11.0,
+        "mass": 0.124,
+        "muzzleVelocity": 1400.0,
+        "deMarre": {
+          "fullCaliber": 20.0,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "isApcr": true,
+          "coreCaliber": 11.0,
+          "coreMass": 0.05,
+          "Cx": 0.3219
+        },
+        "penetration0m": 87.0
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 3600.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 5,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      13.1,
+      20.1,
+      34.1,
+      54.1,
+      80.0
+    ],
+    "reverse_gear_speeds": [
+      15.0
+    ],
+    "steer_type": null,
+    "empty_weight": 3.9,
+    "track_width": 0.2,
+    "secondary_weapons": null,
+    "main_gun_ammo": 60,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 2000,
+    "purchaseCost": 2100,
+    "crewTraining": 600,
+    "expertTraining": 2100,
+    "aceTrainingGE": 45,
+    "aceTrainingRP": 110000,
+    "repairCost": {
+      "arcade": [
+        170,
+        221
+      ],
+      "realistic": [
+        194,
+        251
+      ],
+      "simulator": [
+        223,
+        289
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.14,
+      "realistic": 0.19,
+      "simulator": 0.25
+    },
+    "expMultiplier": 1.0
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "id": "itp_m1",
+  "economy": {
+    "researchCost": 18000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 1300,
+    "crewTraining": 10000,
+    "expertTraining": 67000,
+    "aceTrainingGE": 400,
+    "aceTrainingRP": 570000,
+    "repairCost": {
+      "arcade": [
+        844,
+        844
+      ],
+      "realistic": [
+        1812,
+        1812
+      ],
+      "simulator": [
+        1721,
+        1721
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.14,
+      "realistic": 2.81,
+      "simulator": 5.44
+    },
+    "expMultiplier": 1.36,
+    "freeRepairs": 30
+  }
+}

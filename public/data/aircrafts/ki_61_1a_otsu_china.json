@@ -1,0 +1,31 @@
+{
+  "id": "ki_61_1a_otsu_china",
+  "economy": {
+    "researchCost": 26000,
+    "purchaseCost": 76000,
+    "crewTraining": 22000,
+    "expertTraining": 76000,
+    "aceTrainingGE": 500,
+    "aceTrainingRP": 320000,
+    "repairCost": {
+      "arcade": [
+        1003,
+        1298
+      ],
+      "realistic": [
+        2190,
+        2751
+      ],
+      "simulator": [
+        3156,
+        3965
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.6,
+      "realistic": 1.48,
+      "simulator": 3.08
+    },
+    "expMultiplier": 1.42
+  }
+}
