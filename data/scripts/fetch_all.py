@@ -1209,7 +1209,7 @@ def fetch_all_aircraft(copy_images: bool = True) -> list[dict[str, Any]]:
         if data:
             aircraft_list.append(data)
             success_count += 1
-            if copy_images and (data.get('imageUrl') or '').startswith('aircrafts/'):
+            if copy_images and (data.get('imageUrl') or '').startswith('images/aircrafts/'):
                 image_copied += 1
         else:
             fail_count += 1
@@ -1257,12 +1257,12 @@ def copy_ship_image(vehicle_id: str) -> str | None:
         PUBLIC_SHIP_PATH.mkdir(parents=True, exist_ok=True)
         dest_path = PUBLIC_SHIP_PATH / f"{vehicle_id}.webp"
         if convert_png_to_webp(source_path, dest_path):
-            return f"ships/{vehicle_id}.webp"
+            return f"images/ships/{vehicle_id}.webp"
         
         # Fallback to PNG
         dest_path_png = PUBLIC_SHIP_PATH / f"{vehicle_id}.png"
         shutil.copy2(source_path, dest_path_png)
-        return f"ships/{vehicle_id}.png"
+        return f"images/ships/{vehicle_id}.png"
     except (IOError, shutil.Error) as e:
         print(f"Error copying image for {vehicle_id}: {e}")
         return None
@@ -1391,7 +1391,7 @@ def fetch_all_ships(copy_images: bool = True) -> list[dict[str, Any]]:
         if data:
             ship_list.append(data)
             success_count += 1
-            if copy_images and (data.get('imageUrl') or '').startswith('ships/'):
+            if copy_images and (data.get('imageUrl') or '').startswith('images/ships/'):
                 image_copied += 1
         else:
             fail_count += 1

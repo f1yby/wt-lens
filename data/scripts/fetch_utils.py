@@ -49,9 +49,9 @@ SHIP_IMAGES_PATH = Path(__file__).parent.parent / "datamine" / "tex.vromfs.bin_u
 FLAG_IMAGES_PATH = Path(__file__).parent.parent / "datamine" / "images.vromfs.bin_u" / "images" / "flags" / "unit_tooltip"
 
 # Public output paths
-PUBLIC_VEHICLES_PATH = Path(__file__).parent.parent.parent / "public" / "vehicles"
-PUBLIC_AIRCRAFT_PATH = Path(__file__).parent.parent.parent / "public" / "aircrafts"
-PUBLIC_SHIP_PATH = Path(__file__).parent.parent.parent / "public" / "ships"
+PUBLIC_VEHICLES_PATH = Path(__file__).parent.parent.parent / "public" / "images" / "vehicles"
+PUBLIC_AIRCRAFT_PATH = Path(__file__).parent.parent.parent / "public" / "images" / "aircrafts"
+PUBLIC_SHIP_PATH = Path(__file__).parent.parent.parent / "public" / "images" / "ships"
 PUBLIC_FLAGS_PATH = Path(__file__).parent.parent.parent / "public" / "images" / "flags" / "unit_tooltip"
 PUBLIC_DATA_PATH = Path(__file__).parent.parent.parent / "public" / "data"
 

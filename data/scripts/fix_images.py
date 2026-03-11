@@ -1,14 +1,13 @@
 """Fix missing or empty vehicle/aircraft/ship images.
 
-Scans public/ directories for missing or 0-byte webp files,
+Scans public/images/ directories for missing or 0-byte webp files,
 regenerates them from datamine source PNGs.
-Also patches JSON data files to restore imageUrl fields.
+Also patches JSON index files to restore imageUrl fields.
 
-Ground vehicles use split format (vehicles-index.json + vehicles/{id}.json).
-Aircraft and ships still use monolithic JSON files.
+All categories use split format (xxx-index.json + xxx/{id}.json).
+All images are under public/images/{category}/.
 """
 import json
-import os
 import sys
 from pathlib import Path
 
@@ -27,24 +26,28 @@ TANK_FALLBACKS = [
     DATAMINE / "atlases.vromfs.bin_u" / "units",
 ]
 
-# (json_file, image_subdir, datamine_source_dir, id_key, image_key, url_prefix)
-# Only aircraft and ships still use monolithic format
-MONOLITHIC_CATEGORIES = [
+# (index_file, image_subdir, datamine_source_dir, url_prefix, fallbacks)
+CATEGORIES = [
     (
-        PUBLIC / "data" / "aircraft.json",
-        PUBLIC / "aircrafts",
-        DATAMINE / "tex.vromfs.bin_u" / "aircraft",
-        "id",
-        "imageUrl",
-        "aircrafts",
+        "vehicles-index.json",
+        "vehicles",
+        DATAMINE / "tex.vromfs.bin_u" / "tanks",
+        "images/vehicles",
+        TANK_FALLBACKS,
     ),
     (
-        PUBLIC / "data" / "ships.json",
-        PUBLIC / "ships",
-        DATAMINE / "tex.vromfs.bin_u" / "ships",
-        "id",
-        "imageUrl",
+        "aircraft-index.json",
+        "aircrafts",
+        DATAMINE / "tex.vromfs.bin_u" / "aircraft",
+        "images/aircrafts",
+        [],
+    ),
+    (
+        "ships-index.json",
         "ships",
+        DATAMINE / "tex.vromfs.bin_u" / "ships",
+        "images/ships",
+        [],
     ),
 ]
 
@@ -60,15 +63,13 @@ def convert_png_to_webp(src: Path, dst: Path, quality: int = 85) -> bool:
         return False
 
 
-def fix_ground_vehicles():
-    """Fix ground vehicle images using split format (vehicles-index.json + vehicles/*.json)."""
-    index_path = PUBLIC / "data" / "vehicles-index.json"
-    vehicles_dir = PUBLIC / "data" / "vehicles"
-    image_dir = PUBLIC / "vehicles"
-    source_dir = DATAMINE / "tex.vromfs.bin_u" / "tanks"
+def fix_category(index_file: str, image_subdir: str, source_dir: Path, url_prefix: str, fallbacks: list[Path]):
+    """Fix images for a category using split index format."""
+    index_path = PUBLIC / "data" / index_file
+    image_dir = PUBLIC / "images" / image_subdir
 
     if not index_path.exists():
-        print(f"  Skipping ground vehicles ({index_path} not found)")
+        print(f"  Skipping ({index_path} not found)")
         return
 
     with open(index_path, "r", encoding="utf-8") as f:
@@ -76,7 +77,6 @@ def fix_ground_vehicles():
 
     fixed_images = 0
     fixed_index = 0
-    fixed_detail = 0
     missing_source = 0
 
     for item in index_data:
@@ -85,7 +85,7 @@ def fix_ground_vehicles():
             continue
 
         webp_path = image_dir / f"{vid}.webp"
-        expected_url = f"vehicles/{vid}.webp"
+        expected_url = f"{url_prefix}/{vid}.webp"
 
         # Check if webp exists and is non-empty
         needs_image = not webp_path.exists() or webp_path.stat().st_size == 0
@@ -95,7 +95,7 @@ def fix_ground_vehicles():
             src = source_dir / f"{vid}.png"
             if not src.exists():
                 # Try fallbacks
-                for fb in TANK_FALLBACKS:
+                for fb in fallbacks:
                     candidate = fb / f"{vid}.png"
                     if candidate.exists():
                         src = candidate
@@ -124,69 +124,13 @@ def fix_ground_vehicles():
         print(f"  No source PNG found: {missing_source}")
 
 
-def fix_category(json_path, image_dir, source_dir, id_key, image_key, url_prefix):
-    """Fix images for monolithic JSON categories (aircraft, ships)."""
-    if not json_path.exists():
-        print(f"  Skipping {json_path} (not found)")
-        return
-
-    with open(json_path, "r", encoding="utf-8") as f:
-        data = json.load(f)
-
-    fixed_images = 0
-    fixed_json = 0
-    missing_source = 0
-
-    for item in data:
-        vid = item.get(id_key, "")
-        if not vid:
-            continue
-
-        webp_path = image_dir / f"{vid}.webp"
-        expected_url = f"{url_prefix}/{vid}.webp"
-
-        # Check if webp exists and is non-empty
-        needs_image = not webp_path.exists() or webp_path.stat().st_size == 0
-
-        if needs_image:
-            # Try primary source
-            src = source_dir / f"{vid}.png"
-            if src.exists():
-                if convert_png_to_webp(src, webp_path):
-                    fixed_images += 1
-            else:
-                missing_source += 1
-
-        # Fix JSON imageUrl field
-        if webp_path.exists() and webp_path.stat().st_size > 0:
-            if item.get(image_key) != expected_url:
-                item[image_key] = expected_url
-                fixed_json += 1
-
-    # Save JSON if modified
-    if fixed_json > 0:
-        with open(json_path, "w", encoding="utf-8") as f:
-            json.dump(data, f, ensure_ascii=False, separators=(",", ":"))
-
-    print(f"  Images regenerated: {fixed_images}")
-    print(f"  JSON fields fixed: {fixed_json}")
-    if missing_source:
-        print(f"  No source PNG found: {missing_source}")
-
-
 def main():
     print("=== Fixing missing/empty vehicle images ===\n")
 
-    # Ground vehicles (split format)
-    print("[VEHICLES]")
-    fix_ground_vehicles()
-    print()
-
-    # Aircraft and ships (monolithic format)
-    for json_path, image_dir, source_dir, id_key, image_key, url_prefix in MONOLITHIC_CATEGORIES:
-        label = url_prefix.upper()
+    for index_file, image_subdir, source_dir, url_prefix, fallbacks in CATEGORIES:
+        label = image_subdir.upper()
         print(f"[{label}]")
-        fix_category(json_path, image_dir, source_dir, id_key, image_key, url_prefix)
+        fix_category(index_file, image_subdir, source_dir, url_prefix, fallbacks)
         print()
 
     print("Done!")
