@@ -10,6 +10,47 @@ import {
 import type { Vehicle, Ammunition } from '../types';
 import { sortAmmunitionByPriority } from '../utils/ammoUtils';
 
+/** Generate Lanz-Odermatt calculator URL from ammo data */
+function generateLOUrl(ammo: Ammunition, vehicleName: string): string | null {
+  if (!ammo.lanzOdermatt) return null;
+  const lo = ammo.lanzOdermatt;
+  const params = new URLSearchParams({
+    wl: lo.workingLength.toString(),
+    density: lo.density.toString(),
+    caliber: ammo.caliber.toString(),
+    mass: ammo.mass.toString(),
+    cx: (lo.Cx || 0).toString(),
+    velocity: (ammo.muzzleVelocity / 1000).toFixed(3),
+    gamePen: (ammo.penetration0m ?? 0).toString(),
+    vehicle: vehicleName,
+    ammo: ammo.localizedName ?? ammo.name,
+  });
+  return `/lo-calculator?${params.toString()}`;
+}
+
+/** Generate de Marre calculator URL from ammo data */
+function generateDeMarreUrl(ammo: Ammunition, vehicleName: string): string | null {
+  if (!ammo.deMarre) return null;
+  const dm = ammo.deMarre;
+  const p: Record<string, string> = {
+    caliber: dm.fullCaliber.toString(),
+    mass: ammo.mass.toString(),
+    velocity: ammo.muzzleVelocity.toString(),
+    explosive: dm.explosiveMass.toString(),
+    apcbc: dm.isApcbc ? '1' : '0',
+    cx: (dm.Cx || 0.3).toString(),
+    gamePen: (ammo.penetration0m ?? 0).toString(),
+    vehicle: vehicleName,
+    ammo: ammo.localizedName ?? ammo.name,
+  };
+  if (dm.isApcr) {
+    p.apcr = '1';
+    if (dm.coreCaliber) p.coreCaliber = dm.coreCaliber.toString();
+    if (dm.coreMass) p.coreMass = dm.coreMass.toString();
+  }
+  return `/demarre-calculator?${new URLSearchParams(p).toString()}`;
+}
+
 /** Ammo type display names (keyed by raw bulletType from datamine) */
 const AMMO_TYPE_LABELS: Record<string, string> = {
   // ── APFSDS family ──
@@ -300,11 +341,22 @@ function ValueChip({
 }
 
 /** Ammo table row */
-function AmmoRow({ ammo }: { ammo: Ammunition }) {
+function AmmoRow({ ammo, vehicleName, onNavigate }: { ammo: Ammunition; vehicleName?: string; onNavigate?: (url: string) => void }) {
   const typeLabel = AMMO_TYPE_LABELS[ammo.type] ?? ammo.type;
   const typeColor = AMMO_TYPE_COLORS[ammo.type] ?? '#6b7280';
   const pen = ammo.penetration0m;
   const tnt = ammo.tntEquivalent;
+
+  // Determine calculator link
+  const calcUrl = vehicleName
+    ? (generateLOUrl(ammo, vehicleName) ?? generateDeMarreUrl(ammo, vehicleName))
+    : null;
+  const calcLabel = ammo.lanzOdermatt ? 'L-O' : ammo.deMarre ? 'de Marre' : null;
+  const calcColor = ammo.lanzOdermatt ? '#16a34a' : '#2563eb';
+
+  const handlePenClick = () => {
+    if (calcUrl && onNavigate) onNavigate(calcUrl);
+  };
 
   return (
     <Box sx={{
@@ -343,20 +395,42 @@ function AmmoRow({ ammo }: { ammo: Ammunition }) {
       </Typography>
       <Box sx={{ display: 'flex', gap: 1, flexShrink: 0, alignItems: 'center' }}>
         {pen != null && pen > 0 ? (
-          <Tooltip title={`穿深 @ 0m / 0°`} arrow>
-            <Box sx={{
-              display: 'inline-flex',
-              alignItems: 'baseline',
-              gap: 0.3,
-              backgroundColor: `${typeColor}10`,
-              borderRadius: 1,
-              px: 0.75,
-              py: 0.2,
-            }}>
+          <Tooltip title={calcLabel ? `穿深 @ 0m / 0° (${calcLabel}) — 点击打开计算器` : `穿深 @ 0m / 0°`} arrow>
+            <Box
+              onClick={calcUrl ? handlePenClick : undefined}
+              sx={{
+                display: 'inline-flex',
+                alignItems: 'baseline',
+                gap: 0.3,
+                backgroundColor: `${typeColor}10`,
+                borderRadius: 1,
+                px: 0.75,
+                py: 0.2,
+                ...(calcUrl ? {
+                  cursor: 'pointer',
+                  transition: 'all 0.15s',
+                  '&:hover': {
+                    backgroundColor: `${typeColor}20`,
+                    boxShadow: `0 0 0 1px ${typeColor}40`,
+                  },
+                } : {}),
+              }}
+            >
               <Typography sx={{ color: typeColor, fontWeight: 700, fontSize: '0.8rem', fontFamily: 'monospace' }}>
                 {Math.round(pen)}
               </Typography>
               <Typography sx={{ color: '#9ca3af', fontSize: '0.6rem' }}>mm</Typography>
+              {calcLabel && (
+                <Typography sx={{
+                  color: calcColor,
+                  fontSize: '0.5rem',
+                  fontWeight: 600,
+                  ml: 0.3,
+                  opacity: 0.7,
+                }}>
+                  {calcLabel}
+                </Typography>
+              )}
             </Box>
           </Tooltip>
         ) : tnt != null && tnt > 0 ? (
@@ -391,9 +465,11 @@ function AmmoRow({ ammo }: { ammo: Ammunition }) {
 
 interface ArmamentsSectionProps {
   performance: Vehicle['performance'];
+  vehicleName?: string;
+  onNavigate?: (url: string) => void;
 }
 
-export default function ArmamentsSection({ performance: perf }: ArmamentsSectionProps) {
+export default function ArmamentsSection({ performance: perf, vehicleName, onNavigate }: ArmamentsSectionProps) {
   const mainGun = perf.mainGun;
   const ammunitions = perf.ammunitions;
   const hasSecondary = perf.secondaryWeapons && perf.secondaryWeapons.length > 0;
@@ -554,7 +630,7 @@ export default function ArmamentsSection({ performance: perf }: ArmamentsSection
                     可用弹药
                   </Typography>
                   {sortAmmunitionByPriority(ammunitions).map((ammo, i) => (
-                    <AmmoRow key={`${ammo.name}-${i}`} ammo={ammo} />
+                    <AmmoRow key={`${ammo.name}-${i}`} ammo={ammo} vehicleName={vehicleName} onNavigate={onNavigate} />
                   ))}
                 </Box>
               </>
@@ -602,12 +678,12 @@ export default function ArmamentsSection({ performance: perf }: ArmamentsSection
             {/* Details — show only if we have meaningful data */}
             {(isRich || (w.rateOfFire && w.rateOfFire > 0)) && (
               <Box sx={{ px: 0.5, py: 0.5 }}>
-                {/* Type + Penetration row */}
-                {(typeLabel || w.penetration) && (
+                {/* Type + Guidance + Penetration row */}
+                {(typeLabel || w.penetration || w.guidanceType) && (
                   <Box sx={{
                     display: 'flex',
                     alignItems: 'center',
-                    gap: 1.5,
+                    gap: 1,
                     py: 0.75,
                     px: 1.5,
                   }}>
@@ -621,6 +697,19 @@ export default function ArmamentsSection({ performance: perf }: ArmamentsSection
                           fontWeight: 700,
                           backgroundColor: `${typeColor}15`,
                           color: typeColor,
+                        }}
+                      />
+                    )}
+                    {w.guidanceType && (
+                      <Chip
+                        label={GUIDANCE_LABELS[w.guidanceType] ?? w.guidanceType}
+                        size="small"
+                        sx={{
+                          height: 20,
+                          fontSize: '0.6rem',
+                          fontWeight: 600,
+                          backgroundColor: 'rgba(107,114,128,0.1)',
+                          color: '#6b7280',
                         }}
                       />
                     )}
@@ -641,8 +730,8 @@ export default function ArmamentsSection({ performance: perf }: ArmamentsSection
                   </Box>
                 )}
 
-                {/* Guidance + Range row (missiles/rockets only) */}
-                {(w.guidanceType || w.maxDistance) && (
+                {/* Range + Speed row (missiles/rockets only, when no guidance to merge) */}
+                {(w.maxDistance || w.maxSpeed) && (
                   <Box sx={{
                     display: 'flex',
                     alignItems: 'center',
@@ -650,19 +739,6 @@ export default function ArmamentsSection({ performance: perf }: ArmamentsSection
                     py: 0.5,
                     px: 1.5,
                   }}>
-                    {w.guidanceType && (
-                      <Chip
-                        label={GUIDANCE_LABELS[w.guidanceType] ?? w.guidanceType}
-                        size="small"
-                        sx={{
-                          height: 18,
-                          fontSize: '0.6rem',
-                          fontWeight: 600,
-                          backgroundColor: 'rgba(107,114,128,0.1)',
-                          color: '#6b7280',
-                        }}
-                      />
-                    )}
                     <Box sx={{ ml: 'auto', display: 'flex', gap: 1, alignItems: 'center' }}>
                       {w.maxDistance && w.maxDistance > 0 && (
                         <ValueChip

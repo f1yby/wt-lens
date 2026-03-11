@@ -490,7 +490,7 @@ export default function VehicleDetailPage() {
             <MobilitySection performance={vehicle.performance} />
           </Grid>
           <Grid item xs={12} md={4}>
-            <ArmamentsSection performance={vehicle.performance} />
+            <ArmamentsSection performance={vehicle.performance} vehicleName={vehicle.localizedName} onNavigate={(url) => navigate(url)} />
           </Grid>
           <Grid item xs={12} md={4}>
             <OpticsSection performance={vehicle.performance} />
