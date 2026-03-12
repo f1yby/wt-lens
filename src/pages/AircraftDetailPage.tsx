@@ -152,7 +152,7 @@ export default function AircraftDetailPage() {
         setEconomyData(detail.economy);
       }
     });
-  }, [aircraft?.id]);
+  }, [aircraft]);
 
   // Default selectedTypes to current aircraft's type
   useEffect(() => {

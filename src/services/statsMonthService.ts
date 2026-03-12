@@ -134,7 +134,6 @@ export function initStatsMonthService(stats: StatSharkEntry[]): void {
   if (cachedMonths.length > 0) {
     // 默认使用最新月份
     cachedDefaultMonth = cachedMonths[cachedMonths.length - 1].id;
-    console.log(`[statsMonthService] Initialized with ${cachedMonths.length} months, default: ${cachedDefaultMonth}`);
   } else {
     console.warn('[statsMonthService] No months found in stats data');
     cachedDefaultMonth = null;

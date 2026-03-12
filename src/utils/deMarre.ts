@@ -95,9 +95,9 @@ export interface DeMarreAPCRParams {
  * Returns penetration in mm at 0° angle.
  */
 export function calculateDeMarreAPCR(params: DeMarreAPCRParams): number {
-  let { coreCaliberMm, shellMassKg, coreMassKg, velocityMs } = params;
-  if (coreCaliberMm <= 0 || shellMassKg <= 0 || coreMassKg <= 0 || velocityMs <= 0) return 0;
-  if (coreMassKg >= shellMassKg) coreMassKg = shellMassKg * 0.95;
+  const { coreCaliberMm, shellMassKg, coreMassKg: rawCoreMassKg, velocityMs } = params;
+  if (coreCaliberMm <= 0 || shellMassKg <= 0 || rawCoreMassKg <= 0 || velocityMs <= 0) return 0;
+  const coreMassKg = rawCoreMassKg >= shellMassKg ? shellMassKg * 0.95 : rawCoreMassKg;
 
   const palletMass = shellMassKg - coreMassKg;
   const corePercent = (coreMassKg / shellMassKg) * 100;
