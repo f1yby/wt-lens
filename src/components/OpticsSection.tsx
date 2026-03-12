@@ -128,6 +128,10 @@ export default function OpticsSection({ performance: perf }: OpticsSectionProps)
   const gunnerGen = getThermalGen(gunnerThermalRes);
   const commanderGen = getThermalGen(commanderThermalRes);
 
+  // Fallback: detect smoke grenades from secondary weapons if flag is missing
+  const hasSmokeGrenades = (perf.hasSmokeGrenades ?? false)
+    || (perf.secondaryWeapons?.some(w => w.name.toLowerCase().includes('smoke_grenade')) ?? false);
+
   return (
     <Paper
       elevation={0}
@@ -247,7 +251,7 @@ export default function OpticsSection({ performance: perf }: OpticsSectionProps)
             label="激光测距仪"
           />
           <FeatureChip
-            hasFeature={perf.hasSmokeGrenades ?? false}
+            hasFeature={hasSmokeGrenades}
             label="烟雾弹"
           />
           <FeatureChip

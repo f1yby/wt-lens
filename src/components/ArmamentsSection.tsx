@@ -469,10 +469,42 @@ interface ArmamentsSectionProps {
   onNavigate?: (url: string) => void;
 }
 
+/** Group identical secondary weapons together, showing "×N" instead of duplicates */
+function groupSecondaryWeapons(
+  weapons: NonNullable<ArmamentsSectionProps['performance']['secondaryWeapons']>
+): { weapon: (typeof weapons)[number]; count: number; totalAmmo: number }[] {
+  const groups: { weapon: (typeof weapons)[number]; count: number; totalAmmo: number }[] = [];
+
+  for (const w of weapons) {
+    // Two weapons are "identical" when these core attributes match
+    const existing = groups.find(
+      (g) =>
+        g.weapon.name === w.name &&
+        g.weapon.caliber === w.caliber &&
+        g.weapon.bulletType === w.bulletType &&
+        g.weapon.rateOfFire === w.rateOfFire &&
+        g.weapon.penetration === w.penetration &&
+        g.weapon.guidanceType === w.guidanceType &&
+        g.weapon.maxDistance === w.maxDistance &&
+        g.weapon.maxSpeed === w.maxSpeed,
+    );
+
+    if (existing) {
+      existing.count += 1;
+      existing.totalAmmo += w.ammo;
+    } else {
+      groups.push({ weapon: w, count: 1, totalAmmo: w.ammo });
+    }
+  }
+
+  return groups;
+}
+
 export default function ArmamentsSection({ performance: perf, vehicleName, onNavigate }: ArmamentsSectionProps) {
   const mainGun = perf.mainGun;
   const ammunitions = perf.ammunitions;
   const hasSecondary = perf.secondaryWeapons && perf.secondaryWeapons.length > 0;
+  const groupedSecondary = hasSecondary ? groupSecondaryWeapons(perf.secondaryWeapons!) : [];
 
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1.5 }}>
@@ -646,7 +678,7 @@ export default function ArmamentsSection({ performance: perf, vehicleName, onNav
           gridTemplateColumns: { xs: '1fr', sm: 'repeat(2, 1fr)' },
           gap: 1.5,
         }}>
-      {perf.secondaryWeapons!.map((w, i) => {
+      {groupedSecondary.map(({ weapon: w, count, totalAmmo }, i) => {
         const isRich = !!(w.penetration || w.maxDistance || w.guidanceType);
         const typeLabel = w.bulletType ? (AMMO_TYPE_LABELS[w.bulletType] ?? w.bulletType) : '';
         const typeColor = w.bulletType ? (AMMO_TYPE_COLORS[w.bulletType] ?? '#737373') : '#737373';
@@ -676,8 +708,22 @@ export default function ArmamentsSection({ performance: perf, vehicleName, onNav
               <Typography sx={{ fontWeight: 600, color: '#171717', fontSize: '0.95rem', flex: 1 }}>
                 {formatWeaponName(w.name)}
               </Typography>
-              {w.ammo > 0 && (
-                <ValueChip value={`${w.ammo.toLocaleString()}`} suffix="发" color="#525252" />
+              {count > 1 && (
+                <Chip
+                  label={`×${count}`}
+                  size="small"
+                  sx={{
+                    height: 22,
+                    fontSize: '0.75rem',
+                    fontWeight: 700,
+                    backgroundColor: 'rgba(37,99,235,0.1)',
+                    color: '#2563eb',
+                    minWidth: 32,
+                  }}
+                />
+              )}
+              {totalAmmo > 0 && (
+                <ValueChip value={`${totalAmmo.toLocaleString()}`} suffix="发" color="#525252" />
               )}
             </Box>
 

@@ -750,6 +750,14 @@ def parse_tankmodel_data(data: TankModelData) -> VehiclePerformance | None:
     if secondary_list:
         perf.secondary_weapons = secondary_list
 
+    # Supplement smoke grenade detection from secondary weapons
+    # Some vehicles have pre-installed smoke launchers not listed in modifications
+    if not perf.has_smoke_grenades and secondary_list:
+        perf.has_smoke_grenades = any(
+            'smoke_grenade' in w.get('name', '').lower()
+            for w in secondary_list
+        )
+
     return perf
 
 
@@ -1623,8 +1631,6 @@ Examples:
         
         # Save split format (index + per-vehicle files)
         save_ground_vehicles_split(ground_vehicles, PUBLIC_DATA_PATH)
-        
-        save_performance_cache(ground_vehicles, PUBLIC_DATA_PATH / "vehicle_performance.json")
         
         # Copy nation flags
         flags_copied = copy_nation_flags()
