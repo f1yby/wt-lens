@@ -191,6 +191,58 @@ export async function loadStatsIndex(): Promise<StatsIndexEntry[]> {
 }
 
 /**
+ * Convert raw snake_case performance data to camelCase Vehicle['performance']
+ */
+function convertPerformance(raw: DatamineEntry['performance']): Vehicle['performance'] {
+  return {
+    horsepower: raw.horsepower ?? 0,
+    weight: raw.weight ?? 0,
+    powerToWeight: raw.power_to_weight ?? 0,
+    maxReverseSpeed: raw.max_reverse_speed ?? 0,
+    reloadTime: raw.reload_time ?? 0,
+    penetration: raw.penetration ?? 0,
+    maxSpeed: raw.max_speed ?? 0,
+    crewCount: raw.crew_count ?? 0,
+    elevationSpeed: raw.elevation_speed ?? 0,
+    traverseSpeed: raw.traverse_speed ?? 0,
+    hasStabilizer: raw.has_stabilizer ?? false,
+    stabilizerType: (raw.stabilizer_type as 'none' | 'horizontal' | 'vertical' | 'both') ?? 'none',
+    elevationRange: (raw.elevation_range as [number, number]) ?? [0, 0],
+    traverseRange: (raw.traverse_range as [number, number]) ?? [0, 0],
+    gunnerThermalResolution: (raw.gunner_thermal_resolution as [number, number]) ?? [0, 0],
+    commanderThermalResolution: (raw.commander_thermal_resolution as [number, number]) ?? [0, 0],
+    gunnerThermalDiagonal: raw.gunner_thermal_diagonal ?? 0,
+    commanderThermalDiagonal: raw.commander_thermal_diagonal ?? 0,
+    stabilizerValue: raw.stabilizer_value ?? 0,
+    elevationRangeValue: raw.elevation_range_value ?? 0,
+    mainGun: raw.mainGun ?? undefined,
+    ammunitions: raw.ammunitions ?? undefined,
+    penetrationData: raw.penetrationData ?? undefined,
+    autoLoader: raw.autoLoader ?? undefined,
+    engineManufacturer: raw.engine_manufacturer ?? undefined,
+    engineModel: raw.engine_model ?? undefined,
+    engineType: raw.engine_type ?? undefined,
+    engineMaxRpm: raw.engine_max_rpm ?? undefined,
+    transmissionManufacturer: raw.transmission_manufacturer ?? undefined,
+    transmissionModel: raw.transmission_model ?? undefined,
+    transmissionType: raw.transmission_type ?? undefined,
+    forwardGears: raw.forward_gears ?? undefined,
+    reverseGears: raw.reverse_gears ?? undefined,
+    forwardGearSpeeds: raw.forward_gear_speeds ?? undefined,
+    reverseGearSpeeds: raw.reverse_gear_speeds ?? undefined,
+    steerType: raw.steer_type ?? undefined,
+    emptyWeight: raw.empty_weight ?? undefined,
+    trackWidth: raw.track_width ?? undefined,
+    secondaryWeapons: raw.secondary_weapons ?? undefined,
+    mainGunAmmo: raw.main_gun_ammo ?? undefined,
+    driverNvResolution: raw.driver_nv_resolution as [number, number] ?? undefined,
+    hasSmokeGrenades: raw.has_smoke_grenades ?? undefined,
+    hasEss: raw.has_ess ?? undefined,
+    hasLaserRangefinder: raw.has_laser_rangefinder ?? undefined,
+  };
+}
+
+/**
  * Load individual vehicle detail (performance + economy)
  */
 export async function loadVehicleDetail(vehicleId: string): Promise<VehicleDetailEntry | null> {
@@ -205,7 +257,13 @@ export async function loadVehicleDetail(vehicleId: string): Promise<VehicleDetai
       console.warn(`Failed to load vehicle detail for ${vehicleId}: ${response.status}`);
       return null;
     }
-    const detail: VehicleDetailEntry = await response.json();
+    const raw = await response.json();
+    // Convert snake_case performance fields to camelCase
+    const detail: VehicleDetailEntry = {
+      id: raw.id,
+      performance: convertPerformance(raw.performance ?? {}),
+      economy: raw.economy,
+    };
     vehicleDetailCache.set(vehicleId, detail);
     return detail;
   } catch (error) {
@@ -292,55 +350,7 @@ function mergeVehicleData(stats: StatSharkEntry[], datamine: DatamineEntry[], ra
       br: datamineEntry.br,
       vehicleType: datamineEntry.vehicle_type as Vehicle['vehicleType'],
       economicType: (datamineEntry.economic_type as Vehicle['economicType']) ?? 'regular',
-      performance: {
-        horsepower: datamineEntry.performance.horsepower ?? 0,
-        weight: datamineEntry.performance.weight ?? 0,
-        powerToWeight: datamineEntry.performance.power_to_weight ?? 0,
-        maxReverseSpeed: datamineEntry.performance.max_reverse_speed ?? 0,
-        reloadTime: datamineEntry.performance.reload_time ?? 0,
-        penetration: datamineEntry.performance.penetration ?? 0,
-        maxSpeed: datamineEntry.performance.max_speed ?? 0,
-        crewCount: datamineEntry.performance.crew_count ?? 0,
-        elevationSpeed: datamineEntry.performance.elevation_speed ?? 0,
-        traverseSpeed: datamineEntry.performance.traverse_speed ?? 0,
-        hasStabilizer: datamineEntry.performance.has_stabilizer ?? false,
-        stabilizerType: (datamineEntry.performance.stabilizer_type as 'none' | 'horizontal' | 'vertical' | 'both') ?? 'none',
-        elevationRange: (datamineEntry.performance.elevation_range as [number, number]) ?? [0, 0],
-        traverseRange: (datamineEntry.performance.traverse_range as [number, number]) ?? [0, 0],
-        gunnerThermalResolution: (datamineEntry.performance.gunner_thermal_resolution as [number, number]) ?? [0, 0],
-        commanderThermalResolution: (datamineEntry.performance.commander_thermal_resolution as [number, number]) ?? [0, 0],
-        // Calculated metrics
-        gunnerThermalDiagonal: datamineEntry.performance.gunner_thermal_diagonal ?? 0,
-        commanderThermalDiagonal: datamineEntry.performance.commander_thermal_diagonal ?? 0,
-        stabilizerValue: datamineEntry.performance.stabilizer_value ?? 0,
-        elevationRangeValue: datamineEntry.performance.elevation_range_value ?? 0,
-        // Ammunition data
-        mainGun: datamineEntry.performance.mainGun ?? undefined,
-        ammunitions: datamineEntry.performance.ammunitions ?? undefined,
-        penetrationData: datamineEntry.performance.penetrationData ?? undefined,
-        autoLoader: datamineEntry.performance.autoLoader ?? undefined,
-        // Extended fields
-        engineManufacturer: datamineEntry.performance.engine_manufacturer ?? undefined,
-        engineModel: datamineEntry.performance.engine_model ?? undefined,
-        engineType: datamineEntry.performance.engine_type ?? undefined,
-        engineMaxRpm: datamineEntry.performance.engine_max_rpm ?? undefined,
-        transmissionManufacturer: datamineEntry.performance.transmission_manufacturer ?? undefined,
-        transmissionModel: datamineEntry.performance.transmission_model ?? undefined,
-        transmissionType: datamineEntry.performance.transmission_type ?? undefined,
-        forwardGears: datamineEntry.performance.forward_gears ?? undefined,
-        reverseGears: datamineEntry.performance.reverse_gears ?? undefined,
-        forwardGearSpeeds: datamineEntry.performance.forward_gear_speeds ?? undefined,
-        reverseGearSpeeds: datamineEntry.performance.reverse_gear_speeds ?? undefined,
-        steerType: datamineEntry.performance.steer_type ?? undefined,
-        emptyWeight: datamineEntry.performance.empty_weight ?? undefined,
-        trackWidth: datamineEntry.performance.track_width ?? undefined,
-        secondaryWeapons: datamineEntry.performance.secondary_weapons ?? undefined,
-        mainGunAmmo: datamineEntry.performance.main_gun_ammo ?? undefined,
-        driverNvResolution: datamineEntry.performance.driver_nv_resolution as [number, number] ?? undefined,
-        hasSmokeGrenades: datamineEntry.performance.has_smoke_grenades ?? undefined,
-        hasEss: datamineEntry.performance.has_ess ?? undefined,
-        hasLaserRangefinder: datamineEntry.performance.has_laser_rangefinder ?? undefined,
-      },
+      performance: convertPerformance(datamineEntry.performance),
       // Backward compatibility: use historical mode as default
       stats: defaultStats,
       // New: stats broken down by game mode

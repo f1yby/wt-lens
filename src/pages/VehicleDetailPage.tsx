@@ -24,7 +24,7 @@ import MobilitySection from '../components/MobilitySection';
 import ArmamentsSection from '../components/ArmamentsSection';
 import OpticsSection from '../components/OpticsSection';
 
-import { loadVehicles, getVehicleStatsByMode } from '../data/vehicles';
+import { loadVehicles, getVehicleStatsByMode, loadVehicleDetail } from '../data/vehicles';
 import { VEHICLE_TYPE_LABELS, BATTLE_RATINGS, ECONOMIC_TYPE_GRADIENTS } from '../types';
 import type { Vehicle, VehicleType, GroundVehicleType } from '../types';
 import { getVehicleImagePath, getFlagImagePath } from '../utils/paths';
@@ -46,6 +46,7 @@ export default function VehicleDetailPage() {
   const [selectedTypes, setSelectedTypes] = useState<VehicleType[]>([]);
   const [brRange, setBrRange] = useState<[number, number] | null>(null);
   const [typesInitialized, setTypesInitialized] = useState(false);
+  const [detailLoaded, setDetailLoaded] = useState<string | null>(null);
 
   // Use custom hooks for game mode and stats month management
   const { gameMode, handleGameModeChange } = useGameMode();
@@ -65,6 +66,21 @@ export default function VehicleDetailPage() {
   }, [statsMonthRange]);
 
   const vehicle = vehicles.find(v => v.id === id);
+
+  // Load detailed performance + economy data for the current vehicle
+  useEffect(() => {
+    if (!id || vehicles.length === 0 || detailLoaded === id) return;
+    loadVehicleDetail(id).then(detail => {
+      if (!detail) return;
+      setVehicles(prev => prev.map(v =>
+        v.id === id
+          ? { ...v, performance: detail.performance, economy: detail.economy ?? v.economy }
+          : v
+      ));
+      setDetailLoaded(id);
+    });
+  }, [id, vehicles.length, detailLoaded]);
+
   // Default selectedTypes to current vehicle's type
   useEffect(() => {
     if (vehicle && !typesInitialized) {
@@ -77,6 +93,7 @@ export default function VehicleDetailPage() {
   useEffect(() => {
     setTypesInitialized(false);
     setBrRange(null);
+    setDetailLoaded(null);
   }, [id]);
 
   // Default BR range: vehicle BR ± 1.0, snapped to BATTLE_RATINGS
@@ -484,16 +501,18 @@ export default function VehicleDetailPage() {
           </Box>
         )}
 
-        {/* Detailed Performance Sections - 3 columns on large screens */}
+        {/* Detailed Performance Sections - 2 column layout for better balance */}
         <Grid container spacing={2} sx={{ mb: 3 }}>
+          {/* Left column: Mobility + Optics stacked */}
           <Grid item xs={12} md={4}>
-            <MobilitySection performance={vehicle.performance} />
+            <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+              <MobilitySection performance={vehicle.performance} />
+              <OpticsSection performance={vehicle.performance} />
+            </Box>
           </Grid>
-          <Grid item xs={12} md={4}>
+          {/* Right column: Armaments (typically tallest) */}
+          <Grid item xs={12} md={8}>
             <ArmamentsSection performance={vehicle.performance} vehicleName={vehicle.localizedName} onNavigate={(url) => navigate(url)} />
-          </Grid>
-          <Grid item xs={12} md={4}>
-            <OpticsSection performance={vehicle.performance} />
           </Grid>
         </Grid>
 

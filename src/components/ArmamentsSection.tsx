@@ -640,7 +640,13 @@ export default function ArmamentsSection({ performance: perf, vehicleName, onNav
       )}
 
       {/* ═══════ Secondary Weapon Cards ═══════ */}
-      {hasSecondary && perf.secondaryWeapons!.map((w, i) => {
+      {hasSecondary && (
+        <Box sx={{
+          display: 'grid',
+          gridTemplateColumns: { xs: '1fr', sm: 'repeat(2, 1fr)' },
+          gap: 1.5,
+        }}>
+      {perf.secondaryWeapons!.map((w, i) => {
         const isRich = !!(w.penetration || w.maxDistance || w.guidanceType);
         const typeLabel = w.bulletType ? (AMMO_TYPE_LABELS[w.bulletType] ?? w.bulletType) : '';
         const typeColor = w.bulletType ? (AMMO_TYPE_COLORS[w.bulletType] ?? '#737373') : '#737373';
@@ -792,6 +798,8 @@ export default function ArmamentsSection({ performance: perf, vehicleName, onNav
           </Paper>
         );
       })}
+        </Box>
+      )}
     </Box>
   );
 }
