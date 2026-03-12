@@ -1,11 +1,7 @@
 import { useState, useMemo, useEffect } from 'react';
-import { Container, Typography, Box, CircularProgress } from '@mui/material';
-import Navbar from '../components/Navbar';
-import VehicleFilter from '../components/VehicleFilter';
+import ListPageLayout from '../components/ListPageLayout';
 import type { TypeOption } from '../components/VehicleFilter';
 import AircraftTechTree from '../components/AircraftTechTree';
-import GameModeSelector from '../components/GameModeSelector';
-import MonthRangeSelector from '../components/MonthSelector';
 import { loadAircraft } from '../data/aircraft';
 import type { Nation, AircraftType, AircraftVehicle } from '../types';
 import { BATTLE_RATINGS } from '../types';
@@ -29,7 +25,6 @@ export default function AircraftPage() {
   const [showGhost, setShowGhost] = useState(false);
   const [useGroundBR, setUseGroundBR] = useState(false);
 
-  // Use custom hooks for game mode and stats month management
   const { gameMode, handleGameModeChange } = useGameMode();
   const { statsMonthRange, handleStatsMonthRangeChange } = useStatsMonthRange();
 
@@ -61,7 +56,6 @@ export default function AircraftPage() {
 
   const filteredAircraft = useMemo(() => {
     return aircraft.filter(ac => {
-      // Exclude helicopters (they have their own page)
       if (ac.aircraftType === 'helicopter') return false;
       const nationMatch = selectedNations.length === 0 || selectedNations.includes(ac.nation);
       const effectiveBR = useGroundBR ? (ac.groundBattleRating ?? ac.battleRating) : ac.battleRating;
@@ -74,68 +68,31 @@ export default function AircraftPage() {
   }, [aircraft, selectedNations, brRange, selectedType, showUnreleased, showGhost, useGroundBR]);
 
   return (
-    <Box sx={{ minHeight: '100vh', backgroundColor: '#f5f5f5' }}>
-      <Navbar />
-
-      {/* Main Content */}
-      <Container maxWidth="xl" sx={{ pt: 12, pb: 4 }}>
-        {/* Mode Selector */}
-        <Box sx={{ mb: 2 }}>
-          <GameModeSelector
-            currentMode={gameMode}
-            onModeChange={handleGameModeChange}
-          />
-        </Box>
-
-        <VehicleFilter
-          selectedNations={selectedNations}
-          onNationsChange={setSelectedNations}
-          brRange={brRange}
-          onBrRangeChange={setBrRange}
-          selectedType={selectedType}
-          onTypeChange={setSelectedType}
-          showUnreleased={showUnreleased}
-          onShowUnreleasedChange={setShowUnreleased}
-          showGhost={showGhost}
-          onShowGhostChange={setShowGhost}
-          typeOptions={AIRCRAFT_TYPES}
-          showGroundBRToggle
-          useGroundBR={useGroundBR}
-          onUseGroundBRChange={setUseGroundBR}
-          availableBRs={availableBRs}
-          extraControls={
-            <MonthRangeSelector
-              currentRange={statsMonthRange}
-              onRangeChange={handleStatsMonthRangeChange}
-            />
-          }
-        />
-
-        {/* Results Count */}
-        <Box sx={{ mb: 2, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-          <Typography variant="body2" sx={{ color: '#737373' }}>
-            {loading ? '加载中...' : `显示 ${filteredAircraft.length} 架飞机`}
-          </Typography>
-        </Box>
-
-        {/* Aircraft Tech Tree Grid */}
-        {loading ? (
-          <Box sx={{ display: 'flex', justifyContent: 'center', py: 8 }}>
-            <CircularProgress />
-          </Box>
-        ) : (
-          <AircraftTechTree aircraft={filteredAircraft} gameMode={gameMode} useGroundBR={useGroundBR} />
-        )}
-      </Container>
-
-      {/* Footer */}
-      <Box sx={{ borderTop: '1px solid #262626', py: 3, mt: 4 }}>
-        <Container maxWidth="xl">
-          <Typography variant="caption" sx={{ color: '#525252', textAlign: 'center', display: 'block' }}>
-            数据来源: StatShark API & War Thunder Datamine | 仅供学习交流使用
-          </Typography>
-        </Container>
-      </Box>
-    </Box>
+    <ListPageLayout
+      gameMode={gameMode}
+      onGameModeChange={handleGameModeChange}
+      selectedNations={selectedNations}
+      onNationsChange={setSelectedNations}
+      brRange={brRange}
+      onBrRangeChange={setBrRange}
+      selectedType={selectedType}
+      onTypeChange={setSelectedType}
+      showUnreleased={showUnreleased}
+      onShowUnreleasedChange={setShowUnreleased}
+      showGhost={showGhost}
+      onShowGhostChange={setShowGhost}
+      availableBRs={availableBRs}
+      statsMonthRange={statsMonthRange}
+      onStatsMonthRangeChange={handleStatsMonthRangeChange}
+      typeOptions={AIRCRAFT_TYPES}
+      showGroundBRToggle
+      useGroundBR={useGroundBR}
+      onUseGroundBRChange={setUseGroundBR}
+      loading={loading}
+      filteredCount={filteredAircraft.length}
+      countLabel="架飞机"
+    >
+      <AircraftTechTree aircraft={filteredAircraft} gameMode={gameMode} useGroundBR={useGroundBR} />
+    </ListPageLayout>
   );
 }

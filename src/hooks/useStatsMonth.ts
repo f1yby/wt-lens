@@ -1,85 +1,8 @@
 import { useState, useEffect, useCallback } from 'react';
-import { useSearchParams } from 'react-router-dom';
-import type { StatsMonthId, StatsMonthRange } from '../types';
-import { isValidStatsMonthId, isValidMonthRange } from '../types';
-import {
-  getInitialStatsMonth,
-  saveStatsMonthToStorage,
-  getInitialStatsMonthRange,
-  saveStatsMonthRangeToStorage,
-} from '../utils/statsMonth';
-
-/**
- * Return type for useStatsMonth hook (legacy single month)
- */
-export interface UseStatsMonthReturn {
-  /** Current stats month ID */
-  statsMonth: StatsMonthId;
-  /** Handler to change stats month - updates state, localStorage, and URL */
-  handleStatsMonthChange: (month: StatsMonthId) => void;
-}
-
-/**
- * Custom hook for managing stats month state with URL sync and localStorage persistence.
- * 
- * Features:
- * - Initializes from URL params > localStorage > default (latest month)
- * - Syncs changes to both URL and localStorage
- * - Responds to external URL changes (e.g., browser back/forward)
- * 
- * @deprecated Use useStatsMonthRange instead for range selection support
- * 
- * @example
- * ```tsx
- * function MyPage() {
- *   const { statsMonth, handleStatsMonthChange } = useStatsMonth();
- *   
- *   return (
- *     <MonthSelector
- *       currentMonth={statsMonth}
- *       onMonthChange={handleStatsMonthChange}
- *     />
- *   );
- * }
- * ```
- */
-export function useStatsMonth(): UseStatsMonthReturn {
-  const [searchParams, setSearchParams] = useSearchParams();
-  
-  // Initialize stats month from URL or storage
-  const [statsMonth, setStatsMonth] = useState<StatsMonthId>(() =>
-    getInitialStatsMonth(searchParams)
-  );
-
-  // Handle stats month change - uses functional setSearchParams to avoid stale closure
-  const handleStatsMonthChange = useCallback((month: StatsMonthId) => {
-    setStatsMonth(month);
-    saveStatsMonthToStorage(month);
-    setSearchParams((prev) => {
-      const newParams = new URLSearchParams(prev);
-      newParams.set('month', month);
-      return newParams;
-    });
-  }, [setSearchParams]);
-
-  // Sync stats month from URL when URL changes externally
-  // (e.g., browser back/forward navigation)
-  useEffect(() => {
-    const urlMonth = searchParams.get('month');
-    if (urlMonth && isValidStatsMonthId(urlMonth)) {
-      setStatsMonth((prev) => prev === urlMonth ? prev : urlMonth);
-    }
-  }, [searchParams]);
-
-  return {
-    statsMonth,
-    handleStatsMonthChange,
-  };
-}
-
-// ============================================================================
-// Month Range Hook
-// ============================================================================
+import type { StatsMonthRange } from '../types';
+import { isValidMonthRange, getDefaultStatsMonthRange } from '../types';
+import { isServiceInitialized } from '../services/statsMonthService';
+import { loadStatsMeta } from '../data/base';
 
 /**
  * Return type for useStatsMonthRange hook
@@ -87,93 +10,59 @@ export function useStatsMonth(): UseStatsMonthReturn {
 export interface UseStatsMonthRangeReturn {
   /** Current stats month range */
   statsMonthRange: StatsMonthRange;
-  /** Handler to change stats month range - updates state, localStorage, and URL */
+  /** Handler to change stats month range */
   handleStatsMonthRangeChange: (range: StatsMonthRange) => void;
 }
 
 /**
- * Custom hook for managing stats month range state with URL sync and localStorage persistence.
+ * Custom hook for managing stats month range state.
  * 
- * Features:
- * - Initializes from URL params > localStorage > default (latest month as single-month range)
- * - Syncs changes to both URL and localStorage
- * - Responds to external URL changes (e.g., browser back/forward)
- * - Supports both new range format and legacy single month format
- * 
- * @example
- * ```tsx
- * function MyPage() {
- *   const { statsMonthRange, handleStatsMonthRangeChange } = useStatsMonthRange();
- *   
- *   return (
- *     <MonthRangeSelector
- *       currentRange={statsMonthRange}
- *       onRangeChange={handleStatsMonthRangeChange}
- *     />
- *   );
- * }
- * ```
+ * Pure in-memory state — no URL params, no localStorage.
+ * Initializes to empty, then resolves to the default (latest month)
+ * once the stats month service is ready.
  */
 export function useStatsMonthRange(): UseStatsMonthRangeReturn {
-  const [searchParams, setSearchParams] = useSearchParams();
-  
-  // Initialize stats month range from URL or storage
-  const [statsMonthRange, setStatsMonthRange] = useState<StatsMonthRange>(() =>
-    getInitialStatsMonthRange(searchParams)
-  );
+  const [statsMonthRange, setStatsMonthRange] = useState<StatsMonthRange>({
+    startMonth: '',
+    endMonth: '',
+  });
 
-  // Handle stats month range change - uses functional setSearchParams to avoid stale closure
+  // Handler: validate then set
   const handleStatsMonthRangeChange = useCallback((range: StatsMonthRange) => {
-    // Validate range before applying
     if (!isValidMonthRange(range)) {
       console.warn('Invalid month range:', range);
       return;
     }
-    
     setStatsMonthRange(range);
-    saveStatsMonthRangeToStorage(range);
-    
-    // Use functional update to avoid stale searchParams closure
-    setSearchParams((prev) => {
-      const newParams = new URLSearchParams(prev);
-      newParams.delete('month');
-      newParams.set('monthStart', range.startMonth);
-      newParams.set('monthEnd', range.endMonth);
-      return newParams;
-    });
-  }, [setSearchParams]);
+  }, []);
 
-  // Sync stats month range from URL when URL changes externally
-  // (e.g., browser back/forward navigation)
+  // Once service is initialized, resolve the default range.
+  // Before that, statsMonthRange is empty and pages show a loading state.
+  //
+  // IMPORTANT: We must call loadStatsMeta() ourselves to trigger service
+  // initialization. Otherwise there's a deadlock:
+  //   - This hook waits for service init to set range
+  //   - Pages wait for non-empty range to call loadVehicles()
+  //   - loadVehicles() calls loadStatsMeta() which inits the service
+  //   → Nobody kicks off loadStatsMeta() → stuck forever
   useEffect(() => {
-    const urlMonthStart = searchParams.get('monthStart');
-    const urlMonthEnd = searchParams.get('monthEnd');
-    const legacyMonth = searchParams.get('month');
-    
-    // Try new format first
-    if (urlMonthStart && urlMonthEnd && 
-        isValidStatsMonthId(urlMonthStart) && 
-        isValidStatsMonthId(urlMonthEnd)) {
-      const urlRange: StatsMonthRange = { startMonth: urlMonthStart, endMonth: urlMonthEnd };
-      if (isValidMonthRange(urlRange)) {
-        setStatsMonthRange((prev) => {
-          if (prev.startMonth === urlRange.startMonth && prev.endMonth === urlRange.endMonth) {
-            return prev;
-          }
-          return urlRange;
-        });
+    // If service is already ready (e.g. hot-reload), set immediately
+    if (isServiceInitialized()) {
+      const defaultRange = getDefaultStatsMonthRange();
+      if (defaultRange.startMonth && defaultRange.endMonth) {
+        setStatsMonthRange(defaultRange);
       }
+      return;
     }
-    // Fallback to legacy format
-    else if (legacyMonth && isValidStatsMonthId(legacyMonth)) {
-      setStatsMonthRange((prev) => {
-        if (prev.startMonth === legacyMonth && prev.endMonth === legacyMonth) {
-          return prev;
-        }
-        return { startMonth: legacyMonth, endMonth: legacyMonth };
-      });
-    }
-  }, [searchParams]);
+
+    // Kick off meta loading to initialize the service
+    loadStatsMeta().then(() => {
+      const defaultRange = getDefaultStatsMonthRange();
+      if (defaultRange.startMonth && defaultRange.endMonth) {
+        setStatsMonthRange(defaultRange);
+      }
+    });
+  }, []);
 
   return {
     statsMonthRange,
@@ -181,4 +70,4 @@ export function useStatsMonthRange(): UseStatsMonthRangeReturn {
   };
 }
 
-export default useStatsMonth;
+export default useStatsMonthRange;

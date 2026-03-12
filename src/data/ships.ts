@@ -145,20 +145,23 @@ function mergeShipsData(stats: StatSharkEntry[], ships: ShipEntry[], range?: Sta
  * @param range - Optional month range filter. Defaults to latest month if not specified.
  */
 export async function loadShips(range?: StatsMonthRange): Promise<ShipVehicle[]> {
-  const targetRange = range ?? getDefaultStatsMonthRange();
-  const cacheKey = getMonthRangeCacheKey(targetRange);
+  // Load stats (this also ensures statsMonthService is initialized via loadStatsMeta)
+  const stats = await loadStatsForRange(range);
+
+  // Re-resolve range AFTER service is initialized
+  const resolvedRange = (range && range.startMonth && range.endMonth)
+    ? range
+    : getDefaultStatsMonthRange();
+  const cacheKey = getMonthRangeCacheKey(resolvedRange);
   
   // Check if already cached for this month range
   if (shipsByMonthRange.has(cacheKey)) {
     return shipsByMonthRange.get(cacheKey)!;
   }
 
-  // Load stats data appropriate for the month range
-  const stats = await loadStatsForRange(targetRange);
-
   const ships = await loadShipsData();
 
-  const merged = mergeShipsData(stats, ships, targetRange);
+  const merged = mergeShipsData(stats, ships, resolvedRange);
   shipsByMonthRange.set(cacheKey, merged);
   return merged;
 }

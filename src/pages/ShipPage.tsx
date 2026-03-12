@@ -1,11 +1,7 @@
 import { useState, useMemo, useEffect } from 'react';
-import { Container, Typography, Box, CircularProgress } from '@mui/material';
-import Navbar from '../components/Navbar';
-import VehicleFilter from '../components/VehicleFilter';
+import ListPageLayout from '../components/ListPageLayout';
 import type { TypeOption } from '../components/VehicleFilter';
 import ShipTechTree from '../components/ShipTechTree';
-import GameModeSelector from '../components/GameModeSelector';
-import MonthRangeSelector from '../components/MonthSelector';
 import { loadShips } from '../data/ships';
 import type { Nation, ShipType, ShipVehicle } from '../types';
 import { BATTLE_RATINGS } from '../types';
@@ -31,7 +27,6 @@ export default function ShipPage() {
   const [showUnreleased, setShowUnreleased] = useState(false);
   const [showGhost, setShowGhost] = useState(false);
 
-  // Use custom hooks for game mode and stats month management
   const { gameMode, handleGameModeChange } = useGameMode();
   const { statsMonthRange, handleStatsMonthRangeChange } = useStatsMonthRange();
 
@@ -70,63 +65,28 @@ export default function ShipPage() {
   }, [ships, selectedNations, brRange, selectedType, showUnreleased, showGhost]);
 
   return (
-    <Box sx={{ minHeight: '100vh', backgroundColor: '#f5f5f5' }}>
-      <Navbar />
-
-      {/* Main Content */}
-      <Container maxWidth="xl" sx={{ pt: 12, pb: 4 }}>
-        {/* Mode Selector */}
-        <Box sx={{ mb: 2 }}>
-          <GameModeSelector
-            currentMode={gameMode}
-            onModeChange={handleGameModeChange}
-          />
-        </Box>
-
-        <VehicleFilter
-          selectedNations={selectedNations}
-          onNationsChange={setSelectedNations}
-          brRange={brRange}
-          onBrRangeChange={setBrRange}
-          selectedType={selectedType}
-          onTypeChange={setSelectedType}
-          showUnreleased={showUnreleased}
-          onShowUnreleasedChange={setShowUnreleased}
-          showGhost={showGhost}
-          onShowGhostChange={setShowGhost}
-          typeOptions={SHIP_TYPES}
-          availableBRs={availableBRs}
-        />
-        <MonthRangeSelector
-          currentRange={statsMonthRange}
-          onRangeChange={handleStatsMonthRangeChange}
-        />
-
-        {/* Results Count */}
-        <Box sx={{ mb: 2, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-          <Typography variant="body2" sx={{ color: '#737373' }}>
-            {loading ? '加载中...' : `显示 ${filteredShips.length} 艘舰船`}
-          </Typography>
-        </Box>
-
-        {/* Ship Tech Tree Grid */}
-        {loading ? (
-          <Box sx={{ display: 'flex', justifyContent: 'center', py: 8 }}>
-            <CircularProgress />
-          </Box>
-        ) : (
-          <ShipTechTree ships={filteredShips} gameMode={gameMode} />
-        )}
-      </Container>
-
-      {/* Footer */}
-      <Box sx={{ borderTop: '1px solid #262626', py: 3, mt: 4 }}>
-        <Container maxWidth="xl">
-          <Typography variant="caption" sx={{ color: '#525252', textAlign: 'center', display: 'block' }}>
-            数据来源: StatShark API & War Thunder Datamine | 仅供学习交流使用
-          </Typography>
-        </Container>
-      </Box>
-    </Box>
+    <ListPageLayout
+      gameMode={gameMode}
+      onGameModeChange={handleGameModeChange}
+      selectedNations={selectedNations}
+      onNationsChange={setSelectedNations}
+      brRange={brRange}
+      onBrRangeChange={setBrRange}
+      selectedType={selectedType}
+      onTypeChange={setSelectedType}
+      showUnreleased={showUnreleased}
+      onShowUnreleasedChange={setShowUnreleased}
+      showGhost={showGhost}
+      onShowGhostChange={setShowGhost}
+      availableBRs={availableBRs}
+      statsMonthRange={statsMonthRange}
+      onStatsMonthRangeChange={handleStatsMonthRangeChange}
+      typeOptions={SHIP_TYPES}
+      loading={loading}
+      filteredCount={filteredShips.length}
+      countLabel="艘舰船"
+    >
+      <ShipTechTree ships={filteredShips} gameMode={gameMode} />
+    </ListPageLayout>
   );
 }

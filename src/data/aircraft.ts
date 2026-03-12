@@ -147,20 +147,23 @@ function mergeAircraftData(stats: StatSharkEntry[], aircraft: AircraftEntry[], r
  * @param range - Optional month range filter. Defaults to latest month if not specified.
  */
 export async function loadAircraft(range?: StatsMonthRange): Promise<AircraftVehicle[]> {
-  const targetRange = range ?? getDefaultStatsMonthRange();
-  const cacheKey = getMonthRangeCacheKey(targetRange);
+  // Load stats (this also ensures statsMonthService is initialized via loadStatsMeta)
+  const stats = await loadStatsForRange(range);
+
+  // Re-resolve range AFTER service is initialized
+  const resolvedRange = (range && range.startMonth && range.endMonth)
+    ? range
+    : getDefaultStatsMonthRange();
+  const cacheKey = getMonthRangeCacheKey(resolvedRange);
   
   // Check if already cached for this month range
   if (aircraftByMonthRange.has(cacheKey)) {
     return aircraftByMonthRange.get(cacheKey)!;
   }
 
-  // Load stats data appropriate for the month range
-  const stats = await loadStatsForRange(targetRange);
-
   const aircraft = await loadAircraftData();
 
-  const merged = mergeAircraftData(stats, aircraft, targetRange);
+  const merged = mergeAircraftData(stats, aircraft, resolvedRange);
   aircraftByMonthRange.set(cacheKey, merged);
   return merged;
 }

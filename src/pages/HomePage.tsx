@@ -1,10 +1,6 @@
 import { useState, useMemo, useEffect } from 'react';
-import { Container, Typography, Box, CircularProgress } from '@mui/material';
-import Navbar from '../components/Navbar';
-import VehicleFilter from '../components/VehicleFilter';
+import ListPageLayout from '../components/ListPageLayout';
 import VehicleTechTree from '../components/VehicleTechTree';
-import GameModeSelector from '../components/GameModeSelector';
-import MonthRangeSelector from '../components/MonthSelector';
 import { loadVehicles } from '../data/vehicles';
 import type { Nation, VehicleType, Vehicle } from '../types';
 import { BATTLE_RATINGS } from '../types';
@@ -20,17 +16,20 @@ export default function HomePage() {
   const [showUnreleased, setShowUnreleased] = useState(false);
   const [showGhost, setShowGhost] = useState(false);
 
-  // Use custom hooks for game mode and stats month management
   const { gameMode, handleGameModeChange } = useGameMode();
   const { statsMonthRange, handleStatsMonthRangeChange } = useStatsMonthRange();
 
   // Reload data when month range changes
   useEffect(() => {
-    setLoading(true);
+    if (!statsMonthRange.startMonth || !statsMonthRange.endMonth) return;
+    let cancelled = false;
     loadVehicles(statsMonthRange).then(data => {
-      setVehicles(data);
-      setLoading(false);
+      if (!cancelled) {
+        setVehicles(data);
+        setLoading(false);
+      }
     });
+    return () => { cancelled = true; };
   }, [statsMonthRange]);
 
   // 计算数据中的实际最大 BR，用于 BR 筛选器
@@ -49,9 +48,7 @@ export default function HomePage() {
 
   const filteredVehicles = useMemo(() => {
     return vehicles.filter(vehicle => {
-      // 未选择任何国家 = 显示所有国家
       const nationMatch = selectedNations.length === 0 || selectedNations.includes(vehicle.nation);
-      // 使用当前游戏模式的BR进行匹配
       const vehicleBR = vehicle.br?.[gameMode] ?? vehicle.battleRating;
       const brMatch = vehicleBR >= brRange[0] && vehicleBR <= brRange[1];
       const typeMatch = selectedType === 'all' || vehicle.vehicleType === selectedType;
@@ -62,62 +59,27 @@ export default function HomePage() {
   }, [vehicles, selectedNations, brRange, selectedType, showUnreleased, showGhost, gameMode]);
 
   return (
-    <Box sx={{ minHeight: '100vh', backgroundColor: '#f5f5f5' }}>
-      <Navbar />
-      
-      {/* Main Content */}
-      <Container maxWidth="xl" sx={{ pt: 12, pb: 4 }}>
-        {/* Mode Selector */}
-        <Box sx={{ mb: 2 }}>
-          <GameModeSelector
-            currentMode={gameMode}
-            onModeChange={handleGameModeChange}
-          />
-        </Box>
-
-        <VehicleFilter
-          selectedNations={selectedNations}
-          onNationsChange={setSelectedNations}
-          brRange={brRange}
-          onBrRangeChange={setBrRange}
-          selectedType={selectedType}
-          onTypeChange={setSelectedType}
-          showUnreleased={showUnreleased}
-          onShowUnreleasedChange={setShowUnreleased}
-          showGhost={showGhost}
-          onShowGhostChange={setShowGhost}
-          availableBRs={availableBRs}
-        />
-        <MonthRangeSelector
-          currentRange={statsMonthRange}
-          onRangeChange={handleStatsMonthRangeChange}
-        />
-
-        {/* Results Count */}
-        <Box sx={{ mb: 2, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-          <Typography variant="body2" sx={{ color: '#737373' }}>
-            {loading ? '加载中...' : `显示 ${filteredVehicles.length} 个载具`}
-          </Typography>
-        </Box>
-
-        {/* Tech Tree Grid */}
-        {loading ? (
-          <Box sx={{ display: 'flex', justifyContent: 'center', py: 8 }}>
-            <CircularProgress />
-          </Box>
-        ) : (
-          <VehicleTechTree vehicles={filteredVehicles} gameMode={gameMode} />
-        )}
-      </Container>
-
-      {/* Footer */}
-      <Box sx={{ borderTop: '1px solid #262626', py: 3, mt: 4 }}>
-        <Container maxWidth="xl">
-          <Typography variant="caption" sx={{ color: '#525252', textAlign: 'center', display: 'block' }}>
-            数据来源: StatShark API & War Thunder Datamine | 仅供学习交流使用
-          </Typography>
-        </Container>
-      </Box>
-    </Box>
+    <ListPageLayout
+      gameMode={gameMode}
+      onGameModeChange={handleGameModeChange}
+      selectedNations={selectedNations}
+      onNationsChange={setSelectedNations}
+      brRange={brRange}
+      onBrRangeChange={setBrRange}
+      selectedType={selectedType}
+      onTypeChange={setSelectedType}
+      showUnreleased={showUnreleased}
+      onShowUnreleasedChange={setShowUnreleased}
+      showGhost={showGhost}
+      onShowGhostChange={setShowGhost}
+      availableBRs={availableBRs}
+      statsMonthRange={statsMonthRange}
+      onStatsMonthRangeChange={handleStatsMonthRangeChange}
+      loading={loading}
+      filteredCount={filteredVehicles.length}
+      countLabel="个载具"
+    >
+      <VehicleTechTree vehicles={filteredVehicles} gameMode={gameMode} />
+    </ListPageLayout>
   );
 }

@@ -142,7 +142,23 @@ export async function loadVehicleIndex(): Promise<VehicleIndexEntry[]> {
   if (!response.ok) {
     throw new Error(`Failed to load vehicle index: ${response.status}`);
   }
-  vehicleIndexData = await response.json();
+  const rawData: Array<Record<string, unknown>> = await response.json();
+  // Map snake_case JSON fields to camelCase VehicleIndexEntry
+  vehicleIndexData = rawData.map(entry => ({
+    id: entry.id as string,
+    name: entry.name as string,
+    localizedName: entry.localizedName as string,
+    nation: entry.nation as VehicleIndexEntry['nation'],
+    rank: entry.rank as number,
+    battleRating: (entry.battleRating ?? entry.battle_rating) as number,
+    br: entry.br as VehicleIndexEntry['br'],
+    vehicleType: (entry.vehicleType ?? entry.vehicle_type) as VehicleIndexEntry['vehicleType'],
+    economicType: (entry.economicType ?? entry.economic_type) as VehicleIndexEntry['economicType'],
+    imageUrl: entry.imageUrl as string | undefined,
+    unreleased: entry.unreleased as boolean | undefined,
+    releaseDate: entry.releaseDate as string | undefined,
+    ghost: entry.ghost as boolean | undefined,
+  }));
   return vehicleIndexData!;
 }
 
@@ -347,20 +363,24 @@ function mergeVehicleData(stats: StatSharkEntry[], datamine: DatamineEntry[], ra
  * @param range - Optional month range filter. Defaults to latest month if not specified.
  */
 export async function loadVehicles(range?: StatsMonthRange): Promise<Vehicle[]> {
-  const targetRange = range ?? getDefaultStatsMonthRange();
-  const cacheKey = getMonthRangeCacheKey(targetRange);
+  // Load stats (this also ensures statsMonthService is initialized via loadStatsMeta)
+  const stats = await loadStatsForRange(range);
+
+  // Re-resolve range AFTER service is initialized — the caller may have passed
+  // empty strings when the month service wasn't ready yet.
+  const resolvedRange = (range && range.startMonth && range.endMonth)
+    ? range
+    : getDefaultStatsMonthRange();
+  const cacheKey = getMonthRangeCacheKey(resolvedRange);
   
   // Check if already cached for this month range
   if (vehiclesByMonthRange.has(cacheKey)) {
     return vehiclesByMonthRange.get(cacheKey)!;
   }
 
-  // Load stats data appropriate for the month range
-  const stats = await loadStatsForRange(targetRange);
-
   const datamine = await loadDatamineData();
 
-  const vehicles = mergeVehicleData(stats, datamine, targetRange);
+  const vehicles = mergeVehicleData(stats, datamine, resolvedRange);
   vehiclesByMonthRange.set(cacheKey, vehicles);
   return vehicles;
 }

@@ -1,10 +1,6 @@
 import { useState, useMemo, useEffect } from 'react';
-import { Container, Typography, Box, CircularProgress } from '@mui/material';
-import Navbar from '../components/Navbar';
-import VehicleFilter from '../components/VehicleFilter';
+import ListPageLayout from '../components/ListPageLayout';
 import AircraftTechTree from '../components/AircraftTechTree';
-import GameModeSelector from '../components/GameModeSelector';
-import MonthRangeSelector from '../components/MonthSelector';
 import { loadAircraft } from '../data/aircraft';
 import type { Nation, AircraftVehicle } from '../types';
 import { BATTLE_RATINGS } from '../types';
@@ -20,7 +16,6 @@ export default function HelicopterPage() {
   const [showGhost, setShowGhost] = useState(false);
   const [useGroundBR, setUseGroundBR] = useState(false);
 
-  // Use custom hooks for game mode and stats month management
   const { gameMode, handleGameModeChange } = useGameMode();
   const { statsMonthRange, handleStatsMonthRangeChange } = useStatsMonthRange();
 
@@ -63,65 +58,31 @@ export default function HelicopterPage() {
   }, [aircraft, selectedNations, brRange, showUnreleased, showGhost, useGroundBR]);
 
   return (
-    <Box sx={{ minHeight: '100vh', backgroundColor: '#f5f5f5' }}>
-      <Navbar />
-
-      <Container maxWidth="xl" sx={{ pt: 12, pb: 4 }}>
-        {/* Mode Selector */}
-        <Box sx={{ mb: 2 }}>
-          <GameModeSelector
-            currentMode={gameMode}
-            onModeChange={handleGameModeChange}
-          />
-        </Box>
-
-        <VehicleFilter
-          selectedNations={selectedNations}
-          onNationsChange={setSelectedNations}
-          brRange={brRange}
-          onBrRangeChange={setBrRange}
-          selectedType={'all' as string}
-          onTypeChange={() => {}}
-          showUnreleased={showUnreleased}
-          onShowUnreleasedChange={setShowUnreleased}
-          showGhost={showGhost}
-          onShowGhostChange={setShowGhost}
-          typeOptions={[]}
-          showGroundBRToggle
-          useGroundBR={useGroundBR}
-          onUseGroundBRChange={setUseGroundBR}
-          availableBRs={availableBRs}
-          extraControls={
-            <MonthRangeSelector
-              currentRange={statsMonthRange}
-              onRangeChange={handleStatsMonthRangeChange}
-            />
-          }
-        />
-
-        {/* Results Count */}
-        <Box sx={{ mb: 2, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-          <Typography variant="body2" sx={{ color: '#737373' }}>
-            {loading ? '加载中...' : `显示 ${filteredHelicopters.length} 架直升机`}
-          </Typography>
-        </Box>
-
-        {loading ? (
-          <Box sx={{ display: 'flex', justifyContent: 'center', py: 8 }}>
-            <CircularProgress />
-          </Box>
-        ) : (
-          <AircraftTechTree aircraft={filteredHelicopters} gameMode={gameMode} useGroundBR={useGroundBR} />
-        )}
-      </Container>
-
-      <Box sx={{ borderTop: '1px solid #262626', py: 3, mt: 4 }}>
-        <Container maxWidth="xl">
-          <Typography variant="caption" sx={{ color: '#525252', textAlign: 'center', display: 'block' }}>
-            数据来源: StatShark API & War Thunder Datamine | 仅供学习交流使用
-          </Typography>
-        </Container>
-      </Box>
-    </Box>
+    <ListPageLayout
+      gameMode={gameMode}
+      onGameModeChange={handleGameModeChange}
+      selectedNations={selectedNations}
+      onNationsChange={setSelectedNations}
+      brRange={brRange}
+      onBrRangeChange={setBrRange}
+      selectedType={'all' as string}
+      onTypeChange={() => {}}
+      showUnreleased={showUnreleased}
+      onShowUnreleasedChange={setShowUnreleased}
+      showGhost={showGhost}
+      onShowGhostChange={setShowGhost}
+      availableBRs={availableBRs}
+      statsMonthRange={statsMonthRange}
+      onStatsMonthRangeChange={handleStatsMonthRangeChange}
+      typeOptions={[]}
+      showGroundBRToggle
+      useGroundBR={useGroundBR}
+      onUseGroundBRChange={setUseGroundBR}
+      loading={loading}
+      filteredCount={filteredHelicopters.length}
+      countLabel="架直升机"
+    >
+      <AircraftTechTree aircraft={filteredHelicopters} gameMode={gameMode} useGroundBR={useGroundBR} />
+    </ListPageLayout>
   );
 }

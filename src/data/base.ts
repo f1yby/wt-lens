@@ -167,8 +167,14 @@ async function loadStatsHistoryBatch(vehicleIds: string[]): Promise<StatSharkEnt
  * - Multi-month range → fetches stats/{id}.json for all vehicles that have index data
  */
 export async function loadStatsForRange(range?: StatsMonthRange): Promise<StatSharkEntry[]> {
+  // Always ensure meta is loaded first (this initializes statsMonthService)
   const meta = await loadStatsMeta();
-  const targetRange = range ?? getDefaultStatsMonthRange();
+
+  // Resolve range AFTER meta is loaded — the caller may have passed empty strings
+  // when the month service wasn't ready yet during component initialization.
+  const targetRange = (range && range.startMonth && range.endMonth)
+    ? range
+    : getDefaultStatsMonthRange();
 
   // If single month and it's the latest → use stats-index (fast path)
   if (isSingleMonthRange(targetRange) && targetRange.startMonth === meta.latestMonth) {
