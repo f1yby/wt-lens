@@ -4,10 +4,10 @@
     "horsepower": 720.0,
     "weight": 30.0,
     "power_to_weight": 24.0,
-    "max_reverse_speed": 13.4,
+    "max_reverse_speed": 30.0,
     "reload_time": 5.0,
     "penetration": 623.6,
-    "max_speed": 109.7,
+    "max_speed": 110.0,
     "crew_count": 5,
     "elevation_speed": 28.6,
     "traverse_speed": 22.9,
@@ -37,10 +37,10 @@
       "name": "120mm_OTO_Leonardo_120_45",
       "caliber": 120.0,
       "reloadTime": 5.0,
-      "autoLoader": false,
+      "autoLoader": true,
       "reloadTimes": {
-        "base": 6.5,
-        "expert": 5.75,
+        "base": 5.0,
+        "expert": 5.0,
         "ace": 5.0
       }
     },
@@ -120,7 +120,7 @@
         "angle60": 311.8
       }
     },
-    "autoLoader": false,
+    "autoLoader": true,
     "engine_manufacturer": "iveco",
     "engine_model": "iveco_vector_8v",
     "engine_type": null,
@@ -133,24 +133,24 @@
     "forward_gear_speeds": [
       7.5,
       11.6,
-      15.4,
+      15.5,
       18.9,
-      24.6,
-      32.2,
-      39.0,
-      45.6,
-      54.8,
-      64.7,
-      74.4,
-      78.0,
-      98.1,
-      109.7
+      24.7,
+      32.3,
+      39.1,
+      45.7,
+      55.0,
+      64.9,
+      74.6,
+      78.2,
+      98.3,
+      110.0
     ],
     "reverse_gear_speeds": [
-      7.4,
+      7.5,
       11.6,
-      12.9,
-      13.4
+      22.9,
+      30.0
     ],
     "steer_type": null,
     "empty_weight": 29.7,
