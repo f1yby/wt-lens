@@ -1,7 +1,7 @@
 /**
  * Vehicle comparison utilities for generating chart data.
  */
-import type { Vehicle, MetricType, VehicleType, GameMode, DistributionData } from '../types';
+import type { Vehicle, MetricType, VehicleType, GameMode, DistributionData, Nation } from '../types';
 import { getVehicleStatsByMode } from '../data/vehicles';
 import { getBRGradientColor } from './chart';
 
@@ -10,6 +10,15 @@ export interface ComparisonFilter {
   vehicleTypes?: VehicleType[];
   brMin?: number;
   brMax?: number;
+}
+
+/** Base vehicle interface for generic comparison functions */
+interface BaseVehicle {
+  id: string;
+  localizedName: string;
+  nation: Nation;
+  battleRating: number;
+  br?: Record<GameMode, number>;
 }
 
 /** Gets the numeric value for a given metric from vehicle performance data */
@@ -119,7 +128,100 @@ export function getStatsMetricValue(vehicle: Vehicle, metric: StatsMetricType, g
   }
 }
 
-/** Generates scatter data for stats comparison charts (KR, winRate) */
+/** Generic stats metric getter function type */
+export type StatsGetter<V> = (vehicle: V, gameMode: GameMode) => { battles: number; winRate: number; killPerSpawn: number; expPerSpawn?: number } | null;
+
+/** Generic BR getter function type */
+export type BRGetter<V> = (vehicle: V, gameMode: GameMode) => number;
+
+/** Generic type filter function type */
+export type TypeFilterFn<V, T> = (vehicle: V, types: T[]) => boolean;
+
+/**
+ * Generic stats comparison data generator
+ * Works with any vehicle type that has id, localizedName, nation, battleRating
+ */
+export function generateGenericStatsComparisonData<V extends BaseVehicle, T>(
+  vehicleId: string,
+  metric: StatsMetricType,
+  allVehicles: V[],
+  gameMode: GameMode,
+  getStats: StatsGetter<V>,
+  getBR: BRGetter<V>,
+  filter?: { types?: T[]; brMin?: number; brMax?: number },
+  typeFilterFn?: TypeFilterFn<V, T>,
+): DistributionData | null {
+  const vehicle = allVehicles.find(v => v.id === vehicleId);
+  if (!vehicle) return null;
+
+  const targetBR = getBR(vehicle, gameMode);
+  const brMin = filter?.brMin ?? (targetBR - 1.0);
+  const brMax = filter?.brMax ?? (targetBR + 1.0);
+
+  const getMetricFromStats = (stats: ReturnType<StatsGetter<V>>): number => {
+    if (!stats) return 0;
+    switch (metric) {
+      case 'killPerSpawn': return stats.killPerSpawn;
+      case 'winRate': return stats.winRate;
+      case 'expPerSpawn': return stats.expPerSpawn ?? 0;
+      default: return 0;
+    }
+  };
+
+  const value = getMetricFromStats(getStats(vehicle, gameMode));
+
+  const filtered = allVehicles.filter(v => {
+    const vStats = getStats(v, gameMode);
+    if (v.id === vehicleId) {
+      return vStats && vStats.battles > 0 && getMetricFromStats(vStats) > 0;
+    }
+    const metricValue = getMetricFromStats(vStats);
+    const vBR = getBR(v, gameMode);
+    if (vBR < brMin || vBR > brMax) return false;
+    if (!vStats || vStats.battles <= 0 || metricValue <= 0) return false;
+    if (filter?.types && filter.types.length > 0 && typeFilterFn && !typeFilterFn(v, filter.types)) return false;
+    return true;
+  });
+
+  if (filtered.length === 0) return null;
+
+  const lowerSpan = Math.max(targetBR - brMin, 0.1);
+  const upperSpan = Math.max(brMax - targetBR, 0.1);
+
+  const bins = filtered.map((v) => {
+    const vStats = getStats(v, gameMode);
+    const vBR = getBR(v, gameMode);
+    const brDiff = parseFloat((vBR - targetBR).toFixed(2));
+    const isCurrent = v.id === vehicleId;
+    const isSameNation = v.nation === vehicle.nation;
+
+    return {
+      range: v.localizedName,
+      metricValue: getMetricFromStats(vStats),
+      battles: vStats?.battles ?? 0,
+      isCurrent,
+      vehicleId: v.id,
+      brDiff,
+      dotColor: isCurrent ? '#f97316' : getBRGradientColor(brDiff, lowerSpan, upperSpan),
+      isSameNation,
+    };
+  });
+
+  const currentVehicleBin = bins.findIndex(b => b.isCurrent);
+
+  return {
+    metric: metric as MetricType,
+    bins,
+    currentVehicleBin: Math.max(0, currentVehicleBin),
+    currentVehicleValue: value,
+    allValues: filtered.map(v => ({
+      vehicleId: v.id,
+      value: getMetricFromStats(getStats(v, gameMode)),
+    })),
+  };
+}
+
+/** Generates scatter data for stats comparison charts (KR, winRate) - Vehicle version */
 export function generateStatsComparisonData(
   vehicleId: string,
   metric: StatsMetricType,
@@ -161,6 +263,7 @@ export function generateStatsComparisonData(
     const vBR = getVehicleBR(v, gameMode);
     const brDiff = parseFloat((vBR - targetBR).toFixed(2));
     const isCurrent = v.id === vehicleId;
+    const isSameNation = v.nation === vehicle.nation;
 
     return {
       range: v.localizedName,
@@ -170,6 +273,7 @@ export function generateStatsComparisonData(
       vehicleId: v.id,
       brDiff,
       dotColor: isCurrent ? '#f97316' : getBRGradientColor(brDiff, lowerSpan, upperSpan),
+      isSameNation,
     };
   });
 
