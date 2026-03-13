@@ -111,7 +111,21 @@ export function createAircraftConfig(isHelicopter: boolean): VehicleDetailConfig
 // Ship Config
 // ============================================================
 
-const ALL_SHIP_TYPES: ShipType[] = ['destroyer', 'cruiser', 'torpedo_boat', 'submarine_chaser', 'barge', 'ship'];
+const ALL_SHIP_TYPES: ShipType[] = [
+  'destroyer',
+  'torpedo_boat',
+  'submarine_chaser',
+  'barge',
+  'battleship',
+  'battlecruiser',
+  'heavy_cruiser',
+  'light_cruiser',
+  'frigate',
+  'boat',
+  'armored_boat',
+  'gun_boat',
+  'torpedo_gun_boat',
+];
 
 const shipGetStats = (s: ShipVehicle, mode: GameMode) => getShipStatsByMode(s, mode) ?? null;
 const shipGetBR = (s: ShipVehicle) => s.battleRating;

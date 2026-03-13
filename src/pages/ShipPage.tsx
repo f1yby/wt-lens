@@ -12,11 +12,18 @@ import { useRangeLoader } from '../hooks/useRangeLoader';
 const SHIP_TYPES: TypeOption<ShipType>[] = [
   { value: 'all', label: '全部' },
   { value: 'destroyer', label: '驱逐舰' },
-  { value: 'cruiser', label: '巡洋舰' },
   { value: 'torpedo_boat', label: '鱼雷艇' },
   { value: 'submarine_chaser', label: '猎潜艇' },
   { value: 'barge', label: '登陆艇/驳船' },
-  { value: 'ship', label: '通用舰船' },
+  { value: 'battleship', label: '战列舰' },
+  { value: 'battlecruiser', label: '战列巡洋舰' },
+  { value: 'heavy_cruiser', label: '重巡洋舰' },
+  { value: 'light_cruiser', label: '轻巡洋舰' },
+  { value: 'frigate', label: '护卫舰' },
+  { value: 'boat', label: '快艇' },
+  { value: 'armored_boat', label: '装甲艇' },
+  { value: 'gun_boat', label: '炮艇' },
+  { value: 'torpedo_gun_boat', label: '鱼雷炮艇' },
 ];
 
 export default function ShipPage() {

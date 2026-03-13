@@ -5,7 +5,20 @@ export type GroundVehicleType = 'light_tank' | 'medium_tank' | 'heavy_tank' | 't
 export type AircraftType = 'fighter' | 'bomber' | 'assault' | 'helicopter';
 
 // Ship types for Naval RB
-export type ShipType = 'destroyer' | 'cruiser' | 'torpedo_boat' | 'submarine_chaser' | 'barge' | 'ship';
+export type ShipType =
+  | 'destroyer'
+  | 'torpedo_boat'
+  | 'submarine_chaser'
+  | 'barge'
+  | 'battleship'
+  | 'battlecruiser'
+  | 'heavy_cruiser'
+  | 'light_cruiser'
+  | 'frigate'
+  | 'boat'
+  | 'armored_boat'
+  | 'gun_boat'
+  | 'torpedo_gun_boat';
 
 // Combined vehicle type (for backward compatibility)
 export type VehicleType = GroundVehicleType | AircraftType | ShipType;
@@ -506,11 +519,18 @@ export const AIRCRAFT_TYPE_LABELS: Record<AircraftType, string> = {
 
 export const SHIP_TYPE_LABELS: Record<ShipType, string> = {
   destroyer: '驱逐舰',
-  cruiser: '巡洋舰',
   torpedo_boat: '鱼雷艇',
   submarine_chaser: '猎潜艇',
   barge: '登陆艇/驳船',
-  ship: '通用舰船',
+  battleship: '战列舰',
+  battlecruiser: '战列巡洋舰',
+  heavy_cruiser: '重巡洋舰',
+  light_cruiser: '轻巡洋舰',
+  frigate: '护卫舰',
+  boat: '快艇',
+  armored_boat: '装甲艇',
+  gun_boat: '炮艇',
+  torpedo_gun_boat: '鱼雷炮艇',
 };
 
 /**
