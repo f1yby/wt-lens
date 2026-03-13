@@ -1,3 +1,6552 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3d93d5af6274f129b5a6880fb62f540e9d7dc973c0614a977ed85574658b904b
-size 164733
+[
+  {
+    "id": "fr_arras_class_amiens",
+    "name": "fr_arras_class_amiens",
+    "localizedName": "亚​眠",
+    "nation": "france",
+    "rank": 3,
+    "battleRating": 3.0,
+    "br": {
+      "arcade": 3.0,
+      "realistic": 3.0,
+      "simulator": 3.0
+    },
+    "shipType": "submarine_chaser",
+    "economicType": "premium",
+    "imageUrl": "ships/fr_arras_class_amiens.webp",
+    "releaseDate": "2025-04-23"
+  },
+  {
+    "id": "fr_arras_class_arras",
+    "name": "fr_arras_class_arras",
+    "localizedName": "阿​拉​斯",
+    "nation": "france",
+    "rank": 3,
+    "battleRating": 3.0,
+    "br": {
+      "arcade": 3.0,
+      "realistic": 3.0,
+      "simulator": 3.0
+    },
+    "shipType": "submarine_chaser",
+    "economicType": "regular",
+    "imageUrl": "ships/fr_arras_class_arras.webp",
+    "releaseDate": "2024-09-10"
+  },
+  {
+    "id": "fr_battleship_bretagne_class_bretagne",
+    "name": "fr_battleship_bretagne_class_bretagne",
+    "localizedName": "布​列​塔​尼",
+    "nation": "france",
+    "rank": 5,
+    "battleRating": 6.7,
+    "br": {
+      "arcade": 6.7,
+      "realistic": 6.7,
+      "simulator": 6.7
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/fr_battleship_bretagne_class_bretagne.webp",
+    "releaseDate": "2024-03-13"
+  },
+  {
+    "id": "fr_battleship_bretagne_class_lorraine",
+    "name": "fr_battleship_bretagne_class_lorraine",
+    "localizedName": "洛​林",
+    "nation": "france",
+    "rank": 5,
+    "battleRating": 6.3,
+    "br": {
+      "arcade": 6.3,
+      "realistic": 6.3,
+      "simulator": 6.3
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/fr_battleship_bretagne_class_lorraine.webp",
+    "releaseDate": "2023-06-14"
+  },
+  {
+    "id": "fr_battleship_courbet_class_courbet",
+    "name": "fr_battleship_courbet_class_courbet",
+    "localizedName": "孤​拔",
+    "nation": "france",
+    "rank": 5,
+    "battleRating": 6.0,
+    "br": {
+      "arcade": 6.0,
+      "realistic": 6.0,
+      "simulator": 6.0
+    },
+    "shipType": "cruiser",
+    "economicType": "premium",
+    "imageUrl": "ships/fr_battleship_courbet_class_courbet.webp",
+    "releaseDate": "2023-12-14"
+  },
+  {
+    "id": "fr_battleship_courbet_class_paris",
+    "name": "fr_battleship_courbet_class_paris",
+    "localizedName": "巴​黎",
+    "nation": "france",
+    "rank": 5,
+    "battleRating": 6.0,
+    "br": {
+      "arcade": 6.0,
+      "realistic": 6.0,
+      "simulator": 6.0
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/fr_battleship_courbet_class_paris.webp",
+    "releaseDate": "2023-06-14"
+  },
+  {
+    "id": "fr_battleship_dunkerque",
+    "name": "fr_battleship_dunkerque",
+    "localizedName": "敦​刻​尔​克",
+    "nation": "france",
+    "rank": 6,
+    "battleRating": 7.0,
+    "br": {
+      "arcade": 7.0,
+      "realistic": 7.0,
+      "simulator": 7.0
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/fr_battleship_dunkerque.webp",
+    "releaseDate": "2024-11-19"
+  },
+  {
+    "id": "fr_battleship_richelieu_class_clemenceau",
+    "name": "fr_battleship_richelieu_class_clemenceau",
+    "localizedName": "克​莱​蒙​梭",
+    "nation": "france",
+    "rank": 7,
+    "battleRating": 8.3,
+    "br": {
+      "arcade": 8.3,
+      "realistic": 8.3,
+      "simulator": 8.3
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/fr_battleship_richelieu_class_clemenceau.webp",
+    "releaseDate": "2025-11-11"
+  },
+  {
+    "id": "fr_battleship_richelieu_class_richelieu",
+    "name": "fr_battleship_richelieu_class_richelieu",
+    "localizedName": "黎​塞​留",
+    "nation": "france",
+    "rank": 7,
+    "battleRating": 8.3,
+    "br": {
+      "arcade": 8.3,
+      "realistic": 8.3,
+      "simulator": 8.3
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/fr_battleship_richelieu_class_richelieu.webp",
+    "releaseDate": "2025-06-25"
+  },
+  {
+    "id": "fr_battleship_strasbourg",
+    "name": "fr_battleship_strasbourg",
+    "localizedName": "斯​特​拉​斯​堡",
+    "nation": "france",
+    "rank": 6,
+    "battleRating": 7.3,
+    "br": {
+      "arcade": 7.3,
+      "realistic": 7.3,
+      "simulator": 7.3
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/fr_battleship_strasbourg.webp",
+    "releaseDate": "2025-02-27"
+  },
+  {
+    "id": "fr_cruiser_chateaurenault_class_guichen",
+    "name": "fr_cruiser_chateaurenault_class_guichen",
+    "localizedName": "吉​尚",
+    "nation": "france",
+    "rank": 2,
+    "battleRating": 4.7,
+    "br": {
+      "arcade": 4.7,
+      "realistic": 4.7,
+      "simulator": 4.7
+    },
+    "shipType": "destroyer",
+    "economicType": "regular",
+    "imageUrl": "ships/fr_cruiser_chateaurenault_class_guichen.webp",
+    "releaseDate": "2024-06-19"
+  },
+  {
+    "id": "fr_cruiser_dugauy_class_dugauy_trouin",
+    "name": "fr_cruiser_dugauy_class_dugauy_trouin",
+    "localizedName": "迪​盖·特​鲁​安",
+    "nation": "france",
+    "rank": 3,
+    "battleRating": 5.0,
+    "br": {
+      "arcade": 5.0,
+      "realistic": 5.0,
+      "simulator": 5.0
+    },
+    "shipType": "cruiser",
+    "economicType": "premium",
+    "imageUrl": "ships/fr_cruiser_dugauy_class_dugauy_trouin.webp",
+    "releaseDate": "2023-03-07"
+  },
+  {
+    "id": "fr_cruiser_dugauy_class_primaguet",
+    "name": "fr_cruiser_dugauy_class_primaguet",
+    "localizedName": "普​利​茅​盖​特",
+    "nation": "france",
+    "rank": 3,
+    "battleRating": 5.0,
+    "br": {
+      "arcade": 5.0,
+      "realistic": 5.0,
+      "simulator": 5.0
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/fr_cruiser_dugauy_class_primaguet.webp",
+    "releaseDate": "2023-06-14"
+  },
+  {
+    "id": "fr_cruiser_emile_bertin",
+    "name": "fr_cruiser_emile_bertin",
+    "localizedName": "埃​米​尔·贝​尔​廷",
+    "nation": "france",
+    "rank": 4,
+    "battleRating": 5.3,
+    "br": {
+      "arcade": 5.3,
+      "realistic": 5.3,
+      "simulator": 5.3
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/fr_cruiser_emile_bertin.webp",
+    "releaseDate": "2023-06-14"
+  },
+  {
+    "id": "fr_cruiser_jeanne_darc",
+    "name": "fr_cruiser_jeanne_darc",
+    "localizedName": "圣​女​贞​德",
+    "nation": "france",
+    "rank": 3,
+    "battleRating": 4.7,
+    "br": {
+      "arcade": 4.7,
+      "realistic": 4.7,
+      "simulator": 4.7
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/fr_cruiser_jeanne_darc.webp",
+    "releaseDate": "2023-06-14"
+  },
+  {
+    "id": "fr_cruiser_la_galissoniere_class_gloire",
+    "name": "fr_cruiser_la_galissoniere_class_gloire",
+    "localizedName": "光​荣",
+    "nation": "france",
+    "rank": 4,
+    "battleRating": 5.7,
+    "br": {
+      "arcade": 5.7,
+      "realistic": 5.7,
+      "simulator": 5.7
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/fr_cruiser_la_galissoniere_class_gloire.webp",
+    "releaseDate": "2025-09-23"
+  },
+  {
+    "id": "fr_cruiser_la_galissoniere_class_la_galissoniere",
+    "name": "fr_cruiser_la_galissoniere_class_la_galissoniere",
+    "localizedName": "拉·加​利​索​尼​埃",
+    "nation": "france",
+    "rank": 4,
+    "battleRating": 5.7,
+    "br": {
+      "arcade": 5.7,
+      "realistic": 5.7,
+      "simulator": 5.7
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/fr_cruiser_la_galissoniere_class_la_galissoniere.webp",
+    "releaseDate": "2024-12-16"
+  },
+  {
+    "id": "fr_cruiser_suffren_class_colbert",
+    "name": "fr_cruiser_suffren_class_colbert",
+    "localizedName": "科​尔​伯​特",
+    "nation": "france",
+    "rank": 4,
+    "battleRating": 5.3,
+    "br": {
+      "arcade": 5.3,
+      "realistic": 5.3,
+      "simulator": 5.3
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/fr_cruiser_suffren_class_colbert.webp",
+    "releaseDate": "2023-06-14"
+  },
+  {
+    "id": "fr_cruiser_suffren_class_dupleix",
+    "name": "fr_cruiser_suffren_class_dupleix",
+    "localizedName": "杜​布​雷",
+    "nation": "france",
+    "rank": 4,
+    "battleRating": 5.7,
+    "br": {
+      "arcade": 5.7,
+      "realistic": 5.7,
+      "simulator": 5.7
+    },
+    "shipType": "cruiser",
+    "economicType": "premium",
+    "imageUrl": "ships/fr_cruiser_suffren_class_dupleix.webp",
+    "releaseDate": "2023-08-08"
+  },
+  {
+    "id": "fr_cruiser_suffren_class_suffren",
+    "name": "fr_cruiser_suffren_class_suffren",
+    "localizedName": "絮​弗​伦",
+    "nation": "france",
+    "rank": 4,
+    "battleRating": 5.3,
+    "br": {
+      "arcade": 5.3,
+      "realistic": 5.3,
+      "simulator": 5.3
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/fr_cruiser_suffren_class_suffren.webp",
+    "releaseDate": "2025-12-16"
+  },
+  {
+    "id": "fr_destroyer_aigle_class_aigle",
+    "name": "fr_destroyer_aigle_class_aigle",
+    "localizedName": "鹰",
+    "nation": "france",
+    "rank": 2,
+    "battleRating": 4.3,
+    "br": {
+      "arcade": 4.3,
+      "realistic": 4.3,
+      "simulator": 4.3
+    },
+    "shipType": "destroyer",
+    "economicType": "premium",
+    "imageUrl": "ships/fr_destroyer_aigle_class_aigle.webp",
+    "releaseDate": "2023-03-07"
+  },
+  {
+    "id": "fr_destroyer_aigle_class_milan",
+    "name": "fr_destroyer_aigle_class_milan",
+    "localizedName": "齿​鹰",
+    "nation": "france",
+    "rank": 2,
+    "battleRating": 4.3,
+    "br": {
+      "arcade": 4.3,
+      "realistic": 4.3,
+      "simulator": 4.3
+    },
+    "shipType": "destroyer",
+    "economicType": "regular",
+    "imageUrl": "ships/fr_destroyer_aigle_class_milan.webp",
+    "releaseDate": "2023-06-14"
+  },
+  {
+    "id": "fr_destroyer_aigle_class_vautour",
+    "name": "fr_destroyer_aigle_class_vautour",
+    "localizedName": "秃​鹰",
+    "nation": "france",
+    "rank": 2,
+    "battleRating": 4.3,
+    "br": {
+      "arcade": 4.3,
+      "realistic": 4.3,
+      "simulator": 4.3
+    },
+    "shipType": "destroyer",
+    "economicType": "regular",
+    "imageUrl": "ships/fr_destroyer_aigle_class_vautour.webp",
+    "releaseDate": "2023-06-14"
+  },
+  {
+    "id": "fr_destroyer_bourrasque_class_bourrasque",
+    "name": "fr_destroyer_bourrasque_class_bourrasque",
+    "localizedName": "狂​风",
+    "nation": "france",
+    "rank": 1,
+    "battleRating": 3.7,
+    "br": {
+      "arcade": 3.7,
+      "realistic": 3.7,
+      "simulator": 3.7
+    },
+    "shipType": "destroyer",
+    "economicType": "premium",
+    "imageUrl": "ships/fr_destroyer_bourrasque_class_bourrasque.webp",
+    "releaseDate": "2023-06-14"
+  },
+  {
+    "id": "fr_destroyer_bourrasque_class_tornade",
+    "name": "fr_destroyer_bourrasque_class_tornade",
+    "localizedName": "陆​龙​卷",
+    "nation": "france",
+    "rank": 1,
+    "battleRating": 3.7,
+    "br": {
+      "arcade": 3.7,
+      "realistic": 3.7,
+      "simulator": 3.7
+    },
+    "shipType": "destroyer",
+    "economicType": "premium",
+    "imageUrl": "ships/fr_destroyer_bourrasque_class_tornade.webp",
+    "releaseDate": "2024-06-19"
+  },
+  {
+    "id": "fr_destroyer_desaix_class_kleber",
+    "name": "fr_destroyer_desaix_class_kleber",
+    "localizedName": "克​莱​贝​尔",
+    "nation": "france",
+    "rank": 2,
+    "battleRating": 4.3,
+    "br": {
+      "arcade": 4.3,
+      "realistic": 4.3,
+      "simulator": 4.3
+    },
+    "shipType": "destroyer",
+    "economicType": "regular",
+    "imageUrl": "ships/fr_destroyer_desaix_class_kleber.webp",
+    "releaseDate": "2024-03-13"
+  },
+  {
+    "id": "fr_destroyer_guepard_class_verdun",
+    "name": "fr_destroyer_guepard_class_verdun",
+    "localizedName": "Verdun",
+    "nation": "france",
+    "rank": 1,
+    "battleRating": 4.0,
+    "br": {
+      "arcade": 4.0,
+      "realistic": 4.0,
+      "simulator": 4.0
+    },
+    "shipType": "destroyer",
+    "economicType": "regular",
+    "imageUrl": "ships/fr_destroyer_guepard_class_verdun.webp",
+    "releaseDate": "2026-03-10"
+  },
+  {
+    "id": "fr_destroyer_hunt_3series",
+    "name": "fr_destroyer_hunt_3series",
+    "localizedName": "斗​士",
+    "nation": "france",
+    "rank": 1,
+    "battleRating": 4.0,
+    "br": {
+      "arcade": 4.0,
+      "realistic": 4.0,
+      "simulator": 4.0
+    },
+    "shipType": "destroyer",
+    "economicType": "regular",
+    "imageUrl": "ships/fr_destroyer_hunt_3series.webp",
+    "releaseDate": "2023-10-31"
+  },
+  {
+    "id": "fr_destroyer_jaguar_class_chacal",
+    "name": "fr_destroyer_jaguar_class_chacal",
+    "localizedName": "胡​狼",
+    "nation": "france",
+    "rank": 1,
+    "battleRating": 4.0,
+    "br": {
+      "arcade": 4.0,
+      "realistic": 4.0,
+      "simulator": 4.0
+    },
+    "shipType": "destroyer",
+    "economicType": "regular",
+    "imageUrl": "ships/fr_destroyer_jaguar_class_chacal.webp",
+    "releaseDate": "2023-06-14"
+  },
+  {
+    "id": "fr_destroyer_jaguar_class_leopard",
+    "name": "fr_destroyer_jaguar_class_leopard",
+    "localizedName": "花​豹",
+    "nation": "france",
+    "rank": 1,
+    "battleRating": 3.7,
+    "br": {
+      "arcade": 3.7,
+      "realistic": 3.7,
+      "simulator": 3.7
+    },
+    "shipType": "destroyer",
+    "economicType": "regular",
+    "imageUrl": "ships/fr_destroyer_jaguar_class_leopard.webp",
+    "releaseDate": "2023-06-14"
+  },
+  {
+    "id": "fr_destroyer_jaguar_class_panthere",
+    "name": "fr_destroyer_jaguar_class_panthere",
+    "localizedName": "黑​豹",
+    "nation": "france",
+    "rank": 1,
+    "battleRating": 3.7,
+    "br": {
+      "arcade": 3.7,
+      "realistic": 3.7,
+      "simulator": 3.7
+    },
+    "shipType": "destroyer",
+    "economicType": "premium",
+    "imageUrl": "ships/fr_destroyer_jaguar_class_panthere.webp",
+    "releaseDate": "2023-06-14"
+  },
+  {
+    "id": "fr_destroyer_le_fantasque_class_le_malin",
+    "name": "fr_destroyer_le_fantasque_class_le_malin",
+    "localizedName": "恶​毒",
+    "nation": "france",
+    "rank": 3,
+    "battleRating": 4.7,
+    "br": {
+      "arcade": 4.7,
+      "realistic": 4.7,
+      "simulator": 4.7
+    },
+    "shipType": "destroyer",
+    "economicType": "regular",
+    "imageUrl": "ships/fr_destroyer_le_fantasque_class_le_malin.webp",
+    "releaseDate": "2023-06-14"
+  },
+  {
+    "id": "fr_destroyer_le_fantasque_class_le_triomphant",
+    "name": "fr_destroyer_le_fantasque_class_le_triomphant",
+    "localizedName": "凯​旋",
+    "nation": "france",
+    "rank": 3,
+    "battleRating": 4.7,
+    "br": {
+      "arcade": 4.7,
+      "realistic": 4.7,
+      "simulator": 4.7
+    },
+    "shipType": "destroyer",
+    "economicType": "premium",
+    "imageUrl": "ships/fr_destroyer_le_fantasque_class_le_triomphant.webp",
+    "releaseDate": "2024-01-24"
+  },
+  {
+    "id": "fr_destroyer_marceau_class_marceau",
+    "name": "fr_destroyer_marceau_class_marceau",
+    "localizedName": "马​叟",
+    "nation": "france",
+    "rank": 2,
+    "battleRating": 4.3,
+    "br": {
+      "arcade": 4.3,
+      "realistic": 4.3,
+      "simulator": 4.3
+    },
+    "shipType": "destroyer",
+    "economicType": "regular",
+    "imageUrl": "ships/fr_destroyer_marceau_class_marceau.webp",
+    "releaseDate": "2023-06-14"
+  },
+  {
+    "id": "fr_destroyer_mogador_class_mogador",
+    "name": "fr_destroyer_mogador_class_mogador",
+    "localizedName": "莫​加​多​尔",
+    "nation": "france",
+    "rank": 3,
+    "battleRating": 5.0,
+    "br": {
+      "arcade": 5.0,
+      "realistic": 5.0,
+      "simulator": 5.0
+    },
+    "shipType": "destroyer",
+    "economicType": "regular",
+    "imageUrl": "ships/fr_destroyer_mogador_class_mogador.webp",
+    "releaseDate": "2024-09-10"
+  },
+  {
+    "id": "fr_destroyer_vauquelin_class_vauquelin",
+    "name": "fr_destroyer_vauquelin_class_vauquelin",
+    "localizedName": "沃​克​兰",
+    "nation": "france",
+    "rank": 2,
+    "battleRating": 4.3,
+    "br": {
+      "arcade": 4.3,
+      "realistic": 4.3,
+      "simulator": 4.3
+    },
+    "shipType": "destroyer",
+    "economicType": "regular",
+    "imageUrl": "ships/fr_destroyer_vauquelin_class_vauquelin.webp",
+    "releaseDate": "2023-12-14"
+  },
+  {
+    "id": "fr_elan_class_commandant_domine",
+    "name": "fr_elan_class_commandant_domine",
+    "localizedName": "多​米​内​指​挥​官",
+    "nation": "france",
+    "rank": 4,
+    "battleRating": 3.3,
+    "br": {
+      "arcade": 3.3,
+      "realistic": 3.3,
+      "simulator": 3.3
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/fr_elan_class_commandant_domine.webp",
+    "releaseDate": "2025-11-11"
+  },
+  {
+    "id": "fr_flower_class_aconit",
+    "name": "fr_flower_class_aconit",
+    "localizedName": "乌​头",
+    "nation": "france",
+    "rank": 2,
+    "battleRating": 2.3,
+    "br": {
+      "arcade": 2.3,
+      "realistic": 2.3,
+      "simulator": 2.3
+    },
+    "shipType": "submarine_chaser",
+    "economicType": "regular",
+    "imageUrl": "ships/fr_flower_class_aconit.webp",
+    "releaseDate": "2025-03-18"
+  },
+  {
+    "id": "fr_frigate_corse_class_brestois",
+    "name": "fr_frigate_corse_class_brestois",
+    "localizedName": "布​雷​斯​特",
+    "nation": "france",
+    "rank": 5,
+    "battleRating": 4.3,
+    "br": {
+      "arcade": 4.3,
+      "realistic": 4.3,
+      "simulator": 4.3
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/fr_frigate_corse_class_brestois.webp",
+    "releaseDate": "2025-11-11"
+  },
+  {
+    "id": "fr_frigate_corse_class_corse",
+    "name": "fr_frigate_corse_class_corse",
+    "localizedName": "科​西​嘉",
+    "nation": "france",
+    "rank": 4,
+    "battleRating": 4.0,
+    "br": {
+      "arcade": 4.0,
+      "realistic": 4.0,
+      "simulator": 4.0
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "premium",
+    "imageUrl": "ships/fr_frigate_corse_class_corse.webp",
+    "releaseDate": "2025-12-16"
+  },
+  {
+    "id": "fr_frigate_croix_de_lorraine_class_la_surprise",
+    "name": "fr_frigate_croix_de_lorraine_class_la_surprise",
+    "localizedName": "惊​喜",
+    "nation": "france",
+    "rank": 4,
+    "battleRating": 3.3,
+    "br": {
+      "arcade": 3.3,
+      "realistic": 3.3,
+      "simulator": 3.3
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/fr_frigate_croix_de_lorraine_class_la_surprise.webp",
+    "releaseDate": "2024-09-10"
+  },
+  {
+    "id": "fr_marne_class_aisne",
+    "name": "fr_marne_class_aisne",
+    "localizedName": "埃​纳",
+    "nation": "france",
+    "rank": 3,
+    "battleRating": 3.3,
+    "br": {
+      "arcade": 3.3,
+      "realistic": 3.3,
+      "simulator": 3.3
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "premium",
+    "imageUrl": "ships/fr_marne_class_aisne.webp",
+    "releaseDate": "2025-09-23"
+  },
+  {
+    "id": "fr_marne_class_marne",
+    "name": "fr_marne_class_marne",
+    "localizedName": "马​恩",
+    "nation": "france",
+    "rank": 3,
+    "battleRating": 3.3,
+    "br": {
+      "arcade": 3.3,
+      "realistic": 3.3,
+      "simulator": 3.3
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/fr_marne_class_marne.webp",
+    "releaseDate": "2025-03-18"
+  },
+  {
+    "id": "germ_artilleriefahrprahm_typ_d1",
+    "name": "germ_artilleriefahrprahm_typ_d1",
+    "localizedName": "AF D1",
+    "nation": "germany",
+    "rank": 4,
+    "battleRating": 2.7,
+    "br": {
+      "arcade": 2.7,
+      "realistic": 2.7,
+      "simulator": 2.7
+    },
+    "shipType": "barge",
+    "economicType": "regular",
+    "imageUrl": "ships/germ_artilleriefahrprahm_typ_d1.webp"
+  },
+  {
+    "id": "germ_artilleriefahrprahm_typ_d3",
+    "name": "germ_artilleriefahrprahm_typ_d3",
+    "localizedName": "AF D3",
+    "nation": "germany",
+    "rank": 4,
+    "battleRating": 3.3,
+    "br": {
+      "arcade": 3.3,
+      "realistic": 3.3,
+      "simulator": 3.3
+    },
+    "shipType": "barge",
+    "economicType": "regular",
+    "imageUrl": "ships/germ_artilleriefahrprahm_typ_d3.webp"
+  },
+  {
+    "id": "germ_battlecruiser_derfflinger",
+    "name": "germ_battlecruiser_derfflinger",
+    "localizedName": "德​弗​林​格",
+    "nation": "germany",
+    "rank": 5,
+    "battleRating": 6.7,
+    "br": {
+      "arcade": 6.7,
+      "realistic": 6.7,
+      "simulator": 6.7
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/germ_battlecruiser_derfflinger.webp",
+    "releaseDate": "2024-09-10"
+  },
+  {
+    "id": "germ_battlecruiser_ersatz_yorck",
+    "name": "germ_battlecruiser_ersatz_yorck",
+    "localizedName": "约​克​代​舰",
+    "nation": "germany",
+    "rank": 6,
+    "battleRating": 7.0,
+    "br": {
+      "arcade": 7.0,
+      "realistic": 7.0,
+      "simulator": 7.0
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/germ_battlecruiser_ersatz_yorck.webp",
+    "releaseDate": "2024-12-16"
+  },
+  {
+    "id": "germ_battlecruiser_mackensen_class",
+    "name": "germ_battlecruiser_mackensen_class",
+    "localizedName": "马​肯​森",
+    "nation": "germany",
+    "rank": 6,
+    "battleRating": 7.0,
+    "br": {
+      "arcade": 7.0,
+      "realistic": 7.0,
+      "simulator": 7.0
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/germ_battlecruiser_mackensen_class.webp",
+    "releaseDate": "2025-09-04"
+  },
+  {
+    "id": "germ_battlecruiser_von_der_tann",
+    "name": "germ_battlecruiser_von_der_tann",
+    "localizedName": "冯​德​坦​恩",
+    "nation": "germany",
+    "rank": 5,
+    "battleRating": 6.0,
+    "br": {
+      "arcade": 6.0,
+      "realistic": 6.0,
+      "simulator": 6.0
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/germ_battlecruiser_von_der_tann.webp",
+    "releaseDate": "2020-12-17"
+  },
+  {
+    "id": "germ_battleship_baden",
+    "name": "germ_battleship_baden",
+    "localizedName": "巴​登",
+    "nation": "germany",
+    "rank": 6,
+    "battleRating": 7.0,
+    "br": {
+      "arcade": 7.0,
+      "realistic": 7.0,
+      "simulator": 7.0
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/germ_battleship_baden.webp",
+    "releaseDate": "2024-03-14"
+  },
+  {
+    "id": "germ_battleship_bayern",
+    "name": "germ_battleship_bayern",
+    "localizedName": "巴​伐​利​亚",
+    "nation": "germany",
+    "rank": 6,
+    "battleRating": 7.0,
+    "br": {
+      "arcade": 7.0,
+      "realistic": 7.0,
+      "simulator": 7.0
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/germ_battleship_bayern.webp",
+    "releaseDate": "2022-06-15"
+  },
+  {
+    "id": "germ_battleship_bismarck",
+    "name": "germ_battleship_bismarck",
+    "localizedName": "俾​斯​麦",
+    "nation": "germany",
+    "rank": 7,
+    "battleRating": 8.3,
+    "br": {
+      "arcade": 8.3,
+      "realistic": 8.3,
+      "simulator": 8.3
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/germ_battleship_bismarck.webp",
+    "releaseDate": "2025-06-25"
+  },
+  {
+    "id": "germ_battleship_gneisenau_380mm",
+    "name": "germ_battleship_gneisenau_380mm",
+    "localizedName": "格​奈​森​瑙",
+    "nation": "germany",
+    "rank": 6,
+    "battleRating": 7.7,
+    "br": {
+      "arcade": 7.7,
+      "realistic": 7.7,
+      "simulator": 7.7
+    },
+    "shipType": "cruiser",
+    "economicType": "premium",
+    "imageUrl": "ships/germ_battleship_gneisenau_380mm.webp",
+    "releaseDate": "2025-06-25"
+  },
+  {
+    "id": "germ_battleship_helgoland",
+    "name": "germ_battleship_helgoland",
+    "localizedName": "黑​尔​戈​兰",
+    "nation": "germany",
+    "rank": 5,
+    "battleRating": 6.7,
+    "br": {
+      "arcade": 6.7,
+      "realistic": 6.7,
+      "simulator": 6.7
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/germ_battleship_helgoland.webp",
+    "releaseDate": "2020-11-15"
+  },
+  {
+    "id": "germ_battleship_kaiser",
+    "name": "germ_battleship_kaiser",
+    "localizedName": "皇​帝",
+    "nation": "germany",
+    "rank": 5,
+    "battleRating": 6.7,
+    "br": {
+      "arcade": 6.7,
+      "realistic": 6.7,
+      "simulator": 6.7
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/germ_battleship_kaiser.webp",
+    "releaseDate": "2021-03-10"
+  },
+  {
+    "id": "germ_battleship_konig",
+    "name": "germ_battleship_konig",
+    "localizedName": "国​王",
+    "nation": "germany",
+    "rank": 5,
+    "battleRating": 6.7,
+    "br": {
+      "arcade": 6.7,
+      "realistic": 6.7,
+      "simulator": 6.7
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/germ_battleship_konig.webp",
+    "releaseDate": "2025-11-11"
+  },
+  {
+    "id": "germ_battleship_nassau",
+    "name": "germ_battleship_nassau",
+    "localizedName": "拿​骚",
+    "nation": "germany",
+    "rank": 5,
+    "battleRating": 6.0,
+    "br": {
+      "arcade": 6.0,
+      "realistic": 6.0,
+      "simulator": 6.0
+    },
+    "shipType": "cruiser",
+    "economicType": "premium",
+    "imageUrl": "ships/germ_battleship_nassau.webp",
+    "releaseDate": "2023-09-19"
+  },
+  {
+    "id": "germ_battleship_ostfriesland",
+    "name": "germ_battleship_ostfriesland",
+    "localizedName": "东​弗​里​斯​兰",
+    "nation": "germany",
+    "rank": 5,
+    "battleRating": 6.7,
+    "br": {
+      "arcade": 6.7,
+      "realistic": 6.7,
+      "simulator": 6.7
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/germ_battleship_ostfriesland.webp",
+    "releaseDate": "2022-09-22"
+  },
+  {
+    "id": "germ_battleship_sachsen",
+    "name": "germ_battleship_sachsen",
+    "localizedName": "萨​克​森",
+    "nation": "germany",
+    "rank": 6,
+    "battleRating": 7.0,
+    "br": {
+      "arcade": 7.0,
+      "realistic": 7.0,
+      "simulator": 7.0
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/germ_battleship_sachsen.webp",
+    "releaseDate": "2023-10-31"
+  },
+  {
+    "id": "germ_battleship_scharnhorst",
+    "name": "germ_battleship_scharnhorst",
+    "localizedName": "沙​恩​霍​斯​特",
+    "nation": "germany",
+    "rank": 6,
+    "battleRating": 7.3,
+    "br": {
+      "arcade": 7.3,
+      "realistic": 7.3,
+      "simulator": 7.3
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/germ_battleship_scharnhorst.webp",
+    "releaseDate": "2021-12-17"
+  },
+  {
+    "id": "germ_battleship_westfalen",
+    "name": "germ_battleship_westfalen",
+    "localizedName": "威​斯​特​法​伦",
+    "nation": "germany",
+    "rank": 5,
+    "battleRating": 6.0,
+    "br": {
+      "arcade": 6.0,
+      "realistic": 6.0,
+      "simulator": 6.0
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/germ_battleship_westfalen.webp",
+    "releaseDate": "2020-11-15"
+  },
+  {
+    "id": "germ_cruiser_admiral_graf_spee",
+    "name": "germ_cruiser_admiral_graf_spee",
+    "localizedName": "施​佩​伯​爵​海​军​上​将",
+    "nation": "germany",
+    "rank": 4,
+    "battleRating": 6.0,
+    "br": {
+      "arcade": 6.0,
+      "realistic": 6.0,
+      "simulator": 6.0
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/germ_cruiser_admiral_graf_spee.webp",
+    "releaseDate": "2019-12-16"
+  },
+  {
+    "id": "germ_cruiser_admiral_hipper",
+    "name": "germ_cruiser_admiral_hipper",
+    "localizedName": "希​佩​尔​海​军​上​将",
+    "nation": "germany",
+    "rank": 4,
+    "battleRating": 6.0,
+    "br": {
+      "arcade": 6.0,
+      "realistic": 6.0,
+      "simulator": 6.0
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/germ_cruiser_admiral_hipper.webp",
+    "releaseDate": "2019-09-10"
+  },
+  {
+    "id": "germ_cruiser_elbing",
+    "name": "germ_cruiser_elbing",
+    "localizedName": "埃​尔​宾",
+    "nation": "germany",
+    "rank": 3,
+    "battleRating": 4.7,
+    "br": {
+      "arcade": 4.7,
+      "realistic": 4.7,
+      "simulator": 4.7
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/germ_cruiser_elbing.webp",
+    "releaseDate": "2022-09-14"
+  },
+  {
+    "id": "germ_cruiser_emden_1944",
+    "name": "germ_cruiser_emden_1944",
+    "localizedName": "埃​姆​登",
+    "nation": "germany",
+    "rank": 3,
+    "battleRating": 5.0,
+    "br": {
+      "arcade": 5.0,
+      "realistic": 5.0,
+      "simulator": 5.0
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/germ_cruiser_emden_1944.webp"
+  },
+  {
+    "id": "germ_cruiser_karlsruhe",
+    "name": "germ_cruiser_karlsruhe",
+    "localizedName": "卡​尔​斯​鲁​厄",
+    "nation": "germany",
+    "rank": 4,
+    "battleRating": 5.7,
+    "br": {
+      "arcade": 5.7,
+      "realistic": 5.7,
+      "simulator": 5.7
+    },
+    "shipType": "cruiser",
+    "economicType": "premium",
+    "imageUrl": "ships/germ_cruiser_karlsruhe.webp",
+    "releaseDate": "2021-09-07"
+  },
+  {
+    "id": "germ_cruiser_koln",
+    "name": "germ_cruiser_koln",
+    "localizedName": "科​隆",
+    "nation": "germany",
+    "rank": 4,
+    "battleRating": 5.3,
+    "br": {
+      "arcade": 5.3,
+      "realistic": 5.3,
+      "simulator": 5.3
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/germ_cruiser_koln.webp",
+    "releaseDate": "2018-12-18"
+  },
+  {
+    "id": "germ_cruiser_leipzig",
+    "name": "germ_cruiser_leipzig",
+    "localizedName": "莱​比​锡",
+    "nation": "germany",
+    "rank": 4,
+    "battleRating": 5.3,
+    "br": {
+      "arcade": 5.3,
+      "realistic": 5.3,
+      "simulator": 5.3
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/germ_cruiser_leipzig.webp",
+    "releaseDate": "2020-03-10"
+  },
+  {
+    "id": "germ_cruiser_nurnberg",
+    "name": "germ_cruiser_nurnberg",
+    "localizedName": "纽​伦​堡",
+    "nation": "germany",
+    "rank": 4,
+    "battleRating": 5.7,
+    "br": {
+      "arcade": 5.7,
+      "realistic": 5.7,
+      "simulator": 5.7
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/germ_cruiser_nurnberg.webp",
+    "releaseDate": "2019-03-12"
+  },
+  {
+    "id": "germ_cruiser_prinz_eugen",
+    "name": "germ_cruiser_prinz_eugen",
+    "localizedName": "欧​根​亲​王",
+    "nation": "germany",
+    "rank": 4,
+    "battleRating": 6.0,
+    "br": {
+      "arcade": 6.0,
+      "realistic": 6.0,
+      "simulator": 6.0
+    },
+    "shipType": "cruiser",
+    "economicType": "premium",
+    "imageUrl": "ships/germ_cruiser_prinz_eugen.webp",
+    "releaseDate": "2019-12-16"
+  },
+  {
+    "id": "germ_destroyer_class1924_iltis",
+    "name": "germ_destroyer_class1924_iltis",
+    "localizedName": "山​猫",
+    "nation": "germany",
+    "rank": 1,
+    "battleRating": 3.7,
+    "br": {
+      "arcade": 3.7,
+      "realistic": 3.7,
+      "simulator": 3.7
+    },
+    "shipType": "destroyer",
+    "economicType": "premium",
+    "imageUrl": "ships/germ_destroyer_class1924_iltis.webp",
+    "releaseDate": "2020-11-15"
+  },
+  {
+    "id": "germ_destroyer_class1924_jaguar1941",
+    "name": "germ_destroyer_class1924_jaguar1941",
+    "localizedName": "美​洲​豹",
+    "nation": "germany",
+    "rank": 2,
+    "battleRating": 3.7,
+    "br": {
+      "arcade": 3.7,
+      "realistic": 3.7,
+      "simulator": 3.7
+    },
+    "shipType": "destroyer",
+    "economicType": "premium",
+    "imageUrl": "ships/germ_destroyer_class1924_jaguar1941.webp",
+    "releaseDate": "2019-12-16"
+  },
+  {
+    "id": "germ_destroyer_class1924_leopard1932",
+    "name": "germ_destroyer_class1924_leopard1932",
+    "localizedName": "豹",
+    "nation": "germany",
+    "rank": 1,
+    "battleRating": 3.7,
+    "br": {
+      "arcade": 3.7,
+      "realistic": 3.7,
+      "simulator": 3.7
+    },
+    "shipType": "destroyer",
+    "economicType": "premium",
+    "imageUrl": "ships/germ_destroyer_class1924_leopard1932.webp"
+  },
+  {
+    "id": "germ_destroyer_class1934a_1940",
+    "name": "germ_destroyer_class1934a_1940",
+    "localizedName": "Z 12",
+    "nation": "germany",
+    "rank": 2,
+    "battleRating": 4.3,
+    "br": {
+      "arcade": 4.3,
+      "realistic": 4.3,
+      "simulator": 4.3
+    },
+    "shipType": "destroyer",
+    "economicType": "regular",
+    "imageUrl": "ships/germ_destroyer_class1934a_1940.webp",
+    "releaseDate": "2018-10-23"
+  },
+  {
+    "id": "germ_destroyer_class1934a_1944",
+    "name": "germ_destroyer_class1934a_1944",
+    "localizedName": "Z 15",
+    "nation": "germany",
+    "rank": 1,
+    "battleRating": 4.0,
+    "br": {
+      "arcade": 4.0,
+      "realistic": 4.0,
+      "simulator": 4.0
+    },
+    "shipType": "destroyer",
+    "economicType": "regular",
+    "imageUrl": "ships/germ_destroyer_class1934a_1944.webp",
+    "releaseDate": "2019-10-29"
+  },
+  {
+    "id": "germ_destroyer_class1936_z20",
+    "name": "germ_destroyer_class1936_z20",
+    "localizedName": "Z 22",
+    "nation": "germany",
+    "rank": 2,
+    "battleRating": 4.3,
+    "br": {
+      "arcade": 4.3,
+      "realistic": 4.3,
+      "simulator": 4.3
+    },
+    "shipType": "destroyer",
+    "economicType": "regular",
+    "imageUrl": "ships/germ_destroyer_class1936_z20.webp"
+  },
+  {
+    "id": "germ_destroyer_class1936_z20_karlgalster",
+    "name": "germ_destroyer_class1936_z20_karlgalster",
+    "localizedName": "Z 20",
+    "nation": "germany",
+    "rank": 3,
+    "battleRating": 4.7,
+    "br": {
+      "arcade": 4.7,
+      "realistic": 4.7,
+      "simulator": 4.7
+    },
+    "shipType": "destroyer",
+    "economicType": "premium",
+    "imageUrl": "ships/germ_destroyer_class1936_z20_karlgalster.webp"
+  },
+  {
+    "id": "germ_destroyer_class1936a_mob_z32",
+    "name": "germ_destroyer_class1936a_mob_z32",
+    "localizedName": "Z 32",
+    "nation": "germany",
+    "rank": 2,
+    "battleRating": 4.7,
+    "br": {
+      "arcade": 4.7,
+      "realistic": 4.7,
+      "simulator": 4.7
+    },
+    "shipType": "destroyer",
+    "economicType": "regular",
+    "imageUrl": "ships/germ_destroyer_class1936a_mob_z32.webp",
+    "releaseDate": "2019-03-12"
+  },
+  {
+    "id": "germ_destroyer_class1936a_z25",
+    "name": "germ_destroyer_class1936a_z25",
+    "localizedName": "Z 25",
+    "nation": "germany",
+    "rank": 3,
+    "battleRating": 4.3,
+    "br": {
+      "arcade": 4.3,
+      "realistic": 4.3,
+      "simulator": 4.3
+    },
+    "shipType": "destroyer",
+    "economicType": "premium",
+    "imageUrl": "ships/germ_destroyer_class1936a_z25.webp",
+    "releaseDate": "2021-02-24"
+  },
+  {
+    "id": "germ_destroyer_class1936b",
+    "name": "germ_destroyer_class1936b",
+    "localizedName": "Z 43",
+    "nation": "germany",
+    "rank": 2,
+    "battleRating": 4.7,
+    "br": {
+      "arcade": 4.7,
+      "realistic": 4.7,
+      "simulator": 4.7
+    },
+    "shipType": "destroyer",
+    "economicType": "regular",
+    "imageUrl": "ships/germ_destroyer_class1936b.webp",
+    "releaseDate": "2019-10-29"
+  },
+  {
+    "id": "germ_destroyer_class1936c_z46",
+    "name": "germ_destroyer_class1936c_z46",
+    "localizedName": "Z 46",
+    "nation": "germany",
+    "rank": 3,
+    "battleRating": 5.0,
+    "br": {
+      "arcade": 5.0,
+      "realistic": 5.0,
+      "simulator": 5.0
+    },
+    "shipType": "destroyer",
+    "economicType": "regular",
+    "imageUrl": "ships/germ_destroyer_class1936c_z46.webp",
+    "releaseDate": "2023-06-14"
+  },
+  {
+    "id": "germ_destroyer_class1936c_z47",
+    "name": "germ_destroyer_class1936c_z47",
+    "localizedName": "Z 47",
+    "nation": "germany",
+    "rank": 3,
+    "battleRating": 5.0,
+    "br": {
+      "arcade": 5.0,
+      "realistic": 5.0,
+      "simulator": 5.0
+    },
+    "shipType": "destroyer",
+    "economicType": "premium",
+    "imageUrl": "ships/germ_destroyer_class1936c_z47.webp",
+    "releaseDate": "2022-12-20"
+  },
+  {
+    "id": "germ_destroyer_class1939_t22",
+    "name": "germ_destroyer_class1939_t22",
+    "localizedName": "T 22",
+    "nation": "germany",
+    "rank": 1,
+    "battleRating": 3.7,
+    "br": {
+      "arcade": 3.7,
+      "realistic": 3.7,
+      "simulator": 3.7
+    },
+    "shipType": "destroyer",
+    "economicType": "regular",
+    "imageUrl": "ships/germ_destroyer_class1939_t22.webp"
+  },
+  {
+    "id": "germ_destroyer_class1939_t31",
+    "name": "germ_destroyer_class1939_t31",
+    "localizedName": "T 31",
+    "nation": "germany",
+    "rank": 3,
+    "battleRating": 4.0,
+    "br": {
+      "arcade": 4.0,
+      "realistic": 4.0,
+      "simulator": 4.0
+    },
+    "shipType": "destroyer",
+    "economicType": "premium",
+    "imageUrl": "ships/germ_destroyer_class1939_t31.webp",
+    "releaseDate": "2019-09-10"
+  },
+  {
+    "id": "germ_destroyer_class1942_z51",
+    "name": "germ_destroyer_class1942_z51",
+    "localizedName": "Z 51",
+    "nation": "germany",
+    "rank": 3,
+    "battleRating": 4.7,
+    "br": {
+      "arcade": 4.7,
+      "realistic": 4.7,
+      "simulator": 4.7
+    },
+    "shipType": "destroyer",
+    "economicType": "regular",
+    "imageUrl": "ships/germ_destroyer_class1942_z51.webp",
+    "releaseDate": "2025-09-23"
+  },
+  {
+    "id": "germ_destroyer_class1944_z52",
+    "name": "germ_destroyer_class1944_z52",
+    "localizedName": "Z52",
+    "nation": "germany",
+    "rank": 3,
+    "battleRating": 5.0,
+    "br": {
+      "arcade": 5.0,
+      "realistic": 5.0,
+      "simulator": 5.0
+    },
+    "shipType": "destroyer",
+    "economicType": "regular",
+    "imageUrl": "ships/germ_destroyer_class1944_z52.webp",
+    "releaseDate": "2026-03-10"
+  },
+  {
+    "id": "germ_destroyer_fletcher_zerstorer4",
+    "name": "germ_destroyer_fletcher_zerstorer4",
+    "localizedName": "Z 4",
+    "nation": "germany",
+    "rank": 2,
+    "battleRating": 4.7,
+    "br": {
+      "arcade": 4.7,
+      "realistic": 4.7,
+      "simulator": 4.7
+    },
+    "shipType": "destroyer",
+    "economicType": "premium",
+    "imageUrl": "ships/germ_destroyer_fletcher_zerstorer4.webp",
+    "releaseDate": "2024-12-16"
+  },
+  {
+    "id": "germ_destroyer_lutjens_class_lutjens",
+    "name": "germ_destroyer_lutjens_class_lutjens",
+    "localizedName": "吕​特​晏​斯",
+    "nation": "germany",
+    "rank": 4,
+    "battleRating": 5.3,
+    "br": {
+      "arcade": 5.3,
+      "realistic": 5.3,
+      "simulator": 5.3
+    },
+    "shipType": "destroyer",
+    "economicType": "regular",
+    "imageUrl": "ships/germ_destroyer_lutjens_class_lutjens.webp",
+    "releaseDate": "2025-12-16"
+  },
+  {
+    "id": "germ_escort_typem1935",
+    "name": "germ_escort_typem1935",
+    "localizedName": "M 17",
+    "nation": "germany",
+    "rank": 4,
+    "battleRating": 4.3,
+    "br": {
+      "arcade": 4.3,
+      "realistic": 4.3,
+      "simulator": 4.3
+    },
+    "shipType": "submarine_chaser",
+    "economicType": "regular",
+    "imageUrl": "ships/germ_escort_typem1935.webp",
+    "releaseDate": "2021-09-07"
+  },
+  {
+    "id": "germ_escort_typem1943",
+    "name": "germ_escort_typem1943",
+    "localizedName": "M 802",
+    "nation": "germany",
+    "rank": 4,
+    "battleRating": 4.3,
+    "br": {
+      "arcade": 4.3,
+      "realistic": 4.3,
+      "simulator": 4.3
+    },
+    "shipType": "submarine_chaser",
+    "economicType": "premium",
+    "imageUrl": "ships/germ_escort_typem1943.webp",
+    "releaseDate": "2018-10-23"
+  },
+  {
+    "id": "germ_frigate_koln",
+    "name": "germ_frigate_koln",
+    "localizedName": "科​隆",
+    "nation": "germany",
+    "rank": 5,
+    "battleRating": 4.7,
+    "br": {
+      "arcade": 4.7,
+      "realistic": 4.7,
+      "simulator": 4.7
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/germ_frigate_koln.webp",
+    "releaseDate": "2020-03-10"
+  },
+  {
+    "id": "germ_frigate_koln_lubeck",
+    "name": "germ_frigate_koln_lubeck",
+    "localizedName": "吕​贝​克",
+    "nation": "germany",
+    "rank": 4,
+    "battleRating": 4.7,
+    "br": {
+      "arcade": 4.7,
+      "realistic": 4.7,
+      "simulator": 4.7
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "premium",
+    "imageUrl": "ships/germ_frigate_koln_lubeck.webp",
+    "releaseDate": "2020-09-30"
+  },
+  {
+    "id": "germ_kanonenboot_k2",
+    "name": "germ_kanonenboot_k2",
+    "localizedName": "K 2",
+    "nation": "germany",
+    "rank": 1,
+    "battleRating": 4.3,
+    "br": {
+      "arcade": 4.3,
+      "realistic": 4.3,
+      "simulator": 4.3
+    },
+    "shipType": "destroyer",
+    "economicType": "regular",
+    "imageUrl": "ships/germ_kanonenboot_k2.webp"
+  },
+  {
+    "id": "germ_kondor2_class",
+    "name": "germ_kondor2_class",
+    "localizedName": "贝​尔​瑙",
+    "nation": "germany",
+    "rank": 4,
+    "battleRating": 3.3,
+    "br": {
+      "arcade": 3.3,
+      "realistic": 3.3,
+      "simulator": 3.3
+    },
+    "shipType": "submarine_chaser",
+    "economicType": "regular",
+    "imageUrl": "ships/germ_kondor2_class.webp",
+    "releaseDate": "2024-06-19"
+  },
+  {
+    "id": "germ_minelayer_drache",
+    "name": "germ_minelayer_drache",
+    "localizedName": "天​龙​座",
+    "nation": "germany",
+    "rank": 4,
+    "battleRating": 3.7,
+    "br": {
+      "arcade": 3.7,
+      "realistic": 3.7,
+      "simulator": 3.7
+    },
+    "shipType": "submarine_chaser",
+    "economicType": "regular",
+    "imageUrl": "ships/germ_minelayer_drache.webp",
+    "releaseDate": "2023-09-19"
+  },
+  {
+    "id": "germ_pr1331",
+    "name": "germ_pr1331",
+    "localizedName": "帕​尔​希​姆",
+    "nation": "germany",
+    "rank": 5,
+    "battleRating": 4.0,
+    "br": {
+      "arcade": 4.0,
+      "realistic": 4.0,
+      "simulator": 4.0
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/germ_pr1331.webp",
+    "releaseDate": "2025-12-16"
+  },
+  {
+    "id": "germ_schutze_class",
+    "name": "germ_schutze_class",
+    "localizedName": "射​手​座",
+    "nation": "germany",
+    "rank": 4,
+    "battleRating": 3.0,
+    "br": {
+      "arcade": 3.0,
+      "realistic": 3.0,
+      "simulator": 3.0
+    },
+    "shipType": "submarine_chaser",
+    "economicType": "regular",
+    "imageUrl": "ships/germ_schutze_class.webp",
+    "releaseDate": "2025-03-18"
+  },
+  {
+    "id": "germ_sf40_leichte_flakkampffaehre",
+    "name": "germ_sf40_leichte_flakkampffaehre",
+    "localizedName": "SF 40 轻​装​型",
+    "nation": "germany",
+    "rank": 3,
+    "battleRating": 2.7,
+    "br": {
+      "arcade": 2.7,
+      "realistic": 2.7,
+      "simulator": 2.7
+    },
+    "shipType": "barge",
+    "economicType": "regular",
+    "imageUrl": "ships/germ_sf40_leichte_flakkampffaehre.webp"
+  },
+  {
+    "id": "germ_sf40_schwere_flakkampffaehre",
+    "name": "germ_sf40_schwere_flakkampffaehre",
+    "localizedName": "SF 40 重​装​型",
+    "nation": "germany",
+    "rank": 3,
+    "battleRating": 2.7,
+    "br": {
+      "arcade": 2.7,
+      "realistic": 2.7,
+      "simulator": 2.7
+    },
+    "shipType": "barge",
+    "economicType": "regular",
+    "imageUrl": "ships/germ_sf40_schwere_flakkampffaehre.webp"
+  },
+  {
+    "id": "germ_skr_pr50_karl_marx",
+    "name": "germ_skr_pr50_karl_marx",
+    "localizedName": "卡​尔·马​克​思",
+    "nation": "germany",
+    "rank": 4,
+    "battleRating": 4.0,
+    "br": {
+      "arcade": 4.0,
+      "realistic": 4.0,
+      "simulator": 4.0
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "clan",
+    "imageUrl": "ships/germ_skr_pr50_karl_marx.webp",
+    "releaseDate": "2022-03-22"
+  },
+  {
+    "id": "it_albatros_class_f543",
+    "name": "it_albatros_class_f543",
+    "localizedName": "信​天​翁",
+    "nation": "italy",
+    "rank": 5,
+    "battleRating": 4.0,
+    "br": {
+      "arcade": 4.0,
+      "realistic": 4.0,
+      "simulator": 4.0
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/it_albatros_class_f543.webp",
+    "releaseDate": "2022-03-22"
+  },
+  {
+    "id": "it_albatros_class_f544",
+    "name": "it_albatros_class_f544",
+    "localizedName": "翠​鸟",
+    "nation": "italy",
+    "rank": 5,
+    "battleRating": 4.0,
+    "br": {
+      "arcade": 4.0,
+      "realistic": 4.0,
+      "simulator": 4.0
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/it_albatros_class_f544.webp",
+    "releaseDate": "2024-07-24"
+  },
+  {
+    "id": "it_battleship_andrea_doria",
+    "name": "it_battleship_andrea_doria",
+    "localizedName": "安​德​烈​亚·多​利​亚",
+    "nation": "italy",
+    "rank": 5,
+    "battleRating": 6.3,
+    "br": {
+      "arcade": 6.3,
+      "realistic": 6.3,
+      "simulator": 6.3
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/it_battleship_andrea_doria.webp",
+    "releaseDate": "2022-09-14"
+  },
+  {
+    "id": "it_battleship_caio_duilio",
+    "name": "it_battleship_caio_duilio",
+    "localizedName": "杜​伊​利​奥",
+    "nation": "italy",
+    "rank": 6,
+    "battleRating": 7.3,
+    "br": {
+      "arcade": 7.3,
+      "realistic": 7.3,
+      "simulator": 7.3
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/it_battleship_caio_duilio.webp",
+    "releaseDate": "2023-03-07"
+  },
+  {
+    "id": "it_battleship_conte_di_cavour",
+    "name": "it_battleship_conte_di_cavour",
+    "localizedName": "加​富​尔​伯​爵",
+    "nation": "italy",
+    "rank": 6,
+    "battleRating": 7.3,
+    "br": {
+      "arcade": 7.3,
+      "realistic": 7.3,
+      "simulator": 7.3
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/it_battleship_conte_di_cavour.webp",
+    "releaseDate": "2023-10-31"
+  },
+  {
+    "id": "it_battleship_dante_alighieri",
+    "name": "it_battleship_dante_alighieri",
+    "localizedName": "但​丁·阿​利​吉​耶​里",
+    "nation": "italy",
+    "rank": 5,
+    "battleRating": 6.3,
+    "br": {
+      "arcade": 6.3,
+      "realistic": 6.3,
+      "simulator": 6.3
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/it_battleship_dante_alighieri.webp",
+    "releaseDate": "2021-06-02"
+  },
+  {
+    "id": "it_battleship_francesco_caracciolo",
+    "name": "it_battleship_francesco_caracciolo",
+    "localizedName": "弗​朗​西​斯​科·卡​拉​乔​洛",
+    "nation": "italy",
+    "rank": 5,
+    "battleRating": 6.7,
+    "br": {
+      "arcade": 6.7,
+      "realistic": 6.7,
+      "simulator": 6.7
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/it_battleship_francesco_caracciolo.webp",
+    "releaseDate": "2024-11-19"
+  },
+  {
+    "id": "it_battleship_leonardo_da_vinci",
+    "name": "it_battleship_leonardo_da_vinci",
+    "localizedName": "莱​昂​纳​多·达·芬​奇",
+    "nation": "italy",
+    "rank": 5,
+    "battleRating": 6.3,
+    "br": {
+      "arcade": 6.3,
+      "realistic": 6.3,
+      "simulator": 6.3
+    },
+    "shipType": "cruiser",
+    "economicType": "premium",
+    "imageUrl": "ships/it_battleship_leonardo_da_vinci.webp",
+    "releaseDate": "2023-12-14"
+  },
+  {
+    "id": "it_battleship_littorio_class_littorio",
+    "name": "it_battleship_littorio_class_littorio",
+    "localizedName": "意​大​利",
+    "nation": "italy",
+    "rank": 7,
+    "battleRating": 8.3,
+    "br": {
+      "arcade": 8.3,
+      "realistic": 8.3,
+      "simulator": 8.3
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/it_battleship_littorio_class_littorio.webp",
+    "releaseDate": "2025-11-11"
+  },
+  {
+    "id": "it_battleship_littorio_class_roma",
+    "name": "it_battleship_littorio_class_roma",
+    "localizedName": "罗​马",
+    "nation": "italy",
+    "rank": 7,
+    "battleRating": 8.3,
+    "br": {
+      "arcade": 8.3,
+      "realistic": 8.3,
+      "simulator": 8.3
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/it_battleship_littorio_class_roma.webp",
+    "releaseDate": "2025-06-25"
+  },
+  {
+    "id": "it_cassiopea_p401",
+    "name": "it_cassiopea_p401",
+    "localizedName": "仙​后​座",
+    "nation": "italy",
+    "rank": 5,
+    "battleRating": 3.7,
+    "br": {
+      "arcade": 3.7,
+      "realistic": 3.7,
+      "simulator": 3.7
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/it_cassiopea_p401.webp",
+    "releaseDate": "2025-12-16"
+  },
+  {
+    "id": "it_ciclone_class_ghibli",
+    "name": "it_ciclone_class_ghibli",
+    "localizedName": "东​南​风",
+    "nation": "italy",
+    "rank": 5,
+    "battleRating": 3.7,
+    "br": {
+      "arcade": 3.7,
+      "realistic": 3.7,
+      "simulator": 3.7
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/it_ciclone_class_ghibli.webp",
+    "releaseDate": "2024-12-16"
+  },
+  {
+    "id": "it_cruiser_bartolomeocolleoni_1940",
+    "name": "it_cruiser_bartolomeocolleoni_1940",
+    "localizedName": "巴​托​洛​梅​奥·科​莱​奥​尼",
+    "nation": "italy",
+    "rank": 3,
+    "battleRating": 5.0,
+    "br": {
+      "arcade": 5.0,
+      "realistic": 5.0,
+      "simulator": 5.0
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/it_cruiser_bartolomeocolleoni_1940.webp",
+    "releaseDate": "2020-06-01"
+  },
+  {
+    "id": "it_cruiser_bolzano",
+    "name": "it_cruiser_bolzano",
+    "localizedName": "博​尔​扎​诺",
+    "nation": "italy",
+    "rank": 4,
+    "battleRating": 5.7,
+    "br": {
+      "arcade": 5.7,
+      "realistic": 5.7,
+      "simulator": 5.7
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/it_cruiser_bolzano.webp",
+    "releaseDate": "2024-03-13"
+  },
+  {
+    "id": "it_cruiser_cadorna_class_cadorna",
+    "name": "it_cruiser_cadorna_class_cadorna",
+    "localizedName": "路​易​吉·卡​多​纳",
+    "nation": "italy",
+    "rank": 3,
+    "battleRating": 5.0,
+    "br": {
+      "arcade": 5.0,
+      "realistic": 5.0,
+      "simulator": 5.0
+    },
+    "shipType": "cruiser",
+    "economicType": "premium",
+    "imageUrl": "ships/it_cruiser_cadorna_class_cadorna.webp",
+    "releaseDate": "2025-10-22"
+  },
+  {
+    "id": "it_cruiser_cadorna_class_diaz",
+    "name": "it_cruiser_cadorna_class_diaz",
+    "localizedName": "阿​尔​曼​多·迪​亚​兹",
+    "nation": "italy",
+    "rank": 3,
+    "battleRating": 5.0,
+    "br": {
+      "arcade": 5.0,
+      "realistic": 5.0,
+      "simulator": 5.0
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/it_cruiser_cadorna_class_diaz.webp",
+    "releaseDate": "2025-12-16"
+  },
+  {
+    "id": "it_cruiser_capitani_romani_class_attilio_regolo",
+    "name": "it_cruiser_capitani_romani_class_attilio_regolo",
+    "localizedName": "阿​蒂​利​奥·雷​戈​洛",
+    "nation": "italy",
+    "rank": 3,
+    "battleRating": 4.7,
+    "br": {
+      "arcade": 4.7,
+      "realistic": 4.7,
+      "simulator": 4.7
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/it_cruiser_capitani_romani_class_attilio_regolo.webp",
+    "releaseDate": "2020-06-01"
+  },
+  {
+    "id": "it_cruiser_etna_class",
+    "name": "it_cruiser_etna_class",
+    "localizedName": "埃​特​纳",
+    "nation": "italy",
+    "rank": 3,
+    "battleRating": 4.7,
+    "br": {
+      "arcade": 4.7,
+      "realistic": 4.7,
+      "simulator": 4.7
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/it_cruiser_etna_class.webp",
+    "releaseDate": "2021-03-10"
+  },
+  {
+    "id": "it_cruiser_eugenio_di_savoia",
+    "name": "it_cruiser_eugenio_di_savoia",
+    "localizedName": "欧​金​尼​奥·迪·萨​伏​依",
+    "nation": "italy",
+    "rank": 4,
+    "battleRating": 5.7,
+    "br": {
+      "arcade": 5.7,
+      "realistic": 5.7,
+      "simulator": 5.7
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/it_cruiser_eugenio_di_savoia.webp",
+    "releaseDate": "2021-12-17"
+  },
+  {
+    "id": "it_cruiser_garibaldi_class_abruzzi",
+    "name": "it_cruiser_garibaldi_class_abruzzi",
+    "localizedName": "阿​布​鲁​齐​公​爵",
+    "nation": "italy",
+    "rank": 5,
+    "battleRating": 5.7,
+    "br": {
+      "arcade": 5.7,
+      "realistic": 5.7,
+      "simulator": 5.7
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/it_cruiser_garibaldi_class_abruzzi.webp",
+    "releaseDate": "2022-12-20"
+  },
+  {
+    "id": "it_cruiser_montecuccoli",
+    "name": "it_cruiser_montecuccoli",
+    "localizedName": "拉​依​蒙​多·蒙​特​库​科​利",
+    "nation": "italy",
+    "rank": 4,
+    "battleRating": 5.3,
+    "br": {
+      "arcade": 5.3,
+      "realistic": 5.3,
+      "simulator": 5.3
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/it_cruiser_montecuccoli.webp",
+    "releaseDate": "2020-06-01"
+  },
+  {
+    "id": "it_cruiser_trento",
+    "name": "it_cruiser_trento",
+    "localizedName": "特​伦​托",
+    "nation": "italy",
+    "rank": 4,
+    "battleRating": 5.3,
+    "br": {
+      "arcade": 5.3,
+      "realistic": 5.3,
+      "simulator": 5.3
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/it_cruiser_trento.webp",
+    "releaseDate": "2020-06-01"
+  },
+  {
+    "id": "it_cruiser_zara_class",
+    "name": "it_cruiser_zara_class",
+    "localizedName": "扎​拉",
+    "nation": "italy",
+    "rank": 5,
+    "battleRating": 6.0,
+    "br": {
+      "arcade": 6.0,
+      "realistic": 6.0,
+      "simulator": 6.0
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/it_cruiser_zara_class.webp",
+    "releaseDate": "2020-09-08"
+  },
+  {
+    "id": "it_cruiser_zara_class_pola",
+    "name": "it_cruiser_zara_class_pola",
+    "localizedName": "波​拉",
+    "nation": "italy",
+    "rank": 4,
+    "battleRating": 6.0,
+    "br": {
+      "arcade": 6.0,
+      "realistic": 6.0,
+      "simulator": 6.0
+    },
+    "shipType": "cruiser",
+    "economicType": "premium",
+    "imageUrl": "ships/it_cruiser_zara_class_pola.webp",
+    "releaseDate": "2020-12-17"
+  },
+  {
+    "id": "it_destroyer_aquilone",
+    "name": "it_destroyer_aquilone",
+    "localizedName": "北​风",
+    "nation": "italy",
+    "rank": 1,
+    "battleRating": 3.3,
+    "br": {
+      "arcade": 3.3,
+      "realistic": 3.3,
+      "simulator": 3.3
+    },
+    "shipType": "destroyer",
+    "economicType": "premium",
+    "imageUrl": "ships/it_destroyer_aquilone.webp",
+    "releaseDate": "2020-11-15"
+  },
+  {
+    "id": "it_destroyer_comandanti_medaglie_doro",
+    "name": "it_destroyer_comandanti_medaglie_doro",
+    "localizedName": "马​戈​蒂​尼",
+    "nation": "italy",
+    "rank": 2,
+    "battleRating": 4.0,
+    "br": {
+      "arcade": 4.0,
+      "realistic": 4.0,
+      "simulator": 4.0
+    },
+    "shipType": "destroyer",
+    "economicType": "regular",
+    "imageUrl": "ships/it_destroyer_comandanti_medaglie_doro.webp",
+    "releaseDate": "2020-09-08"
+  },
+  {
+    "id": "it_destroyer_dardo",
+    "name": "it_destroyer_dardo",
+    "localizedName": "镖",
+    "nation": "italy",
+    "rank": 1,
+    "battleRating": 3.7,
+    "br": {
+      "arcade": 3.7,
+      "realistic": 3.7,
+      "simulator": 3.7
+    },
+    "shipType": "destroyer",
+    "economicType": "regular",
+    "imageUrl": "ships/it_destroyer_dardo.webp",
+    "releaseDate": "2020-06-01"
+  },
+  {
+    "id": "it_destroyer_fletcher_geniere",
+    "name": "it_destroyer_fletcher_geniere",
+    "localizedName": "工​兵",
+    "nation": "italy",
+    "rank": 2,
+    "battleRating": 4.7,
+    "br": {
+      "arcade": 4.7,
+      "realistic": 4.7,
+      "simulator": 4.7
+    },
+    "shipType": "destroyer",
+    "economicType": "premium",
+    "imageUrl": "ships/it_destroyer_fletcher_geniere.webp",
+    "releaseDate": "2022-06-15"
+  },
+  {
+    "id": "it_destroyer_impetuoso_class_impetuoso",
+    "name": "it_destroyer_impetuoso_class_impetuoso",
+    "localizedName": "冲​锋",
+    "nation": "italy",
+    "rank": 2,
+    "battleRating": 4.3,
+    "br": {
+      "arcade": 4.3,
+      "realistic": 4.3,
+      "simulator": 4.3
+    },
+    "shipType": "destroyer",
+    "economicType": "regular",
+    "imageUrl": "ships/it_destroyer_impetuoso_class_impetuoso.webp",
+    "releaseDate": "2023-09-19"
+  },
+  {
+    "id": "it_destroyer_leone_class",
+    "name": "it_destroyer_leone_class",
+    "localizedName": "狮",
+    "nation": "italy",
+    "rank": 2,
+    "battleRating": 4.0,
+    "br": {
+      "arcade": 4.0,
+      "realistic": 4.0,
+      "simulator": 4.0
+    },
+    "shipType": "destroyer",
+    "economicType": "regular",
+    "imageUrl": "ships/it_destroyer_leone_class.webp",
+    "releaseDate": "2021-09-07"
+  },
+  {
+    "id": "it_destroyer_leone_class_tigre",
+    "name": "it_destroyer_leone_class_tigre",
+    "localizedName": "虎",
+    "nation": "italy",
+    "rank": 3,
+    "battleRating": 4.0,
+    "br": {
+      "arcade": 4.0,
+      "realistic": 4.0,
+      "simulator": 4.0
+    },
+    "shipType": "destroyer",
+    "economicType": "premium",
+    "imageUrl": "ships/it_destroyer_leone_class_tigre.webp",
+    "releaseDate": "2021-10-26"
+  },
+  {
+    "id": "it_destroyer_maestrale_class_grecale",
+    "name": "it_destroyer_maestrale_class_grecale",
+    "localizedName": "东​北​风",
+    "nation": "italy",
+    "rank": 1,
+    "battleRating": 3.7,
+    "br": {
+      "arcade": 3.7,
+      "realistic": 3.7,
+      "simulator": 3.7
+    },
+    "shipType": "destroyer",
+    "economicType": "regular",
+    "imageUrl": "ships/it_destroyer_maestrale_class_grecale.webp",
+    "releaseDate": "2025-03-18"
+  },
+  {
+    "id": "it_destroyer_navigatori_class_verazzano",
+    "name": "it_destroyer_navigatori_class_verazzano",
+    "localizedName": "达·韦​拉​扎​诺",
+    "nation": "italy",
+    "rank": 3,
+    "battleRating": 4.3,
+    "br": {
+      "arcade": 4.3,
+      "realistic": 4.3,
+      "simulator": 4.3
+    },
+    "shipType": "destroyer",
+    "economicType": "regular",
+    "imageUrl": "ships/it_destroyer_navigatori_class_verazzano.webp",
+    "releaseDate": "2022-09-14"
+  },
+  {
+    "id": "it_destroyer_oriani_class_gioberti",
+    "name": "it_destroyer_oriani_class_gioberti",
+    "localizedName": "RN Vincenzo Gioberti",
+    "nation": "italy",
+    "rank": 1,
+    "battleRating": 3.7,
+    "br": {
+      "arcade": 3.7,
+      "realistic": 3.7,
+      "simulator": 3.7
+    },
+    "shipType": "destroyer",
+    "economicType": "regular",
+    "imageUrl": "ships/it_destroyer_oriani_class_gioberti.webp",
+    "releaseDate": "2026-03-10"
+  },
+  {
+    "id": "it_destroyer_saetta",
+    "name": "it_destroyer_saetta",
+    "localizedName": "RN Saetta",
+    "nation": "italy",
+    "rank": 1,
+    "battleRating": 3.7,
+    "br": {
+      "arcade": 3.7,
+      "realistic": 3.7,
+      "simulator": 3.7
+    },
+    "shipType": "destroyer",
+    "economicType": "premium",
+    "imageUrl": "ships/it_destroyer_saetta.webp",
+    "releaseDate": "2026-03-10"
+  },
+  {
+    "id": "it_destroyer_soldati_serie1",
+    "name": "it_destroyer_soldati_serie1",
+    "localizedName": "航​空​兵",
+    "nation": "italy",
+    "rank": 3,
+    "battleRating": 4.0,
+    "br": {
+      "arcade": 4.0,
+      "realistic": 4.0,
+      "simulator": 4.0
+    },
+    "shipType": "destroyer",
+    "economicType": "premium",
+    "imageUrl": "ships/it_destroyer_soldati_serie1.webp",
+    "releaseDate": "2021-08-06"
+  },
+  {
+    "id": "it_destroyer_soldati_serie1_camicianera",
+    "name": "it_destroyer_soldati_serie1_camicianera",
+    "localizedName": "胸​甲​骑​兵",
+    "nation": "italy",
+    "rank": 2,
+    "battleRating": 4.3,
+    "br": {
+      "arcade": 4.3,
+      "realistic": 4.3,
+      "simulator": 4.3
+    },
+    "shipType": "destroyer",
+    "economicType": "regular",
+    "imageUrl": "ships/it_destroyer_soldati_serie1_camicianera.webp",
+    "releaseDate": "2020-06-01"
+  },
+  {
+    "id": "it_destroyer_soldati_serie1_geniere",
+    "name": "it_destroyer_soldati_serie1_geniere",
+    "localizedName": "工​兵",
+    "nation": "italy",
+    "rank": 3,
+    "battleRating": 4.3,
+    "br": {
+      "arcade": 4.3,
+      "realistic": 4.3,
+      "simulator": 4.3
+    },
+    "shipType": "destroyer",
+    "economicType": "premium",
+    "imageUrl": "ships/it_destroyer_soldati_serie1_geniere.webp",
+    "releaseDate": "2020-06-01"
+  },
+  {
+    "id": "it_destroyer_turbine",
+    "name": "it_destroyer_turbine",
+    "localizedName": "旋​风",
+    "nation": "italy",
+    "rank": 1,
+    "battleRating": 3.3,
+    "br": {
+      "arcade": 3.3,
+      "realistic": 3.3,
+      "simulator": 3.3
+    },
+    "shipType": "destroyer",
+    "economicType": "premium",
+    "imageUrl": "ships/it_destroyer_turbine.webp",
+    "releaseDate": "2020-06-01"
+  },
+  {
+    "id": "it_destroyer_vifor_class_aquila",
+    "name": "it_destroyer_vifor_class_aquila",
+    "localizedName": "天​鹰​座",
+    "nation": "italy",
+    "rank": 1,
+    "battleRating": 3.3,
+    "br": {
+      "arcade": 3.3,
+      "realistic": 3.3,
+      "simulator": 3.3
+    },
+    "shipType": "destroyer",
+    "economicType": "regular",
+    "imageUrl": "ships/it_destroyer_vifor_class_aquila.webp",
+    "releaseDate": "2022-10-26"
+  },
+  {
+    "id": "it_gabbiano_class",
+    "name": "it_gabbiano_class",
+    "localizedName": "海​鸥",
+    "nation": "italy",
+    "rank": 4,
+    "battleRating": 3.7,
+    "br": {
+      "arcade": 3.7,
+      "realistic": 3.7,
+      "simulator": 3.7
+    },
+    "shipType": "submarine_chaser",
+    "economicType": "regular",
+    "imageUrl": "ships/it_gabbiano_class.webp",
+    "releaseDate": "2021-09-07"
+  },
+  {
+    "id": "it_gabbiano_class_c16",
+    "name": "it_gabbiano_class_c16",
+    "localizedName": "白​骨​顶",
+    "nation": "italy",
+    "rank": 4,
+    "battleRating": 3.7,
+    "br": {
+      "arcade": 3.7,
+      "realistic": 3.7,
+      "simulator": 3.7
+    },
+    "shipType": "submarine_chaser",
+    "economicType": "premium",
+    "imageUrl": "ships/it_gabbiano_class_c16.webp",
+    "releaseDate": "2022-10-26"
+  },
+  {
+    "id": "jp_armoredcruiser_ikoma",
+    "name": "jp_armoredcruiser_ikoma",
+    "localizedName": "生​驹",
+    "nation": "japan",
+    "rank": 4,
+    "battleRating": 5.7,
+    "br": {
+      "arcade": 5.7,
+      "realistic": 5.7,
+      "simulator": 5.7
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/jp_armoredcruiser_ikoma.webp",
+    "releaseDate": "2020-11-15"
+  },
+  {
+    "id": "jp_armoredcruiser_kurama",
+    "name": "jp_armoredcruiser_kurama",
+    "localizedName": "鞍​马",
+    "nation": "japan",
+    "rank": 5,
+    "battleRating": 5.7,
+    "br": {
+      "arcade": 5.7,
+      "realistic": 5.7,
+      "simulator": 5.7
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/jp_armoredcruiser_kurama.webp",
+    "releaseDate": "2023-09-26"
+  },
+  {
+    "id": "jp_battlecruiser_amagi",
+    "name": "jp_battlecruiser_amagi",
+    "localizedName": "天​城",
+    "nation": "japan",
+    "rank": 6,
+    "battleRating": 8.0,
+    "br": {
+      "arcade": 8.0,
+      "realistic": 8.0,
+      "simulator": 8.0
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/jp_battlecruiser_amagi.webp",
+    "releaseDate": "2024-09-10"
+  },
+  {
+    "id": "jp_battlecruiser_haruna",
+    "name": "jp_battlecruiser_haruna",
+    "localizedName": "榛​名",
+    "nation": "japan",
+    "rank": 5,
+    "battleRating": 7.3,
+    "br": {
+      "arcade": 7.3,
+      "realistic": 7.3,
+      "simulator": 7.3
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/jp_battlecruiser_haruna.webp",
+    "releaseDate": "2022-08-23"
+  },
+  {
+    "id": "jp_battlecruiser_hiei",
+    "name": "jp_battlecruiser_hiei",
+    "localizedName": "比​睿",
+    "nation": "japan",
+    "rank": 5,
+    "battleRating": 6.7,
+    "br": {
+      "arcade": 6.7,
+      "realistic": 6.7,
+      "simulator": 6.7
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/jp_battlecruiser_hiei.webp",
+    "releaseDate": "2025-09-23"
+  },
+  {
+    "id": "jp_battlecruiser_kirishima",
+    "name": "jp_battlecruiser_kirishima",
+    "localizedName": "雾​岛",
+    "nation": "japan",
+    "rank": 5,
+    "battleRating": 7.3,
+    "br": {
+      "arcade": 7.3,
+      "realistic": 7.3,
+      "simulator": 7.3
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/jp_battlecruiser_kirishima.webp",
+    "releaseDate": "2024-12-20"
+  },
+  {
+    "id": "jp_battlecruiser_kongo",
+    "name": "jp_battlecruiser_kongo",
+    "localizedName": "金​刚",
+    "nation": "japan",
+    "rank": 6,
+    "battleRating": 7.3,
+    "br": {
+      "arcade": 7.3,
+      "realistic": 7.3,
+      "simulator": 7.3
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/jp_battlecruiser_kongo.webp",
+    "releaseDate": "2022-03-22"
+  },
+  {
+    "id": "jp_battleship_fuso",
+    "name": "jp_battleship_fuso",
+    "localizedName": "扶​桑",
+    "nation": "japan",
+    "rank": 6,
+    "battleRating": 7.7,
+    "br": {
+      "arcade": 7.7,
+      "realistic": 7.7,
+      "simulator": 7.7
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/jp_battleship_fuso.webp",
+    "releaseDate": "2022-10-26"
+  },
+  {
+    "id": "jp_battleship_hyuga",
+    "name": "jp_battleship_hyuga",
+    "localizedName": "日​向",
+    "nation": "japan",
+    "rank": 5,
+    "battleRating": 7.0,
+    "br": {
+      "arcade": 7.0,
+      "realistic": 7.0,
+      "simulator": 7.0
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/jp_battleship_hyuga.webp",
+    "releaseDate": "2020-12-17"
+  },
+  {
+    "id": "jp_battleship_ise",
+    "name": "jp_battleship_ise",
+    "localizedName": "伊​势",
+    "nation": "japan",
+    "rank": 6,
+    "battleRating": 7.7,
+    "br": {
+      "arcade": 7.7,
+      "realistic": 7.7,
+      "simulator": 7.7
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/jp_battleship_ise.webp",
+    "releaseDate": "2023-06-14"
+  },
+  {
+    "id": "jp_battleship_musashi",
+    "name": "jp_battleship_musashi",
+    "localizedName": "武​藏",
+    "nation": "japan",
+    "rank": 7,
+    "battleRating": 8.7,
+    "br": {
+      "arcade": 8.7,
+      "realistic": 8.7,
+      "simulator": 8.7
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/jp_battleship_musashi.webp",
+    "releaseDate": "2025-11-11"
+  },
+  {
+    "id": "jp_battleship_mutsu",
+    "name": "jp_battleship_mutsu",
+    "localizedName": "陆​奥",
+    "nation": "japan",
+    "rank": 6,
+    "battleRating": 8.0,
+    "br": {
+      "arcade": 8.0,
+      "realistic": 8.0,
+      "simulator": 8.0
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/jp_battleship_mutsu.webp",
+    "releaseDate": "2024-03-13"
+  },
+  {
+    "id": "jp_battleship_nagato",
+    "name": "jp_battleship_nagato",
+    "localizedName": "长​门",
+    "nation": "japan",
+    "rank": 6,
+    "battleRating": 8.3,
+    "br": {
+      "arcade": 8.3,
+      "realistic": 8.3,
+      "simulator": 8.3
+    },
+    "shipType": "cruiser",
+    "economicType": "premium",
+    "imageUrl": "ships/jp_battleship_nagato.webp",
+    "releaseDate": "2025-11-11"
+  },
+  {
+    "id": "jp_battleship_settsu",
+    "name": "jp_battleship_settsu",
+    "localizedName": "摄​津",
+    "nation": "japan",
+    "rank": 5,
+    "battleRating": 6.3,
+    "br": {
+      "arcade": 6.3,
+      "realistic": 6.3,
+      "simulator": 6.3
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/jp_battleship_settsu.webp",
+    "releaseDate": "2020-11-15"
+  },
+  {
+    "id": "jp_battleship_tosa",
+    "name": "jp_battleship_tosa",
+    "localizedName": "土​佐",
+    "nation": "japan",
+    "rank": 6,
+    "battleRating": 8.0,
+    "br": {
+      "arcade": 8.0,
+      "realistic": 8.0,
+      "simulator": 8.0
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/jp_battleship_tosa.webp",
+    "releaseDate": "2025-12-16"
+  },
+  {
+    "id": "jp_battleship_yamashiro",
+    "name": "jp_battleship_yamashiro",
+    "localizedName": "山​城",
+    "nation": "japan",
+    "rank": 5,
+    "battleRating": 7.0,
+    "br": {
+      "arcade": 7.0,
+      "realistic": 7.0,
+      "simulator": 7.0
+    },
+    "shipType": "cruiser",
+    "economicType": "premium",
+    "imageUrl": "ships/jp_battleship_yamashiro.webp",
+    "releaseDate": "2023-10-31"
+  },
+  {
+    "id": "jp_battleship_yamato",
+    "name": "jp_battleship_yamato",
+    "localizedName": "大​和",
+    "nation": "japan",
+    "rank": 7,
+    "battleRating": 8.7,
+    "br": {
+      "arcade": 8.7,
+      "realistic": 8.7,
+      "simulator": 8.7
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/jp_battleship_yamato.webp",
+    "releaseDate": "2025-06-25"
+  },
+  {
+    "id": "jp_cruiser_agano",
+    "name": "jp_cruiser_agano",
+    "localizedName": "阿​贺​野",
+    "nation": "japan",
+    "rank": 4,
+    "battleRating": 5.3,
+    "br": {
+      "arcade": 5.3,
+      "realistic": 5.3,
+      "simulator": 5.3
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/jp_cruiser_agano.webp",
+    "releaseDate": "2019-05-28"
+  },
+  {
+    "id": "jp_cruiser_aoba",
+    "name": "jp_cruiser_aoba",
+    "localizedName": "青​叶",
+    "nation": "japan",
+    "rank": 4,
+    "battleRating": 5.7,
+    "br": {
+      "arcade": 5.7,
+      "realistic": 5.7,
+      "simulator": 5.7
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/jp_cruiser_aoba.webp",
+    "releaseDate": "2021-09-07"
+  },
+  {
+    "id": "jp_cruiser_furutaka",
+    "name": "jp_cruiser_furutaka",
+    "localizedName": "古​鹰",
+    "nation": "japan",
+    "rank": 4,
+    "battleRating": 5.7,
+    "br": {
+      "arcade": 5.7,
+      "realistic": 5.7,
+      "simulator": 5.7
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/jp_cruiser_furutaka.webp",
+    "releaseDate": "2019-05-28"
+  },
+  {
+    "id": "jp_cruiser_haguro",
+    "name": "jp_cruiser_haguro",
+    "localizedName": "羽​黑",
+    "nation": "japan",
+    "rank": 4,
+    "battleRating": 6.0,
+    "br": {
+      "arcade": 6.0,
+      "realistic": 6.0,
+      "simulator": 6.0
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/jp_cruiser_haguro.webp",
+    "releaseDate": "2024-06-19"
+  },
+  {
+    "id": "jp_cruiser_isuzu",
+    "name": "jp_cruiser_isuzu",
+    "localizedName": "五​十​铃",
+    "nation": "japan",
+    "rank": 3,
+    "battleRating": 4.7,
+    "br": {
+      "arcade": 4.7,
+      "realistic": 4.7,
+      "simulator": 4.7
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/jp_cruiser_isuzu.webp",
+    "releaseDate": "2021-03-10"
+  },
+  {
+    "id": "jp_cruiser_kako",
+    "name": "jp_cruiser_kako",
+    "localizedName": "加​古",
+    "nation": "japan",
+    "rank": 3,
+    "battleRating": 5.0,
+    "br": {
+      "arcade": 5.0,
+      "realistic": 5.0,
+      "simulator": 5.0
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/jp_cruiser_kako.webp",
+    "releaseDate": "2019-05-28"
+  },
+  {
+    "id": "jp_cruiser_kuma",
+    "name": "jp_cruiser_kuma",
+    "localizedName": "多​摩",
+    "nation": "japan",
+    "rank": 3,
+    "battleRating": 5.0,
+    "br": {
+      "arcade": 5.0,
+      "realistic": 5.0,
+      "simulator": 5.0
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/jp_cruiser_kuma.webp",
+    "releaseDate": "2019-05-28"
+  },
+  {
+    "id": "jp_cruiser_mogami",
+    "name": "jp_cruiser_mogami",
+    "localizedName": "最​上",
+    "nation": "japan",
+    "rank": 5,
+    "battleRating": 6.0,
+    "br": {
+      "arcade": 6.0,
+      "realistic": 6.0,
+      "simulator": 6.0
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/jp_cruiser_mogami.webp",
+    "releaseDate": "2019-09-10"
+  },
+  {
+    "id": "jp_cruiser_mogami_mikuma",
+    "name": "jp_cruiser_mogami_mikuma",
+    "localizedName": "三​隈",
+    "nation": "japan",
+    "rank": 5,
+    "battleRating": 6.0,
+    "br": {
+      "arcade": 6.0,
+      "realistic": 6.0,
+      "simulator": 6.0
+    },
+    "shipType": "cruiser",
+    "economicType": "premium",
+    "imageUrl": "ships/jp_cruiser_mogami_mikuma.webp",
+    "releaseDate": "2020-03-10"
+  },
+  {
+    "id": "jp_cruiser_mogami_suzuya",
+    "name": "jp_cruiser_mogami_suzuya",
+    "localizedName": "铃​谷",
+    "nation": "japan",
+    "rank": 5,
+    "battleRating": 6.0,
+    "br": {
+      "arcade": 6.0,
+      "realistic": 6.0,
+      "simulator": 6.0
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/jp_cruiser_mogami_suzuya.webp",
+    "releaseDate": "2019-12-16"
+  },
+  {
+    "id": "jp_cruiser_myoko",
+    "name": "jp_cruiser_myoko",
+    "localizedName": "妙​高",
+    "nation": "japan",
+    "rank": 4,
+    "battleRating": 6.0,
+    "br": {
+      "arcade": 6.0,
+      "realistic": 6.0,
+      "simulator": 6.0
+    },
+    "shipType": "cruiser",
+    "economicType": "premium",
+    "imageUrl": "ships/jp_cruiser_myoko.webp",
+    "releaseDate": "2022-12-20"
+  },
+  {
+    "id": "jp_cruiser_oyodo",
+    "name": "jp_cruiser_oyodo",
+    "localizedName": "大​淀",
+    "nation": "japan",
+    "rank": 4,
+    "battleRating": 5.3,
+    "br": {
+      "arcade": 5.3,
+      "realistic": 5.3,
+      "simulator": 5.3
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/jp_cruiser_oyodo.webp",
+    "releaseDate": "2025-12-16"
+  },
+  {
+    "id": "jp_cruiser_sendai",
+    "name": "jp_cruiser_sendai",
+    "localizedName": "川​内",
+    "nation": "japan",
+    "rank": 3,
+    "battleRating": 5.0,
+    "br": {
+      "arcade": 5.0,
+      "realistic": 5.0,
+      "simulator": 5.0
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/jp_cruiser_sendai.webp",
+    "releaseDate": "2019-12-16"
+  },
+  {
+    "id": "jp_cruiser_tone",
+    "name": "jp_cruiser_tone",
+    "localizedName": "利​根",
+    "nation": "japan",
+    "rank": 5,
+    "battleRating": 6.0,
+    "br": {
+      "arcade": 6.0,
+      "realistic": 6.0,
+      "simulator": 6.0
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/jp_cruiser_tone.webp",
+    "releaseDate": "2020-06-01"
+  },
+  {
+    "id": "jp_cruiser_yubari",
+    "name": "jp_cruiser_yubari",
+    "localizedName": "夕​张",
+    "nation": "japan",
+    "rank": 3,
+    "battleRating": 4.7,
+    "br": {
+      "arcade": 4.7,
+      "realistic": 4.7,
+      "simulator": 4.7
+    },
+    "shipType": "cruiser",
+    "economicType": "premium",
+    "imageUrl": "ships/jp_cruiser_yubari.webp",
+    "releaseDate": "2021-09-07"
+  },
+  {
+    "id": "jp_destroyer_akizuki",
+    "name": "jp_destroyer_akizuki",
+    "localizedName": "秋​月",
+    "nation": "japan",
+    "rank": 3,
+    "battleRating": 5.0,
+    "br": {
+      "arcade": 5.0,
+      "realistic": 5.0,
+      "simulator": 5.0
+    },
+    "shipType": "destroyer",
+    "economicType": "regular",
+    "imageUrl": "ships/jp_destroyer_akizuki.webp",
+    "releaseDate": "2019-05-28"
+  },
+  {
+    "id": "jp_destroyer_ayanami",
+    "name": "jp_destroyer_ayanami",
+    "localizedName": "绫​波 (DD-103)",
+    "nation": "japan",
+    "rank": 5,
+    "battleRating": 4.3,
+    "br": {
+      "arcade": 4.3,
+      "realistic": 4.3,
+      "simulator": 4.3
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/jp_destroyer_ayanami.webp",
+    "releaseDate": "2022-06-15"
+  },
+  {
+    "id": "jp_destroyer_chidori",
+    "name": "jp_destroyer_chidori",
+    "localizedName": "千​鸟",
+    "nation": "japan",
+    "rank": 5,
+    "battleRating": 3.7,
+    "br": {
+      "arcade": 3.7,
+      "realistic": 3.7,
+      "simulator": 3.7
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/jp_destroyer_chidori.webp",
+    "releaseDate": "2020-09-08"
+  },
+  {
+    "id": "jp_destroyer_fubuki",
+    "name": "jp_destroyer_fubuki",
+    "localizedName": "绫​波",
+    "nation": "japan",
+    "rank": 2,
+    "battleRating": 4.3,
+    "br": {
+      "arcade": 4.3,
+      "realistic": 4.3,
+      "simulator": 4.3
+    },
+    "shipType": "destroyer",
+    "economicType": "regular",
+    "imageUrl": "ships/jp_destroyer_fubuki.webp",
+    "releaseDate": "2019-05-28"
+  },
+  {
+    "id": "jp_destroyer_harukaze",
+    "name": "jp_destroyer_harukaze",
+    "localizedName": "春​风",
+    "nation": "japan",
+    "rank": 2,
+    "battleRating": 4.0,
+    "br": {
+      "arcade": 4.0,
+      "realistic": 4.0,
+      "simulator": 4.0
+    },
+    "shipType": "destroyer",
+    "economicType": "regular",
+    "imageUrl": "ships/jp_destroyer_harukaze.webp",
+    "releaseDate": "2021-12-17"
+  },
+  {
+    "id": "jp_destroyer_hatsuharu",
+    "name": "jp_destroyer_hatsuharu",
+    "localizedName": "初​春",
+    "nation": "japan",
+    "rank": 2,
+    "battleRating": 4.3,
+    "br": {
+      "arcade": 4.3,
+      "realistic": 4.3,
+      "simulator": 4.3
+    },
+    "shipType": "destroyer",
+    "economicType": "regular",
+    "imageUrl": "ships/jp_destroyer_hatsuharu.webp",
+    "releaseDate": "2022-09-14"
+  },
+  {
+    "id": "jp_destroyer_hatsuzuki",
+    "name": "jp_destroyer_hatsuzuki",
+    "localizedName": "初​月",
+    "nation": "japan",
+    "rank": 3,
+    "battleRating": 5.0,
+    "br": {
+      "arcade": 5.0,
+      "realistic": 5.0,
+      "simulator": 5.0
+    },
+    "shipType": "destroyer",
+    "economicType": "regular",
+    "imageUrl": "ships/jp_destroyer_hatsuzuki.webp",
+    "releaseDate": "2023-08-15"
+  },
+  {
+    "id": "jp_destroyer_hayanami",
+    "name": "jp_destroyer_hayanami",
+    "localizedName": "早​波",
+    "nation": "japan",
+    "rank": 2,
+    "battleRating": 4.7,
+    "br": {
+      "arcade": 4.7,
+      "realistic": 4.7,
+      "simulator": 4.7
+    },
+    "shipType": "destroyer",
+    "economicType": "premium",
+    "imageUrl": "ships/jp_destroyer_hayanami.webp",
+    "releaseDate": "2021-12-17"
+  },
+  {
+    "id": "jp_destroyer_isuzu",
+    "name": "jp_destroyer_isuzu",
+    "localizedName": "五​十​铃 (DE-211)",
+    "nation": "japan",
+    "rank": 5,
+    "battleRating": 3.7,
+    "br": {
+      "arcade": 3.7,
+      "realistic": 3.7,
+      "simulator": 3.7
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/jp_destroyer_isuzu.webp",
+    "releaseDate": "2019-12-16"
+  },
+  {
+    "id": "jp_destroyer_kagero",
+    "name": "jp_destroyer_kagero",
+    "localizedName": "IJN Kagero",
+    "nation": "japan",
+    "rank": 3,
+    "battleRating": 4.7,
+    "br": {
+      "arcade": 4.7,
+      "realistic": 4.7,
+      "simulator": 4.7
+    },
+    "shipType": "destroyer",
+    "economicType": "regular",
+    "imageUrl": "ships/jp_destroyer_kagero.webp",
+    "releaseDate": "2026-03-10"
+  },
+  {
+    "id": "jp_destroyer_kiyoshimo",
+    "name": "jp_destroyer_kiyoshimo",
+    "localizedName": "清​霜",
+    "nation": "japan",
+    "rank": 3,
+    "battleRating": 4.7,
+    "br": {
+      "arcade": 4.7,
+      "realistic": 4.7,
+      "simulator": 4.7
+    },
+    "shipType": "destroyer",
+    "economicType": "premium",
+    "imageUrl": "ships/jp_destroyer_kiyoshimo.webp",
+    "releaseDate": "2019-05-28"
+  },
+  {
+    "id": "jp_destroyer_matsu",
+    "name": "jp_destroyer_matsu",
+    "localizedName": "松",
+    "nation": "japan",
+    "rank": 1,
+    "battleRating": 3.7,
+    "br": {
+      "arcade": 3.7,
+      "realistic": 3.7,
+      "simulator": 3.7
+    },
+    "shipType": "destroyer",
+    "economicType": "regular",
+    "imageUrl": "ships/jp_destroyer_matsu.webp",
+    "releaseDate": "2025-03-18"
+  },
+  {
+    "id": "jp_destroyer_momi",
+    "name": "jp_destroyer_momi",
+    "localizedName": "枞",
+    "nation": "japan",
+    "rank": 1,
+    "battleRating": 3.3,
+    "br": {
+      "arcade": 3.3,
+      "realistic": 3.3,
+      "simulator": 3.3
+    },
+    "shipType": "destroyer",
+    "economicType": "premium",
+    "imageUrl": "ships/jp_destroyer_momi.webp",
+    "releaseDate": "2023-09-19"
+  },
+  {
+    "id": "jp_destroyer_murasame",
+    "name": "jp_destroyer_murasame",
+    "localizedName": "村​雨",
+    "nation": "japan",
+    "rank": 2,
+    "battleRating": 4.3,
+    "br": {
+      "arcade": 4.3,
+      "realistic": 4.3,
+      "simulator": 4.3
+    },
+    "shipType": "destroyer",
+    "economicType": "regular",
+    "imageUrl": "ships/jp_destroyer_murasame.webp",
+    "releaseDate": "2024-11-19"
+  },
+  {
+    "id": "jp_destroyer_mutsuki",
+    "name": "jp_destroyer_mutsuki",
+    "localizedName": "睦​月",
+    "nation": "japan",
+    "rank": 1,
+    "battleRating": 3.3,
+    "br": {
+      "arcade": 3.3,
+      "realistic": 3.3,
+      "simulator": 3.3
+    },
+    "shipType": "destroyer",
+    "economicType": "regular",
+    "imageUrl": "ships/jp_destroyer_mutsuki.webp",
+    "releaseDate": "2019-05-28"
+  },
+  {
+    "id": "jp_destroyer_nenohi",
+    "name": "jp_destroyer_nenohi",
+    "localizedName": "子​日",
+    "nation": "japan",
+    "rank": 2,
+    "battleRating": 4.3,
+    "br": {
+      "arcade": 4.3,
+      "realistic": 4.3,
+      "simulator": 4.3
+    },
+    "shipType": "destroyer",
+    "economicType": "premium",
+    "imageUrl": "ships/jp_destroyer_nenohi.webp",
+    "releaseDate": "2023-03-07"
+  },
+  {
+    "id": "jp_destroyer_satsuki",
+    "name": "jp_destroyer_satsuki",
+    "localizedName": "皋​月",
+    "nation": "japan",
+    "rank": 1,
+    "battleRating": 3.3,
+    "br": {
+      "arcade": 3.3,
+      "realistic": 3.3,
+      "simulator": 3.3
+    },
+    "shipType": "destroyer",
+    "economicType": "premium",
+    "imageUrl": "ships/jp_destroyer_satsuki.webp",
+    "releaseDate": "2020-11-15"
+  },
+  {
+    "id": "jp_destroyer_shimakaze",
+    "name": "jp_destroyer_shimakaze",
+    "localizedName": "岛​风",
+    "nation": "japan",
+    "rank": 3,
+    "battleRating": 5.0,
+    "br": {
+      "arcade": 5.0,
+      "realistic": 5.0,
+      "simulator": 5.0
+    },
+    "shipType": "destroyer",
+    "economicType": "clan",
+    "imageUrl": "ships/jp_destroyer_shimakaze.webp",
+    "releaseDate": "2020-09-14"
+  },
+  {
+    "id": "jp_destroyer_tade",
+    "name": "jp_destroyer_tade",
+    "localizedName": "IJN Tade",
+    "nation": "japan",
+    "rank": 1,
+    "battleRating": 3.3,
+    "br": {
+      "arcade": 3.3,
+      "realistic": 3.3,
+      "simulator": 3.3
+    },
+    "shipType": "destroyer",
+    "economicType": "premium",
+    "imageUrl": "ships/jp_destroyer_tade.webp",
+    "releaseDate": "2026-03-10"
+  },
+  {
+    "id": "jp_destroyer_yugumo",
+    "name": "jp_destroyer_yugumo",
+    "localizedName": "夕​云",
+    "nation": "japan",
+    "rank": 2,
+    "battleRating": 4.7,
+    "br": {
+      "arcade": 4.7,
+      "realistic": 4.7,
+      "simulator": 4.7
+    },
+    "shipType": "destroyer",
+    "economicType": "regular",
+    "imageUrl": "ships/jp_destroyer_yugumo.webp",
+    "releaseDate": "2019-05-28"
+  },
+  {
+    "id": "jp_destroyer_yugure",
+    "name": "jp_destroyer_yugure",
+    "localizedName": "夕​暮",
+    "nation": "japan",
+    "rank": 2,
+    "battleRating": 4.7,
+    "br": {
+      "arcade": 4.7,
+      "realistic": 4.7,
+      "simulator": 4.7
+    },
+    "shipType": "destroyer",
+    "economicType": "premium",
+    "imageUrl": "ships/jp_destroyer_yugure.webp",
+    "releaseDate": "2021-04-01"
+  },
+  {
+    "id": "jp_destroyer_yukikaze",
+    "name": "jp_destroyer_yukikaze",
+    "localizedName": "雪​风",
+    "nation": "japan",
+    "rank": 3,
+    "battleRating": 4.3,
+    "br": {
+      "arcade": 4.3,
+      "realistic": 4.3,
+      "simulator": 4.3
+    },
+    "shipType": "destroyer",
+    "economicType": "premium",
+    "imageUrl": "ships/jp_destroyer_yukikaze.webp",
+    "releaseDate": "2025-06-25"
+  },
+  {
+    "id": "jp_destroyer_yuudachi",
+    "name": "jp_destroyer_yuudachi",
+    "localizedName": "夕​立",
+    "nation": "japan",
+    "rank": 3,
+    "battleRating": 4.3,
+    "br": {
+      "arcade": 4.3,
+      "realistic": 4.3,
+      "simulator": 4.3
+    },
+    "shipType": "destroyer",
+    "economicType": "premium",
+    "imageUrl": "ships/jp_destroyer_yuudachi.webp"
+  },
+  {
+    "id": "jp_escort_akebono_class",
+    "name": "jp_escort_akebono_class",
+    "localizedName": "曙",
+    "nation": "japan",
+    "rank": 4,
+    "battleRating": 3.3,
+    "br": {
+      "arcade": 3.3,
+      "realistic": 3.3,
+      "simulator": 3.3
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "premium",
+    "imageUrl": "ships/jp_escort_akebono_class.webp",
+    "releaseDate": "2020-09-08"
+  },
+  {
+    "id": "jp_escort_chikugo_class",
+    "name": "jp_escort_chikugo_class",
+    "localizedName": "筑​后",
+    "nation": "japan",
+    "rank": 4,
+    "battleRating": 3.3,
+    "br": {
+      "arcade": 3.3,
+      "realistic": 3.3,
+      "simulator": 3.3
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/jp_escort_chikugo_class.webp",
+    "releaseDate": "2019-05-28"
+  },
+  {
+    "id": "jp_escort_hiburi_class_shisaka",
+    "name": "jp_escort_hiburi_class_shisaka",
+    "localizedName": "四​阪",
+    "nation": "japan",
+    "rank": 5,
+    "battleRating": 3.3,
+    "br": {
+      "arcade": 3.3,
+      "realistic": 3.3,
+      "simulator": 3.3
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/jp_escort_hiburi_class_shisaka.webp",
+    "releaseDate": "2025-07-23"
+  },
+  {
+    "id": "jp_escort_hiburi_class_syonan",
+    "name": "jp_escort_hiburi_class_syonan",
+    "localizedName": "昭​南",
+    "nation": "japan",
+    "rank": 5,
+    "battleRating": 3.3,
+    "br": {
+      "arcade": 3.3,
+      "realistic": 3.3,
+      "simulator": 3.3
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/jp_escort_hiburi_class_syonan.webp",
+    "releaseDate": "2019-09-10"
+  },
+  {
+    "id": "jp_escort_ikazuchi_class",
+    "name": "jp_escort_ikazuchi_class",
+    "localizedName": "雷",
+    "nation": "japan",
+    "rank": 4,
+    "battleRating": 3.3,
+    "br": {
+      "arcade": 3.3,
+      "realistic": 3.3,
+      "simulator": 3.3
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/jp_escort_ikazuchi_class.webp",
+    "releaseDate": "2020-03-10"
+  },
+  {
+    "id": "jp_kusen_tei_13_1942",
+    "name": "jp_kusen_tei_13_1942",
+    "localizedName": "第 13 号​型 (K8)",
+    "nation": "japan",
+    "rank": 2,
+    "battleRating": 2.0,
+    "br": {
+      "arcade": 2.0,
+      "realistic": 2.0,
+      "simulator": 2.0
+    },
+    "shipType": "submarine_chaser",
+    "economicType": "premium",
+    "imageUrl": "ships/jp_kusen_tei_13_1942.webp",
+    "releaseDate": "2020-12-17"
+  },
+  {
+    "id": "jp_kusen_tei_13_1944",
+    "name": "jp_kusen_tei_13_1944",
+    "localizedName": "第 13 号​型 (K8) 后​期​型",
+    "nation": "japan",
+    "rank": 3,
+    "battleRating": 2.3,
+    "br": {
+      "arcade": 2.3,
+      "realistic": 2.3,
+      "simulator": 2.3
+    },
+    "shipType": "submarine_chaser",
+    "economicType": "regular",
+    "imageUrl": "ships/jp_kusen_tei_13_1944.webp",
+    "releaseDate": "2019-05-28"
+  },
+  {
+    "id": "jp_minelayer_tsugaru",
+    "name": "jp_minelayer_tsugaru",
+    "localizedName": "津​轻",
+    "nation": "japan",
+    "rank": 2,
+    "battleRating": 4.0,
+    "br": {
+      "arcade": 4.0,
+      "realistic": 4.0,
+      "simulator": 4.0
+    },
+    "shipType": "destroyer",
+    "economicType": "regular",
+    "imageUrl": "ships/jp_minelayer_tsugaru.webp",
+    "releaseDate": "2025-09-23"
+  },
+  {
+    "id": "jp_no1_ch2",
+    "name": "jp_no1_ch2",
+    "localizedName": "第 1 号​型 (K3)",
+    "nation": "japan",
+    "rank": 3,
+    "battleRating": 3.0,
+    "br": {
+      "arcade": 3.0,
+      "realistic": 3.0,
+      "simulator": 3.0
+    },
+    "shipType": "submarine_chaser",
+    "economicType": "regular",
+    "imageUrl": "ships/jp_no1_ch2.webp",
+    "releaseDate": "2019-05-28"
+  },
+  {
+    "id": "jp_no4_ch8",
+    "name": "jp_no4_ch8",
+    "localizedName": "第 4 号​型 (K7)",
+    "nation": "japan",
+    "rank": 3,
+    "battleRating": 3.0,
+    "br": {
+      "arcade": 3.0,
+      "realistic": 3.0,
+      "simulator": 3.0
+    },
+    "shipType": "submarine_chaser",
+    "economicType": "regular",
+    "imageUrl": "ships/jp_no4_ch8.webp",
+    "releaseDate": "2019-05-28"
+  },
+  {
+    "id": "jp_pc301_kari_class",
+    "name": "jp_pc301_kari_class",
+    "localizedName": "雁",
+    "nation": "japan",
+    "rank": 3,
+    "battleRating": 3.0,
+    "br": {
+      "arcade": 3.0,
+      "realistic": 3.0,
+      "simulator": 3.0
+    },
+    "shipType": "submarine_chaser",
+    "economicType": "regular",
+    "imageUrl": "ships/jp_pc301_kari_class.webp",
+    "releaseDate": "2025-11-11"
+  },
+  {
+    "id": "jp_type5_escortboat",
+    "name": "jp_type5_escortboat",
+    "localizedName": "五​式​木​制​大​护​卫​艇",
+    "nation": "japan",
+    "rank": 1,
+    "battleRating": 1.7,
+    "br": {
+      "arcade": 1.7,
+      "realistic": 1.7,
+      "simulator": 1.7
+    },
+    "shipType": "submarine_chaser",
+    "economicType": "regular",
+    "imageUrl": "ships/jp_type5_escortboat.webp",
+    "releaseDate": "2019-05-28"
+  },
+  {
+    "id": "uk_battlecruiser_glorious",
+    "name": "uk_battlecruiser_glorious",
+    "localizedName": "光​荣",
+    "nation": "britain",
+    "rank": 5,
+    "battleRating": 5.7,
+    "br": {
+      "arcade": 5.7,
+      "realistic": 5.7,
+      "simulator": 5.7
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/uk_battlecruiser_glorious.webp",
+    "releaseDate": "2022-10-26"
+  },
+  {
+    "id": "uk_battlecruiser_hood",
+    "name": "uk_battlecruiser_hood",
+    "localizedName": "胡​德",
+    "nation": "britain",
+    "rank": 6,
+    "battleRating": 7.7,
+    "br": {
+      "arcade": 7.7,
+      "realistic": 7.7,
+      "simulator": 7.7
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/uk_battlecruiser_hood.webp",
+    "releaseDate": "2022-06-15"
+  },
+  {
+    "id": "uk_battlecruiser_invincible",
+    "name": "uk_battlecruiser_invincible",
+    "localizedName": "无​敌",
+    "nation": "britain",
+    "rank": 4,
+    "battleRating": 5.7,
+    "br": {
+      "arcade": 5.7,
+      "realistic": 5.7,
+      "simulator": 5.7
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/uk_battlecruiser_invincible.webp",
+    "releaseDate": "2020-12-17"
+  },
+  {
+    "id": "uk_battlecruiser_queen_mary",
+    "name": "uk_battlecruiser_queen_mary",
+    "localizedName": "玛​丽​王​后",
+    "nation": "britain",
+    "rank": 5,
+    "battleRating": 6.3,
+    "br": {
+      "arcade": 6.3,
+      "realistic": 6.3,
+      "simulator": 6.3
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/uk_battlecruiser_queen_mary.webp",
+    "releaseDate": "2024-06-19"
+  },
+  {
+    "id": "uk_battlecruiser_renown",
+    "name": "uk_battlecruiser_renown",
+    "localizedName": "声​望",
+    "nation": "britain",
+    "rank": 5,
+    "battleRating": 7.0,
+    "br": {
+      "arcade": 7.0,
+      "realistic": 7.0,
+      "simulator": 7.0
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/uk_battlecruiser_renown.webp",
+    "releaseDate": "2023-08-08"
+  },
+  {
+    "id": "uk_battlecruiser_repulse",
+    "name": "uk_battlecruiser_repulse",
+    "localizedName": "反​击",
+    "nation": "britain",
+    "rank": 6,
+    "battleRating": 7.0,
+    "br": {
+      "arcade": 7.0,
+      "realistic": 7.0,
+      "simulator": 7.0
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/uk_battlecruiser_repulse.webp",
+    "releaseDate": "2024-11-19"
+  },
+  {
+    "id": "uk_battleship_centurion",
+    "name": "uk_battleship_centurion",
+    "localizedName": "百​夫​长",
+    "nation": "britain",
+    "rank": 5,
+    "battleRating": 6.7,
+    "br": {
+      "arcade": 6.7,
+      "realistic": 6.7,
+      "simulator": 6.7
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/uk_battleship_centurion.webp",
+    "releaseDate": "2025-11-11"
+  },
+  {
+    "id": "uk_battleship_colossus",
+    "name": "uk_battleship_colossus",
+    "localizedName": "巨​像",
+    "nation": "britain",
+    "rank": 5,
+    "battleRating": 6.3,
+    "br": {
+      "arcade": 6.3,
+      "realistic": 6.3,
+      "simulator": 6.3
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/uk_battleship_colossus.webp",
+    "releaseDate": "2020-11-15"
+  },
+  {
+    "id": "uk_battleship_dreadnought",
+    "name": "uk_battleship_dreadnought",
+    "localizedName": "无​畏",
+    "nation": "britain",
+    "rank": 5,
+    "battleRating": 6.0,
+    "br": {
+      "arcade": 6.0,
+      "realistic": 6.0,
+      "simulator": 6.0
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/uk_battleship_dreadnought.webp",
+    "releaseDate": "2020-11-15"
+  },
+  {
+    "id": "uk_battleship_iron_duke",
+    "name": "uk_battleship_iron_duke",
+    "localizedName": "铁​公​爵",
+    "nation": "britain",
+    "rank": 5,
+    "battleRating": 7.0,
+    "br": {
+      "arcade": 7.0,
+      "realistic": 7.0,
+      "simulator": 7.0
+    },
+    "shipType": "cruiser",
+    "economicType": "premium",
+    "imageUrl": "ships/uk_battleship_iron_duke.webp",
+    "releaseDate": "2023-10-31"
+  },
+  {
+    "id": "uk_battleship_marlborough",
+    "name": "uk_battleship_marlborough",
+    "localizedName": "莫​尔​伯​勒",
+    "nation": "britain",
+    "rank": 6,
+    "battleRating": 7.0,
+    "br": {
+      "arcade": 7.0,
+      "realistic": 7.0,
+      "simulator": 7.0
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/uk_battleship_marlborough.webp",
+    "releaseDate": "2021-10-26"
+  },
+  {
+    "id": "uk_battleship_nelson",
+    "name": "uk_battleship_nelson",
+    "localizedName": "纳​尔​逊",
+    "nation": "britain",
+    "rank": 6,
+    "battleRating": 7.7,
+    "br": {
+      "arcade": 7.7,
+      "realistic": 7.7,
+      "simulator": 7.7
+    },
+    "shipType": "cruiser",
+    "economicType": "premium",
+    "imageUrl": "ships/uk_battleship_nelson.webp",
+    "releaseDate": "2025-09-23"
+  },
+  {
+    "id": "uk_battleship_orion",
+    "name": "uk_battleship_orion",
+    "localizedName": "俄​里​翁",
+    "nation": "britain",
+    "rank": 5,
+    "battleRating": 6.7,
+    "br": {
+      "arcade": 6.7,
+      "realistic": 6.7,
+      "simulator": 6.7
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/uk_battleship_orion.webp",
+    "releaseDate": "2023-12-14"
+  },
+  {
+    "id": "uk_battleship_prince_of_wales",
+    "name": "uk_battleship_prince_of_wales",
+    "localizedName": "威​尔​士​亲​王",
+    "nation": "britain",
+    "rank": 6,
+    "battleRating": 8.0,
+    "br": {
+      "arcade": 8.0,
+      "realistic": 8.0,
+      "simulator": 8.0
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/uk_battleship_prince_of_wales.webp",
+    "releaseDate": "2025-12-16"
+  },
+  {
+    "id": "uk_battleship_q_elizabet_class_barham",
+    "name": "uk_battleship_q_elizabet_class_barham",
+    "localizedName": "巴​勒​姆",
+    "nation": "britain",
+    "rank": 6,
+    "battleRating": 7.3,
+    "br": {
+      "arcade": 7.3,
+      "realistic": 7.3,
+      "simulator": 7.3
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/uk_battleship_q_elizabet_class_barham.webp",
+    "releaseDate": "2024-09-05"
+  },
+  {
+    "id": "uk_battleship_q_elizabet_class_warspite",
+    "name": "uk_battleship_q_elizabet_class_warspite",
+    "localizedName": "厌​战",
+    "nation": "britain",
+    "rank": 6,
+    "battleRating": 7.7,
+    "br": {
+      "arcade": 7.7,
+      "realistic": 7.7,
+      "simulator": 7.7
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/uk_battleship_q_elizabet_class_warspite.webp",
+    "releaseDate": "2025-03-18"
+  },
+  {
+    "id": "uk_battleship_rodney",
+    "name": "uk_battleship_rodney",
+    "localizedName": "罗​德​尼",
+    "nation": "britain",
+    "rank": 6,
+    "battleRating": 7.7,
+    "br": {
+      "arcade": 7.7,
+      "realistic": 7.7,
+      "simulator": 7.7
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/uk_battleship_rodney.webp",
+    "releaseDate": "2024-12-16"
+  },
+  {
+    "id": "uk_battleship_vanguard",
+    "name": "uk_battleship_vanguard",
+    "localizedName": "前​卫",
+    "nation": "britain",
+    "rank": 7,
+    "battleRating": 8.3,
+    "br": {
+      "arcade": 8.3,
+      "realistic": 8.3,
+      "simulator": 8.3
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/uk_battleship_vanguard.webp",
+    "releaseDate": "2025-06-25"
+  },
+  {
+    "id": "uk_corvette_orla",
+    "name": "uk_corvette_orla",
+    "localizedName": "爱​尔​兰​奥​尔​拉",
+    "nation": "britain",
+    "rank": 4,
+    "battleRating": 4.3,
+    "br": {
+      "arcade": 4.3,
+      "realistic": 4.3,
+      "simulator": 4.3
+    },
+    "shipType": "submarine_chaser",
+    "economicType": "premium",
+    "imageUrl": "ships/uk_corvette_orla.webp",
+    "releaseDate": "2021-09-07"
+  },
+  {
+    "id": "uk_corvette_peacock",
+    "name": "uk_corvette_peacock",
+    "localizedName": "孔​雀",
+    "nation": "britain",
+    "rank": 5,
+    "battleRating": 4.3,
+    "br": {
+      "arcade": 4.3,
+      "realistic": 4.3,
+      "simulator": 4.3
+    },
+    "shipType": "submarine_chaser",
+    "economicType": "regular",
+    "imageUrl": "ships/uk_corvette_peacock.webp",
+    "releaseDate": "2020-09-08"
+  },
+  {
+    "id": "uk_cruiser_arethusa",
+    "name": "uk_cruiser_arethusa",
+    "localizedName": "林​仙",
+    "nation": "britain",
+    "rank": 3,
+    "battleRating": 5.3,
+    "br": {
+      "arcade": 5.0,
+      "realistic": 5.3,
+      "simulator": 5.3
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/uk_cruiser_arethusa.webp",
+    "releaseDate": "2019-09-10"
+  },
+  {
+    "id": "uk_cruiser_belfast",
+    "name": "uk_cruiser_belfast",
+    "localizedName": "贝​尔​法​斯​特",
+    "nation": "britain",
+    "rank": 4,
+    "battleRating": 6.0,
+    "br": {
+      "arcade": 6.0,
+      "realistic": 6.0,
+      "simulator": 6.0
+    },
+    "shipType": "cruiser",
+    "economicType": "premium",
+    "imageUrl": "ships/uk_cruiser_belfast.webp",
+    "releaseDate": "2019-10-29"
+  },
+  {
+    "id": "uk_cruiser_dido",
+    "name": "uk_cruiser_dido",
+    "localizedName": "狄​多",
+    "nation": "britain",
+    "rank": 4,
+    "battleRating": 5.3,
+    "br": {
+      "arcade": 5.3,
+      "realistic": 5.3,
+      "simulator": 5.3
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/uk_cruiser_dido.webp",
+    "releaseDate": "2018-12-18"
+  },
+  {
+    "id": "uk_cruiser_enterprise_d52",
+    "name": "uk_cruiser_enterprise_d52",
+    "localizedName": "进​取",
+    "nation": "britain",
+    "rank": 3,
+    "battleRating": 5.0,
+    "br": {
+      "arcade": 5.0,
+      "realistic": 5.0,
+      "simulator": 5.0
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/uk_cruiser_enterprise_d52.webp",
+    "releaseDate": "2018-10-23"
+  },
+  {
+    "id": "uk_cruiser_fiji_class_fiji",
+    "name": "uk_cruiser_fiji_class_fiji",
+    "localizedName": "斐​济",
+    "nation": "britain",
+    "rank": 4,
+    "battleRating": 5.7,
+    "br": {
+      "arcade": 5.7,
+      "realistic": 5.7,
+      "simulator": 5.7
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/uk_cruiser_fiji_class_fiji.webp",
+    "releaseDate": "2025-12-16"
+  },
+  {
+    "id": "uk_cruiser_hawkins",
+    "name": "uk_cruiser_hawkins",
+    "localizedName": "霍​金​斯",
+    "nation": "britain",
+    "rank": 3,
+    "battleRating": 5.3,
+    "br": {
+      "arcade": 5.0,
+      "realistic": 5.3,
+      "simulator": 5.3
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/uk_cruiser_hawkins.webp",
+    "releaseDate": "2019-10-29"
+  },
+  {
+    "id": "uk_cruiser_kent",
+    "name": "uk_cruiser_kent",
+    "localizedName": "肯​特",
+    "nation": "britain",
+    "rank": 4,
+    "battleRating": 5.7,
+    "br": {
+      "arcade": 5.7,
+      "realistic": 5.7,
+      "simulator": 5.7
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/uk_cruiser_kent.webp",
+    "releaseDate": "2020-03-10"
+  },
+  {
+    "id": "uk_cruiser_leander",
+    "name": "uk_cruiser_leander",
+    "localizedName": "利​安​得",
+    "nation": "britain",
+    "rank": 4,
+    "battleRating": 5.3,
+    "br": {
+      "arcade": 5.3,
+      "realistic": 5.3,
+      "simulator": 5.3
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/uk_cruiser_leander.webp",
+    "releaseDate": "2019-03-12"
+  },
+  {
+    "id": "uk_cruiser_liverpool",
+    "name": "uk_cruiser_liverpool",
+    "localizedName": "利​物​浦",
+    "nation": "britain",
+    "rank": 4,
+    "battleRating": 5.7,
+    "br": {
+      "arcade": 5.7,
+      "realistic": 5.7,
+      "simulator": 5.7
+    },
+    "shipType": "cruiser",
+    "economicType": "clan",
+    "imageUrl": "ships/uk_cruiser_liverpool.webp",
+    "releaseDate": "2021-06-02"
+  },
+  {
+    "id": "uk_cruiser_london",
+    "name": "uk_cruiser_london",
+    "localizedName": "伦​敦",
+    "nation": "britain",
+    "rank": 4,
+    "battleRating": 5.7,
+    "br": {
+      "arcade": 5.7,
+      "realistic": 5.7,
+      "simulator": 5.7
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/uk_cruiser_london.webp",
+    "releaseDate": "2020-03-10"
+  },
+  {
+    "id": "uk_cruiser_norfolk",
+    "name": "uk_cruiser_norfolk",
+    "localizedName": "诺​福​克",
+    "nation": "britain",
+    "rank": 4,
+    "battleRating": 5.7,
+    "br": {
+      "arcade": 5.7,
+      "realistic": 5.7,
+      "simulator": 5.7
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/uk_cruiser_norfolk.webp",
+    "releaseDate": "2021-09-07"
+  },
+  {
+    "id": "uk_cruiser_southampton",
+    "name": "uk_cruiser_southampton",
+    "localizedName": "南​安​普​敦",
+    "nation": "britain",
+    "rank": 4,
+    "battleRating": 6.0,
+    "br": {
+      "arcade": 6.0,
+      "realistic": 6.0,
+      "simulator": 6.0
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/uk_cruiser_southampton.webp",
+    "releaseDate": "2019-05-28"
+  },
+  {
+    "id": "uk_cruiser_tiger",
+    "name": "uk_cruiser_tiger",
+    "localizedName": "虎 (C20)",
+    "nation": "britain",
+    "rank": 5,
+    "battleRating": 6.0,
+    "br": {
+      "arcade": 6.0,
+      "realistic": 6.0,
+      "simulator": 6.0
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/uk_cruiser_tiger.webp",
+    "releaseDate": "2019-04-11"
+  },
+  {
+    "id": "uk_cruiser_york",
+    "name": "uk_cruiser_york",
+    "localizedName": "约​克",
+    "nation": "britain",
+    "rank": 4,
+    "battleRating": 5.3,
+    "br": {
+      "arcade": 5.3,
+      "realistic": 5.3,
+      "simulator": 5.3
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/uk_cruiser_york.webp",
+    "releaseDate": "2020-06-01"
+  },
+  {
+    "id": "uk_destroyer_battle_2series",
+    "name": "uk_destroyer_battle_2series",
+    "localizedName": "无​敌​舰​队",
+    "nation": "britain",
+    "rank": 3,
+    "battleRating": 4.7,
+    "br": {
+      "arcade": 4.7,
+      "realistic": 4.7,
+      "simulator": 4.7
+    },
+    "shipType": "destroyer",
+    "economicType": "regular",
+    "imageUrl": "ships/uk_destroyer_battle_2series.webp",
+    "releaseDate": "2018-10-23"
+  },
+  {
+    "id": "uk_destroyer_battle_cadiz",
+    "name": "uk_destroyer_battle_cadiz",
+    "localizedName": "加​的​斯",
+    "nation": "britain",
+    "rank": 3,
+    "battleRating": 4.7,
+    "br": {
+      "arcade": 4.7,
+      "realistic": 4.7,
+      "simulator": 4.7
+    },
+    "shipType": "destroyer",
+    "economicType": "premium",
+    "imageUrl": "ships/uk_destroyer_battle_cadiz.webp",
+    "releaseDate": "2022-04-27"
+  },
+  {
+    "id": "uk_destroyer_battle_tobruk",
+    "name": "uk_destroyer_battle_tobruk",
+    "localizedName": "托​布​鲁​克",
+    "nation": "britain",
+    "rank": 3,
+    "battleRating": 4.7,
+    "br": {
+      "arcade": 4.7,
+      "realistic": 4.7,
+      "simulator": 4.7
+    },
+    "shipType": "destroyer",
+    "economicType": "regular",
+    "imageUrl": "ships/uk_destroyer_battle_tobruk.webp",
+    "releaseDate": "2019-12-16"
+  },
+  {
+    "id": "uk_destroyer_clemson_churchill",
+    "name": "uk_destroyer_clemson_churchill",
+    "localizedName": "丘​吉​尔",
+    "nation": "britain",
+    "rank": 1,
+    "battleRating": 3.3,
+    "br": {
+      "arcade": 3.3,
+      "realistic": 3.3,
+      "simulator": 3.3
+    },
+    "shipType": "destroyer",
+    "economicType": "premium",
+    "imageUrl": "ships/uk_destroyer_clemson_churchill.webp",
+    "releaseDate": "2018-10-23"
+  },
+  {
+    "id": "uk_destroyer_clemson_montgomery_g95",
+    "name": "uk_destroyer_clemson_montgomery_g95",
+    "localizedName": "蒙​哥​马​利",
+    "nation": "britain",
+    "rank": 1,
+    "battleRating": 3.3,
+    "br": {
+      "arcade": 3.3,
+      "realistic": 3.3,
+      "simulator": 3.3
+    },
+    "shipType": "destroyer",
+    "economicType": "premium",
+    "imageUrl": "ships/uk_destroyer_clemson_montgomery_g95.webp",
+    "releaseDate": "2020-11-15"
+  },
+  {
+    "id": "uk_destroyer_daring_class_daring",
+    "name": "uk_destroyer_daring_class_daring",
+    "localizedName": "勇​敢",
+    "nation": "britain",
+    "rank": 3,
+    "battleRating": 5.0,
+    "br": {
+      "arcade": 5.0,
+      "realistic": 5.0,
+      "simulator": 5.0
+    },
+    "shipType": "destroyer",
+    "economicType": "regular",
+    "imageUrl": "ships/uk_destroyer_daring_class_daring.webp",
+    "releaseDate": "2023-06-14"
+  },
+  {
+    "id": "uk_destroyer_daring_class_diamond",
+    "name": "uk_destroyer_daring_class_diamond",
+    "localizedName": "钻​石",
+    "nation": "britain",
+    "rank": 3,
+    "battleRating": 5.0,
+    "br": {
+      "arcade": 5.0,
+      "realistic": 5.0,
+      "simulator": 5.0
+    },
+    "shipType": "destroyer",
+    "economicType": "premium",
+    "imageUrl": "ships/uk_destroyer_daring_class_diamond.webp",
+    "releaseDate": "2024-03-13"
+  },
+  {
+    "id": "uk_destroyer_daring_class_diana",
+    "name": "uk_destroyer_daring_class_diana",
+    "localizedName": "戴​安​娜",
+    "nation": "britain",
+    "rank": 3,
+    "battleRating": 5.0,
+    "br": {
+      "arcade": 5.0,
+      "realistic": 5.0,
+      "simulator": 5.0
+    },
+    "shipType": "destroyer",
+    "economicType": "regular",
+    "imageUrl": "ships/uk_destroyer_daring_class_diana.webp",
+    "releaseDate": "2022-10-26"
+  },
+  {
+    "id": "uk_destroyer_g_garland",
+    "name": "uk_destroyer_g_garland",
+    "localizedName": "花​冠",
+    "nation": "britain",
+    "rank": 2,
+    "battleRating": 3.7,
+    "br": {
+      "arcade": 3.7,
+      "realistic": 3.7,
+      "simulator": 3.7
+    },
+    "shipType": "destroyer",
+    "economicType": "premium",
+    "imageUrl": "ships/uk_destroyer_g_garland.webp",
+    "releaseDate": "2020-11-15"
+  },
+  {
+    "id": "uk_destroyer_g_grafton",
+    "name": "uk_destroyer_g_grafton",
+    "localizedName": "格​拉​夫​顿",
+    "nation": "britain",
+    "rank": 1,
+    "battleRating": 3.7,
+    "br": {
+      "arcade": 3.7,
+      "realistic": 3.7,
+      "simulator": 3.7
+    },
+    "shipType": "destroyer",
+    "economicType": "regular",
+    "imageUrl": "ships/uk_destroyer_g_grafton.webp",
+    "releaseDate": "2018-10-23"
+  },
+  {
+    "id": "uk_destroyer_haida",
+    "name": "uk_destroyer_haida",
+    "localizedName": "海​达​人",
+    "nation": "britain",
+    "rank": 3,
+    "battleRating": 4.7,
+    "br": {
+      "arcade": 4.7,
+      "realistic": 4.7,
+      "simulator": 4.7
+    },
+    "shipType": "destroyer",
+    "economicType": "premium",
+    "imageUrl": "ships/uk_destroyer_haida.webp",
+    "releaseDate": "2018-10-23"
+  },
+  {
+    "id": "uk_destroyer_hunt_2series",
+    "name": "uk_destroyer_hunt_2series",
+    "localizedName": "卡​尔​佩",
+    "nation": "britain",
+    "rank": 1,
+    "battleRating": 4.3,
+    "br": {
+      "arcade": 4.3,
+      "realistic": 4.3,
+      "simulator": 4.3
+    },
+    "shipType": "destroyer",
+    "economicType": "regular",
+    "imageUrl": "ships/uk_destroyer_hunt_2series.webp",
+    "releaseDate": "2019-12-16"
+  },
+  {
+    "id": "uk_destroyer_hunt_4series",
+    "name": "uk_destroyer_hunt_4series",
+    "localizedName": "布​里​森​登",
+    "nation": "britain",
+    "rank": 2,
+    "battleRating": 4.3,
+    "br": {
+      "arcade": 4.3,
+      "realistic": 4.3,
+      "simulator": 4.3
+    },
+    "shipType": "destroyer",
+    "economicType": "regular",
+    "imageUrl": "ships/uk_destroyer_hunt_4series.webp",
+    "releaseDate": "2019-12-16"
+  },
+  {
+    "id": "uk_destroyer_j_class",
+    "name": "uk_destroyer_j_class",
+    "localizedName": "杰​维​斯",
+    "nation": "britain",
+    "rank": 2,
+    "battleRating": 4.7,
+    "br": {
+      "arcade": 4.7,
+      "realistic": 4.7,
+      "simulator": 4.7
+    },
+    "shipType": "destroyer",
+    "economicType": "premium",
+    "imageUrl": "ships/uk_destroyer_j_class.webp",
+    "releaseDate": "2020-11-15"
+  },
+  {
+    "id": "uk_destroyer_k_class",
+    "name": "uk_destroyer_k_class",
+    "localizedName": "开​尔​文",
+    "nation": "britain",
+    "rank": 2,
+    "battleRating": 4.7,
+    "br": {
+      "arcade": 4.7,
+      "realistic": 4.7,
+      "simulator": 4.7
+    },
+    "shipType": "destroyer",
+    "economicType": "regular",
+    "imageUrl": "ships/uk_destroyer_k_class.webp",
+    "releaseDate": "2019-12-16"
+  },
+  {
+    "id": "uk_destroyer_n_class",
+    "name": "uk_destroyer_n_class",
+    "localizedName": "尼​泊​尔",
+    "nation": "britain",
+    "rank": 2,
+    "battleRating": 4.7,
+    "br": {
+      "arcade": 4.7,
+      "realistic": 4.7,
+      "simulator": 4.7
+    },
+    "shipType": "destroyer",
+    "economicType": "regular",
+    "imageUrl": "ships/uk_destroyer_n_class.webp",
+    "releaseDate": "2018-10-23"
+  },
+  {
+    "id": "uk_destroyer_restigouche_class_terranova",
+    "name": "uk_destroyer_restigouche_class_terranova",
+    "localizedName": "泰​拉​诺​瓦",
+    "nation": "britain",
+    "rank": 5,
+    "battleRating": 4.0,
+    "br": {
+      "arcade": 4.0,
+      "realistic": 4.0,
+      "simulator": 4.0
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/uk_destroyer_restigouche_class_terranova.webp",
+    "releaseDate": "2023-03-07"
+  },
+  {
+    "id": "uk_destroyer_st_class_saumarez",
+    "name": "uk_destroyer_st_class_saumarez",
+    "localizedName": "索​玛​雷​兹",
+    "nation": "britain",
+    "rank": 1,
+    "battleRating": 4.3,
+    "br": {
+      "arcade": 4.3,
+      "realistic": 4.3,
+      "simulator": 4.3
+    },
+    "shipType": "destroyer",
+    "economicType": "regular",
+    "imageUrl": "ships/uk_destroyer_st_class_saumarez.webp",
+    "releaseDate": "2025-09-23"
+  },
+  {
+    "id": "uk_destroyer_tribal",
+    "name": "uk_destroyer_tribal",
+    "localizedName": "爱​斯​基​摩​人",
+    "nation": "britain",
+    "rank": 2,
+    "battleRating": 4.7,
+    "br": {
+      "arcade": 4.7,
+      "realistic": 4.7,
+      "simulator": 4.7
+    },
+    "shipType": "destroyer",
+    "economicType": "regular",
+    "imageUrl": "ships/uk_destroyer_tribal.webp",
+    "releaseDate": "2018-10-23"
+  },
+  {
+    "id": "uk_destroyer_tribal_mohawk",
+    "name": "uk_destroyer_tribal_mohawk",
+    "localizedName": "莫​霍​克​人",
+    "nation": "britain",
+    "rank": 2,
+    "battleRating": 4.7,
+    "br": {
+      "arcade": 4.7,
+      "realistic": 4.7,
+      "simulator": 4.7
+    },
+    "shipType": "destroyer",
+    "economicType": "premium",
+    "imageUrl": "ships/uk_destroyer_tribal_mohawk.webp",
+    "releaseDate": "2021-09-15"
+  },
+  {
+    "id": "uk_destroyer_v_class_valhalla",
+    "name": "uk_destroyer_v_class_valhalla",
+    "localizedName": "英​灵​殿",
+    "nation": "britain",
+    "rank": 1,
+    "battleRating": 3.3,
+    "br": {
+      "arcade": 3.3,
+      "realistic": 3.3,
+      "simulator": 3.3
+    },
+    "shipType": "destroyer",
+    "economicType": "premium",
+    "imageUrl": "ships/uk_destroyer_v_class_valhalla.webp",
+    "releaseDate": "2022-03-22"
+  },
+  {
+    "id": "uk_destroyer_v_class_vega",
+    "name": "uk_destroyer_v_class_vega",
+    "localizedName": "织​女​星",
+    "nation": "britain",
+    "rank": 1,
+    "battleRating": 3.7,
+    "br": {
+      "arcade": 3.7,
+      "realistic": 3.7,
+      "simulator": 3.7
+    },
+    "shipType": "destroyer",
+    "economicType": "premium",
+    "imageUrl": "ships/uk_destroyer_v_class_vega.webp",
+    "releaseDate": "2021-09-07"
+  },
+  {
+    "id": "uk_destroyer_v_class_verdun",
+    "name": "uk_destroyer_v_class_verdun",
+    "localizedName": "凡​尔​登",
+    "nation": "britain",
+    "rank": 1,
+    "battleRating": 3.7,
+    "br": {
+      "arcade": 3.7,
+      "realistic": 3.7,
+      "simulator": 3.7
+    },
+    "shipType": "destroyer",
+    "economicType": "premium",
+    "imageUrl": "ships/uk_destroyer_v_class_verdun.webp",
+    "releaseDate": "2021-09-07"
+  },
+  {
+    "id": "uk_flower_class",
+    "name": "uk_flower_class",
+    "localizedName": "布​兰​特​福​德",
+    "nation": "britain",
+    "rank": 2,
+    "battleRating": 2.3,
+    "br": {
+      "arcade": 2.3,
+      "realistic": 2.3,
+      "simulator": 2.3
+    },
+    "shipType": "submarine_chaser",
+    "economicType": "regular",
+    "imageUrl": "ships/uk_flower_class.webp",
+    "releaseDate": "2018-10-23"
+  },
+  {
+    "id": "uk_frigate_leopard",
+    "name": "uk_frigate_leopard",
+    "localizedName": "豹 (F14)",
+    "nation": "britain",
+    "rank": 5,
+    "battleRating": 4.0,
+    "br": {
+      "arcade": 4.0,
+      "realistic": 4.0,
+      "simulator": 4.0
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/uk_frigate_leopard.webp",
+    "releaseDate": "2021-06-02"
+  },
+  {
+    "id": "uk_frigate_river",
+    "name": "uk_frigate_river",
+    "localizedName": "斯​佩",
+    "nation": "britain",
+    "rank": 4,
+    "battleRating": 3.3,
+    "br": {
+      "arcade": 3.3,
+      "realistic": 3.3,
+      "simulator": 3.3
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "premium",
+    "imageUrl": "ships/uk_frigate_river.webp"
+  },
+  {
+    "id": "uk_frigate_whitby",
+    "name": "uk_frigate_whitby",
+    "localizedName": "惠​特​比",
+    "nation": "britain",
+    "rank": 4,
+    "battleRating": 3.7,
+    "br": {
+      "arcade": 3.7,
+      "realistic": 3.7,
+      "simulator": 3.7
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "premium",
+    "imageUrl": "ships/uk_frigate_whitby.webp",
+    "releaseDate": "2023-03-07"
+  },
+  {
+    "id": "uk_frigate_whitby_blackpool",
+    "name": "uk_frigate_whitby_blackpool",
+    "localizedName": "布​莱​克​浦",
+    "nation": "britain",
+    "rank": 5,
+    "battleRating": 3.7,
+    "br": {
+      "arcade": 3.7,
+      "realistic": 3.7,
+      "simulator": 3.7
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/uk_frigate_whitby_blackpool.webp",
+    "releaseDate": "2021-03-10"
+  },
+  {
+    "id": "uk_isles_class_trawler",
+    "name": "uk_isles_class_trawler",
+    "localizedName": "利​斯​科​姆",
+    "nation": "britain",
+    "rank": 2,
+    "battleRating": 2.3,
+    "br": {
+      "arcade": 2.0,
+      "realistic": 2.3,
+      "simulator": 2.3
+    },
+    "shipType": "submarine_chaser",
+    "economicType": "regular",
+    "imageUrl": "ships/uk_isles_class_trawler.webp",
+    "releaseDate": "2018-10-23"
+  },
+  {
+    "id": "uk_minelayer_abdiel_class_abdiel",
+    "name": "uk_minelayer_abdiel_class_abdiel",
+    "localizedName": "亚​必​迭",
+    "nation": "britain",
+    "rank": 2,
+    "battleRating": 4.7,
+    "br": {
+      "arcade": 4.7,
+      "realistic": 4.7,
+      "simulator": 4.7
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/uk_minelayer_abdiel_class_abdiel.webp",
+    "releaseDate": "2022-12-20"
+  },
+  {
+    "id": "us_battlecruiser_alaska_class",
+    "name": "us_battlecruiser_alaska_class",
+    "localizedName": "阿​拉​斯​加",
+    "nation": "usa",
+    "rank": 6,
+    "battleRating": 7.3,
+    "br": {
+      "arcade": 7.3,
+      "realistic": 7.3,
+      "simulator": 7.3
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/us_battlecruiser_alaska_class.webp",
+    "releaseDate": "2022-09-14"
+  },
+  {
+    "id": "us_battleship_arizona_1931",
+    "name": "us_battleship_arizona_1931",
+    "localizedName": "亚​利​桑​那",
+    "nation": "usa",
+    "rank": 6,
+    "battleRating": 7.3,
+    "br": {
+      "arcade": 7.3,
+      "realistic": 7.3,
+      "simulator": 7.3
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/us_battleship_arizona_1931.webp",
+    "releaseDate": "2022-03-22"
+  },
+  {
+    "id": "us_battleship_arkansas",
+    "name": "us_battleship_arkansas",
+    "localizedName": "阿​肯​色",
+    "nation": "usa",
+    "rank": 5,
+    "battleRating": 6.7,
+    "br": {
+      "arcade": 6.7,
+      "realistic": 6.7,
+      "simulator": 6.7
+    },
+    "shipType": "cruiser",
+    "economicType": "premium",
+    "imageUrl": "ships/us_battleship_arkansas.webp",
+    "releaseDate": "2023-09-19"
+  },
+  {
+    "id": "us_battleship_colorado_class_colorado",
+    "name": "us_battleship_colorado_class_colorado",
+    "localizedName": "科​罗​拉​多",
+    "nation": "usa",
+    "rank": 6,
+    "battleRating": 7.7,
+    "br": {
+      "arcade": 7.7,
+      "realistic": 7.7,
+      "simulator": 7.7
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/us_battleship_colorado_class_colorado.webp",
+    "releaseDate": "2025-03-18"
+  },
+  {
+    "id": "us_battleship_colorado_class_maryland",
+    "name": "us_battleship_colorado_class_maryland",
+    "localizedName": "马​里​兰",
+    "nation": "usa",
+    "rank": 6,
+    "battleRating": 7.7,
+    "br": {
+      "arcade": 7.7,
+      "realistic": 7.7,
+      "simulator": 7.7
+    },
+    "shipType": "cruiser",
+    "economicType": "premium",
+    "imageUrl": "ships/us_battleship_colorado_class_maryland.webp",
+    "releaseDate": "2025-09-23"
+  },
+  {
+    "id": "us_battleship_iowa_class_iowa",
+    "name": "us_battleship_iowa_class_iowa",
+    "localizedName": "衣​阿​华",
+    "nation": "usa",
+    "rank": 7,
+    "battleRating": 8.7,
+    "br": {
+      "arcade": 8.7,
+      "realistic": 8.7,
+      "simulator": 8.7
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/us_battleship_iowa_class_iowa.webp",
+    "releaseDate": "2025-06-25"
+  },
+  {
+    "id": "us_battleship_mississippi",
+    "name": "us_battleship_mississippi",
+    "localizedName": "密​西​西​比",
+    "nation": "usa",
+    "rank": 6,
+    "battleRating": 7.7,
+    "br": {
+      "arcade": 7.7,
+      "realistic": 7.7,
+      "simulator": 7.7
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/us_battleship_mississippi.webp",
+    "releaseDate": "2023-12-14"
+  },
+  {
+    "id": "us_battleship_nevada",
+    "name": "us_battleship_nevada",
+    "localizedName": "内​华​达",
+    "nation": "usa",
+    "rank": 6,
+    "battleRating": 7.3,
+    "br": {
+      "arcade": 7.3,
+      "realistic": 7.3,
+      "simulator": 7.3
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/us_battleship_nevada.webp",
+    "releaseDate": "2023-03-07"
+  },
+  {
+    "id": "us_battleship_north_dakota",
+    "name": "us_battleship_north_dakota",
+    "localizedName": "北​达​科​他",
+    "nation": "usa",
+    "rank": 5,
+    "battleRating": 6.3,
+    "br": {
+      "arcade": 6.3,
+      "realistic": 6.3,
+      "simulator": 6.3
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/us_battleship_north_dakota.webp",
+    "releaseDate": "2020-11-15"
+  },
+  {
+    "id": "us_battleship_oklahoma",
+    "name": "us_battleship_oklahoma",
+    "localizedName": "USS Oklahoma",
+    "nation": "usa",
+    "rank": 6,
+    "battleRating": 7.0,
+    "br": {
+      "arcade": 7.0,
+      "realistic": 7.0,
+      "simulator": 7.0
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/us_battleship_oklahoma.webp",
+    "releaseDate": "2026-03-12"
+  },
+  {
+    "id": "us_battleship_south_dakota",
+    "name": "us_battleship_south_dakota",
+    "localizedName": "南​达​科​他",
+    "nation": "usa",
+    "rank": 7,
+    "battleRating": 8.3,
+    "br": {
+      "arcade": 8.3,
+      "realistic": 8.3,
+      "simulator": 8.3
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/us_battleship_south_dakota.webp",
+    "releaseDate": "2025-12-16"
+  },
+  {
+    "id": "us_battleship_tennessee",
+    "name": "us_battleship_tennessee",
+    "localizedName": "田​纳​西",
+    "nation": "usa",
+    "rank": 6,
+    "battleRating": 7.7,
+    "br": {
+      "arcade": 7.7,
+      "realistic": 7.7,
+      "simulator": 7.7
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/us_battleship_tennessee.webp",
+    "releaseDate": "2024-09-10"
+  },
+  {
+    "id": "us_battleship_texas",
+    "name": "us_battleship_texas",
+    "localizedName": "德​克​萨​斯",
+    "nation": "usa",
+    "rank": 5,
+    "battleRating": 6.7,
+    "br": {
+      "arcade": 6.7,
+      "realistic": 6.7,
+      "simulator": 6.7
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/us_battleship_texas.webp",
+    "releaseDate": "2023-09-19"
+  },
+  {
+    "id": "us_battleship_wyoming_class",
+    "name": "us_battleship_wyoming_class",
+    "localizedName": "怀​俄​明",
+    "nation": "usa",
+    "rank": 5,
+    "battleRating": 6.7,
+    "br": {
+      "arcade": 6.7,
+      "realistic": 6.7,
+      "simulator": 6.7
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/us_battleship_wyoming_class.webp",
+    "releaseDate": "2021-06-02"
+  },
+  {
+    "id": "us_cruiser_atlanta_class_atlanta",
+    "name": "us_cruiser_atlanta_class_atlanta",
+    "localizedName": "亚​特​兰​大",
+    "nation": "usa",
+    "rank": 4,
+    "battleRating": 5.7,
+    "br": {
+      "arcade": 5.7,
+      "realistic": 5.7,
+      "simulator": 5.7
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/us_cruiser_atlanta_class_atlanta.webp",
+    "releaseDate": "2019-09-10"
+  },
+  {
+    "id": "us_cruiser_baltimore_class",
+    "name": "us_cruiser_baltimore_class",
+    "localizedName": "巴​尔​的​摩",
+    "nation": "usa",
+    "rank": 5,
+    "battleRating": 6.3,
+    "br": {
+      "arcade": 6.3,
+      "realistic": 6.3,
+      "simulator": 6.3
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/us_cruiser_baltimore_class.webp",
+    "releaseDate": "2020-12-17"
+  },
+  {
+    "id": "us_cruiser_baltimore_class_pittsburgh",
+    "name": "us_cruiser_baltimore_class_pittsburgh",
+    "localizedName": "匹​兹​堡",
+    "nation": "usa",
+    "rank": 5,
+    "battleRating": 6.3,
+    "br": {
+      "arcade": 6.3,
+      "realistic": 6.3,
+      "simulator": 6.3
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/us_cruiser_baltimore_class_pittsburgh.webp",
+    "releaseDate": "2021-09-07"
+  },
+  {
+    "id": "us_cruiser_brooklyn_class_brooklyn",
+    "name": "us_cruiser_brooklyn_class_brooklyn",
+    "localizedName": "布​鲁​克​林",
+    "nation": "usa",
+    "rank": 4,
+    "battleRating": 6.3,
+    "br": {
+      "arcade": 6.3,
+      "realistic": 6.3,
+      "simulator": 6.3
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/us_cruiser_brooklyn_class_brooklyn.webp",
+    "releaseDate": "2019-03-12"
+  },
+  {
+    "id": "us_cruiser_brooklyn_class_helena",
+    "name": "us_cruiser_brooklyn_class_helena",
+    "localizedName": "海​伦​娜",
+    "nation": "usa",
+    "rank": 4,
+    "battleRating": 6.3,
+    "br": {
+      "arcade": 6.3,
+      "realistic": 6.3,
+      "simulator": 6.3
+    },
+    "shipType": "cruiser",
+    "economicType": "premium",
+    "imageUrl": "ships/us_cruiser_brooklyn_class_helena.webp",
+    "releaseDate": "2019-10-29"
+  },
+  {
+    "id": "us_cruiser_cleveland_class_cleveland",
+    "name": "us_cruiser_cleveland_class_cleveland",
+    "localizedName": "克​利​夫​兰",
+    "nation": "usa",
+    "rank": 4,
+    "battleRating": 6.0,
+    "br": {
+      "arcade": 6.0,
+      "realistic": 6.0,
+      "simulator": 6.0
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/us_cruiser_cleveland_class_cleveland.webp",
+    "releaseDate": "2020-06-01"
+  },
+  {
+    "id": "us_cruiser_des_moines_class",
+    "name": "us_cruiser_des_moines_class",
+    "localizedName": "得​梅​因",
+    "nation": "usa",
+    "rank": 5,
+    "battleRating": 6.7,
+    "br": {
+      "arcade": 6.7,
+      "realistic": 6.7,
+      "simulator": 6.7
+    },
+    "shipType": "cruiser",
+    "economicType": "premium",
+    "imageUrl": "ships/us_cruiser_des_moines_class.webp",
+    "releaseDate": "2023-03-07"
+  },
+  {
+    "id": "us_cruiser_des_moines_class_newport_news",
+    "name": "us_cruiser_des_moines_class_newport_news",
+    "localizedName": "纽​波​特​纽​斯",
+    "nation": "usa",
+    "rank": 5,
+    "battleRating": 6.7,
+    "br": {
+      "arcade": 6.7,
+      "realistic": 6.7,
+      "simulator": 6.7
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/us_cruiser_des_moines_class_newport_news.webp",
+    "releaseDate": "2022-12-20"
+  },
+  {
+    "id": "us_cruiser_fargo_class",
+    "name": "us_cruiser_fargo_class",
+    "localizedName": "法​戈",
+    "nation": "usa",
+    "rank": 4,
+    "battleRating": 6.0,
+    "br": {
+      "arcade": 6.0,
+      "realistic": 6.0,
+      "simulator": 6.0
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/us_cruiser_fargo_class.webp",
+    "releaseDate": "2022-10-26"
+  },
+  {
+    "id": "us_cruiser_new_orleans_class",
+    "name": "us_cruiser_new_orleans_class",
+    "localizedName": "新​奥​尔​良",
+    "nation": "usa",
+    "rank": 4,
+    "battleRating": 6.0,
+    "br": {
+      "arcade": 6.0,
+      "realistic": 6.0,
+      "simulator": 6.0
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/us_cruiser_new_orleans_class.webp",
+    "releaseDate": "2020-11-15"
+  },
+  {
+    "id": "us_cruiser_northampton_class",
+    "name": "us_cruiser_northampton_class",
+    "localizedName": "北​安​普​敦",
+    "nation": "usa",
+    "rank": 4,
+    "battleRating": 5.7,
+    "br": {
+      "arcade": 5.7,
+      "realistic": 5.7,
+      "simulator": 5.7
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/us_cruiser_northampton_class.webp",
+    "releaseDate": "2020-09-08"
+  },
+  {
+    "id": "us_cruiser_omaha_class_detroit",
+    "name": "us_cruiser_omaha_class_detroit",
+    "localizedName": "底​特​律",
+    "nation": "usa",
+    "rank": 3,
+    "battleRating": 5.0,
+    "br": {
+      "arcade": 5.0,
+      "realistic": 5.0,
+      "simulator": 5.0
+    },
+    "shipType": "cruiser",
+    "economicType": "premium",
+    "imageUrl": "ships/us_cruiser_omaha_class_detroit.webp",
+    "releaseDate": "2021-07-28"
+  },
+  {
+    "id": "us_cruiser_omaha_class_raleigh",
+    "name": "us_cruiser_omaha_class_raleigh",
+    "localizedName": "罗​利",
+    "nation": "usa",
+    "rank": 3,
+    "battleRating": 5.0,
+    "br": {
+      "arcade": 5.0,
+      "realistic": 5.0,
+      "simulator": 5.0
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/us_cruiser_omaha_class_raleigh.webp",
+    "releaseDate": "2018-12-18"
+  },
+  {
+    "id": "us_cruiser_omaha_class_trenton",
+    "name": "us_cruiser_omaha_class_trenton",
+    "localizedName": "特​伦​顿",
+    "nation": "usa",
+    "rank": 3,
+    "battleRating": 5.0,
+    "br": {
+      "arcade": 5.0,
+      "realistic": 5.0,
+      "simulator": 5.0
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/us_cruiser_omaha_class_trenton.webp"
+  },
+  {
+    "id": "us_cruiser_oregon_class",
+    "name": "us_cruiser_oregon_class",
+    "localizedName": "俄​勒​冈​城",
+    "nation": "usa",
+    "rank": 5,
+    "battleRating": 6.3,
+    "br": {
+      "arcade": 6.3,
+      "realistic": 6.3,
+      "simulator": 6.3
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/us_cruiser_oregon_class.webp",
+    "releaseDate": "2025-11-11"
+  },
+  {
+    "id": "us_cruiser_pensacola_class",
+    "name": "us_cruiser_pensacola_class",
+    "localizedName": "彭​萨​科​拉",
+    "nation": "usa",
+    "rank": 4,
+    "battleRating": 5.7,
+    "br": {
+      "arcade": 5.7,
+      "realistic": 5.7,
+      "simulator": 5.7
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/us_cruiser_pensacola_class.webp",
+    "releaseDate": "2019-10-29"
+  },
+  {
+    "id": "us_cruiser_portland_class",
+    "name": "us_cruiser_portland_class",
+    "localizedName": "波​特​兰",
+    "nation": "usa",
+    "rank": 4,
+    "battleRating": 5.7,
+    "br": {
+      "arcade": 5.7,
+      "realistic": 5.7,
+      "simulator": 5.7
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/us_cruiser_portland_class.webp",
+    "releaseDate": "2020-03-10"
+  },
+  {
+    "id": "us_cruiser_worcester_class_roanoke",
+    "name": "us_cruiser_worcester_class_roanoke",
+    "localizedName": "罗​阿​诺​克",
+    "nation": "usa",
+    "rank": 5,
+    "battleRating": 6.3,
+    "br": {
+      "arcade": 6.3,
+      "realistic": 6.3,
+      "simulator": 6.3
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/us_cruiser_worcester_class_roanoke.webp",
+    "releaseDate": "2023-12-14"
+  },
+  {
+    "id": "us_destroyer_bagley_class_bagley",
+    "name": "us_destroyer_bagley_class_bagley",
+    "localizedName": "巴​格​利",
+    "nation": "usa",
+    "rank": 2,
+    "battleRating": 4.0,
+    "br": {
+      "arcade": 4.0,
+      "realistic": 4.0,
+      "simulator": 4.0
+    },
+    "shipType": "destroyer",
+    "economicType": "regular",
+    "imageUrl": "ships/us_destroyer_bagley_class_bagley.webp",
+    "releaseDate": "2024-11-19"
+  },
+  {
+    "id": "us_destroyer_bagley_class_helm",
+    "name": "us_destroyer_bagley_class_helm",
+    "localizedName": "USS Helm",
+    "nation": "usa",
+    "rank": 2,
+    "battleRating": 4.0,
+    "br": {
+      "arcade": 4.0,
+      "realistic": 4.0,
+      "simulator": 4.0
+    },
+    "shipType": "destroyer",
+    "economicType": "premium",
+    "imageUrl": "ships/us_destroyer_bagley_class_helm.webp",
+    "releaseDate": "2026-03-10"
+  },
+  {
+    "id": "us_destroyer_cf_adams_class_cf_adams",
+    "name": "us_destroyer_cf_adams_class_cf_adams",
+    "localizedName": "查​尔​斯·F·亚​当​斯",
+    "nation": "usa",
+    "rank": 4,
+    "battleRating": 5.3,
+    "br": {
+      "arcade": 5.3,
+      "realistic": 5.3,
+      "simulator": 5.3
+    },
+    "shipType": "destroyer",
+    "economicType": "regular",
+    "imageUrl": "ships/us_destroyer_cf_adams_class_cf_adams.webp",
+    "releaseDate": "2025-09-23"
+  },
+  {
+    "id": "us_destroyer_clemson_barker",
+    "name": "us_destroyer_clemson_barker",
+    "localizedName": "巴​克",
+    "nation": "usa",
+    "rank": 1,
+    "battleRating": 3.3,
+    "br": {
+      "arcade": 3.3,
+      "realistic": 3.3,
+      "simulator": 3.3
+    },
+    "shipType": "destroyer",
+    "economicType": "regular",
+    "imageUrl": "ships/us_destroyer_clemson_barker.webp"
+  },
+  {
+    "id": "us_destroyer_clemson_litchfield",
+    "name": "us_destroyer_clemson_litchfield",
+    "localizedName": "利​奇​菲​尔​德",
+    "nation": "usa",
+    "rank": 1,
+    "battleRating": 3.3,
+    "br": {
+      "arcade": 3.3,
+      "realistic": 3.3,
+      "simulator": 3.3
+    },
+    "shipType": "destroyer",
+    "economicType": "premium",
+    "imageUrl": "ships/us_destroyer_clemson_litchfield.webp"
+  },
+  {
+    "id": "us_destroyer_clemson_welborn_c_wood",
+    "name": "us_destroyer_clemson_welborn_c_wood",
+    "localizedName": "韦​尔​伯​恩·C·伍​德",
+    "nation": "usa",
+    "rank": 1,
+    "battleRating": 3.3,
+    "br": {
+      "arcade": 3.3,
+      "realistic": 3.3,
+      "simulator": 3.3
+    },
+    "shipType": "destroyer",
+    "economicType": "premium",
+    "imageUrl": "ships/us_destroyer_clemson_welborn_c_wood.webp",
+    "releaseDate": "2020-11-15"
+  },
+  {
+    "id": "us_destroyer_farragut_1942",
+    "name": "us_destroyer_farragut_1942",
+    "localizedName": "艾​尔​温",
+    "nation": "usa",
+    "rank": 1,
+    "battleRating": 3.7,
+    "br": {
+      "arcade": 3.7,
+      "realistic": 3.7,
+      "simulator": 3.7
+    },
+    "shipType": "destroyer",
+    "economicType": "regular",
+    "imageUrl": "ships/us_destroyer_farragut_1942.webp"
+  },
+  {
+    "id": "us_destroyer_fletcher",
+    "name": "us_destroyer_fletcher",
+    "localizedName": "弗​莱​彻",
+    "nation": "usa",
+    "rank": 2,
+    "battleRating": 4.7,
+    "br": {
+      "arcade": 4.7,
+      "realistic": 4.7,
+      "simulator": 4.7
+    },
+    "shipType": "destroyer",
+    "economicType": "regular",
+    "imageUrl": "ships/us_destroyer_fletcher.webp"
+  },
+  {
+    "id": "us_destroyer_fletcher_bennion",
+    "name": "us_destroyer_fletcher_bennion",
+    "localizedName": "本​尼​恩",
+    "nation": "usa",
+    "rank": 3,
+    "battleRating": 4.7,
+    "br": {
+      "arcade": 4.7,
+      "realistic": 4.7,
+      "simulator": 4.7
+    },
+    "shipType": "destroyer",
+    "economicType": "premium",
+    "imageUrl": "ships/us_destroyer_fletcher_bennion.webp"
+  },
+  {
+    "id": "us_destroyer_fletcher_cowell",
+    "name": "us_destroyer_fletcher_cowell",
+    "localizedName": "考​埃​尔",
+    "nation": "usa",
+    "rank": 3,
+    "battleRating": 4.7,
+    "br": {
+      "arcade": 4.7,
+      "realistic": 4.7,
+      "simulator": 4.7
+    },
+    "shipType": "destroyer",
+    "economicType": "premium",
+    "imageUrl": "ships/us_destroyer_fletcher_cowell.webp"
+  },
+  {
+    "id": "us_destroyer_forrestsherman_class",
+    "name": "us_destroyer_forrestsherman_class",
+    "localizedName": "福​雷​斯​特·谢​尔​曼",
+    "nation": "usa",
+    "rank": 4,
+    "battleRating": 5.3,
+    "br": {
+      "arcade": 5.3,
+      "realistic": 5.3,
+      "simulator": 5.3
+    },
+    "shipType": "destroyer",
+    "economicType": "regular",
+    "imageUrl": "ships/us_destroyer_forrestsherman_class.webp",
+    "releaseDate": "2025-12-16"
+  },
+  {
+    "id": "us_destroyer_gearing",
+    "name": "us_destroyer_gearing",
+    "localizedName": "基​林",
+    "nation": "usa",
+    "rank": 3,
+    "battleRating": 5.0,
+    "br": {
+      "arcade": 5.0,
+      "realistic": 5.0,
+      "simulator": 5.0
+    },
+    "shipType": "destroyer",
+    "economicType": "regular",
+    "imageUrl": "ships/us_destroyer_gearing.webp",
+    "releaseDate": "2022-06-15"
+  },
+  {
+    "id": "us_destroyer_gearing_frank_knox",
+    "name": "us_destroyer_gearing_frank_knox",
+    "localizedName": "法​兰​克·诺​克​斯",
+    "nation": "usa",
+    "rank": 3,
+    "battleRating": 5.0,
+    "br": {
+      "arcade": 5.0,
+      "realistic": 5.0,
+      "simulator": 5.0
+    },
+    "shipType": "destroyer",
+    "economicType": "premium",
+    "imageUrl": "ships/us_destroyer_gearing_frank_knox.webp",
+    "releaseDate": "2022-10-26"
+  },
+  {
+    "id": "us_destroyer_mitscher",
+    "name": "us_destroyer_mitscher",
+    "localizedName": "米​彻​尔",
+    "nation": "usa",
+    "rank": 2,
+    "battleRating": 4.7,
+    "br": {
+      "arcade": 4.7,
+      "realistic": 4.7,
+      "simulator": 4.7
+    },
+    "shipType": "destroyer",
+    "economicType": "regular",
+    "imageUrl": "ships/us_destroyer_mitscher.webp",
+    "releaseDate": "2021-10-26"
+  },
+  {
+    "id": "us_destroyer_mitscher_wilkinson",
+    "name": "us_destroyer_mitscher_wilkinson",
+    "localizedName": "威​尔​金​森",
+    "nation": "usa",
+    "rank": 2,
+    "battleRating": 4.7,
+    "br": {
+      "arcade": 4.7,
+      "realistic": 4.7,
+      "simulator": 4.7
+    },
+    "shipType": "destroyer",
+    "economicType": "premium",
+    "imageUrl": "ships/us_destroyer_mitscher_wilkinson.webp",
+    "releaseDate": "2021-12-17"
+  },
+  {
+    "id": "us_destroyer_porter_1941",
+    "name": "us_destroyer_porter_1941",
+    "localizedName": "波​特",
+    "nation": "usa",
+    "rank": 3,
+    "battleRating": 5.3,
+    "br": {
+      "arcade": 5.3,
+      "realistic": 5.3,
+      "simulator": 5.3
+    },
+    "shipType": "destroyer",
+    "economicType": "regular",
+    "imageUrl": "ships/us_destroyer_porter_1941.webp",
+    "releaseDate": "2019-12-16"
+  },
+  {
+    "id": "us_destroyer_porter_1942",
+    "name": "us_destroyer_porter_1942",
+    "localizedName": "莫​菲​特",
+    "nation": "usa",
+    "rank": 3,
+    "battleRating": 5.3,
+    "br": {
+      "arcade": 5.3,
+      "realistic": 5.3,
+      "simulator": 5.3
+    },
+    "shipType": "destroyer",
+    "economicType": "premium",
+    "imageUrl": "ships/us_destroyer_porter_1942.webp",
+    "releaseDate": "2020-11-15"
+  },
+  {
+    "id": "us_destroyer_porter_1944",
+    "name": "us_destroyer_porter_1944",
+    "localizedName": "费​尔​普​斯",
+    "nation": "usa",
+    "rank": 3,
+    "battleRating": 5.0,
+    "br": {
+      "arcade": 5.0,
+      "realistic": 5.0,
+      "simulator": 5.0
+    },
+    "shipType": "destroyer",
+    "economicType": "premium",
+    "imageUrl": "ships/us_destroyer_porter_1944.webp"
+  },
+  {
+    "id": "us_destroyer_somers",
+    "name": "us_destroyer_somers",
+    "localizedName": "萨​默​斯",
+    "nation": "usa",
+    "rank": 3,
+    "battleRating": 5.3,
+    "br": {
+      "arcade": 5.3,
+      "realistic": 5.3,
+      "simulator": 5.3
+    },
+    "shipType": "destroyer",
+    "economicType": "regular",
+    "imageUrl": "ships/us_destroyer_somers.webp",
+    "releaseDate": "2019-03-12"
+  },
+  {
+    "id": "us_destroyer_somers_davis",
+    "name": "us_destroyer_somers_davis",
+    "localizedName": "戴​维​斯",
+    "nation": "usa",
+    "rank": 3,
+    "battleRating": 5.3,
+    "br": {
+      "arcade": 5.3,
+      "realistic": 5.3,
+      "simulator": 5.3
+    },
+    "shipType": "destroyer",
+    "economicType": "premium",
+    "imageUrl": "ships/us_destroyer_somers_davis.webp",
+    "releaseDate": "2022-04-07"
+  },
+  {
+    "id": "us_destroyer_sumner",
+    "name": "us_destroyer_sumner",
+    "localizedName": "萨​姆​纳",
+    "nation": "usa",
+    "rank": 3,
+    "battleRating": 5.0,
+    "br": {
+      "arcade": 5.0,
+      "realistic": 5.0,
+      "simulator": 5.0
+    },
+    "shipType": "destroyer",
+    "economicType": "regular",
+    "imageUrl": "ships/us_destroyer_sumner.webp",
+    "releaseDate": "2018-10-23"
+  },
+  {
+    "id": "us_frigate_buckley_class_coolbaugh",
+    "name": "us_frigate_buckley_class_coolbaugh",
+    "localizedName": "库​尔​博",
+    "nation": "usa",
+    "rank": 5,
+    "battleRating": 4.0,
+    "br": {
+      "arcade": 4.0,
+      "realistic": 4.0,
+      "simulator": 4.0
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/us_frigate_buckley_class_coolbaugh.webp",
+    "releaseDate": "2024-06-19"
+  },
+  {
+    "id": "us_frigate_dealey",
+    "name": "us_frigate_dealey",
+    "localizedName": "迪​利",
+    "nation": "usa",
+    "rank": 5,
+    "battleRating": 3.7,
+    "br": {
+      "arcade": 3.7,
+      "realistic": 3.7,
+      "simulator": 3.7
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/us_frigate_dealey.webp",
+    "releaseDate": "2024-03-13"
+  },
+  {
+    "id": "us_frigate_tacoma",
+    "name": "us_frigate_tacoma",
+    "localizedName": "霍​奎​厄​姆",
+    "nation": "usa",
+    "rank": 5,
+    "battleRating": 3.3,
+    "br": {
+      "arcade": 3.3,
+      "realistic": 3.3,
+      "simulator": 3.3
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/us_frigate_tacoma.webp",
+    "releaseDate": "2021-09-07"
+  },
+  {
+    "id": "us_pc_451",
+    "name": "us_pc_451",
+    "localizedName": "PC-451",
+    "nation": "usa",
+    "rank": 2,
+    "battleRating": 2.3,
+    "br": {
+      "arcade": 2.3,
+      "realistic": 2.3,
+      "simulator": 2.3
+    },
+    "shipType": "submarine_chaser",
+    "economicType": "regular",
+    "imageUrl": "ships/us_pc_451.webp"
+  },
+  {
+    "id": "us_pc_466_carmi",
+    "name": "us_pc_466_carmi",
+    "localizedName": "卡​迈",
+    "nation": "usa",
+    "rank": 2,
+    "battleRating": 2.3,
+    "br": {
+      "arcade": 2.3,
+      "realistic": 2.3,
+      "simulator": 2.3
+    },
+    "shipType": "submarine_chaser",
+    "economicType": "premium",
+    "imageUrl": "ships/us_pc_466_carmi.webp",
+    "releaseDate": "2019-09-10"
+  },
+  {
+    "id": "us_sc_497",
+    "name": "us_sc_497",
+    "localizedName": "SC-497",
+    "nation": "usa",
+    "rank": 2,
+    "battleRating": 2.3,
+    "br": {
+      "arcade": 2.3,
+      "realistic": 2.3,
+      "simulator": 2.3
+    },
+    "shipType": "submarine_chaser",
+    "economicType": "regular",
+    "imageUrl": "ships/us_sc_497.webp"
+  },
+  {
+    "id": "ussr_battlecruiser_izmail",
+    "name": "ussr_battlecruiser_izmail",
+    "localizedName": "伊​兹​梅​尔",
+    "nation": "ussr",
+    "rank": 5,
+    "battleRating": 7.0,
+    "br": {
+      "arcade": 7.0,
+      "realistic": 7.0,
+      "simulator": 7.0
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/ussr_battlecruiser_izmail.webp",
+    "releaseDate": "2024-09-10"
+  },
+  {
+    "id": "ussr_battlecruiser_kronshtadt",
+    "name": "ussr_battlecruiser_kronshtadt",
+    "localizedName": "喀​琅​施​塔​得",
+    "nation": "ussr",
+    "rank": 6,
+    "battleRating": 7.3,
+    "br": {
+      "arcade": 7.3,
+      "realistic": 7.3,
+      "simulator": 7.3
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/ussr_battlecruiser_kronshtadt.webp",
+    "releaseDate": "2022-06-15"
+  },
+  {
+    "id": "ussr_battlecruiser_sevastopol",
+    "name": "ussr_battlecruiser_sevastopol",
+    "localizedName": "塞​瓦​斯​托​波​尔",
+    "nation": "ussr",
+    "rank": 6,
+    "battleRating": 7.3,
+    "br": {
+      "arcade": 7.3,
+      "realistic": 7.3,
+      "simulator": 7.3
+    },
+    "shipType": "cruiser",
+    "economicType": "premium",
+    "imageUrl": "ships/ussr_battlecruiser_sevastopol.webp",
+    "releaseDate": "2025-06-25"
+  },
+  {
+    "id": "ussr_battlecruiser_stalingrad",
+    "name": "ussr_battlecruiser_stalingrad",
+    "localizedName": "斯​大​林​格​勒",
+    "nation": "ussr",
+    "rank": 6,
+    "battleRating": 7.7,
+    "br": {
+      "arcade": 7.7,
+      "realistic": 7.7,
+      "simulator": 7.7
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/ussr_battlecruiser_stalingrad.webp",
+    "releaseDate": "2025-12-16"
+  },
+  {
+    "id": "ussr_battleship_arhangelsk",
+    "name": "ussr_battleship_arhangelsk",
+    "localizedName": "阿​尔​汉​格​尔​斯​克",
+    "nation": "ussr",
+    "rank": 6,
+    "battleRating": 7.7,
+    "br": {
+      "arcade": 7.7,
+      "realistic": 7.7,
+      "simulator": 7.7
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/ussr_battleship_arhangelsk.webp",
+    "releaseDate": "2024-12-16"
+  },
+  {
+    "id": "ussr_battleship_imperatritsa_mariya",
+    "name": "ussr_battleship_imperatritsa_mariya",
+    "localizedName": "玛​丽​亚​皇​后",
+    "nation": "ussr",
+    "rank": 5,
+    "battleRating": 6.7,
+    "br": {
+      "arcade": 6.7,
+      "realistic": 6.7,
+      "simulator": 6.7
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/ussr_battleship_imperatritsa_mariya.webp",
+    "releaseDate": "2020-11-15"
+  },
+  {
+    "id": "ussr_battleship_marat",
+    "name": "ussr_battleship_marat",
+    "localizedName": "马​拉",
+    "nation": "ussr",
+    "rank": 5,
+    "battleRating": 6.7,
+    "br": {
+      "arcade": 6.7,
+      "realistic": 6.7,
+      "simulator": 6.7
+    },
+    "shipType": "cruiser",
+    "economicType": "premium",
+    "imageUrl": "ships/ussr_battleship_marat.webp",
+    "releaseDate": "2023-09-19"
+  },
+  {
+    "id": "ussr_battleship_novorossiysk",
+    "name": "ussr_battleship_novorossiysk",
+    "localizedName": "新​罗​西​斯​克",
+    "nation": "ussr",
+    "rank": 6,
+    "battleRating": 7.3,
+    "br": {
+      "arcade": 7.3,
+      "realistic": 7.3,
+      "simulator": 7.3
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/ussr_battleship_novorossiysk.webp",
+    "releaseDate": "2023-12-14"
+  },
+  {
+    "id": "ussr_battleship_parizhskaya_kommuna",
+    "name": "ussr_battleship_parizhskaya_kommuna",
+    "localizedName": "巴​黎​公​社",
+    "nation": "ussr",
+    "rank": 5,
+    "battleRating": 6.7,
+    "br": {
+      "arcade": 6.7,
+      "realistic": 6.7,
+      "simulator": 6.7
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/ussr_battleship_parizhskaya_kommuna.webp",
+    "releaseDate": "2021-09-07"
+  },
+  {
+    "id": "ussr_battleship_poltava",
+    "name": "ussr_battleship_poltava",
+    "localizedName": "波​尔​塔​瓦",
+    "nation": "ussr",
+    "rank": 5,
+    "battleRating": 6.3,
+    "br": {
+      "arcade": 6.3,
+      "realistic": 6.3,
+      "simulator": 6.3
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/ussr_battleship_poltava.webp",
+    "releaseDate": "2020-11-15"
+  },
+  {
+    "id": "ussr_battleship_pr23_sovetskij_soyuz",
+    "name": "ussr_battleship_pr23_sovetskij_soyuz",
+    "localizedName": "苏​维​埃​联​盟",
+    "nation": "ussr",
+    "rank": 7,
+    "battleRating": 8.7,
+    "br": {
+      "arcade": 8.7,
+      "realistic": 8.7,
+      "simulator": 8.7
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/ussr_battleship_pr23_sovetskij_soyuz.webp",
+    "releaseDate": "2025-06-25"
+  },
+  {
+    "id": "ussr_cruiser_chapayev",
+    "name": "ussr_cruiser_chapayev",
+    "localizedName": "夏​伯​阳",
+    "nation": "ussr",
+    "rank": 4,
+    "battleRating": 6.0,
+    "br": {
+      "arcade": 6.0,
+      "realistic": 6.0,
+      "simulator": 6.0
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/ussr_cruiser_chapayev.webp",
+    "releaseDate": "2019-09-10"
+  },
+  {
+    "id": "ussr_cruiser_kerch",
+    "name": "ussr_cruiser_kerch",
+    "localizedName": "▂​刻​赤",
+    "nation": "ussr",
+    "rank": 4,
+    "battleRating": 5.7,
+    "br": {
+      "arcade": 5.7,
+      "realistic": 5.7,
+      "simulator": 5.7
+    },
+    "shipType": "cruiser",
+    "economicType": "premium",
+    "imageUrl": "ships/ussr_cruiser_kerch.webp",
+    "releaseDate": "2021-12-17"
+  },
+  {
+    "id": "ussr_cruiser_kirov",
+    "name": "ussr_cruiser_kirov",
+    "localizedName": "基​洛​夫",
+    "nation": "ussr",
+    "rank": 4,
+    "battleRating": 5.7,
+    "br": {
+      "arcade": 5.7,
+      "realistic": 5.7,
+      "simulator": 5.7
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/ussr_cruiser_kirov.webp",
+    "releaseDate": "2019-03-12"
+  },
+  {
+    "id": "ussr_cruiser_krasnyi_kavkaz",
+    "name": "ussr_cruiser_krasnyi_kavkaz",
+    "localizedName": "红​色​高​加​索",
+    "nation": "ussr",
+    "rank": 3,
+    "battleRating": 5.0,
+    "br": {
+      "arcade": 5.0,
+      "realistic": 5.0,
+      "simulator": 5.0
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/ussr_cruiser_krasnyi_kavkaz.webp"
+  },
+  {
+    "id": "ussr_cruiser_krasnyi_krim",
+    "name": "ussr_cruiser_krasnyi_krim",
+    "localizedName": "红​色​克​里​米​亚",
+    "nation": "ussr",
+    "rank": 3,
+    "battleRating": 5.3,
+    "br": {
+      "arcade": 5.3,
+      "realistic": 5.3,
+      "simulator": 5.3
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/ussr_cruiser_krasnyi_krim.webp",
+    "releaseDate": "2018-12-18"
+  },
+  {
+    "id": "ussr_cruiser_maxim_gorky",
+    "name": "ussr_cruiser_maxim_gorky",
+    "localizedName": "马​克​西​姆·高​尔​基",
+    "nation": "ussr",
+    "rank": 5,
+    "battleRating": 5.7,
+    "br": {
+      "arcade": 5.7,
+      "realistic": 5.7,
+      "simulator": 5.7
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/ussr_cruiser_maxim_gorky.webp",
+    "releaseDate": "2020-08-25"
+  },
+  {
+    "id": "ussr_cruiser_mikhail_kutuzov",
+    "name": "ussr_cruiser_mikhail_kutuzov",
+    "localizedName": "米​哈​伊​尔·库​图​佐​夫",
+    "nation": "ussr",
+    "rank": 4,
+    "battleRating": 6.0,
+    "br": {
+      "arcade": 6.0,
+      "realistic": 6.0,
+      "simulator": 6.0
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/ussr_cruiser_mikhail_kutuzov.webp",
+    "releaseDate": "2022-09-14"
+  },
+  {
+    "id": "ussr_cruiser_omaha_class_murmansk",
+    "name": "ussr_cruiser_omaha_class_murmansk",
+    "localizedName": "摩​尔​曼​斯​克",
+    "nation": "ussr",
+    "rank": 3,
+    "battleRating": 5.0,
+    "br": {
+      "arcade": 5.0,
+      "realistic": 5.0,
+      "simulator": 5.0
+    },
+    "shipType": "cruiser",
+    "economicType": "premium",
+    "imageUrl": "ships/ussr_cruiser_omaha_class_murmansk.webp",
+    "releaseDate": "2024-10-23"
+  },
+  {
+    "id": "ussr_cruiser_shcherbakov",
+    "name": "ussr_cruiser_shcherbakov",
+    "localizedName": "谢​尔​巴​科​夫",
+    "nation": "ussr",
+    "rank": 5,
+    "battleRating": 6.0,
+    "br": {
+      "arcade": 6.0,
+      "realistic": 6.0,
+      "simulator": 6.0
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/ussr_cruiser_shcherbakov.webp",
+    "releaseDate": "2023-04-01"
+  },
+  {
+    "id": "ussr_cruiser_sverdlov",
+    "name": "ussr_cruiser_sverdlov",
+    "localizedName": "斯​维​尔​德​洛​夫",
+    "nation": "ussr",
+    "rank": 4,
+    "battleRating": 6.0,
+    "br": {
+      "arcade": 6.0,
+      "realistic": 6.0,
+      "simulator": 6.0
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/ussr_cruiser_sverdlov.webp",
+    "releaseDate": "2020-03-10"
+  },
+  {
+    "id": "ussr_cruiser_voroshilov",
+    "name": "ussr_cruiser_voroshilov",
+    "localizedName": "伏​罗​希​洛​夫",
+    "nation": "ussr",
+    "rank": 4,
+    "battleRating": 5.7,
+    "br": {
+      "arcade": 5.7,
+      "realistic": 5.7,
+      "simulator": 5.7
+    },
+    "shipType": "cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/ussr_cruiser_voroshilov.webp",
+    "releaseDate": "2021-05-12"
+  },
+  {
+    "id": "ussr_cruiser_zheleznyakov",
+    "name": "ussr_cruiser_zheleznyakov",
+    "localizedName": "热​列​茲​尼​亚​科​夫",
+    "nation": "ussr",
+    "rank": 4,
+    "battleRating": 6.0,
+    "br": {
+      "arcade": 6.0,
+      "realistic": 6.0,
+      "simulator": 6.0
+    },
+    "shipType": "cruiser",
+    "economicType": "premium",
+    "imageUrl": "ships/ussr_cruiser_zheleznyakov.webp",
+    "releaseDate": "2020-11-15"
+  },
+  {
+    "id": "ussr_destroyer_7_besposhchadny",
+    "name": "ussr_destroyer_7_besposhchadny",
+    "localizedName": "无​情",
+    "nation": "ussr",
+    "rank": 1,
+    "battleRating": 4.0,
+    "br": {
+      "arcade": 4.0,
+      "realistic": 4.0,
+      "simulator": 4.0
+    },
+    "shipType": "destroyer",
+    "economicType": "regular",
+    "imageUrl": "ships/ussr_destroyer_7_besposhchadny.webp",
+    "releaseDate": "2022-10-26"
+  },
+  {
+    "id": "ussr_destroyer_7_ryany",
+    "name": "ussr_destroyer_7_ryany",
+    "localizedName": "威​严",
+    "nation": "ussr",
+    "rank": 2,
+    "battleRating": 4.3,
+    "br": {
+      "arcade": 4.3,
+      "realistic": 4.3,
+      "simulator": 4.3
+    },
+    "shipType": "destroyer",
+    "economicType": "premium",
+    "imageUrl": "ships/ussr_destroyer_7_ryany.webp",
+    "releaseDate": "2022-12-20"
+  },
+  {
+    "id": "ussr_destroyer_7y",
+    "name": "ussr_destroyer_7y",
+    "localizedName": "灵​敏",
+    "nation": "ussr",
+    "rank": 2,
+    "battleRating": 4.7,
+    "br": {
+      "arcade": 4.7,
+      "realistic": 4.7,
+      "simulator": 4.7
+    },
+    "shipType": "destroyer",
+    "economicType": "regular",
+    "imageUrl": "ships/ussr_destroyer_7y.webp"
+  },
+  {
+    "id": "ussr_destroyer_7y_stroyny",
+    "name": "ussr_destroyer_7y_stroyny",
+    "localizedName": "整​齐",
+    "nation": "ussr",
+    "rank": 3,
+    "battleRating": 4.7,
+    "br": {
+      "arcade": 4.7,
+      "realistic": 4.7,
+      "simulator": 4.7
+    },
+    "shipType": "destroyer",
+    "economicType": "premium",
+    "imageUrl": "ships/ussr_destroyer_7y_stroyny.webp"
+  },
+  {
+    "id": "ussr_destroyer_frunze",
+    "name": "ussr_destroyer_frunze",
+    "localizedName": "伏​龙​芝",
+    "nation": "ussr",
+    "rank": 1,
+    "battleRating": 3.3,
+    "br": {
+      "arcade": 3.3,
+      "realistic": 3.3,
+      "simulator": 3.3
+    },
+    "shipType": "destroyer",
+    "economicType": "premium",
+    "imageUrl": "ships/ussr_destroyer_frunze.webp"
+  },
+  {
+    "id": "ussr_destroyer_kerch",
+    "name": "ussr_destroyer_kerch",
+    "localizedName": "刻​赤",
+    "nation": "ussr",
+    "rank": 1,
+    "battleRating": 3.3,
+    "br": {
+      "arcade": 3.3,
+      "realistic": 3.3,
+      "simulator": 3.3
+    },
+    "shipType": "destroyer",
+    "economicType": "premium",
+    "imageUrl": "ships/ussr_destroyer_kerch.webp",
+    "releaseDate": "2020-11-15"
+  },
+  {
+    "id": "ussr_destroyer_leningrad",
+    "name": "ussr_destroyer_leningrad",
+    "localizedName": "列​宁​格​勒",
+    "nation": "ussr",
+    "rank": 3,
+    "battleRating": 4.3,
+    "br": {
+      "arcade": 4.3,
+      "realistic": 4.3,
+      "simulator": 4.3
+    },
+    "shipType": "destroyer",
+    "economicType": "premium",
+    "imageUrl": "ships/ussr_destroyer_leningrad.webp",
+    "releaseDate": "2019-03-12"
+  },
+  {
+    "id": "ussr_destroyer_moskva",
+    "name": "ussr_destroyer_moskva",
+    "localizedName": "莫​斯​科",
+    "nation": "ussr",
+    "rank": 2,
+    "battleRating": 4.3,
+    "br": {
+      "arcade": 4.3,
+      "realistic": 4.3,
+      "simulator": 4.3
+    },
+    "shipType": "destroyer",
+    "economicType": "regular",
+    "imageUrl": "ships/ussr_destroyer_moskva.webp",
+    "releaseDate": "2018-12-18"
+  },
+  {
+    "id": "ussr_destroyer_pr20_tashkent",
+    "name": "ussr_destroyer_pr20_tashkent",
+    "localizedName": "塔​什​干",
+    "nation": "ussr",
+    "rank": 3,
+    "battleRating": 5.0,
+    "br": {
+      "arcade": 5.0,
+      "realistic": 5.0,
+      "simulator": 5.0
+    },
+    "shipType": "destroyer",
+    "economicType": "regular",
+    "imageUrl": "ships/ussr_destroyer_pr20_tashkent.webp",
+    "releaseDate": "2018-12-18"
+  },
+  {
+    "id": "ussr_destroyer_pr30_ognevoy",
+    "name": "ussr_destroyer_pr30_ognevoy",
+    "localizedName": "火​力",
+    "nation": "ussr",
+    "rank": 2,
+    "battleRating": 4.3,
+    "br": {
+      "arcade": 4.3,
+      "realistic": 4.3,
+      "simulator": 4.3
+    },
+    "shipType": "destroyer",
+    "economicType": "regular",
+    "imageUrl": "ships/ussr_destroyer_pr30_ognevoy.webp",
+    "releaseDate": "2019-03-12"
+  },
+  {
+    "id": "ussr_destroyer_pr30bis_bezuprechnyi",
+    "name": "ussr_destroyer_pr30bis_bezuprechnyi",
+    "localizedName": "完​美",
+    "nation": "ussr",
+    "rank": 2,
+    "battleRating": 4.3,
+    "br": {
+      "arcade": 4.3,
+      "realistic": 4.3,
+      "simulator": 4.3
+    },
+    "shipType": "destroyer",
+    "economicType": "regular",
+    "imageUrl": "ships/ussr_destroyer_pr30bis_bezuprechnyi.webp",
+    "releaseDate": "2021-06-02"
+  },
+  {
+    "id": "ussr_destroyer_pr30bis_smelyi",
+    "name": "ussr_destroyer_pr30bis_smelyi",
+    "localizedName": "大​胆",
+    "nation": "ussr",
+    "rank": 2,
+    "battleRating": 4.3,
+    "br": {
+      "arcade": 4.3,
+      "realistic": 4.3,
+      "simulator": 4.3
+    },
+    "shipType": "destroyer",
+    "economicType": "premium",
+    "imageUrl": "ships/ussr_destroyer_pr30bis_smelyi.webp",
+    "releaseDate": "2021-09-07"
+  },
+  {
+    "id": "ussr_destroyer_pr41_neustrashimy",
+    "name": "ussr_destroyer_pr41_neustrashimy",
+    "localizedName": "不​惧",
+    "nation": "ussr",
+    "rank": 3,
+    "battleRating": 5.3,
+    "br": {
+      "arcade": 5.3,
+      "realistic": 5.3,
+      "simulator": 5.3
+    },
+    "shipType": "destroyer",
+    "economicType": "premium",
+    "imageUrl": "ships/ussr_destroyer_pr41_neustrashimy.webp",
+    "releaseDate": "2020-03-10"
+  },
+  {
+    "id": "ussr_destroyer_pr45",
+    "name": "ussr_destroyer_pr45",
+    "localizedName": "实​验",
+    "nation": "ussr",
+    "rank": 1,
+    "battleRating": 3.7,
+    "br": {
+      "arcade": 3.7,
+      "realistic": 3.7,
+      "simulator": 3.7
+    },
+    "shipType": "destroyer",
+    "economicType": "regular",
+    "imageUrl": "ships/ussr_destroyer_pr45.webp",
+    "releaseDate": "2023-10-31"
+  },
+  {
+    "id": "ussr_destroyer_pr48k_erevan",
+    "name": "ussr_destroyer_pr48k_erevan",
+    "localizedName": "埃​里​温",
+    "nation": "ussr",
+    "rank": 3,
+    "battleRating": 5.0,
+    "br": {
+      "arcade": 5.0,
+      "realistic": 5.0,
+      "simulator": 5.0
+    },
+    "shipType": "destroyer",
+    "economicType": "regular",
+    "imageUrl": "ships/ussr_destroyer_pr48k_erevan.webp",
+    "releaseDate": "2025-11-11"
+  },
+  {
+    "id": "ussr_destroyer_pr56_blagorodny",
+    "name": "ussr_destroyer_pr56_blagorodny",
+    "localizedName": "优​雅",
+    "nation": "ussr",
+    "rank": 3,
+    "battleRating": 5.3,
+    "br": {
+      "arcade": 5.3,
+      "realistic": 5.3,
+      "simulator": 5.3
+    },
+    "shipType": "destroyer",
+    "economicType": "premium",
+    "imageUrl": "ships/ussr_destroyer_pr56_blagorodny.webp",
+    "releaseDate": "2022-09-14"
+  },
+  {
+    "id": "ussr_destroyer_pr56_bravy",
+    "name": "ussr_destroyer_pr56_bravy",
+    "localizedName": "威​武",
+    "nation": "ussr",
+    "rank": 4,
+    "battleRating": 5.3,
+    "br": {
+      "arcade": 5.3,
+      "realistic": 5.3,
+      "simulator": 5.3
+    },
+    "shipType": "destroyer",
+    "economicType": "regular",
+    "imageUrl": "ships/ussr_destroyer_pr56_bravy.webp",
+    "releaseDate": "2023-06-14"
+  },
+  {
+    "id": "ussr_destroyer_pr56_spokoinyy",
+    "name": "ussr_destroyer_pr56_spokoinyy",
+    "localizedName": "平​静",
+    "nation": "ussr",
+    "rank": 3,
+    "battleRating": 5.3,
+    "br": {
+      "arcade": 5.3,
+      "realistic": 5.3,
+      "simulator": 5.3
+    },
+    "shipType": "destroyer",
+    "economicType": "regular",
+    "imageUrl": "ships/ussr_destroyer_pr56_spokoinyy.webp",
+    "releaseDate": "2020-06-01"
+  },
+  {
+    "id": "ussr_destroyer_regele_ferdinand_class_letuchiy",
+    "name": "ussr_destroyer_regele_ferdinand_class_letuchiy",
+    "localizedName": "无​常",
+    "nation": "ussr",
+    "rank": 1,
+    "battleRating": 4.0,
+    "br": {
+      "arcade": 4.0,
+      "realistic": 4.0,
+      "simulator": 4.0
+    },
+    "shipType": "destroyer",
+    "economicType": "regular",
+    "imageUrl": "ships/ussr_destroyer_regele_ferdinand_class_letuchiy.webp",
+    "releaseDate": "2022-12-20"
+  },
+  {
+    "id": "ussr_mpk_122a",
+    "name": "ussr_mpk_122a",
+    "localizedName": "MPK Pr.122A",
+    "nation": "ussr",
+    "rank": 2,
+    "battleRating": 2.3,
+    "br": {
+      "arcade": 2.3,
+      "realistic": 2.3,
+      "simulator": 2.3
+    },
+    "shipType": "submarine_chaser",
+    "economicType": "regular",
+    "imageUrl": "ships/ussr_mpk_122a.webp"
+  },
+  {
+    "id": "ussr_mpk_122bis",
+    "name": "ussr_mpk_122bis",
+    "localizedName": "MPK Pr.122bis",
+    "nation": "ussr",
+    "rank": 2,
+    "battleRating": 2.3,
+    "br": {
+      "arcade": 2.3,
+      "realistic": 2.3,
+      "simulator": 2.3
+    },
+    "shipType": "submarine_chaser",
+    "economicType": "premium",
+    "imageUrl": "ships/ussr_mpk_122bis.webp",
+    "releaseDate": "2019-04-11"
+  },
+  {
+    "id": "ussr_mpk_163",
+    "name": "ussr_mpk_163",
+    "localizedName": "MPK-163",
+    "nation": "ussr",
+    "rank": 2,
+    "battleRating": 2.0,
+    "br": {
+      "arcade": 2.0,
+      "realistic": 2.0,
+      "simulator": 2.0
+    },
+    "shipType": "submarine_chaser",
+    "economicType": "regular",
+    "imageUrl": "ships/ussr_mpk_163.webp"
+  },
+  {
+    "id": "ussr_mpk_201k",
+    "name": "ussr_mpk_201k",
+    "localizedName": "MPK Pr.201K",
+    "nation": "ussr",
+    "rank": 4,
+    "battleRating": 3.7,
+    "br": {
+      "arcade": 3.7,
+      "realistic": 3.7,
+      "simulator": 3.7
+    },
+    "shipType": "submarine_chaser",
+    "economicType": "regular",
+    "imageUrl": "ships/ussr_mpk_201k.webp",
+    "releaseDate": "2021-12-17"
+  },
+  {
+    "id": "ussr_mpk_201m",
+    "name": "ussr_mpk_201m",
+    "localizedName": "MPK Pr.201M",
+    "nation": "ussr",
+    "rank": 4,
+    "battleRating": 3.7,
+    "br": {
+      "arcade": 3.7,
+      "realistic": 3.7,
+      "simulator": 3.7
+    },
+    "shipType": "submarine_chaser",
+    "economicType": "regular",
+    "imageUrl": "ships/ussr_mpk_201m.webp",
+    "releaseDate": "2021-10-26"
+  },
+  {
+    "id": "ussr_mpk_204",
+    "name": "ussr_mpk_204",
+    "localizedName": "MPK Pr.204",
+    "nation": "ussr",
+    "rank": 4,
+    "battleRating": 3.7,
+    "br": {
+      "arcade": 3.7,
+      "realistic": 3.7,
+      "simulator": 3.7
+    },
+    "shipType": "submarine_chaser",
+    "economicType": "regular",
+    "imageUrl": "ships/ussr_mpk_204.webp",
+    "releaseDate": "2023-03-07"
+  },
+  {
+    "id": "ussr_mpk_pr1331m",
+    "name": "ussr_mpk_pr1331m",
+    "localizedName": "MPK Pr.1331M",
+    "nation": "ussr",
+    "rank": 5,
+    "battleRating": 4.0,
+    "br": {
+      "arcade": 4.0,
+      "realistic": 4.0,
+      "simulator": 4.0
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/ussr_mpk_pr1331m.webp",
+    "releaseDate": "2022-10-26"
+  },
+  {
+    "id": "ussr_mpk_pr_1124",
+    "name": "ussr_mpk_pr_1124",
+    "localizedName": "MPK-33",
+    "nation": "ussr",
+    "rank": 5,
+    "battleRating": 4.7,
+    "br": {
+      "arcade": 4.7,
+      "realistic": 4.7,
+      "simulator": 4.7
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/ussr_mpk_pr_1124.webp",
+    "releaseDate": "2025-09-23"
+  },
+  {
+    "id": "ussr_skr_groza_1943",
+    "name": "ussr_skr_groza_1943",
+    "localizedName": "雷​暴",
+    "nation": "ussr",
+    "rank": 4,
+    "battleRating": 3.0,
+    "br": {
+      "arcade": 3.0,
+      "realistic": 3.0,
+      "simulator": 3.0
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/ussr_skr_groza_1943.webp",
+    "releaseDate": "2019-05-28"
+  },
+  {
+    "id": "ussr_skr_pr159",
+    "name": "ussr_skr_pr159",
+    "localizedName": "SKR-1",
+    "nation": "ussr",
+    "rank": 5,
+    "battleRating": 4.3,
+    "br": {
+      "arcade": 4.3,
+      "realistic": 4.3,
+      "simulator": 4.3
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/ussr_skr_pr159.webp"
+  },
+  {
+    "id": "ussr_skr_pr35",
+    "name": "ussr_skr_pr35",
+    "localizedName": "SKR-7",
+    "nation": "ussr",
+    "rank": 5,
+    "battleRating": 4.3,
+    "br": {
+      "arcade": 4.3,
+      "realistic": 4.3,
+      "simulator": 4.3
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "clan",
+    "imageUrl": "ships/ussr_skr_pr35.webp",
+    "releaseDate": "2019-03-26"
+  },
+  {
+    "id": "ussr_skr_pr50_jenot",
+    "name": "ussr_skr_pr50_jenot",
+    "localizedName": "浣​熊",
+    "nation": "ussr",
+    "rank": 5,
+    "battleRating": 4.0,
+    "br": {
+      "arcade": 4.0,
+      "realistic": 4.0,
+      "simulator": 4.0
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/ussr_skr_pr50_jenot.webp",
+    "releaseDate": "2020-09-08"
+  },
+  {
+    "id": "ussr_skr_pr50plo_rosomacha",
+    "name": "ussr_skr_pr50plo_rosomacha",
+    "localizedName": "狼​獾",
+    "nation": "ussr",
+    "rank": 4,
+    "battleRating": 4.0,
+    "br": {
+      "arcade": 4.0,
+      "realistic": 4.0,
+      "simulator": 4.0
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "premium",
+    "imageUrl": "ships/ussr_skr_pr50plo_rosomacha.webp",
+    "releaseDate": "2021-03-10"
+  }
+]

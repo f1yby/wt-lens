@@ -91,12 +91,18 @@ def fix_category(index_file: str, image_subdir: str, source_dir: Path, url_prefi
         needs_image = not webp_path.exists() or webp_path.stat().st_size == 0
 
         if needs_image:
-            # Try primary source
+            # Try primary source (case-insensitive: datamine PNGs are lowercase)
             src = source_dir / f"{vid}.png"
+            if not src.exists():
+                src = source_dir / f"{vid.lower()}.png"
             if not src.exists():
                 # Try fallbacks
                 for fb in fallbacks:
                     candidate = fb / f"{vid}.png"
+                    if candidate.exists():
+                        src = candidate
+                        break
+                    candidate = fb / f"{vid.lower()}.png"
                     if candidate.exists():
                         src = candidate
                         break

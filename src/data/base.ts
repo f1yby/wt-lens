@@ -28,6 +28,7 @@ export interface StatSharkEntry {
 interface StatsMeta {
   months: string[];       // Sorted month IDs (earliest → latest)
   latestMonth: string;    // The latest available month ID
+  vehicleIds: string[];   // All vehicle IDs that have stats data
 }
 
 // ============================================================================
@@ -72,49 +73,7 @@ export async function loadStatsMeta(): Promise<StatsMeta> {
 }
 
 // ============================================================================
-// Stats Index Loading (latest month summary, for default list rendering)
-// ============================================================================
-
-let _statsIndexData: StatSharkEntry[] | null = null;
-let _statsIndexPromise: Promise<StatSharkEntry[]> | null = null;
-
-/**
- * Load stats-index.json (latest month stats for all vehicles).
- * Returns data in StatSharkEntry format for compatibility with existing merge logic.
- */
-export async function loadStatsIndex(): Promise<StatSharkEntry[]> {
-  if (_statsIndexData) return _statsIndexData;
-  if (_statsIndexPromise) return _statsIndexPromise;
-
-  // Ensure meta is loaded first (for month service)
-  const metaPromise = loadStatsMeta();
-
-  _statsIndexPromise = (async () => {
-    const meta = await metaPromise;
-
-    const response = await fetch('/wt-lens/data/stats-index.json');
-    const rawData: Array<Record<string, unknown>> = await response.json();
-
-    // Convert stats-index.json (snake_case, no month) → StatSharkEntry format
-    _statsIndexData = rawData.map(entry => ({
-      id: entry.id as string,
-      name: entry.id as string,
-      mode: entry.mode as StatSharkEntry['mode'],
-      battles: entry.battles as number,
-      win_rate: entry.win_rate as number,
-      avg_kills_per_spawn: entry.avg_kills_per_spawn as number,
-      exp_per_spawn: entry.exp_per_spawn as number | undefined,
-      month: meta.latestMonth, // Tag with latest month for compatibility
-    }));
-
-    return _statsIndexData!;
-  })();
-
-  return _statsIndexPromise;
-}
-
-// ============================================================================
-// On-demand Stats Loading (for month range aggregation)
+// On-demand Stats Loading (from stats/{id}.json files)
 // ============================================================================
 
 /** Cache: vehicleId → StatsHistoryEntry[] (all months) */
@@ -162,31 +121,15 @@ async function loadStatsHistoryBatch(vehicleIds: string[]): Promise<StatSharkEnt
 }
 
 /**
- * Load stats data appropriate for the given month range.
- * - Default / single latest month → uses stats-index.json (fast, already loaded)
- * - Multi-month range → fetches stats/{id}.json for all vehicles that have index data
+ * Load stats data for the given month range.
+ * Always loads from stats/{id}.json for all vehicles listed in stats-meta.
  */
-export async function loadStatsForRange(range?: StatsMonthRange): Promise<StatSharkEntry[]> {
+export async function loadStatsForRange(_range?: StatsMonthRange): Promise<StatSharkEntry[]> {
   // Always ensure meta is loaded first (this initializes statsMonthService)
   const meta = await loadStatsMeta();
 
-  // Resolve range AFTER meta is loaded — the caller may have passed empty strings
-  // when the month service wasn't ready yet during component initialization.
-  const targetRange = (range && range.startMonth && range.endMonth)
-    ? range
-    : getDefaultStatsMonthRange();
-
-  // If single month and it's the latest → use stats-index (fast path)
-  if (isSingleMonthRange(targetRange) && targetRange.startMonth === meta.latestMonth) {
-    return loadStatsIndex();
-  }
-
-  // Need historical data: load from stats/{id}.json for ALL vehicles
-  // First get the vehicle IDs from stats-index (they represent all vehicles with stats)
-  const indexData = await loadStatsIndex();
-  const vehicleIds = [...new Set(indexData.map(e => e.id))];
-
-  return loadStatsHistoryBatch(vehicleIds);
+  // Load from stats/{id}.json for ALL vehicles listed in meta
+  return loadStatsHistoryBatch(meta.vehicleIds);
 }
 
 // ============================================================================
@@ -196,8 +139,7 @@ export async function loadStatsForRange(range?: StatsMonthRange): Promise<StatSh
 /**
  * @deprecated Use loadStatsForRange() instead for new code.
  * 
- * Load shared stats data. For backward compatibility, this loads the stats-index
- * (latest month) by default. Pass a range to load historical data.
+ * Load shared stats data. Delegates to loadStatsForRange().
  */
 export async function loadSharedStatsData(range?: StatsMonthRange): Promise<StatSharkEntry[]> {
   return loadStatsForRange(range);

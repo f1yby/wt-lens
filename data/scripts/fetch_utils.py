@@ -619,8 +619,35 @@ def get_vehicle_br_and_type(vehicle_id: str) -> tuple[dict[str, float], int, str
 
 
 # ============================================================
-# Image Conversion
+# Image Lookup & Conversion
 # ============================================================
+
+def find_source_image(images_dir: Path, vehicle_id: str) -> Path | None:
+    """Find source PNG in images_dir, case-insensitive.
+
+    Datamine PNGs are lowercase (e.g. germ_pzkpfw_ii_ausf_c_td.png) while
+    vehicle IDs may contain uppercase (germ_pzkpfw_II_ausf_C_td).  On Linux
+    (case-sensitive FS), a naive Path(f"{vehicle_id}.png").exists() fails.
+
+    Try exact match first (fast path for macOS / already-lowercase IDs),
+    then fall back to a case-insensitive scan.
+    """
+    exact = images_dir / f"{vehicle_id}.png"
+    if exact.exists():
+        return exact
+
+    lower = images_dir / f"{vehicle_id.lower()}.png"
+    if lower.exists():
+        return lower
+
+    # Expensive fallback: scan directory (should rarely be needed)
+    target = f"{vehicle_id.lower()}.png"
+    for f in images_dir.iterdir():
+        if f.name.lower() == target:
+            return f
+
+    return None
+
 
 def convert_png_to_webp(source_path: Path, dest_path: Path, quality: int = 85) -> bool:
     """Convert a PNG image to WebP format using Pillow.
@@ -747,7 +774,7 @@ def _has_no_image_and_release_date(vid: str, images_path: Path) -> bool:
     Such vehicles should be filtered out as they are likely test/unreleased content
     without proper game assets.
     """
-    image_exists = (images_path / f"{vid}.png").exists()
+    image_exists = find_source_image(images_path, vid) is not None
     
     unittags = load_unittags_data()
     tag = unittags.get(vid, {})

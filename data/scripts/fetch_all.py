@@ -49,6 +49,7 @@ from fetch_utils import (
     _is_event_or_tutorial,
     _is_ghost_vehicle,
     _has_no_image_and_release_date,
+    find_source_image,
     # Paths
     PUBLIC_DATA_PATH,
     TANKMODELS_PATH,
@@ -1068,9 +1069,9 @@ def load_aircraft_ids() -> list[str]:
 
 def copy_aircraft_image(vehicle_id: str) -> str | None:
     """Copy aircraft image from datamine to public directory, converting to WebP."""
-    source_path = AIRCRAFT_IMAGES_PATH / f"{vehicle_id}.png"
+    source_path = find_source_image(AIRCRAFT_IMAGES_PATH, vehicle_id)
     
-    if not source_path.exists():
+    if not source_path:
         return None
     
     try:
@@ -1323,7 +1324,7 @@ def fetch_ship_data(vehicle_id: str, copy_images: bool = True) -> dict[str, Any]
     image_url = None
     if copy_images:
         image_url = copy_ship_image(vehicle_id)
-    elif (SHIP_IMAGES_PATH / f"{vehicle_id}.png").exists():
+    elif find_source_image(SHIP_IMAGES_PATH, vehicle_id):
         image_url = f"ships/{vehicle_id}.webp"
     
     # Get release date from unittags.blkx
