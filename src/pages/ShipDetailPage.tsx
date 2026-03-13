@@ -85,6 +85,7 @@ function generateStatsComparisonData(
   const bins = filtered.map((s) => {
     const brDiff = parseFloat((s.battleRating - targetBR).toFixed(2));
     const isCurrent = s.id === shipId;
+    const isSameNation = s.nation === ship.nation;
 
     return {
       range: s.localizedName,
@@ -94,6 +95,7 @@ function generateStatsComparisonData(
       vehicleId: s.id,
       brDiff,
       dotColor: isCurrent ? '#f97316' : getBRGradientColor(brDiff, lowerSpan, upperSpan),
+      isSameNation,
     };
   });
 

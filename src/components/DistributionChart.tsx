@@ -71,6 +71,7 @@ interface ScatterPoint {
   isCurrent?: boolean;
   vehicleId?: string;
   dotColor?: string;
+  isSameNation?: boolean;
 }
 
 /** Shape props passed by recharts Scatter component */
@@ -98,6 +99,7 @@ export default function DistributionChart({ data, title, unit, brInfo, navPrefix
     isCurrent: bin.isCurrent,
     vehicleId: bin.vehicleId,
     dotColor: (bin as { dotColor?: string }).dotColor,
+    isSameNation: bin.isSameNation,
   })), [data.bins]);
 
   // Separate current vehicle from others
@@ -232,6 +234,7 @@ export default function DistributionChart({ data, title, unit, brInfo, navPrefix
               tickLine={{ stroke: '#333' }}
               label={{ value: unit, position: 'bottom', fill: '#737373', fontSize: 10 }}
               allowDuplicatedCategory={false}
+              domain={['dataMin', 'dataMax']}
             />
             <YAxis
               yAxisId="left"
@@ -292,12 +295,15 @@ export default function DistributionChart({ data, title, unit, brInfo, navPrefix
                 const { cx, cy, payload } = props;
                 if (cx == null || cy == null) return null;
                 const dotColor = payload?.dotColor || color;
+                const isHollow = payload?.isSameNation;
                 return (
                   <circle
                     cx={cx}
                     cy={cy}
                     r={4}
-                    fill={dotColor}
+                    fill={isHollow ? 'transparent' : dotColor}
+                    stroke={dotColor}
+                    strokeWidth={isHollow ? 2 : 0}
                     style={{ cursor: 'pointer' }}
                   />
                 );

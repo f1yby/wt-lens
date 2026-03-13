@@ -457,6 +457,7 @@ export interface DistributionData {
     battles?: number;
     isCurrent?: boolean;
     vehicleId?: string;
+    isSameNation?: boolean;
   }[];
   currentVehicleBin: number;
   currentVehicleValue: number;
