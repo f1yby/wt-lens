@@ -1,0 +1,29 @@
+{
+  "id": "it_p493_freccia",
+  "economy": {
+    "researchCost": 89000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 4880,
+    "crewTraining": 10000,
+    "expertTraining": 490000,
+    "aceTrainingGE": 1100,
+    "aceTrainingRP": 1050000,
+    "repairCost": {
+      "arcade": [
+        2224,
+        2224
+      ],
+      "realistic": [
+        3235,
+        3235
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.89,
+      "realistic": 3.59,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.72,
+    "freeRepairs": 30
+  }
+}

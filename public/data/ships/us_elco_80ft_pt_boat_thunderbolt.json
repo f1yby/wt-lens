@@ -1,0 +1,29 @@
+{
+  "id": "us_elco_80ft_pt_boat_thunderbolt",
+  "economy": {
+    "researchCost": 36000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 1600,
+    "crewTraining": 10000,
+    "expertTraining": 180000,
+    "aceTrainingGE": 590,
+    "aceTrainingRP": 710000,
+    "repairCost": {
+      "arcade": [
+        1101,
+        1101
+      ],
+      "realistic": [
+        1622,
+        1622
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.99,
+      "realistic": 3.5,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.48,
+    "freeRepairs": 30
+  }
+}

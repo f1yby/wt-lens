@@ -1,0 +1,27 @@
+{
+  "id": "uk_dark_class",
+  "economy": {
+    "researchCost": 14000,
+    "purchaseCost": 32000,
+    "crewTraining": 9200,
+    "expertTraining": 32000,
+    "aceTrainingGE": 320,
+    "aceTrainingRP": 250000,
+    "repairCost": {
+      "arcade": [
+        911,
+        1149
+      ],
+      "realistic": [
+        1317,
+        1661
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.8,
+      "realistic": 1.01,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.3
+  }
+}

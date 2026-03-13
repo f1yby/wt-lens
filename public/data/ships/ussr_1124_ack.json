@@ -1,0 +1,27 @@
+{
+  "id": "ussr_1124_ack",
+  "economy": {
+    "researchCost": 18000,
+    "purchaseCost": 47000,
+    "crewTraining": 13000,
+    "expertTraining": 47000,
+    "aceTrainingGE": 400,
+    "aceTrainingRP": 280000,
+    "repairCost": {
+      "arcade": [
+        1015,
+        1276
+      ],
+      "realistic": [
+        1363,
+        1712
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.81,
+      "realistic": 1.12,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.36
+  }
+}

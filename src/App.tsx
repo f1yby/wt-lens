@@ -13,6 +13,7 @@ const AircraftPage = lazy(() => import('./pages/AircraftPage'));
 const AircraftDetailPage = lazy(() => import('./pages/AircraftDetailPage'));
 const HelicopterPage = lazy(() => import('./pages/HelicopterPage'));
 const ShipPage = lazy(() => import('./pages/ShipPage'));
+const ShipDetailPage = lazy(() => import('./pages/ShipDetailPage'));
 
 // 加载状态组件
 function PageLoader() {
@@ -80,6 +81,7 @@ function App() {
             <Route path="/helicopter" element={<HelicopterPage />} />
             <Route path="/helicopter/:id" element={<AircraftDetailPage />} />
             <Route path="/ship" element={<ShipPage />} />
+            <Route path="/ship/:id" element={<ShipDetailPage />} />
           </Routes>
         </Suspense>
       </BrowserRouter>

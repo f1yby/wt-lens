@@ -1,4 +1,4 @@
-import { useState, useMemo, useEffect } from 'react';
+import { useState, useMemo, useEffect, useCallback } from 'react';
 import ListPageLayout from '../components/ListPageLayout';
 import type { TypeOption } from '../components/VehicleFilter';
 import ShipTechTree from '../components/ShipTechTree';
@@ -7,6 +7,7 @@ import type { Nation, ShipType, ShipVehicle } from '../types';
 import { BATTLE_RATINGS } from '../types';
 import { useGameMode } from '../hooks/useGameMode';
 import { useStatsMonthRange } from '../hooks/useStatsMonth';
+import { useRangeLoader } from '../hooks/useRangeLoader';
 
 const SHIP_TYPES: TypeOption<ShipType>[] = [
   { value: 'all', label: '全部' },
@@ -19,8 +20,6 @@ const SHIP_TYPES: TypeOption<ShipType>[] = [
 ];
 
 export default function ShipPage() {
-  const [ships, setShips] = useState<ShipVehicle[]>([]);
-  const [loading, setLoading] = useState(true);
   const [selectedNations, setSelectedNations] = useState<Nation[]>([]);
   const [brRange, setBrRange] = useState<[number, number]>([BATTLE_RATINGS[0], BATTLE_RATINGS[BATTLE_RATINGS.length - 1]]);
   const [selectedType, setSelectedType] = useState<ShipType | 'all'>('all');
@@ -30,14 +29,9 @@ export default function ShipPage() {
   const { gameMode, handleGameModeChange } = useGameMode();
   const { statsMonthRange, handleStatsMonthRangeChange } = useStatsMonthRange();
 
-  // Reload data when month range changes
-  useEffect(() => {
-    setLoading(true);
-    loadShips(statsMonthRange).then(data => {
-      setShips(data);
-      setLoading(false);
-    });
-  }, [statsMonthRange]);
+  const loader = useCallback(loadShips, []);
+  const { data, loading } = useRangeLoader<ShipVehicle[]>(loader, statsMonthRange);
+  const ships = data ?? [];
 
   // 计算舰船数据中的实际最大 BR
   const availableBRs = useMemo(() => {

@@ -1,0 +1,29 @@
+{
+  "id": "jp_karotei_type4",
+  "economy": {
+    "researchCost": 9200,
+    "purchaseCost": 0,
+    "purchaseCostGold": 850,
+    "crewTraining": 3400,
+    "expertTraining": 23000,
+    "aceTrainingGE": 180,
+    "aceTrainingRP": 380000,
+    "repairCost": {
+      "arcade": [
+        462,
+        462
+      ],
+      "realistic": [
+        936,
+        936
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.14,
+      "realistic": 1.52,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.18,
+    "freeRepairs": 30
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "uk_dark_class_mtb",
+  "economy": {
+    "researchCost": 26000,
+    "purchaseCost": 76000,
+    "crewTraining": 22000,
+    "expertTraining": 76000,
+    "aceTrainingGE": 500,
+    "aceTrainingRP": 320000,
+    "repairCost": {
+      "arcade": [
+        1065,
+        1328
+      ],
+      "realistic": [
+        1457,
+        1816
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.91,
+      "realistic": 1.43,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.42
+  }
+}

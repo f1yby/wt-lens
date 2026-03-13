@@ -1,0 +1,29 @@
+{
+  "id": "uk_fairmile_d_5001_5029",
+  "economy": {
+    "researchCost": 18000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 1300,
+    "crewTraining": 10000,
+    "expertTraining": 67000,
+    "aceTrainingGE": 400,
+    "aceTrainingRP": 570000,
+    "repairCost": {
+      "arcade": [
+        1859,
+        1859
+      ],
+      "realistic": [
+        1945,
+        1945
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.16,
+      "realistic": 3.29,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.36,
+    "freeRepairs": 30
+  }
+}

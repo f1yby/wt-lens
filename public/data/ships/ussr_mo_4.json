@@ -1,0 +1,27 @@
+{
+  "id": "ussr_mo_4",
+  "economy": {
+    "researchCost": 2900,
+    "purchaseCost": 700,
+    "crewTraining": 200,
+    "expertTraining": 1000,
+    "aceTrainingGE": 20,
+    "aceTrainingRP": 96000,
+    "repairCost": {
+      "arcade": [
+        97,
+        123
+      ],
+      "realistic": [
+        153,
+        193
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.15,
+      "realistic": 0.18,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.0
+  }
+}

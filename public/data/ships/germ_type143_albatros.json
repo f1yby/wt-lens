@@ -1,0 +1,27 @@
+{
+  "id": "germ_type143_albatros",
+  "economy": {
+    "researchCost": 220000,
+    "purchaseCost": 640000,
+    "crewTraining": 185000,
+    "expertTraining": 640000,
+    "aceTrainingGE": 1400,
+    "aceTrainingRP": 620000,
+    "repairCost": {
+      "arcade": [
+        4043,
+        4918
+      ],
+      "realistic": [
+        5035,
+        6126
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.27,
+      "realistic": 2.08,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.84
+  }
+}

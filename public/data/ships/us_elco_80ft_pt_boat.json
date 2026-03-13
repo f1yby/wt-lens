@@ -1,0 +1,27 @@
+{
+  "id": "us_elco_80ft_pt_boat",
+  "economy": {
+    "researchCost": 9200,
+    "purchaseCost": 16000,
+    "crewTraining": 4500,
+    "expertTraining": 16000,
+    "aceTrainingGE": 180,
+    "aceTrainingRP": 190000,
+    "repairCost": {
+      "arcade": [
+        469,
+        586
+      ],
+      "realistic": [
+        691,
+        862
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.5,
+      "realistic": 0.67,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.18
+  }
+}

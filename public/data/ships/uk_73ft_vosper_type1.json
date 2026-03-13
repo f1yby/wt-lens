@@ -1,0 +1,27 @@
+{
+  "id": "uk_73ft_vosper_type1",
+  "economy": {
+    "researchCost": 7900,
+    "purchaseCost": 10000,
+    "crewTraining": 3000,
+    "expertTraining": 10000,
+    "aceTrainingGE": 125,
+    "aceTrainingRP": 160000,
+    "repairCost": {
+      "arcade": [
+        361,
+        452
+      ],
+      "realistic": [
+        507,
+        634
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.35,
+      "realistic": 0.51,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.12
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "id": "uk_sgb_309",
+  "economy": {
+    "researchCost": 36000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 1600,
+    "crewTraining": 10000,
+    "expertTraining": 180000,
+    "aceTrainingGE": 590,
+    "aceTrainingRP": 710000,
+    "repairCost": {
+      "arcade": [
+        865,
+        865
+      ],
+      "realistic": [
+        1062,
+        1062
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.8,
+      "realistic": 2.73,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.48,
+    "freeRepairs": 30
+  }
+}

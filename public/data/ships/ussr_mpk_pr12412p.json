@@ -1,0 +1,29 @@
+{
+  "id": "ussr_mpk_pr12412p",
+  "economy": {
+    "researchCost": 120000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 6090,
+    "crewTraining": 10000,
+    "expertTraining": 580000,
+    "aceTrainingGE": 1200,
+    "aceTrainingRP": 1140000,
+    "repairCost": {
+      "arcade": [
+        2717,
+        2717
+      ],
+      "realistic": [
+        3364,
+        3364
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.15,
+      "realistic": 4.19,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.78,
+    "freeRepairs": 30
+  }
+}

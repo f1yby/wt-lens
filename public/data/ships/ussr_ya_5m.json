@@ -1,0 +1,29 @@
+{
+  "id": "ussr_ya_5m",
+  "economy": {
+    "researchCost": 4000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 400,
+    "crewTraining": 450,
+    "expertTraining": 3000,
+    "aceTrainingGE": 45,
+    "aceTrainingRP": 220000,
+    "repairCost": {
+      "arcade": [
+        131,
+        131
+      ],
+      "realistic": [
+        282,
+        282
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.44,
+      "realistic": 0.56,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.0,
+    "freeRepairs": 30
+  }
+}

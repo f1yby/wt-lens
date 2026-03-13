@@ -1,0 +1,27 @@
+{
+  "id": "ussr_d3_tk126",
+  "economy": {
+    "researchCost": 2900,
+    "purchaseCost": 700,
+    "crewTraining": 200,
+    "expertTraining": 1000,
+    "aceTrainingGE": 20,
+    "aceTrainingRP": 96000,
+    "repairCost": {
+      "arcade": [
+        84,
+        106
+      ],
+      "realistic": [
+        127,
+        159
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.13,
+      "realistic": 0.17,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.0
+  }
+}

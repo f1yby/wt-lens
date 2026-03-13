@@ -1,0 +1,29 @@
+{
+  "id": "us_lcm_zippo",
+  "economy": {
+    "researchCost": 26000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 1450,
+    "crewTraining": 10000,
+    "expertTraining": 115000,
+    "aceTrainingGE": 500,
+    "aceTrainingRP": 640000,
+    "repairCost": {
+      "arcade": [
+        1547,
+        1547
+      ],
+      "realistic": [
+        3018,
+        3018
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.22,
+      "realistic": 3.5,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.42,
+    "freeRepairs": 30
+  }
+}

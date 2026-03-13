@@ -1,0 +1,29 @@
+{
+  "id": "uk_gay_class_archer",
+  "economy": {
+    "researchCost": 18000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 1300,
+    "crewTraining": 10000,
+    "expertTraining": 67000,
+    "aceTrainingGE": 400,
+    "aceTrainingRP": 570000,
+    "repairCost": {
+      "arcade": [
+        583,
+        583
+      ],
+      "realistic": [
+        807,
+        807
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.61,
+      "realistic": 2.53,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.36,
+    "freeRepairs": 30
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "ussr_pr_1204_late",
+  "economy": {
+    "researchCost": 36000,
+    "purchaseCost": 115000,
+    "crewTraining": 33000,
+    "expertTraining": 115000,
+    "aceTrainingGE": 590,
+    "aceTrainingRP": 360000,
+    "repairCost": {
+      "arcade": [
+        1278,
+        1606
+      ],
+      "realistic": [
+        1695,
+        2129
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.93,
+      "realistic": 1.4,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.48
+  }
+}

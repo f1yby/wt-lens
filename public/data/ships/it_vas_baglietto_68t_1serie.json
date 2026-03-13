@@ -1,0 +1,27 @@
+{
+  "id": "it_vas_baglietto_68t_1serie",
+  "economy": {
+    "researchCost": 4000,
+    "purchaseCost": 2100,
+    "crewTraining": 600,
+    "expertTraining": 2100,
+    "aceTrainingGE": 45,
+    "aceTrainingRP": 110000,
+    "repairCost": {
+      "arcade": [
+        166,
+        204
+      ],
+      "realistic": [
+        254,
+        312
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.2,
+      "realistic": 0.26,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.0
+  }
+}

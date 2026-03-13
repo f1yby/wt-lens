@@ -1,0 +1,27 @@
+{
+  "id": "uk_71ft_mtb460",
+  "economy": {
+    "researchCost": 18000,
+    "purchaseCost": 47000,
+    "crewTraining": 13000,
+    "expertTraining": 47000,
+    "aceTrainingGE": 400,
+    "aceTrainingRP": 280000,
+    "repairCost": {
+      "arcade": [
+        906,
+        1153
+      ],
+      "realistic": [
+        1241,
+        1579
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.8,
+      "realistic": 1.26,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.36
+  }
+}

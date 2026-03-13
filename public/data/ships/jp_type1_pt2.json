@@ -1,0 +1,27 @@
+{
+  "id": "jp_type1_pt2",
+  "economy": {
+    "researchCost": 14000,
+    "purchaseCost": 32000,
+    "crewTraining": 9200,
+    "expertTraining": 32000,
+    "aceTrainingGE": 320,
+    "aceTrainingRP": 250000,
+    "repairCost": {
+      "arcade": [
+        804,
+        997
+      ],
+      "realistic": [
+        1124,
+        1395
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.72,
+      "realistic": 1.05,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.3
+  }
+}

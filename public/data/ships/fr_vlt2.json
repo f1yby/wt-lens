@@ -1,0 +1,29 @@
+{
+  "id": "fr_vlt2",
+  "economy": {
+    "researchCost": 89000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 4880,
+    "crewTraining": 10000,
+    "expertTraining": 490000,
+    "aceTrainingGE": 1100,
+    "aceTrainingRP": 1050000,
+    "repairCost": {
+      "arcade": [
+        2166,
+        2166
+      ],
+      "realistic": [
+        2681,
+        2681
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.29,
+      "realistic": 4.17,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.72,
+    "freeRepairs": 30
+  }
+}

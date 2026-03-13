@@ -1,0 +1,29 @@
+{
+  "id": "germ_vs8_hydrofoil",
+  "economy": {
+    "researchCost": 36000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 1600,
+    "crewTraining": 10000,
+    "expertTraining": 180000,
+    "aceTrainingGE": 590,
+    "aceTrainingRP": 710000,
+    "repairCost": {
+      "arcade": [
+        988,
+        988
+      ],
+      "realistic": [
+        2078,
+        2078
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.97,
+      "realistic": 3.3,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.48,
+    "freeRepairs": 30
+  }
+}

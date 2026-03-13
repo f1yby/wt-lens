@@ -1,0 +1,27 @@
+{
+  "id": "it_alano_9851",
+  "economy": {
+    "researchCost": 220000,
+    "purchaseCost": 640000,
+    "crewTraining": 185000,
+    "expertTraining": 640000,
+    "aceTrainingGE": 1400,
+    "aceTrainingRP": 620000,
+    "repairCost": {
+      "arcade": [
+        3954,
+        4918
+      ],
+      "realistic": [
+        4925,
+        6126
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.27,
+      "realistic": 2.08,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.84
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "id": "uk_71ft_mgb",
+  "economy": {
+    "researchCost": 11000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 1000,
+    "crewTraining": 4800,
+    "expertTraining": 32000,
+    "aceTrainingGE": 250,
+    "aceTrainingRP": 440000,
+    "repairCost": {
+      "arcade": [
+        465,
+        465
+      ],
+      "realistic": [
+        683,
+        683
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.33,
+      "realistic": 1.69,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.24,
+    "freeRepairs": 30
+  }
+}

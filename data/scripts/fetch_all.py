@@ -763,18 +763,17 @@ def parse_tankmodel_data(data: TankModelData) -> VehiclePerformance | None:
 
 
 def load_ground_vehicle_ids() -> list[str]:
-    """Load ground vehicle IDs from wpcost.blkx + tankmodels directory."""
-    wpcost = load_wpcost_data()
-    if not wpcost:
-        print("Warning: wpcost data is empty, cannot enumerate vehicles")
+    """Load ground vehicle IDs from unittags.blkx (type='tank') + tankmodels directory."""
+    unittags = load_unittags_data()
+    if not unittags:
+        print("Warning: unittags data is empty, cannot enumerate vehicles")
         return []
 
     vehicle_ids = []
-    for vid, vdata in wpcost.items():
+    for vid, vdata in unittags.items():
         if not isinstance(vdata, dict):
             continue
-        unit_class = vdata.get('unitClass', '')
-        if unit_class not in GROUND_UNIT_CLASSES:
+        if vdata.get('type') != 'tank':
             continue
         if _is_event_or_tutorial(vid):
             continue
@@ -880,14 +879,14 @@ def fetch_vehicle_performance(vehicle_id: str, copy_images: bool = True) -> Vehi
 
 
 def fetch_all_ground_vehicles(max_vehicles: int | None = None, copy_images: bool = True) -> list[VehicleData]:
-    """Fetch performance data for all ground vehicles from wpcost + tankmodels"""
+    """Fetch performance data for all ground vehicles from unittags + tankmodels"""
     ground_vehicle_ids = load_ground_vehicle_ids()
 
     if not ground_vehicle_ids:
-        print("No ground vehicles found in wpcost + tankmodels")
+        print("No ground vehicles found in unittags + tankmodels")
         return []
 
-    print(f"Processing {len(ground_vehicle_ids)} ground vehicles from wpcost...")
+    print(f"Processing {len(ground_vehicle_ids)} ground vehicles from unittags...")
     if copy_images:
         print(f"Images will be copied to: {PUBLIC_VEHICLES_PATH}")
         PUBLIC_VEHICLES_PATH.mkdir(parents=True, exist_ok=True)
@@ -1047,21 +1046,22 @@ def vehicle_data_to_dict(v: VehicleData) -> dict[str, Any]:
 # ============================================================
 
 def load_aircraft_ids() -> list[str]:
-    """Load aircraft vehicle IDs from wpcost.blkx by unitClass."""
-    wpcost = load_wpcost_data()
-    if not wpcost:
-        print("Warning: wpcost data is empty, cannot enumerate aircraft")
+    """Load aircraft vehicle IDs from unittags.blkx by type field."""
+    unittags = load_unittags_data()
+    if not unittags:
+        print("Warning: unittags data is empty, cannot enumerate aircraft")
         return []
 
     aircraft_ids = []
-    for vid, vdata in wpcost.items():
+    for vid, vdata in unittags.items():
         if not isinstance(vdata, dict):
             continue
-        unit_class = vdata.get('unitClass', '')
-        if unit_class in AIRCRAFT_TYPE_MAP:
-            if _is_event_or_tutorial(vid):
-                continue
-            aircraft_ids.append(vid)
+        unit_type = vdata.get('type', '')
+        if unit_type not in ('aircraft', 'helicopter'):
+            continue
+        if _is_event_or_tutorial(vid):
+            continue
+        aircraft_ids.append(vid)
 
     aircraft_ids.sort()
     return aircraft_ids
@@ -1090,18 +1090,33 @@ def copy_aircraft_image(vehicle_id: str) -> str | None:
 
 
 def fetch_aircraft_data(vehicle_id: str, copy_images: bool = True) -> dict[str, Any] | None:
-    """Fetch aircraft data from wpcost and localization."""
+    """Fetch aircraft data from unittags, wpcost, and localization."""
+    # Determine aircraft type from unittags tags
+    unittags = load_unittags_data()
+    ut_entry = unittags.get(vehicle_id, {})
+    ut_type = ut_entry.get('type', '')
+    if ut_type not in ('aircraft', 'helicopter'):
+        return None
+    
+    tags = ut_entry.get('tags', {})
+    # Map unittags type_* tags to our aircraft type
+    if ut_type == 'helicopter':
+        aircraft_type = 'helicopter'
+    elif tags.get('type_assault') or tags.get('type_strike_aircraft') or tags.get('type_strike_ucav'):
+        aircraft_type = 'assault'
+    elif tags.get('type_bomber'):
+        aircraft_type = 'bomber'
+    elif tags.get('type_fighter'):
+        aircraft_type = 'fighter'
+    else:
+        aircraft_type = 'fighter'  # fallback
+    
+    # Get BR/rank/economy from wpcost
     wpcost = load_wpcost_data()
     vehicle_data = wpcost.get(vehicle_id)
     
     if not vehicle_data:
         return None
-    
-    unit_class = vehicle_data.get('unitClass', '')
-    if unit_class not in AIRCRAFT_TYPE_MAP:
-        return None
-    
-    aircraft_type = AIRCRAFT_TYPE_MAP[unit_class]
     
     # Get BR for each game mode using proper per-mode fields
     arcade_rank = vehicle_data.get('economicRankArcade')
@@ -1131,7 +1146,7 @@ def fetch_aircraft_data(vehicle_id: str, copy_images: bool = True) -> dict[str, 
     
     economic_type = get_vehicle_economic_type(vehicle_data)
     
-    # Get nation from wpcost country field (more accurate for aircraft)
+    # Get nation from wpcost country field
     country_field = vehicle_data.get('country', '')
     nation = extract_nation_from_country(country_field)
     
@@ -1192,14 +1207,14 @@ def fetch_aircraft_data(vehicle_id: str, copy_images: bool = True) -> dict[str, 
     
     return result
 def fetch_all_aircraft(copy_images: bool = True) -> list[dict[str, Any]]:
-    """Fetch all aircraft data from wpcost."""
+    """Fetch all aircraft data from unittags + wpcost."""
     aircraft_ids = load_aircraft_ids()
 
     if not aircraft_ids:
-        print("No aircraft found in wpcost")
+        print("No aircraft found in unittags")
         return []
 
-    print(f"Found {len(aircraft_ids)} aircraft in wpcost")
+    print(f"Found {len(aircraft_ids)} aircraft in unittags")
     
     if copy_images:
         print(f"Images will be copied to: {PUBLIC_AIRCRAFT_PATH}")
@@ -1235,21 +1250,22 @@ def fetch_all_aircraft(copy_images: bool = True) -> list[dict[str, Any]]:
 # ============================================================
 
 def load_ship_ids() -> list[str]:
-    """Load ship vehicle IDs from wpcost.blkx by unitClass."""
-    wpcost = load_wpcost_data()
-    if not wpcost:
-        print("Warning: wpcost data is empty, cannot enumerate ships")
+    """Load ship vehicle IDs from unittags.blkx by type field."""
+    unittags = load_unittags_data()
+    if not unittags:
+        print("Warning: unittags data is empty, cannot enumerate ships")
         return []
 
     ship_ids = []
-    for vid, vdata in wpcost.items():
+    for vid, vdata in unittags.items():
         if not isinstance(vdata, dict):
             continue
-        unit_class = vdata.get('unitClass', '')
-        if unit_class in SHIP_TYPE_MAP:
-            if _is_event_or_tutorial(vid):
-                continue
-            ship_ids.append(vid)
+        unit_type = vdata.get('type', '')
+        if unit_type != 'ship':
+            continue
+        if _is_event_or_tutorial(vid):
+            continue
+        ship_ids.append(vid)
 
     ship_ids.sort()
     return ship_ids
@@ -1278,18 +1294,56 @@ def copy_ship_image(vehicle_id: str) -> str | None:
 
 
 def fetch_ship_data(vehicle_id: str, copy_images: bool = True) -> dict[str, Any] | None:
-    """Fetch ship data from wpcost and localization."""
+    """Fetch ship data from unittags, wpcost, and localization."""
+    # Determine ship type from unittags tags
+    unittags = load_unittags_data()
+    ut_entry = unittags.get(vehicle_id, {})
+    if ut_entry.get('type') != 'ship':
+        return None
+    
+    tags = ut_entry.get('tags', {})
+    # Map unittags type_* tags to our ship type
+    if tags.get('type_destroyer'):
+        ship_type = 'destroyer'
+    elif tags.get('type_light_cruiser'):
+        ship_type = 'light_cruiser'
+    elif tags.get('type_heavy_cruiser'):
+        ship_type = 'heavy_cruiser'
+    elif tags.get('type_battlecruiser'):
+        ship_type = 'battlecruiser'
+    elif tags.get('type_battleship'):
+        ship_type = 'battleship'
+    elif tags.get('type_submarine_chaser'):
+        ship_type = 'submarine_chaser'
+    elif tags.get('type_torpedo_boat'):
+        ship_type = 'torpedo_boat'
+    elif tags.get('type_torpedo_gun_boat'):
+        ship_type = 'torpedo_gun_boat'
+    elif tags.get('type_frigate'):
+        ship_type = 'frigate'
+    elif tags.get('type_gun_boat'):
+        ship_type = 'gun_boat'
+    elif tags.get('type_armored_boat'):
+        ship_type = 'armored_boat'
+    elif tags.get('type_heavy_boat'):
+        ship_type = 'heavy_boat'
+    elif tags.get('type_barge') or tags.get('type_naval_ferry_barge') or tags.get('type_naval_aa_ferry'):
+        ship_type = 'barge'
+    elif tags.get('type_boat'):
+        ship_type = 'boat'
+    elif tags.get('type_heavy_gun_boat'):
+        ship_type = 'heavy_gun_boat'
+    elif tags.get('type_minelayer'):
+        ship_type = 'minelayer'
+    else:
+        ship_type = 'ship'  # fallback
+    
+    # Get BR/rank/economy from wpcost
     wpcost = load_wpcost_data()
     vehicle_data = wpcost.get(vehicle_id)
     
     if not vehicle_data:
         return None
-    
-    unit_class = vehicle_data.get('unitClass', '')
-    if unit_class not in SHIP_TYPE_MAP:
-        return None
-    
-    ship_type = SHIP_TYPE_MAP[unit_class]
     
     # Get BR for each game mode using proper per-mode fields
     arcade_rank = vehicle_data.get('economicRankArcade')
@@ -1315,7 +1369,7 @@ def fetch_ship_data(vehicle_id: str, copy_images: bool = True) -> dict[str, Any]
     
     economic_type = get_vehicle_economic_type(vehicle_data)
     
-    # Get nation from wpcost country field (more accurate for ships)
+    # Get nation from wpcost country field
     country_field = vehicle_data.get('country', '')
     nation = extract_nation_from_country(country_field)
     
@@ -1374,14 +1428,14 @@ def fetch_ship_data(vehicle_id: str, copy_images: bool = True) -> dict[str, Any]
 
 
 def fetch_all_ships(copy_images: bool = True) -> list[dict[str, Any]]:
-    """Fetch all ship data from wpcost."""
+    """Fetch all ship data from unittags + wpcost."""
     ship_ids = load_ship_ids()
 
     if not ship_ids:
-        print("No ships found in wpcost")
+        print("No ships found in unittags")
         return []
 
-    print(f"Found {len(ship_ids)} ships in wpcost")
+    print(f"Found {len(ship_ids)} ships in unittags")
     
     if copy_images:
         print(f"Images will be copied to: {PUBLIC_SHIP_PATH}")

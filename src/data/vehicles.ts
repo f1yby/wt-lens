@@ -1,4 +1,4 @@
-import type { Vehicle, Ammunition, MainGun, PenetrationData, GameMode, VehicleStats, StatsMonthRange, EconomyData, VehicleIndexEntry, VehicleDetailEntry, StatsIndexEntry, StatsHistoryEntry } from '../types';
+import type { Vehicle, Ammunition, MainGun, PenetrationData, GameMode, VehicleStats, StatsMonthRange, EconomyData, VehicleIndexEntry, VehicleDetailEntry, StatsHistoryEntry } from '../types';
 import { getDefaultStatsMonthRange, getMonthRangeCacheKey } from '../types';
 import { StatSharkEntry, cleanName, buildStatsMapByMonthRange, convertToVehicleStats, loadStatsForRange } from './base';
 
@@ -93,7 +93,6 @@ const vehiclesByMonthRange = new Map<string, Vehicle[]>();
 // Split Data Caches (for optimized loading)
 // ============================================================
 let vehicleIndexData: VehicleIndexEntry[] | null = null;
-let statsIndexData: StatsIndexEntry[] | null = null;
 const vehicleDetailCache = new Map<string, VehicleDetailEntry>();
 const vehicleStatsHistoryCache = new Map<string, StatsHistoryEntry[]>();
 
@@ -160,34 +159,6 @@ export async function loadVehicleIndex(): Promise<VehicleIndexEntry[]> {
     ghost: entry.ghost as boolean | undefined,
   }));
   return vehicleIndexData!;
-}
-
-/**
- * Load stats index (latest month summary for list rendering)
- */
-export async function loadStatsIndex(): Promise<StatsIndexEntry[]> {
-  if (statsIndexData) return statsIndexData;
-  
-  try {
-    const response = await fetch('/wt-lens/data/stats-index.json');
-    if (!response.ok) {
-      throw new Error(`Failed to load stats index: ${response.status}`);
-    }
-    const rawData = await response.json();
-    // Map snake_case to camelCase
-    statsIndexData = rawData.map((entry: Record<string, unknown>) => ({
-      id: entry.id,
-      mode: entry.mode,
-      battles: entry.battles,
-      winRate: entry.win_rate,
-      avgKillsPerSpawn: entry.avg_kills_per_spawn,
-      expPerSpawn: entry.exp_per_spawn,
-    }));
-    return statsIndexData!;
-  } catch (error) {
-    console.warn('Split stats mode unavailable:', error);
-    return [];
-  }
 }
 
 /**

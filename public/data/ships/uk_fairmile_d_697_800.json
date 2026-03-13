@@ -1,0 +1,27 @@
+{
+  "id": "uk_fairmile_d_697_800",
+  "economy": {
+    "researchCost": 75000,
+    "purchaseCost": 250000,
+    "crewTraining": 72000,
+    "expertTraining": 250000,
+    "aceTrainingGE": 940,
+    "aceTrainingRP": 480000,
+    "repairCost": {
+      "arcade": [
+        2513,
+        3239
+      ],
+      "realistic": [
+        3300,
+        4252
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.29,
+      "realistic": 2.17,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.66
+  }
+}

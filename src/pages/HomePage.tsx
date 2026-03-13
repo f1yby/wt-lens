@@ -1,4 +1,4 @@
-import { useState, useMemo, useEffect } from 'react';
+import { useState, useMemo, useEffect, useCallback } from 'react';
 import ListPageLayout from '../components/ListPageLayout';
 import VehicleTechTree from '../components/VehicleTechTree';
 import { loadVehicles } from '../data/vehicles';
@@ -6,10 +6,9 @@ import type { Nation, VehicleType, Vehicle } from '../types';
 import { BATTLE_RATINGS } from '../types';
 import { useGameMode } from '../hooks/useGameMode';
 import { useStatsMonthRange } from '../hooks/useStatsMonth';
+import { useRangeLoader } from '../hooks/useRangeLoader';
 
 export default function HomePage() {
-  const [vehicles, setVehicles] = useState<Vehicle[]>([]);
-  const [loading, setLoading] = useState(true);
   const [selectedNations, setSelectedNations] = useState<Nation[]>([]);
   const [brRange, setBrRange] = useState<[number, number]>([BATTLE_RATINGS[0], BATTLE_RATINGS[BATTLE_RATINGS.length - 1]]);
   const [selectedType, setSelectedType] = useState<VehicleType | 'all'>('all');
@@ -19,25 +18,17 @@ export default function HomePage() {
   const { gameMode, handleGameModeChange } = useGameMode();
   const { statsMonthRange, handleStatsMonthRangeChange } = useStatsMonthRange();
 
-  // Reload data when month range changes
-  useEffect(() => {
-    if (!statsMonthRange.startMonth || !statsMonthRange.endMonth) return;
-    let cancelled = false;
-    loadVehicles(statsMonthRange).then(data => {
-      if (!cancelled) {
-        setVehicles(data);
-        setLoading(false);
-      }
-    });
-    return () => { cancelled = true; };
-  }, [statsMonthRange]);
+  const loader = useCallback(loadVehicles, []);
+  const { data: vehicles, loading } = useRangeLoader<Vehicle[]>(loader, statsMonthRange);
+
+  const safeVehicles = vehicles ?? [];
 
   // 计算数据中的实际最大 BR，用于 BR 筛选器
   const availableBRs = useMemo(() => {
-    if (vehicles.length === 0) return [];
-    const maxBR = Math.max(...vehicles.map(v => v.battleRating));
+    if (safeVehicles.length === 0) return [];
+    const maxBR = Math.max(...safeVehicles.map(v => v.battleRating));
     return BATTLE_RATINGS.filter(br => br <= maxBR);
-  }, [vehicles]);
+  }, [safeVehicles]);
 
   // 数据加载完成后，校正 brRange 到实际可用范围
   useEffect(() => {
@@ -47,7 +38,7 @@ export default function HomePage() {
   }, [availableBRs]);
 
   const filteredVehicles = useMemo(() => {
-    return vehicles.filter(vehicle => {
+    return safeVehicles.filter(vehicle => {
       const nationMatch = selectedNations.length === 0 || selectedNations.includes(vehicle.nation);
       const vehicleBR = vehicle.br?.[gameMode] ?? vehicle.battleRating;
       const brMatch = vehicleBR >= brRange[0] && vehicleBR <= brRange[1];
@@ -56,7 +47,7 @@ export default function HomePage() {
       const ghostMatch = showGhost || !vehicle.ghost;
       return nationMatch && brMatch && typeMatch && unreleasedMatch && ghostMatch;
     });
-  }, [vehicles, selectedNations, brRange, selectedType, showUnreleased, showGhost, gameMode]);
+  }, [safeVehicles, selectedNations, brRange, selectedType, showUnreleased, showGhost, gameMode]);
 
   return (
     <ListPageLayout

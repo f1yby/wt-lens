@@ -1,0 +1,27 @@
+{
+  "id": "it_mc490_folgore",
+  "economy": {
+    "researchCost": 89000,
+    "purchaseCost": 300000,
+    "crewTraining": 87000,
+    "expertTraining": 300000,
+    "aceTrainingGE": 1100,
+    "aceTrainingRP": 520000,
+    "repairCost": {
+      "arcade": [
+        3279,
+        4039
+      ],
+      "realistic": [
+        4227,
+        5206
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.24,
+      "realistic": 2.23,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.72
+  }
+}

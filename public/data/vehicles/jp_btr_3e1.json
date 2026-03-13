@@ -99,7 +99,10 @@
       }
     ],
     "main_gun_ammo": 400,
-    "driver_nv_resolution": null,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
     "has_smoke_grenades": true,
     "has_ess": false,
     "has_laser_rangefinder": true

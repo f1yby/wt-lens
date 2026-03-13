@@ -1,0 +1,29 @@
+{
+  "id": "uk_higgins_78ft_mtb422",
+  "economy": {
+    "researchCost": 18000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 1300,
+    "crewTraining": 10000,
+    "expertTraining": 67000,
+    "aceTrainingGE": 400,
+    "aceTrainingRP": 570000,
+    "repairCost": {
+      "arcade": [
+        1123,
+        1123
+      ],
+      "realistic": [
+        1041,
+        1041
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.89,
+      "realistic": 2.67,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.36,
+    "freeRepairs": 30
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "germ_s_100_class",
+  "economy": {
+    "researchCost": 11000,
+    "purchaseCost": 22000,
+    "crewTraining": 6300,
+    "expertTraining": 22000,
+    "aceTrainingGE": 250,
+    "aceTrainingRP": 220000,
+    "repairCost": {
+      "arcade": [
+        659,
+        839
+      ],
+      "realistic": [
+        891,
+        1133
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.58,
+      "realistic": 0.91,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.24
+  }
+}

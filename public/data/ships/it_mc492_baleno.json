@@ -1,0 +1,27 @@
+{
+  "id": "it_mc492_baleno",
+  "economy": {
+    "researchCost": 120000,
+    "purchaseCost": 360000,
+    "crewTraining": 105000,
+    "expertTraining": 360000,
+    "aceTrainingGE": 1200,
+    "aceTrainingRP": 570000,
+    "repairCost": {
+      "arcade": [
+        3551,
+        4373
+      ],
+      "realistic": [
+        4558,
+        5614
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.29,
+      "realistic": 2.31,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.78
+  }
+}

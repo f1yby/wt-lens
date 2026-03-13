@@ -1,0 +1,27 @@
+{
+  "id": "ussr_mbk_161_1944",
+  "economy": {
+    "researchCost": 120000,
+    "purchaseCost": 360000,
+    "crewTraining": 105000,
+    "expertTraining": 360000,
+    "aceTrainingGE": 1200,
+    "aceTrainingRP": 570000,
+    "repairCost": {
+      "arcade": [
+        3653,
+        4590
+      ],
+      "realistic": [
+        4541,
+        5705
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.23,
+      "realistic": 2.01,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.78
+  }
+}

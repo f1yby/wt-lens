@@ -1,0 +1,27 @@
+{
+  "id": "us_nasty_ptf",
+  "economy": {
+    "researchCost": 4000,
+    "purchaseCost": 2100,
+    "crewTraining": 600,
+    "expertTraining": 2100,
+    "aceTrainingGE": 45,
+    "aceTrainingRP": 110000,
+    "repairCost": {
+      "arcade": [
+        198,
+        261
+      ],
+      "realistic": [
+        297,
+        392
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.21,
+      "realistic": 0.26,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.0
+  }
+}

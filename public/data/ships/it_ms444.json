@@ -1,0 +1,29 @@
+{
+  "id": "it_ms444",
+  "economy": {
+    "researchCost": 18000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 1300,
+    "crewTraining": 10000,
+    "expertTraining": 67000,
+    "aceTrainingGE": 400,
+    "aceTrainingRP": 570000,
+    "repairCost": {
+      "arcade": [
+        566,
+        566
+      ],
+      "realistic": [
+        786,
+        786
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.54,
+      "realistic": 2.59,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.36,
+    "freeRepairs": 30
+  }
+}

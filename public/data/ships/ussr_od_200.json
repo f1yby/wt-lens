@@ -1,0 +1,27 @@
+{
+  "id": "ussr_od_200",
+  "economy": {
+    "researchCost": 5900,
+    "purchaseCost": 6300,
+    "crewTraining": 1800,
+    "expertTraining": 6300,
+    "aceTrainingGE": 80,
+    "aceTrainingRP": 135000,
+    "repairCost": {
+      "arcade": [
+        296,
+        374
+      ],
+      "realistic": [
+        444,
+        560
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.3,
+      "realistic": 0.37,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.06
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "id": "us_flagstaff_pgh1",
+  "economy": {
+    "researchCost": 75000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 3850,
+    "crewTraining": 10000,
+    "expertTraining": 400000,
+    "aceTrainingGE": 940,
+    "aceTrainingRP": 960000,
+    "repairCost": {
+      "arcade": [
+        1592,
+        1592
+      ],
+      "realistic": [
+        2150,
+        2150
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.39,
+      "realistic": 3.61,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.66,
+    "freeRepairs": 30
+  }
+}

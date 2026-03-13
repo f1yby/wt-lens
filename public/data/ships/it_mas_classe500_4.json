@@ -1,0 +1,29 @@
+{
+  "id": "it_mas_classe500_4",
+  "economy": {
+    "researchCost": 2900,
+    "purchaseCost": 0,
+    "purchaseCostGold": 250,
+    "crewTraining": 150,
+    "expertTraining": 1000,
+    "aceTrainingGE": 20,
+    "aceTrainingRP": 145000,
+    "repairCost": {
+      "arcade": [
+        94,
+        94
+      ],
+      "realistic": [
+        253,
+        253
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.3,
+      "realistic": 0.46,
+      "simulator": 1.0
+    },
+    "expMultiplier": 0.75,
+    "freeRepairs": 30
+  }
+}

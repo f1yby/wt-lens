@@ -1,0 +1,29 @@
+{
+  "id": "us_higgins_78ft_pt658",
+  "economy": {
+    "researchCost": 26000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 1450,
+    "crewTraining": 10000,
+    "expertTraining": 115000,
+    "aceTrainingGE": 500,
+    "aceTrainingRP": 640000,
+    "repairCost": {
+      "arcade": [
+        1702,
+        1702
+      ],
+      "realistic": [
+        1894,
+        1894
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.2,
+      "realistic": 3.5,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.42,
+    "freeRepairs": 30
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "id": "us_pt811",
+  "economy": {
+    "researchCost": 120000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 6090,
+    "crewTraining": 10000,
+    "expertTraining": 580000,
+    "aceTrainingGE": 1200,
+    "aceTrainingRP": 1180000,
+    "repairCost": {
+      "arcade": [
+        2575,
+        2575
+      ],
+      "realistic": [
+        3194,
+        3194
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.45,
+      "realistic": 4.46,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.84,
+    "freeRepairs": 30
+  }
+}

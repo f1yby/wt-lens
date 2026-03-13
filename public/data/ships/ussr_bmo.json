@@ -1,0 +1,27 @@
+{
+  "id": "ussr_bmo",
+  "economy": {
+    "researchCost": 61000,
+    "purchaseCost": 230000,
+    "crewTraining": 65000,
+    "expertTraining": 230000,
+    "aceTrainingGE": 820,
+    "aceTrainingRP": 440000,
+    "repairCost": {
+      "arcade": [
+        2241,
+        2815
+      ],
+      "realistic": [
+        2883,
+        3622
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.1,
+      "realistic": 1.66,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.6
+  }
+}

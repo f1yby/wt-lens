@@ -1,0 +1,27 @@
+{
+  "id": "us_higgins_78ft_pt71",
+  "economy": {
+    "researchCost": 11000,
+    "purchaseCost": 22000,
+    "crewTraining": 6300,
+    "expertTraining": 22000,
+    "aceTrainingGE": 250,
+    "aceTrainingRP": 220000,
+    "repairCost": {
+      "arcade": [
+        654,
+        816
+      ],
+      "realistic": [
+        917,
+        1146
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.6,
+      "realistic": 0.88,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.24
+  }
+}

@@ -180,48 +180,32 @@ def save_stats_split(vehicles: list, output_dir: str):
     
     # Find the latest month for index generation
     all_months = sorted(set(e['month'] for e in vehicles))
-    latest_month = all_months[-1] if all_months else None
-    
-    # Generate index (latest month stats per vehicle)
-    index_entries: list[dict] = []
     
     for vid, entries in stats_by_vehicle.items():
         # Save individual vehicle file with all historical data
         vehicle_stats_path = stats_dir / f"{vid}.json"
         with open(vehicle_stats_path, 'w', encoding='utf-8') as f:
             json.dump(entries, f, ensure_ascii=False, indent=2)
-        
-        # For index: extract latest month data (all modes)
-        if latest_month:
-            latest_entries = [e for e in entries if e['month'] == latest_month]
-            for entry in latest_entries:
-                index_entries.append({
-                    'id': entry['id'],
-                    'mode': entry['mode'],
-                    'battles': entry['battles'],
-                    'win_rate': entry['win_rate'],
-                    'avg_kills_per_spawn': entry['avg_kills_per_spawn'],
-                    'exp_per_spawn': entry['exp_per_spawn'],
-                })
     
-    # Save index file
-    index_path = output_path / "stats-index.json"
-    with open(index_path, 'w', encoding='utf-8') as f:
-        json.dump(index_entries, f, ensure_ascii=False, indent=2)
-    
-    # Save stats-meta.json (month list + latest month identifier)
+    # Save stats-meta.json (month list + latest month + vehicle IDs)
     all_months = sorted(set(e['month'] for e in vehicles if e.get('month')), key=_month_sort_key)
     meta = {
         "months": all_months,
         "latestMonth": all_months[-1] if all_months else None,
+        "vehicleIds": sorted(stats_by_vehicle.keys()),
     }
     meta_path = output_path / "stats-meta.json"
     with open(meta_path, 'w', encoding='utf-8') as f:
         json.dump(meta, f, ensure_ascii=False, indent=2)
+
+    # Remove legacy stats-index.json if it exists
+    legacy_index = output_path / "stats-index.json"
+    if legacy_index.exists():
+        legacy_index.unlink()
+        print("  Removed legacy stats-index.json")
     
-    print(f"Saved split stats: {len(index_entries)} index entries + {len(stats_by_vehicle)} vehicle files")
-    print(f"  Index: {index_path}")
-    print(f"  Meta: {meta_path} ({len(all_months)} months)")
+    print(f"Saved split stats: {len(stats_by_vehicle)} vehicle files")
+    print(f"  Meta: {meta_path} ({len(all_months)} months, {len(stats_by_vehicle)} vehicles)")
     print(f"  Details: {stats_dir}/")
 
 

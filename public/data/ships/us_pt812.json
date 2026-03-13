@@ -1,0 +1,27 @@
+{
+  "id": "us_pt812",
+  "economy": {
+    "researchCost": 120000,
+    "purchaseCost": 360000,
+    "crewTraining": 105000,
+    "expertTraining": 360000,
+    "aceTrainingGE": 1200,
+    "aceTrainingRP": 570000,
+    "repairCost": {
+      "arcade": [
+        3361,
+        4266
+      ],
+      "realistic": [
+        4388,
+        5569
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.34,
+      "realistic": 2.02,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.78
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "ussr_pr_206m",
+  "economy": {
+    "researchCost": 280000,
+    "purchaseCost": 780000,
+    "crewTraining": 220000,
+    "expertTraining": 780000,
+    "aceTrainingGE": 1700,
+    "aceTrainingRP": 720000,
+    "repairCost": {
+      "arcade": [
+        5051,
+        6267
+      ],
+      "realistic": [
+        6456,
+        8010
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.19,
+      "realistic": 2.31,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.96
+  }
+}

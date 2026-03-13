@@ -1,0 +1,27 @@
+{
+  "id": "it_mas_stefano_turr",
+  "economy": {
+    "researchCost": 14000,
+    "purchaseCost": 32000,
+    "crewTraining": 9200,
+    "expertTraining": 32000,
+    "aceTrainingGE": 320,
+    "aceTrainingRP": 250000,
+    "repairCost": {
+      "arcade": [
+        749,
+        923
+      ],
+      "realistic": [
+        1101,
+        1357
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.79,
+      "realistic": 1.06,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.3
+  }
+}

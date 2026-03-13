@@ -1,0 +1,27 @@
+{
+  "id": "uk_hdml_ml1383",
+  "economy": {
+    "researchCost": 5900,
+    "purchaseCost": 6300,
+    "crewTraining": 1800,
+    "expertTraining": 6300,
+    "aceTrainingGE": 80,
+    "aceTrainingRP": 135000,
+    "repairCost": {
+      "arcade": [
+        299,
+        374
+      ],
+      "realistic": [
+        449,
+        560
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.3,
+      "realistic": 0.37,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.06
+  }
+}

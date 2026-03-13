@@ -1,0 +1,29 @@
+{
+  "id": "it_p420_sparviero",
+  "economy": {
+    "researchCost": 75000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 3850,
+    "crewTraining": 10000,
+    "expertTraining": 400000,
+    "aceTrainingGE": 940,
+    "aceTrainingRP": 960000,
+    "repairCost": {
+      "arcade": [
+        1902,
+        1902
+      ],
+      "realistic": [
+        2370,
+        2370
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.2,
+      "realistic": 3.6,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.66,
+    "freeRepairs": 30
+  }
+}

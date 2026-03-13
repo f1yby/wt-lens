@@ -1,4 +1,4 @@
-import { useState, useMemo, useEffect } from 'react';
+import { useState, useMemo, useEffect, useCallback } from 'react';
 import ListPageLayout from '../components/ListPageLayout';
 import AircraftTechTree from '../components/AircraftTechTree';
 import { loadAircraft } from '../data/aircraft';
@@ -6,10 +6,9 @@ import type { Nation, AircraftVehicle } from '../types';
 import { BATTLE_RATINGS } from '../types';
 import { useGameMode } from '../hooks/useGameMode';
 import { useStatsMonthRange } from '../hooks/useStatsMonth';
+import { useRangeLoader } from '../hooks/useRangeLoader';
 
 export default function HelicopterPage() {
-  const [aircraft, setAircraft] = useState<AircraftVehicle[]>([]);
-  const [loading, setLoading] = useState(true);
   const [selectedNations, setSelectedNations] = useState<Nation[]>([]);
   const [brRange, setBrRange] = useState<[number, number]>([BATTLE_RATINGS[0], BATTLE_RATINGS[BATTLE_RATINGS.length - 1]]);
   const [showUnreleased, setShowUnreleased] = useState(false);
@@ -19,14 +18,9 @@ export default function HelicopterPage() {
   const { gameMode, handleGameModeChange } = useGameMode();
   const { statsMonthRange, handleStatsMonthRangeChange } = useStatsMonthRange();
 
-  // Reload data when month range changes
-  useEffect(() => {
-    setLoading(true);
-    loadAircraft(statsMonthRange).then(data => {
-      setAircraft(data);
-      setLoading(false);
-    });
-  }, [statsMonthRange]);
+  const loader = useCallback(loadAircraft, []);
+  const { data, loading } = useRangeLoader<AircraftVehicle[]>(loader, statsMonthRange);
+  const aircraft = data ?? [];
 
   // 计算直升机数据中的实际最大 BR，根据当前 BR 模式动态生成
   const availableBRs = useMemo(() => {

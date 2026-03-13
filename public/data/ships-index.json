@@ -1,5 +1,22 @@
 [
   {
+    "id": "fr_adroit_class",
+    "name": "fr_adroit_class",
+    "localizedName": "无​畏",
+    "nation": "france",
+    "rank": 3,
+    "battleRating": 2.7,
+    "br": {
+      "arcade": 2.7,
+      "realistic": 2.7,
+      "simulator": 2.7
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/fr_adroit_class.webp",
+    "releaseDate": "2025-09-23"
+  },
+  {
     "id": "fr_arras_class_amiens",
     "name": "fr_arras_class_amiens",
     "localizedName": "亚​眠",
@@ -45,7 +62,7 @@
       "realistic": 6.7,
       "simulator": 6.7
     },
-    "shipType": "cruiser",
+    "shipType": "battleship",
     "economicType": "regular",
     "imageUrl": "ships/fr_battleship_bretagne_class_bretagne.webp",
     "releaseDate": "2024-03-13"
@@ -62,7 +79,7 @@
       "realistic": 6.3,
       "simulator": 6.3
     },
-    "shipType": "cruiser",
+    "shipType": "battleship",
     "economicType": "regular",
     "imageUrl": "ships/fr_battleship_bretagne_class_lorraine.webp",
     "releaseDate": "2023-06-14"
@@ -79,7 +96,7 @@
       "realistic": 6.0,
       "simulator": 6.0
     },
-    "shipType": "cruiser",
+    "shipType": "battleship",
     "economicType": "premium",
     "imageUrl": "ships/fr_battleship_courbet_class_courbet.webp",
     "releaseDate": "2023-12-14"
@@ -96,7 +113,7 @@
       "realistic": 6.0,
       "simulator": 6.0
     },
-    "shipType": "cruiser",
+    "shipType": "battleship",
     "economicType": "regular",
     "imageUrl": "ships/fr_battleship_courbet_class_paris.webp",
     "releaseDate": "2023-06-14"
@@ -113,7 +130,7 @@
       "realistic": 7.0,
       "simulator": 7.0
     },
-    "shipType": "cruiser",
+    "shipType": "battleship",
     "economicType": "regular",
     "imageUrl": "ships/fr_battleship_dunkerque.webp",
     "releaseDate": "2024-11-19"
@@ -130,7 +147,7 @@
       "realistic": 8.3,
       "simulator": 8.3
     },
-    "shipType": "cruiser",
+    "shipType": "battleship",
     "economicType": "regular",
     "imageUrl": "ships/fr_battleship_richelieu_class_clemenceau.webp",
     "releaseDate": "2025-11-11"
@@ -147,7 +164,7 @@
       "realistic": 8.3,
       "simulator": 8.3
     },
-    "shipType": "cruiser",
+    "shipType": "battleship",
     "economicType": "regular",
     "imageUrl": "ships/fr_battleship_richelieu_class_richelieu.webp",
     "releaseDate": "2025-06-25"
@@ -164,7 +181,7 @@
       "realistic": 7.3,
       "simulator": 7.3
     },
-    "shipType": "cruiser",
+    "shipType": "battleship",
     "economicType": "regular",
     "imageUrl": "ships/fr_battleship_strasbourg.webp",
     "releaseDate": "2025-02-27"
@@ -198,7 +215,7 @@
       "realistic": 5.0,
       "simulator": 5.0
     },
-    "shipType": "cruiser",
+    "shipType": "light_cruiser",
     "economicType": "premium",
     "imageUrl": "ships/fr_cruiser_dugauy_class_dugauy_trouin.webp",
     "releaseDate": "2023-03-07"
@@ -215,7 +232,7 @@
       "realistic": 5.0,
       "simulator": 5.0
     },
-    "shipType": "cruiser",
+    "shipType": "light_cruiser",
     "economicType": "regular",
     "imageUrl": "ships/fr_cruiser_dugauy_class_primaguet.webp",
     "releaseDate": "2023-06-14"
@@ -232,7 +249,7 @@
       "realistic": 5.3,
       "simulator": 5.3
     },
-    "shipType": "cruiser",
+    "shipType": "light_cruiser",
     "economicType": "regular",
     "imageUrl": "ships/fr_cruiser_emile_bertin.webp",
     "releaseDate": "2023-06-14"
@@ -249,7 +266,7 @@
       "realistic": 4.7,
       "simulator": 4.7
     },
-    "shipType": "cruiser",
+    "shipType": "light_cruiser",
     "economicType": "regular",
     "imageUrl": "ships/fr_cruiser_jeanne_darc.webp",
     "releaseDate": "2023-06-14"
@@ -266,7 +283,7 @@
       "realistic": 5.7,
       "simulator": 5.7
     },
-    "shipType": "cruiser",
+    "shipType": "light_cruiser",
     "economicType": "regular",
     "imageUrl": "ships/fr_cruiser_la_galissoniere_class_gloire.webp",
     "releaseDate": "2025-09-23"
@@ -283,7 +300,7 @@
       "realistic": 5.7,
       "simulator": 5.7
     },
-    "shipType": "cruiser",
+    "shipType": "light_cruiser",
     "economicType": "regular",
     "imageUrl": "ships/fr_cruiser_la_galissoniere_class_la_galissoniere.webp",
     "releaseDate": "2024-12-16"
@@ -300,7 +317,7 @@
       "realistic": 5.3,
       "simulator": 5.3
     },
-    "shipType": "cruiser",
+    "shipType": "heavy_cruiser",
     "economicType": "regular",
     "imageUrl": "ships/fr_cruiser_suffren_class_colbert.webp",
     "releaseDate": "2023-06-14"
@@ -317,7 +334,7 @@
       "realistic": 5.7,
       "simulator": 5.7
     },
-    "shipType": "cruiser",
+    "shipType": "heavy_cruiser",
     "economicType": "premium",
     "imageUrl": "ships/fr_cruiser_suffren_class_dupleix.webp",
     "releaseDate": "2023-08-08"
@@ -334,7 +351,7 @@
       "realistic": 5.3,
       "simulator": 5.3
     },
-    "shipType": "cruiser",
+    "shipType": "heavy_cruiser",
     "economicType": "regular",
     "imageUrl": "ships/fr_cruiser_suffren_class_suffren.webp",
     "releaseDate": "2025-12-16"
@@ -623,7 +640,7 @@
       "realistic": 3.3,
       "simulator": 3.3
     },
-    "shipType": "torpedo_boat",
+    "shipType": "frigate",
     "economicType": "regular",
     "imageUrl": "ships/fr_elan_class_commandant_domine.webp",
     "releaseDate": "2025-11-11"
@@ -657,7 +674,7 @@
       "realistic": 4.3,
       "simulator": 4.3
     },
-    "shipType": "torpedo_boat",
+    "shipType": "frigate",
     "economicType": "regular",
     "imageUrl": "ships/fr_frigate_corse_class_brestois.webp",
     "releaseDate": "2025-11-11"
@@ -674,7 +691,7 @@
       "realistic": 4.0,
       "simulator": 4.0
     },
-    "shipType": "torpedo_boat",
+    "shipType": "frigate",
     "economicType": "premium",
     "imageUrl": "ships/fr_frigate_corse_class_corse.webp",
     "releaseDate": "2025-12-16"
@@ -691,9 +708,26 @@
       "realistic": 3.3,
       "simulator": 3.3
     },
-    "shipType": "torpedo_boat",
+    "shipType": "frigate",
     "economicType": "regular",
     "imageUrl": "ships/fr_frigate_croix_de_lorraine_class_la_surprise.webp",
+    "releaseDate": "2024-09-10"
+  },
+  {
+    "id": "fr_lcg_m_l9059",
+    "name": "fr_lcg_m_l9059",
+    "localizedName": "L9059",
+    "nation": "france",
+    "rank": 3,
+    "battleRating": 2.7,
+    "br": {
+      "arcade": 2.7,
+      "realistic": 2.7,
+      "simulator": 2.7
+    },
+    "shipType": "gun_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/fr_lcg_m_l9059.webp",
     "releaseDate": "2024-09-10"
   },
   {
@@ -708,7 +742,7 @@
       "realistic": 3.3,
       "simulator": 3.3
     },
-    "shipType": "torpedo_boat",
+    "shipType": "frigate",
     "economicType": "premium",
     "imageUrl": "ships/fr_marne_class_aisne.webp",
     "releaseDate": "2025-09-23"
@@ -725,10 +759,231 @@
       "realistic": 3.3,
       "simulator": 3.3
     },
-    "shipType": "torpedo_boat",
+    "shipType": "frigate",
     "economicType": "regular",
     "imageUrl": "ships/fr_marne_class_marne.webp",
     "releaseDate": "2025-03-18"
+  },
+  {
+    "id": "fr_mtb96_vosper",
+    "name": "fr_mtb96_vosper",
+    "localizedName": "MTB96",
+    "nation": "france",
+    "rank": 2,
+    "battleRating": 2.0,
+    "br": {
+      "arcade": 2.0,
+      "realistic": 2.0,
+      "simulator": 2.0
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/fr_mtb96_vosper.webp",
+    "releaseDate": "2024-09-10"
+  },
+  {
+    "id": "fr_p730_combattante",
+    "name": "fr_p730_combattante",
+    "localizedName": "斗​士 (P730)",
+    "nation": "france",
+    "rank": 5,
+    "battleRating": 3.7,
+    "br": {
+      "arcade": 3.7,
+      "realistic": 3.7,
+      "simulator": 3.7
+    },
+    "shipType": "gun_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/fr_p730_combattante.webp",
+    "releaseDate": "2024-09-10"
+  },
+  {
+    "id": "fr_type40k_vedette",
+    "name": "fr_type40k_vedette",
+    "localizedName": "VTB-19",
+    "nation": "france",
+    "rank": 2,
+    "battleRating": 1.7,
+    "br": {
+      "arcade": 1.7,
+      "realistic": 1.7,
+      "simulator": 1.7
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/fr_type40k_vedette.webp",
+    "releaseDate": "2024-09-10"
+  },
+  {
+    "id": "fr_vlt1",
+    "name": "fr_vlt1",
+    "localizedName": "VLT-1",
+    "nation": "france",
+    "rank": 4,
+    "battleRating": 3.3,
+    "br": {
+      "arcade": 3.3,
+      "realistic": 3.3,
+      "simulator": 3.3
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/fr_vlt1.webp",
+    "releaseDate": "2024-09-10"
+  },
+  {
+    "id": "fr_vlt2",
+    "name": "fr_vlt2",
+    "localizedName": "VLT-2",
+    "nation": "france",
+    "rank": 4,
+    "battleRating": 3.3,
+    "br": {
+      "arcade": 3.3,
+      "realistic": 3.3,
+      "simulator": 3.3
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "premium",
+    "imageUrl": "ships/fr_vlt2.webp",
+    "releaseDate": "2024-06-19"
+  },
+  {
+    "id": "fr_vtb10",
+    "name": "fr_vtb10",
+    "localizedName": "VTB-10",
+    "nation": "france",
+    "rank": 1,
+    "battleRating": 1.0,
+    "br": {
+      "arcade": 1.0,
+      "realistic": 1.0,
+      "simulator": 1.0
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "premium",
+    "imageUrl": "ships/fr_vtb10.webp",
+    "releaseDate": "2025-06-25"
+  },
+  {
+    "id": "fr_vtb11",
+    "name": "fr_vtb11",
+    "localizedName": "VTB-11",
+    "nation": "france",
+    "rank": 1,
+    "battleRating": 1.0,
+    "br": {
+      "arcade": 1.0,
+      "realistic": 1.0,
+      "simulator": 1.0
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "premium",
+    "imageUrl": "ships/fr_vtb11.webp",
+    "releaseDate": "2024-09-10"
+  },
+  {
+    "id": "fr_vtb12_mod",
+    "name": "fr_vtb12_mod",
+    "localizedName": "VTB-12",
+    "nation": "france",
+    "rank": 1,
+    "battleRating": 1.0,
+    "br": {
+      "arcade": 1.0,
+      "realistic": 1.0,
+      "simulator": 1.0
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "premium",
+    "imageUrl": "ships/fr_vtb12_mod.webp",
+    "releaseDate": "2025-03-18"
+  },
+  {
+    "id": "fr_vtb13",
+    "name": "fr_vtb13",
+    "localizedName": "VTB-13",
+    "nation": "france",
+    "rank": 1,
+    "battleRating": 1.3,
+    "br": {
+      "arcade": 1.3,
+      "realistic": 1.3,
+      "simulator": 1.3
+    },
+    "shipType": "gun_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/fr_vtb13.webp",
+    "releaseDate": "2024-09-10"
+  },
+  {
+    "id": "fr_vtb14",
+    "name": "fr_vtb14",
+    "localizedName": "VTB-14",
+    "nation": "france",
+    "rank": 1,
+    "battleRating": 1.0,
+    "br": {
+      "arcade": 1.0,
+      "realistic": 1.0,
+      "simulator": 1.0
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "premium",
+    "imageUrl": "ships/fr_vtb14.webp",
+    "releaseDate": "2024-09-10"
+  },
+  {
+    "id": "fr_vtb18",
+    "name": "fr_vtb18",
+    "localizedName": "VTB-18",
+    "nation": "france",
+    "rank": 1,
+    "battleRating": 1.0,
+    "br": {
+      "arcade": 1.0,
+      "realistic": 1.0,
+      "simulator": 1.0
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/fr_vtb18.webp",
+    "releaseDate": "2025-03-18"
+  },
+  {
+    "id": "fr_vtb8",
+    "name": "fr_vtb8",
+    "localizedName": "VTB-8",
+    "nation": "france",
+    "rank": 1,
+    "battleRating": 1.0,
+    "br": {
+      "arcade": 1.0,
+      "realistic": 1.0,
+      "simulator": 1.0
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "premium",
+    "imageUrl": "ships/fr_vtb8.webp",
+    "releaseDate": "2024-09-10"
+  },
+  {
+    "id": "fr_vtb9",
+    "name": "fr_vtb9",
+    "localizedName": "VTB-9",
+    "nation": "france",
+    "rank": 1,
+    "battleRating": 1.0,
+    "br": {
+      "arcade": 1.0,
+      "realistic": 1.0,
+      "simulator": 1.0
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "premium",
+    "imageUrl": "ships/fr_vtb9.webp",
+    "releaseDate": "2024-09-10"
   },
   {
     "id": "germ_artilleriefahrprahm_typ_d1",
@@ -774,7 +1029,7 @@
       "realistic": 6.7,
       "simulator": 6.7
     },
-    "shipType": "cruiser",
+    "shipType": "battlecruiser",
     "economicType": "regular",
     "imageUrl": "ships/germ_battlecruiser_derfflinger.webp",
     "releaseDate": "2024-09-10"
@@ -791,7 +1046,7 @@
       "realistic": 7.0,
       "simulator": 7.0
     },
-    "shipType": "cruiser",
+    "shipType": "battlecruiser",
     "economicType": "regular",
     "imageUrl": "ships/germ_battlecruiser_ersatz_yorck.webp",
     "releaseDate": "2024-12-16"
@@ -808,7 +1063,7 @@
       "realistic": 7.0,
       "simulator": 7.0
     },
-    "shipType": "cruiser",
+    "shipType": "battlecruiser",
     "economicType": "regular",
     "imageUrl": "ships/germ_battlecruiser_mackensen_class.webp",
     "releaseDate": "2025-09-04"
@@ -825,7 +1080,7 @@
       "realistic": 6.0,
       "simulator": 6.0
     },
-    "shipType": "cruiser",
+    "shipType": "battlecruiser",
     "economicType": "regular",
     "imageUrl": "ships/germ_battlecruiser_von_der_tann.webp",
     "releaseDate": "2020-12-17"
@@ -842,7 +1097,7 @@
       "realistic": 7.0,
       "simulator": 7.0
     },
-    "shipType": "cruiser",
+    "shipType": "battleship",
     "economicType": "regular",
     "imageUrl": "ships/germ_battleship_baden.webp",
     "releaseDate": "2024-03-14"
@@ -859,7 +1114,7 @@
       "realistic": 7.0,
       "simulator": 7.0
     },
-    "shipType": "cruiser",
+    "shipType": "battleship",
     "economicType": "regular",
     "imageUrl": "ships/germ_battleship_bayern.webp",
     "releaseDate": "2022-06-15"
@@ -876,7 +1131,7 @@
       "realistic": 8.3,
       "simulator": 8.3
     },
-    "shipType": "cruiser",
+    "shipType": "battleship",
     "economicType": "regular",
     "imageUrl": "ships/germ_battleship_bismarck.webp",
     "releaseDate": "2025-06-25"
@@ -893,7 +1148,7 @@
       "realistic": 7.7,
       "simulator": 7.7
     },
-    "shipType": "cruiser",
+    "shipType": "battlecruiser",
     "economicType": "premium",
     "imageUrl": "ships/germ_battleship_gneisenau_380mm.webp",
     "releaseDate": "2025-06-25"
@@ -910,7 +1165,7 @@
       "realistic": 6.7,
       "simulator": 6.7
     },
-    "shipType": "cruiser",
+    "shipType": "battleship",
     "economicType": "regular",
     "imageUrl": "ships/germ_battleship_helgoland.webp",
     "releaseDate": "2020-11-15"
@@ -927,7 +1182,7 @@
       "realistic": 6.7,
       "simulator": 6.7
     },
-    "shipType": "cruiser",
+    "shipType": "battleship",
     "economicType": "regular",
     "imageUrl": "ships/germ_battleship_kaiser.webp",
     "releaseDate": "2021-03-10"
@@ -944,7 +1199,7 @@
       "realistic": 6.7,
       "simulator": 6.7
     },
-    "shipType": "cruiser",
+    "shipType": "battleship",
     "economicType": "regular",
     "imageUrl": "ships/germ_battleship_konig.webp",
     "releaseDate": "2025-11-11"
@@ -961,7 +1216,7 @@
       "realistic": 6.0,
       "simulator": 6.0
     },
-    "shipType": "cruiser",
+    "shipType": "battleship",
     "economicType": "premium",
     "imageUrl": "ships/germ_battleship_nassau.webp",
     "releaseDate": "2023-09-19"
@@ -978,7 +1233,7 @@
       "realistic": 6.7,
       "simulator": 6.7
     },
-    "shipType": "cruiser",
+    "shipType": "battleship",
     "economicType": "regular",
     "imageUrl": "ships/germ_battleship_ostfriesland.webp",
     "releaseDate": "2022-09-22"
@@ -995,7 +1250,7 @@
       "realistic": 7.0,
       "simulator": 7.0
     },
-    "shipType": "cruiser",
+    "shipType": "battleship",
     "economicType": "regular",
     "imageUrl": "ships/germ_battleship_sachsen.webp",
     "releaseDate": "2023-10-31"
@@ -1012,7 +1267,7 @@
       "realistic": 7.3,
       "simulator": 7.3
     },
-    "shipType": "cruiser",
+    "shipType": "battlecruiser",
     "economicType": "regular",
     "imageUrl": "ships/germ_battleship_scharnhorst.webp",
     "releaseDate": "2021-12-17"
@@ -1029,7 +1284,7 @@
       "realistic": 6.0,
       "simulator": 6.0
     },
-    "shipType": "cruiser",
+    "shipType": "battleship",
     "economicType": "regular",
     "imageUrl": "ships/germ_battleship_westfalen.webp",
     "releaseDate": "2020-11-15"
@@ -1046,7 +1301,7 @@
       "realistic": 6.0,
       "simulator": 6.0
     },
-    "shipType": "cruiser",
+    "shipType": "heavy_cruiser",
     "economicType": "regular",
     "imageUrl": "ships/germ_cruiser_admiral_graf_spee.webp",
     "releaseDate": "2019-12-16"
@@ -1063,7 +1318,7 @@
       "realistic": 6.0,
       "simulator": 6.0
     },
-    "shipType": "cruiser",
+    "shipType": "heavy_cruiser",
     "economicType": "regular",
     "imageUrl": "ships/germ_cruiser_admiral_hipper.webp",
     "releaseDate": "2019-09-10"
@@ -1080,7 +1335,7 @@
       "realistic": 4.7,
       "simulator": 4.7
     },
-    "shipType": "cruiser",
+    "shipType": "light_cruiser",
     "economicType": "regular",
     "imageUrl": "ships/germ_cruiser_elbing.webp",
     "releaseDate": "2022-09-14"
@@ -1097,7 +1352,7 @@
       "realistic": 5.0,
       "simulator": 5.0
     },
-    "shipType": "cruiser",
+    "shipType": "light_cruiser",
     "economicType": "regular",
     "imageUrl": "ships/germ_cruiser_emden_1944.webp"
   },
@@ -1113,7 +1368,7 @@
       "realistic": 5.7,
       "simulator": 5.7
     },
-    "shipType": "cruiser",
+    "shipType": "light_cruiser",
     "economicType": "premium",
     "imageUrl": "ships/germ_cruiser_karlsruhe.webp",
     "releaseDate": "2021-09-07"
@@ -1130,7 +1385,7 @@
       "realistic": 5.3,
       "simulator": 5.3
     },
-    "shipType": "cruiser",
+    "shipType": "light_cruiser",
     "economicType": "regular",
     "imageUrl": "ships/germ_cruiser_koln.webp",
     "releaseDate": "2018-12-18"
@@ -1147,7 +1402,7 @@
       "realistic": 5.3,
       "simulator": 5.3
     },
-    "shipType": "cruiser",
+    "shipType": "light_cruiser",
     "economicType": "regular",
     "imageUrl": "ships/germ_cruiser_leipzig.webp",
     "releaseDate": "2020-03-10"
@@ -1164,7 +1419,7 @@
       "realistic": 5.7,
       "simulator": 5.7
     },
-    "shipType": "cruiser",
+    "shipType": "light_cruiser",
     "economicType": "regular",
     "imageUrl": "ships/germ_cruiser_nurnberg.webp",
     "releaseDate": "2019-03-12"
@@ -1181,7 +1436,7 @@
       "realistic": 6.0,
       "simulator": 6.0
     },
-    "shipType": "cruiser",
+    "shipType": "heavy_cruiser",
     "economicType": "premium",
     "imageUrl": "ships/germ_cruiser_prinz_eugen.webp",
     "releaseDate": "2019-12-16"
@@ -1534,7 +1789,7 @@
       "realistic": 4.7,
       "simulator": 4.7
     },
-    "shipType": "torpedo_boat",
+    "shipType": "frigate",
     "economicType": "regular",
     "imageUrl": "ships/germ_frigate_koln.webp",
     "releaseDate": "2020-03-10"
@@ -1551,7 +1806,7 @@
       "realistic": 4.7,
       "simulator": 4.7
     },
-    "shipType": "torpedo_boat",
+    "shipType": "frigate",
     "economicType": "premium",
     "imageUrl": "ships/germ_frigate_koln_lubeck.webp",
     "releaseDate": "2020-09-30"
@@ -1573,6 +1828,23 @@
     "imageUrl": "ships/germ_kanonenboot_k2.webp"
   },
   {
+    "id": "germ_km5",
+    "name": "germ_km5",
+    "localizedName": "KM 5",
+    "nation": "germany",
+    "rank": 1,
+    "battleRating": 1.7,
+    "br": {
+      "arcade": 1.7,
+      "realistic": 1.7,
+      "simulator": 1.7
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "premium",
+    "imageUrl": "ships/germ_km5.webp",
+    "releaseDate": "2022-09-14"
+  },
+  {
     "id": "germ_kondor2_class",
     "name": "germ_kondor2_class",
     "localizedName": "贝​尔​瑙",
@@ -1588,6 +1860,39 @@
     "economicType": "regular",
     "imageUrl": "ships/germ_kondor2_class.webp",
     "releaseDate": "2024-06-19"
+  },
+  {
+    "id": "germ_ls4_class",
+    "name": "germ_ls4_class",
+    "localizedName": "LS 4",
+    "nation": "germany",
+    "rank": 1,
+    "battleRating": 1.0,
+    "br": {
+      "arcade": 1.0,
+      "realistic": 1.0,
+      "simulator": 1.0
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "premium",
+    "imageUrl": "ships/germ_ls4_class.webp",
+    "releaseDate": "2018-10-23"
+  },
+  {
+    "id": "germ_ls_class",
+    "name": "germ_ls_class",
+    "localizedName": "LS 3",
+    "nation": "germany",
+    "rank": 1,
+    "battleRating": 1.0,
+    "br": {
+      "arcade": 1.0,
+      "realistic": 1.0,
+      "simulator": 1.0
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "premium",
+    "imageUrl": "ships/germ_ls_class.webp"
   },
   {
     "id": "germ_minelayer_drache",
@@ -1607,6 +1912,22 @@
     "releaseDate": "2023-09-19"
   },
   {
+    "id": "germ_mz_1",
+    "name": "germ_mz_1",
+    "localizedName": "MZ 1",
+    "nation": "germany",
+    "rank": 4,
+    "battleRating": 3.0,
+    "br": {
+      "arcade": 3.0,
+      "realistic": 3.0,
+      "simulator": 3.0
+    },
+    "shipType": "torpedo_gun_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/germ_mz_1.webp"
+  },
+  {
     "id": "germ_pr1331",
     "name": "germ_pr1331",
     "localizedName": "帕​尔​希​姆",
@@ -1618,10 +1939,222 @@
       "realistic": 4.0,
       "simulator": 4.0
     },
-    "shipType": "torpedo_boat",
+    "shipType": "frigate",
     "economicType": "regular",
     "imageUrl": "ships/germ_pr1331.webp",
     "releaseDate": "2025-12-16"
+  },
+  {
+    "id": "germ_pr_131",
+    "name": "germ_pr_131",
+    "localizedName": "蜻​蜓",
+    "nation": "germany",
+    "rank": 3,
+    "battleRating": 3.0,
+    "br": {
+      "arcade": 3.0,
+      "realistic": 3.0,
+      "simulator": 3.0
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/germ_pr_131.webp",
+    "releaseDate": "2022-12-20"
+  },
+  {
+    "id": "germ_pr_206",
+    "name": "germ_pr_206",
+    "localizedName": "◊​Pr.206",
+    "nation": "germany",
+    "rank": 5,
+    "battleRating": 4.3,
+    "br": {
+      "arcade": 4.3,
+      "realistic": 4.3,
+      "simulator": 4.3
+    },
+    "shipType": "torpedo_gun_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/germ_pr_206.webp"
+  },
+  {
+    "id": "germ_rboot_r130",
+    "name": "germ_rboot_r130",
+    "localizedName": "R 130",
+    "nation": "germany",
+    "rank": 2,
+    "battleRating": 2.0,
+    "br": {
+      "arcade": 1.7,
+      "realistic": 2.0,
+      "simulator": 1.7
+    },
+    "shipType": "gun_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/germ_rboot_r130.webp"
+  },
+  {
+    "id": "germ_rboot_r301",
+    "name": "germ_rboot_r301",
+    "localizedName": "R 301",
+    "nation": "germany",
+    "rank": 2,
+    "battleRating": 2.3,
+    "br": {
+      "arcade": 2.3,
+      "realistic": 2.3,
+      "simulator": 2.3
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/germ_rboot_r301.webp"
+  },
+  {
+    "id": "germ_rboot_r41",
+    "name": "germ_rboot_r41",
+    "localizedName": "R 41",
+    "nation": "germany",
+    "rank": 1,
+    "battleRating": 1.0,
+    "br": {
+      "arcade": 1.0,
+      "realistic": 1.0,
+      "simulator": 1.0
+    },
+    "shipType": "gun_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/germ_rboot_r41.webp"
+  },
+  {
+    "id": "germ_rdm242",
+    "name": "germ_rdm242",
+    "localizedName": "大​克​里​尚",
+    "nation": "germany",
+    "rank": 4,
+    "battleRating": 2.7,
+    "br": {
+      "arcade": 2.7,
+      "realistic": 2.7,
+      "simulator": 2.7
+    },
+    "shipType": "gun_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/germ_rdm242.webp",
+    "releaseDate": "2021-12-17"
+  },
+  {
+    "id": "germ_s30_s61",
+    "name": "germ_s30_s61",
+    "localizedName": "S-61",
+    "nation": "germany",
+    "rank": 2,
+    "battleRating": 1.7,
+    "br": {
+      "arcade": 1.7,
+      "realistic": 1.7,
+      "simulator": 1.7
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/germ_s30_s61.webp",
+    "releaseDate": "2026-03-10"
+  },
+  {
+    "id": "germ_s38",
+    "name": "germ_s38",
+    "localizedName": "S 38",
+    "nation": "germany",
+    "rank": 1,
+    "battleRating": 1.0,
+    "br": {
+      "arcade": 1.0,
+      "realistic": 1.0,
+      "simulator": 1.0
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "premium",
+    "imageUrl": "ships/germ_s38.webp"
+  },
+  {
+    "id": "germ_s38b",
+    "name": "germ_s38b",
+    "localizedName": "S 38b",
+    "nation": "germany",
+    "rank": 2,
+    "battleRating": 1.7,
+    "br": {
+      "arcade": 1.7,
+      "realistic": 1.7,
+      "simulator": 1.7
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/germ_s38b.webp"
+  },
+  {
+    "id": "germ_s_100_class",
+    "name": "germ_s_100_class",
+    "localizedName": "S 100",
+    "nation": "germany",
+    "rank": 2,
+    "battleRating": 2.3,
+    "br": {
+      "arcade": 2.3,
+      "realistic": 2.3,
+      "simulator": 2.3
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/germ_s_100_class.webp"
+  },
+  {
+    "id": "germ_s_100_s204_lang",
+    "name": "germ_s_100_s204_lang",
+    "localizedName": "S 204",
+    "nation": "germany",
+    "rank": 3,
+    "battleRating": 2.3,
+    "br": {
+      "arcade": 2.3,
+      "realistic": 2.3,
+      "simulator": 2.3
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "premium",
+    "imageUrl": "ships/germ_s_100_s204_lang.webp"
+  },
+  {
+    "id": "germ_s_100_s_174_class",
+    "name": "germ_s_100_s_174_class",
+    "localizedName": "S 147",
+    "nation": "germany",
+    "rank": 3,
+    "battleRating": 2.7,
+    "br": {
+      "arcade": 2.7,
+      "realistic": 2.7,
+      "simulator": 2.7
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/germ_s_100_s_174_class.webp"
+  },
+  {
+    "id": "germ_s_700_s_701",
+    "name": "germ_s_700_s_701",
+    "localizedName": "S 701",
+    "nation": "germany",
+    "rank": 3,
+    "battleRating": 2.7,
+    "br": {
+      "arcade": 2.7,
+      "realistic": 2.7,
+      "simulator": 2.7
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "premium",
+    "imageUrl": "ships/germ_s_700_s_701.webp",
+    "releaseDate": "2023-04-26"
   },
   {
     "id": "germ_schutze_class",
@@ -1684,10 +2217,160 @@
       "realistic": 4.0,
       "simulator": 4.0
     },
-    "shipType": "torpedo_boat",
+    "shipType": "frigate",
     "economicType": "clan",
     "imageUrl": "ships/germ_skr_pr50_karl_marx.webp",
     "releaseDate": "2022-03-22"
+  },
+  {
+    "id": "germ_type140_jaguar",
+    "name": "germ_type140_jaguar",
+    "localizedName": "美​洲​豹",
+    "nation": "germany",
+    "rank": 5,
+    "battleRating": 4.0,
+    "br": {
+      "arcade": 4.3,
+      "realistic": 4.0,
+      "simulator": 4.0
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/germ_type140_jaguar.webp"
+  },
+  {
+    "id": "germ_type143_albatros",
+    "name": "germ_type143_albatros",
+    "localizedName": "信​天​翁",
+    "nation": "germany",
+    "rank": 5,
+    "battleRating": 3.7,
+    "br": {
+      "arcade": 3.7,
+      "realistic": 3.7,
+      "simulator": 3.7
+    },
+    "shipType": "torpedo_gun_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/germ_type143_albatros.webp"
+  },
+  {
+    "id": "germ_type143_bussard",
+    "name": "germ_type143_bussard",
+    "localizedName": "美​洲​鹰",
+    "nation": "germany",
+    "rank": 5,
+    "battleRating": 3.7,
+    "br": {
+      "arcade": 3.7,
+      "realistic": 3.7,
+      "simulator": 3.7
+    },
+    "shipType": "torpedo_gun_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/germ_type143_bussard.webp",
+    "releaseDate": "2021-08-06"
+  },
+  {
+    "id": "germ_type152_hugin",
+    "name": "germ_type152_hugin",
+    "localizedName": "福​金",
+    "nation": "germany",
+    "rank": 5,
+    "battleRating": 4.0,
+    "br": {
+      "arcade": 4.3,
+      "realistic": 4.0,
+      "simulator": 4.0
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/germ_type152_hugin.webp",
+    "releaseDate": "2022-10-26"
+  },
+  {
+    "id": "germ_type153_pfeil",
+    "name": "germ_type153_pfeil",
+    "localizedName": "◄​箭",
+    "nation": "germany",
+    "rank": 5,
+    "battleRating": 4.3,
+    "br": {
+      "arcade": 4.3,
+      "realistic": 4.3,
+      "simulator": 4.3
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/germ_type153_pfeil.webp",
+    "releaseDate": "2023-03-07"
+  },
+  {
+    "id": "germ_vs10_hydrofoil",
+    "name": "germ_vs10_hydrofoil",
+    "localizedName": "VS 10",
+    "nation": "germany",
+    "rank": 4,
+    "battleRating": 3.0,
+    "br": {
+      "arcade": 3.0,
+      "realistic": 3.0,
+      "simulator": 3.0
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/germ_vs10_hydrofoil.webp"
+  },
+  {
+    "id": "germ_vs8_hydrofoil",
+    "name": "germ_vs8_hydrofoil",
+    "localizedName": "VS 8",
+    "nation": "germany",
+    "rank": 3,
+    "battleRating": 2.7,
+    "br": {
+      "arcade": 2.7,
+      "realistic": 2.7,
+      "simulator": 2.7
+    },
+    "shipType": "boat",
+    "economicType": "premium",
+    "imageUrl": "ships/germ_vs8_hydrofoil.webp",
+    "releaseDate": "2021-06-02"
+  },
+  {
+    "id": "it_a1_vosper",
+    "name": "it_a1_vosper",
+    "localizedName": "GIS811",
+    "nation": "italy",
+    "rank": 3,
+    "battleRating": 2.3,
+    "br": {
+      "arcade": 2.3,
+      "realistic": 2.3,
+      "simulator": 2.3
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/it_a1_vosper.webp",
+    "releaseDate": "2020-06-01"
+  },
+  {
+    "id": "it_alano_9851",
+    "name": "it_alano_9851",
+    "localizedName": "阿​拉​诺",
+    "nation": "italy",
+    "rank": 5,
+    "battleRating": 3.7,
+    "br": {
+      "arcade": 3.7,
+      "realistic": 3.7,
+      "simulator": 3.7
+    },
+    "shipType": "gun_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/it_alano_9851.webp",
+    "releaseDate": "2024-06-19"
   },
   {
     "id": "it_albatros_class_f543",
@@ -1701,7 +2384,7 @@
       "realistic": 4.0,
       "simulator": 4.0
     },
-    "shipType": "torpedo_boat",
+    "shipType": "frigate",
     "economicType": "regular",
     "imageUrl": "ships/it_albatros_class_f543.webp",
     "releaseDate": "2022-03-22"
@@ -1718,7 +2401,7 @@
       "realistic": 4.0,
       "simulator": 4.0
     },
-    "shipType": "torpedo_boat",
+    "shipType": "frigate",
     "economicType": "regular",
     "imageUrl": "ships/it_albatros_class_f544.webp",
     "releaseDate": "2024-07-24"
@@ -1735,7 +2418,7 @@
       "realistic": 6.3,
       "simulator": 6.3
     },
-    "shipType": "cruiser",
+    "shipType": "battleship",
     "economicType": "regular",
     "imageUrl": "ships/it_battleship_andrea_doria.webp",
     "releaseDate": "2022-09-14"
@@ -1752,7 +2435,7 @@
       "realistic": 7.3,
       "simulator": 7.3
     },
-    "shipType": "cruiser",
+    "shipType": "battleship",
     "economicType": "regular",
     "imageUrl": "ships/it_battleship_caio_duilio.webp",
     "releaseDate": "2023-03-07"
@@ -1769,7 +2452,7 @@
       "realistic": 7.3,
       "simulator": 7.3
     },
-    "shipType": "cruiser",
+    "shipType": "battleship",
     "economicType": "regular",
     "imageUrl": "ships/it_battleship_conte_di_cavour.webp",
     "releaseDate": "2023-10-31"
@@ -1786,7 +2469,7 @@
       "realistic": 6.3,
       "simulator": 6.3
     },
-    "shipType": "cruiser",
+    "shipType": "battleship",
     "economicType": "regular",
     "imageUrl": "ships/it_battleship_dante_alighieri.webp",
     "releaseDate": "2021-06-02"
@@ -1803,7 +2486,7 @@
       "realistic": 6.7,
       "simulator": 6.7
     },
-    "shipType": "cruiser",
+    "shipType": "battleship",
     "economicType": "regular",
     "imageUrl": "ships/it_battleship_francesco_caracciolo.webp",
     "releaseDate": "2024-11-19"
@@ -1820,7 +2503,7 @@
       "realistic": 6.3,
       "simulator": 6.3
     },
-    "shipType": "cruiser",
+    "shipType": "battleship",
     "economicType": "premium",
     "imageUrl": "ships/it_battleship_leonardo_da_vinci.webp",
     "releaseDate": "2023-12-14"
@@ -1837,7 +2520,7 @@
       "realistic": 8.3,
       "simulator": 8.3
     },
-    "shipType": "cruiser",
+    "shipType": "battleship",
     "economicType": "regular",
     "imageUrl": "ships/it_battleship_littorio_class_littorio.webp",
     "releaseDate": "2025-11-11"
@@ -1854,7 +2537,7 @@
       "realistic": 8.3,
       "simulator": 8.3
     },
-    "shipType": "cruiser",
+    "shipType": "battleship",
     "economicType": "regular",
     "imageUrl": "ships/it_battleship_littorio_class_roma.webp",
     "releaseDate": "2025-06-25"
@@ -1871,7 +2554,7 @@
       "realistic": 3.7,
       "simulator": 3.7
     },
-    "shipType": "torpedo_boat",
+    "shipType": "frigate",
     "economicType": "regular",
     "imageUrl": "ships/it_cassiopea_p401.webp",
     "releaseDate": "2025-12-16"
@@ -1888,7 +2571,7 @@
       "realistic": 3.7,
       "simulator": 3.7
     },
-    "shipType": "torpedo_boat",
+    "shipType": "frigate",
     "economicType": "regular",
     "imageUrl": "ships/it_ciclone_class_ghibli.webp",
     "releaseDate": "2024-12-16"
@@ -1905,7 +2588,7 @@
       "realistic": 5.0,
       "simulator": 5.0
     },
-    "shipType": "cruiser",
+    "shipType": "light_cruiser",
     "economicType": "regular",
     "imageUrl": "ships/it_cruiser_bartolomeocolleoni_1940.webp",
     "releaseDate": "2020-06-01"
@@ -1922,7 +2605,7 @@
       "realistic": 5.7,
       "simulator": 5.7
     },
-    "shipType": "cruiser",
+    "shipType": "heavy_cruiser",
     "economicType": "regular",
     "imageUrl": "ships/it_cruiser_bolzano.webp",
     "releaseDate": "2024-03-13"
@@ -1939,7 +2622,7 @@
       "realistic": 5.0,
       "simulator": 5.0
     },
-    "shipType": "cruiser",
+    "shipType": "light_cruiser",
     "economicType": "premium",
     "imageUrl": "ships/it_cruiser_cadorna_class_cadorna.webp",
     "releaseDate": "2025-10-22"
@@ -1956,7 +2639,7 @@
       "realistic": 5.0,
       "simulator": 5.0
     },
-    "shipType": "cruiser",
+    "shipType": "light_cruiser",
     "economicType": "regular",
     "imageUrl": "ships/it_cruiser_cadorna_class_diaz.webp",
     "releaseDate": "2025-12-16"
@@ -1973,7 +2656,7 @@
       "realistic": 4.7,
       "simulator": 4.7
     },
-    "shipType": "cruiser",
+    "shipType": "light_cruiser",
     "economicType": "regular",
     "imageUrl": "ships/it_cruiser_capitani_romani_class_attilio_regolo.webp",
     "releaseDate": "2020-06-01"
@@ -1990,7 +2673,7 @@
       "realistic": 4.7,
       "simulator": 4.7
     },
-    "shipType": "cruiser",
+    "shipType": "light_cruiser",
     "economicType": "regular",
     "imageUrl": "ships/it_cruiser_etna_class.webp",
     "releaseDate": "2021-03-10"
@@ -2007,7 +2690,7 @@
       "realistic": 5.7,
       "simulator": 5.7
     },
-    "shipType": "cruiser",
+    "shipType": "light_cruiser",
     "economicType": "regular",
     "imageUrl": "ships/it_cruiser_eugenio_di_savoia.webp",
     "releaseDate": "2021-12-17"
@@ -2024,7 +2707,7 @@
       "realistic": 5.7,
       "simulator": 5.7
     },
-    "shipType": "cruiser",
+    "shipType": "light_cruiser",
     "economicType": "regular",
     "imageUrl": "ships/it_cruiser_garibaldi_class_abruzzi.webp",
     "releaseDate": "2022-12-20"
@@ -2041,7 +2724,7 @@
       "realistic": 5.3,
       "simulator": 5.3
     },
-    "shipType": "cruiser",
+    "shipType": "light_cruiser",
     "economicType": "regular",
     "imageUrl": "ships/it_cruiser_montecuccoli.webp",
     "releaseDate": "2020-06-01"
@@ -2058,7 +2741,7 @@
       "realistic": 5.3,
       "simulator": 5.3
     },
-    "shipType": "cruiser",
+    "shipType": "heavy_cruiser",
     "economicType": "regular",
     "imageUrl": "ships/it_cruiser_trento.webp",
     "releaseDate": "2020-06-01"
@@ -2075,7 +2758,7 @@
       "realistic": 6.0,
       "simulator": 6.0
     },
-    "shipType": "cruiser",
+    "shipType": "heavy_cruiser",
     "economicType": "regular",
     "imageUrl": "ships/it_cruiser_zara_class.webp",
     "releaseDate": "2020-09-08"
@@ -2092,7 +2775,7 @@
       "realistic": 6.0,
       "simulator": 6.0
     },
-    "shipType": "cruiser",
+    "shipType": "heavy_cruiser",
     "economicType": "premium",
     "imageUrl": "ships/it_cruiser_zara_class_pola.webp",
     "releaseDate": "2020-12-17"
@@ -2404,6 +3087,346 @@
     "releaseDate": "2022-10-26"
   },
   {
+    "id": "it_mas441",
+    "name": "it_mas441",
+    "localizedName": "MAS 441",
+    "nation": "italy",
+    "rank": 2,
+    "battleRating": 2.0,
+    "br": {
+      "arcade": 2.0,
+      "realistic": 2.0,
+      "simulator": 2.0
+    },
+    "shipType": "gun_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/it_mas441.webp",
+    "releaseDate": "2024-09-10"
+  },
+  {
+    "id": "it_mas_classe500_3",
+    "name": "it_mas_classe500_3",
+    "localizedName": "MAS555",
+    "nation": "italy",
+    "rank": 1,
+    "battleRating": 1.0,
+    "br": {
+      "arcade": 1.0,
+      "realistic": 1.0,
+      "simulator": 1.0
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/it_mas_classe500_3.webp",
+    "releaseDate": "2020-06-01"
+  },
+  {
+    "id": "it_mas_classe500_3_1944",
+    "name": "it_mas_classe500_3_1944",
+    "localizedName": "MAS561",
+    "nation": "italy",
+    "rank": 1,
+    "battleRating": 1.0,
+    "br": {
+      "arcade": 1.0,
+      "realistic": 1.0,
+      "simulator": 1.0
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "premium",
+    "imageUrl": "ships/it_mas_classe500_3_1944.webp",
+    "releaseDate": "2020-09-08"
+  },
+  {
+    "id": "it_mas_classe500_4",
+    "name": "it_mas_classe500_4",
+    "localizedName": "MAS569",
+    "nation": "italy",
+    "rank": 1,
+    "battleRating": 1.0,
+    "br": {
+      "arcade": 1.0,
+      "realistic": 1.0,
+      "simulator": 1.0
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "premium",
+    "imageUrl": "ships/it_mas_classe500_4.webp",
+    "releaseDate": "2020-06-01"
+  },
+  {
+    "id": "it_mas_stefano_turr",
+    "name": "it_mas_stefano_turr",
+    "localizedName": "斯​特​凡​诺·蒂​尔",
+    "nation": "italy",
+    "rank": 2,
+    "battleRating": 1.7,
+    "br": {
+      "arcade": 1.7,
+      "realistic": 1.7,
+      "simulator": 1.7
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/it_mas_stefano_turr.webp",
+    "releaseDate": "2020-06-01"
+  },
+  {
+    "id": "it_mc490_folgore",
+    "name": "it_mc490_folgore",
+    "localizedName": "MC490",
+    "nation": "italy",
+    "rank": 4,
+    "battleRating": 3.3,
+    "br": {
+      "arcade": 3.3,
+      "realistic": 3.3,
+      "simulator": 3.3
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/it_mc490_folgore.webp",
+    "releaseDate": "2020-06-01"
+  },
+  {
+    "id": "it_mc492_baleno",
+    "name": "it_mc492_baleno",
+    "localizedName": "MC-492",
+    "nation": "italy",
+    "rank": 4,
+    "battleRating": 3.3,
+    "br": {
+      "arcade": 3.3,
+      "realistic": 3.3,
+      "simulator": 3.3
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/it_mc492_baleno.webp",
+    "releaseDate": "2025-09-23"
+  },
+  {
+    "id": "it_mc_485",
+    "name": "it_mc_485",
+    "localizedName": "MC-485",
+    "nation": "italy",
+    "rank": 3,
+    "battleRating": 2.7,
+    "br": {
+      "arcade": 2.7,
+      "realistic": 2.7,
+      "simulator": 2.7
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "premium",
+    "imageUrl": "ships/it_mc_485.webp",
+    "releaseDate": "2023-07-26"
+  },
+  {
+    "id": "it_ms15_1a",
+    "name": "it_ms15_1a",
+    "localizedName": "MS15",
+    "nation": "italy",
+    "rank": 2,
+    "battleRating": 1.3,
+    "br": {
+      "arcade": 1.3,
+      "realistic": 1.3,
+      "simulator": 1.3
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/it_ms15_1a.webp",
+    "releaseDate": "2020-06-01"
+  },
+  {
+    "id": "it_ms444",
+    "name": "it_ms444",
+    "localizedName": "MS 444",
+    "nation": "italy",
+    "rank": 3,
+    "battleRating": 2.7,
+    "br": {
+      "arcade": 2.7,
+      "realistic": 2.7,
+      "simulator": 2.7
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "premium",
+    "imageUrl": "ships/it_ms444.webp",
+    "releaseDate": "2024-11-19"
+  },
+  {
+    "id": "it_ms471_1a",
+    "name": "it_ms471_1a",
+    "localizedName": "MV611",
+    "nation": "italy",
+    "rank": 3,
+    "battleRating": 2.3,
+    "br": {
+      "arcade": 2.3,
+      "realistic": 2.3,
+      "simulator": 2.3
+    },
+    "shipType": "gun_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/it_ms471_1a.webp",
+    "releaseDate": "2020-06-01"
+  },
+  {
+    "id": "it_ms473_2a",
+    "name": "it_ms473_2a",
+    "localizedName": "MS472",
+    "nation": "italy",
+    "rank": 3,
+    "battleRating": 2.3,
+    "br": {
+      "arcade": 2.3,
+      "realistic": 2.3,
+      "simulator": 2.3
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/it_ms473_2a.webp",
+    "releaseDate": "2020-06-01"
+  },
+  {
+    "id": "it_ms473_2a_art",
+    "name": "it_ms473_2a_art",
+    "localizedName": "MS473",
+    "nation": "italy",
+    "rank": 4,
+    "battleRating": 3.0,
+    "br": {
+      "arcade": 3.0,
+      "realistic": 3.0,
+      "simulator": 3.0
+    },
+    "shipType": "gun_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/it_ms473_2a_art.webp",
+    "releaseDate": "2020-06-01"
+  },
+  {
+    "id": "it_ms53_2a",
+    "name": "it_ms53_2a",
+    "localizedName": "MS53",
+    "nation": "italy",
+    "rank": 2,
+    "battleRating": 1.7,
+    "br": {
+      "arcade": 1.7,
+      "realistic": 1.7,
+      "simulator": 1.7
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/it_ms53_2a.webp",
+    "releaseDate": "2020-06-01"
+  },
+  {
+    "id": "it_p420_sparviero",
+    "name": "it_p420_sparviero",
+    "localizedName": "食​雀​鹰",
+    "nation": "italy",
+    "rank": 4,
+    "battleRating": 3.7,
+    "br": {
+      "arcade": 3.7,
+      "realistic": 3.7,
+      "simulator": 3.7
+    },
+    "shipType": "gun_boat",
+    "economicType": "premium",
+    "imageUrl": "ships/it_p420_sparviero.webp",
+    "releaseDate": "2020-06-01"
+  },
+  {
+    "id": "it_p493_freccia",
+    "name": "it_p493_freccia",
+    "localizedName": "箭 (P-493)",
+    "nation": "italy",
+    "rank": 4,
+    "battleRating": 4.7,
+    "br": {
+      "arcade": 4.7,
+      "realistic": 4.7,
+      "simulator": 4.7
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "premium",
+    "imageUrl": "ships/it_p493_freccia.webp",
+    "releaseDate": "2020-08-25"
+  },
+  {
+    "id": "it_p494_saetta",
+    "name": "it_p494_saetta",
+    "localizedName": "矢",
+    "nation": "italy",
+    "rank": 5,
+    "battleRating": 4.7,
+    "br": {
+      "arcade": 4.7,
+      "realistic": 4.7,
+      "simulator": 4.7
+    },
+    "shipType": "torpedo_gun_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/it_p494_saetta.webp",
+    "releaseDate": "2020-06-01"
+  },
+  {
+    "id": "it_vas_baglietto_68t_1serie",
+    "name": "it_vas_baglietto_68t_1serie",
+    "localizedName": "VAS201",
+    "nation": "italy",
+    "rank": 1,
+    "battleRating": 1.3,
+    "br": {
+      "arcade": 1.3,
+      "realistic": 1.3,
+      "simulator": 1.3
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/it_vas_baglietto_68t_1serie.webp",
+    "releaseDate": "2020-06-01"
+  },
+  {
+    "id": "jp_abtei_pr1",
+    "name": "jp_abtei_pr1",
+    "localizedName": "装​甲​艇 1 号",
+    "nation": "japan",
+    "rank": 1,
+    "battleRating": 1.0,
+    "br": {
+      "arcade": 1.0,
+      "realistic": 1.0,
+      "simulator": 1.0
+    },
+    "shipType": "armored_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/jp_abtei_pr1.webp",
+    "releaseDate": "2019-05-28"
+  },
+  {
+    "id": "jp_abtei_pr4",
+    "name": "jp_abtei_pr4",
+    "localizedName": "装​甲​艇 4 号",
+    "nation": "japan",
+    "rank": 2,
+    "battleRating": 1.3,
+    "br": {
+      "arcade": 1.3,
+      "realistic": 1.3,
+      "simulator": 1.3
+    },
+    "shipType": "armored_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/jp_abtei_pr4.webp",
+    "releaseDate": "2019-05-28"
+  },
+  {
     "id": "jp_armoredcruiser_ikoma",
     "name": "jp_armoredcruiser_ikoma",
     "localizedName": "生​驹",
@@ -2415,7 +3438,7 @@
       "realistic": 5.7,
       "simulator": 5.7
     },
-    "shipType": "cruiser",
+    "shipType": "battlecruiser",
     "economicType": "regular",
     "imageUrl": "ships/jp_armoredcruiser_ikoma.webp",
     "releaseDate": "2020-11-15"
@@ -2432,7 +3455,7 @@
       "realistic": 5.7,
       "simulator": 5.7
     },
-    "shipType": "cruiser",
+    "shipType": "battlecruiser",
     "economicType": "regular",
     "imageUrl": "ships/jp_armoredcruiser_kurama.webp",
     "releaseDate": "2023-09-26"
@@ -2449,7 +3472,7 @@
       "realistic": 8.0,
       "simulator": 8.0
     },
-    "shipType": "cruiser",
+    "shipType": "battlecruiser",
     "economicType": "regular",
     "imageUrl": "ships/jp_battlecruiser_amagi.webp",
     "releaseDate": "2024-09-10"
@@ -2466,7 +3489,7 @@
       "realistic": 7.3,
       "simulator": 7.3
     },
-    "shipType": "cruiser",
+    "shipType": "battleship",
     "economicType": "regular",
     "imageUrl": "ships/jp_battlecruiser_haruna.webp",
     "releaseDate": "2022-08-23"
@@ -2483,7 +3506,7 @@
       "realistic": 6.7,
       "simulator": 6.7
     },
-    "shipType": "cruiser",
+    "shipType": "battlecruiser",
     "economicType": "regular",
     "imageUrl": "ships/jp_battlecruiser_hiei.webp",
     "releaseDate": "2025-09-23"
@@ -2500,7 +3523,7 @@
       "realistic": 7.3,
       "simulator": 7.3
     },
-    "shipType": "cruiser",
+    "shipType": "battleship",
     "economicType": "regular",
     "imageUrl": "ships/jp_battlecruiser_kirishima.webp",
     "releaseDate": "2024-12-20"
@@ -2517,7 +3540,7 @@
       "realistic": 7.3,
       "simulator": 7.3
     },
-    "shipType": "cruiser",
+    "shipType": "battleship",
     "economicType": "regular",
     "imageUrl": "ships/jp_battlecruiser_kongo.webp",
     "releaseDate": "2022-03-22"
@@ -2534,7 +3557,7 @@
       "realistic": 7.7,
       "simulator": 7.7
     },
-    "shipType": "cruiser",
+    "shipType": "battleship",
     "economicType": "regular",
     "imageUrl": "ships/jp_battleship_fuso.webp",
     "releaseDate": "2022-10-26"
@@ -2551,7 +3574,7 @@
       "realistic": 7.0,
       "simulator": 7.0
     },
-    "shipType": "cruiser",
+    "shipType": "battleship",
     "economicType": "regular",
     "imageUrl": "ships/jp_battleship_hyuga.webp",
     "releaseDate": "2020-12-17"
@@ -2568,7 +3591,7 @@
       "realistic": 7.7,
       "simulator": 7.7
     },
-    "shipType": "cruiser",
+    "shipType": "battleship",
     "economicType": "regular",
     "imageUrl": "ships/jp_battleship_ise.webp",
     "releaseDate": "2023-06-14"
@@ -2585,7 +3608,7 @@
       "realistic": 8.7,
       "simulator": 8.7
     },
-    "shipType": "cruiser",
+    "shipType": "battleship",
     "economicType": "regular",
     "imageUrl": "ships/jp_battleship_musashi.webp",
     "releaseDate": "2025-11-11"
@@ -2602,7 +3625,7 @@
       "realistic": 8.0,
       "simulator": 8.0
     },
-    "shipType": "cruiser",
+    "shipType": "battleship",
     "economicType": "regular",
     "imageUrl": "ships/jp_battleship_mutsu.webp",
     "releaseDate": "2024-03-13"
@@ -2619,7 +3642,7 @@
       "realistic": 8.3,
       "simulator": 8.3
     },
-    "shipType": "cruiser",
+    "shipType": "battleship",
     "economicType": "premium",
     "imageUrl": "ships/jp_battleship_nagato.webp",
     "releaseDate": "2025-11-11"
@@ -2636,7 +3659,7 @@
       "realistic": 6.3,
       "simulator": 6.3
     },
-    "shipType": "cruiser",
+    "shipType": "battleship",
     "economicType": "regular",
     "imageUrl": "ships/jp_battleship_settsu.webp",
     "releaseDate": "2020-11-15"
@@ -2653,7 +3676,7 @@
       "realistic": 8.0,
       "simulator": 8.0
     },
-    "shipType": "cruiser",
+    "shipType": "battleship",
     "economicType": "regular",
     "imageUrl": "ships/jp_battleship_tosa.webp",
     "releaseDate": "2025-12-16"
@@ -2670,7 +3693,7 @@
       "realistic": 7.0,
       "simulator": 7.0
     },
-    "shipType": "cruiser",
+    "shipType": "battleship",
     "economicType": "premium",
     "imageUrl": "ships/jp_battleship_yamashiro.webp",
     "releaseDate": "2023-10-31"
@@ -2687,7 +3710,7 @@
       "realistic": 8.7,
       "simulator": 8.7
     },
-    "shipType": "cruiser",
+    "shipType": "battleship",
     "economicType": "regular",
     "imageUrl": "ships/jp_battleship_yamato.webp",
     "releaseDate": "2025-06-25"
@@ -2704,7 +3727,7 @@
       "realistic": 5.3,
       "simulator": 5.3
     },
-    "shipType": "cruiser",
+    "shipType": "light_cruiser",
     "economicType": "regular",
     "imageUrl": "ships/jp_cruiser_agano.webp",
     "releaseDate": "2019-05-28"
@@ -2721,7 +3744,7 @@
       "realistic": 5.7,
       "simulator": 5.7
     },
-    "shipType": "cruiser",
+    "shipType": "heavy_cruiser",
     "economicType": "regular",
     "imageUrl": "ships/jp_cruiser_aoba.webp",
     "releaseDate": "2021-09-07"
@@ -2738,7 +3761,7 @@
       "realistic": 5.7,
       "simulator": 5.7
     },
-    "shipType": "cruiser",
+    "shipType": "heavy_cruiser",
     "economicType": "regular",
     "imageUrl": "ships/jp_cruiser_furutaka.webp",
     "releaseDate": "2019-05-28"
@@ -2755,7 +3778,7 @@
       "realistic": 6.0,
       "simulator": 6.0
     },
-    "shipType": "cruiser",
+    "shipType": "heavy_cruiser",
     "economicType": "regular",
     "imageUrl": "ships/jp_cruiser_haguro.webp",
     "releaseDate": "2024-06-19"
@@ -2772,7 +3795,7 @@
       "realistic": 4.7,
       "simulator": 4.7
     },
-    "shipType": "cruiser",
+    "shipType": "light_cruiser",
     "economicType": "regular",
     "imageUrl": "ships/jp_cruiser_isuzu.webp",
     "releaseDate": "2021-03-10"
@@ -2789,7 +3812,7 @@
       "realistic": 5.0,
       "simulator": 5.0
     },
-    "shipType": "cruiser",
+    "shipType": "heavy_cruiser",
     "economicType": "regular",
     "imageUrl": "ships/jp_cruiser_kako.webp",
     "releaseDate": "2019-05-28"
@@ -2806,7 +3829,7 @@
       "realistic": 5.0,
       "simulator": 5.0
     },
-    "shipType": "cruiser",
+    "shipType": "light_cruiser",
     "economicType": "regular",
     "imageUrl": "ships/jp_cruiser_kuma.webp",
     "releaseDate": "2019-05-28"
@@ -2823,7 +3846,7 @@
       "realistic": 6.0,
       "simulator": 6.0
     },
-    "shipType": "cruiser",
+    "shipType": "heavy_cruiser",
     "economicType": "regular",
     "imageUrl": "ships/jp_cruiser_mogami.webp",
     "releaseDate": "2019-09-10"
@@ -2840,7 +3863,7 @@
       "realistic": 6.0,
       "simulator": 6.0
     },
-    "shipType": "cruiser",
+    "shipType": "light_cruiser",
     "economicType": "premium",
     "imageUrl": "ships/jp_cruiser_mogami_mikuma.webp",
     "releaseDate": "2020-03-10"
@@ -2857,7 +3880,7 @@
       "realistic": 6.0,
       "simulator": 6.0
     },
-    "shipType": "cruiser",
+    "shipType": "light_cruiser",
     "economicType": "regular",
     "imageUrl": "ships/jp_cruiser_mogami_suzuya.webp",
     "releaseDate": "2019-12-16"
@@ -2874,7 +3897,7 @@
       "realistic": 6.0,
       "simulator": 6.0
     },
-    "shipType": "cruiser",
+    "shipType": "heavy_cruiser",
     "economicType": "premium",
     "imageUrl": "ships/jp_cruiser_myoko.webp",
     "releaseDate": "2022-12-20"
@@ -2891,7 +3914,7 @@
       "realistic": 5.3,
       "simulator": 5.3
     },
-    "shipType": "cruiser",
+    "shipType": "light_cruiser",
     "economicType": "regular",
     "imageUrl": "ships/jp_cruiser_oyodo.webp",
     "releaseDate": "2025-12-16"
@@ -2908,7 +3931,7 @@
       "realistic": 5.0,
       "simulator": 5.0
     },
-    "shipType": "cruiser",
+    "shipType": "light_cruiser",
     "economicType": "regular",
     "imageUrl": "ships/jp_cruiser_sendai.webp",
     "releaseDate": "2019-12-16"
@@ -2925,7 +3948,7 @@
       "realistic": 6.0,
       "simulator": 6.0
     },
-    "shipType": "cruiser",
+    "shipType": "heavy_cruiser",
     "economicType": "regular",
     "imageUrl": "ships/jp_cruiser_tone.webp",
     "releaseDate": "2020-06-01"
@@ -2942,7 +3965,7 @@
       "realistic": 4.7,
       "simulator": 4.7
     },
-    "shipType": "cruiser",
+    "shipType": "light_cruiser",
     "economicType": "premium",
     "imageUrl": "ships/jp_cruiser_yubari.webp",
     "releaseDate": "2021-09-07"
@@ -2976,7 +3999,7 @@
       "realistic": 4.3,
       "simulator": 4.3
     },
-    "shipType": "torpedo_boat",
+    "shipType": "frigate",
     "economicType": "regular",
     "imageUrl": "ships/jp_destroyer_ayanami.webp",
     "releaseDate": "2022-06-15"
@@ -2993,7 +4016,7 @@
       "realistic": 3.7,
       "simulator": 3.7
     },
-    "shipType": "torpedo_boat",
+    "shipType": "frigate",
     "economicType": "regular",
     "imageUrl": "ships/jp_destroyer_chidori.webp",
     "releaseDate": "2020-09-08"
@@ -3095,7 +4118,7 @@
       "realistic": 3.7,
       "simulator": 3.7
     },
-    "shipType": "torpedo_boat",
+    "shipType": "frigate",
     "economicType": "regular",
     "imageUrl": "ships/jp_destroyer_isuzu.webp",
     "releaseDate": "2019-12-16"
@@ -3349,7 +4372,7 @@
       "realistic": 3.3,
       "simulator": 3.3
     },
-    "shipType": "torpedo_boat",
+    "shipType": "frigate",
     "economicType": "premium",
     "imageUrl": "ships/jp_escort_akebono_class.webp",
     "releaseDate": "2020-09-08"
@@ -3366,7 +4389,7 @@
       "realistic": 3.3,
       "simulator": 3.3
     },
-    "shipType": "torpedo_boat",
+    "shipType": "frigate",
     "economicType": "regular",
     "imageUrl": "ships/jp_escort_chikugo_class.webp",
     "releaseDate": "2019-05-28"
@@ -3383,7 +4406,7 @@
       "realistic": 3.3,
       "simulator": 3.3
     },
-    "shipType": "torpedo_boat",
+    "shipType": "frigate",
     "economicType": "regular",
     "imageUrl": "ships/jp_escort_hiburi_class_shisaka.webp",
     "releaseDate": "2025-07-23"
@@ -3400,7 +4423,7 @@
       "realistic": 3.3,
       "simulator": 3.3
     },
-    "shipType": "torpedo_boat",
+    "shipType": "frigate",
     "economicType": "regular",
     "imageUrl": "ships/jp_escort_hiburi_class_syonan.webp",
     "releaseDate": "2019-09-10"
@@ -3417,10 +4440,44 @@
       "realistic": 3.3,
       "simulator": 3.3
     },
-    "shipType": "torpedo_boat",
+    "shipType": "frigate",
     "economicType": "regular",
     "imageUrl": "ships/jp_escort_ikazuchi_class.webp",
     "releaseDate": "2020-03-10"
+  },
+  {
+    "id": "jp_karotei_type2",
+    "name": "jp_karotei_type2",
+    "localizedName": "四​式​二​型",
+    "nation": "japan",
+    "rank": 2,
+    "battleRating": 1.7,
+    "br": {
+      "arcade": 1.7,
+      "realistic": 1.7,
+      "simulator": 1.7
+    },
+    "shipType": "gun_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/jp_karotei_type2.webp",
+    "releaseDate": "2019-05-28"
+  },
+  {
+    "id": "jp_karotei_type4",
+    "name": "jp_karotei_type4",
+    "localizedName": "四​式​四​型",
+    "nation": "japan",
+    "rank": 2,
+    "battleRating": 1.7,
+    "br": {
+      "arcade": 1.7,
+      "realistic": 1.7,
+      "simulator": 1.7
+    },
+    "shipType": "gun_boat",
+    "economicType": "premium",
+    "imageUrl": "ships/jp_karotei_type4.webp",
+    "releaseDate": "2019-09-10"
   },
   {
     "id": "jp_kusen_tei_13_1942",
@@ -3525,6 +4582,159 @@
     "releaseDate": "2025-11-11"
   },
   {
+    "id": "jp_pg02",
+    "name": "jp_pg02",
+    "localizedName": "PG 02",
+    "nation": "japan",
+    "rank": 4,
+    "battleRating": 3.3,
+    "br": {
+      "arcade": 3.3,
+      "realistic": 3.3,
+      "simulator": 3.3
+    },
+    "shipType": "gun_boat",
+    "economicType": "premium",
+    "imageUrl": "ships/jp_pg02.webp",
+    "releaseDate": "2019-05-28"
+  },
+  {
+    "id": "jp_sehatei_mod1",
+    "name": "jp_sehatei_mod1",
+    "localizedName": "波​号​战​斗​艇​一​型",
+    "nation": "japan",
+    "rank": 2,
+    "battleRating": 1.7,
+    "br": {
+      "arcade": 1.7,
+      "realistic": 1.7,
+      "simulator": 1.7
+    },
+    "shipType": "gun_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/jp_sehatei_mod1.webp",
+    "releaseDate": "2019-05-28"
+  },
+  {
+    "id": "jp_t14_class",
+    "name": "jp_t14_class",
+    "localizedName": "T-14 型",
+    "nation": "japan",
+    "rank": 1,
+    "battleRating": 1.0,
+    "br": {
+      "arcade": 1.0,
+      "realistic": 1.0,
+      "simulator": 1.0
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "premium",
+    "imageUrl": "ships/jp_t14_class.webp",
+    "releaseDate": "2019-05-28"
+  },
+  {
+    "id": "jp_t14_class_mod01",
+    "name": "jp_t14_class_mod01",
+    "localizedName": "T-14 型 (1 型)",
+    "nation": "japan",
+    "rank": 1,
+    "battleRating": 1.0,
+    "br": {
+      "arcade": 1.0,
+      "realistic": 1.0,
+      "simulator": 1.0
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "premium",
+    "imageUrl": "ships/jp_t14_class_mod01.webp",
+    "releaseDate": "2019-05-28"
+  },
+  {
+    "id": "jp_t14_class_mod02",
+    "name": "jp_t14_class_mod02",
+    "localizedName": "T-14 型 (2 型)",
+    "nation": "japan",
+    "rank": 1,
+    "battleRating": 1.0,
+    "br": {
+      "arcade": 1.0,
+      "realistic": 1.0,
+      "simulator": 1.0
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "premium",
+    "imageUrl": "ships/jp_t14_class_mod02.webp",
+    "releaseDate": "2025-03-18"
+  },
+  {
+    "id": "jp_t51a",
+    "name": "jp_t51a",
+    "localizedName": "T-51a 型",
+    "nation": "japan",
+    "rank": 3,
+    "battleRating": 2.3,
+    "br": {
+      "arcade": 2.3,
+      "realistic": 2.3,
+      "simulator": 2.3
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "premium",
+    "imageUrl": "ships/jp_t51a.webp",
+    "releaseDate": "2022-07-27"
+  },
+  {
+    "id": "jp_t51b",
+    "name": "jp_t51b",
+    "localizedName": "T-51b 型",
+    "nation": "japan",
+    "rank": 3,
+    "battleRating": 2.3,
+    "br": {
+      "arcade": 2.3,
+      "realistic": 2.3,
+      "simulator": 2.3
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/jp_t51b.webp",
+    "releaseDate": "2019-05-28"
+  },
+  {
+    "id": "jp_type1_pt2",
+    "name": "jp_type1_pt2",
+    "localizedName": "PT-802",
+    "nation": "japan",
+    "rank": 2,
+    "battleRating": 2.0,
+    "br": {
+      "arcade": 2.0,
+      "realistic": 2.0,
+      "simulator": 2.0
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/jp_type1_pt2.webp",
+    "releaseDate": "2024-09-10"
+  },
+  {
+    "id": "jp_type38_1944",
+    "name": "jp_type38_1944",
+    "localizedName": "T-38 型",
+    "nation": "japan",
+    "rank": 2,
+    "battleRating": 1.7,
+    "br": {
+      "arcade": 1.7,
+      "realistic": 1.7,
+      "simulator": 1.7
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/jp_type38_1944.webp",
+    "releaseDate": "2019-05-28"
+  },
+  {
     "id": "jp_type5_escortboat",
     "name": "jp_type5_escortboat",
     "localizedName": "五​式​木​制​大​护​卫​艇",
@@ -3542,6 +4752,159 @@
     "releaseDate": "2019-05-28"
   },
   {
+    "id": "jp_type7_pt808",
+    "name": "jp_type7_pt808",
+    "localizedName": "PT-808",
+    "nation": "japan",
+    "rank": 3,
+    "battleRating": 3.3,
+    "br": {
+      "arcade": 3.3,
+      "realistic": 3.3,
+      "simulator": 3.3
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/jp_type7_pt808.webp",
+    "releaseDate": "2023-09-19"
+  },
+  {
+    "id": "jp_type_11_pt_15",
+    "name": "jp_type_11_pt_15",
+    "localizedName": "PT-15",
+    "nation": "japan",
+    "rank": 4,
+    "battleRating": 3.3,
+    "br": {
+      "arcade": 3.3,
+      "realistic": 3.3,
+      "simulator": 3.3
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/jp_type_11_pt_15.webp",
+    "releaseDate": "2019-05-28"
+  },
+  {
+    "id": "jp_type_t1_1941",
+    "name": "jp_type_t1_1941",
+    "localizedName": "T-1 型",
+    "nation": "japan",
+    "rank": 1,
+    "battleRating": 1.0,
+    "br": {
+      "arcade": 1.0,
+      "realistic": 1.0,
+      "simulator": 1.0
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/jp_type_t1_1941.webp",
+    "releaseDate": "2019-05-28"
+  },
+  {
+    "id": "jp_yuri_class_asagao",
+    "name": "jp_yuri_class_asagao",
+    "localizedName": "朝​颜",
+    "nation": "japan",
+    "rank": 5,
+    "battleRating": 3.7,
+    "br": {
+      "arcade": 3.7,
+      "realistic": 3.7,
+      "simulator": 3.7
+    },
+    "shipType": "gun_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/jp_yuri_class_asagao.webp",
+    "releaseDate": "2023-12-14"
+  },
+  {
+    "id": "uk_70ft_mgb",
+    "name": "uk_70ft_mgb",
+    "localizedName": "MGB61",
+    "nation": "britain",
+    "rank": 1,
+    "battleRating": 1.7,
+    "br": {
+      "arcade": 1.7,
+      "realistic": 1.7,
+      "simulator": 1.7
+    },
+    "shipType": "gun_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/uk_70ft_mgb.webp",
+    "releaseDate": "2018-10-23"
+  },
+  {
+    "id": "uk_71ft_mgb",
+    "name": "uk_71ft_mgb",
+    "localizedName": "MGB75",
+    "nation": "britain",
+    "rank": 2,
+    "battleRating": 2.3,
+    "br": {
+      "arcade": 2.0,
+      "realistic": 2.3,
+      "simulator": 2.3
+    },
+    "shipType": "gun_boat",
+    "economicType": "premium",
+    "imageUrl": "ships/uk_71ft_mgb.webp",
+    "releaseDate": "2019-09-10"
+  },
+  {
+    "id": "uk_71ft_mtb460",
+    "name": "uk_71ft_mtb460",
+    "localizedName": "MTB-460",
+    "nation": "britain",
+    "rank": 3,
+    "battleRating": 2.3,
+    "br": {
+      "arcade": 2.3,
+      "realistic": 2.3,
+      "simulator": 2.3
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/uk_71ft_mtb460.webp",
+    "releaseDate": "2025-06-25"
+  },
+  {
+    "id": "uk_73ft_vosper_type1",
+    "name": "uk_73ft_vosper_type1",
+    "localizedName": "MTB-379",
+    "nation": "britain",
+    "rank": 2,
+    "battleRating": 2.0,
+    "br": {
+      "arcade": 2.0,
+      "realistic": 2.0,
+      "simulator": 2.0
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/uk_73ft_vosper_type1.webp",
+    "releaseDate": "2026-03-10"
+  },
+  {
+    "id": "uk_attack_class_arrow",
+    "name": "uk_attack_class_arrow",
+    "localizedName": "箭 (P88)",
+    "nation": "britain",
+    "rank": 4,
+    "battleRating": 2.7,
+    "br": {
+      "arcade": 2.7,
+      "realistic": 2.7,
+      "simulator": 2.7
+    },
+    "shipType": "gun_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/uk_attack_class_arrow.webp",
+    "releaseDate": "2022-09-14"
+  },
+  {
     "id": "uk_battlecruiser_glorious",
     "name": "uk_battlecruiser_glorious",
     "localizedName": "光​荣",
@@ -3553,7 +4916,7 @@
       "realistic": 5.7,
       "simulator": 5.7
     },
-    "shipType": "cruiser",
+    "shipType": "battlecruiser",
     "economicType": "regular",
     "imageUrl": "ships/uk_battlecruiser_glorious.webp",
     "releaseDate": "2022-10-26"
@@ -3570,7 +4933,7 @@
       "realistic": 7.7,
       "simulator": 7.7
     },
-    "shipType": "cruiser",
+    "shipType": "battlecruiser",
     "economicType": "regular",
     "imageUrl": "ships/uk_battlecruiser_hood.webp",
     "releaseDate": "2022-06-15"
@@ -3587,7 +4950,7 @@
       "realistic": 5.7,
       "simulator": 5.7
     },
-    "shipType": "cruiser",
+    "shipType": "battlecruiser",
     "economicType": "regular",
     "imageUrl": "ships/uk_battlecruiser_invincible.webp",
     "releaseDate": "2020-12-17"
@@ -3604,7 +4967,7 @@
       "realistic": 6.3,
       "simulator": 6.3
     },
-    "shipType": "cruiser",
+    "shipType": "battlecruiser",
     "economicType": "regular",
     "imageUrl": "ships/uk_battlecruiser_queen_mary.webp",
     "releaseDate": "2024-06-19"
@@ -3621,7 +4984,7 @@
       "realistic": 7.0,
       "simulator": 7.0
     },
-    "shipType": "cruiser",
+    "shipType": "battlecruiser",
     "economicType": "regular",
     "imageUrl": "ships/uk_battlecruiser_renown.webp",
     "releaseDate": "2023-08-08"
@@ -3638,7 +5001,7 @@
       "realistic": 7.0,
       "simulator": 7.0
     },
-    "shipType": "cruiser",
+    "shipType": "battlecruiser",
     "economicType": "regular",
     "imageUrl": "ships/uk_battlecruiser_repulse.webp",
     "releaseDate": "2024-11-19"
@@ -3655,7 +5018,7 @@
       "realistic": 6.7,
       "simulator": 6.7
     },
-    "shipType": "cruiser",
+    "shipType": "battleship",
     "economicType": "regular",
     "imageUrl": "ships/uk_battleship_centurion.webp",
     "releaseDate": "2025-11-11"
@@ -3672,7 +5035,7 @@
       "realistic": 6.3,
       "simulator": 6.3
     },
-    "shipType": "cruiser",
+    "shipType": "battleship",
     "economicType": "regular",
     "imageUrl": "ships/uk_battleship_colossus.webp",
     "releaseDate": "2020-11-15"
@@ -3689,7 +5052,7 @@
       "realistic": 6.0,
       "simulator": 6.0
     },
-    "shipType": "cruiser",
+    "shipType": "battleship",
     "economicType": "regular",
     "imageUrl": "ships/uk_battleship_dreadnought.webp",
     "releaseDate": "2020-11-15"
@@ -3706,7 +5069,7 @@
       "realistic": 7.0,
       "simulator": 7.0
     },
-    "shipType": "cruiser",
+    "shipType": "battleship",
     "economicType": "premium",
     "imageUrl": "ships/uk_battleship_iron_duke.webp",
     "releaseDate": "2023-10-31"
@@ -3723,7 +5086,7 @@
       "realistic": 7.0,
       "simulator": 7.0
     },
-    "shipType": "cruiser",
+    "shipType": "battleship",
     "economicType": "regular",
     "imageUrl": "ships/uk_battleship_marlborough.webp",
     "releaseDate": "2021-10-26"
@@ -3740,7 +5103,7 @@
       "realistic": 7.7,
       "simulator": 7.7
     },
-    "shipType": "cruiser",
+    "shipType": "battleship",
     "economicType": "premium",
     "imageUrl": "ships/uk_battleship_nelson.webp",
     "releaseDate": "2025-09-23"
@@ -3757,7 +5120,7 @@
       "realistic": 6.7,
       "simulator": 6.7
     },
-    "shipType": "cruiser",
+    "shipType": "battleship",
     "economicType": "regular",
     "imageUrl": "ships/uk_battleship_orion.webp",
     "releaseDate": "2023-12-14"
@@ -3774,7 +5137,7 @@
       "realistic": 8.0,
       "simulator": 8.0
     },
-    "shipType": "cruiser",
+    "shipType": "battleship",
     "economicType": "regular",
     "imageUrl": "ships/uk_battleship_prince_of_wales.webp",
     "releaseDate": "2025-12-16"
@@ -3791,7 +5154,7 @@
       "realistic": 7.3,
       "simulator": 7.3
     },
-    "shipType": "cruiser",
+    "shipType": "battleship",
     "economicType": "regular",
     "imageUrl": "ships/uk_battleship_q_elizabet_class_barham.webp",
     "releaseDate": "2024-09-05"
@@ -3808,7 +5171,7 @@
       "realistic": 7.7,
       "simulator": 7.7
     },
-    "shipType": "cruiser",
+    "shipType": "battleship",
     "economicType": "regular",
     "imageUrl": "ships/uk_battleship_q_elizabet_class_warspite.webp",
     "releaseDate": "2025-03-18"
@@ -3825,7 +5188,7 @@
       "realistic": 7.7,
       "simulator": 7.7
     },
-    "shipType": "cruiser",
+    "shipType": "battleship",
     "economicType": "regular",
     "imageUrl": "ships/uk_battleship_rodney.webp",
     "releaseDate": "2024-12-16"
@@ -3842,10 +5205,27 @@
       "realistic": 8.3,
       "simulator": 8.3
     },
-    "shipType": "cruiser",
+    "shipType": "battleship",
     "economicType": "regular",
     "imageUrl": "ships/uk_battleship_vanguard.webp",
     "releaseDate": "2025-06-25"
+  },
+  {
+    "id": "uk_brave_borderer",
+    "name": "uk_brave_borderer",
+    "localizedName": "勇​敢​边​境​战​士",
+    "nation": "britain",
+    "rank": 5,
+    "battleRating": 3.3,
+    "br": {
+      "arcade": 3.3,
+      "realistic": 3.3,
+      "simulator": 3.3
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/uk_brave_borderer.webp",
+    "releaseDate": "2018-10-23"
   },
   {
     "id": "uk_corvette_orla",
@@ -3893,7 +5273,7 @@
       "realistic": 5.3,
       "simulator": 5.3
     },
-    "shipType": "cruiser",
+    "shipType": "light_cruiser",
     "economicType": "regular",
     "imageUrl": "ships/uk_cruiser_arethusa.webp",
     "releaseDate": "2019-09-10"
@@ -3910,7 +5290,7 @@
       "realistic": 6.0,
       "simulator": 6.0
     },
-    "shipType": "cruiser",
+    "shipType": "light_cruiser",
     "economicType": "premium",
     "imageUrl": "ships/uk_cruiser_belfast.webp",
     "releaseDate": "2019-10-29"
@@ -3927,7 +5307,7 @@
       "realistic": 5.3,
       "simulator": 5.3
     },
-    "shipType": "cruiser",
+    "shipType": "light_cruiser",
     "economicType": "regular",
     "imageUrl": "ships/uk_cruiser_dido.webp",
     "releaseDate": "2018-12-18"
@@ -3944,7 +5324,7 @@
       "realistic": 5.0,
       "simulator": 5.0
     },
-    "shipType": "cruiser",
+    "shipType": "light_cruiser",
     "economicType": "regular",
     "imageUrl": "ships/uk_cruiser_enterprise_d52.webp",
     "releaseDate": "2018-10-23"
@@ -3961,7 +5341,7 @@
       "realistic": 5.7,
       "simulator": 5.7
     },
-    "shipType": "cruiser",
+    "shipType": "light_cruiser",
     "economicType": "regular",
     "imageUrl": "ships/uk_cruiser_fiji_class_fiji.webp",
     "releaseDate": "2025-12-16"
@@ -3978,7 +5358,7 @@
       "realistic": 5.3,
       "simulator": 5.3
     },
-    "shipType": "cruiser",
+    "shipType": "heavy_cruiser",
     "economicType": "regular",
     "imageUrl": "ships/uk_cruiser_hawkins.webp",
     "releaseDate": "2019-10-29"
@@ -3995,7 +5375,7 @@
       "realistic": 5.7,
       "simulator": 5.7
     },
-    "shipType": "cruiser",
+    "shipType": "heavy_cruiser",
     "economicType": "regular",
     "imageUrl": "ships/uk_cruiser_kent.webp",
     "releaseDate": "2020-03-10"
@@ -4012,7 +5392,7 @@
       "realistic": 5.3,
       "simulator": 5.3
     },
-    "shipType": "cruiser",
+    "shipType": "light_cruiser",
     "economicType": "regular",
     "imageUrl": "ships/uk_cruiser_leander.webp",
     "releaseDate": "2019-03-12"
@@ -4029,7 +5409,7 @@
       "realistic": 5.7,
       "simulator": 5.7
     },
-    "shipType": "cruiser",
+    "shipType": "light_cruiser",
     "economicType": "clan",
     "imageUrl": "ships/uk_cruiser_liverpool.webp",
     "releaseDate": "2021-06-02"
@@ -4046,7 +5426,7 @@
       "realistic": 5.7,
       "simulator": 5.7
     },
-    "shipType": "cruiser",
+    "shipType": "heavy_cruiser",
     "economicType": "regular",
     "imageUrl": "ships/uk_cruiser_london.webp",
     "releaseDate": "2020-03-10"
@@ -4063,7 +5443,7 @@
       "realistic": 5.7,
       "simulator": 5.7
     },
-    "shipType": "cruiser",
+    "shipType": "heavy_cruiser",
     "economicType": "regular",
     "imageUrl": "ships/uk_cruiser_norfolk.webp",
     "releaseDate": "2021-09-07"
@@ -4080,7 +5460,7 @@
       "realistic": 6.0,
       "simulator": 6.0
     },
-    "shipType": "cruiser",
+    "shipType": "light_cruiser",
     "economicType": "regular",
     "imageUrl": "ships/uk_cruiser_southampton.webp",
     "releaseDate": "2019-05-28"
@@ -4097,7 +5477,7 @@
       "realistic": 6.0,
       "simulator": 6.0
     },
-    "shipType": "cruiser",
+    "shipType": "light_cruiser",
     "economicType": "regular",
     "imageUrl": "ships/uk_cruiser_tiger.webp",
     "releaseDate": "2019-04-11"
@@ -4114,10 +5494,61 @@
       "realistic": 5.3,
       "simulator": 5.3
     },
-    "shipType": "cruiser",
+    "shipType": "heavy_cruiser",
     "economicType": "regular",
     "imageUrl": "ships/uk_cruiser_york.webp",
     "releaseDate": "2020-06-01"
+  },
+  {
+    "id": "uk_dark_class",
+    "name": "uk_dark_class",
+    "localizedName": "黑​暗​冒​险​者",
+    "nation": "britain",
+    "rank": 2,
+    "battleRating": 2.0,
+    "br": {
+      "arcade": 2.0,
+      "realistic": 2.0,
+      "simulator": 2.0
+    },
+    "shipType": "gun_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/uk_dark_class.webp",
+    "releaseDate": "2018-10-23"
+  },
+  {
+    "id": "uk_dark_class_mtb",
+    "name": "uk_dark_class_mtb",
+    "localizedName": "黑​暗​侵​略​者",
+    "nation": "britain",
+    "rank": 3,
+    "battleRating": 2.3,
+    "br": {
+      "arcade": 2.3,
+      "realistic": 2.3,
+      "simulator": 2.3
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/uk_dark_class_mtb.webp",
+    "releaseDate": "2018-10-23"
+  },
+  {
+    "id": "uk_dark_class_mtb_td",
+    "name": "uk_dark_class_mtb_td",
+    "localizedName": "黑​暗​侵​略​者 (TD)",
+    "nation": "britain",
+    "rank": 3,
+    "battleRating": 2.3,
+    "br": {
+      "arcade": 2.3,
+      "realistic": 2.3,
+      "simulator": 2.3
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/uk_dark_class_mtb_td.webp",
+    "releaseDate": "2020-10-15"
   },
   {
     "id": "uk_destroyer_battle_2series",
@@ -4403,7 +5834,7 @@
       "realistic": 4.0,
       "simulator": 4.0
     },
-    "shipType": "torpedo_boat",
+    "shipType": "frigate",
     "economicType": "regular",
     "imageUrl": "ships/uk_destroyer_restigouche_class_terranova.webp",
     "releaseDate": "2023-03-07"
@@ -4511,6 +5942,159 @@
     "releaseDate": "2021-09-07"
   },
   {
+    "id": "uk_fairmile_a_ml100",
+    "name": "uk_fairmile_a_ml100",
+    "localizedName": "ML100",
+    "nation": "britain",
+    "rank": 1,
+    "battleRating": 1.0,
+    "br": {
+      "arcade": 1.0,
+      "realistic": 1.0,
+      "simulator": 1.0
+    },
+    "shipType": "gun_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/uk_fairmile_a_ml100.webp",
+    "releaseDate": "2018-10-23"
+  },
+  {
+    "id": "uk_fairmile_b_ml345",
+    "name": "uk_fairmile_b_ml345",
+    "localizedName": "ML345",
+    "nation": "britain",
+    "rank": 2,
+    "battleRating": 2.0,
+    "br": {
+      "arcade": 2.0,
+      "realistic": 2.0,
+      "simulator": 2.0
+    },
+    "shipType": "gun_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/uk_fairmile_b_ml345.webp",
+    "releaseDate": "2018-10-23"
+  },
+  {
+    "id": "uk_fairmile_c",
+    "name": "uk_fairmile_c",
+    "localizedName": "MGB312",
+    "nation": "britain",
+    "rank": 3,
+    "battleRating": 2.3,
+    "br": {
+      "arcade": 2.3,
+      "realistic": 2.3,
+      "simulator": 2.3
+    },
+    "shipType": "gun_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/uk_fairmile_c.webp",
+    "releaseDate": "2018-10-23"
+  },
+  {
+    "id": "uk_fairmile_c_332",
+    "name": "uk_fairmile_c_332",
+    "localizedName": "MGB332",
+    "nation": "britain",
+    "rank": 4,
+    "battleRating": 3.0,
+    "br": {
+      "arcade": 3.0,
+      "realistic": 3.0,
+      "simulator": 3.0
+    },
+    "shipType": "gun_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/uk_fairmile_c_332.webp",
+    "releaseDate": "2018-10-23"
+  },
+  {
+    "id": "uk_fairmile_d_5001_5029",
+    "name": "uk_fairmile_d_5001_5029",
+    "localizedName": "MTB5001",
+    "nation": "britain",
+    "rank": 3,
+    "battleRating": 2.7,
+    "br": {
+      "arcade": 2.7,
+      "realistic": 2.7,
+      "simulator": 2.7
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "premium",
+    "imageUrl": "ships/uk_fairmile_d_5001_5029.webp",
+    "releaseDate": "2018-10-23"
+  },
+  {
+    "id": "uk_fairmile_d_601_616",
+    "name": "uk_fairmile_d_601_616",
+    "localizedName": "MGB601",
+    "nation": "britain",
+    "rank": 3,
+    "battleRating": 2.3,
+    "br": {
+      "arcade": 2.3,
+      "realistic": 2.3,
+      "simulator": 2.3
+    },
+    "shipType": "gun_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/uk_fairmile_d_601_616.webp",
+    "releaseDate": "2018-10-23"
+  },
+  {
+    "id": "uk_fairmile_d_617_632",
+    "name": "uk_fairmile_d_617_632",
+    "localizedName": "MTB617",
+    "nation": "britain",
+    "rank": 3,
+    "battleRating": 2.3,
+    "br": {
+      "arcade": 2.3,
+      "realistic": 2.3,
+      "simulator": 2.3
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/uk_fairmile_d_617_632.webp",
+    "releaseDate": "2018-10-23"
+  },
+  {
+    "id": "uk_fairmile_d_697_800",
+    "name": "uk_fairmile_d_697_800",
+    "localizedName": "MTB697",
+    "nation": "britain",
+    "rank": 4,
+    "battleRating": 2.7,
+    "br": {
+      "arcade": 2.7,
+      "realistic": 2.7,
+      "simulator": 2.7
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/uk_fairmile_d_697_800.webp",
+    "releaseDate": "2018-10-23"
+  },
+  {
+    "id": "uk_fairmile_lcs_l_h_mk2",
+    "name": "uk_fairmile_lcs_l_h_mk2",
+    "localizedName": "LCS(L)(2)",
+    "nation": "britain",
+    "rank": 3,
+    "battleRating": 2.3,
+    "br": {
+      "arcade": 2.3,
+      "realistic": 2.3,
+      "simulator": 2.3
+    },
+    "shipType": "gun_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/uk_fairmile_lcs_l_h_mk2.webp",
+    "releaseDate": "2021-09-07"
+  },
+  {
     "id": "uk_flower_class",
     "name": "uk_flower_class",
     "localizedName": "布​兰​特​福​德",
@@ -4528,6 +6112,23 @@
     "releaseDate": "2018-10-23"
   },
   {
+    "id": "uk_fremantle_class",
+    "name": "uk_fremantle_class",
+    "localizedName": "弗​里​曼​特​尔",
+    "nation": "britain",
+    "rank": 4,
+    "battleRating": 3.0,
+    "br": {
+      "arcade": 3.0,
+      "realistic": 3.0,
+      "simulator": 3.0
+    },
+    "shipType": "gun_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/uk_fremantle_class.webp",
+    "releaseDate": "2024-09-10"
+  },
+  {
     "id": "uk_frigate_leopard",
     "name": "uk_frigate_leopard",
     "localizedName": "豹 (F14)",
@@ -4539,7 +6140,7 @@
       "realistic": 4.0,
       "simulator": 4.0
     },
-    "shipType": "torpedo_boat",
+    "shipType": "frigate",
     "economicType": "regular",
     "imageUrl": "ships/uk_frigate_leopard.webp",
     "releaseDate": "2021-06-02"
@@ -4556,7 +6157,7 @@
       "realistic": 3.3,
       "simulator": 3.3
     },
-    "shipType": "torpedo_boat",
+    "shipType": "frigate",
     "economicType": "premium",
     "imageUrl": "ships/uk_frigate_river.webp"
   },
@@ -4572,7 +6173,7 @@
       "realistic": 3.7,
       "simulator": 3.7
     },
-    "shipType": "torpedo_boat",
+    "shipType": "frigate",
     "economicType": "premium",
     "imageUrl": "ships/uk_frigate_whitby.webp",
     "releaseDate": "2023-03-07"
@@ -4589,10 +6190,61 @@
       "realistic": 3.7,
       "simulator": 3.7
     },
-    "shipType": "torpedo_boat",
+    "shipType": "frigate",
     "economicType": "regular",
     "imageUrl": "ships/uk_frigate_whitby_blackpool.webp",
     "releaseDate": "2021-03-10"
+  },
+  {
+    "id": "uk_gay_class_archer",
+    "name": "uk_gay_class_archer",
+    "localizedName": "欢​快​弓​手",
+    "nation": "britain",
+    "rank": 3,
+    "battleRating": 2.3,
+    "br": {
+      "arcade": 2.3,
+      "realistic": 2.3,
+      "simulator": 2.3
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "premium",
+    "imageUrl": "ships/uk_gay_class_archer.webp",
+    "releaseDate": "2023-10-25"
+  },
+  {
+    "id": "uk_hdml_ml1383",
+    "name": "uk_hdml_ml1383",
+    "localizedName": "ML1383",
+    "nation": "britain",
+    "rank": 1,
+    "battleRating": 1.7,
+    "br": {
+      "arcade": 1.7,
+      "realistic": 1.7,
+      "simulator": 1.7
+    },
+    "shipType": "gun_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/uk_hdml_ml1383.webp",
+    "releaseDate": "2022-06-15"
+  },
+  {
+    "id": "uk_higgins_78ft_mtb422",
+    "name": "uk_higgins_78ft_mtb422",
+    "localizedName": "MTB422",
+    "nation": "britain",
+    "rank": 3,
+    "battleRating": 2.3,
+    "br": {
+      "arcade": 2.3,
+      "realistic": 2.3,
+      "simulator": 2.3
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "premium",
+    "imageUrl": "ships/uk_higgins_78ft_mtb422.webp",
+    "releaseDate": "2022-01-26"
   },
   {
     "id": "uk_isles_class_trawler",
@@ -4623,10 +6275,178 @@
       "realistic": 4.7,
       "simulator": 4.7
     },
-    "shipType": "cruiser",
+    "shipType": "light_cruiser",
     "economicType": "regular",
     "imageUrl": "ships/uk_minelayer_abdiel_class_abdiel.webp",
     "releaseDate": "2022-12-20"
+  },
+  {
+    "id": "uk_mtb35_vosper",
+    "name": "uk_mtb35_vosper",
+    "localizedName": "MTB-35",
+    "nation": "britain",
+    "rank": 1,
+    "battleRating": 1.0,
+    "br": {
+      "arcade": 1.0,
+      "realistic": 1.0,
+      "simulator": 1.0
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "premium",
+    "imageUrl": "ships/uk_mtb35_vosper.webp",
+    "releaseDate": "2025-03-18"
+  },
+  {
+    "id": "uk_mtb_1series",
+    "name": "uk_mtb_1series",
+    "localizedName": "MTB1(1)",
+    "nation": "britain",
+    "rank": 1,
+    "battleRating": 1.0,
+    "br": {
+      "arcade": 1.0,
+      "realistic": 1.0,
+      "simulator": 1.0
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "premium",
+    "imageUrl": "ships/uk_mtb_1series.webp",
+    "releaseDate": "2018-10-23"
+  },
+  {
+    "id": "uk_mtb_2series",
+    "name": "uk_mtb_2series",
+    "localizedName": "MTB1(2)",
+    "nation": "britain",
+    "rank": 1,
+    "battleRating": 1.0,
+    "br": {
+      "arcade": 1.0,
+      "realistic": 1.0,
+      "simulator": 1.0
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "premium",
+    "imageUrl": "ships/uk_mtb_2series.webp",
+    "releaseDate": "2018-12-18"
+  },
+  {
+    "id": "uk_mtb_vosper_1series",
+    "name": "uk_mtb_vosper_1series",
+    "localizedName": "MTB73",
+    "nation": "britain",
+    "rank": 1,
+    "battleRating": 1.0,
+    "br": {
+      "arcade": 1.0,
+      "realistic": 1.0,
+      "simulator": 1.0
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/uk_mtb_vosper_1series.webp",
+    "releaseDate": "2018-10-23"
+  },
+  {
+    "id": "uk_mtb_vosper_2series",
+    "name": "uk_mtb_vosper_2series",
+    "localizedName": "MTB275",
+    "nation": "britain",
+    "rank": 1,
+    "battleRating": 1.7,
+    "br": {
+      "arcade": 1.7,
+      "realistic": 1.7,
+      "simulator": 1.7
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/uk_mtb_vosper_2series.webp",
+    "releaseDate": "2018-10-23"
+  },
+  {
+    "id": "uk_sgb_304",
+    "name": "uk_sgb_304",
+    "localizedName": "灰​狐",
+    "nation": "britain",
+    "rank": 4,
+    "battleRating": 3.0,
+    "br": {
+      "arcade": 3.0,
+      "realistic": 3.0,
+      "simulator": 3.0
+    },
+    "shipType": "gun_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/uk_sgb_304.webp",
+    "releaseDate": "2018-10-23"
+  },
+  {
+    "id": "uk_sgb_309",
+    "name": "uk_sgb_309",
+    "localizedName": "灰​鹅",
+    "nation": "britain",
+    "rank": 3,
+    "battleRating": 3.0,
+    "br": {
+      "arcade": 3.0,
+      "realistic": 3.0,
+      "simulator": 3.0
+    },
+    "shipType": "gun_boat",
+    "economicType": "premium",
+    "imageUrl": "ships/uk_sgb_309.webp"
+  },
+  {
+    "id": "us_admirable_class",
+    "name": "us_admirable_class",
+    "localizedName": "耿​直",
+    "nation": "usa",
+    "rank": 4,
+    "battleRating": 3.7,
+    "br": {
+      "arcade": 3.7,
+      "realistic": 3.7,
+      "simulator": 3.7
+    },
+    "shipType": "gun_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/us_admirable_class.webp",
+    "releaseDate": "2021-06-02"
+  },
+  {
+    "id": "us_ashville_class",
+    "name": "us_ashville_class",
+    "localizedName": "阿​什​维​尔",
+    "nation": "usa",
+    "rank": 4,
+    "battleRating": 3.3,
+    "br": {
+      "arcade": 3.3,
+      "realistic": 3.3,
+      "simulator": 3.3
+    },
+    "shipType": "gun_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/us_ashville_class.webp"
+  },
+  {
+    "id": "us_ashville_class_douglas",
+    "name": "us_ashville_class_douglas",
+    "localizedName": "道​格​拉​斯",
+    "nation": "usa",
+    "rank": 4,
+    "battleRating": 4.0,
+    "br": {
+      "arcade": 4.0,
+      "realistic": 4.0,
+      "simulator": 4.0
+    },
+    "shipType": "gun_boat",
+    "economicType": "premium",
+    "imageUrl": "ships/us_ashville_class_douglas.webp",
+    "releaseDate": "2022-06-15"
   },
   {
     "id": "us_battlecruiser_alaska_class",
@@ -4640,7 +6460,7 @@
       "realistic": 7.3,
       "simulator": 7.3
     },
-    "shipType": "cruiser",
+    "shipType": "battlecruiser",
     "economicType": "regular",
     "imageUrl": "ships/us_battlecruiser_alaska_class.webp",
     "releaseDate": "2022-09-14"
@@ -4657,7 +6477,7 @@
       "realistic": 7.3,
       "simulator": 7.3
     },
-    "shipType": "cruiser",
+    "shipType": "battleship",
     "economicType": "regular",
     "imageUrl": "ships/us_battleship_arizona_1931.webp",
     "releaseDate": "2022-03-22"
@@ -4674,7 +6494,7 @@
       "realistic": 6.7,
       "simulator": 6.7
     },
-    "shipType": "cruiser",
+    "shipType": "battleship",
     "economicType": "premium",
     "imageUrl": "ships/us_battleship_arkansas.webp",
     "releaseDate": "2023-09-19"
@@ -4691,7 +6511,7 @@
       "realistic": 7.7,
       "simulator": 7.7
     },
-    "shipType": "cruiser",
+    "shipType": "battleship",
     "economicType": "regular",
     "imageUrl": "ships/us_battleship_colorado_class_colorado.webp",
     "releaseDate": "2025-03-18"
@@ -4708,7 +6528,7 @@
       "realistic": 7.7,
       "simulator": 7.7
     },
-    "shipType": "cruiser",
+    "shipType": "battleship",
     "economicType": "premium",
     "imageUrl": "ships/us_battleship_colorado_class_maryland.webp",
     "releaseDate": "2025-09-23"
@@ -4725,7 +6545,7 @@
       "realistic": 8.7,
       "simulator": 8.7
     },
-    "shipType": "cruiser",
+    "shipType": "battleship",
     "economicType": "regular",
     "imageUrl": "ships/us_battleship_iowa_class_iowa.webp",
     "releaseDate": "2025-06-25"
@@ -4742,7 +6562,7 @@
       "realistic": 7.7,
       "simulator": 7.7
     },
-    "shipType": "cruiser",
+    "shipType": "battleship",
     "economicType": "regular",
     "imageUrl": "ships/us_battleship_mississippi.webp",
     "releaseDate": "2023-12-14"
@@ -4759,7 +6579,7 @@
       "realistic": 7.3,
       "simulator": 7.3
     },
-    "shipType": "cruiser",
+    "shipType": "battleship",
     "economicType": "regular",
     "imageUrl": "ships/us_battleship_nevada.webp",
     "releaseDate": "2023-03-07"
@@ -4776,7 +6596,7 @@
       "realistic": 6.3,
       "simulator": 6.3
     },
-    "shipType": "cruiser",
+    "shipType": "battleship",
     "economicType": "regular",
     "imageUrl": "ships/us_battleship_north_dakota.webp",
     "releaseDate": "2020-11-15"
@@ -4793,7 +6613,7 @@
       "realistic": 7.0,
       "simulator": 7.0
     },
-    "shipType": "cruiser",
+    "shipType": "battleship",
     "economicType": "regular",
     "imageUrl": "ships/us_battleship_oklahoma.webp",
     "releaseDate": "2026-03-12"
@@ -4810,7 +6630,7 @@
       "realistic": 8.3,
       "simulator": 8.3
     },
-    "shipType": "cruiser",
+    "shipType": "battleship",
     "economicType": "regular",
     "imageUrl": "ships/us_battleship_south_dakota.webp",
     "releaseDate": "2025-12-16"
@@ -4827,7 +6647,7 @@
       "realistic": 7.7,
       "simulator": 7.7
     },
-    "shipType": "cruiser",
+    "shipType": "battleship",
     "economicType": "regular",
     "imageUrl": "ships/us_battleship_tennessee.webp",
     "releaseDate": "2024-09-10"
@@ -4844,7 +6664,7 @@
       "realistic": 6.7,
       "simulator": 6.7
     },
-    "shipType": "cruiser",
+    "shipType": "battleship",
     "economicType": "regular",
     "imageUrl": "ships/us_battleship_texas.webp",
     "releaseDate": "2023-09-19"
@@ -4861,7 +6681,7 @@
       "realistic": 6.7,
       "simulator": 6.7
     },
-    "shipType": "cruiser",
+    "shipType": "battleship",
     "economicType": "regular",
     "imageUrl": "ships/us_battleship_wyoming_class.webp",
     "releaseDate": "2021-06-02"
@@ -4878,7 +6698,7 @@
       "realistic": 5.7,
       "simulator": 5.7
     },
-    "shipType": "cruiser",
+    "shipType": "light_cruiser",
     "economicType": "regular",
     "imageUrl": "ships/us_cruiser_atlanta_class_atlanta.webp",
     "releaseDate": "2019-09-10"
@@ -4895,7 +6715,7 @@
       "realistic": 6.3,
       "simulator": 6.3
     },
-    "shipType": "cruiser",
+    "shipType": "heavy_cruiser",
     "economicType": "regular",
     "imageUrl": "ships/us_cruiser_baltimore_class.webp",
     "releaseDate": "2020-12-17"
@@ -4912,7 +6732,7 @@
       "realistic": 6.3,
       "simulator": 6.3
     },
-    "shipType": "cruiser",
+    "shipType": "heavy_cruiser",
     "economicType": "regular",
     "imageUrl": "ships/us_cruiser_baltimore_class_pittsburgh.webp",
     "releaseDate": "2021-09-07"
@@ -4929,7 +6749,7 @@
       "realistic": 6.3,
       "simulator": 6.3
     },
-    "shipType": "cruiser",
+    "shipType": "light_cruiser",
     "economicType": "regular",
     "imageUrl": "ships/us_cruiser_brooklyn_class_brooklyn.webp",
     "releaseDate": "2019-03-12"
@@ -4946,7 +6766,7 @@
       "realistic": 6.3,
       "simulator": 6.3
     },
-    "shipType": "cruiser",
+    "shipType": "light_cruiser",
     "economicType": "premium",
     "imageUrl": "ships/us_cruiser_brooklyn_class_helena.webp",
     "releaseDate": "2019-10-29"
@@ -4963,7 +6783,7 @@
       "realistic": 6.0,
       "simulator": 6.0
     },
-    "shipType": "cruiser",
+    "shipType": "light_cruiser",
     "economicType": "regular",
     "imageUrl": "ships/us_cruiser_cleveland_class_cleveland.webp",
     "releaseDate": "2020-06-01"
@@ -4980,7 +6800,7 @@
       "realistic": 6.7,
       "simulator": 6.7
     },
-    "shipType": "cruiser",
+    "shipType": "heavy_cruiser",
     "economicType": "premium",
     "imageUrl": "ships/us_cruiser_des_moines_class.webp",
     "releaseDate": "2023-03-07"
@@ -4997,7 +6817,7 @@
       "realistic": 6.7,
       "simulator": 6.7
     },
-    "shipType": "cruiser",
+    "shipType": "heavy_cruiser",
     "economicType": "regular",
     "imageUrl": "ships/us_cruiser_des_moines_class_newport_news.webp",
     "releaseDate": "2022-12-20"
@@ -5014,7 +6834,7 @@
       "realistic": 6.0,
       "simulator": 6.0
     },
-    "shipType": "cruiser",
+    "shipType": "light_cruiser",
     "economicType": "regular",
     "imageUrl": "ships/us_cruiser_fargo_class.webp",
     "releaseDate": "2022-10-26"
@@ -5031,7 +6851,7 @@
       "realistic": 6.0,
       "simulator": 6.0
     },
-    "shipType": "cruiser",
+    "shipType": "heavy_cruiser",
     "economicType": "regular",
     "imageUrl": "ships/us_cruiser_new_orleans_class.webp",
     "releaseDate": "2020-11-15"
@@ -5048,7 +6868,7 @@
       "realistic": 5.7,
       "simulator": 5.7
     },
-    "shipType": "cruiser",
+    "shipType": "heavy_cruiser",
     "economicType": "regular",
     "imageUrl": "ships/us_cruiser_northampton_class.webp",
     "releaseDate": "2020-09-08"
@@ -5065,7 +6885,7 @@
       "realistic": 5.0,
       "simulator": 5.0
     },
-    "shipType": "cruiser",
+    "shipType": "light_cruiser",
     "economicType": "premium",
     "imageUrl": "ships/us_cruiser_omaha_class_detroit.webp",
     "releaseDate": "2021-07-28"
@@ -5082,7 +6902,7 @@
       "realistic": 5.0,
       "simulator": 5.0
     },
-    "shipType": "cruiser",
+    "shipType": "light_cruiser",
     "economicType": "regular",
     "imageUrl": "ships/us_cruiser_omaha_class_raleigh.webp",
     "releaseDate": "2018-12-18"
@@ -5099,7 +6919,7 @@
       "realistic": 5.0,
       "simulator": 5.0
     },
-    "shipType": "cruiser",
+    "shipType": "light_cruiser",
     "economicType": "regular",
     "imageUrl": "ships/us_cruiser_omaha_class_trenton.webp"
   },
@@ -5115,7 +6935,7 @@
       "realistic": 6.3,
       "simulator": 6.3
     },
-    "shipType": "cruiser",
+    "shipType": "heavy_cruiser",
     "economicType": "regular",
     "imageUrl": "ships/us_cruiser_oregon_class.webp",
     "releaseDate": "2025-11-11"
@@ -5132,7 +6952,7 @@
       "realistic": 5.7,
       "simulator": 5.7
     },
-    "shipType": "cruiser",
+    "shipType": "heavy_cruiser",
     "economicType": "regular",
     "imageUrl": "ships/us_cruiser_pensacola_class.webp",
     "releaseDate": "2019-10-29"
@@ -5149,7 +6969,7 @@
       "realistic": 5.7,
       "simulator": 5.7
     },
-    "shipType": "cruiser",
+    "shipType": "heavy_cruiser",
     "economicType": "regular",
     "imageUrl": "ships/us_cruiser_portland_class.webp",
     "releaseDate": "2020-03-10"
@@ -5166,10 +6986,27 @@
       "realistic": 6.3,
       "simulator": 6.3
     },
-    "shipType": "cruiser",
+    "shipType": "light_cruiser",
     "economicType": "regular",
     "imageUrl": "ships/us_cruiser_worcester_class_roanoke.webp",
     "releaseDate": "2023-12-14"
+  },
+  {
+    "id": "us_cyclone_class_cyclone",
+    "name": "us_cyclone_class_cyclone",
+    "localizedName": "旋​风 (PC-1)",
+    "nation": "usa",
+    "rank": 5,
+    "battleRating": 3.3,
+    "br": {
+      "arcade": 3.3,
+      "realistic": 3.3,
+      "simulator": 3.3
+    },
+    "shipType": "gun_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/us_cyclone_class_cyclone.webp",
+    "releaseDate": "2022-09-14"
   },
   {
     "id": "us_destroyer_bagley_class_bagley",
@@ -5522,6 +7359,153 @@
     "releaseDate": "2018-10-23"
   },
   {
+    "id": "us_elco_77ft_pt20",
+    "name": "us_elco_77ft_pt20",
+    "localizedName": "PT-20",
+    "nation": "usa",
+    "rank": 1,
+    "battleRating": 1.7,
+    "br": {
+      "arcade": 1.7,
+      "realistic": 1.7,
+      "simulator": 1.7
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/us_elco_77ft_pt20.webp"
+  },
+  {
+    "id": "us_elco_77ft_pt59",
+    "name": "us_elco_77ft_pt59",
+    "localizedName": "PT-59",
+    "nation": "usa",
+    "rank": 3,
+    "battleRating": 3.0,
+    "br": {
+      "arcade": 3.0,
+      "realistic": 3.0,
+      "simulator": 3.0
+    },
+    "shipType": "gun_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/us_elco_77ft_pt59.webp"
+  },
+  {
+    "id": "us_elco_80ft_pt109_boat",
+    "name": "us_elco_80ft_pt109_boat",
+    "localizedName": "PT-109",
+    "nation": "usa",
+    "rank": 2,
+    "battleRating": 1.7,
+    "br": {
+      "arcade": 1.7,
+      "realistic": 1.7,
+      "simulator": 1.7
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "premium",
+    "imageUrl": "ships/us_elco_80ft_pt109_boat.webp"
+  },
+  {
+    "id": "us_elco_80ft_pt174",
+    "name": "us_elco_80ft_pt174",
+    "localizedName": "PT-174",
+    "nation": "usa",
+    "rank": 2,
+    "battleRating": 2.3,
+    "br": {
+      "arcade": 2.3,
+      "realistic": 2.3,
+      "simulator": 2.3
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "premium",
+    "imageUrl": "ships/us_elco_80ft_pt174.webp",
+    "releaseDate": "2021-10-26"
+  },
+  {
+    "id": "us_elco_80ft_pt_boat",
+    "name": "us_elco_80ft_pt_boat",
+    "localizedName": "PT-103",
+    "nation": "usa",
+    "rank": 2,
+    "battleRating": 1.7,
+    "br": {
+      "arcade": 1.7,
+      "realistic": 1.7,
+      "simulator": 1.7
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/us_elco_80ft_pt_boat.webp"
+  },
+  {
+    "id": "us_elco_80ft_pt_boat_mod01",
+    "name": "us_elco_80ft_pt_boat_mod01",
+    "localizedName": "PT-314",
+    "nation": "usa",
+    "rank": 3,
+    "battleRating": 2.3,
+    "br": {
+      "arcade": 2.3,
+      "realistic": 2.3,
+      "simulator": 2.3
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/us_elco_80ft_pt_boat_mod01.webp"
+  },
+  {
+    "id": "us_elco_80ft_pt_boat_mod02",
+    "name": "us_elco_80ft_pt_boat_mod02",
+    "localizedName": "PT-565",
+    "nation": "usa",
+    "rank": 3,
+    "battleRating": 3.0,
+    "br": {
+      "arcade": 3.0,
+      "realistic": 3.0,
+      "simulator": 3.0
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/us_elco_80ft_pt_boat_mod02.webp"
+  },
+  {
+    "id": "us_elco_80ft_pt_boat_thunderbolt",
+    "name": "us_elco_80ft_pt_boat_thunderbolt",
+    "localizedName": "PT-556/​雷​电​炮​座",
+    "nation": "usa",
+    "rank": 3,
+    "battleRating": 3.0,
+    "br": {
+      "arcade": 3.0,
+      "realistic": 3.0,
+      "simulator": 3.0
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "premium",
+    "imageUrl": "ships/us_elco_80ft_pt_boat_thunderbolt.webp",
+    "releaseDate": "2018-10-23"
+  },
+  {
+    "id": "us_flagstaff_pgh1",
+    "name": "us_flagstaff_pgh1",
+    "localizedName": "弗​拉​格​斯​塔​夫",
+    "nation": "usa",
+    "rank": 3,
+    "battleRating": 3.0,
+    "br": {
+      "arcade": 3.0,
+      "realistic": 3.0,
+      "simulator": 3.0
+    },
+    "shipType": "gun_boat",
+    "economicType": "premium",
+    "imageUrl": "ships/us_flagstaff_pgh1.webp",
+    "releaseDate": "2024-04-24"
+  },
+  {
     "id": "us_frigate_buckley_class_coolbaugh",
     "name": "us_frigate_buckley_class_coolbaugh",
     "localizedName": "库​尔​博",
@@ -5533,7 +7517,7 @@
       "realistic": 4.0,
       "simulator": 4.0
     },
-    "shipType": "torpedo_boat",
+    "shipType": "frigate",
     "economicType": "regular",
     "imageUrl": "ships/us_frigate_buckley_class_coolbaugh.webp",
     "releaseDate": "2024-06-19"
@@ -5550,7 +7534,7 @@
       "realistic": 3.7,
       "simulator": 3.7
     },
-    "shipType": "torpedo_boat",
+    "shipType": "frigate",
     "economicType": "regular",
     "imageUrl": "ships/us_frigate_dealey.webp",
     "releaseDate": "2024-03-13"
@@ -5567,10 +7551,142 @@
       "realistic": 3.3,
       "simulator": 3.3
     },
-    "shipType": "torpedo_boat",
+    "shipType": "frigate",
     "economicType": "regular",
     "imageUrl": "ships/us_frigate_tacoma.webp",
     "releaseDate": "2021-09-07"
+  },
+  {
+    "id": "us_higgins_78ft_pt625",
+    "name": "us_higgins_78ft_pt625",
+    "localizedName": "PT-200",
+    "nation": "usa",
+    "rank": 3,
+    "battleRating": 2.7,
+    "br": {
+      "arcade": 2.7,
+      "realistic": 2.7,
+      "simulator": 2.7
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/us_higgins_78ft_pt625.webp"
+  },
+  {
+    "id": "us_higgins_78ft_pt658",
+    "name": "us_higgins_78ft_pt658",
+    "localizedName": "PT-658",
+    "nation": "usa",
+    "rank": 3,
+    "battleRating": 2.7,
+    "br": {
+      "arcade": 2.7,
+      "realistic": 2.7,
+      "simulator": 2.7
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "premium",
+    "imageUrl": "ships/us_higgins_78ft_pt658.webp",
+    "releaseDate": "2021-10-26"
+  },
+  {
+    "id": "us_higgins_78ft_pt71",
+    "name": "us_higgins_78ft_pt71",
+    "localizedName": "PT-71",
+    "nation": "usa",
+    "rank": 2,
+    "battleRating": 2.0,
+    "br": {
+      "arcade": 2.0,
+      "realistic": 2.0,
+      "simulator": 2.0
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/us_higgins_78ft_pt71.webp"
+  },
+  {
+    "id": "us_huckins_78ft_pt262",
+    "name": "us_huckins_78ft_pt262",
+    "localizedName": "PT-262",
+    "nation": "usa",
+    "rank": 2,
+    "battleRating": 2.0,
+    "br": {
+      "arcade": 2.0,
+      "realistic": 2.0,
+      "simulator": 2.0
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "premium",
+    "imageUrl": "ships/us_huckins_78ft_pt262.webp",
+    "releaseDate": "2025-11-11"
+  },
+  {
+    "id": "us_huckins_78ft_pt95",
+    "name": "us_huckins_78ft_pt95",
+    "localizedName": "PT-95",
+    "nation": "usa",
+    "rank": 1,
+    "battleRating": 1.7,
+    "br": {
+      "arcade": 1.7,
+      "realistic": 1.7,
+      "simulator": 1.7
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/us_huckins_78ft_pt95.webp",
+    "releaseDate": "2025-06-25"
+  },
+  {
+    "id": "us_lcm_zippo",
+    "name": "us_lcm_zippo",
+    "localizedName": "打​火​机",
+    "nation": "usa",
+    "rank": 3,
+    "battleRating": 2.3,
+    "br": {
+      "arcade": 2.3,
+      "realistic": 2.3,
+      "simulator": 2.3
+    },
+    "shipType": "armored_boat",
+    "economicType": "premium",
+    "imageUrl": "ships/us_lcm_zippo.webp",
+    "releaseDate": "2022-10-26"
+  },
+  {
+    "id": "us_lcs_l_3",
+    "name": "us_lcs_l_3",
+    "localizedName": "LCS(L)(3)",
+    "nation": "usa",
+    "rank": 5,
+    "battleRating": 3.7,
+    "br": {
+      "arcade": 3.7,
+      "realistic": 3.7,
+      "simulator": 3.7
+    },
+    "shipType": "gun_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/us_lcs_l_3.webp"
+  },
+  {
+    "id": "us_nasty_ptf",
+    "name": "us_nasty_ptf",
+    "localizedName": "PTF-7",
+    "nation": "usa",
+    "rank": 1,
+    "battleRating": 1.7,
+    "br": {
+      "arcade": 1.7,
+      "realistic": 1.7,
+      "simulator": 1.7
+    },
+    "shipType": "gun_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/us_nasty_ptf.webp"
   },
   {
     "id": "us_pc_451",
@@ -5606,6 +7722,123 @@
     "releaseDate": "2019-09-10"
   },
   {
+    "id": "us_pgm_59_class",
+    "name": "us_pgm_59_class",
+    "localizedName": "金​龟",
+    "nation": "usa",
+    "rank": 3,
+    "battleRating": 3.3,
+    "br": {
+      "arcade": 3.3,
+      "realistic": 3.3,
+      "simulator": 3.3
+    },
+    "shipType": "gun_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/us_pgm_59_class.webp",
+    "releaseDate": "2022-03-22"
+  },
+  {
+    "id": "us_pgm_9_class",
+    "name": "us_pgm_9_class",
+    "localizedName": "PGM-9",
+    "nation": "usa",
+    "rank": 4,
+    "battleRating": 3.3,
+    "br": {
+      "arcade": 3.3,
+      "realistic": 3.3,
+      "simulator": 3.3
+    },
+    "shipType": "gun_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/us_pgm_9_class.webp",
+    "releaseDate": "2025-11-11"
+  },
+  {
+    "id": "us_pt3",
+    "name": "us_pt3",
+    "localizedName": "PT-3",
+    "nation": "usa",
+    "rank": 1,
+    "battleRating": 1.0,
+    "br": {
+      "arcade": 1.0,
+      "realistic": 1.0,
+      "simulator": 1.0
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "premium",
+    "imageUrl": "ships/us_pt3.webp",
+    "releaseDate": "2018-10-23"
+  },
+  {
+    "id": "us_pt6",
+    "name": "us_pt6",
+    "localizedName": "PT-6",
+    "nation": "usa",
+    "rank": 1,
+    "battleRating": 1.0,
+    "br": {
+      "arcade": 1.0,
+      "realistic": 1.0,
+      "simulator": 1.0
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "premium",
+    "imageUrl": "ships/us_pt6.webp"
+  },
+  {
+    "id": "us_pt810",
+    "name": "us_pt810",
+    "localizedName": "PT-810",
+    "nation": "usa",
+    "rank": 5,
+    "battleRating": 3.3,
+    "br": {
+      "arcade": 3.3,
+      "realistic": 3.3,
+      "simulator": 3.3
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/us_pt810.webp"
+  },
+  {
+    "id": "us_pt811",
+    "name": "us_pt811",
+    "localizedName": "PT-811",
+    "nation": "usa",
+    "rank": 4,
+    "battleRating": 3.7,
+    "br": {
+      "arcade": 3.7,
+      "realistic": 3.7,
+      "simulator": 3.7
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "premium",
+    "imageUrl": "ships/us_pt811.webp",
+    "releaseDate": "2019-12-16"
+  },
+  {
+    "id": "us_pt812",
+    "name": "us_pt812",
+    "localizedName": "PT-812",
+    "nation": "usa",
+    "rank": 4,
+    "battleRating": 3.3,
+    "br": {
+      "arcade": 3.3,
+      "realistic": 3.3,
+      "simulator": 3.3
+    },
+    "shipType": "gun_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/us_pt812.webp",
+    "releaseDate": "2022-12-20"
+  },
+  {
     "id": "us_sc_497",
     "name": "us_sc_497",
     "localizedName": "SC-497",
@@ -5622,6 +7855,70 @@
     "imageUrl": "ships/us_sc_497.webp"
   },
   {
+    "id": "us_tucumcari_pgh2",
+    "name": "us_tucumcari_pgh2",
+    "localizedName": "图​克​姆​卡​里",
+    "nation": "usa",
+    "rank": 4,
+    "battleRating": 3.0,
+    "br": {
+      "arcade": 3.0,
+      "realistic": 3.0,
+      "simulator": 3.0
+    },
+    "shipType": "gun_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/us_tucumcari_pgh2.webp"
+  },
+  {
+    "id": "ussr_1124_ack",
+    "name": "ussr_1124_ack",
+    "localizedName": "Pr.1124 后​期​型",
+    "nation": "ussr",
+    "rank": 3,
+    "battleRating": 2.3,
+    "br": {
+      "arcade": 2.3,
+      "realistic": 2.3,
+      "simulator": 2.3
+    },
+    "shipType": "armored_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/ussr_1124_ack.webp"
+  },
+  {
+    "id": "ussr_1124_art",
+    "name": "ussr_1124_art",
+    "localizedName": "Pr.1124 早​期​型",
+    "nation": "ussr",
+    "rank": 2,
+    "battleRating": 2.3,
+    "br": {
+      "arcade": 2.3,
+      "realistic": 2.3,
+      "simulator": 2.3
+    },
+    "shipType": "armored_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/ussr_1124_art.webp"
+  },
+  {
+    "id": "ussr_1124_rct",
+    "name": "ussr_1124_rct",
+    "localizedName": "Pr.1124/​火​箭​炮",
+    "nation": "ussr",
+    "rank": 2,
+    "battleRating": 2.0,
+    "br": {
+      "arcade": 2.0,
+      "realistic": 2.0,
+      "simulator": 2.0
+    },
+    "shipType": "armored_boat",
+    "economicType": "premium",
+    "imageUrl": "ships/ussr_1124_rct.webp"
+  },
+  {
     "id": "ussr_battlecruiser_izmail",
     "name": "ussr_battlecruiser_izmail",
     "localizedName": "伊​兹​梅​尔",
@@ -5633,7 +7930,7 @@
       "realistic": 7.0,
       "simulator": 7.0
     },
-    "shipType": "cruiser",
+    "shipType": "battlecruiser",
     "economicType": "regular",
     "imageUrl": "ships/ussr_battlecruiser_izmail.webp",
     "releaseDate": "2024-09-10"
@@ -5650,7 +7947,7 @@
       "realistic": 7.3,
       "simulator": 7.3
     },
-    "shipType": "cruiser",
+    "shipType": "battlecruiser",
     "economicType": "regular",
     "imageUrl": "ships/ussr_battlecruiser_kronshtadt.webp",
     "releaseDate": "2022-06-15"
@@ -5667,7 +7964,7 @@
       "realistic": 7.3,
       "simulator": 7.3
     },
-    "shipType": "cruiser",
+    "shipType": "battlecruiser",
     "economicType": "premium",
     "imageUrl": "ships/ussr_battlecruiser_sevastopol.webp",
     "releaseDate": "2025-06-25"
@@ -5684,7 +7981,7 @@
       "realistic": 7.7,
       "simulator": 7.7
     },
-    "shipType": "cruiser",
+    "shipType": "battlecruiser",
     "economicType": "regular",
     "imageUrl": "ships/ussr_battlecruiser_stalingrad.webp",
     "releaseDate": "2025-12-16"
@@ -5701,7 +7998,7 @@
       "realistic": 7.7,
       "simulator": 7.7
     },
-    "shipType": "cruiser",
+    "shipType": "battleship",
     "economicType": "regular",
     "imageUrl": "ships/ussr_battleship_arhangelsk.webp",
     "releaseDate": "2024-12-16"
@@ -5718,7 +8015,7 @@
       "realistic": 6.7,
       "simulator": 6.7
     },
-    "shipType": "cruiser",
+    "shipType": "battleship",
     "economicType": "regular",
     "imageUrl": "ships/ussr_battleship_imperatritsa_mariya.webp",
     "releaseDate": "2020-11-15"
@@ -5735,7 +8032,7 @@
       "realistic": 6.7,
       "simulator": 6.7
     },
-    "shipType": "cruiser",
+    "shipType": "battleship",
     "economicType": "premium",
     "imageUrl": "ships/ussr_battleship_marat.webp",
     "releaseDate": "2023-09-19"
@@ -5752,7 +8049,7 @@
       "realistic": 7.3,
       "simulator": 7.3
     },
-    "shipType": "cruiser",
+    "shipType": "battleship",
     "economicType": "regular",
     "imageUrl": "ships/ussr_battleship_novorossiysk.webp",
     "releaseDate": "2023-12-14"
@@ -5769,7 +8066,7 @@
       "realistic": 6.7,
       "simulator": 6.7
     },
-    "shipType": "cruiser",
+    "shipType": "battleship",
     "economicType": "regular",
     "imageUrl": "ships/ussr_battleship_parizhskaya_kommuna.webp",
     "releaseDate": "2021-09-07"
@@ -5786,7 +8083,7 @@
       "realistic": 6.3,
       "simulator": 6.3
     },
-    "shipType": "cruiser",
+    "shipType": "battleship",
     "economicType": "regular",
     "imageUrl": "ships/ussr_battleship_poltava.webp",
     "releaseDate": "2020-11-15"
@@ -5803,10 +8100,26 @@
       "realistic": 8.7,
       "simulator": 8.7
     },
-    "shipType": "cruiser",
+    "shipType": "battleship",
     "economicType": "regular",
     "imageUrl": "ships/ussr_battleship_pr23_sovetskij_soyuz.webp",
     "releaseDate": "2025-06-25"
+  },
+  {
+    "id": "ussr_bmo",
+    "name": "ussr_bmo",
+    "localizedName": "BMO",
+    "nation": "ussr",
+    "rank": 4,
+    "battleRating": 3.0,
+    "br": {
+      "arcade": 3.0,
+      "realistic": 3.0,
+      "simulator": 3.0
+    },
+    "shipType": "armored_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/ussr_bmo.webp"
   },
   {
     "id": "ussr_cruiser_chapayev",
@@ -5820,7 +8133,7 @@
       "realistic": 6.0,
       "simulator": 6.0
     },
-    "shipType": "cruiser",
+    "shipType": "light_cruiser",
     "economicType": "regular",
     "imageUrl": "ships/ussr_cruiser_chapayev.webp",
     "releaseDate": "2019-09-10"
@@ -5837,7 +8150,7 @@
       "realistic": 5.7,
       "simulator": 5.7
     },
-    "shipType": "cruiser",
+    "shipType": "light_cruiser",
     "economicType": "premium",
     "imageUrl": "ships/ussr_cruiser_kerch.webp",
     "releaseDate": "2021-12-17"
@@ -5854,7 +8167,7 @@
       "realistic": 5.7,
       "simulator": 5.7
     },
-    "shipType": "cruiser",
+    "shipType": "light_cruiser",
     "economicType": "regular",
     "imageUrl": "ships/ussr_cruiser_kirov.webp",
     "releaseDate": "2019-03-12"
@@ -5871,7 +8184,7 @@
       "realistic": 5.0,
       "simulator": 5.0
     },
-    "shipType": "cruiser",
+    "shipType": "light_cruiser",
     "economicType": "regular",
     "imageUrl": "ships/ussr_cruiser_krasnyi_kavkaz.webp"
   },
@@ -5887,7 +8200,7 @@
       "realistic": 5.3,
       "simulator": 5.3
     },
-    "shipType": "cruiser",
+    "shipType": "light_cruiser",
     "economicType": "regular",
     "imageUrl": "ships/ussr_cruiser_krasnyi_krim.webp",
     "releaseDate": "2018-12-18"
@@ -5904,7 +8217,7 @@
       "realistic": 5.7,
       "simulator": 5.7
     },
-    "shipType": "cruiser",
+    "shipType": "light_cruiser",
     "economicType": "regular",
     "imageUrl": "ships/ussr_cruiser_maxim_gorky.webp",
     "releaseDate": "2020-08-25"
@@ -5921,7 +8234,7 @@
       "realistic": 6.0,
       "simulator": 6.0
     },
-    "shipType": "cruiser",
+    "shipType": "light_cruiser",
     "economicType": "regular",
     "imageUrl": "ships/ussr_cruiser_mikhail_kutuzov.webp",
     "releaseDate": "2022-09-14"
@@ -5938,7 +8251,7 @@
       "realistic": 5.0,
       "simulator": 5.0
     },
-    "shipType": "cruiser",
+    "shipType": "light_cruiser",
     "economicType": "premium",
     "imageUrl": "ships/ussr_cruiser_omaha_class_murmansk.webp",
     "releaseDate": "2024-10-23"
@@ -5955,7 +8268,7 @@
       "realistic": 6.0,
       "simulator": 6.0
     },
-    "shipType": "cruiser",
+    "shipType": "light_cruiser",
     "economicType": "regular",
     "imageUrl": "ships/ussr_cruiser_shcherbakov.webp",
     "releaseDate": "2023-04-01"
@@ -5972,7 +8285,7 @@
       "realistic": 6.0,
       "simulator": 6.0
     },
-    "shipType": "cruiser",
+    "shipType": "light_cruiser",
     "economicType": "regular",
     "imageUrl": "ships/ussr_cruiser_sverdlov.webp",
     "releaseDate": "2020-03-10"
@@ -5989,7 +8302,7 @@
       "realistic": 5.7,
       "simulator": 5.7
     },
-    "shipType": "cruiser",
+    "shipType": "light_cruiser",
     "economicType": "regular",
     "imageUrl": "ships/ussr_cruiser_voroshilov.webp",
     "releaseDate": "2021-05-12"
@@ -6006,10 +8319,43 @@
       "realistic": 6.0,
       "simulator": 6.0
     },
-    "shipType": "cruiser",
+    "shipType": "light_cruiser",
     "economicType": "premium",
     "imageUrl": "ships/ussr_cruiser_zheleznyakov.webp",
     "releaseDate": "2020-11-15"
+  },
+  {
+    "id": "ussr_d3",
+    "name": "ussr_d3",
+    "localizedName": "D-3",
+    "nation": "ussr",
+    "rank": 1,
+    "battleRating": 1.0,
+    "br": {
+      "arcade": 1.0,
+      "realistic": 1.0,
+      "simulator": 1.0
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "premium",
+    "imageUrl": "ships/ussr_d3.webp"
+  },
+  {
+    "id": "ussr_d3_tk126",
+    "name": "ussr_d3_tk126",
+    "localizedName": "TK-126",
+    "nation": "ussr",
+    "rank": 1,
+    "battleRating": 1.3,
+    "br": {
+      "arcade": 1.3,
+      "realistic": 1.3,
+      "simulator": 1.3
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/ussr_d3_tk126.webp",
+    "releaseDate": "2026-03-10"
   },
   {
     "id": "ussr_destroyer_7_besposhchadny",
@@ -6332,6 +8678,138 @@
     "releaseDate": "2022-12-20"
   },
   {
+    "id": "ussr_g5_mtb",
+    "name": "ussr_g5_mtb",
+    "localizedName": "G-5",
+    "nation": "ussr",
+    "rank": 1,
+    "battleRating": 1.0,
+    "br": {
+      "arcade": 1.0,
+      "realistic": 1.0,
+      "simulator": 1.0
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "premium",
+    "imageUrl": "ships/ussr_g5_mtb.webp"
+  },
+  {
+    "id": "ussr_g5_mtb_shvak",
+    "name": "ussr_g5_mtb_shvak",
+    "localizedName": "G-5/​施​瓦​克",
+    "nation": "ussr",
+    "rank": 1,
+    "battleRating": 1.0,
+    "br": {
+      "arcade": 1.0,
+      "realistic": 1.0,
+      "simulator": 1.0
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "premium",
+    "imageUrl": "ships/ussr_g5_mtb_shvak.webp",
+    "releaseDate": "2018-10-23"
+  },
+  {
+    "id": "ussr_g5_rct",
+    "name": "ussr_g5_rct",
+    "localizedName": "TKA-412",
+    "nation": "ussr",
+    "rank": 1,
+    "battleRating": 1.7,
+    "br": {
+      "arcade": 1.7,
+      "realistic": 1.7,
+      "simulator": 1.7
+    },
+    "shipType": "gun_boat",
+    "economicType": "premium",
+    "imageUrl": "ships/ussr_g5_rct.webp",
+    "releaseDate": "2020-05-09"
+  },
+  {
+    "id": "ussr_mbk_161_1943",
+    "name": "ussr_mbk_161_1943",
+    "localizedName": "MBK-161 早​期​型",
+    "nation": "ussr",
+    "rank": 3,
+    "battleRating": 3.3,
+    "br": {
+      "arcade": 3.3,
+      "realistic": 3.3,
+      "simulator": 3.3
+    },
+    "shipType": "armored_boat",
+    "economicType": "premium",
+    "imageUrl": "ships/ussr_mbk_161_1943.webp",
+    "releaseDate": "2019-10-02"
+  },
+  {
+    "id": "ussr_mbk_161_1944",
+    "name": "ussr_mbk_161_1944",
+    "localizedName": "MBK-161 后​期​型",
+    "nation": "ussr",
+    "rank": 4,
+    "battleRating": 3.7,
+    "br": {
+      "arcade": 3.7,
+      "realistic": 3.7,
+      "simulator": 3.7
+    },
+    "shipType": "armored_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/ussr_mbk_161_1944.webp"
+  },
+  {
+    "id": "ussr_mkl_186",
+    "name": "ussr_mkl_186",
+    "localizedName": "MBK Pr.186",
+    "nation": "ussr",
+    "rank": 4,
+    "battleRating": 3.3,
+    "br": {
+      "arcade": 3.3,
+      "realistic": 3.3,
+      "simulator": 3.3
+    },
+    "shipType": "armored_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/ussr_mkl_186.webp"
+  },
+  {
+    "id": "ussr_mkl_186_mk85",
+    "name": "ussr_mkl_186_mk85",
+    "localizedName": "MBK Pr.186/MK-85",
+    "nation": "ussr",
+    "rank": 4,
+    "battleRating": 3.3,
+    "br": {
+      "arcade": 3.3,
+      "realistic": 3.3,
+      "simulator": 3.3
+    },
+    "shipType": "armored_boat",
+    "economicType": "premium",
+    "imageUrl": "ships/ussr_mkl_186_mk85.webp",
+    "releaseDate": "2018-10-23"
+  },
+  {
+    "id": "ussr_mo_4",
+    "name": "ussr_mo_4",
+    "localizedName": "MO-4",
+    "nation": "ussr",
+    "rank": 1,
+    "battleRating": 1.0,
+    "br": {
+      "arcade": 1.0,
+      "realistic": 1.0,
+      "simulator": 1.0
+    },
+    "shipType": "gun_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/ussr_mo_4.webp"
+  },
+  {
     "id": "ussr_mpk_122a",
     "name": "ussr_mpk_122a",
     "localizedName": "MPK Pr.122A",
@@ -6432,6 +8910,57 @@
     "releaseDate": "2023-03-07"
   },
   {
+    "id": "ussr_mpk_pr11451",
+    "name": "ussr_mpk_pr11451",
+    "localizedName": "MPK Pr.11451",
+    "nation": "ussr",
+    "rank": 5,
+    "battleRating": 4.7,
+    "br": {
+      "arcade": 4.7,
+      "realistic": 4.7,
+      "simulator": 4.7
+    },
+    "shipType": "torpedo_gun_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/ussr_mpk_pr11451.webp",
+    "releaseDate": "2024-06-19"
+  },
+  {
+    "id": "ussr_mpk_pr12412",
+    "name": "ussr_mpk_pr12412",
+    "localizedName": "MPK Pr.12412",
+    "nation": "ussr",
+    "rank": 5,
+    "battleRating": 4.3,
+    "br": {
+      "arcade": 4.3,
+      "realistic": 4.3,
+      "simulator": 4.3
+    },
+    "shipType": "torpedo_gun_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/ussr_mpk_pr12412.webp",
+    "releaseDate": "2020-12-17"
+  },
+  {
+    "id": "ussr_mpk_pr12412p",
+    "name": "ussr_mpk_pr12412p",
+    "localizedName": "MPK Pr.12412P",
+    "nation": "ussr",
+    "rank": 4,
+    "battleRating": 4.3,
+    "br": {
+      "arcade": 4.3,
+      "realistic": 4.3,
+      "simulator": 4.3
+    },
+    "shipType": "torpedo_gun_boat",
+    "economicType": "premium",
+    "imageUrl": "ships/ussr_mpk_pr12412p.webp",
+    "releaseDate": "2022-03-22"
+  },
+  {
     "id": "ussr_mpk_pr1331m",
     "name": "ussr_mpk_pr1331m",
     "localizedName": "MPK Pr.1331M",
@@ -6443,7 +8972,7 @@
       "realistic": 4.0,
       "simulator": 4.0
     },
-    "shipType": "torpedo_boat",
+    "shipType": "frigate",
     "economicType": "regular",
     "imageUrl": "ships/ussr_mpk_pr1331m.webp",
     "releaseDate": "2022-10-26"
@@ -6460,10 +8989,257 @@
       "realistic": 4.7,
       "simulator": 4.7
     },
-    "shipType": "torpedo_boat",
+    "shipType": "frigate",
     "economicType": "regular",
     "imageUrl": "ships/ussr_mpk_pr_1124.webp",
     "releaseDate": "2025-09-23"
+  },
+  {
+    "id": "ussr_od_200",
+    "name": "ussr_od_200",
+    "localizedName": "OD-200",
+    "nation": "ussr",
+    "rank": 1,
+    "battleRating": 1.7,
+    "br": {
+      "arcade": 1.7,
+      "realistic": 1.7,
+      "simulator": 1.7
+    },
+    "shipType": "gun_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/ussr_od_200.webp"
+  },
+  {
+    "id": "ussr_pr253l",
+    "name": "ussr_pr253l",
+    "localizedName": "Pr.253L",
+    "nation": "ussr",
+    "rank": 2,
+    "battleRating": 1.7,
+    "br": {
+      "arcade": 1.7,
+      "realistic": 1.7,
+      "simulator": 1.7
+    },
+    "shipType": "gun_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/ussr_pr253l.webp",
+    "releaseDate": "2024-11-19"
+  },
+  {
+    "id": "ussr_pr_103_sm4",
+    "name": "ussr_pr_103_sm4",
+    "localizedName": "SM-4",
+    "nation": "ussr",
+    "rank": 1,
+    "battleRating": 1.3,
+    "br": {
+      "arcade": 1.3,
+      "realistic": 1.3,
+      "simulator": 1.3
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/ussr_pr_103_sm4.webp",
+    "releaseDate": "2025-03-18"
+  },
+  {
+    "id": "ussr_pr_1204",
+    "name": "ussr_pr_1204",
+    "localizedName": "Pr.1204",
+    "nation": "ussr",
+    "rank": 2,
+    "battleRating": 2.3,
+    "br": {
+      "arcade": 2.3,
+      "realistic": 2.3,
+      "simulator": 2.3
+    },
+    "shipType": "armored_boat",
+    "economicType": "premium",
+    "imageUrl": "ships/ussr_pr_1204.webp",
+    "releaseDate": "2019-09-10"
+  },
+  {
+    "id": "ussr_pr_1204_late",
+    "name": "ussr_pr_1204_late",
+    "localizedName": "Pr.1204 后​期​型",
+    "nation": "ussr",
+    "rank": 3,
+    "battleRating": 2.7,
+    "br": {
+      "arcade": 2.7,
+      "realistic": 2.7,
+      "simulator": 2.7
+    },
+    "shipType": "armored_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/ussr_pr_1204_late.webp"
+  },
+  {
+    "id": "ussr_pr_123bis",
+    "name": "ussr_pr_123bis",
+    "localizedName": "Pr.123-bis",
+    "nation": "ussr",
+    "rank": 2,
+    "battleRating": 2.3,
+    "br": {
+      "arcade": 2.3,
+      "realistic": 2.3,
+      "simulator": 2.3
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/ussr_pr_123bis.webp"
+  },
+  {
+    "id": "ussr_pr_123k",
+    "name": "ussr_pr_123k",
+    "localizedName": "Pr.123K",
+    "nation": "ussr",
+    "rank": 3,
+    "battleRating": 2.3,
+    "br": {
+      "arcade": 2.3,
+      "realistic": 2.3,
+      "simulator": 2.3
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/ussr_pr_123k.webp"
+  },
+  {
+    "id": "ussr_pr_123k_hydrofoils",
+    "name": "ussr_pr_123k_hydrofoils",
+    "localizedName": "Pr.123K (A-10bis)",
+    "nation": "ussr",
+    "rank": 2,
+    "battleRating": 2.3,
+    "br": {
+      "arcade": 2.3,
+      "realistic": 2.3,
+      "simulator": 2.3
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "premium",
+    "imageUrl": "ships/ussr_pr_123k_hydrofoils.webp",
+    "releaseDate": "2018-10-23"
+  },
+  {
+    "id": "ussr_pr_183",
+    "name": "ussr_pr_183",
+    "localizedName": "Pr.183",
+    "nation": "ussr",
+    "rank": 4,
+    "battleRating": 3.3,
+    "br": {
+      "arcade": 3.3,
+      "realistic": 3.3,
+      "simulator": 3.3
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/ussr_pr_183.webp"
+  },
+  {
+    "id": "ussr_pr_183_egypt_bm_21",
+    "name": "ussr_pr_183_egypt_bm_21",
+    "localizedName": "Pr.183/BM-21",
+    "nation": "ussr",
+    "rank": 3,
+    "battleRating": 3.0,
+    "br": {
+      "arcade": 3.0,
+      "realistic": 3.0,
+      "simulator": 3.0
+    },
+    "shipType": "gun_boat",
+    "economicType": "premium",
+    "imageUrl": "ships/ussr_pr_183_egypt_bm_21.webp",
+    "releaseDate": "2023-01-25"
+  },
+  {
+    "id": "ussr_pr_191",
+    "name": "ussr_pr_191",
+    "localizedName": "Pr.191",
+    "nation": "ussr",
+    "rank": 3,
+    "battleRating": 2.7,
+    "br": {
+      "arcade": 2.7,
+      "realistic": 2.7,
+      "simulator": 2.7
+    },
+    "shipType": "armored_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/ussr_pr_191.webp",
+    "releaseDate": "2018-10-23"
+  },
+  {
+    "id": "ussr_pr_191m",
+    "name": "ussr_pr_191m",
+    "localizedName": "Pr.191M",
+    "nation": "ussr",
+    "rank": 3,
+    "battleRating": 3.0,
+    "br": {
+      "arcade": 3.0,
+      "realistic": 3.0,
+      "simulator": 3.0
+    },
+    "shipType": "armored_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/ussr_pr_191m.webp"
+  },
+  {
+    "id": "ussr_pr_205pe_k225",
+    "name": "ussr_pr_205pe_k225",
+    "localizedName": "AK-225",
+    "nation": "ussr",
+    "rank": 5,
+    "battleRating": 4.3,
+    "br": {
+      "arcade": 4.3,
+      "realistic": 4.3,
+      "simulator": 4.3
+    },
+    "shipType": "gun_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/ussr_pr_205pe_k225.webp",
+    "releaseDate": "2025-12-03"
+  },
+  {
+    "id": "ussr_pr_206",
+    "name": "ussr_pr_206",
+    "localizedName": "Pr.206",
+    "nation": "ussr",
+    "rank": 5,
+    "battleRating": 4.3,
+    "br": {
+      "arcade": 4.3,
+      "realistic": 4.3,
+      "simulator": 4.3
+    },
+    "shipType": "torpedo_gun_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/ussr_pr_206.webp"
+  },
+  {
+    "id": "ussr_pr_206m",
+    "name": "ussr_pr_206m",
+    "localizedName": "Pr.206M",
+    "nation": "ussr",
+    "rank": 5,
+    "battleRating": 4.3,
+    "br": {
+      "arcade": 4.3,
+      "realistic": 4.3,
+      "simulator": 4.3
+    },
+    "shipType": "torpedo_gun_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/ussr_pr_206m.webp"
   },
   {
     "id": "ussr_skr_groza_1943",
@@ -6477,7 +9253,7 @@
       "realistic": 3.0,
       "simulator": 3.0
     },
-    "shipType": "torpedo_boat",
+    "shipType": "frigate",
     "economicType": "regular",
     "imageUrl": "ships/ussr_skr_groza_1943.webp",
     "releaseDate": "2019-05-28"
@@ -6494,7 +9270,7 @@
       "realistic": 4.3,
       "simulator": 4.3
     },
-    "shipType": "torpedo_boat",
+    "shipType": "frigate",
     "economicType": "regular",
     "imageUrl": "ships/ussr_skr_pr159.webp"
   },
@@ -6510,7 +9286,7 @@
       "realistic": 4.3,
       "simulator": 4.3
     },
-    "shipType": "torpedo_boat",
+    "shipType": "frigate",
     "economicType": "clan",
     "imageUrl": "ships/ussr_skr_pr35.webp",
     "releaseDate": "2019-03-26"
@@ -6527,7 +9303,7 @@
       "realistic": 4.0,
       "simulator": 4.0
     },
-    "shipType": "torpedo_boat",
+    "shipType": "frigate",
     "economicType": "regular",
     "imageUrl": "ships/ussr_skr_pr50_jenot.webp",
     "releaseDate": "2020-09-08"
@@ -6544,9 +9320,26 @@
       "realistic": 4.0,
       "simulator": 4.0
     },
-    "shipType": "torpedo_boat",
+    "shipType": "frigate",
     "economicType": "premium",
     "imageUrl": "ships/ussr_skr_pr50plo_rosomacha.webp",
     "releaseDate": "2021-03-10"
+  },
+  {
+    "id": "ussr_ya_5m",
+    "name": "ussr_ya_5m",
+    "localizedName": "雅​-5M",
+    "nation": "ussr",
+    "rank": 1,
+    "battleRating": 1.3,
+    "br": {
+      "arcade": 1.3,
+      "realistic": 1.3,
+      "simulator": 1.3
+    },
+    "shipType": "gun_boat",
+    "economicType": "premium",
+    "imageUrl": "ships/ussr_ya_5m.webp",
+    "releaseDate": "2018-10-23"
   }
 ]

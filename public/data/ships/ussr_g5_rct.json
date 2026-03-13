@@ -1,0 +1,29 @@
+{
+  "id": "ussr_g5_rct",
+  "economy": {
+    "researchCost": 4000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 400,
+    "crewTraining": 450,
+    "expertTraining": 3000,
+    "aceTrainingGE": 45,
+    "aceTrainingRP": 220000,
+    "repairCost": {
+      "arcade": [
+        134,
+        134
+      ],
+      "realistic": [
+        211,
+        211
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.42,
+      "realistic": 0.52,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.0,
+    "freeRepairs": 30
+  }
+}

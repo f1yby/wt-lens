@@ -1,0 +1,16 @@
+{
+  "id": "us_pt6",
+  "economy": {
+    "purchaseCost": 0,
+    "crewTraining": 0,
+    "expertTraining": 1000,
+    "aceTrainingGE": 10,
+    "aceTrainingRP": 80000,
+    "rewardMultiplier": {
+      "arcade": 0.1,
+      "realistic": 0.1,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.0
+  }
+}

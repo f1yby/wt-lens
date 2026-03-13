@@ -1,0 +1,27 @@
+{
+  "id": "us_admirable_class",
+  "economy": {
+    "researchCost": 89000,
+    "purchaseCost": 300000,
+    "crewTraining": 87000,
+    "expertTraining": 300000,
+    "aceTrainingGE": 1100,
+    "aceTrainingRP": 520000,
+    "repairCost": {
+      "arcade": [
+        3175,
+        3989
+      ],
+      "realistic": [
+        4074,
+        5119
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.25,
+      "realistic": 1.92,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.72
+  }
+}

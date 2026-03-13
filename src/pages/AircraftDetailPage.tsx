@@ -120,6 +120,11 @@ export default function AircraftDetailPage() {
   const isHelicopter = location.pathname.startsWith('/helicopter');
   const listPath = isHelicopter ? '/helicopter' : '/aircraft';
   const navPrefix = isHelicopter ? '/helicopter' : '/aircraft';
+
+  // Available aircraft types for filter (helicopters excluded on aircraft page, and vice versa)
+  const availableTypes: AircraftType[] = isHelicopter
+    ? ['helicopter']
+    : ['fighter', 'bomber', 'assault'];
   const [aircraftList, setAircraftList] = useState<AircraftVehicle[]>([]);
   const [loading, setLoading] = useState(true);
   const [selectedTypes, setSelectedTypes] = useState<AircraftType[]>([]);
@@ -179,10 +184,10 @@ export default function AircraftDetailPage() {
   }, [brRange, aircraft]);
 
   const filter: ComparisonFilter = useMemo(() => ({
-    aircraftTypes: selectedTypes,
+    aircraftTypes: selectedTypes.length > 0 ? selectedTypes : availableTypes,
     brMin: effectiveBrRange[0],
     brMax: effectiveBrRange[1],
-  }), [selectedTypes, effectiveBrRange]);
+  }), [selectedTypes, effectiveBrRange, availableTypes]);
 
   const statsComparisons = useMemo(() => {
     if (!aircraft) return null;
@@ -458,10 +463,12 @@ export default function AircraftDetailPage() {
         )}
 
         {/* Game Mode Selector */}
-        <GameModeSelector
-          currentMode={gameMode}
-          onModeChange={handleGameModeChange}
-        />
+        <Box sx={{ mb: 3 }}>
+          <GameModeSelector
+            currentMode={gameMode}
+            onModeChange={handleGameModeChange}
+          />
+        </Box>
 
         {/* Comparison Charts */}
         <Typography variant="h5" sx={{ color: '#171717', fontWeight: 600, mb: 2 }}>
@@ -490,7 +497,8 @@ export default function AircraftDetailPage() {
                 </Typography>
               </Box>
               <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
-                {(Object.entries(AIRCRAFT_TYPE_LABELS) as [AircraftType, string][]).map(([type, label]) => {
+                {availableTypes.map((type) => {
+                  const label = AIRCRAFT_TYPE_LABELS[type];
                   const isSelected = selectedTypes.includes(type);
                   return (
                     <ToggleButton
@@ -536,7 +544,7 @@ export default function AircraftDetailPage() {
         </Paper>
 
         <Typography variant="body2" sx={{ color: '#737373', mb: 2 }}>
-          展示 BR {effectiveBrRange[0].toFixed(1)} - {effectiveBrRange[1].toFixed(1)} 范围内{selectedTypes.length > 0 ? selectedTypes.map(t => AIRCRAFT_TYPE_LABELS[t]).join('、') : '全部载具'}的指标对比，橙色星形标记当前载具位置
+          展示 BR {effectiveBrRange[0].toFixed(1)} - {effectiveBrRange[1].toFixed(1)} 范围内{selectedTypes.length > 0 ? selectedTypes.map(t => AIRCRAFT_TYPE_LABELS[t]).join('、') : isHelicopter ? '全部直升机' : '全部飞机'}的指标对比，橙色星形标记当前载具位置
         </Typography>
 
         <Grid container spacing={2}>

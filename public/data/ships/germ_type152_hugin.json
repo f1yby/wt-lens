@@ -1,0 +1,27 @@
+{
+  "id": "germ_type152_hugin",
+  "economy": {
+    "researchCost": 280000,
+    "purchaseCost": 780000,
+    "crewTraining": 220000,
+    "expertTraining": 780000,
+    "aceTrainingGE": 1700,
+    "aceTrainingRP": 720000,
+    "repairCost": {
+      "arcade": [
+        4715,
+        5807
+      ],
+      "realistic": [
+        5878,
+        7239
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.09,
+      "realistic": 2.12,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.96
+  }
+}

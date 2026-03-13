@@ -1,0 +1,27 @@
+{
+  "id": "us_ashville_class",
+  "economy": {
+    "researchCost": 75000,
+    "purchaseCost": 250000,
+    "crewTraining": 72000,
+    "expertTraining": 250000,
+    "aceTrainingGE": 940,
+    "aceTrainingRP": 480000,
+    "repairCost": {
+      "arcade": [
+        2743,
+        3446
+      ],
+      "realistic": [
+        3518,
+        4420
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.15,
+      "realistic": 1.78,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.66
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "us_tucumcari_pgh2",
+  "economy": {
+    "researchCost": 89000,
+    "purchaseCost": 300000,
+    "crewTraining": 87000,
+    "expertTraining": 300000,
+    "aceTrainingGE": 1100,
+    "aceTrainingRP": 520000,
+    "repairCost": {
+      "arcade": [
+        3108,
+        3944
+      ],
+      "realistic": [
+        4069,
+        5164
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.29,
+      "realistic": 1.95,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.72
+  }
+}

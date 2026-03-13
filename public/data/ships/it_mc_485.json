@@ -1,0 +1,29 @@
+{
+  "id": "it_mc_485",
+  "economy": {
+    "researchCost": 26000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 1450,
+    "crewTraining": 10000,
+    "expertTraining": 115000,
+    "aceTrainingGE": 500,
+    "aceTrainingRP": 640000,
+    "repairCost": {
+      "arcade": [
+        743,
+        743
+      ],
+      "realistic": [
+        951,
+        951
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.74,
+      "realistic": 2.93,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.42,
+    "freeRepairs": 30
+  }
+}
