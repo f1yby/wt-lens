@@ -27,5 +27,39 @@
       "simulator": 4.3
     },
     "expMultiplier": 2.02
+  },
+  "weapons": {
+    "fixed_weapons": [],
+    "payloads": [
+      {
+        "name": "hkp2_default",
+        "weapons": [
+          {
+            "trigger": "atgm",
+            "name": "swd_rb52",
+            "localizedName": "RB 52 A missiles",
+            "count": 1
+          },
+          {
+            "trigger": "atgm",
+            "name": "swd_rb52",
+            "localizedName": "RB 52 A missiles",
+            "count": 1
+          },
+          {
+            "trigger": "atgm",
+            "name": "swd_rb52",
+            "localizedName": "RB 52 A missiles",
+            "count": 1
+          },
+          {
+            "trigger": "atgm",
+            "name": "swd_rb52",
+            "localizedName": "RB 52 A missiles",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

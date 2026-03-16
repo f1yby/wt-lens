@@ -29,5 +29,120 @@
     },
     "expMultiplier": 1.12,
     "freeRepairs": 30
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "gun_type1_turret",
+        "localizedName": "7.92 mm Type 1 machine gun",
+        "count": 1,
+        "bullets": 1000,
+        "caliber": 7.9,
+        "fireRate": 2200
+      },
+      {
+        "name": "gunType98_turret",
+        "localizedName": "7.92 毫​米​九​八​式​旋​回​机​枪",
+        "count": 1,
+        "bullets": 675,
+        "caliber": 7.9,
+        "fireRate": 1000
+      }
+    ],
+    "payloads": [
+      {
+        "name": "ki_48_2_otsu_ki_148",
+        "weapons": [
+          {
+            "trigger": "atgm",
+            "name": "jp_ki_148_i_go_1b",
+            "localizedName": "Ki-148 I-Go Model 1B missile",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "ki_48_2_otsu_50kg",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "jp_type94mod5",
+            "localizedName": "九​四​式​五​〇​瓩​爆​弹​（50 千​克）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "jp_type94mod5",
+            "localizedName": "九​四​式​五​〇​瓩​爆​弹​（50 千​克）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "jp_type94mod5",
+            "localizedName": "九​四​式​五​〇​瓩​爆​弹​（50 千​克）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "jp_type94mod5",
+            "localizedName": "九​四​式​五​〇​瓩​爆​弹​（50 千​克）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "jp_type94mod5",
+            "localizedName": "九​四​式​五​〇​瓩​爆​弹​（50 千​克）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "jp_type94mod5",
+            "localizedName": "九​四​式​五​〇​瓩​爆​弹​（50 千​克）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "jp_type94mod5",
+            "localizedName": "九​四​式​五​〇​瓩​爆​弹​（50 千​克）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "jp_type94mod5",
+            "localizedName": "九​四​式​五​〇​瓩​爆​弹​（50 千​克）",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "ki_48_2_otsu_100kg",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "jp_type94mod10",
+            "localizedName": "九​四​式​一​〇​〇​瓩​爆​弹​（100 千​克）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "jp_type94mod10",
+            "localizedName": "九​四​式​一​〇​〇​瓩​爆​弹​（100 千​克）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "jp_type94mod10",
+            "localizedName": "九​四​式​一​〇​〇​瓩​爆​弹​（100 千​克）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "jp_type94mod10",
+            "localizedName": "九​四​式​一​〇​〇​瓩​爆​弹​（100 千​克）",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

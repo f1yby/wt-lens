@@ -27,5 +27,101 @@
       "simulator": 1.15
     },
     "expMultiplier": 1.06
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "gunBrowning50_raf_turret",
+        "localizedName": "12.7 毫​米 M2 勃​朗​宁​机​枪",
+        "count": 2,
+        "bullets": 1200,
+        "caliber": 12.7,
+        "fireRate": 750
+      },
+      {
+        "name": "gunBrowning303_turret",
+        "localizedName": "7.7 毫​米​勃​朗​宁​机​枪",
+        "count": 2,
+        "bullets": 2300,
+        "caliber": 7.7,
+        "fireRate": 1000
+      }
+    ],
+    "payloads": [
+      {
+        "name": "beaufort_mkviii_250gp",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "beaufort_mkviii_torpedo",
+        "weapons": [
+          {
+            "trigger": "torpedoes",
+            "name": "uk_mk12_torpedo",
+            "localizedName": "18 英​寸 Mk XII 鱼​雷​（1,548 磅）",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "beaufort_mkviii_500gp",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "uk_500lbs",
+            "localizedName": "G.P. 500 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lbs",
+            "localizedName": "G.P. 500 lb Mk.IV bomb",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "beaufort_mkviii_500sap",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_sap_mkII_ap",
+            "localizedName": "500 LB S.A.P. Mk.II bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_sap_mkII_ap",
+            "localizedName": "500 LB S.A.P. Mk.II bomb",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

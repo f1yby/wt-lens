@@ -215,6 +215,8 @@ export interface VehicleIndexEntry {
   unreleased?: boolean;
   releaseDate?: string;
   ghost?: boolean;
+  /** Raw performance data (snake_case keys) for comparison charts - included in index since v2 */
+  performance?: Record<string, unknown>;
 }
 
 /**
@@ -408,6 +410,66 @@ export interface AircraftVehicle {
   releaseDate?: string;
   // Economy data from wpcost
   economy?: EconomyData;
+  /** Aircraft weapons and payloads (fixed weapons + bomb/rocket presets) */
+  weapons?: AircraftWeapons;
+}
+
+/** Single bullet performance data in an aircraft belt */
+export interface AircraftBulletData {
+  /** Bullet type identifier (e.g., 'ap_i', 'he_i', 't_ball') */
+  type: string;
+  /** Localized bullet name (from units_weaponry.csv) */
+  localizedName?: string;
+  /** Mass in kg */
+  mass?: number;
+  /** Muzzle velocity in m/s */
+  speed?: number;
+  /** Penetration at 0m (mm) - extracted from armorpower */
+  penetration?: number;
+  /** Explosive mass in kg (for HE/HEI shells) */
+  explosiveMass?: number;
+  /** Explosive type (e.g., 'tetryl', 'tnt', 'petn') */
+  explosiveType?: string;
+  /** TNT equivalent in kg */
+  tntEquivalent?: number;
+  /** Hit power multiplier (damage coefficient) */
+  hitPowerMult?: number;
+  /** Fire chance multiplier */
+  fireChance?: number;
+}
+
+/** Aircraft weapons data */
+export interface AircraftWeapons {
+  /** Fixed weapons (machine guns, cannons) */
+  fixed_weapons?: Array<{
+    name: string;
+    localizedName?: string;
+    count: number;
+    bullets: number;
+    /** Caliber in mm */
+    caliber?: number;
+    /** Fire rate in rounds/min */
+    fireRate?: number;
+    /** Available belt types with bullet sequences and detailed bullet data */
+    belts?: Array<{
+      key: string;
+      name: string;
+      /** Bullet types in the belt (e.g., ['t_ball', 'ap_ball', 'i_ball']) */
+      bullets: string[];
+      /** Detailed bullet performance data (indexed by position in bullets array) */
+      bulletsData?: AircraftBulletData[];
+    }>;
+  }>;
+  /** Payload presets (bombs, rockets, missiles) */
+  payloads?: Array<{
+    name: string;
+    weapons: Array<{
+      trigger: string;
+      name: string;
+      localizedName?: string;
+      count: number;
+    }>;
+  }>;
 }
 
 /** Ship vehicle data (Phase 1: StatShark only, no performance data) */

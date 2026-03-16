@@ -27,5 +27,36 @@
       "simulator": 6.0
     },
     "expMultiplier": 2.14
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "cannonNR23",
+        "localizedName": "23 毫​米 NR-23 机​炮",
+        "count": 3,
+        "bullets": 300,
+        "caliber": 23.0,
+        "fireRate": 900
+      }
+    ],
+    "payloads": [
+      {
+        "name": "mig_17pf_hungary_2x_ofab_250",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "su_ofab250",
+            "localizedName": "250 千​克 OFAB-250-270 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_ofab250",
+            "localizedName": "250 千​克 OFAB-250-270 炸​弹",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

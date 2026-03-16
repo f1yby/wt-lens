@@ -27,5 +27,18 @@
       "simulator": 6.0
     },
     "expMultiplier": 1.96
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "cannonAkan_m47c",
+        "localizedName": "20 毫​米 m/47C 机​炮",
+        "count": 4,
+        "bullets": 720,
+        "caliber": 20.0,
+        "fireRate": 750
+      }
+    ],
+    "payloads": []
   }
 }

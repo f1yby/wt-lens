@@ -29,5 +29,61 @@
     },
     "expMultiplier": 2.2,
     "freeRepairs": 30
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "cannonType37_1",
+        "localizedName": "37 mm Type 37-1 cannon",
+        "count": 1,
+        "bullets": 40,
+        "caliber": 37.0,
+        "fireRate": 400
+      },
+      {
+        "name": "cannonType_23_1_plane",
+        "localizedName": "23 mm Type 23-1 cannon",
+        "count": 2,
+        "bullets": 160,
+        "caliber": 23.0,
+        "fireRate": 900
+      }
+    ],
+    "payloads": [
+      {
+        "name": "mig_17_6x250_bombs",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "su_ofab250",
+            "localizedName": "250 千​克 OFAB-250-270 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_ofab250",
+            "localizedName": "250 千​克 OFAB-250-270 炸​弹",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "mig_17_2xpl2_rockets",
+        "weapons": [
+          {
+            "trigger": "aam",
+            "name": "su_pl2",
+            "localizedName": "PL-2​空​对​空​导​弹",
+            "count": 1
+          },
+          {
+            "trigger": "aam",
+            "name": "su_pl2",
+            "localizedName": "PL-2​空​对​空​导​弹",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

@@ -27,5 +27,94 @@
       "simulator": 0.54
     },
     "expMultiplier": 1.0
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "gunKsp_m22_fv",
+        "localizedName": "8 毫​米 m/22 左​侧​固​定​机​枪",
+        "count": 1,
+        "bullets": 500,
+        "caliber": 8.0,
+        "fireRate": 1200
+      },
+      {
+        "name": "gunKsp_m22_fh",
+        "localizedName": "8 毫​米 m/22 右​侧​固​定​机​枪",
+        "count": 1,
+        "bullets": 500,
+        "caliber": 8.0,
+        "fireRate": 1200
+      },
+      {
+        "name": "gunKsp_m22_37r_turret",
+        "localizedName": "8 毫​米 m/22-37 可​动​式​机​枪",
+        "count": 1,
+        "bullets": 300,
+        "caliber": 8.0,
+        "fireRate": 1200
+      }
+    ],
+    "payloads": [
+      {
+        "name": "saab_b17bs_default",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "swd_50kg_sb_m42",
+            "localizedName": "50 千​克 m/42 杀​伤​炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "swd_50kg_sb_m42",
+            "localizedName": "50 千​克 m/42 杀​伤​炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "swd_50kg_sb_m42",
+            "localizedName": "50 千​克 m/42 杀​伤​炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "swd_50kg_sb_m42",
+            "localizedName": "50 千​克 m/42 杀​伤​炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "swd_50kg_sb_m42",
+            "localizedName": "50 千​克 m/42 杀​伤​炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "swd_50kg_sb_m42",
+            "localizedName": "50 千​克 m/42 杀​伤​炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "swd_50kg_sb_m42",
+            "localizedName": "50 千​克 m/42 杀​伤​炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "swd_50kg_sb_m42",
+            "localizedName": "50 千​克 m/42 杀​伤​炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "swd_50kg_sb_m42",
+            "localizedName": "50 千​克 m/42 杀​伤​炸​弹",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

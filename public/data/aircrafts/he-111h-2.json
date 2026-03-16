@@ -27,5 +27,339 @@
       "simulator": 1.09
     },
     "expMultiplier": 1.06
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "gunMG15_turret",
+        "localizedName": "7.92 毫​米 MG 15 机​枪",
+        "count": 7,
+        "bullets": 3375,
+        "caliber": 7.9,
+        "fireRate": 1000
+      }
+    ],
+    "payloads": [
+      {
+        "name": "he-111h-2_32_50kg",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "de_sc50",
+            "localizedName": "50 千​克 SC50JA 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "de_sc50",
+            "localizedName": "50 千​克 SC50JA 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "de_sc50",
+            "localizedName": "50 千​克 SC50JA 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "de_sc50",
+            "localizedName": "50 千​克 SC50JA 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "de_sc50",
+            "localizedName": "50 千​克 SC50JA 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "de_sc50",
+            "localizedName": "50 千​克 SC50JA 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "de_sc50",
+            "localizedName": "50 千​克 SC50JA 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "de_sc50",
+            "localizedName": "50 千​克 SC50JA 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "de_sc50",
+            "localizedName": "50 千​克 SC50JA 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "de_sc50",
+            "localizedName": "50 千​克 SC50JA 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "de_sc50",
+            "localizedName": "50 千​克 SC50JA 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "de_sc50",
+            "localizedName": "50 千​克 SC50JA 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "de_sc50",
+            "localizedName": "50 千​克 SC50JA 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "de_sc50",
+            "localizedName": "50 千​克 SC50JA 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "de_sc50",
+            "localizedName": "50 千​克 SC50JA 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "de_sc50",
+            "localizedName": "50 千​克 SC50JA 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "de_sc50",
+            "localizedName": "50 千​克 SC50JA 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "de_sc50",
+            "localizedName": "50 千​克 SC50JA 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "de_sc50",
+            "localizedName": "50 千​克 SC50JA 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "de_sc50",
+            "localizedName": "50 千​克 SC50JA 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "de_sc50",
+            "localizedName": "50 千​克 SC50JA 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "de_sc50",
+            "localizedName": "50 千​克 SC50JA 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "de_sc50",
+            "localizedName": "50 千​克 SC50JA 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "de_sc50",
+            "localizedName": "50 千​克 SC50JA 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "de_sc50",
+            "localizedName": "50 千​克 SC50JA 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "de_sc50",
+            "localizedName": "50 千​克 SC50JA 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "de_sc50",
+            "localizedName": "50 千​克 SC50JA 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "de_sc50",
+            "localizedName": "50 千​克 SC50JA 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "de_sc50",
+            "localizedName": "50 千​克 SC50JA 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "de_sc50",
+            "localizedName": "50 千​克 SC50JA 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "de_sc50",
+            "localizedName": "50 千​克 SC50JA 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "de_sc50",
+            "localizedName": "50 千​克 SC50JA 炸​弹",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "he-111h-2_8xSC250",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "de_sc250",
+            "localizedName": "250 千​克 SC260JA 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "de_sc250",
+            "localizedName": "250 千​克 SC260JA 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "de_sc250",
+            "localizedName": "250 千​克 SC260JA 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "de_sc250",
+            "localizedName": "250 千​克 SC260JA 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "de_sc250",
+            "localizedName": "250 千​克 SC260JA 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "de_sc250",
+            "localizedName": "250 千​克 SC260JA 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "de_sc250",
+            "localizedName": "250 千​克 SC260JA 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "de_sc250",
+            "localizedName": "250 千​克 SC260JA 炸​弹",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "he-111h-2_8x_flamm_250",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "de_flam_250",
+            "localizedName": "Flam C 250 incendiary bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "de_flam_250",
+            "localizedName": "Flam C 250 incendiary bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "de_flam_250",
+            "localizedName": "Flam C 250 incendiary bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "de_flam_250",
+            "localizedName": "Flam C 250 incendiary bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "de_flam_250",
+            "localizedName": "Flam C 250 incendiary bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "de_flam_250",
+            "localizedName": "Flam C 250 incendiary bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "de_flam_250",
+            "localizedName": "Flam C 250 incendiary bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "de_flam_250",
+            "localizedName": "Flam C 250 incendiary bomb",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "He_111H2_nobombs",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "de_sc250",
+            "localizedName": "250 千​克 SC260JA 炸​弹",
+            "count": 0
+          },
+          {
+            "trigger": "bombs",
+            "name": "de_sc250",
+            "localizedName": "250 千​克 SC260JA 炸​弹",
+            "count": 0
+          }
+        ]
+      }
+    ]
   }
 }

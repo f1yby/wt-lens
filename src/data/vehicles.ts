@@ -116,7 +116,9 @@ async function loadDatamineData(): Promise<DatamineEntry[]> {
     br: entry.br,
     vehicle_type: entry.vehicleType,
     economic_type: entry.economicType,
-    performance: {} as DatamineEntry['performance'],
+    // Use performance from index if available (for comparison charts)
+    // The index now contains key performance metrics for all vehicles
+    performance: (entry.performance ?? {}) as DatamineEntry['performance'],
     imageUrl: entry.imageUrl ?? '',
     source: 'split_index',
     unreleased: entry.unreleased,
@@ -142,6 +144,7 @@ export async function loadVehicleIndex(): Promise<VehicleIndexEntry[]> {
     throw new Error(`Failed to load vehicle index: ${response.status}`);
   }
   const rawData: Array<Record<string, unknown>> = await response.json();
+  // Store raw data for access to performance field (for comparison charts)
   // Map snake_case JSON fields to camelCase VehicleIndexEntry
   vehicleIndexData = rawData.map(entry => ({
     id: entry.id as string,
@@ -157,8 +160,10 @@ export async function loadVehicleIndex(): Promise<VehicleIndexEntry[]> {
     unreleased: entry.unreleased as boolean | undefined,
     releaseDate: entry.releaseDate as string | undefined,
     ghost: entry.ghost as boolean | undefined,
+    // Include raw performance data (snake_case) for comparison charts
+    performance: entry.performance as Record<string, unknown> | undefined,
   }));
-  return vehicleIndexData!;
+  return vehicleIndexData;
 }
 
 /**

@@ -41,7 +41,7 @@
     "ammunitions": [
       {
         "name": "90mm_m318a1",
-        "localizedName": "M318A1 shot",
+        "localizedName": "M318A1",
         "type": "apbc_usa_tank",
         "caliber": 90.0,
         "mass": 10.98,
@@ -55,7 +55,7 @@
       },
       {
         "name": "90mm_m82",
-        "localizedName": "M82 shot",
+        "localizedName": "M82",
         "type": "apcbc_tank",
         "caliber": 90.0,
         "mass": 10.91,
@@ -73,7 +73,7 @@
       },
       {
         "name": "90mm_m431",
-        "localizedName": "M431 shell",
+        "localizedName": "M431",
         "type": "heat_fs_tank",
         "caliber": 90.0,
         "mass": 5.8,
@@ -85,7 +85,7 @@
       },
       {
         "name": "90mm_m71",
-        "localizedName": "M71 shell",
+        "localizedName": "M71",
         "type": "he_frag_tank",
         "caliber": 90.0,
         "mass": 10.55,

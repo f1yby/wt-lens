@@ -27,5 +27,47 @@
       "simulator": 0.6
     },
     "expMultiplier": 1.0
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "gunMle38",
+        "localizedName": "7.5 毫​米 FN Mle 38 机​枪",
+        "count": 6,
+        "bullets": 3200,
+        "caliber": 7.5,
+        "fireRate": 1000,
+        "belts": [
+          {
+            "key": "7_5mm_universal",
+            "name": "通​用",
+            "bullets": [
+              "t_ball",
+              "ap_ball",
+              "ap_ball",
+              "i_ball",
+              "i_ball"
+            ]
+          },
+          {
+            "key": "7_5mm_all_tracers",
+            "name": "曳​光",
+            "bullets": [
+              "i_t_ball"
+            ]
+          },
+          {
+            "key": "7_5mm_stealth",
+            "name": "匿​踪",
+            "bullets": [
+              "ap_ball",
+              "ap_ball",
+              "i_ball"
+            ]
+          }
+        ]
+      }
+    ],
+    "payloads": []
   }
 }

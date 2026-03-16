@@ -27,5 +27,36 @@
       "simulator": 2.63
     },
     "expMultiplier": 1.36
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "gunAkan_12_7_m45",
+        "localizedName": "12.7 毫​米 m/45 机​炮​（机​枪）",
+        "count": 6,
+        "bullets": 2080,
+        "caliber": 12.7,
+        "fireRate": 768
+      }
+    ],
+    "payloads": [
+      {
+        "name": "j26_2x50kg_bombs",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "swd_50kg_sb_m37a",
+            "localizedName": "50 千​克 m/37AT 爆​破​炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "swd_50kg_sb_m37a",
+            "localizedName": "50 千​克 m/37AT 爆​破​炸​弹",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

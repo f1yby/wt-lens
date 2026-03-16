@@ -29,5 +29,78 @@
     },
     "expMultiplier": 1.36,
     "freeRepairs": 30
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "cannonAN_M2",
+        "localizedName": "20 毫​米 AN/M2 机​炮",
+        "count": 4,
+        "bullets": 800,
+        "caliber": 20.0,
+        "fireRate": 600
+      },
+      {
+        "name": "gunBrowning50_turret",
+        "localizedName": "12.7 毫​米 M2 勃​朗​宁​机​枪",
+        "count": 4,
+        "bullets": 2240,
+        "caliber": 12.7,
+        "fireRate": 750
+      }
+    ],
+    "payloads": [
+      {
+        "name": "p-61a_11_2_500lbs",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "us_500lb_anm64a1",
+            "localizedName": "500 磅 AN-M64A1 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_500lb_anm64a1",
+            "localizedName": "500 磅 AN-M64A1 炸​弹",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "p-61c_11_2_1000lbs",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "us_1000lb_anm65a1",
+            "localizedName": "1,000 磅 AN-M65A1 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_1000lb_anm65a1",
+            "localizedName": "1,000 磅 AN-M65A1 炸​弹",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "p_61a_11_bomb_2_1600lbs",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "us_1600lb_ap_an_mk1",
+            "localizedName": "1600 lb AN-Mk 1 armor-piercing bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_1600lb_ap_an_mk1",
+            "localizedName": "1600 lb AN-Mk 1 armor-piercing bomb",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

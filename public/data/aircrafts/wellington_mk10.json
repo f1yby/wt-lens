@@ -27,5 +27,413 @@
       "simulator": 2.2
     },
     "expMultiplier": 1.3
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "gunBrowning303_turret",
+        "localizedName": "7.7 毫​米​勃​朗​宁​机​枪",
+        "count": 8,
+        "bullets": 13200,
+        "caliber": 7.7,
+        "fireRate": 1000
+      }
+    ],
+    "payloads": [
+      {
+        "name": "wellington_10x250lbs",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "wellington_18x250lbs",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "wellington_9x500lbs",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "uk_500lbs",
+            "localizedName": "G.P. 500 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lbs",
+            "localizedName": "G.P. 500 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lbs",
+            "localizedName": "G.P. 500 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lbs",
+            "localizedName": "G.P. 500 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lbs",
+            "localizedName": "G.P. 500 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lbs",
+            "localizedName": "G.P. 500 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lbs",
+            "localizedName": "G.P. 500 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lbs",
+            "localizedName": "G.P. 500 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lbs",
+            "localizedName": "G.P. 500 lb Mk.IV bomb",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "wellington_2x1000lbs_6x250lbs",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "uk_1000lbs_gp_mk1",
+            "localizedName": "1000 lb G.P. Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_1000lbs_gp_mk1",
+            "localizedName": "1000 lb G.P. Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "wellington_torpedoes",
+        "weapons": [
+          {
+            "trigger": "torpedoes",
+            "name": "uk_mk12_torpedo",
+            "localizedName": "18 英​寸 Mk XII 鱼​雷​（1,548 磅）",
+            "count": 1
+          },
+          {
+            "trigger": "torpedoes",
+            "name": "uk_mk12_torpedo",
+            "localizedName": "18 英​寸 Mk XII 鱼​雷​（1,548 磅）",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "wellington_cookie",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "uk_mk2_cookie",
+            "localizedName": "4000 lb H.C. Mk.II bomb",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "wellington_9x500lbs_sap",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_sap_mkII_ap",
+            "localizedName": "500 LB S.A.P. Mk.II bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_sap_mkII_ap",
+            "localizedName": "500 LB S.A.P. Mk.II bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_sap_mkII_ap",
+            "localizedName": "500 LB S.A.P. Mk.II bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_sap_mkII_ap",
+            "localizedName": "500 LB S.A.P. Mk.II bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_sap_mkII_ap",
+            "localizedName": "500 LB S.A.P. Mk.II bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_sap_mkII_ap",
+            "localizedName": "500 LB S.A.P. Mk.II bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_sap_mkII_ap",
+            "localizedName": "500 LB S.A.P. Mk.II bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_sap_mkII_ap",
+            "localizedName": "500 LB S.A.P. Mk.II bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_sap_mkII_ap",
+            "localizedName": "500 LB S.A.P. Mk.II bomb",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "wellington_2x2000lbs_sap",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "uk_2000lb_ap_mkI",
+            "localizedName": "2000 LB A.P. Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_2000lb_ap_mkI",
+            "localizedName": "2000 LB A.P. Mk.I bomb",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

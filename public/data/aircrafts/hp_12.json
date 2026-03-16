@@ -27,5 +27,106 @@
       "simulator": 0.56
     },
     "expMultiplier": 1.0
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "gunLewis_turret",
+        "localizedName": "7.7 毫​米​路​易​斯​机​枪",
+        "count": 4,
+        "bullets": 2619,
+        "caliber": 7.7,
+        "fireRate": 550
+      }
+    ],
+    "payloads": [
+      {
+        "name": "hp_12_default",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "uk_230lbs",
+            "localizedName": "H.E. R.F.C. 230 lb Mk.III bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_230lbs",
+            "localizedName": "H.E. R.F.C. 230 lb Mk.III bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_230lbs",
+            "localizedName": "H.E. R.F.C. 230 lb Mk.III bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_230lbs",
+            "localizedName": "H.E. R.F.C. 230 lb Mk.III bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_230lbs",
+            "localizedName": "H.E. R.F.C. 230 lb Mk.III bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_230lbs",
+            "localizedName": "H.E. R.F.C. 230 lb Mk.III bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_230lbs",
+            "localizedName": "H.E. R.F.C. 230 lb Mk.III bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_230lbs",
+            "localizedName": "H.E. R.F.C. 230 lb Mk.III bomb",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "hp_12_bomb_520lb",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "uk_520lb_herl_mk_1_n",
+            "localizedName": "HERL 520 lb Mk.IN bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_520lb_herl_mk_1_n",
+            "localizedName": "HERL 520 lb Mk.IN bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_520lb_herl_mk_1_n",
+            "localizedName": "HERL 520 lb Mk.IN bomb",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "hp_12_bomb_1650lb",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "uk_1650lb_sn_he",
+            "localizedName": "1650 lb SNHE bomb",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

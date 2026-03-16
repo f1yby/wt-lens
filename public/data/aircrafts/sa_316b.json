@@ -27,5 +27,39 @@
       "simulator": 4.3
     },
     "expMultiplier": 2.02
+  },
+  "weapons": {
+    "fixed_weapons": [],
+    "payloads": [
+      {
+        "name": "sa_316b_default",
+        "weapons": [
+          {
+            "trigger": "atgm",
+            "name": "fr_ss_11",
+            "localizedName": "SS-11 反​坦​克​导​弹",
+            "count": 1
+          },
+          {
+            "trigger": "atgm",
+            "name": "fr_ss_11",
+            "localizedName": "SS-11 反​坦​克​导​弹",
+            "count": 1
+          },
+          {
+            "trigger": "atgm",
+            "name": "fr_ss_11",
+            "localizedName": "SS-11 反​坦​克​导​弹",
+            "count": 1
+          },
+          {
+            "trigger": "atgm",
+            "name": "fr_ss_11",
+            "localizedName": "SS-11 反​坦​克​导​弹",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

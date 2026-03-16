@@ -27,5 +27,61 @@
       "simulator": 3.07
     },
     "expMultiplier": 1.42
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "cannonMG15120",
+        "localizedName": "20 毫​米 MG 151/20 机​炮",
+        "count": 1,
+        "bullets": 250,
+        "caliber": 20.0,
+        "fireRate": 700
+      },
+      {
+        "name": "gunBredaSAFAT127",
+        "localizedName": "12.7 毫​米​布​雷​达​-SAFAT 机​枪",
+        "count": 4,
+        "bullets": 1200,
+        "caliber": 12.7,
+        "fireRate": 700
+      }
+    ],
+    "payloads": [
+      {
+        "name": "g_55_2x50kg_t",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "it_50kg_t",
+            "localizedName": "50 千​克​炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "it_50kg_t",
+            "localizedName": "50 千​克​炸​弹",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "g_55_2x100kg_t",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "it_100kg_t",
+            "localizedName": "100 千​克​炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "it_100kg_t",
+            "localizedName": "100 千​克​炸​弹",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

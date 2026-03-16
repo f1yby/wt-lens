@@ -27,5 +27,102 @@
       "simulator": 4.08
     },
     "expMultiplier": 1.6
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "cannonType5",
+        "localizedName": "30 毫​米​五​式​固​定​机​炮",
+        "count": 4,
+        "bullets": 240,
+        "caliber": 30.0,
+        "fireRate": 500,
+        "belts": [
+          {
+            "key": "type5_universal",
+            "name": "通​用",
+            "bullets": [
+              "he_frag_t",
+              "he_frag_i",
+              "aphe",
+              "he_frag",
+              "he_frag"
+            ]
+          },
+          {
+            "key": "type5_ground_targets",
+            "name": "对​地",
+            "bullets": [
+              "he_frag_t",
+              "aphe",
+              "aphe",
+              "aphe"
+            ]
+          },
+          {
+            "key": "type5_all_tracers",
+            "name": "曳​光",
+            "bullets": [
+              "he_frag_t"
+            ]
+          },
+          {
+            "key": "type5_stealth",
+            "name": "匿​踪",
+            "bullets": [
+              "he_frag"
+            ]
+          }
+        ]
+      }
+    ],
+    "payloads": [
+      {
+        "name": "j7w1_2x60kg_bomb",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "jp_navy_type97mod6_60kg",
+            "localizedName": "九​七​式​六​番​陆​用​爆​弹​（60 千​克）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "jp_navy_type97mod6_60kg",
+            "localizedName": "九​七​式​六​番​陆​用​爆​弹​（60 千​克）",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "j7w1_4x60kg_bomb",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "jp_navy_type97mod6_60kg",
+            "localizedName": "九​七​式​六​番​陆​用​爆​弹​（60 千​克）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "jp_navy_type97mod6_60kg",
+            "localizedName": "九​七​式​六​番​陆​用​爆​弹​（60 千​克）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "jp_navy_type97mod6_60kg",
+            "localizedName": "九​七​式​六​番​陆​用​爆​弹​（60 千​克）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "jp_navy_type97mod6_60kg",
+            "localizedName": "九​七​式​六​番​陆​用​爆​弹​（60 千​克）",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

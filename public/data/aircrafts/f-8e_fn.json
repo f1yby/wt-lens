@@ -27,5 +27,133 @@
       "simulator": 6.0
     },
     "expMultiplier": 2.32
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "cannonBrowning-Colt_Mk12_Mod3",
+        "localizedName": "20 毫​米​勃​朗​宁​-​柯​尔​特 Mk 12 Mod 3 机​炮",
+        "count": 4,
+        "bullets": 500,
+        "caliber": 20.0,
+        "fireRate": 996
+      }
+    ],
+    "payloads": [
+      {
+        "name": "f_8e_fn_2x_aim9b",
+        "weapons": [
+          {
+            "trigger": "aam",
+            "name": "us_aim9b_sidewinder",
+            "localizedName": "AIM-9B",
+            "count": 1
+          },
+          {
+            "trigger": "aam",
+            "name": "us_aim9b_sidewinder",
+            "localizedName": "AIM-9B",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "f_8e_fn_4x_aim9b",
+        "weapons": [
+          {
+            "trigger": "aam",
+            "name": "us_aim9b_sidewinder",
+            "localizedName": "AIM-9B",
+            "count": 1
+          },
+          {
+            "trigger": "aam",
+            "name": "us_aim9b_sidewinder",
+            "localizedName": "AIM-9B",
+            "count": 1
+          },
+          {
+            "trigger": "aam",
+            "name": "us_aim9b_sidewinder",
+            "localizedName": "AIM-9B",
+            "count": 1
+          },
+          {
+            "trigger": "aam",
+            "name": "us_aim9b_sidewinder",
+            "localizedName": "AIM-9B",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "f_8e_fn_2x_matra530e",
+        "weapons": [
+          {
+            "trigger": "aam",
+            "name": "fr_r_530_matra_ir",
+            "localizedName": "R.530E 空​对​空​导​弹",
+            "count": 1
+          },
+          {
+            "trigger": "aam",
+            "name": "fr_r_530_matra_ir",
+            "localizedName": "R.530E 空​对​空​导​弹",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "f_8e_fn_2x_matra530",
+        "weapons": [
+          {
+            "trigger": "aam",
+            "name": "fr_r_530_matra_radar",
+            "localizedName": "马​特​拉 R530 空​空​导​弹",
+            "count": 1
+          },
+          {
+            "trigger": "aam",
+            "name": "fr_r_530_matra_radar",
+            "localizedName": "马​特​拉 R530 空​空​导​弹",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "f_8e_fn_1x_matra530e_1x_matra530",
+        "weapons": [
+          {
+            "trigger": "aam",
+            "name": "fr_r_530_matra_ir",
+            "localizedName": "R.530E 空​对​空​导​弹",
+            "count": 1
+          },
+          {
+            "trigger": "aam",
+            "name": "fr_r_530_matra_radar",
+            "localizedName": "马​特​拉 R530 空​空​导​弹",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "f_8e_fn_2x_matra550",
+        "weapons": [
+          {
+            "trigger": "aam",
+            "name": "fr_r_550_magic",
+            "localizedName": "R.550​“魔​术”​1 空​对​空​导​弹",
+            "count": 1
+          },
+          {
+            "trigger": "aam",
+            "name": "fr_r_550_magic",
+            "localizedName": "R.550​“魔​术”​1 空​对​空​导​弹",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

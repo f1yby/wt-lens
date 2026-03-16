@@ -27,5 +27,219 @@
       "simulator": 4.72
     },
     "expMultiplier": 1.66
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "cannonHispanoMkV",
+        "localizedName": "20 毫​米​西​斯​帕​诺 Mk V 机​炮",
+        "count": 4,
+        "bullets": 636,
+        "caliber": 20.0,
+        "fireRate": 750,
+        "belts": [
+          {
+            "key": "hispano_universal",
+            "name": "通​用",
+            "bullets": [
+              "ap_t",
+              "he_i",
+              "sapi"
+            ]
+          },
+          {
+            "key": "hispano_tracers",
+            "name": "曳​光",
+            "bullets": [
+              "ap_t",
+              "he_i",
+              "t_shell"
+            ]
+          },
+          {
+            "key": "hispano_stealth",
+            "name": "匿​踪",
+            "bullets": [
+              "he_i",
+              "sapi"
+            ]
+          }
+        ]
+      }
+    ],
+    "payloads": [
+      {
+        "name": "rockets",
+        "weapons": [
+          {
+            "trigger": "rockets",
+            "name": "uk_rp3_4a",
+            "localizedName": "RP-3 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "uk_rp3_4a",
+            "localizedName": "RP-3 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "uk_rp3_4a",
+            "localizedName": "RP-3 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "uk_rp3_4a",
+            "localizedName": "RP-3 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "uk_rp3_4a",
+            "localizedName": "RP-3 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "uk_rp3_4a",
+            "localizedName": "RP-3 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "uk_rp3_4a",
+            "localizedName": "RP-3 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "uk_rp3_4a",
+            "localizedName": "RP-3 火​箭​弹",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "tempest_mkv_250lbs_bombs",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "tempest_mkv_250lbs_mc_bombs",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs_mc_mk1_mk2_bomb",
+            "localizedName": "M.C. 250 lb Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs_mc_mk1_mk2_bomb",
+            "localizedName": "M.C. 250 lb Mk.I bomb",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "tempest_mkv_bombs",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "uk_500lbs",
+            "localizedName": "G.P. 500 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lbs",
+            "localizedName": "G.P. 500 lb Mk.IV bomb",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "tempest_mkv_500lbs_mc_bombs",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_mc_mk1_mk4_long_tail_bomb",
+            "localizedName": "M.C. 500 lb Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_mc_mk1_mk4_long_tail_bomb",
+            "localizedName": "M.C. 500 lb Mk.I bomb",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "tempest_mkv_anm65_bombs",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "us_1000lb_anm65a1",
+            "localizedName": "1,000 磅 AN-M65A1 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_1000lb_anm65a1",
+            "localizedName": "1,000 磅 AN-M65A1 炸​弹",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "tempest_mkv_1000lbs_bombs",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "uk_1000lbs_mc_mk1",
+            "localizedName": "1000 lb M.C. Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_1000lbs_mc_mk1",
+            "localizedName": "1000 lb M.C. Mk.I bomb",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "tempest_mkv_500_sap_bombs",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_sap_mkII_ap",
+            "localizedName": "500 LB S.A.P. Mk.II bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_sap_mkII_ap",
+            "localizedName": "500 LB S.A.P. Mk.II bomb",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

@@ -11,6 +11,7 @@ import { loadShips, getShipStatsByMode, loadShipDetail } from '../data/ships';
 import { getVehicleImagePath, getAircraftImagePath, getShipImagePath } from '../utils/paths';
 import { generateGenericStatsComparisonData } from '../utils/vehicleComparison';
 import type { VehicleDetailConfig } from './vehicleDetailConfig';
+import AircraftWeaponsSection from '../components/AircraftWeaponsSection';
 
 // ============================================================
 // Ground Vehicle Config
@@ -104,6 +105,15 @@ export function createAircraftConfig(isHelicopter: boolean): VehicleDetailConfig
       ),
     
     showMonthRangeSelector: false,
+
+    renderAdditionalSections: (_vehicle, _gameMode, _onNavigate, detailData) => {
+      // Cast detailData to get weapons
+      const detail = detailData as { weapons?: import('../types').AircraftWeapons } | undefined;
+      if (detail?.weapons) {
+        return <AircraftWeaponsSection weapons={detail.weapons} />;
+      }
+      return null;
+    },
   };
 }
 

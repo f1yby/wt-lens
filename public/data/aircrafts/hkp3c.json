@@ -26,5 +26,51 @@
       "simulator": 4.3
     },
     "expMultiplier": 1.96
+  },
+  "weapons": {
+    "fixed_weapons": [],
+    "payloads": [
+      {
+        "name": "hkp3c_default",
+        "weapons": [
+          {
+            "trigger": "atgm",
+            "name": "swd_rb53",
+            "localizedName": "RB 53 Bantam missiles",
+            "count": 1
+          },
+          {
+            "trigger": "atgm",
+            "name": "swd_rb53",
+            "localizedName": "RB 53 Bantam missiles",
+            "count": 1
+          },
+          {
+            "trigger": "atgm",
+            "name": "swd_rb53",
+            "localizedName": "RB 53 Bantam missiles",
+            "count": 1
+          },
+          {
+            "trigger": "atgm",
+            "name": "swd_rb53",
+            "localizedName": "RB 53 Bantam missiles",
+            "count": 1
+          },
+          {
+            "trigger": "atgm",
+            "name": "swd_rb53",
+            "localizedName": "RB 53 Bantam missiles",
+            "count": 1
+          },
+          {
+            "trigger": "atgm",
+            "name": "swd_rb53",
+            "localizedName": "RB 53 Bantam missiles",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

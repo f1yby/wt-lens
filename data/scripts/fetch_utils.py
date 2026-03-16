@@ -31,8 +31,13 @@ except ImportError:
 DATAMINE_BASE = Path(__file__).parent.parent / "datamine" / "aces.vromfs.bin_u" / "gamedata"
 TANKMODELS_PATH = DATAMINE_BASE / "units" / "tankmodels"
 
+# Path to flight models (aircraft)
+FLIGHTMODELS_PATH = DATAMINE_BASE / "flightmodels"
+WEAPON_PRESETS_PATH = DATAMINE_BASE / "flightmodels" / "weaponpresets"
+
 # Path to weapons
 WEAPONS_PATH = DATAMINE_BASE / "weapons" / "groundmodels_weapons"
+AIRCRAFT_WEAPONS_PATH = Path(__file__).parent.parent / "datamine" / "aces.vromfs.bin_u" / "gamedata" / "weapons"
 
 # Config files
 WPCOST_PATH = Path(__file__).parent.parent / "datamine" / "char.vromfs.bin_u" / "config" / "wpcost.blkx"
@@ -41,6 +46,7 @@ UNITTAGS_PATH = Path(__file__).parent.parent / "datamine" / "char.vromfs.bin_u" 
 # Localization files
 UNITS_CSV_PATH = Path(__file__).parent.parent / "datamine" / "lang.vromfs.bin_u" / "lang" / "units.csv"
 WEAPONRY_CSV_PATH = Path(__file__).parent.parent / "datamine" / "lang.vromfs.bin_u" / "lang" / "units_weaponry.csv"
+MODIFICATIONS_CSV_PATH = Path(__file__).parent.parent / "datamine" / "lang.vromfs.bin_u" / "lang" / "units_modifications.csv"
 
 # Image paths
 TANK_IMAGES_PATH = Path(__file__).parent.parent / "datamine" / "tex.vromfs.bin_u" / "tanks"
@@ -386,8 +392,9 @@ def load_localization_data() -> dict[str, dict[str, str]]:
 
 def load_weaponry_localization() -> dict[str, str]:
     """Load units_weaponry.csv for ammo localization names (cached).
-    
-    Returns a dict mapping bulletName (e.g. '105mm_dm23') to its English display name (e.g. 'DM23').
+
+    Returns a dict mapping bulletName (e.g. '105mm_dm23') to its Chinese display name.
+    Falls back to English if Chinese is not available.
     """
     global _weaponry_localization_cache
     if _weaponry_localization_cache is not None:
@@ -408,9 +415,15 @@ def load_weaponry_localization() -> dict[str, str]:
                 if len(row) < 2:
                     continue
                 key = row[0]   # e.g. "105mm_dm23" or "apds_fs_long_l30_tank/name"
-                english = row[1]
-                if key and english:
-                    loc_map[key] = english
+                # Column 20 (index 20) is HChinese (simplified Chinese, more complete)
+                # Column 10 (index 10) is Chinese (sometimes shorter)
+                # Column 1 (index 1) is English
+                hchinese = row[20] if len(row) > 20 and row[20] else None
+                chinese = row[10] if len(row) > 10 and row[10] else None
+                english = row[1] if len(row) > 1 else None
+                if key:
+                    # Prefer HChinese, then Chinese, then English
+                    loc_map[key] = hchinese or chinese or english
 
         _weaponry_localization_cache = loc_map
         print(f"Loaded units_weaponry.csv with {len(loc_map)} entries")
@@ -419,6 +432,241 @@ def load_weaponry_localization() -> dict[str, str]:
         print(f"Error loading units_weaponry.csv: {e}")
         _weaponry_localization_cache = {}
         return _weaponry_localization_cache
+
+
+# Cache for modifications (belt) localization
+_modifications_localization_cache: "dict[str, str] | None" = None
+
+def load_modifications_localization() -> dict[str, str]:
+    """Load units_modifications.csv for belt/ammunition localization (cached).
+
+    Returns a dict mapping modification key (e.g. '7_5mm_universal')
+    to its Chinese short name (e.g. '通用').
+    """
+    global _modifications_localization_cache
+    if _modifications_localization_cache is not None:
+        return _modifications_localization_cache
+
+    if not MODIFICATIONS_CSV_PATH.exists():
+        print(f"Warning: units_modifications.csv not found at {MODIFICATIONS_CSV_PATH}")
+        _modifications_localization_cache = {}
+        return _modifications_localization_cache
+
+    try:
+        loc_map: dict[str, str] = {}
+        with open(MODIFICATIONS_CSV_PATH, 'r', encoding='utf-8') as f:
+            reader = csv.reader(f, delimiter=';', quotechar='"')
+            next(reader, None)  # Skip header
+
+            for row in reader:
+                if len(row) < 2:
+                    continue
+                key = row[0]  # e.g. "modification/7_5mm_universal/short"
+                # Column 20 (index 20) is HChinese (simplified Chinese)
+                hchinese = row[20] if len(row) > 20 and row[20] else None
+                chinese = row[10] if len(row) > 10 and row[10] else None
+                english = row[1] if len(row) > 1 else None
+                if key:
+                    loc_map[key] = hchinese or chinese or english
+
+        _modifications_localization_cache = loc_map
+        print(f"Loaded units_modifications.csv with {len(loc_map)} entries")
+        return _modifications_localization_cache
+    except (IOError, csv.Error) as e:
+        print(f"Error loading units_modifications.csv: {e}")
+        _modifications_localization_cache = {}
+        return _modifications_localization_cache
+
+
+def get_belt_localized_name(belt_key: str) -> str | None:
+    """Get localized short name for a belt modification.
+
+    Args:
+        belt_key: e.g. '7_5mm_universal' or 'modification/7_5mm_universal/short'
+
+    Returns:
+        Localized name like '通用' or None if not found.
+    """
+    loc_map = load_modifications_localization()
+
+    # Try with /short suffix first (most common)
+    if not belt_key.startswith('modification/'):
+        short_key = f"modification/{belt_key}/short"
+        if short_key in loc_map:
+            return loc_map[short_key]
+
+    # Try direct key
+    if belt_key in loc_map:
+        return loc_map[belt_key]
+
+    return None
+
+
+# Cache for aircraft weapon data
+_aircraft_weapon_cache: "dict[str, dict[str, Any]]" = {}
+
+def load_aircraft_weapon_blk(weapon_name: str) -> dict[str, Any] | None:
+    """Load an aircraft weapon blk file.
+
+    Args:
+        weapon_name: Weapon name without .blkx extension, e.g. 'gunmle33'
+
+    Returns:
+        Parsed JSON data or None if not found.
+    """
+    if weapon_name in _aircraft_weapon_cache:
+        return _aircraft_weapon_cache[weapon_name]
+
+    # Try to find the weapon file
+    weapon_path = AIRCRAFT_WEAPONS_PATH / f"{weapon_name}.blkx"
+    if not weapon_path.exists():
+        # Try lowercase
+        weapon_path = AIRCRAFT_WEAPONS_PATH / f"{weapon_name.lower()}.blkx"
+
+    if not weapon_path.exists():
+        return None
+
+    try:
+        with open(weapon_path, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+            _aircraft_weapon_cache[weapon_name] = data
+            return data
+    except (json.JSONDecodeError, IOError):
+        return None
+
+
+def get_aircraft_weapon_details(weapon_name: str) -> dict[str, Any]:
+    """Get detailed weapon info (caliber, fire rate).
+
+    Args:
+        weapon_name: Weapon name like 'gunmle33'
+
+    Returns:
+        Dict with 'caliber' (mm), 'fireRate' (rounds/min), and other details.
+    """
+    result: dict[str, Any] = {}
+
+    weapon_data = load_aircraft_weapon_blk(weapon_name)
+    if not weapon_data:
+        return result
+
+    # Fire rate (shotFreq is shots per second)
+    shot_freq = weapon_data.get('shotFreq', 0)
+    if shot_freq:
+        result['fireRate'] = round(shot_freq * 60)  # Convert to rounds/min
+
+    # Caliber from first bullet
+    bullets = weapon_data.get('bullet', [])
+    if isinstance(bullets, dict):
+        bullets = [bullets]
+    if bullets and isinstance(bullets[0], dict):
+        caliber_m = bullets[0].get('caliber', 0)
+        if caliber_m:
+            result['caliber'] = round(caliber_m * 1000, 1)  # Convert to mm
+
+    return result
+
+
+def get_aircraft_weapon_belts(weapon_name: str, available_belt_keys: list[str]) -> list[dict[str, Any]]:
+    """Get detailed belt info for an aircraft weapon.
+
+    Args:
+        weapon_name: Weapon name like 'gunmle33'
+        available_belt_keys: List of available belt keys like ['7_5mm_universal', '7_5mm_stealth']
+
+    Returns:
+        List of belt dicts with 'key', 'name', 'bullets' (ammo type names), and 'bulletsData' (detailed performance).
+    """
+    result: list[dict[str, Any]] = []
+
+    weapon_data = load_aircraft_weapon_blk(weapon_name)
+    if not weapon_data:
+        return result
+
+    # Get explosive equivalents for TNT calculation
+    explosive_equiv = get_explosive_equivalents()
+
+    for belt_key in available_belt_keys:
+        belt_entry: dict[str, Any] = {
+            'key': belt_key,
+            'name': get_belt_localized_name(belt_key) or belt_key,
+            'bullets': [],
+            'bulletsData': []
+        }
+
+        # Get belt-specific bullet configuration
+        belt_data = weapon_data.get(belt_key, {})
+        if belt_data:
+            belt_bullets = belt_data.get('bullet', [])
+        else:
+            # Use default bullets if belt not found
+            belt_bullets = weapon_data.get('bullet', [])
+
+        if isinstance(belt_bullets, dict):
+            belt_bullets = [belt_bullets]
+
+        # Extract bullet types and detailed data
+        for b in belt_bullets:
+            bullet_type = b.get('bulletType', 'unknown')
+            belt_entry['bullets'].append(bullet_type)
+
+            # Build detailed bullet data
+            bullet_data: dict[str, Any] = {'type': bullet_type}
+
+            # Localized name
+            localized = get_ammo_localized_name(bullet_type)
+            if localized:
+                bullet_data['localizedName'] = localized
+
+            # Basic properties
+            mass = b.get('mass')
+            if mass:
+                bullet_data['mass'] = round(mass, 5)
+
+            speed = b.get('speed')
+            if speed:
+                bullet_data['speed'] = round(speed, 1)
+
+            # Penetration from armorpower
+            armorpower = b.get('armorpower', {})
+            if isinstance(armorpower, dict):
+                # Extract penetration values at different distances
+                # Format: ArmorPower0m: [penetration, distance], ArmorPower100m: [...], etc.
+                entries = []
+                for key, val in armorpower.items():
+                    if key.startswith('ArmorPower') and isinstance(val, list) and len(val) >= 2:
+                        entries.append({'penetration': val[0], 'distance': val[1]})
+                if entries:
+                    entries.sort(key=lambda x: x['distance'])
+                    # Use the closest distance (usually 0m or 10m) as penetration value
+                    bullet_data['penetration'] = round(entries[0]['penetration'], 1)
+
+            # Explosive data
+            explosive_mass = b.get('explosiveMass')
+            explosive_type = b.get('explosiveType')
+            if explosive_mass and explosive_mass > 0:
+                bullet_data['explosiveMass'] = round(explosive_mass, 5)
+                if explosive_type:
+                    bullet_data['explosiveType'] = explosive_type
+                    # Calculate TNT equivalent
+                    brisance = explosive_equiv.get(explosive_type, 1.0)
+                    bullet_data['tntEquivalent'] = round(explosive_mass * brisance, 5)
+
+            # Hit power multiplier
+            hit_power_mult = b.get('hitPowerMult')
+            if hit_power_mult:
+                bullet_data['hitPowerMult'] = round(hit_power_mult, 2)
+
+            # Fire chance multiplier
+            fire_chance = b.get('onHitChanceMultFire')
+            if fire_chance:
+                bullet_data['fireChance'] = round(fire_chance, 2)
+
+            belt_entry['bulletsData'].append(bullet_data)
+
+        result.append(belt_entry)
+
+    return result
 
 
 # ============================================================
@@ -528,12 +776,21 @@ def get_vehicle_localized_name(vehicle_id: str) -> str:
 
 def get_ammo_localized_name(bullet_name: str) -> str | None:
     """Get human-readable name for a bullet from units_weaponry.csv.
-    
+
     Tries the bulletName directly (e.g. '105mm_dm23' -> 'DM23').
+    Also tries with 'weapons/' prefix for aircraft ordnance (e.g. 'us_500lb_anm64a1' -> 'weapons/us_500lb_anm64a1').
     Returns None if not found.
     """
     loc = load_weaponry_localization()
-    return loc.get(bullet_name)
+
+    # Try direct match first (tank ammo)
+    result = loc.get(bullet_name)
+    if result:
+        return result
+
+    # Try with weapons/ prefix (aircraft bombs, rockets, etc.)
+    weapons_key = f'weapons/{bullet_name}'
+    return loc.get(weapons_key)
 
 
 # ============================================================
@@ -1060,6 +1317,236 @@ def load_weapon_data(weapon_blk_path: str) -> WeaponFileData | None:
     except (json.JSONDecodeError, IOError) as e:
         print(f"Error loading weapon {filename}: {e}")
         return None
+
+
+# ── Aircraft Payload Extraction ──
+def load_flightmodel(aircraft_id: str) -> dict[str, Any] | None:
+    """Load aircraft flight model data."""
+    filepath = FLIGHTMODELS_PATH / f"{aircraft_id}.blkx"
+    if not filepath.exists():
+        return None
+    try:
+        with open(filepath, 'r', encoding='utf-8') as f:
+            return json.load(f)
+    except (json.JSONDecodeError, IOError):
+        return None
+
+
+def load_weapon_preset(preset_path: str) -> dict[str, Any] | None:
+    """Load weapon preset data from path like 'gameData/FlightModels/weaponpresets/xxx.blk'"""
+    # Extract filename and normalize path
+    filename = preset_path.split('/')[-1].replace('.blk', '') + '.blkx'
+    filepath = WEAPON_PRESETS_PATH / filename
+    if not filepath.exists():
+        return None
+    try:
+        with open(filepath, 'r', encoding='utf-8') as f:
+            return json.load(f)
+    except (json.JSONDecodeError, IOError):
+        return None
+
+
+def extract_aircraft_weapons(aircraft_id: str) -> dict[str, Any] | None:
+    """
+    Extract aircraft fixed weapons and payload presets.
+
+    Returns:
+        dict with 'fixed_weapons' (list) and 'payloads' (list of presets)
+    """
+    flightmodel = load_flightmodel(aircraft_id)
+    if not flightmodel:
+        return None
+
+    result = {
+        'fixed_weapons': [],
+        'payloads': []
+    }
+
+    # Extract available belt keys from flightmodel modifications
+    # Group by caliber prefix (e.g., '7_5mm' or '20mm')
+    belt_keys_by_caliber: dict[str, list[str]] = {}
+    modifications = flightmodel.get('modifications', {})
+    for mod_key in modifications:
+        # Belt keys typically end with _universal, _stealth, _tracers, _ap, etc.
+        if any(mod_key.endswith(suffix) for suffix in ['_universal', '_stealth', '_tracers', '_ap', '_ap_t', '_air_targets', '_ground_targets', '_omni', '_default']):
+            # Extract caliber prefix from mod_key
+            # e.g., '7_5mm_universal' -> '7_5mm', '7_5mm_all_tracers' -> '7_5mm'
+            # Try to extract the caliber part (e.g., '7_5mm', '20mm', 'type99mk1')
+            # Pattern: look for 'mm' or known weapon prefixes
+            import re
+            # Extract caliber prefix from mod_key
+            # Normalize by removing '_all', '_turret' etc. to get consistent prefix
+            # e.g., '7_7_all_tracers' -> '7_7mm', '7_7mm_universal' -> '7_7mm'
+            normalized_key = re.sub(r'_all(?=_)', '', mod_key)  # Remove '_all' in middle
+            normalized_key = re.sub(r'_turret(?=_)', '', normalized_key)  # Remove '_turret'
+
+            caliber_match = re.match(r'^(\d+_\d+mm|\d+mm|\d+_\d+|\d+|[a-z]+\d+mk\d+|[a-z]+\d+)', normalized_key)
+            if caliber_match:
+                caliber_prefix = caliber_match.group(1)
+                # Ensure mm suffix for caliber numbers
+                if re.match(r'^\d+_\d+$', caliber_prefix):
+                    caliber_prefix += 'mm'
+                elif re.match(r'^\d+$', caliber_prefix):
+                    caliber_prefix += 'mm'
+            else:
+                caliber_prefix = normalized_key.rsplit('_', 1)[0] if '_' in normalized_key else normalized_key
+            if caliber_prefix not in belt_keys_by_caliber:
+                belt_keys_by_caliber[caliber_prefix] = []
+            belt_keys_by_caliber[caliber_prefix].append(mod_key)
+
+    # Extract fixed weapons from commonWeapons
+    # Group weapons by their blk (weapon type) and count them
+    common_weapons = flightmodel.get('commonWeapons', {})
+    weapons_list = common_weapons.get('Weapon', [])
+    if isinstance(weapons_list, dict):
+        weapons_list = [weapons_list]
+
+    # Group weapons by blk path
+    weapon_groups: dict[str, dict[str, Any]] = {}
+    for w in weapons_list:
+        if not isinstance(w, dict):
+            continue
+        # Skip weapons without bullets (might be dormant)
+        bullets = w.get('bullets', 0)
+        if not bullets:
+            continue
+
+        # Extract weapon name from blk path
+        blk = w.get('blk', '')
+        weapon_name = blk.split('/')[-1].replace('.blk', '') if blk else ''
+
+        if weapon_name not in weapon_groups:
+            weapon_groups[weapon_name] = {
+                'name': weapon_name,
+                'count': 0,
+                'totalBullets': 0,
+            }
+        weapon_groups[weapon_name]['count'] += 1
+        weapon_groups[weapon_name]['totalBullets'] += bullets
+
+    # Convert to list and add localized names and weapon details
+    for weapon_name, data in weapon_groups.items():
+        # Get localized name from units_weaponry.csv
+        localized = get_ammo_localized_name(weapon_name)
+
+        # Get weapon details (caliber, fire rate)
+        details = get_aircraft_weapon_details(weapon_name)
+
+        weapon_entry: dict[str, Any] = {
+            'name': weapon_name,
+            'localizedName': localized if localized else weapon_name,
+            'count': data['count'],
+            'bullets': data['totalBullets'],
+        }
+
+        # Add caliber and fire rate if available
+        if details.get('caliber'):
+            weapon_entry['caliber'] = details['caliber']
+        if details.get('fireRate'):
+            weapon_entry['fireRate'] = details['fireRate']
+
+        # Get belt details for this weapon
+        # Match belt keys by weapon name or caliber
+        weapon_belt_keys: list[str] = []
+
+        # Strategy 1: Try to match by caliber (e.g., 7.7 -> '7_7mm' or '7_7')
+        if details.get('caliber'):
+            caliber_val = details['caliber']
+            # Build possible caliber prefix formats
+            # e.g., 7.7 -> ['7_7mm', '7_7', '77mm', '7_7mm']
+            caliber_str = str(caliber_val).replace('.', '_')
+            caliber_int = str(int(caliber_val)) if caliber_val == int(caliber_val) else None
+
+            possible_prefixes = [
+                caliber_str + 'mm',           # '7_7mm'
+                caliber_str,                   # '7_7'
+                str(int(caliber_val * 10)) + 'mm' if caliber_val != int(caliber_val) else None,  # '77mm' for 7.7
+            ]
+            # Add integer caliber (e.g., 20 -> '20mm')
+            if caliber_int:
+                possible_prefixes.append(caliber_int + 'mm')  # '20mm'
+
+            for prefix in possible_prefixes:
+                if prefix and prefix in belt_keys_by_caliber:
+                    weapon_belt_keys = belt_keys_by_caliber[prefix]
+                    break
+
+        # Strategy 2: Try to match by weapon name pattern
+        if not weapon_belt_keys:
+            # Extract weapon type from name (e.g., 'cannonType99' -> 'type99', 'gunMle33' -> 'mle33')
+            import re
+            # Look for patterns like 'type99', 'mle33', 'browning', etc.
+            weapon_type_match = re.search(r'(type\d+|mle\d+|browning|shvak|hispano|mg\d+|ho\d+)', weapon_name, re.IGNORECASE)
+            if weapon_type_match:
+                weapon_type = weapon_type_match.group(1).lower()
+                for prefix, keys in belt_keys_by_caliber.items():
+                    if prefix.lower().startswith(weapon_type[:6]) or weapon_type[:6] in prefix.lower():
+                        weapon_belt_keys = keys
+                        break
+
+        # Get detailed belt info with bullet sequences
+        if weapon_belt_keys:
+            belt_details = get_aircraft_weapon_belts(weapon_name, weapon_belt_keys)
+            if belt_details:
+                weapon_entry['belts'] = belt_details
+
+        result['fixed_weapons'].append(weapon_entry)
+
+    # Extract weapon presets (bombs, rockets, missiles)
+    weapon_presets = flightmodel.get('weapon_presets', {})
+    presets_list = weapon_presets.get('preset', [])
+    if isinstance(presets_list, dict):
+        presets_list = [presets_list]
+    
+    for preset in presets_list:
+        if not isinstance(preset, dict):
+            continue
+        
+        preset_name = preset.get('name', '')
+        preset_path = preset.get('blk', '')
+        
+        # Load preset data
+        preset_data = load_weapon_preset(preset_path)
+        if not preset_data:
+            continue
+        
+        # Extract weapons from preset
+        preset_weapons = preset_data.get('Weapon', [])
+        if isinstance(preset_weapons, dict):
+            preset_weapons = [preset_weapons]
+        
+        payload_items = []
+        for pw in preset_weapons:
+            if not isinstance(pw, dict):
+                continue
+            trigger = pw.get('trigger', '')
+            bullets = pw.get('bullets', 1)
+            
+            # Extract weapon name from blk path
+            blk = pw.get('blk', '')
+            weapon_name = blk.split('/')[-1].replace('.blk', '') if blk else ''
+
+            # Get localized name
+            localized = get_ammo_localized_name(weapon_name)
+
+            payload_items.append({
+                'trigger': trigger,
+                'name': weapon_name,
+                'localizedName': localized if localized else weapon_name,
+                'count': bullets,
+            })
+        
+        if payload_items:
+            result['payloads'].append({
+                'name': preset_name,
+                'weapons': payload_items,
+            })
+    
+    # Return None if no weapons found
+    if not result['fixed_weapons'] and not result['payloads']:
+        return None
+    
+    return result
 
 
 # ── Explosive TNT equivalence table (loaded lazily) ──

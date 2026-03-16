@@ -29,5 +29,78 @@
     },
     "expMultiplier": 1.66,
     "freeRepairs": 30
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "cannonM10",
+        "localizedName": "37 毫​米 M10 机​炮",
+        "count": 1,
+        "bullets": 58,
+        "caliber": 37.0,
+        "fireRate": 165
+      },
+      {
+        "name": "gunBrowning50_usaaf",
+        "localizedName": "12.7 毫​米 M2 勃​朗​宁​机​枪",
+        "count": 4,
+        "bullets": 900,
+        "caliber": 12.7,
+        "fireRate": 750
+      }
+    ],
+    "payloads": [
+      {
+        "name": "p_63a_10_ussr_1xbomb",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "su_fab250",
+            "localizedName": "250 千​克 FAB-250 M-43 炸​弹",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "p_63a_10_ussr_2xbomb",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "su_fab250",
+            "localizedName": "250 千​克 FAB-250 M-43 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab250",
+            "localizedName": "250 千​克 FAB-250 M-43 炸​弹",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "p_63a_10_bomb",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "su_fab250",
+            "localizedName": "250 千​克 FAB-250 M-43 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab250",
+            "localizedName": "250 千​克 FAB-250 M-43 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab250",
+            "localizedName": "250 千​克 FAB-250 M-43 炸​弹",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

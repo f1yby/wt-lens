@@ -29,5 +29,266 @@
     },
     "expMultiplier": 1.12,
     "freeRepairs": 30
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "gunBrowning303_raf",
+        "localizedName": "7.7 毫​米​勃​朗​宁​机​枪",
+        "count": 2,
+        "bullets": 1000,
+        "caliber": 7.7,
+        "fireRate": 1000
+      },
+      {
+        "name": "gunVikkersK_turret",
+        "localizedName": "7.7 毫​米​维​克​斯 K 型​机​枪",
+        "count": 1,
+        "bullets": 1000,
+        "caliber": 7.7,
+        "fireRate": 950
+      },
+      {
+        "name": "gunBrowning303_turret",
+        "localizedName": "7.7 毫​米​勃​朗​宁​机​枪",
+        "count": 2,
+        "bullets": 2000,
+        "caliber": 7.7,
+        "fireRate": 1000
+      }
+    ],
+    "payloads": [
+      {
+        "name": "hudson_mk_v_bombs",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "us_250lb_anm57",
+            "localizedName": "250 磅 AN-M57 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_250lb_anm57",
+            "localizedName": "250 磅 AN-M57 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_250lb_anm57",
+            "localizedName": "250 磅 AN-M57 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_250lb_anm57",
+            "localizedName": "250 磅 AN-M57 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_100lb_anm30",
+            "localizedName": "100 磅 AN-M30A1 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_100lb_anm30",
+            "localizedName": "100 磅 AN-M30A1 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_100lb_anm30",
+            "localizedName": "100 磅 AN-M30A1 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_100lb_anm30",
+            "localizedName": "100 磅 AN-M30A1 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_100lb_anm30",
+            "localizedName": "100 磅 AN-M30A1 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_100lb_anm30",
+            "localizedName": "100 磅 AN-M30A1 炸​弹",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "hudson_mk_v_rockets",
+        "weapons": [
+          {
+            "trigger": "rockets",
+            "name": "uk_25lb_ap_mk1",
+            "localizedName": "AP Mk I 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "uk_25lb_ap_mk1",
+            "localizedName": "AP Mk I 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "uk_25lb_ap_mk1",
+            "localizedName": "AP Mk I 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "uk_25lb_ap_mk1",
+            "localizedName": "AP Mk I 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "uk_25lb_ap_mk1",
+            "localizedName": "AP Mk I 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "uk_25lb_ap_mk1",
+            "localizedName": "AP Mk I 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "uk_25lb_ap_mk1",
+            "localizedName": "AP Mk I 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "uk_25lb_ap_mk1",
+            "localizedName": "AP Mk I 火​箭​弹",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "hudson_mk_v_bombs_rockets",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "us_250lb_anm57",
+            "localizedName": "250 磅 AN-M57 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_250lb_anm57",
+            "localizedName": "250 磅 AN-M57 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_250lb_anm57",
+            "localizedName": "250 磅 AN-M57 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_250lb_anm57",
+            "localizedName": "250 磅 AN-M57 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_100lb_anm30",
+            "localizedName": "100 磅 AN-M30A1 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_100lb_anm30",
+            "localizedName": "100 磅 AN-M30A1 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_100lb_anm30",
+            "localizedName": "100 磅 AN-M30A1 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_100lb_anm30",
+            "localizedName": "100 磅 AN-M30A1 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_100lb_anm30",
+            "localizedName": "100 磅 AN-M30A1 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_100lb_anm30",
+            "localizedName": "100 磅 AN-M30A1 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "uk_25lb_ap_mk1",
+            "localizedName": "AP Mk I 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "uk_25lb_ap_mk1",
+            "localizedName": "AP Mk I 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "uk_25lb_ap_mk1",
+            "localizedName": "AP Mk I 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "uk_25lb_ap_mk1",
+            "localizedName": "AP Mk I 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "uk_25lb_ap_mk1",
+            "localizedName": "AP Mk I 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "uk_25lb_ap_mk1",
+            "localizedName": "AP Mk I 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "uk_25lb_ap_mk1",
+            "localizedName": "AP Mk I 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "uk_25lb_ap_mk1",
+            "localizedName": "AP Mk I 火​箭​弹",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

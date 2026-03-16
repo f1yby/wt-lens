@@ -27,5 +27,154 @@
       "simulator": 6.0
     },
     "expMultiplier": 1.96
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "gunBrowning50_M3",
+        "localizedName": "12.7 毫​米 M3 勃​朗​宁​机​枪",
+        "count": 6,
+        "bullets": 1800,
+        "caliber": 12.7,
+        "fireRate": 1200
+      }
+    ],
+    "payloads": [
+      {
+        "name": "f_86_hvar_rockets",
+        "weapons": [
+          {
+            "trigger": "rockets",
+            "name": "us_5_in_hvar_b",
+            "localizedName": "高​速​空​射​火​箭​弹​（HVAR）",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "us_5_in_hvar_b",
+            "localizedName": "高​速​空​射​火​箭​弹​（HVAR）",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "us_5_in_hvar_a",
+            "localizedName": "高​速​空​射​火​箭​弹​（HVAR）",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "us_5_in_hvar_a",
+            "localizedName": "高​速​空​射​火​箭​弹​（HVAR）",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "us_5_in_hvar_b",
+            "localizedName": "高​速​空​射​火​箭​弹​（HVAR）",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "us_5_in_hvar_b",
+            "localizedName": "高​速​空​射​火​箭​弹​（HVAR）",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "us_5_in_hvar_a",
+            "localizedName": "高​速​空​射​火​箭​弹​（HVAR）",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "us_5_in_hvar_a",
+            "localizedName": "高​速​空​射​火​箭​弹​（HVAR）",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "us_5_in_hvar_b",
+            "localizedName": "高​速​空​射​火​箭​弹​（HVAR）",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "us_5_in_hvar_b",
+            "localizedName": "高​速​空​射​火​箭​弹​（HVAR）",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "us_5_in_hvar_a",
+            "localizedName": "高​速​空​射​火​箭​弹​（HVAR）",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "us_5_in_hvar_a",
+            "localizedName": "高​速​空​射​火​箭​弹​（HVAR）",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "us_5_in_hvar_b",
+            "localizedName": "高​速​空​射​火​箭​弹​（HVAR）",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "us_5_in_hvar_b",
+            "localizedName": "高​速​空​射​火​箭​弹​（HVAR）",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "us_5_in_hvar_a",
+            "localizedName": "高​速​空​射​火​箭​弹​（HVAR）",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "us_5_in_hvar_a",
+            "localizedName": "高​速​空​射​火​箭​弹​（HVAR）",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "f_86_750lb_bombs",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "us_750lb_m117_cone_45",
+            "localizedName": "750 磅 M117 炸​弹​（45 尾​翼）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_750lb_m117_cone_45",
+            "localizedName": "750 磅 M117 炸​弹​（45 尾​翼）",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "f_86_1000lb_bombs",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "us_1000lb_anm65_cone",
+            "localizedName": "1,000 磅 AN-M65A1 炸​弹​（M129 型​尾​翼）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_1000lb_anm65_cone",
+            "localizedName": "1,000 磅 AN-M65A1 炸​弹​（M129 型​尾​翼）",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

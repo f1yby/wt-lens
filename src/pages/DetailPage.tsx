@@ -42,6 +42,7 @@ export default function DetailPage<V extends BaseVehicle, T extends string>({ co
   const [brRange, setBrRange] = useState<[number, number] | null>(null);
   const [typesInitialized, setTypesInitialized] = useState(false);
   const [economyData, setEconomyData] = useState<EconomyData | undefined>(undefined);
+  const [detailData, setDetailData] = useState<unknown>(undefined);
 
   const { gameMode, handleGameModeChange } = useGameMode();
 
@@ -62,10 +63,12 @@ export default function DetailPage<V extends BaseVehicle, T extends string>({ co
   useEffect(() => {
     if (!vehicle || !config.loadDetail) return;
     setEconomyData(undefined);
+    setDetailData(undefined);
     config.loadDetail(vehicle.id).then(detail => {
       if (detail?.economy) {
         setEconomyData(detail.economy);
       }
+      setDetailData(detail);
     });
   }, [vehicle?.id]);
 
@@ -330,7 +333,7 @@ export default function DetailPage<V extends BaseVehicle, T extends string>({ co
         )}
 
         {/* Additional Sections (for ground vehicles) */}
-        {config.renderAdditionalSections?.(vehicle, gameMode, handleNavigate)}
+        {config.renderAdditionalSections?.(vehicle, gameMode, handleNavigate, detailData)}
 
         {/* Game Mode Selector */}
         <Box sx={{ mb: 3 }}>

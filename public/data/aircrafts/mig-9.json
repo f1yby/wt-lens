@@ -27,5 +27,26 @@
       "simulator": 6.0
     },
     "expMultiplier": 1.9
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "cannonN37D",
+        "localizedName": "37 毫​米 N-37D 机​炮",
+        "count": 1,
+        "bullets": 40,
+        "caliber": 37.0,
+        "fireRate": 400
+      },
+      {
+        "name": "cannonNS23",
+        "localizedName": "23 毫​米 NS-23 机​炮",
+        "count": 2,
+        "bullets": 160,
+        "caliber": 23.0,
+        "fireRate": 600
+      }
+    ],
+    "payloads": []
   }
 }

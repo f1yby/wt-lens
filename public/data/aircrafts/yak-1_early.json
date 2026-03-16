@@ -27,5 +27,90 @@
       "simulator": 1.17
     },
     "expMultiplier": 1.12
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "cannonShVAK",
+        "localizedName": "20 毫​米​施​瓦​克​机​炮",
+        "count": 1,
+        "bullets": 110,
+        "caliber": 20.0,
+        "fireRate": 800,
+        "belts": [
+          {
+            "key": "shvak_universal",
+            "name": "通​用",
+            "bullets": [
+              "frag_i_t",
+              "he_frag",
+              "ap_i",
+              "frag_i_t"
+            ]
+          },
+          {
+            "key": "shvak_tracers",
+            "name": "曳​光",
+            "bullets": [
+              "frag_i_t"
+            ]
+          },
+          {
+            "key": "shvak_stealth",
+            "name": "匿​踪",
+            "bullets": [
+              "ap_i",
+              "he_frag",
+              "he_frag",
+              "frag_i"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "gunShKAS",
+        "localizedName": "7.62 毫​米​施​卡​斯​机​枪",
+        "count": 2,
+        "bullets": 1240,
+        "caliber": 7.6,
+        "fireRate": 1800
+      }
+    ],
+    "payloads": [
+      {
+        "name": "fab50",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "su_fab50",
+            "localizedName": "50 千​克 FAB-50 炸​弹​（铸​造）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab50",
+            "localizedName": "50 千​克 FAB-50 炸​弹​（铸​造）",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "fab100",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "su_fab100_short_fin",
+            "localizedName": "100 kg FAB-100sv bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab100_short_fin",
+            "localizedName": "100 kg FAB-100sv bomb",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

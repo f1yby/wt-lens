@@ -27,5 +27,48 @@
       "simulator": 1.65
     },
     "expMultiplier": 1.12
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "gunType97_turret",
+        "localizedName": "7.7 毫​米​九​七​式​旋​回​机​枪",
+        "count": 1,
+        "bullets": 240,
+        "caliber": 7.7,
+        "fireRate": 900
+      }
+    ],
+    "payloads": [
+      {
+        "name": "aichi_e13a_default",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "jp_navy_type97mod6_60kg",
+            "localizedName": "九​七​式​六​番​陆​用​爆​弹​（60 千​克）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "jp_navy_type97mod6_60kg",
+            "localizedName": "九​七​式​六​番​陆​用​爆​弹​（60 千​克）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "jp_navy_type97mod6_60kg",
+            "localizedName": "九​七​式​六​番​陆​用​爆​弹​（60 千​克）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "jp_navy_type97mod6_60kg",
+            "localizedName": "九​七​式​六​番​陆​用​爆​弹​（60 千​克）",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

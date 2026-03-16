@@ -29,5 +29,142 @@
     },
     "expMultiplier": 1.72,
     "freeRepairs": 30
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "cannonMG15120",
+        "localizedName": "20 毫​米 MG 151/20 机​炮",
+        "count": 6,
+        "bullets": 1500,
+        "caliber": 20.0,
+        "fireRate": 700
+      }
+    ],
+    "payloads": [
+      {
+        "name": "so_8000_narval_bombs_1000",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "us_1000lb_anm65_cone",
+            "localizedName": "1,000 磅 AN-M65A1 炸​弹​（M129 型​尾​翼）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_1000lb_anm65_cone",
+            "localizedName": "1,000 磅 AN-M65A1 炸​弹​（M129 型​尾​翼）",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "so_8000_narval_rockets",
+        "weapons": [
+          {
+            "trigger": "rockets",
+            "name": "fr_matra_t_10_140b",
+            "localizedName": "T10 140 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "fr_matra_t_10_140b",
+            "localizedName": "T10 140 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "fr_matra_t_10_140b",
+            "localizedName": "T10 140 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "fr_matra_t_10_140b",
+            "localizedName": "T10 140 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "fr_matra_t_10_140a",
+            "localizedName": "T10 140 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "fr_matra_t_10_140a",
+            "localizedName": "T10 140 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "fr_matra_t_10_140a",
+            "localizedName": "T10 140 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "fr_matra_t_10_140a",
+            "localizedName": "T10 140 火​箭​弹",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "so_8000_narval_rockets_150",
+        "weapons": [
+          {
+            "trigger": "rockets",
+            "name": "fr_matra_t_10_151b",
+            "localizedName": "T10 151 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "fr_matra_t_10_151b",
+            "localizedName": "T10 151 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "fr_matra_t_10_151b",
+            "localizedName": "T10 151 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "fr_matra_t_10_151b",
+            "localizedName": "T10 151 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "fr_matra_t_10_151a",
+            "localizedName": "T10 151 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "fr_matra_t_10_151a",
+            "localizedName": "T10 151 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "fr_matra_t_10_151a",
+            "localizedName": "T10 151 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "fr_matra_t_10_151a",
+            "localizedName": "T10 151 火​箭​弹",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

@@ -27,5 +27,125 @@
       "simulator": 6.0
     },
     "expMultiplier": 1.9
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "cannonAkan_m47b",
+        "localizedName": "20 毫​米 m/47B 机​炮",
+        "count": 4,
+        "bullets": 600,
+        "caliber": 20.0,
+        "fireRate": 750
+      }
+    ],
+    "payloads": [
+      {
+        "name": "vampire_fb5_j28_145mm_x14_rockets",
+        "weapons": [
+          {
+            "trigger": "rockets",
+            "name": "swd_145mm_psrak_m49a_mount",
+            "localizedName": "14.5 厘​米 m/49A 破​甲​火​箭​榴​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "swd_145mm_psrak_m49a_mount",
+            "localizedName": "14.5 厘​米 m/49A 破​甲​火​箭​榴​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "swd_145mm_psrak_m49a_mount",
+            "localizedName": "14.5 厘​米 m/49A 破​甲​火​箭​榴​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "swd_145mm_psrak_m49a_mount",
+            "localizedName": "14.5 厘​米 m/49A 破​甲​火​箭​榴​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "swd_145mm_psrak_m49a",
+            "localizedName": "14,5 cm psrak m/49B rockets",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "swd_145mm_psrak_m49a",
+            "localizedName": "14,5 cm psrak m/49B rockets",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "swd_145mm_psrak_m49a",
+            "localizedName": "14,5 cm psrak m/49B rockets",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "swd_145mm_psrak_m49a",
+            "localizedName": "14,5 cm psrak m/49B rockets",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "vampire_fb5_j28_150mm_x14_rockets",
+        "weapons": [
+          {
+            "trigger": "rockets",
+            "name": "swd_150mm_srak_m51_mount",
+            "localizedName": "15 厘​米 m/51 火​箭​榴​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "swd_150mm_srak_m51_mount",
+            "localizedName": "15 厘​米 m/51 火​箭​榴​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "swd_150mm_srak_m51_mount",
+            "localizedName": "15 厘​米 m/51 火​箭​榴​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "swd_150mm_srak_m51_mount",
+            "localizedName": "15 厘​米 m/51 火​箭​榴​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "swd_150mm_srak_m51",
+            "localizedName": "15 厘​米 m/51 火​箭​榴​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "swd_150mm_srak_m51",
+            "localizedName": "15 厘​米 m/51 火​箭​榴​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "swd_150mm_srak_m51",
+            "localizedName": "15 厘​米 m/51 火​箭​榴​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "swd_150mm_srak_m51",
+            "localizedName": "15 厘​米 m/51 火​箭​榴​弹",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

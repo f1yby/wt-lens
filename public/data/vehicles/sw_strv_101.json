@@ -41,7 +41,7 @@
     "ammunitions": [
       {
         "name": "105mm_slpprj_m61",
-        "localizedName": "slpprj m/61",
+        "localizedName": "m/61 曳​光​穿​甲​弹",
         "type": "apds_tank",
         "caliber": 60.0,
         "mass": 4.0,
@@ -59,7 +59,7 @@
       },
       {
         "name": "105mm_slspgr_m61",
-        "localizedName": "slspgr m/61",
+        "localizedName": "m/61 曳​光​碎​甲​弹",
         "type": "hesh_tank",
         "caliber": 105.0,
         "mass": 11.4,
@@ -71,7 +71,7 @@
       },
       {
         "name": "105mm_slsgr_m61",
-        "localizedName": "slsgr m/61A",
+        "localizedName": "m/61A 曳​光​榴​弹",
         "type": "he_frag_tank",
         "caliber": 105.0,
         "mass": 15.5,
@@ -82,7 +82,7 @@
       },
       {
         "name": "105mm_rokgr_m61",
-        "localizedName": "rökgr m/61",
+        "localizedName": "m/61 烟​雾​弹 ",
         "type": "smoke_tank",
         "caliber": 105.0,
         "mass": 19.6,

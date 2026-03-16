@@ -41,7 +41,7 @@
     "ammunitions": [
       {
         "name": "90mm_ap_shot",
-        "localizedName": "AP Shot",
+        "localizedName": "穿​甲​弹",
         "type": "apbc_usa_tank",
         "caliber": 90.0,
         "mass": 10.9,
@@ -55,7 +55,7 @@
       },
       {
         "name": "90mm_he_shell",
-        "localizedName": "HE Shell",
+        "localizedName": "榴​弹",
         "type": "he_frag_tank",
         "caliber": 90.0,
         "mass": 10.6,
@@ -84,7 +84,7 @@
       },
       {
         "name": "90mm_hvap_shot",
-        "localizedName": "HVAP Shot",
+        "localizedName": "高​速​穿​甲​弹",
         "type": "apcr_tank",
         "caliber": 38.1,
         "mass": 7.6,

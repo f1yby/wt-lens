@@ -27,5 +27,137 @@
       "simulator": 0.84
     },
     "expMultiplier": 1.0
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "cannonMG15115",
+        "localizedName": "15 毫​米 MG 151/15 机​炮",
+        "count": 1,
+        "bullets": 200,
+        "caliber": 15.0,
+        "fireRate": 700,
+        "belts": [
+          {
+            "key": "mg15115_universal",
+            "name": "mg15115_universal",
+            "bullets": [
+              "ap_t_ball",
+              "he_frag_t_ball",
+              "ap_t_ball",
+              "he_frag_t_ball"
+            ]
+          },
+          {
+            "key": "mg15115_air_targets",
+            "name": "mg15115_air_targets",
+            "bullets": [
+              "ap_i",
+              "he_frag_t_ball",
+              "he_frag_t_ball",
+              "he_frag_t_ball"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "gunMG15_turret",
+        "localizedName": "7.92 毫​米 MG 15 机​枪",
+        "count": 2,
+        "bullets": 2025,
+        "caliber": 7.9,
+        "fireRate": 1000,
+        "belts": [
+          {
+            "key": "mg15115_universal",
+            "name": "mg15115_universal",
+            "bullets": [
+              "ap_t_ball",
+              "ball",
+              "ball",
+              "ap_i_ball",
+              "he_ball"
+            ]
+          },
+          {
+            "key": "mg15115_air_targets",
+            "name": "mg15115_air_targets",
+            "bullets": [
+              "ap_t_ball",
+              "ball",
+              "ball",
+              "ap_i_ball",
+              "he_ball"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "gunMG17_turret",
+        "localizedName": "7.92 毫​米 MG 17 机​枪",
+        "count": 2,
+        "bullets": 2000,
+        "caliber": 7.9,
+        "fireRate": 1150
+      }
+    ],
+    "payloads": [
+      {
+        "name": "he_115c_1_default",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "de_sc250",
+            "localizedName": "250 千​克 SC260JA 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "de_sc250",
+            "localizedName": "250 千​克 SC260JA 炸​弹",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "he_115c_1_flamm_250kg",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "de_flam_250",
+            "localizedName": "Flam C 250 incendiary bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "de_flam_250",
+            "localizedName": "Flam C 250 incendiary bomb",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "he_115c_1_500kg",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "de_sc500",
+            "localizedName": "500 千​克 SC500K 炸​弹",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "he_115c_1_torpedo",
+        "weapons": [
+          {
+            "trigger": "torpedoes",
+            "name": "de_f5w_torpedo",
+            "localizedName": "F5w 鱼​雷",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

@@ -27,5 +27,167 @@
       "simulator": 0.54
     },
     "expMultiplier": 1.0
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "gunDarne23",
+        "localizedName": "7.5 毫​米 Mle 1923 机​枪",
+        "count": 2,
+        "bullets": 2000,
+        "caliber": 7.5,
+        "fireRate": 1350,
+        "belts": [
+          {
+            "key": "7_5mm_universal",
+            "name": "通​用",
+            "bullets": [
+              "t_ball",
+              "ap_ball",
+              "ap_ball",
+              "i_ball",
+              "i_ball"
+            ]
+          },
+          {
+            "key": "7_5mm_all_tracers",
+            "name": "曳​光",
+            "bullets": [
+              "i_t_ball"
+            ]
+          },
+          {
+            "key": "7_5mm_stealth",
+            "name": "匿​踪",
+            "bullets": [
+              "ap_ball",
+              "ap_ball",
+              "i_ball"
+            ]
+          },
+          {
+            "key": "7_5mm_turret_ap",
+            "name": "穿​甲",
+            "bullets": [
+              "t_ball",
+              "ball",
+              "ball",
+              "ball",
+              "i_ball",
+              "ap_ball"
+            ]
+          },
+          {
+            "key": "7_5mm_turret_ap_t",
+            "name": "曳​光",
+            "bullets": [
+              "t_ball",
+              "ball",
+              "ball",
+              "ball",
+              "i_ball",
+              "ap_ball"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "gunDarne23_turret",
+        "localizedName": "7.5 毫​米 Mle 1923 机​枪",
+        "count": 1,
+        "bullets": 750,
+        "caliber": 7.5,
+        "fireRate": 1350,
+        "belts": [
+          {
+            "key": "7_5mm_universal",
+            "name": "通​用",
+            "bullets": [
+              "t_ball",
+              "ball",
+              "ball",
+              "i_ball",
+              "ap_ball"
+            ]
+          },
+          {
+            "key": "7_5mm_all_tracers",
+            "name": "曳​光",
+            "bullets": [
+              "t_ball",
+              "ball",
+              "ball",
+              "i_ball",
+              "ap_ball"
+            ]
+          },
+          {
+            "key": "7_5mm_stealth",
+            "name": "匿​踪",
+            "bullets": [
+              "t_ball",
+              "ball",
+              "ball",
+              "i_ball",
+              "ap_ball"
+            ]
+          },
+          {
+            "key": "7_5mm_turret_ap",
+            "name": "穿​甲",
+            "bullets": [
+              "t_ball",
+              "ap_ball",
+              "ap_ball",
+              "ap_ball"
+            ]
+          },
+          {
+            "key": "7_5mm_turret_ap_t",
+            "name": "曳​光",
+            "bullets": [
+              "t_ball",
+              "ap_ball"
+            ]
+          }
+        ]
+      }
+    ],
+    "payloads": [
+      {
+        "name": "v_156_f_default",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "fr_50kg_gammn",
+            "localizedName": "50 千​克 G.A.M.Mn 50 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_50kg_gammn",
+            "localizedName": "50 千​克 G.A.M.Mn 50 炸​弹",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "v_156_f_2x100kg",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "fr_100kg",
+            "localizedName": "100 千​克 1 号​炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_100kg",
+            "localizedName": "100 千​克 1 号​炸​弹",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

@@ -27,5 +27,143 @@
       "simulator": 2.77
     },
     "expMultiplier": 1.48
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "gunMG131",
+        "localizedName": "13 毫​米 MG 131 机​枪",
+        "count": 2,
+        "bullets": 1200,
+        "caliber": 13.0,
+        "fireRate": 900,
+        "belts": [
+          {
+            "key": "mg131_stealth",
+            "name": "mg131_stealth",
+            "bullets": [
+              "ap_i_ball"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "cannonMG15120",
+        "localizedName": "20 毫​米 MG 151/20 机​炮",
+        "count": 2,
+        "bullets": 700,
+        "caliber": 20.0,
+        "fireRate": 700
+      },
+      {
+        "name": "gunMG131_turret",
+        "localizedName": "13 毫​米 MG 131 机​枪",
+        "count": 2,
+        "bullets": 1000,
+        "caliber": 13.0,
+        "fireRate": 900,
+        "belts": [
+          {
+            "key": "mg131_stealth",
+            "name": "mg131_stealth",
+            "bullets": [
+              "i_t_ball",
+              "ap_i_ball",
+              "he_i_ball",
+              "ap_i_ball"
+            ]
+          }
+        ]
+      }
+    ],
+    "payloads": [
+      {
+        "name": "Me_410A-1_8xSC50",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "de_sc50",
+            "localizedName": "50 千​克 SC50JA 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "de_sc50",
+            "localizedName": "50 千​克 SC50JA 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "de_sc50",
+            "localizedName": "50 千​克 SC50JA 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "de_sc50",
+            "localizedName": "50 千​克 SC50JA 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "de_sc50",
+            "localizedName": "50 千​克 SC50JA 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "de_sc50",
+            "localizedName": "50 千​克 SC50JA 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "de_sc50",
+            "localizedName": "50 千​克 SC50JA 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "de_sc50",
+            "localizedName": "50 千​克 SC50JA 炸​弹",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "Me_410A-1_2xSC250",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "de_sc250",
+            "localizedName": "250 千​克 SC260JA 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "de_sc250",
+            "localizedName": "250 千​克 SC260JA 炸​弹",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "Me_410A-1_2xSC500",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "de_sc500",
+            "localizedName": "500 千​克 SC500K 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "de_sc500",
+            "localizedName": "500 千​克 SC500K 炸​弹",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

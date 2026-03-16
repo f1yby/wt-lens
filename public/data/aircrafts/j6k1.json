@@ -29,5 +29,146 @@
     },
     "expMultiplier": 1.78,
     "freeRepairs": 30
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "gunType3",
+        "localizedName": "13.2 毫​米​三​式​固​定​机​枪",
+        "count": 2,
+        "bullets": 400,
+        "caliber": 13.2,
+        "fireRate": 798,
+        "belts": [
+          {
+            "key": "type3_universal",
+            "name": "type3_universal",
+            "bullets": [
+              "t_ball",
+              "ap_ball",
+              "ap_ball",
+              "he_i_ball",
+              "he_i_ball"
+            ]
+          },
+          {
+            "key": "type3_ground_targets",
+            "name": "type3_ground_targets",
+            "bullets": [
+              "t_ball",
+              "ap_ball",
+              "ap_ball",
+              "ap_ball",
+              "he_i_ball"
+            ]
+          },
+          {
+            "key": "type3_stealth",
+            "name": "type3_stealth",
+            "bullets": [
+              "he_i_ball"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "cannonType99Mk2",
+        "localizedName": "20 毫​米​九​九​式​二​号​固​定​机​炮",
+        "count": 6,
+        "bullets": 1200,
+        "caliber": 20.0,
+        "fireRate": 490,
+        "belts": [
+          {
+            "key": "type99mk2_universal",
+            "name": "通​用",
+            "bullets": [
+              "he_frag_t",
+              "he_frag",
+              "he_frag",
+              "aphe"
+            ]
+          },
+          {
+            "key": "type99mk2_ground_targets",
+            "name": "对​地",
+            "bullets": [
+              "aphe",
+              "aphe",
+              "aphe",
+              "aphe",
+              "he_frag",
+              "he_frag_t"
+            ]
+          },
+          {
+            "key": "type99mk2_all_tracers",
+            "name": "曳​光",
+            "bullets": [
+              "he_frag_t"
+            ]
+          },
+          {
+            "key": "type99mk2_stealth",
+            "name": "匿​踪",
+            "bullets": [
+              "he_frag",
+              "he_frag",
+              "he_frag",
+              "aphe",
+              "aphe"
+            ]
+          }
+        ]
+      }
+    ],
+    "payloads": [
+      {
+        "name": "j6k1_type97mod6x4",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "jp_navy_type97mod6_60kg",
+            "localizedName": "九​七​式​六​番​陆​用​爆​弹​（60 千​克）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "jp_navy_type97mod6_60kg",
+            "localizedName": "九​七​式​六​番​陆​用​爆​弹​（60 千​克）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "jp_navy_type97mod6_60kg",
+            "localizedName": "九​七​式​六​番​陆​用​爆​弹​（60 千​克）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "jp_navy_type97mod6_60kg",
+            "localizedName": "九​七​式​六​番​陆​用​爆​弹​（60 千​克）",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "j6k1_type98mod25x2",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "jp_navy_type98mod25_250kg",
+            "localizedName": "九​八​式​二​五​番​爆​弹​（250 千​克）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "jp_navy_type98mod25_250kg",
+            "localizedName": "九​八​式​二​五​番​爆​弹​（250 千​克）",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

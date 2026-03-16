@@ -29,5 +29,138 @@
     },
     "expMultiplier": 1.12,
     "freeRepairs": 30
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "cannonShVAK",
+        "localizedName": "20 毫​米​施​瓦​克​机​炮",
+        "count": 2,
+        "bullets": 240,
+        "caliber": 20.0,
+        "fireRate": 800,
+        "belts": [
+          {
+            "key": "shvak_universal",
+            "name": "通​用",
+            "bullets": [
+              "frag_i_t",
+              "he_frag",
+              "ap_i",
+              "frag_i_t"
+            ]
+          },
+          {
+            "key": "shvak_tracers",
+            "name": "曳​光",
+            "bullets": [
+              "frag_i_t"
+            ]
+          },
+          {
+            "key": "shvak_stealth",
+            "name": "匿​踪",
+            "bullets": [
+              "ap_i",
+              "he_frag",
+              "he_frag",
+              "frag_i"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "gunUBK",
+        "localizedName": "12.7 毫​米​别​列​津 UBK 机​枪",
+        "count": 2,
+        "bullets": 240,
+        "caliber": 12.7,
+        "fireRate": 1026
+      }
+    ],
+    "payloads": [
+      {
+        "name": "hurricane_ussr_rockets",
+        "weapons": [
+          {
+            "trigger": "rockets",
+            "name": "su_ros_82",
+            "localizedName": "ROS-82 rockets",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_ros_82",
+            "localizedName": "ROS-82 rockets",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_ros_82",
+            "localizedName": "ROS-82 rockets",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_ros_82",
+            "localizedName": "ROS-82 rockets",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_ros_82",
+            "localizedName": "ROS-82 rockets",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_ros_82",
+            "localizedName": "ROS-82 rockets",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "hurricane_ussr_rockets_rbs",
+        "weapons": [
+          {
+            "trigger": "rockets",
+            "name": "su_rbs82",
+            "localizedName": "RBS-82 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_rbs82",
+            "localizedName": "RBS-82 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_rbs82",
+            "localizedName": "RBS-82 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_rbs82",
+            "localizedName": "RBS-82 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_rbs82",
+            "localizedName": "RBS-82 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_rbs82",
+            "localizedName": "RBS-82 火​箭​弹",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

@@ -41,7 +41,7 @@
     "ammunitions": [
       {
         "name": "75mm_m72",
-        "localizedName": "M72 shot",
+        "localizedName": "M72",
         "type": "ap_tank",
         "caliber": 75.0,
         "mass": 6.3,
@@ -56,7 +56,7 @@
       },
       {
         "name": "75mm_m61",
-        "localizedName": "M61 shot",
+        "localizedName": "M61",
         "type": "apcbc_tank",
         "caliber": 75.0,
         "mass": 6.79,
@@ -74,7 +74,7 @@
       },
       {
         "name": "75mm_m48",
-        "localizedName": "M48 shell",
+        "localizedName": "M48",
         "type": "he_frag_tank",
         "caliber": 75.0,
         "mass": 6.3,

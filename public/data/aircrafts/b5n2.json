@@ -27,5 +27,253 @@
       "simulator": 0.52
     },
     "expMultiplier": 1.0
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "gunType92_turret",
+        "localizedName": "7.7 毫​米​九​二​式​旋​回​机​枪",
+        "count": 1,
+        "bullets": 582,
+        "caliber": 7.7,
+        "fireRate": 700,
+        "belts": [
+          {
+            "key": "type92_turret_ap",
+            "name": "穿​甲",
+            "bullets": [
+              "t_ball",
+              "ap_ball",
+              "ap_ball",
+              "he_i_ball",
+              "ap_ball"
+            ]
+          },
+          {
+            "key": "type92_turret_ap_t",
+            "name": "曳​光",
+            "bullets": [
+              "ap_ball",
+              "t_ball"
+            ]
+          }
+        ]
+      }
+    ],
+    "payloads": [
+      {
+        "name": "b5n2_type97mod6_bombs",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "jp_navy_type97mod6_60kg",
+            "localizedName": "九​七​式​六​番​陆​用​爆​弹​（60 千​克）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "jp_navy_type97mod6_60kg",
+            "localizedName": "九​七​式​六​番​陆​用​爆​弹​（60 千​克）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "jp_navy_type97mod6_60kg",
+            "localizedName": "九​七​式​六​番​陆​用​爆​弹​（60 千​克）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "jp_navy_type97mod6_60kg",
+            "localizedName": "九​七​式​六​番​陆​用​爆​弹​（60 千​克）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "jp_navy_type97mod6_60kg",
+            "localizedName": "九​七​式​六​番​陆​用​爆​弹​（60 千​克）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "jp_navy_type97mod6_60kg",
+            "localizedName": "九​七​式​六​番​陆​用​爆​弹​（60 千​克）",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "b5n2_mark2_bombs",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "jp_navy_mod25mark2_250kg",
+            "localizedName": "二​五​番​通​常​爆​弹​二​型​（250 千​克）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "jp_navy_mod25mark2_250kg",
+            "localizedName": "二​五​番​通​常​爆​弹​二​型​（250 千​克）",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "b5n2_mark2_6x_type97mod6_bombs",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "jp_navy_mod25mark2_250kg",
+            "localizedName": "二​五​番​通​常​爆​弹​二​型​（250 千​克）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "jp_navy_type97mod6_60kg",
+            "localizedName": "九​七​式​六​番​陆​用​爆​弹​（60 千​克）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "jp_navy_type97mod6_60kg",
+            "localizedName": "九​七​式​六​番​陆​用​爆​弹​（60 千​克）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "jp_navy_type97mod6_60kg",
+            "localizedName": "九​七​式​六​番​陆​用​爆​弹​（60 千​克）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "jp_navy_type97mod6_60kg",
+            "localizedName": "九​七​式​六​番​陆​用​爆​弹​（60 千​克）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "jp_navy_type97mod6_60kg",
+            "localizedName": "九​七​式​六​番​陆​用​爆​弹​（60 千​克）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "jp_navy_type97mod6_60kg",
+            "localizedName": "九​七​式​六​番​陆​用​爆​弹​（60 千​克）",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "b5n2_type98_bombs",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "jp_navy_type98mod25_250kg",
+            "localizedName": "九​八​式​二​五​番​爆​弹​（250 千​克）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "jp_navy_type98mod25_250kg",
+            "localizedName": "九​八​式​二​五​番​爆​弹​（250 千​克）",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "b5n2_type98_6x_type97mod6_bombs",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "jp_navy_type98mod25_250kg",
+            "localizedName": "九​八​式​二​五​番​爆​弹​（250 千​克）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "jp_navy_type97mod6_60kg",
+            "localizedName": "九​七​式​六​番​陆​用​爆​弹​（60 千​克）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "jp_navy_type97mod6_60kg",
+            "localizedName": "九​七​式​六​番​陆​用​爆​弹​（60 千​克）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "jp_navy_type97mod6_60kg",
+            "localizedName": "九​七​式​六​番​陆​用​爆​弹​（60 千​克）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "jp_navy_type97mod6_60kg",
+            "localizedName": "九​七​式​六​番​陆​用​爆​弹​（60 千​克）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "jp_navy_type97mod6_60kg",
+            "localizedName": "九​七​式​六​番​陆​用​爆​弹​（60 千​克）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "jp_navy_type97mod6_60kg",
+            "localizedName": "九​七​式​六​番​陆​用​爆​弹​（60 千​克）",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "b5n2_mod80mk1_bomb",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "jp_navy_mod80mark1_800kg",
+            "localizedName": "800 kg Number 80 Mod. 1 bomb",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "b5n2_type99mod80_bomb",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "jp_navy_type99mod80_800kg",
+            "localizedName": "八​〇​番​陆​用​爆​弹​（800 千​克）",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "b5n2_type91mod2_torpedo",
+        "weapons": [
+          {
+            "trigger": "torpedoes",
+            "name": "jp_type91mod2_torpedo",
+            "localizedName": "九​一​式​航​空​鱼​雷​改​二​（835 千​克）",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "b5n2_type91mod3_torpedo",
+        "weapons": [
+          {
+            "trigger": "torpedoes",
+            "name": "jp_type91mod3_torpedo",
+            "localizedName": "九​一​式​航​空​鱼​雷​改​三​（850 千​克）",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

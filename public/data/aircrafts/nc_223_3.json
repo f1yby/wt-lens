@@ -27,5 +27,591 @@
       "simulator": 1.49
     },
     "expMultiplier": 1.12
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "gunMAC34_turret",
+        "localizedName": "7.5 毫​米 MAC 1934 机​枪",
+        "count": 1,
+        "bullets": 1000,
+        "caliber": 7.5,
+        "fireRate": 1350,
+        "belts": [
+          {
+            "key": "7_5mm_turret_ap",
+            "name": "穿​甲",
+            "bullets": [
+              "t_ball",
+              "ap_ball",
+              "ap_ball",
+              "ap_ball"
+            ]
+          },
+          {
+            "key": "7_5mm_turret_ap_t",
+            "name": "曳​光",
+            "bullets": [
+              "t_ball",
+              "ap_ball"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "cannonHispano404_turret",
+        "localizedName": "20 毫​米​西​斯​帕​诺​-​絮​扎 HS.404 机​炮",
+        "count": 2,
+        "bullets": 480,
+        "caliber": 20.0,
+        "fireRate": 700,
+        "belts": [
+          {
+            "key": "hispano_turret_ap",
+            "name": "hispano_turret_ap",
+            "bullets": [
+              "ap_t",
+              "ap",
+              "ap_t",
+              "he_i",
+              "ap_t"
+            ]
+          }
+        ]
+      }
+    ],
+    "payloads": [
+      {
+        "name": "f_223_50kg_gammn",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "fr_50kg_gammn",
+            "localizedName": "50 千​克 G.A.M.Mn 50 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_50kg_gammn",
+            "localizedName": "50 千​克 G.A.M.Mn 50 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_50kg_gammn",
+            "localizedName": "50 千​克 G.A.M.Mn 50 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_50kg_gammn",
+            "localizedName": "50 千​克 G.A.M.Mn 50 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_50kg_gammn",
+            "localizedName": "50 千​克 G.A.M.Mn 50 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_50kg_gammn",
+            "localizedName": "50 千​克 G.A.M.Mn 50 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_50kg_gammn",
+            "localizedName": "50 千​克 G.A.M.Mn 50 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_50kg_gammn",
+            "localizedName": "50 千​克 G.A.M.Mn 50 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_50kg_gammn",
+            "localizedName": "50 千​克 G.A.M.Mn 50 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_50kg_gammn",
+            "localizedName": "50 千​克 G.A.M.Mn 50 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_50kg_gammn",
+            "localizedName": "50 千​克 G.A.M.Mn 50 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_50kg_gammn",
+            "localizedName": "50 千​克 G.A.M.Mn 50 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_50kg_gammn",
+            "localizedName": "50 千​克 G.A.M.Mn 50 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_50kg_gammn",
+            "localizedName": "50 千​克 G.A.M.Mn 50 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_50kg_gammn",
+            "localizedName": "50 千​克 G.A.M.Mn 50 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_50kg_gammn",
+            "localizedName": "50 千​克 G.A.M.Mn 50 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_50kg_gammn",
+            "localizedName": "50 千​克 G.A.M.Mn 50 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_50kg_gammn",
+            "localizedName": "50 千​克 G.A.M.Mn 50 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_50kg_gammn",
+            "localizedName": "50 千​克 G.A.M.Mn 50 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_50kg_gammn",
+            "localizedName": "50 千​克 G.A.M.Mn 50 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_50kg_gammn",
+            "localizedName": "50 千​克 G.A.M.Mn 50 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_50kg_gammn",
+            "localizedName": "50 千​克 G.A.M.Mn 50 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_50kg_gammn",
+            "localizedName": "50 千​克 G.A.M.Mn 50 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_50kg_gammn",
+            "localizedName": "50 千​克 G.A.M.Mn 50 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_50kg_gammn",
+            "localizedName": "50 千​克 G.A.M.Mn 50 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_50kg_gammn",
+            "localizedName": "50 千​克 G.A.M.Mn 50 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_50kg_gammn",
+            "localizedName": "50 千​克 G.A.M.Mn 50 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_50kg_gammn",
+            "localizedName": "50 千​克 G.A.M.Mn 50 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_50kg_gammn",
+            "localizedName": "50 千​克 G.A.M.Mn 50 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_50kg_gammn",
+            "localizedName": "50 千​克 G.A.M.Mn 50 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_50kg_gammn",
+            "localizedName": "50 千​克 G.A.M.Mn 50 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_50kg_gammn",
+            "localizedName": "50 千​克 G.A.M.Mn 50 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_50kg_gammn",
+            "localizedName": "50 千​克 G.A.M.Mn 50 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_50kg_gammn",
+            "localizedName": "50 千​克 G.A.M.Mn 50 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_50kg_gammn",
+            "localizedName": "50 千​克 G.A.M.Mn 50 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_50kg_gammn",
+            "localizedName": "50 千​克 G.A.M.Mn 50 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_50kg_gammn",
+            "localizedName": "50 千​克 G.A.M.Mn 50 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_50kg_gammn",
+            "localizedName": "50 千​克 G.A.M.Mn 50 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_50kg_gammn",
+            "localizedName": "50 千​克 G.A.M.Mn 50 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_50kg_gammn",
+            "localizedName": "50 千​克 G.A.M.Mn 50 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_50kg_gammn",
+            "localizedName": "50 千​克 G.A.M.Mn 50 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_50kg_gammn",
+            "localizedName": "50 千​克 G.A.M.Mn 50 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_50kg_gammn",
+            "localizedName": "50 千​克 G.A.M.Mn 50 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_50kg_gammn",
+            "localizedName": "50 千​克 G.A.M.Mn 50 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_50kg_gammn",
+            "localizedName": "50 千​克 G.A.M.Mn 50 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_50kg_gammn",
+            "localizedName": "50 千​克 G.A.M.Mn 50 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_50kg_gammn",
+            "localizedName": "50 千​克 G.A.M.Mn 50 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_50kg_gammn",
+            "localizedName": "50 千​克 G.A.M.Mn 50 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_50kg_gammn",
+            "localizedName": "50 千​克 G.A.M.Mn 50 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_50kg_gammn",
+            "localizedName": "50 千​克 G.A.M.Mn 50 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_50kg_gammn",
+            "localizedName": "50 千​克 G.A.M.Mn 50 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_50kg_gammn",
+            "localizedName": "50 千​克 G.A.M.Mn 50 炸​弹",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "f_223_100kg_200kg",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "fr_200kg",
+            "localizedName": "200 千​克 1 号​炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_200kg",
+            "localizedName": "200 千​克 1 号​炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_200kg",
+            "localizedName": "200 千​克 1 号​炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_200kg",
+            "localizedName": "200 千​克 1 号​炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_200kg",
+            "localizedName": "200 千​克 1 号​炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_100kg",
+            "localizedName": "100 千​克 1 号​炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_100kg",
+            "localizedName": "100 千​克 1 号​炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_100kg",
+            "localizedName": "100 千​克 1 号​炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_100kg",
+            "localizedName": "100 千​克 1 号​炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_100kg",
+            "localizedName": "100 千​克 1 号​炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_100kg",
+            "localizedName": "100 千​克 1 号​炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_100kg",
+            "localizedName": "100 千​克 1 号​炸​弹",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "f_223_4200kg",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "fr_200kg",
+            "localizedName": "200 千​克 1 号​炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_200kg",
+            "localizedName": "200 千​克 1 号​炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_200kg",
+            "localizedName": "200 千​克 1 号​炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_200kg",
+            "localizedName": "200 千​克 1 号​炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_200kg",
+            "localizedName": "200 千​克 1 号​炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_200kg",
+            "localizedName": "200 千​克 1 号​炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_200kg",
+            "localizedName": "200 千​克 1 号​炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_100kg",
+            "localizedName": "100 千​克 1 号​炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_100kg",
+            "localizedName": "100 千​克 1 号​炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_200kg",
+            "localizedName": "200 千​克 1 号​炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_100kg",
+            "localizedName": "100 千​克 1 号​炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_200kg",
+            "localizedName": "200 千​克 1 号​炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_200kg",
+            "localizedName": "200 千​克 1 号​炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_200kg",
+            "localizedName": "200 千​克 1 号​炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_200kg",
+            "localizedName": "200 千​克 1 号​炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_200kg",
+            "localizedName": "200 千​克 1 号​炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_100kg",
+            "localizedName": "100 千​克 1 号​炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_100kg",
+            "localizedName": "100 千​克 1 号​炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_200kg",
+            "localizedName": "200 千​克 1 号​炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_200kg",
+            "localizedName": "200 千​克 1 号​炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_100kg",
+            "localizedName": "100 千​克 1 号​炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_100kg",
+            "localizedName": "100 千​克 1 号​炸​弹",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

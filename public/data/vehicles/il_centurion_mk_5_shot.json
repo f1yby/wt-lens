@@ -41,7 +41,7 @@
     "ammunitions": [
       {
         "name": "83mm_shot_mk1",
-        "localizedName": "Shot Mk.1",
+        "localizedName": "APCBC Mk I",
         "type": "apcbc_solid_medium_caliber_tank",
         "caliber": 83.4,
         "mass": 9.072,
@@ -56,7 +56,7 @@
       },
       {
         "name": "83mm_shell_mk1",
-        "localizedName": "Shell Mk.1",
+        "localizedName": "HE Mk I",
         "type": "he_frag_tank",
         "caliber": 83.4,
         "mass": 7.835,
@@ -67,7 +67,7 @@
       },
       {
         "name": "83mm_shot_mk3",
-        "localizedName": "Shot Mk.3",
+        "localizedName": "APDS Mk III",
         "type": "apds_early_tank",
         "caliber": 53.0,
         "mass": 3.22,
@@ -85,7 +85,7 @@
       },
       {
         "name": "83mm_shell_ss_mk1",
-        "localizedName": "20pdr Shell SS Mk.1",
+        "localizedName": "SS Mk I",
         "type": "smoke_tank",
         "caliber": 83.4,
         "mass": 10.131,

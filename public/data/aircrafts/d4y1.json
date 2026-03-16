@@ -27,5 +27,131 @@
       "simulator": 1.95
     },
     "expMultiplier": 1.18
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "gunType97",
+        "localizedName": "7.7 毫​米​九​七​式​固​定​机​枪",
+        "count": 2,
+        "bullets": 1200,
+        "caliber": 7.7,
+        "fireRate": 900,
+        "belts": [
+          {
+            "key": "7_7mm_universal",
+            "name": "通​用",
+            "bullets": [
+              "t_ball",
+              "ap_ball",
+              "he_i_ball",
+              "ap_ball"
+            ]
+          },
+          {
+            "key": "7_7_all_tracers",
+            "name": "曳​光",
+            "bullets": [
+              "t_ball",
+              "t_ball",
+              "t_ball",
+              "ap_ball"
+            ]
+          },
+          {
+            "key": "7_7_stealth",
+            "name": "匿​踪",
+            "bullets": [
+              "i_ball",
+              "ap_ball",
+              "ap_ball",
+              "ap_ball",
+              "he_i_ball"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "gunType92_turret",
+        "localizedName": "7.7 毫​米​九​二​式​旋​回​机​枪",
+        "count": 1,
+        "bullets": 582,
+        "caliber": 7.7,
+        "fireRate": 700,
+        "belts": [
+          {
+            "key": "7_7mm_universal",
+            "name": "通​用",
+            "bullets": [
+              "t_ball",
+              "ap_ball",
+              "ball",
+              "ap_ball",
+              "i_ball",
+              "he_i_ball"
+            ]
+          },
+          {
+            "key": "7_7_all_tracers",
+            "name": "曳​光",
+            "bullets": [
+              "t_ball",
+              "ap_ball",
+              "ball",
+              "ap_ball",
+              "i_ball",
+              "he_i_ball"
+            ]
+          },
+          {
+            "key": "7_7_stealth",
+            "name": "匿​踪",
+            "bullets": [
+              "t_ball",
+              "ap_ball",
+              "ball",
+              "ap_ball",
+              "i_ball",
+              "he_i_ball"
+            ]
+          }
+        ]
+      }
+    ],
+    "payloads": [
+      {
+        "name": "d4y_250kg_bomb",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "jp_navy_mod25mark2_250kg",
+            "localizedName": "二​五​番​通​常​爆​弹​二​型​（250 千​克）",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "d4y_500kg_number50",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "jp_navy_mod50mark2_500kg",
+            "localizedName": "五​〇​番​通​常​爆​弹​二​型​（800 千​克）",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "d4y_500kg_bomb",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "jp_navy_mod50mark1_500kg",
+            "localizedName": "二​式​五​〇​番​通​常​爆​弹​一​型​（500 千​克）",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

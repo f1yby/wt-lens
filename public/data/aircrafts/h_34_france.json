@@ -26,5 +26,176 @@
       "simulator": 4.3
     },
     "expMultiplier": 1.96
+  },
+  "weapons": {
+    "fixed_weapons": [],
+    "payloads": [
+      {
+        "name": "h_34_default",
+        "weapons": [
+          {
+            "trigger": "atgm",
+            "name": "fr_ss_11",
+            "localizedName": "SS-11 反​坦​克​导​弹",
+            "count": 1
+          },
+          {
+            "trigger": "atgm",
+            "name": "fr_ss_11",
+            "localizedName": "SS-11 反​坦​克​导​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "us_5_in_hvar_d",
+            "localizedName": "高​速​空​射​火​箭​弹​（HVAR）",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "us_5_in_hvar_d",
+            "localizedName": "高​速​空​射​火​箭​弹​（HVAR）",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "us_5_in_hvar_d",
+            "localizedName": "高​速​空​射​火​箭​弹​（HVAR）",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "us_5_in_hvar_d",
+            "localizedName": "高​速​空​射​火​箭​弹​（HVAR）",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "us_5_in_hvar_d",
+            "localizedName": "高​速​空​射​火​箭​弹​（HVAR）",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "us_5_in_hvar_d",
+            "localizedName": "高​速​空​射​火​箭​弹​（HVAR）",
+            "count": 1
+          },
+          {
+            "trigger": "machine gun",
+            "name": "gunBrowning30_usaaf",
+            "localizedName": "7.62 毫​米​勃​朗​宁​机​枪",
+            "count": 250
+          },
+          {
+            "trigger": "machine gun",
+            "name": "gunBrowning30_usaaf",
+            "localizedName": "7.62 毫​米​勃​朗​宁​机​枪",
+            "count": 250
+          },
+          {
+            "trigger": "machine gun",
+            "name": "gunBrowning30_usaaf",
+            "localizedName": "7.62 毫​米​勃​朗​宁​机​枪",
+            "count": 250
+          },
+          {
+            "trigger": "machine gun",
+            "name": "gunBrowning30_usaaf",
+            "localizedName": "7.62 毫​米​勃​朗​宁​机​枪",
+            "count": 250
+          }
+        ]
+      },
+      {
+        "name": "h_34_fr_v1",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "fr_50kg_type_61c",
+            "localizedName": "50 千​克 61C 型​炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_50kg_type_61c",
+            "localizedName": "50 千​克 61C 型​炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_50kg_type_61c",
+            "localizedName": "50 千​克 61C 型​炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_50kg_type_61c",
+            "localizedName": "50 千​克 61C 型​炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_50kg_type_61c",
+            "localizedName": "50 千​克 61C 型​炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_50kg_type_61c",
+            "localizedName": "50 千​克 61C 型​炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_50kg_type_61c",
+            "localizedName": "50 千​克 61C 型​炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_50kg_type_61c",
+            "localizedName": "50 千​克 61C 型​炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_50kg_type_61c",
+            "localizedName": "50 千​克 61C 型​炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_50kg_type_61c",
+            "localizedName": "50 千​克 61C 型​炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "machine gun",
+            "name": "gunBrowning30_usaaf",
+            "localizedName": "7.62 毫​米​勃​朗​宁​机​枪",
+            "count": 250
+          },
+          {
+            "trigger": "machine gun",
+            "name": "gunBrowning30_usaaf",
+            "localizedName": "7.62 毫​米​勃​朗​宁​机​枪",
+            "count": 250
+          },
+          {
+            "trigger": "machine gun",
+            "name": "gunBrowning30_usaaf",
+            "localizedName": "7.62 毫​米​勃​朗​宁​机​枪",
+            "count": 250
+          },
+          {
+            "trigger": "machine gun",
+            "name": "gunBrowning30_usaaf",
+            "localizedName": "7.62 毫​米​勃​朗​宁​机​枪",
+            "count": 250
+          }
+        ]
+      }
+    ]
   }
 }

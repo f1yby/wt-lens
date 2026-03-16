@@ -29,5 +29,56 @@
     },
     "expMultiplier": 1.12,
     "freeRepairs": 30
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "gunBrowning303_raf",
+        "localizedName": "7.7 毫​米​勃​朗​宁​机​枪",
+        "count": 4,
+        "bullets": 2000,
+        "caliber": 7.7,
+        "fireRate": 1000
+      },
+      {
+        "name": "gunVikkersK_turret",
+        "localizedName": "7.7 毫​米​维​克​斯 K 型​机​枪",
+        "count": 2,
+        "bullets": 1000,
+        "caliber": 7.7,
+        "fireRate": 950
+      }
+    ],
+    "payloads": [
+      {
+        "name": "intruder_mk_1_bombs",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "uk_500lbs",
+            "localizedName": "G.P. 500 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lbs",
+            "localizedName": "G.P. 500 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lbs",
+            "localizedName": "G.P. 500 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lbs",
+            "localizedName": "G.P. 500 lb Mk.IV bomb",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

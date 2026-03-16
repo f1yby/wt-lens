@@ -27,5 +27,44 @@
       "simulator": 1.65
     },
     "expMultiplier": 1.12
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "gunShKAS",
+        "localizedName": "7.62 毫​米​施​卡​斯​机​枪",
+        "count": 2,
+        "bullets": 1000,
+        "caliber": 7.6,
+        "fireRate": 1800
+      },
+      {
+        "name": "gunShKAS_turret",
+        "localizedName": "7.62 毫​米​施​卡​斯​机​枪",
+        "count": 1,
+        "bullets": 1000,
+        "caliber": 7.6,
+        "fireRate": 1800
+      }
+    ],
+    "payloads": [
+      {
+        "name": "kor_1_default",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "su_fab100",
+            "localizedName": "100 千​克 FAB-100 炸​弹​（铸​造）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab100",
+            "localizedName": "100 千​克 FAB-100 炸​弹​（铸​造）",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

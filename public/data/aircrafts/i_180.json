@@ -29,5 +29,73 @@
     },
     "expMultiplier": 1.24,
     "freeRepairs": 30
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "gunUBS",
+        "localizedName": "12.7 mm Berezin UBS machine gun",
+        "count": 2,
+        "bullets": 440,
+        "caliber": 12.7,
+        "fireRate": 996
+      },
+      {
+        "name": "gunShKAS",
+        "localizedName": "7.62 毫​米​施​卡​斯​机​枪",
+        "count": 2,
+        "bullets": 1300,
+        "caliber": 7.6,
+        "fireRate": 1800
+      }
+    ],
+    "payloads": [
+      {
+        "name": "I-180_4x50kg_bombs",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "su_fab50",
+            "localizedName": "50 千​克 FAB-50 炸​弹​（铸​造）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab50",
+            "localizedName": "50 千​克 FAB-50 炸​弹​（铸​造）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab50",
+            "localizedName": "50 千​克 FAB-50 炸​弹​（铸​造）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab50",
+            "localizedName": "50 千​克 FAB-50 炸​弹​（铸​造）",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "I-180_2x100kg_bombs",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "su_fab100",
+            "localizedName": "100 千​克 FAB-100 炸​弹​（铸​造）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab100",
+            "localizedName": "100 千​克 FAB-100 炸​弹​（铸​造）",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

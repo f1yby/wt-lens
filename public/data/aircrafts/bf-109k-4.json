@@ -27,5 +27,64 @@
       "simulator": 4.97
     },
     "expMultiplier": 1.78
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "gunMG131",
+        "localizedName": "13 毫​米 MG 131 机​枪",
+        "count": 2,
+        "bullets": 600,
+        "caliber": 13.0,
+        "fireRate": 900,
+        "belts": [
+          {
+            "key": "mg131_stealth",
+            "name": "mg131_stealth",
+            "bullets": [
+              "ap_i_ball"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "cannonMK108",
+        "localizedName": "30 毫​米 MK 108 机​炮",
+        "count": 1,
+        "bullets": 65,
+        "caliber": 30.0,
+        "fireRate": 600
+      }
+    ],
+    "payloads": [
+      {
+        "name": "bf-109k-4_1xsc500",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "de_sc500",
+            "localizedName": "500 千​克 SC500K 炸​弹",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "Bf_109K4_cannon",
+        "weapons": [
+          {
+            "trigger": "additional gun",
+            "name": "cannonMG15120_underwing",
+            "localizedName": "20 毫​米 MG 151/20 机​炮",
+            "count": 135
+          },
+          {
+            "trigger": "additional gun",
+            "name": "cannonMG15120_underwing",
+            "localizedName": "20 毫​米 MG 151/20 机​炮",
+            "count": 135
+          }
+        ]
+      }
+    ]
   }
 }

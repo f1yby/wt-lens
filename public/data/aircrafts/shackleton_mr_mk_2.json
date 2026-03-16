@@ -27,5 +27,953 @@
       "simulator": 5.49
     },
     "expMultiplier": 1.72
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "cannonHispanoMkV_turret",
+        "localizedName": "20 毫​米​西​斯​帕​诺 Mk V 机​炮",
+        "count": 4,
+        "bullets": 1300,
+        "caliber": 20.0,
+        "fireRate": 750,
+        "belts": [
+          {
+            "key": "hispano_turret_ap",
+            "name": "hispano_turret_ap",
+            "bullets": [
+              "he_i",
+              "ap_t",
+              "ap_t"
+            ]
+          }
+        ]
+      }
+    ],
+    "payloads": [
+      {
+        "name": "shackleton_mr_mk_2_default",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "shackleton_mr_mk_2_500lbs",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_he_mc_mk2",
+            "localizedName": "500 lb H.E. M.C. Mk.II bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_he_mc_mk2",
+            "localizedName": "500 lb H.E. M.C. Mk.II bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_he_mc_mk2",
+            "localizedName": "500 lb H.E. M.C. Mk.II bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_he_mc_mk2",
+            "localizedName": "500 lb H.E. M.C. Mk.II bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_he_mc_mk2",
+            "localizedName": "500 lb H.E. M.C. Mk.II bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_he_mc_mk2",
+            "localizedName": "500 lb H.E. M.C. Mk.II bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_he_mc_mk2",
+            "localizedName": "500 lb H.E. M.C. Mk.II bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_he_mc_mk2",
+            "localizedName": "500 lb H.E. M.C. Mk.II bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_he_mc_mk2",
+            "localizedName": "500 lb H.E. M.C. Mk.II bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_he_mc_mk2",
+            "localizedName": "500 lb H.E. M.C. Mk.II bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_he_mc_mk2",
+            "localizedName": "500 lb H.E. M.C. Mk.II bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_he_mc_mk2",
+            "localizedName": "500 lb H.E. M.C. Mk.II bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_he_mc_mk2",
+            "localizedName": "500 lb H.E. M.C. Mk.II bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_he_mc_mk2",
+            "localizedName": "500 lb H.E. M.C. Mk.II bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_he_mc_mk2",
+            "localizedName": "500 lb H.E. M.C. Mk.II bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_he_mc_mk2",
+            "localizedName": "500 lb H.E. M.C. Mk.II bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_he_mc_mk2",
+            "localizedName": "500 lb H.E. M.C. Mk.II bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_he_mc_mk2",
+            "localizedName": "500 lb H.E. M.C. Mk.II bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_he_mc_mk2",
+            "localizedName": "500 lb H.E. M.C. Mk.II bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_he_mc_mk2",
+            "localizedName": "500 lb H.E. M.C. Mk.II bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_he_mc_mk2",
+            "localizedName": "500 lb H.E. M.C. Mk.II bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_he_mc_mk2",
+            "localizedName": "500 lb H.E. M.C. Mk.II bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_he_mc_mk2",
+            "localizedName": "500 lb H.E. M.C. Mk.II bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_he_mc_mk2",
+            "localizedName": "500 lb H.E. M.C. Mk.II bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_he_mc_mk2",
+            "localizedName": "500 lb H.E. M.C. Mk.II bomb",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "shackleton_mr_mk_2_1000lbs",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "uk_1000lbs_mc_mk1",
+            "localizedName": "1000 lb M.C. Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_1000lbs_mc_mk1",
+            "localizedName": "1000 lb M.C. Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_1000lbs_mc_mk1",
+            "localizedName": "1000 lb M.C. Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_1000lbs_mc_mk1",
+            "localizedName": "1000 lb M.C. Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_1000lbs_mc_mk1",
+            "localizedName": "1000 lb M.C. Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_1000lbs_mc_mk1",
+            "localizedName": "1000 lb M.C. Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_1000lbs_mc_mk1",
+            "localizedName": "1000 lb M.C. Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_1000lbs_mc_mk1",
+            "localizedName": "1000 lb M.C. Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_1000lbs_mc_mk1",
+            "localizedName": "1000 lb M.C. Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_1000lbs_mc_mk1",
+            "localizedName": "1000 lb M.C. Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_1000lbs_mc_mk1",
+            "localizedName": "1000 lb M.C. Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_1000lbs_mc_mk1",
+            "localizedName": "1000 lb M.C. Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_1000lbs_mc_mk1",
+            "localizedName": "1000 lb M.C. Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_1000lbs_mc_mk1",
+            "localizedName": "1000 lb M.C. Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_1000lbs_mc_mk1",
+            "localizedName": "1000 lb M.C. Mk.I bomb",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "shackleton_mr_mk_2_rockets",
+        "weapons": [
+          {
+            "trigger": "rockets",
+            "name": "uk_rp3",
+            "localizedName": "RP-3 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "uk_rp3",
+            "localizedName": "RP-3 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "uk_rp3",
+            "localizedName": "RP-3 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "uk_rp3",
+            "localizedName": "RP-3 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "uk_rp3",
+            "localizedName": "RP-3 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "uk_rp3",
+            "localizedName": "RP-3 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "uk_rp3",
+            "localizedName": "RP-3 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "uk_rp3",
+            "localizedName": "RP-3 火​箭​弹",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "shackleton_mr_mk_2_250lbs_rockets",
+        "weapons": [
+          {
+            "trigger": "rockets",
+            "name": "uk_rp3",
+            "localizedName": "RP-3 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "uk_rp3",
+            "localizedName": "RP-3 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "uk_rp3",
+            "localizedName": "RP-3 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "uk_rp3",
+            "localizedName": "RP-3 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "uk_rp3",
+            "localizedName": "RP-3 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "uk_rp3",
+            "localizedName": "RP-3 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "uk_rp3",
+            "localizedName": "RP-3 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "uk_rp3",
+            "localizedName": "RP-3 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "shackleton_mr_mk_2_500lbs_rockets",
+        "weapons": [
+          {
+            "trigger": "rockets",
+            "name": "uk_rp3",
+            "localizedName": "RP-3 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "uk_rp3",
+            "localizedName": "RP-3 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "uk_rp3",
+            "localizedName": "RP-3 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "uk_rp3",
+            "localizedName": "RP-3 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "uk_rp3",
+            "localizedName": "RP-3 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "uk_rp3",
+            "localizedName": "RP-3 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "uk_rp3",
+            "localizedName": "RP-3 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "uk_rp3",
+            "localizedName": "RP-3 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_he_mc_mk2",
+            "localizedName": "500 lb H.E. M.C. Mk.II bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_he_mc_mk2",
+            "localizedName": "500 lb H.E. M.C. Mk.II bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_he_mc_mk2",
+            "localizedName": "500 lb H.E. M.C. Mk.II bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_he_mc_mk2",
+            "localizedName": "500 lb H.E. M.C. Mk.II bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_he_mc_mk2",
+            "localizedName": "500 lb H.E. M.C. Mk.II bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_he_mc_mk2",
+            "localizedName": "500 lb H.E. M.C. Mk.II bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_he_mc_mk2",
+            "localizedName": "500 lb H.E. M.C. Mk.II bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_he_mc_mk2",
+            "localizedName": "500 lb H.E. M.C. Mk.II bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_he_mc_mk2",
+            "localizedName": "500 lb H.E. M.C. Mk.II bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_he_mc_mk2",
+            "localizedName": "500 lb H.E. M.C. Mk.II bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_he_mc_mk2",
+            "localizedName": "500 lb H.E. M.C. Mk.II bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_he_mc_mk2",
+            "localizedName": "500 lb H.E. M.C. Mk.II bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_he_mc_mk2",
+            "localizedName": "500 lb H.E. M.C. Mk.II bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_he_mc_mk2",
+            "localizedName": "500 lb H.E. M.C. Mk.II bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_he_mc_mk2",
+            "localizedName": "500 lb H.E. M.C. Mk.II bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_he_mc_mk2",
+            "localizedName": "500 lb H.E. M.C. Mk.II bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_he_mc_mk2",
+            "localizedName": "500 lb H.E. M.C. Mk.II bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_he_mc_mk2",
+            "localizedName": "500 lb H.E. M.C. Mk.II bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_he_mc_mk2",
+            "localizedName": "500 lb H.E. M.C. Mk.II bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_he_mc_mk2",
+            "localizedName": "500 lb H.E. M.C. Mk.II bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_he_mc_mk2",
+            "localizedName": "500 lb H.E. M.C. Mk.II bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_he_mc_mk2",
+            "localizedName": "500 lb H.E. M.C. Mk.II bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_he_mc_mk2",
+            "localizedName": "500 lb H.E. M.C. Mk.II bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_he_mc_mk2",
+            "localizedName": "500 lb H.E. M.C. Mk.II bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_he_mc_mk2",
+            "localizedName": "500 lb H.E. M.C. Mk.II bomb",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "shackleton_mr_mk_2_1000lbs_rockets",
+        "weapons": [
+          {
+            "trigger": "rockets",
+            "name": "uk_rp3",
+            "localizedName": "RP-3 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "uk_rp3",
+            "localizedName": "RP-3 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "uk_rp3",
+            "localizedName": "RP-3 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "uk_rp3",
+            "localizedName": "RP-3 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "uk_rp3",
+            "localizedName": "RP-3 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "uk_rp3",
+            "localizedName": "RP-3 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "uk_rp3",
+            "localizedName": "RP-3 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "uk_rp3",
+            "localizedName": "RP-3 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_1000lbs_mc_mk1",
+            "localizedName": "1000 lb M.C. Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_1000lbs_mc_mk1",
+            "localizedName": "1000 lb M.C. Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_1000lbs_mc_mk1",
+            "localizedName": "1000 lb M.C. Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_1000lbs_mc_mk1",
+            "localizedName": "1000 lb M.C. Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_1000lbs_mc_mk1",
+            "localizedName": "1000 lb M.C. Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_1000lbs_mc_mk1",
+            "localizedName": "1000 lb M.C. Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_1000lbs_mc_mk1",
+            "localizedName": "1000 lb M.C. Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_1000lbs_mc_mk1",
+            "localizedName": "1000 lb M.C. Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_1000lbs_mc_mk1",
+            "localizedName": "1000 lb M.C. Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_1000lbs_mc_mk1",
+            "localizedName": "1000 lb M.C. Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_1000lbs_mc_mk1",
+            "localizedName": "1000 lb M.C. Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_1000lbs_mc_mk1",
+            "localizedName": "1000 lb M.C. Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_1000lbs_mc_mk1",
+            "localizedName": "1000 lb M.C. Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_1000lbs_mc_mk1",
+            "localizedName": "1000 lb M.C. Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_1000lbs_mc_mk1",
+            "localizedName": "1000 lb M.C. Mk.I bomb",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

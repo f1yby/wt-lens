@@ -29,5 +29,81 @@
     },
     "expMultiplier": 1.54,
     "freeRepairs": 30
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "cannonHispanoMkII",
+        "localizedName": "20 毫​米​西​斯​帕​诺 Mk II 机​炮",
+        "count": 4,
+        "bullets": 480,
+        "caliber": 20.0,
+        "fireRate": 600,
+        "belts": [
+          {
+            "key": "hispano_universal",
+            "name": "通​用",
+            "bullets": [
+              "ap_t",
+              "he_i",
+              "sapi"
+            ]
+          },
+          {
+            "key": "hispano_tracers",
+            "name": "曳​光",
+            "bullets": [
+              "ap_t",
+              "t_shell",
+              "he_i"
+            ]
+          },
+          {
+            "key": "hispano_stealth",
+            "name": "匿​踪",
+            "bullets": [
+              "he_i",
+              "he_i",
+              "sapi"
+            ]
+          }
+        ]
+      }
+    ],
+    "payloads": [
+      {
+        "name": "SpitfireIXc_bombs",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "us_250lb_anm57",
+            "localizedName": "250 磅 AN-M57 炸​弹",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "spitfire_ix_bombs_m64",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "us_500lb_anm64a1",
+            "localizedName": "500 磅 AN-M64A1 炸​弹",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "spitfire_ix_bombs_sap",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_sap_mkII_ap",
+            "localizedName": "500 LB S.A.P. Mk.II bomb",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

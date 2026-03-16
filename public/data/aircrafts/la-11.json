@@ -29,5 +29,18 @@
     },
     "expMultiplier": 1.72,
     "freeRepairs": 30
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "cannonNS23",
+        "localizedName": "23 毫​米 NS-23 机​炮",
+        "count": 3,
+        "bullets": 225,
+        "caliber": 23.0,
+        "fireRate": 600
+      }
+    ],
+    "payloads": []
   }
 }

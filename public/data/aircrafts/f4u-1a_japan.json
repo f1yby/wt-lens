@@ -29,5 +29,18 @@
     },
     "expMultiplier": 1.3,
     "freeRepairs": 30
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "gunBrowning50_usaaf",
+        "localizedName": "12.7 毫​米 M2 勃​朗​宁​机​枪",
+        "count": 6,
+        "bullets": 2350,
+        "caliber": 12.7,
+        "fireRate": 750
+      }
+    ],
+    "payloads": []
   }
 }

@@ -27,5 +27,100 @@
       "simulator": 4.36
     },
     "expMultiplier": 1.48
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "cannonMK103",
+        "localizedName": "30 毫​米 MK 103 机​炮",
+        "count": 1,
+        "bullets": 70,
+        "caliber": 30.0,
+        "fireRate": 450
+      },
+      {
+        "name": "cannonMG15115",
+        "localizedName": "15 毫​米 MG 151/15 机​炮",
+        "count": 2,
+        "bullets": 400,
+        "caliber": 15.0,
+        "fireRate": 700,
+        "belts": [
+          {
+            "key": "mg15115_universal",
+            "name": "mg15115_universal",
+            "bullets": [
+              "ap_t_ball",
+              "he_frag_t_ball",
+              "ap_t_ball",
+              "he_frag_t_ball"
+            ]
+          },
+          {
+            "key": "mg15115_air_targets",
+            "name": "mg15115_air_targets",
+            "bullets": [
+              "ap_i",
+              "he_frag_t_ball",
+              "he_frag_t_ball",
+              "he_frag_t_ball"
+            ]
+          }
+        ]
+      }
+    ],
+    "payloads": [
+      {
+        "name": "do_335a_250_bomb",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "de_sc250",
+            "localizedName": "250 千​克 SC260JA 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "de_sc250",
+            "localizedName": "250 千​克 SC260JA 炸​弹",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "do_335a_500_bomb",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "de_sc500",
+            "localizedName": "500 千​克 SC500K 炸​弹",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "do_335a_1_bomb",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "de_sc500",
+            "localizedName": "500 千​克 SC500K 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "de_sc250",
+            "localizedName": "250 千​克 SC260JA 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "de_sc250",
+            "localizedName": "250 千​克 SC260JA 炸​弹",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

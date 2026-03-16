@@ -29,5 +29,83 @@
     },
     "expMultiplier": 0.75,
     "freeRepairs": 30
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "gunBrowning30_usaaf",
+        "localizedName": "7.62 毫​米​勃​朗​宁​机​枪",
+        "count": 2,
+        "bullets": 1200,
+        "caliber": 7.6,
+        "fireRate": 1000
+      }
+    ],
+    "payloads": [
+      {
+        "name": "hawk_iii_bombs",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "us_100lb_anm30",
+            "localizedName": "100 磅 AN-M30A1 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_100lb_anm30",
+            "localizedName": "100 磅 AN-M30A1 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_100lb_anm30",
+            "localizedName": "100 磅 AN-M30A1 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_100lb_anm30",
+            "localizedName": "100 磅 AN-M30A1 炸​弹",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "hawk_iii_bombs_500",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "us_500lb_anm64a1",
+            "localizedName": "500 磅 AN-M64A1 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_100lb_anm30",
+            "localizedName": "100 磅 AN-M30A1 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_100lb_anm30",
+            "localizedName": "100 磅 AN-M30A1 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_100lb_anm30",
+            "localizedName": "100 磅 AN-M30A1 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_100lb_anm30",
+            "localizedName": "100 磅 AN-M30A1 炸​弹",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

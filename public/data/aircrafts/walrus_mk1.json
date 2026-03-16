@@ -27,5 +27,48 @@
       "simulator": 1.65
     },
     "expMultiplier": 1.12
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "gunLewis_turret",
+        "localizedName": "7.7 毫​米​路​易​斯​机​枪",
+        "count": 2,
+        "bullets": 970,
+        "caliber": 7.7,
+        "fireRate": 550
+      }
+    ],
+    "payloads": [
+      {
+        "name": "walrus_mk1_default",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

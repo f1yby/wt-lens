@@ -27,5 +27,53 @@
       "simulator": 1.52
     },
     "expMultiplier": 1.18
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "gunBrowning303_raf",
+        "localizedName": "7.7 毫​米​勃​朗​宁​机​枪",
+        "count": 12,
+        "bullets": 5680,
+        "caliber": 7.7,
+        "fireRate": 1000
+      }
+    ],
+    "payloads": [
+      {
+        "name": "typhoon_mk1a_250lbs_bombs",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "typhoon_mk1a_500lbs_bombs",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "uk_500lbs",
+            "localizedName": "G.P. 500 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lbs",
+            "localizedName": "G.P. 500 lb Mk.IV bomb",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

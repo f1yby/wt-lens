@@ -27,5 +27,26 @@
       "simulator": 1.53
     },
     "expMultiplier": 1.18
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "gun_gebauer_1940m_gkm",
+        "localizedName": "12.7 mm Gebauer 1940.M GKM machine gun",
+        "count": 2,
+        "bullets": 600,
+        "caliber": 12.7,
+        "fireRate": 1000
+      },
+      {
+        "name": "gun_gebauer_1939m",
+        "localizedName": "8.56 mm Gebauer 1939.M machine gun",
+        "count": 2,
+        "bullets": 1000,
+        "caliber": 8.0,
+        "fireRate": 1800
+      }
+    ],
+    "payloads": []
   }
 }

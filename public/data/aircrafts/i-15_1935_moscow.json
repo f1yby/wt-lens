@@ -12,5 +12,36 @@
       "simulator": 0.48
     },
     "expMultiplier": 1.0
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "gunPV1",
+        "localizedName": "7.62 毫​米 PV-1 机​枪",
+        "count": 4,
+        "bullets": 3200,
+        "caliber": 7.6,
+        "fireRate": 750
+      }
+    ],
+    "payloads": [
+      {
+        "name": "I-15_2bomb_fab50",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "su_fab50",
+            "localizedName": "50 千​克 FAB-50 炸​弹​（铸​造）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab50",
+            "localizedName": "50 千​克 FAB-50 炸​弹​（铸​造）",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

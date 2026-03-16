@@ -27,5 +27,273 @@
       "simulator": 6.0
     },
     "expMultiplier": 1.96
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "cannonType_23_1_plane",
+        "localizedName": "23 mm Type 23-1 cannon",
+        "count": 2,
+        "bullets": 200,
+        "caliber": 23.0,
+        "fireRate": 900
+      },
+      {
+        "name": "cannonType_23_1_plane_turret",
+        "localizedName": "23 mm Type 23-1 cannon",
+        "count": 2,
+        "bullets": 450,
+        "caliber": 23.0,
+        "fireRate": 900
+      },
+      {
+        "name": "su_il_28_rocket_booster_left",
+        "localizedName": "su_il_28_rocket_booster_left",
+        "count": 1,
+        "bullets": 1
+      },
+      {
+        "name": "su_il_28_rocket_booster_right",
+        "localizedName": "su_il_28_rocket_booster_right",
+        "count": 1,
+        "bullets": 1
+      }
+    ],
+    "payloads": [
+      {
+        "name": "il_28_china_12xfab100",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_100_2",
+            "localizedName": "100 kg 100-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_100_2",
+            "localizedName": "100 kg 100-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_100_2",
+            "localizedName": "100 kg 100-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_100_2",
+            "localizedName": "100 kg 100-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_100_2",
+            "localizedName": "100 kg 100-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_100_2",
+            "localizedName": "100 kg 100-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_100_2",
+            "localizedName": "100 kg 100-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_100_2",
+            "localizedName": "100 kg 100-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_100_2",
+            "localizedName": "100 kg 100-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_100_2",
+            "localizedName": "100 kg 100-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_100_2",
+            "localizedName": "100 kg 100-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_100_2",
+            "localizedName": "100 kg 100-2 bomb",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "il_28_china_8xfab250",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_250_2",
+            "localizedName": "250 kg 250-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_250_2",
+            "localizedName": "250 kg 250-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_250_2",
+            "localizedName": "250 kg 250-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_250_2",
+            "localizedName": "250 kg 250-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_250_2",
+            "localizedName": "250 kg 250-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_250_2",
+            "localizedName": "250 kg 250-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_250_2",
+            "localizedName": "250 kg 250-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_250_2",
+            "localizedName": "250 kg 250-2 bomb",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "il_28_china_4xfab500",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_500_2",
+            "localizedName": "500 kg 500-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_500_2",
+            "localizedName": "500 kg 500-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_500_2",
+            "localizedName": "500 kg 500-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_500_2",
+            "localizedName": "500 kg 500-2 bomb",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "il_28_china_2xfab1500",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_1500_2",
+            "localizedName": "1500 kg 1500-2 bomb",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "il_28_china_1xfab3000",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_3000_2",
+            "localizedName": "3000 kg 3000-2 bomb",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "il_28_china_8x250_2_incendiary",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_250_2_incendiary",
+            "localizedName": "250-2 incendiary bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_250_2_incendiary",
+            "localizedName": "250-2 incendiary bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_250_2_incendiary",
+            "localizedName": "250-2 incendiary bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_250_2_incendiary",
+            "localizedName": "250-2 incendiary bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_250_2_incendiary",
+            "localizedName": "250-2 incendiary bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_250_2_incendiary",
+            "localizedName": "250-2 incendiary bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_250_2_incendiary",
+            "localizedName": "250-2 incendiary bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_250_2_incendiary",
+            "localizedName": "250-2 incendiary bomb",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

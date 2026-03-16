@@ -29,5 +29,36 @@
     },
     "expMultiplier": 1.0,
     "freeRepairs": 30
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "gunBrowning30_usaaf_1935",
+        "localizedName": "7.62 mm Browning machine gun",
+        "count": 2,
+        "bullets": 1000,
+        "caliber": 7.6,
+        "fireRate": 1000
+      }
+    ],
+    "payloads": [
+      {
+        "name": "P-26A_1934_2x100lbs",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "us_100lb_anm30",
+            "localizedName": "100 磅 AN-M30A1 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_100lb_anm30",
+            "localizedName": "100 磅 AN-M30A1 炸​弹",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

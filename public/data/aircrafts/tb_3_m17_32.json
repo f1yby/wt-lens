@@ -29,5 +29,428 @@
     },
     "expMultiplier": 1.06,
     "freeRepairs": 30
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "gunDA762",
+        "localizedName": "7.62 毫​米 DA 机​枪",
+        "count": 8,
+        "bullets": 5376,
+        "caliber": 7.6,
+        "fireRate": 498
+      }
+    ],
+    "payloads": [
+      {
+        "name": "tb_3_m17_32_default",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "su_fab100",
+            "localizedName": "100 千​克 FAB-100 炸​弹​（铸​造）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab100",
+            "localizedName": "100 千​克 FAB-100 炸​弹​（铸​造）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab100",
+            "localizedName": "100 千​克 FAB-100 炸​弹​（铸​造）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab100",
+            "localizedName": "100 千​克 FAB-100 炸​弹​（铸​造）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab100",
+            "localizedName": "100 千​克 FAB-100 炸​弹​（铸​造）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab100",
+            "localizedName": "100 千​克 FAB-100 炸​弹​（铸​造）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab100",
+            "localizedName": "100 千​克 FAB-100 炸​弹​（铸​造）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab100",
+            "localizedName": "100 千​克 FAB-100 炸​弹​（铸​造）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab100",
+            "localizedName": "100 千​克 FAB-100 炸​弹​（铸​造）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab100",
+            "localizedName": "100 千​克 FAB-100 炸​弹​（铸​造）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab100",
+            "localizedName": "100 千​克 FAB-100 炸​弹​（铸​造）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab100",
+            "localizedName": "100 千​克 FAB-100 炸​弹​（铸​造）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab100",
+            "localizedName": "100 千​克 FAB-100 炸​弹​（铸​造）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab100",
+            "localizedName": "100 千​克 FAB-100 炸​弹​（铸​造）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab100",
+            "localizedName": "100 千​克 FAB-100 炸​弹​（铸​造）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab100",
+            "localizedName": "100 千​克 FAB-100 炸​弹​（铸​造）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab100",
+            "localizedName": "100 千​克 FAB-100 炸​弹​（铸​造）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab100",
+            "localizedName": "100 千​克 FAB-100 炸​弹​（铸​造）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab100",
+            "localizedName": "100 千​克 FAB-100 炸​弹​（铸​造）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab100",
+            "localizedName": "100 千​克 FAB-100 炸​弹​（铸​造）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab100",
+            "localizedName": "100 千​克 FAB-100 炸​弹​（铸​造）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab100",
+            "localizedName": "100 千​克 FAB-100 炸​弹​（铸​造）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab100",
+            "localizedName": "100 千​克 FAB-100 炸​弹​（铸​造）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab100",
+            "localizedName": "100 千​克 FAB-100 炸​弹​（铸​造）",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "tb_3_m17_32_12xfab250",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "su_fab250",
+            "localizedName": "250 千​克 FAB-250 M-43 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab250",
+            "localizedName": "250 千​克 FAB-250 M-43 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab250",
+            "localizedName": "250 千​克 FAB-250 M-43 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab250",
+            "localizedName": "250 千​克 FAB-250 M-43 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab250",
+            "localizedName": "250 千​克 FAB-250 M-43 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab250",
+            "localizedName": "250 千​克 FAB-250 M-43 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab250",
+            "localizedName": "250 千​克 FAB-250 M-43 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab250",
+            "localizedName": "250 千​克 FAB-250 M-43 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab250",
+            "localizedName": "250 千​克 FAB-250 M-43 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab250",
+            "localizedName": "250 千​克 FAB-250 M-43 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab250",
+            "localizedName": "250 千​克 FAB-250 M-43 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab250",
+            "localizedName": "250 千​克 FAB-250 M-43 炸​弹",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "tb_3_m17_32_4xfab500_4xfab250",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "su_fab500",
+            "localizedName": "500 千​克 FAB-500 炸​弹​（焊​接）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab500",
+            "localizedName": "500 千​克 FAB-500 炸​弹​（焊​接）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab500",
+            "localizedName": "500 千​克 FAB-500 炸​弹​（焊​接）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab500",
+            "localizedName": "500 千​克 FAB-500 炸​弹​（焊​接）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab250",
+            "localizedName": "250 千​克 FAB-250 M-43 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab250",
+            "localizedName": "250 千​克 FAB-250 M-43 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab250",
+            "localizedName": "250 千​克 FAB-250 M-43 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab250",
+            "localizedName": "250 千​克 FAB-250 M-43 炸​弹",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "tb_3_m17_32_12xbrab220",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "su_brab_220_1930_ap",
+            "localizedName": "220 kg BRAB-220 (1930) armor-piercing bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_brab_220_1930_ap",
+            "localizedName": "220 kg BRAB-220 (1930) armor-piercing bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_brab_220_1930_ap",
+            "localizedName": "220 kg BRAB-220 (1930) armor-piercing bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_brab_220_1930_ap",
+            "localizedName": "220 kg BRAB-220 (1930) armor-piercing bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_brab_220_1930_ap",
+            "localizedName": "220 kg BRAB-220 (1930) armor-piercing bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_brab_220_1930_ap",
+            "localizedName": "220 kg BRAB-220 (1930) armor-piercing bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_brab_220_1930_ap",
+            "localizedName": "220 kg BRAB-220 (1930) armor-piercing bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_brab_220_1930_ap",
+            "localizedName": "220 kg BRAB-220 (1930) armor-piercing bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_brab_220_1930_ap",
+            "localizedName": "220 kg BRAB-220 (1930) armor-piercing bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_brab_220_1930_ap",
+            "localizedName": "220 kg BRAB-220 (1930) armor-piercing bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_brab_220_1930_ap",
+            "localizedName": "220 kg BRAB-220 (1930) armor-piercing bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_brab_220_1930_ap",
+            "localizedName": "220 kg BRAB-220 (1930) armor-piercing bomb",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "tb_3_m17_32_4xbrab500_4xbrab220",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "su_brab_500_1938_ap",
+            "localizedName": "500 kg BRAB-500 (1938) armor-piercing bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_brab_500_1938_ap",
+            "localizedName": "500 kg BRAB-500 (1938) armor-piercing bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_brab_500_1938_ap",
+            "localizedName": "500 kg BRAB-500 (1938) armor-piercing bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_brab_500_1938_ap",
+            "localizedName": "500 kg BRAB-500 (1938) armor-piercing bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_brab_220_1930_ap",
+            "localizedName": "220 kg BRAB-220 (1930) armor-piercing bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_brab_220_1930_ap",
+            "localizedName": "220 kg BRAB-220 (1930) armor-piercing bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_brab_220_1930_ap",
+            "localizedName": "220 kg BRAB-220 (1930) armor-piercing bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_brab_220_1930_ap",
+            "localizedName": "220 kg BRAB-220 (1930) armor-piercing bomb",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

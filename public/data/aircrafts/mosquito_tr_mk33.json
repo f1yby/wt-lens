@@ -27,5 +27,192 @@
       "simulator": 2.71
     },
     "expMultiplier": 1.48
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "cannonHispanoMkII",
+        "localizedName": "20 毫​米​西​斯​帕​诺 Mk II 机​炮",
+        "count": 4,
+        "bullets": 600,
+        "caliber": 20.0,
+        "fireRate": 600,
+        "belts": [
+          {
+            "key": "hispano_universal",
+            "name": "通​用",
+            "bullets": [
+              "ap_t",
+              "he_i",
+              "sapi"
+            ]
+          },
+          {
+            "key": "hispano_tracers",
+            "name": "曳​光",
+            "bullets": [
+              "ap_t",
+              "t_shell",
+              "he_i"
+            ]
+          },
+          {
+            "key": "hispano_stealth",
+            "name": "匿​踪",
+            "bullets": [
+              "he_i",
+              "he_i",
+              "sapi"
+            ]
+          }
+        ]
+      }
+    ],
+    "payloads": [
+      {
+        "name": "mosquito_fb_mk6_2x250lbs",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "mosquito_fb_mk6_2x500lbs",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "uk_500lbs",
+            "localizedName": "G.P. 500 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lbs",
+            "localizedName": "G.P. 500 lb Mk.IV bomb",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "mosquito_fb_mk6_2x500lbs_sap",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_sap_mkII_ap",
+            "localizedName": "500 LB S.A.P. Mk.II bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_sap_mkII_ap",
+            "localizedName": "500 LB S.A.P. Mk.II bomb",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "mosquito_fb_mk6_rockets",
+        "weapons": [
+          {
+            "trigger": "rockets",
+            "name": "uk_rp3",
+            "localizedName": "RP-3 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "uk_rp3",
+            "localizedName": "RP-3 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "uk_rp3",
+            "localizedName": "RP-3 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "uk_rp3",
+            "localizedName": "RP-3 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "uk_rp3",
+            "localizedName": "RP-3 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "uk_rp3",
+            "localizedName": "RP-3 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "uk_rp3",
+            "localizedName": "RP-3 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "uk_rp3",
+            "localizedName": "RP-3 火​箭​弹",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "mosquito_fb_mk6_uncle_tom",
+        "weapons": [
+          {
+            "trigger": "rockets",
+            "name": "uk_uncle_tom_a",
+            "localizedName": "“汤​姆​叔​叔”​火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "uk_uncle_tom_a",
+            "localizedName": "“汤​姆​叔​叔”​火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "uk_uncle_tom_b",
+            "localizedName": "“汤​姆​叔​叔”​火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "uk_uncle_tom_b",
+            "localizedName": "“汤​姆​叔​叔”​火​箭​弹",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "mosquito_tr_mk33_torpedo",
+        "weapons": [
+          {
+            "trigger": "torpedoes",
+            "name": "uk_mk15_torpedo_no_stab",
+            "localizedName": "18 inch Mark XV torpedo (1801 lbs)",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

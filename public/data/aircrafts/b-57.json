@@ -27,5 +27,110 @@
       "simulator": 6.0
     },
     "expMultiplier": 1.96
+  },
+  "weapons": {
+    "fixed_weapons": [],
+    "payloads": [
+      {
+        "name": "b-57_9x500lbs",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "us_500lb_anm64a1",
+            "localizedName": "500 磅 AN-M64A1 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_500lb_anm64a1",
+            "localizedName": "500 磅 AN-M64A1 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_500lb_anm64a1",
+            "localizedName": "500 磅 AN-M64A1 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_500lb_anm64a1",
+            "localizedName": "500 磅 AN-M64A1 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_500lb_anm64a1",
+            "localizedName": "500 磅 AN-M64A1 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_500lb_anm64a1",
+            "localizedName": "500 磅 AN-M64A1 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_500lb_anm64a1",
+            "localizedName": "500 磅 AN-M64A1 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_500lb_anm64a1",
+            "localizedName": "500 磅 AN-M64A1 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_500lb_anm64a1",
+            "localizedName": "500 磅 AN-M64A1 炸​弹",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "b-57_6x1000lbs",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "us_1000lb_anm65_cone",
+            "localizedName": "1,000 磅 AN-M65A1 炸​弹​（M129 型​尾​翼）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_1000lb_anm65_cone",
+            "localizedName": "1,000 磅 AN-M65A1 炸​弹​（M129 型​尾​翼）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_1000lb_anm65_cone",
+            "localizedName": "1,000 磅 AN-M65A1 炸​弹​（M129 型​尾​翼）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_1000lb_anm65_cone",
+            "localizedName": "1,000 磅 AN-M65A1 炸​弹​（M129 型​尾​翼）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_1000lb_anm65_cone",
+            "localizedName": "1,000 磅 AN-M65A1 炸​弹​（M129 型​尾​翼）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_1000lb_anm65_cone",
+            "localizedName": "1,000 磅 AN-M65A1 炸​弹​（M129 型​尾​翼）",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

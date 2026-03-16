@@ -27,5 +27,143 @@
       "simulator": 0.81
     },
     "expMultiplier": 1.0
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "gunVikkersK_turret",
+        "localizedName": "7.7 毫​米​维​克​斯 K 型​机​枪",
+        "count": 5,
+        "bullets": 6300,
+        "caliber": 7.7,
+        "fireRate": 950
+      },
+      {
+        "name": "gunBrowning303_raf",
+        "localizedName": "7.7 毫​米​勃​朗​宁​机​枪",
+        "count": 1,
+        "bullets": 300,
+        "caliber": 7.7,
+        "fireRate": 1000
+      }
+    ],
+    "payloads": [
+      {
+        "name": "hp52_hampden_tbmk1_default",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs_43",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs_43",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs_43",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs_43",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs_43",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs_43",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "hp52_hampden_tbmk1_2x500lb",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "uk_500lbs_43",
+            "localizedName": "G.P. 500 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lbs_43",
+            "localizedName": "G.P. 500 lb Mk.IV bomb",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "hp52_hampden_mk1_late_4x500lb",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "uk_500lbs_43",
+            "localizedName": "G.P. 500 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lbs_43",
+            "localizedName": "G.P. 500 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lbs_43",
+            "localizedName": "G.P. 500 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lbs_43",
+            "localizedName": "G.P. 500 lb Mk.IV bomb",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "hp52_hampden_mk1_late_4x1000lb",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "uk_1000lbs_gp_mk1",
+            "localizedName": "1000 lb G.P. Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_1000lbs_gp_mk1",
+            "localizedName": "1000 lb G.P. Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_1000lbs_gp_mk1",
+            "localizedName": "1000 lb G.P. Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_1000lbs_gp_mk1",
+            "localizedName": "1000 lb G.P. Mk.I bomb",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

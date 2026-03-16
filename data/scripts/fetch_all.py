@@ -1205,6 +1205,12 @@ def fetch_aircraft_data(vehicle_id: str, copy_images: bool = True) -> dict[str, 
     if economy:
         result['economy'] = economy
     
+    # Add aircraft weapons/payloads
+    from fetch_utils import extract_aircraft_weapons
+    weapons_data = extract_aircraft_weapons(vehicle_id)
+    if weapons_data:
+        result['weapons'] = weapons_data
+    
     return result
 def fetch_all_aircraft(copy_images: bool = True) -> list[dict[str, Any]]:
     """Fetch all aircraft data from unittags + wpcost."""
@@ -1472,9 +1478,11 @@ def fetch_all_ships(copy_images: bool = True) -> list[dict[str, Any]]:
 
 # Fields to include in the index file (lightweight, for list rendering)
 # Ground vehicles use snake_case keys
+# Include 'performance' for comparison charts (needs metric values for all vehicles)
 GROUND_INDEX_FIELDS = {
     'id', 'name', 'localizedName', 'nation', 'rank', 'battle_rating', 'br',
-    'vehicle_type', 'economic_type', 'imageUrl', 'unreleased', 'releaseDate', 'ghost'
+    'vehicle_type', 'economic_type', 'imageUrl', 'unreleased', 'releaseDate', 'ghost',
+    'performance'
 }
 
 # Aircraft/Ships use camelCase keys — exclude heavy fields (economy)
@@ -1556,6 +1564,7 @@ def _split_aircraft_ship_data(
     detail_entry = {
         'id': entry['id'],
         'economy': entry.get('economy'),
+        'weapons': entry.get('weapons'),
     }
     return index_entry, detail_entry
 
@@ -1628,6 +1637,12 @@ def save_ships_split(ships: list[dict[str, Any]], output_dir: Path):
 
 def main() -> int:
     """Main entry point."""
+    # Clear cached localization data to ensure fresh load
+    import fetch_utils
+    fetch_utils._weaponry_localization_cache = None
+    fetch_utils._modifications_localization_cache = None
+    fetch_utils._aircraft_weapon_cache = {}
+
     parser = argparse.ArgumentParser(
         description="War Thunder Vehicle Data Fetcher - Unified script for all vehicle types",
         formatter_class=argparse.RawDescriptionHelpFormatter,

@@ -29,5 +29,18 @@
     },
     "expMultiplier": 0.75,
     "freeRepairs": 30
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "gunKsp_m22",
+        "localizedName": "8 毫​米 m/22 机​枪",
+        "count": 4,
+        "bullets": 2000,
+        "caliber": 8.0,
+        "fireRate": 1200
+      }
+    ],
+    "payloads": []
   }
 }

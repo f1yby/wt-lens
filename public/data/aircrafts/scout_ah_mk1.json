@@ -26,5 +26,48 @@
       "simulator": 4.3
     },
     "expMultiplier": 1.96
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "gunL8a1",
+        "localizedName": "7.62 毫​米 L8A1 机​枪",
+        "count": 2,
+        "bullets": 500,
+        "caliber": 7.6,
+        "fireRate": 600
+      }
+    ],
+    "payloads": [
+      {
+        "name": "scout_ah_mk1_default",
+        "weapons": [
+          {
+            "trigger": "atgm",
+            "name": "fr_ss_11",
+            "localizedName": "SS-11 反​坦​克​导​弹",
+            "count": 1
+          },
+          {
+            "trigger": "atgm",
+            "name": "fr_ss_11",
+            "localizedName": "SS-11 反​坦​克​导​弹",
+            "count": 1
+          },
+          {
+            "trigger": "atgm",
+            "name": "fr_ss_11",
+            "localizedName": "SS-11 反​坦​克​导​弹",
+            "count": 1
+          },
+          {
+            "trigger": "atgm",
+            "name": "fr_ss_11",
+            "localizedName": "SS-11 反​坦​克​导​弹",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

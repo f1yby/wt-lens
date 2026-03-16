@@ -41,7 +41,7 @@
     "ammunitions": [
       {
         "name": "90mm_m332",
-        "localizedName": "M332 shot",
+        "localizedName": "M332",
         "type": "apcr_tank",
         "caliber": 38.1,
         "mass": 5.7,
@@ -59,7 +59,7 @@
       },
       {
         "name": "90mm_m431",
-        "localizedName": "M431 shell",
+        "localizedName": "M431",
         "type": "heat_fs_tank",
         "caliber": 90.0,
         "mass": 5.8,
@@ -83,7 +83,7 @@
       },
       {
         "name": "90mm_m71",
-        "localizedName": "M71 shell",
+        "localizedName": "M71",
         "type": "he_frag_tank",
         "caliber": 90.0,
         "mass": 10.55,

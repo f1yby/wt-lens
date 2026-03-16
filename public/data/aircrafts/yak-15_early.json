@@ -27,5 +27,18 @@
       "simulator": 6.0
     },
     "expMultiplier": 1.84
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "cannonNS23k",
+        "localizedName": "23 毫​米 NS-23K 机​炮",
+        "count": 1,
+        "bullets": 60,
+        "caliber": 23.0,
+        "fireRate": 600
+      }
+    ],
+    "payloads": []
   }
 }

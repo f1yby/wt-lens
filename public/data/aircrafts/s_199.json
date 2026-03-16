@@ -26,5 +26,134 @@
       "simulator": 4.19
     },
     "expMultiplier": 1.6
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "gunMG131",
+        "localizedName": "13 毫​米 MG 131 机​枪",
+        "count": 2,
+        "bullets": 500,
+        "caliber": 13.0,
+        "fireRate": 900,
+        "belts": [
+          {
+            "key": "mg131_stealth",
+            "name": "mg131_stealth",
+            "bullets": [
+              "ap_i_ball"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "gunMG17",
+        "localizedName": "7.92 毫​米 MG 17 机​枪",
+        "count": 2,
+        "bullets": 600,
+        "caliber": 7.9,
+        "fireRate": 1200
+      }
+    ],
+    "payloads": [
+      {
+        "name": "s-199_4x_sd70_bombs",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "de_sd70",
+            "localizedName": "70 kg SD70 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "de_sd70",
+            "localizedName": "70 kg SD70 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "de_sd70",
+            "localizedName": "70 kg SD70 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "de_sd70",
+            "localizedName": "70 kg SD70 bomb",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "s-199_4x_sd50_bombs",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "de_sd50",
+            "localizedName": "50 kg SD50 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "de_sd50",
+            "localizedName": "50 kg SD50 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "de_sd50",
+            "localizedName": "50 kg SD50 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "de_sd50",
+            "localizedName": "50 kg SD50 bomb",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "s_199_4x_sc50_bombs",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "de_sc50",
+            "localizedName": "50 千​克 SC50JA 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "de_sc50",
+            "localizedName": "50 千​克 SC50JA 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "de_sc50",
+            "localizedName": "50 千​克 SC50JA 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "de_sc50",
+            "localizedName": "50 千​克 SC50JA 炸​弹",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "s_199_4x_250_bomb",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "de_sc250",
+            "localizedName": "250 千​克 SC260JA 炸​弹",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

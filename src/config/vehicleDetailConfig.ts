@@ -81,7 +81,7 @@ export interface VehicleDetailConfig<V extends BaseVehicle, T extends string = s
   }[];
   
   /** Render additional sections after economy (like mobility, armaments) */
-  renderAdditionalSections?: (vehicle: V, gameMode: GameMode, onNavigate: (url: string) => void) => React.ReactNode;
+  renderAdditionalSections?: (vehicle: V, gameMode: GameMode, onNavigate: (url: string) => void, detailData?: unknown) => React.ReactNode;
   
   /** Render performance stats bar in header (for ground vehicles) */
   renderHeaderStats?: (vehicle: V, gameMode: GameMode) => React.ReactNode;

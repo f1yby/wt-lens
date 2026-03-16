@@ -27,5 +27,96 @@
       "simulator": 1.8
     },
     "expMultiplier": 1.24
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "gunBrowning50_usaaf",
+        "localizedName": "12.7 毫​米 M2 勃​朗​宁​机​枪",
+        "count": 6,
+        "bullets": 2250,
+        "caliber": 12.7,
+        "fireRate": 750
+      },
+      {
+        "name": "gunBrowning50_turret",
+        "localizedName": "12.7 毫​米 M2 勃​朗​宁​机​枪",
+        "count": 1,
+        "bullets": 400,
+        "caliber": 12.7,
+        "fireRate": 750
+      }
+    ],
+    "payloads": [
+      {
+        "name": "a_35b_250lbs",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "us_250lb_anm57",
+            "localizedName": "250 磅 AN-M57 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_250lb_anm57",
+            "localizedName": "250 磅 AN-M57 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_500lb_anm64a1",
+            "localizedName": "500 磅 AN-M64A1 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_500lb_anm64a1",
+            "localizedName": "500 磅 AN-M64A1 炸​弹",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "a_35b_500lbs",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "us_500lb_anm64a1",
+            "localizedName": "500 磅 AN-M64A1 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_500lb_anm64a1",
+            "localizedName": "500 磅 AN-M64A1 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_500lb_anm64a1",
+            "localizedName": "500 磅 AN-M64A1 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_500lb_anm64a1",
+            "localizedName": "500 磅 AN-M64A1 炸​弹",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "a_35b_1000lbs",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "us_1000lb_anm65a1",
+            "localizedName": "1,000 磅 AN-M65A1 炸​弹",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

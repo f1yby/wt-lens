@@ -27,5 +27,174 @@
       "simulator": 6.0
     },
     "expMultiplier": 2.08
+  },
+  "weapons": {
+    "fixed_weapons": [],
+    "payloads": [
+      {
+        "name": "javelin_fmk9_default",
+        "weapons": [
+          {
+            "trigger": "cannon",
+            "name": "cannonADEN",
+            "localizedName": "30 毫​米​“阿​登”​机​炮",
+            "count": 200
+          },
+          {
+            "trigger": "cannon",
+            "name": "cannonADEN",
+            "localizedName": "30 毫​米​“阿​登”​机​炮",
+            "count": 200
+          },
+          {
+            "trigger": "cannon",
+            "name": "cannonADEN",
+            "localizedName": "30 毫​米​“阿​登”​机​炮",
+            "count": 200
+          },
+          {
+            "trigger": "cannon",
+            "name": "cannonADEN",
+            "localizedName": "30 毫​米​“阿​登”​机​炮",
+            "count": 200
+          }
+        ]
+      },
+      {
+        "name": "javelin_fmk9_default_firestreak_x2",
+        "weapons": [
+          {
+            "trigger": "cannon",
+            "name": "cannonADEN",
+            "localizedName": "30 毫​米​“阿​登”​机​炮",
+            "count": 200
+          },
+          {
+            "trigger": "cannon",
+            "name": "cannonADEN",
+            "localizedName": "30 毫​米​“阿​登”​机​炮",
+            "count": 200
+          },
+          {
+            "trigger": "cannon",
+            "name": "cannonADEN",
+            "localizedName": "30 毫​米​“阿​登”​机​炮",
+            "count": 200
+          },
+          {
+            "trigger": "cannon",
+            "name": "cannonADEN",
+            "localizedName": "30 毫​米​“阿​登”​机​炮",
+            "count": 200
+          },
+          {
+            "trigger": "aam",
+            "name": "uk_firestreak_default",
+            "localizedName": "Firestreak air-to-air missiles",
+            "count": 1
+          },
+          {
+            "trigger": "aam",
+            "name": "uk_firestreak_default",
+            "localizedName": "Firestreak air-to-air missiles",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "javelin_fmk9_firestreak",
+        "weapons": [
+          {
+            "trigger": "cannon",
+            "name": "cannonADEN",
+            "localizedName": "30 毫​米​“阿​登”​机​炮",
+            "count": 200
+          },
+          {
+            "trigger": "cannon",
+            "name": "cannonADEN",
+            "localizedName": "30 毫​米​“阿​登”​机​炮",
+            "count": 200
+          },
+          {
+            "trigger": "aam",
+            "name": "uk_firestreak_Javelin",
+            "localizedName": "Firestreak air-to-air missiles",
+            "count": 1
+          },
+          {
+            "trigger": "aam",
+            "name": "uk_firestreak_Javelin",
+            "localizedName": "Firestreak air-to-air missiles",
+            "count": 1
+          },
+          {
+            "trigger": "aam",
+            "name": "uk_firestreak_Javelin",
+            "localizedName": "Firestreak air-to-air missiles",
+            "count": 1
+          },
+          {
+            "trigger": "aam",
+            "name": "uk_firestreak_Javelin",
+            "localizedName": "Firestreak air-to-air missiles",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "javelin_fmk9_firestreak_x4_cannons_x4",
+        "weapons": [
+          {
+            "trigger": "cannon",
+            "name": "cannonADEN",
+            "localizedName": "30 毫​米​“阿​登”​机​炮",
+            "count": 200
+          },
+          {
+            "trigger": "cannon",
+            "name": "cannonADEN",
+            "localizedName": "30 毫​米​“阿​登”​机​炮",
+            "count": 200
+          },
+          {
+            "trigger": "cannon",
+            "name": "cannonADEN",
+            "localizedName": "30 毫​米​“阿​登”​机​炮",
+            "count": 200
+          },
+          {
+            "trigger": "cannon",
+            "name": "cannonADEN",
+            "localizedName": "30 毫​米​“阿​登”​机​炮",
+            "count": 200
+          },
+          {
+            "trigger": "aam",
+            "name": "uk_firestreak",
+            "localizedName": "“火​光”​空​对​空​导​弹",
+            "count": 1
+          },
+          {
+            "trigger": "aam",
+            "name": "uk_firestreak",
+            "localizedName": "“火​光”​空​对​空​导​弹",
+            "count": 1
+          },
+          {
+            "trigger": "aam",
+            "name": "uk_firestreak",
+            "localizedName": "“火​光”​空​对​空​导​弹",
+            "count": 1
+          },
+          {
+            "trigger": "aam",
+            "name": "uk_firestreak",
+            "localizedName": "“火​光”​空​对​空​导​弹",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

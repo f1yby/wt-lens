@@ -27,5 +27,34 @@
       "simulator": 1.18
     },
     "expMultiplier": 1.12
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "gunShKAS",
+        "localizedName": "7.62 毫​米​施​卡​斯​机​枪",
+        "count": 2,
+        "bullets": 1500,
+        "caliber": 7.6,
+        "fireRate": 1800
+      },
+      {
+        "name": "gunUBS",
+        "localizedName": "12.7 mm Berezin UBS machine gun",
+        "count": 1,
+        "bullets": 280,
+        "caliber": 12.7,
+        "fireRate": 996
+      },
+      {
+        "name": "gunUBK",
+        "localizedName": "12.7 毫​米​别​列​津 UBK 机​枪",
+        "count": 2,
+        "bullets": 290,
+        "caliber": 12.7,
+        "fireRate": 1026
+      }
+    ],
+    "payloads": []
   }
 }

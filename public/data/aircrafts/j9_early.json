@@ -29,5 +29,63 @@
     },
     "expMultiplier": 1.12,
     "freeRepairs": 30
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "gunKsp_m22_fv",
+        "localizedName": "8 毫​米 m/22 左​侧​固​定​机​枪",
+        "count": 1,
+        "bullets": 500,
+        "caliber": 8.0,
+        "fireRate": 1200
+      },
+      {
+        "name": "gunKsp_m22_fh",
+        "localizedName": "8 毫​米 m/22 右​侧​固​定​机​枪",
+        "count": 1,
+        "bullets": 500,
+        "caliber": 8.0,
+        "fireRate": 1200
+      },
+      {
+        "name": "gunAkan_m39a",
+        "localizedName": "13.2 毫​米 m/39A 机​炮​（机​枪）",
+        "count": 2,
+        "bullets": 480,
+        "caliber": 13.2,
+        "fireRate": 1080,
+        "belts": [
+          {
+            "key": "13_2_akan_m39_ground_targets",
+            "name": "13_2_akan_m39_ground_targets",
+            "bullets": [
+              "he_frag_t_ball",
+              "ap_ball",
+              "ap_ball",
+              "ap_ball"
+            ]
+          },
+          {
+            "key": "13_2_akan_m39_air_targets",
+            "name": "13_2_akan_m39_air_targets",
+            "bullets": [
+              "he_frag_t_ball",
+              "he_frag_t_ball",
+              "ap_ball",
+              "he_frag_t_ball"
+            ]
+          },
+          {
+            "key": "13_2_akan_m39_stealth",
+            "name": "13_2_akan_m39_stealth",
+            "bullets": [
+              "ap_ball"
+            ]
+          }
+        ]
+      }
+    ],
+    "payloads": []
   }
 }

@@ -29,5 +29,27 @@
     },
     "expMultiplier": 2.32,
     "freeRepairs": 30
+  },
+  "weapons": {
+    "fixed_weapons": [],
+    "payloads": [
+      {
+        "name": "ucav_mq_1_predator_default",
+        "weapons": [
+          {
+            "trigger": "atgm",
+            "name": "mq_1_hellfire_x1_default",
+            "localizedName": "mq_1_hellfire_x1_default",
+            "count": 1
+          },
+          {
+            "trigger": "atgm",
+            "name": "mq_1_hellfire_x1_default",
+            "localizedName": "mq_1_hellfire_x1_default",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

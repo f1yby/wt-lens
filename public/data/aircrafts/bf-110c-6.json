@@ -29,5 +29,34 @@
     },
     "expMultiplier": 1.24,
     "freeRepairs": 30
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "gunMG17",
+        "localizedName": "7.92 毫​米 MG 17 机​枪",
+        "count": 4,
+        "bullets": 4000,
+        "caliber": 7.9,
+        "fireRate": 1200
+      },
+      {
+        "name": "gunMG15_turret",
+        "localizedName": "7.92 毫​米 MG 15 机​枪",
+        "count": 1,
+        "bullets": 750,
+        "caliber": 7.9,
+        "fireRate": 1000
+      },
+      {
+        "name": "cannonMK101",
+        "localizedName": "30 毫​米 MK 101 机​炮",
+        "count": 1,
+        "bullets": 60,
+        "caliber": 30.0,
+        "fireRate": 260
+      }
+    ],
+    "payloads": []
   }
 }

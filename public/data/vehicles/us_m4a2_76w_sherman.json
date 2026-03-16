@@ -41,7 +41,7 @@
     "ammunitions": [
       {
         "name": "76mm_m79",
-        "localizedName": "M79 shot",
+        "localizedName": "M79",
         "type": "ap_tank",
         "caliber": 76.2,
         "mass": 6.8,
@@ -55,7 +55,7 @@
       },
       {
         "name": "76mm_m42a1",
-        "localizedName": "M42A1 shell",
+        "localizedName": "M42A1",
         "type": "he_frag_tank",
         "caliber": 76.2,
         "mass": 5.84,
@@ -66,7 +66,7 @@
       },
       {
         "name": "76mm_m62",
-        "localizedName": "M62 shell",
+        "localizedName": "M62",
         "type": "apcbc_tank",
         "caliber": 76.2,
         "mass": 7.0,

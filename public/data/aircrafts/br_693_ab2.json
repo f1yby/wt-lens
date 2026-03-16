@@ -27,5 +27,222 @@
       "simulator": 0.7
     },
     "expMultiplier": 1.0
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "gunMAC34",
+        "localizedName": "7.5 毫​米 MAC 1934 机​枪",
+        "count": 2,
+        "bullets": 1000,
+        "caliber": 7.5,
+        "fireRate": 1350,
+        "belts": [
+          {
+            "key": "7_5mm_universal",
+            "name": "通​用",
+            "bullets": [
+              "t_ball",
+              "ap_ball",
+              "ap_ball",
+              "i_ball",
+              "i_ball"
+            ]
+          },
+          {
+            "key": "7_5mm_all_tracers",
+            "name": "曳​光",
+            "bullets": [
+              "i_t_ball"
+            ]
+          },
+          {
+            "key": "7_5mm_stealth",
+            "name": "匿​踪",
+            "bullets": [
+              "ap_ball",
+              "ap_ball",
+              "i_ball"
+            ]
+          },
+          {
+            "key": "7_5mm_turret_ap",
+            "name": "穿​甲",
+            "bullets": [
+              "t_ball",
+              "ball",
+              "ball",
+              "ball",
+              "i_ball",
+              "ap_ball"
+            ]
+          },
+          {
+            "key": "7_5mm_turret_ap_t",
+            "name": "曳​光",
+            "bullets": [
+              "t_ball",
+              "ball",
+              "ball",
+              "ball",
+              "i_ball",
+              "ap_ball"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "cannonHispano404",
+        "localizedName": "20 毫​米​西​斯​帕​诺​-​絮​扎 HS.404 机​炮",
+        "count": 1,
+        "bullets": 90,
+        "caliber": 20.0,
+        "fireRate": 700,
+        "belts": [
+          {
+            "key": "hispano_universal",
+            "name": "通​用",
+            "bullets": [
+              "ap_t",
+              "he_i",
+              "ap_t",
+              "he_i"
+            ]
+          },
+          {
+            "key": "hispano_tracers",
+            "name": "曳​光",
+            "bullets": [
+              "ap_t",
+              "he_i_t"
+            ]
+          },
+          {
+            "key": "hispano_stealth",
+            "name": "匿​踪",
+            "bullets": [
+              "ap",
+              "he_i"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "gunMAC34T_turret",
+        "localizedName": "7.5 毫​米 MAC 1934T 机​枪",
+        "count": 2,
+        "bullets": 1000,
+        "caliber": 7.5,
+        "fireRate": 1350,
+        "belts": [
+          {
+            "key": "7_5mm_universal",
+            "name": "通​用",
+            "bullets": [
+              "t_ball",
+              "ball",
+              "ball",
+              "i_ball",
+              "ap_ball"
+            ]
+          },
+          {
+            "key": "7_5mm_all_tracers",
+            "name": "曳​光",
+            "bullets": [
+              "t_ball",
+              "ball",
+              "ball",
+              "i_ball",
+              "ap_ball"
+            ]
+          },
+          {
+            "key": "7_5mm_stealth",
+            "name": "匿​踪",
+            "bullets": [
+              "t_ball",
+              "ball",
+              "ball",
+              "i_ball",
+              "ap_ball"
+            ]
+          },
+          {
+            "key": "7_5mm_turret_ap",
+            "name": "穿​甲",
+            "bullets": [
+              "t_ball",
+              "ap_ball",
+              "ap_ball",
+              "ap_ball"
+            ]
+          },
+          {
+            "key": "7_5mm_turret_ap_t",
+            "name": "曳​光",
+            "bullets": [
+              "t_ball",
+              "ap_ball"
+            ]
+          }
+        ]
+      }
+    ],
+    "payloads": [
+      {
+        "name": "br_693_ab2_8x50kg_gammn",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "fr_50kg_gammn",
+            "localizedName": "50 千​克 G.A.M.Mn 50 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_50kg_gammn",
+            "localizedName": "50 千​克 G.A.M.Mn 50 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_50kg_gammn",
+            "localizedName": "50 千​克 G.A.M.Mn 50 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_50kg_gammn",
+            "localizedName": "50 千​克 G.A.M.Mn 50 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_50kg_gammn",
+            "localizedName": "50 千​克 G.A.M.Mn 50 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_50kg_gammn",
+            "localizedName": "50 千​克 G.A.M.Mn 50 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_50kg_gammn",
+            "localizedName": "50 千​克 G.A.M.Mn 50 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_50kg_gammn",
+            "localizedName": "50 千​克 G.A.M.Mn 50 炸​弹",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

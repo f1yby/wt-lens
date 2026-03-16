@@ -27,5 +27,74 @@
       "simulator": 1.36
     },
     "expMultiplier": 1.12
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "cannonHispano404",
+        "localizedName": "20 毫​米​西​斯​帕​诺​-​絮​扎 HS.404 机​炮",
+        "count": 2,
+        "bullets": 180,
+        "caliber": 20.0,
+        "fireRate": 700,
+        "belts": [
+          {
+            "key": "hispano_universal",
+            "name": "通​用",
+            "bullets": [
+              "ap_t",
+              "he_i",
+              "ap_t",
+              "he_i"
+            ]
+          },
+          {
+            "key": "hispano_tracers",
+            "name": "曳​光",
+            "bullets": [
+              "ap_t",
+              "he_i_t"
+            ]
+          },
+          {
+            "key": "hispano_stealth",
+            "name": "匿​踪",
+            "bullets": [
+              "ap",
+              "he_i"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "gunMAC39_turret",
+        "localizedName": "7.5 毫​米 MAC 1934 机​枪",
+        "count": 1,
+        "bullets": 1000,
+        "caliber": 7.5,
+        "fireRate": 1350,
+        "belts": [
+          {
+            "key": "7_5mm_turret_ap",
+            "name": "穿​甲",
+            "bullets": [
+              "t_ball",
+              "ap_ball",
+              "ap_ball",
+              "ap_ball"
+            ]
+          },
+          {
+            "key": "7_5mm_turret_ap_t",
+            "name": "曳​光",
+            "bullets": [
+              "t_ball",
+              "ap_ball"
+            ]
+          }
+        ]
+      }
+    ],
+    "payloads": []
   }
 }

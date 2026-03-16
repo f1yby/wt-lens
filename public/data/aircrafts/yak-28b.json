@@ -27,5 +27,158 @@
       "simulator": 6.0
     },
     "expMultiplier": 2.2
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "cannonNR23",
+        "localizedName": "23 毫​米 NR-23 机​炮",
+        "count": 1,
+        "bullets": 50,
+        "caliber": 23.0,
+        "fireRate": 900
+      },
+      {
+        "name": "countermeasure_chaff_only",
+        "localizedName": "Chaff countermeasures",
+        "count": 1,
+        "bullets": 32
+      }
+    ],
+    "payloads": [
+      {
+        "name": "yak_28b_default",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "su_ofab100_120",
+            "localizedName": "100 千​克 OFAB-100 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_ofab100_120",
+            "localizedName": "100 千​克 OFAB-100 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_ofab100_120",
+            "localizedName": "100 千​克 OFAB-100 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_ofab100_120",
+            "localizedName": "100 千​克 OFAB-100 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_ofab100_120",
+            "localizedName": "100 千​克 OFAB-100 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_ofab100_120",
+            "localizedName": "100 千​克 OFAB-100 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_ofab100_120",
+            "localizedName": "100 千​克 OFAB-100 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_ofab100_120",
+            "localizedName": "100 千​克 OFAB-100 炸​弹",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "yak_28b_6x_fab250m_46",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "su_fab250_m54",
+            "localizedName": "250 kg FAB-250M-54 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab250_m54",
+            "localizedName": "250 kg FAB-250M-54 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab250_m54",
+            "localizedName": "250 kg FAB-250M-54 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab250_m54",
+            "localizedName": "250 kg FAB-250M-54 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab250_m54",
+            "localizedName": "250 kg FAB-250M-54 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab250_m54",
+            "localizedName": "250 kg FAB-250M-54 bomb",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "yak_28b_2x_fab500m_46",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "su_fab500_m54",
+            "localizedName": "500 千​克 FAB-500 M-54 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab500_m54",
+            "localizedName": "500 千​克 FAB-500 M-54 炸​弹",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "yak_28b_fab1500m_46",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "su_fab_1500m_54",
+            "localizedName": "1500 kg FAB-1500M-54 bomb",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "yak_28b_fab3000m_46",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "su_fab_3000m_54",
+            "localizedName": "3000 kg FAB-3000M-54 bomb",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

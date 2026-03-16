@@ -27,5 +27,140 @@
       "simulator": 2.15
     },
     "expMultiplier": 1.3
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "cannonMG15120",
+        "localizedName": "20 毫​米 MG 151/20 机​炮",
+        "count": 2,
+        "bullets": 400,
+        "caliber": 20.0,
+        "fireRate": 700,
+        "belts": [
+          {
+            "key": "mg15120_turret_ap",
+            "name": "mg15120_turret_ap",
+            "bullets": [
+              "i_t",
+              "i_t",
+              "aphe",
+              "he_i_mine"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "cannonMG15120_turret",
+        "localizedName": "20 毫​米 MG 151/20 机​炮",
+        "count": 1,
+        "bullets": 250,
+        "caliber": 20.0,
+        "fireRate": 750,
+        "belts": [
+          {
+            "key": "mg15120_turret_ap",
+            "name": "mg15120_turret_ap",
+            "bullets": [
+              "ap_i",
+              "ap_i",
+              "aphe",
+              "i_t",
+              "ap_i"
+            ]
+          }
+        ]
+      }
+    ],
+    "payloads": [
+      {
+        "name": "mb_175t_default",
+        "weapons": [
+          {
+            "trigger": "rockets",
+            "name": "us_5_in_hvar_2",
+            "localizedName": "高​速​空​射​火​箭​弹​（HVAR）",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "us_5_in_hvar_2",
+            "localizedName": "高​速​空​射​火​箭​弹​（HVAR）",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "us_5_in_hvar_2",
+            "localizedName": "高​速​空​射​火​箭​弹​（HVAR）",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "us_5_in_hvar_2",
+            "localizedName": "高​速​空​射​火​箭​弹​（HVAR）",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "us_5_in_hvar_2",
+            "localizedName": "高​速​空​射​火​箭​弹​（HVAR）",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "us_5_in_hvar_2",
+            "localizedName": "高​速​空​射​火​箭​弹​（HVAR）",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "us_5_in_hvar_2",
+            "localizedName": "高​速​空​射​火​箭​弹​（HVAR）",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "us_5_in_hvar_2",
+            "localizedName": "高​速​空​射​火​箭​弹​（HVAR）",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "us_5_in_hvar_2",
+            "localizedName": "高​速​空​射​火​箭​弹​（HVAR）",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "us_5_in_hvar_2",
+            "localizedName": "高​速​空​射​火​箭​弹​（HVAR）",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "us_5_in_hvar_2",
+            "localizedName": "高​速​空​射​火​箭​弹​（HVAR）",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "us_5_in_hvar_2",
+            "localizedName": "高​速​空​射​火​箭​弹​（HVAR）",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "mb_175t_torpedo",
+        "weapons": [
+          {
+            "trigger": "torpedoes",
+            "name": "de_f5w_torpedo",
+            "localizedName": "F5w 鱼​雷",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

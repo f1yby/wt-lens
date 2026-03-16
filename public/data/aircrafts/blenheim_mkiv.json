@@ -27,5 +27,132 @@
       "simulator": 0.81
     },
     "expMultiplier": 1.0
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "gunBrowning303_raf",
+        "localizedName": "7.7 毫​米​勃​朗​宁​机​枪",
+        "count": 1,
+        "bullets": 500,
+        "caliber": 7.7,
+        "fireRate": 1000
+      },
+      {
+        "name": "gunBrowning303_turret",
+        "localizedName": "7.7 毫​米​勃​朗​宁​机​枪",
+        "count": 2,
+        "bullets": 2000,
+        "caliber": 7.7,
+        "fireRate": 1000
+      },
+      {
+        "name": "gunVikkersK_turret",
+        "localizedName": "7.7 毫​米​维​克​斯 K 型​机​枪",
+        "count": 2,
+        "bullets": 2000,
+        "caliber": 7.7,
+        "fireRate": 950
+      }
+    ],
+    "payloads": [
+      {
+        "name": "BlenheimMKIV_default",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "blenheim_mkiv_2_500lb",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "uk_500lbs",
+            "localizedName": "G.P. 500 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lbs",
+            "localizedName": "G.P. 500 lb Mk.IV bomb",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "blenheim_mkiv_2_500lb_sap",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_sap_mkII_ap",
+            "localizedName": "500 LB S.A.P. Mk.II bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_sap_mkII_ap",
+            "localizedName": "500 LB S.A.P. Mk.II bomb",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "BlenheimMKIV_nobombs",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 0
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 0
+          }
+        ]
+      },
+      {
+        "name": "BlenheimMKIV_bombs",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

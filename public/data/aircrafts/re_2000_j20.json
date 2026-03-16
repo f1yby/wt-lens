@@ -27,5 +27,18 @@
       "simulator": 1.36
     },
     "expMultiplier": 1.12
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "gunAkan_m40",
+        "localizedName": "12.7 毫​米 m/40 机​炮​（机​枪）",
+        "count": 2,
+        "bullets": 600,
+        "caliber": 12.7,
+        "fireRate": 700
+      }
+    ],
+    "payloads": []
   }
 }

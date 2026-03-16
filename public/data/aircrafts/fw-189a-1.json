@@ -29,5 +29,56 @@
     },
     "expMultiplier": 1.0,
     "freeRepairs": 30
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "gunMG17",
+        "localizedName": "7.92 毫​米 MG 17 机​枪",
+        "count": 2,
+        "bullets": 1000,
+        "caliber": 7.9,
+        "fireRate": 1200
+      },
+      {
+        "name": "gunMG15_turret",
+        "localizedName": "7.92 毫​米 MG 15 机​枪",
+        "count": 2,
+        "bullets": 1200,
+        "caliber": 7.9,
+        "fireRate": 1000
+      }
+    ],
+    "payloads": [
+      {
+        "name": "FW-189A_default",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "de_sc50",
+            "localizedName": "50 千​克 SC50JA 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "de_sc50",
+            "localizedName": "50 千​克 SC50JA 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "de_sc50",
+            "localizedName": "50 千​克 SC50JA 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "de_sc50",
+            "localizedName": "50 千​克 SC50JA 炸​弹",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

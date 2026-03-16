@@ -27,5 +27,59 @@
       "simulator": 1.18
     },
     "expMultiplier": 1.12
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "gunType89",
+        "localizedName": "7.7 毫​米​八​九​式​固​定​机​枪",
+        "count": 2,
+        "bullets": 1000,
+        "caliber": 7.7,
+        "fireRate": 1100,
+        "belts": [
+          {
+            "key": "7_7mm_universal",
+            "name": "通​用",
+            "bullets": [
+              "t_ball",
+              "ap_ball",
+              "he_i_ball",
+              "ap_ball"
+            ]
+          },
+          {
+            "key": "7_7_all_tracers",
+            "name": "曳​光",
+            "bullets": [
+              "t_ball",
+              "t_ball",
+              "t_ball",
+              "ap_ball"
+            ]
+          },
+          {
+            "key": "7_7_stealth",
+            "name": "匿​踪",
+            "bullets": [
+              "i_ball",
+              "ap_ball",
+              "ap_ball",
+              "ap_ball",
+              "he_i_ball"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "gunHo103",
+        "localizedName": "12.7 毫​米 Ho-103 固​定​机​枪",
+        "count": 2,
+        "bullets": 500,
+        "caliber": 12.7,
+        "fireRate": 900
+      }
+    ],
+    "payloads": []
   }
 }

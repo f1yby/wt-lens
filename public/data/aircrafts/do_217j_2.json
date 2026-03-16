@@ -27,5 +27,34 @@
       "simulator": 0.86
     },
     "expMultiplier": 1.06
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "gunMG131_turret",
+        "localizedName": "13 毫​米 MG 131 机​枪",
+        "count": 2,
+        "bullets": 1000,
+        "caliber": 13.0,
+        "fireRate": 900
+      },
+      {
+        "name": "gunMG17",
+        "localizedName": "7.92 毫​米 MG 17 机​枪",
+        "count": 4,
+        "bullets": 2800,
+        "caliber": 7.9,
+        "fireRate": 1200
+      },
+      {
+        "name": "cannonMGFFM",
+        "localizedName": "20 毫​米 MG FF/M 机​炮",
+        "count": 4,
+        "bullets": 800,
+        "caliber": 20.0,
+        "fireRate": 520
+      }
+    ],
+    "payloads": []
   }
 }

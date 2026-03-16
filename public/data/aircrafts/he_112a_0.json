@@ -27,5 +27,18 @@
       "simulator": 0.63
     },
     "expMultiplier": 1.0
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "cannonMGC30L",
+        "localizedName": "20 毫​米 MG C/30L 机​炮",
+        "count": 1,
+        "bullets": 100,
+        "caliber": 20.0,
+        "fireRate": 325
+      }
+    ],
+    "payloads": []
   }
 }

@@ -27,5 +27,153 @@
       "simulator": 2.36
     },
     "expMultiplier": 1.3
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "gunMG17",
+        "localizedName": "7.92 毫​米 MG 17 机​枪",
+        "count": 2,
+        "bullets": 1000,
+        "caliber": 7.9,
+        "fireRate": 1200
+      },
+      {
+        "name": "cannonMG15115",
+        "localizedName": "15 毫​米 MG 151/15 机​炮",
+        "count": 1,
+        "bullets": 200,
+        "caliber": 15.0,
+        "fireRate": 700,
+        "belts": [
+          {
+            "key": "mg15115_universal",
+            "name": "mg15115_universal",
+            "bullets": [
+              "ap_t_ball",
+              "he_frag_t_ball",
+              "ap_t_ball",
+              "he_frag_t_ball"
+            ]
+          },
+          {
+            "key": "mg15115_air_targets",
+            "name": "mg15115_air_targets",
+            "bullets": [
+              "ap_i",
+              "he_frag_t_ball",
+              "he_frag_t_ball",
+              "he_frag_t_ball"
+            ]
+          }
+        ]
+      }
+    ],
+    "payloads": [
+      {
+        "name": "Bf-109F-2_4xSC50",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "de_sc50",
+            "localizedName": "50 千​克 SC50JA 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "de_sc50",
+            "localizedName": "50 千​克 SC50JA 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "de_sc50",
+            "localizedName": "50 千​克 SC50JA 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "de_sc50",
+            "localizedName": "50 千​克 SC50JA 炸​弹",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "Bf-109F-2_rz65_rocket",
+        "weapons": [
+          {
+            "trigger": "rockets",
+            "name": "de_rz65_rocket",
+            "localizedName": "RZ 65 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "de_rz65_rocket",
+            "localizedName": "RZ 65 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "de_rz65_rocket",
+            "localizedName": "RZ 65 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "de_rz65_rocket",
+            "localizedName": "RZ 65 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "de_rz65_rocket",
+            "localizedName": "RZ 65 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "de_rz65_rocket",
+            "localizedName": "RZ 65 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "de_rz65_rocket",
+            "localizedName": "RZ 65 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "de_rz65_rocket",
+            "localizedName": "RZ 65 火​箭​弹",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "Bf-109F-2_SC250",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "de_sc250",
+            "localizedName": "250 千​克 SC260JA 炸​弹",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "Bf-109F-1_flamm_250",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "de_flam_250",
+            "localizedName": "Flam C 250 incendiary bomb",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

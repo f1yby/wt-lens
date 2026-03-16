@@ -27,5 +27,99 @@
       "simulator": 1.4
     },
     "expMultiplier": 1.18
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "cannonType99_turret",
+        "localizedName": "20 毫​米​九​九​式​一​号​旋​回​机​炮",
+        "count": 2,
+        "bullets": 450,
+        "caliber": 20.0,
+        "fireRate": 516,
+        "belts": [
+          {
+            "key": "type99mk1_turret_ap",
+            "name": "穿​甲",
+            "bullets": [
+              "he_frag_t",
+              "aphe",
+              "aphe",
+              "aphe",
+              "aphe"
+            ]
+          }
+        ]
+      }
+    ],
+    "payloads": [
+      {
+        "name": "P1Y1_default",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "jp_navy_mod25mark2_250kg",
+            "localizedName": "二​五​番​通​常​爆​弹​二​型​（250 千​克）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "jp_navy_mod25mark2_250kg",
+            "localizedName": "二​五​番​通​常​爆​弹​二​型​（250 千​克）",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "P1Y1_torpedo",
+        "weapons": [
+          {
+            "trigger": "torpedoes",
+            "name": "jp_type91mod3_torpedo",
+            "localizedName": "九​一​式​航​空​鱼​雷​改​三​（850 千​克）",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "P1Y1_2x500kg_bomb",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "jp_navy_mod50mark2_500kg",
+            "localizedName": "五​〇​番​通​常​爆​弹​二​型​（800 千​克）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "jp_navy_mod50mark2_500kg",
+            "localizedName": "五​〇​番​通​常​爆​弹​二​型​（800 千​克）",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "P1Y1_800kg_bomb",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "jp_navy_mod80mark1_800kg",
+            "localizedName": "800 kg Number 80 Mod. 1 bomb",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "p1y1_type99mod80_ap",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "jp_navy_type99mod80_800kg",
+            "localizedName": "八​〇​番​陆​用​爆​弹​（800 千​克）",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

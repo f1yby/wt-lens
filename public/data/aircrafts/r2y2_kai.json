@@ -27,5 +27,78 @@
       "simulator": 6.0
     },
     "expMultiplier": 2.02
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "cannonType5",
+        "localizedName": "30 毫​米​五​式​固​定​机​炮",
+        "count": 4,
+        "bullets": 600,
+        "caliber": 30.0,
+        "fireRate": 500,
+        "belts": [
+          {
+            "key": "type5_universal",
+            "name": "通​用",
+            "bullets": [
+              "he_frag_t",
+              "he_frag_i",
+              "aphe",
+              "he_frag",
+              "he_frag"
+            ]
+          },
+          {
+            "key": "type5_ground_targets",
+            "name": "对​地",
+            "bullets": [
+              "he_frag_t",
+              "aphe",
+              "aphe",
+              "aphe"
+            ]
+          },
+          {
+            "key": "type5_all_tracers",
+            "name": "曳​光",
+            "bullets": [
+              "he_frag_t"
+            ]
+          },
+          {
+            "key": "type5_stealth",
+            "name": "匿​踪",
+            "bullets": [
+              "he_frag"
+            ]
+          }
+        ]
+      }
+    ],
+    "payloads": [
+      {
+        "name": "mod80mark1_bomb",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "jp_navy_mod80mark1_800kg",
+            "localizedName": "800 kg Number 80 Mod. 1 bomb",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "type99mod80_bomb",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "jp_navy_type99mod80_800kg",
+            "localizedName": "八​〇​番​陆​用​爆​弹​（800 千​克）",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

@@ -27,5 +27,138 @@
       "simulator": 3.02
     },
     "expMultiplier": 1.42
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "gunBrowning50_M2_late",
+        "localizedName": "12.7 毫​米 M2 勃​朗​宁​机​枪",
+        "count": 4,
+        "bullets": 2000,
+        "caliber": 12.7,
+        "fireRate": 750
+      },
+      {
+        "name": "cannonAN_M2",
+        "localizedName": "20 毫​米 AN/M2 机​炮",
+        "count": 1,
+        "bullets": 150,
+        "caliber": 20.0,
+        "fireRate": 600
+      }
+    ],
+    "payloads": [
+      {
+        "name": "p-38l_2x500lbs",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "us_500lb_anm64a1",
+            "localizedName": "500 磅 AN-M64A1 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_500lb_anm64a1",
+            "localizedName": "500 磅 AN-M64A1 炸​弹",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "p-38l_rockets",
+        "weapons": [
+          {
+            "trigger": "rockets",
+            "name": "us_5_in_hvar",
+            "localizedName": "高​速​空​射​火​箭​弹​（HVAR）",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "us_5_in_hvar",
+            "localizedName": "高​速​空​射​火​箭​弹​（HVAR）",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "us_5_in_hvar",
+            "localizedName": "高​速​空​射​火​箭​弹​（HVAR）",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "us_5_in_hvar",
+            "localizedName": "高​速​空​射​火​箭​弹​（HVAR）",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "us_5_in_hvar",
+            "localizedName": "高​速​空​射​火​箭​弹​（HVAR）",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "us_5_in_hvar",
+            "localizedName": "高​速​空​射​火​箭​弹​（HVAR）",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "us_5_in_hvar",
+            "localizedName": "高​速​空​射​火​箭​弹​（HVAR）",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "us_5_in_hvar",
+            "localizedName": "高​速​空​射​火​箭​弹​（HVAR）",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "us_5_in_hvar",
+            "localizedName": "高​速​空​射​火​箭​弹​（HVAR）",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "us_5_in_hvar",
+            "localizedName": "高​速​空​射​火​箭​弹​（HVAR）",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "p-38l_dgp_1",
+        "weapons": [
+          {
+            "trigger": "additional gun",
+            "name": "gunBrowning50_M2_underwing",
+            "localizedName": "12.7 毫​米 M2 勃​朗​宁​机​枪",
+            "count": 340
+          },
+          {
+            "trigger": "additional gun",
+            "name": "gunBrowning50_M2_underwing",
+            "localizedName": "12.7 毫​米 M2 勃​朗​宁​机​枪",
+            "count": 340
+          },
+          {
+            "trigger": "additional gun",
+            "name": "gunBrowning50_M2_underwing",
+            "localizedName": "12.7 毫​米 M2 勃​朗​宁​机​枪",
+            "count": 340
+          },
+          {
+            "trigger": "additional gun",
+            "name": "gunBrowning50_M2_underwing",
+            "localizedName": "12.7 毫​米 M2 勃​朗​宁​机​枪",
+            "count": 340
+          }
+        ]
+      }
+    ]
   }
 }

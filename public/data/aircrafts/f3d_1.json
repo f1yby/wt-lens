@@ -27,5 +27,87 @@
       "simulator": 6.0
     },
     "expMultiplier": 1.84
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "cannonAN_M3",
+        "localizedName": "20 毫​米 AN/M3 机​炮",
+        "count": 4,
+        "bullets": 800,
+        "caliber": 20.0,
+        "fireRate": 750
+      }
+    ],
+    "payloads": [
+      {
+        "name": "f3d_500lb_bombs",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "us_500lb_anm64a1",
+            "localizedName": "500 磅 AN-M64A1 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_500lb_anm64a1",
+            "localizedName": "500 磅 AN-M64A1 炸​弹",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "f3d_1_tiny_tim",
+        "weapons": [
+          {
+            "trigger": "rockets",
+            "name": "us_11_75_in_tiny_tim",
+            "localizedName": "“小​蒂​姆”​火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "us_11_75_in_tiny_tim",
+            "localizedName": "“小​蒂​姆”​火​箭​弹",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "f3d_1000lb_bombs",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "us_1000lb_anm65a1",
+            "localizedName": "1,000 磅 AN-M65A1 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_1000lb_anm65a1",
+            "localizedName": "1,000 磅 AN-M65A1 炸​弹",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "f3d_2000lb_bombs",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "us_2000lbs_anm66",
+            "localizedName": "2,000 磅 AN-M66A2 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_2000lbs_anm66",
+            "localizedName": "2,000 磅 AN-M66A2 炸​弹",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

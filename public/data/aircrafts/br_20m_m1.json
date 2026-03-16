@@ -27,5 +27,244 @@
       "simulator": 1.18
     },
     "expMultiplier": 1.06
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "gunBredaSAFAT77_turret",
+        "localizedName": "7.7 毫​米​布​雷​达​-SAFAT 机​枪",
+        "count": 2,
+        "bullets": 1000,
+        "caliber": 7.7,
+        "fireRate": 900
+      },
+      {
+        "name": "gunBredaSAFAT127_turret",
+        "localizedName": "12.7 毫​米​布​雷​达​-SAFAT 机​枪",
+        "count": 1,
+        "bullets": 350,
+        "caliber": 12.7,
+        "fireRate": 700
+      }
+    ],
+    "payloads": [
+      {
+        "name": "br_20_default",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "it_50kg_t",
+            "localizedName": "50 千​克​炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "it_50kg_t",
+            "localizedName": "50 千​克​炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "it_50kg_t",
+            "localizedName": "50 千​克​炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "it_50kg_t",
+            "localizedName": "50 千​克​炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "it_50kg_t",
+            "localizedName": "50 千​克​炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "it_50kg_t",
+            "localizedName": "50 千​克​炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "it_50kg_t",
+            "localizedName": "50 千​克​炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "it_50kg_t",
+            "localizedName": "50 千​克​炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "it_50kg_t",
+            "localizedName": "50 千​克​炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "it_50kg_t",
+            "localizedName": "50 千​克​炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "it_50kg_t",
+            "localizedName": "50 千​克​炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "it_50kg_t",
+            "localizedName": "50 千​克​炸​弹",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "br_20_12x100kg_t",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "it_100kg_t",
+            "localizedName": "100 千​克​炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "it_100kg_t",
+            "localizedName": "100 千​克​炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "it_100kg_t",
+            "localizedName": "100 千​克​炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "it_100kg_t",
+            "localizedName": "100 千​克​炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "it_100kg_t",
+            "localizedName": "100 千​克​炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "it_100kg_t",
+            "localizedName": "100 千​克​炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "it_100kg_t",
+            "localizedName": "100 千​克​炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "it_100kg_t",
+            "localizedName": "100 千​克​炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "it_100kg_t",
+            "localizedName": "100 千​克​炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "it_100kg_t",
+            "localizedName": "100 千​克​炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "it_100kg_t",
+            "localizedName": "100 千​克​炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "it_100kg_t",
+            "localizedName": "100 千​克​炸​弹",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "br_20_4x250kg_gp",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "it_250kg_gp",
+            "localizedName": "250 千​克​炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "it_250kg_gp",
+            "localizedName": "250 千​克​炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "it_250kg_gp",
+            "localizedName": "250 千​克​炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "it_250kg_gp",
+            "localizedName": "250 千​克​炸​弹",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "br_20_2x500kg_gp",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "it_500kg_gp",
+            "localizedName": "500 千​克​炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "it_500kg_gp",
+            "localizedName": "500 千​克​炸​弹",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "br_20_2x800kg_gp",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "it_800kg_gp",
+            "localizedName": "800 千​克​炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "it_800kg_gp",
+            "localizedName": "800 千​克​炸​弹",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

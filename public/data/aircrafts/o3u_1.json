@@ -27,5 +27,36 @@
       "simulator": 1.21
     },
     "expMultiplier": 1.06
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "gunLewis_turret",
+        "localizedName": "7.7 毫​米​路​易​斯​机​枪",
+        "count": 1,
+        "bullets": 485,
+        "caliber": 7.7,
+        "fireRate": 550
+      }
+    ],
+    "payloads": [
+      {
+        "name": "o3u_1_default",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "us_100lb_anm30",
+            "localizedName": "100 磅 AN-M30A1 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_100lb_anm30",
+            "localizedName": "100 磅 AN-M30A1 炸​弹",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

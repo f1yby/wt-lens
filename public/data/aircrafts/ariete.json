@@ -29,5 +29,18 @@
     },
     "expMultiplier": 2.14,
     "freeRepairs": 30
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "cannonHispano_hs825",
+        "localizedName": "30 mm Hispano HS 825 cannon",
+        "count": 2,
+        "bullets": 240,
+        "caliber": 30.0,
+        "fireRate": 996
+      }
+    ],
+    "payloads": []
   }
 }

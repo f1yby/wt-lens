@@ -27,5 +27,163 @@
       "simulator": 5.11
     },
     "expMultiplier": 1.78
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "cannonType99Mk2",
+        "localizedName": "20 毫​米​九​九​式​二​号​固​定​机​炮",
+        "count": 4,
+        "bullets": 900,
+        "caliber": 20.0,
+        "fireRate": 490,
+        "belts": [
+          {
+            "key": "type99mk2_universal",
+            "name": "通​用",
+            "bullets": [
+              "he_frag_t",
+              "he_frag",
+              "he_frag",
+              "aphe"
+            ]
+          },
+          {
+            "key": "type99mk2_ground_targets",
+            "name": "对​地",
+            "bullets": [
+              "aphe",
+              "aphe",
+              "aphe",
+              "aphe",
+              "he_frag",
+              "he_frag_t"
+            ]
+          },
+          {
+            "key": "type99mk2_all_tracers",
+            "name": "曳​光",
+            "bullets": [
+              "he_frag_t"
+            ]
+          },
+          {
+            "key": "type99mk2_stealth",
+            "name": "匿​踪",
+            "bullets": [
+              "he_frag",
+              "he_frag",
+              "he_frag",
+              "aphe",
+              "aphe"
+            ]
+          }
+        ]
+      }
+    ],
+    "payloads": [
+      {
+        "name": "n1k2_j_t97bombs",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "jp_navy_type97mod6_60kg",
+            "localizedName": "九​七​式​六​番​陆​用​爆​弹​（60 千​克）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "jp_navy_type97mod6_60kg",
+            "localizedName": "九​七​式​六​番​陆​用​爆​弹​（60 千​克）",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "n1k2_j_t98_2_250kg_bombs",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "jp_navy_type98mod25_250kg",
+            "localizedName": "九​八​式​二​五​番​爆​弹​（250 千​克）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "jp_navy_type98mod25_250kg",
+            "localizedName": "九​八​式​二​五​番​爆​弹​（250 千​克）",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "n1k2_j_rockets",
+        "weapons": [
+          {
+            "trigger": "rockets",
+            "name": "jp_navy_rocket_type3_number1_9kg",
+            "localizedName": "三​式​一​番​二​八​号​一​型​火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "jp_navy_rocket_type3_number1_9kg",
+            "localizedName": "三​式​一​番​二​八​号​一​型​火​箭​弹",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "a7m_13kg_rockets",
+        "weapons": [
+          {
+            "trigger": "rockets",
+            "name": "jp_navy_rocket_type5_number1_13kg",
+            "localizedName": "五​式​一​番​九​号​火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "jp_navy_rocket_type5_number1_13kg",
+            "localizedName": "五​式​一​番​九​号​火​箭​弹",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "a7m_66kg_rockets",
+        "weapons": [
+          {
+            "trigger": "rockets",
+            "name": "jp_navy_rocket_type3_number6_66kg",
+            "localizedName": "三​式​六​番​二​七​号​一​型​火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "jp_navy_rocket_type3_number6_66kg",
+            "localizedName": "三​式​六​番​二​七​号​一​型​火​箭​弹",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "a7m_84kg_rockets",
+        "weapons": [
+          {
+            "trigger": "rockets",
+            "name": "jp_navy_rocket_type5_number6_84kg",
+            "localizedName": "五​式​六​番​九​号​火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "jp_navy_rocket_type5_number6_84kg",
+            "localizedName": "五​式​六​番​九​号​火​箭​弹",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

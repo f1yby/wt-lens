@@ -27,5 +27,101 @@
       "simulator": 1.22
     },
     "expMultiplier": 1.18
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "cannonHispanoMkI",
+        "localizedName": "20 毫​米​西​斯​帕​诺 Mk I 机​炮",
+        "count": 4,
+        "bullets": 960,
+        "caliber": 20.0,
+        "fireRate": 600,
+        "belts": [
+          {
+            "key": "hispano_universal",
+            "name": "通​用",
+            "bullets": [
+              "ap_t",
+              "he_i",
+              "sapi"
+            ]
+          },
+          {
+            "key": "hispano_tracers",
+            "name": "曳​光",
+            "bullets": [
+              "ap_t",
+              "t_shell",
+              "he_i"
+            ]
+          },
+          {
+            "key": "hispano_stealth",
+            "name": "匿​踪",
+            "bullets": [
+              "he_i",
+              "he_i",
+              "sapi"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "gunVikkersK_turret",
+        "localizedName": "7.7 毫​米​维​克​斯 K 型​机​枪",
+        "count": 1,
+        "bullets": 1000,
+        "caliber": 7.7,
+        "fireRate": 950
+      }
+    ],
+    "payloads": [
+      {
+        "name": "beaufighter_mk6c_torpedo",
+        "weapons": [
+          {
+            "trigger": "torpedoes",
+            "name": "uk_mk12_torpedo",
+            "localizedName": "18 英​寸 Mk XII 鱼​雷​（1,548 磅）",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "beaufighter_mk6c_mc250_bomb",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs_mc_mk1_mk2_bomb",
+            "localizedName": "M.C. 250 lb Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs_mc_mk1_mk2_bomb",
+            "localizedName": "M.C. 250 lb Mk.I bomb",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "beaufighter_mk6c_mc500_bomb",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_mc_mk1_mk4_long_tail_bomb",
+            "localizedName": "M.C. 500 lb Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_mc_mk1_mk4_long_tail_bomb",
+            "localizedName": "M.C. 500 lb Mk.I bomb",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

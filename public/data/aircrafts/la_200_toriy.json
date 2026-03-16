@@ -27,5 +27,18 @@
       "simulator": 6.0
     },
     "expMultiplier": 1.96
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "cannonN37D",
+        "localizedName": "37 毫​米 N-37D 机​炮",
+        "count": 3,
+        "bullets": 150,
+        "caliber": 37.0,
+        "fireRate": 400
+      }
+    ],
+    "payloads": []
   }
 }

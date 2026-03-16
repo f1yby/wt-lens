@@ -27,5 +27,18 @@
       "simulator": 0.56
     },
     "expMultiplier": 1.0
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "gunShKAS",
+        "localizedName": "7.62 毫​米​施​卡​斯​机​枪",
+        "count": 2,
+        "bullets": 1800,
+        "caliber": 7.6,
+        "fireRate": 1800
+      }
+    ],
+    "payloads": []
   }
 }

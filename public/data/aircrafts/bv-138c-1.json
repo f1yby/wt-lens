@@ -27,5 +27,81 @@
       "simulator": 0.81
     },
     "expMultiplier": 1.0
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "cannonMG15120_turret",
+        "localizedName": "20 毫​米 MG 151/20 机​炮",
+        "count": 2,
+        "bullets": 1900,
+        "caliber": 20.0,
+        "fireRate": 750,
+        "belts": [
+          {
+            "key": "mg15120_turret_ap",
+            "name": "mg15120_turret_ap",
+            "bullets": [
+              "ap_i",
+              "ap_i",
+              "aphe",
+              "i_t",
+              "ap_i"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "gunMG131_turret",
+        "localizedName": "13 毫​米 MG 131 机​枪",
+        "count": 1,
+        "bullets": 1450,
+        "caliber": 13.0,
+        "fireRate": 900
+      }
+    ],
+    "payloads": [
+      {
+        "name": "bv-138c-1_default",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "de_sc50",
+            "localizedName": "50 千​克 SC50JA 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "de_sc50",
+            "localizedName": "50 千​克 SC50JA 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "de_sc50",
+            "localizedName": "50 千​克 SC50JA 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "de_sc50",
+            "localizedName": "50 千​克 SC50JA 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "de_sc50",
+            "localizedName": "50 千​克 SC50JA 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "de_sc50",
+            "localizedName": "50 千​克 SC50JA 炸​弹",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

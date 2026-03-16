@@ -27,5 +27,56 @@
       "simulator": 1.65
     },
     "expMultiplier": 1.12
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "gunVikkersK",
+        "localizedName": "7.7 毫​米​维​克​斯 K 型​机​枪",
+        "count": 1,
+        "bullets": 600,
+        "caliber": 7.7,
+        "fireRate": 950
+      },
+      {
+        "name": "gunLewis_turret",
+        "localizedName": "7.7 毫​米​路​易​斯​机​枪",
+        "count": 1,
+        "bullets": 582,
+        "caliber": 7.7,
+        "fireRate": 550
+      }
+    ],
+    "payloads": [
+      {
+        "name": "fairey_3f_mk3b_default",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

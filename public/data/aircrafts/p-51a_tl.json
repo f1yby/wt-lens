@@ -29,5 +29,87 @@
     },
     "expMultiplier": 1.24,
     "freeRepairs": 30
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "gunBrowning50_M2",
+        "localizedName": "12.7 毫​米 M2 勃​朗​宁​机​枪",
+        "count": 4,
+        "bullets": 1260,
+        "caliber": 12.7,
+        "fireRate": 750
+      }
+    ],
+    "payloads": [
+      {
+        "name": "p-51a_tl_100lbs",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "us_100lb_anm30",
+            "localizedName": "100 磅 AN-M30A1 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_100lb_anm30",
+            "localizedName": "100 磅 AN-M30A1 炸​弹",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "p-51a_tl_250lbs",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "us_250lb_anm57",
+            "localizedName": "250 磅 AN-M57 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_250lb_anm57",
+            "localizedName": "250 磅 AN-M57 炸​弹",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "p-51a_tl_300lbs",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "us_300lb_m_31",
+            "localizedName": "300 lb H.E. M31 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_300lb_m_31",
+            "localizedName": "300 lb H.E. M31 bomb",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "p-51a_tl_500lbs",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "us_500lb_anm64a1",
+            "localizedName": "500 磅 AN-M64A1 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_500lb_anm64a1",
+            "localizedName": "500 磅 AN-M64A1 炸​弹",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

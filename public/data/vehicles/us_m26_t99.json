@@ -41,7 +41,7 @@
     "ammunitions": [
       {
         "name": "90mm_t33",
-        "localizedName": "T33 shot",
+        "localizedName": "T33",
         "type": "apbc_usa_tank",
         "caliber": 90.0,
         "mass": 10.91,
@@ -56,7 +56,7 @@
       },
       {
         "name": "90mm_m71",
-        "localizedName": "M71 shell",
+        "localizedName": "M71",
         "type": "he_frag_tank",
         "caliber": 90.0,
         "mass": 10.55,
@@ -67,7 +67,7 @@
       },
       {
         "name": "90mm_m82",
-        "localizedName": "M82 shot",
+        "localizedName": "M82",
         "type": "apcbc_tank",
         "caliber": 90.0,
         "mass": 10.91,
@@ -85,7 +85,7 @@
       },
       {
         "name": "90mm_m304",
-        "localizedName": "M304 shot",
+        "localizedName": "M304",
         "type": "apcr_tank",
         "caliber": 38.1,
         "mass": 7.62,

@@ -27,5 +27,18 @@
       "simulator": 0.44
     },
     "expMultiplier": 1.0
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "gunMG17",
+        "localizedName": "7.92 毫​米 MG 17 机​枪",
+        "count": 2,
+        "bullets": 1000,
+        "caliber": 7.9,
+        "fireRate": 1200
+      }
+    ],
+    "payloads": []
   }
 }

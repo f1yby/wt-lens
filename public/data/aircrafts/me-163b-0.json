@@ -27,5 +27,42 @@
       "simulator": 6.0
     },
     "expMultiplier": 2.02
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "cannonMG15120",
+        "localizedName": "20 毫​米 MG 151/20 机​炮",
+        "count": 2,
+        "bullets": 240,
+        "caliber": 20.0,
+        "fireRate": 700
+      },
+      {
+        "name": "me_163b_undercarriage",
+        "localizedName": "me_163b_undercarriage",
+        "count": 1,
+        "bullets": 1
+      }
+    ],
+    "payloads": [
+      {
+        "name": "me-163b_0_mg15120",
+        "weapons": [
+          {
+            "trigger": "additional gun",
+            "name": "cannonMG15120",
+            "localizedName": "20 毫​米 MG 151/20 机​炮",
+            "count": 80
+          },
+          {
+            "trigger": "additional gun",
+            "name": "cannonMG15120",
+            "localizedName": "20 毫​米 MG 151/20 机​炮",
+            "count": 80
+          }
+        ]
+      }
+    ]
   }
 }

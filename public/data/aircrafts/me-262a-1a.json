@@ -27,5 +27,461 @@
       "simulator": 6.0
     },
     "expMultiplier": 1.9
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "cannonMK108",
+        "localizedName": "30 毫​米 MK 108 机​炮",
+        "count": 4,
+        "bullets": 360,
+        "caliber": 30.0,
+        "fireRate": 600
+      }
+    ],
+    "payloads": [
+      {
+        "name": "me-262a-1a_r4m_rocket24",
+        "weapons": [
+          {
+            "trigger": "rockets",
+            "name": "de_r4m_orkan_rocket",
+            "localizedName": "R4M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "de_r4m_orkan_rocket",
+            "localizedName": "R4M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "de_r4m_orkan_rocket",
+            "localizedName": "R4M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "de_r4m_orkan_rocket",
+            "localizedName": "R4M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "de_r4m_orkan_rocket",
+            "localizedName": "R4M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "de_r4m_orkan_rocket",
+            "localizedName": "R4M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "de_r4m_orkan_rocket",
+            "localizedName": "R4M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "de_r4m_orkan_rocket",
+            "localizedName": "R4M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "de_r4m_orkan_rocket",
+            "localizedName": "R4M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "de_r4m_orkan_rocket",
+            "localizedName": "R4M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "de_r4m_orkan_rocket",
+            "localizedName": "R4M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "de_r4m_orkan_rocket",
+            "localizedName": "R4M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "de_r4m_orkan_rocket",
+            "localizedName": "R4M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "de_r4m_orkan_rocket",
+            "localizedName": "R4M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "de_r4m_orkan_rocket",
+            "localizedName": "R4M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "de_r4m_orkan_rocket",
+            "localizedName": "R4M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "de_r4m_orkan_rocket",
+            "localizedName": "R4M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "de_r4m_orkan_rocket",
+            "localizedName": "R4M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "de_r4m_orkan_rocket",
+            "localizedName": "R4M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "de_r4m_orkan_rocket",
+            "localizedName": "R4M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "de_r4m_orkan_rocket",
+            "localizedName": "R4M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "de_r4m_orkan_rocket",
+            "localizedName": "R4M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "de_r4m_orkan_rocket",
+            "localizedName": "R4M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "de_r4m_orkan_rocket",
+            "localizedName": "R4M 火​箭​弹",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "me-262a-1a_r4m_rocket48",
+        "weapons": [
+          {
+            "trigger": "rockets",
+            "name": "de_r4m_orkan_rocket",
+            "localizedName": "R4M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "de_r4m_orkan_rocket",
+            "localizedName": "R4M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "de_r4m_orkan_rocket",
+            "localizedName": "R4M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "de_r4m_orkan_rocket",
+            "localizedName": "R4M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "de_r4m_orkan_rocket",
+            "localizedName": "R4M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "de_r4m_orkan_rocket",
+            "localizedName": "R4M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "de_r4m_orkan_rocket",
+            "localizedName": "R4M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "de_r4m_orkan_rocket",
+            "localizedName": "R4M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "de_r4m_orkan_rocket",
+            "localizedName": "R4M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "de_r4m_orkan_rocket",
+            "localizedName": "R4M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "de_r4m_orkan_rocket",
+            "localizedName": "R4M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "de_r4m_orkan_rocket",
+            "localizedName": "R4M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "de_r4m_orkan_rocket",
+            "localizedName": "R4M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "de_r4m_orkan_rocket",
+            "localizedName": "R4M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "de_r4m_orkan_rocket",
+            "localizedName": "R4M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "de_r4m_orkan_rocket",
+            "localizedName": "R4M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "de_r4m_orkan_rocket",
+            "localizedName": "R4M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "de_r4m_orkan_rocket",
+            "localizedName": "R4M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "de_r4m_orkan_rocket",
+            "localizedName": "R4M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "de_r4m_orkan_rocket",
+            "localizedName": "R4M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "de_r4m_orkan_rocket",
+            "localizedName": "R4M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "de_r4m_orkan_rocket",
+            "localizedName": "R4M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "de_r4m_orkan_rocket",
+            "localizedName": "R4M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "de_r4m_orkan_rocket",
+            "localizedName": "R4M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "de_r4m_orkan_rocket",
+            "localizedName": "R4M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "de_r4m_orkan_rocket",
+            "localizedName": "R4M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "de_r4m_orkan_rocket",
+            "localizedName": "R4M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "de_r4m_orkan_rocket",
+            "localizedName": "R4M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "de_r4m_orkan_rocket",
+            "localizedName": "R4M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "de_r4m_orkan_rocket",
+            "localizedName": "R4M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "de_r4m_orkan_rocket",
+            "localizedName": "R4M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "de_r4m_orkan_rocket",
+            "localizedName": "R4M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "de_r4m_orkan_rocket",
+            "localizedName": "R4M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "de_r4m_orkan_rocket",
+            "localizedName": "R4M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "de_r4m_orkan_rocket",
+            "localizedName": "R4M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "de_r4m_orkan_rocket",
+            "localizedName": "R4M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "de_r4m_orkan_rocket",
+            "localizedName": "R4M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "de_r4m_orkan_rocket",
+            "localizedName": "R4M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "de_r4m_orkan_rocket",
+            "localizedName": "R4M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "de_r4m_orkan_rocket",
+            "localizedName": "R4M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "de_r4m_orkan_rocket",
+            "localizedName": "R4M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "de_r4m_orkan_rocket",
+            "localizedName": "R4M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "de_r4m_orkan_rocket",
+            "localizedName": "R4M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "de_r4m_orkan_rocket",
+            "localizedName": "R4M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "de_r4m_orkan_rocket",
+            "localizedName": "R4M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "de_r4m_orkan_rocket",
+            "localizedName": "R4M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "de_r4m_orkan_rocket",
+            "localizedName": "R4M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "de_r4m_orkan_rocket",
+            "localizedName": "R4M 火​箭​弹",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

@@ -27,5 +27,26 @@
       "simulator": 1.53
     },
     "expMultiplier": 1.18
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "gunBredaSAFAT127",
+        "localizedName": "12.7 毫​米​布​雷​达​-SAFAT 机​枪",
+        "count": 2,
+        "bullets": 800,
+        "caliber": 12.7,
+        "fireRate": 700
+      },
+      {
+        "name": "gunBredaSAFAT77",
+        "localizedName": "7.7 毫​米​布​雷​达​-SAFAT 机​枪",
+        "count": 2,
+        "bullets": 1000,
+        "caliber": 7.7,
+        "fireRate": 900
+      }
+    ],
+    "payloads": []
   }
 }

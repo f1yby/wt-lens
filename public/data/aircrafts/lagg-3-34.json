@@ -29,5 +29,26 @@
     },
     "expMultiplier": 1.18,
     "freeRepairs": 30
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "gunUBS",
+        "localizedName": "12.7 mm Berezin UBS machine gun",
+        "count": 1,
+        "bullets": 200,
+        "caliber": 12.7,
+        "fireRate": 996
+      },
+      {
+        "name": "cannonNS37",
+        "localizedName": "37 毫​米 NS-37 机​炮",
+        "count": 1,
+        "bullets": 36,
+        "caliber": 37.0,
+        "fireRate": 260
+      }
+    ],
+    "payloads": []
   }
 }

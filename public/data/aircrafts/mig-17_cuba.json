@@ -29,5 +29,78 @@
     },
     "expMultiplier": 2.14,
     "freeRepairs": 30
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "cannonN37D",
+        "localizedName": "37 毫​米 N-37D 机​炮",
+        "count": 1,
+        "bullets": 40,
+        "caliber": 37.0,
+        "fireRate": 400
+      },
+      {
+        "name": "cannonNR23",
+        "localizedName": "23 毫​米 NR-23 机​炮",
+        "count": 2,
+        "bullets": 160,
+        "caliber": 23.0,
+        "fireRate": 900
+      }
+    ],
+    "payloads": [
+      {
+        "name": "mig_17_bombs",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "su_ofab250",
+            "localizedName": "250 千​克 OFAB-250-270 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_ofab250",
+            "localizedName": "250 千​克 OFAB-250-270 炸​弹",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "mig_17_2xs_21_rockets",
+        "weapons": [
+          {
+            "trigger": "rockets",
+            "name": "su_s_21_rocket",
+            "localizedName": "S-21 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_s_21_rocket",
+            "localizedName": "S-21 火​箭​弹",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "mig_17_2xr3s_rockets",
+        "weapons": [
+          {
+            "trigger": "aam",
+            "name": "su_r_3s",
+            "localizedName": "R-3S 空​对​空​导​弹",
+            "count": 1
+          },
+          {
+            "trigger": "aam",
+            "name": "su_r_3s",
+            "localizedName": "R-3S 空​对​空​导​弹",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

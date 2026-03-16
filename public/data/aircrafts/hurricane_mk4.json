@@ -27,5 +27,123 @@
       "simulator": 1.21
     },
     "expMultiplier": 1.12
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "gunBrowning303_raf",
+        "localizedName": "7.7 毫​米​勃​朗​宁​机​枪",
+        "count": 2,
+        "bullets": 1200,
+        "caliber": 7.7,
+        "fireRate": 1000
+      }
+    ],
+    "payloads": [
+      {
+        "name": "hurricane_mk4_guns",
+        "weapons": [
+          {
+            "trigger": "cannon",
+            "name": "cannonVickers_S_underwing",
+            "localizedName": "40 毫​米​维​克​斯 S 级​炮",
+            "count": 16
+          },
+          {
+            "trigger": "cannon",
+            "name": "cannonVickers_S_underwing",
+            "localizedName": "40 毫​米​维​克​斯 S 级​炮",
+            "count": 16
+          }
+        ]
+      },
+      {
+        "name": "hurricane_mk4_rockets",
+        "weapons": [
+          {
+            "trigger": "rockets",
+            "name": "uk_rp3",
+            "localizedName": "RP-3 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "uk_rp3",
+            "localizedName": "RP-3 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "uk_rp3",
+            "localizedName": "RP-3 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "uk_rp3",
+            "localizedName": "RP-3 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "uk_rp3",
+            "localizedName": "RP-3 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "uk_rp3",
+            "localizedName": "RP-3 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "uk_rp3",
+            "localizedName": "RP-3 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "uk_rp3",
+            "localizedName": "RP-3 火​箭​弹",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "hurricane_mk4_250lbs_bombs",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "hurricane_mk4_500lbs_bombs",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "uk_500lbs",
+            "localizedName": "G.P. 500 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lbs",
+            "localizedName": "G.P. 500 lb Mk.IV bomb",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

@@ -1,4 +1,4 @@
-import type { AircraftVehicle, AircraftType, VehicleStats, GameMode, StatsMonthRange, EconomyData } from '../types';
+import type { AircraftVehicle, AircraftType, VehicleStats, GameMode, StatsMonthRange, EconomyData, AircraftWeapons } from '../types';
 import { getDefaultStatsMonthRange, getMonthRangeCacheKey } from '../types';
 import { StatSharkEntry, cleanName, buildStatsMapByMonthRange, convertToVehicleStats, loadStatsForRange } from './base';
 
@@ -23,6 +23,7 @@ interface AircraftEntry {
 export interface AircraftDetailEntry {
   id: string;
   economy?: EconomyData;
+  weapons?: AircraftWeapons;
 }
 
 // Cache for loaded raw data

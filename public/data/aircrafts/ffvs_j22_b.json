@@ -27,5 +27,47 @@
       "simulator": 2.79
     },
     "expMultiplier": 1.36
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "gunAkan_m39",
+        "localizedName": "13.2 毫​米 m/39 机​炮​（机​枪）",
+        "count": 4,
+        "bullets": 1000,
+        "caliber": 13.2,
+        "fireRate": 1080,
+        "belts": [
+          {
+            "key": "13_2_akan_m39_ground_targets",
+            "name": "13_2_akan_m39_ground_targets",
+            "bullets": [
+              "he_frag_t_ball",
+              "ap_ball",
+              "ap_ball",
+              "ap_ball"
+            ]
+          },
+          {
+            "key": "13_2_akan_m39_air_targets",
+            "name": "13_2_akan_m39_air_targets",
+            "bullets": [
+              "he_frag_t_ball",
+              "he_frag_t_ball",
+              "ap_ball",
+              "he_frag_t_ball"
+            ]
+          },
+          {
+            "key": "13_2_akan_m39_stealth",
+            "name": "13_2_akan_m39_stealth",
+            "bullets": [
+              "ap_ball"
+            ]
+          }
+        ]
+      }
+    ],
+    "payloads": []
   }
 }

@@ -27,5 +27,53 @@
       "simulator": 4.83
     },
     "expMultiplier": 1.54
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "cannonMK103",
+        "localizedName": "30 毫​米 MK 103 机​炮",
+        "count": 1,
+        "bullets": 70,
+        "caliber": 30.0,
+        "fireRate": 450
+      }
+    ],
+    "payloads": [
+      {
+        "name": "do_335a_0_mg15115",
+        "weapons": [
+          {
+            "trigger": "machine gun",
+            "name": "cannonMG15115",
+            "localizedName": "15 毫​米 MG 151/15 机​炮",
+            "count": 200
+          },
+          {
+            "trigger": "machine gun",
+            "name": "cannonMG15115",
+            "localizedName": "15 毫​米 MG 151/15 机​炮",
+            "count": 200
+          }
+        ]
+      },
+      {
+        "name": "do_335a_0_default",
+        "weapons": [
+          {
+            "trigger": "machine gun",
+            "name": "cannonMG15120",
+            "localizedName": "20 毫​米 MG 151/20 机​炮",
+            "count": 200
+          },
+          {
+            "trigger": "machine gun",
+            "name": "cannonMG15120",
+            "localizedName": "20 毫​米 MG 151/20 机​炮",
+            "count": 200
+          }
+        ]
+      }
+    ]
   }
 }

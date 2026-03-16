@@ -27,5 +27,153 @@
       "simulator": 5.1
     },
     "expMultiplier": 1.72
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "cannonHo5",
+        "localizedName": "20 毫​米 Ho-5 机​炮",
+        "count": 2,
+        "bullets": 300,
+        "caliber": 20.0,
+        "fireRate": 948,
+        "belts": [
+          {
+            "key": "ho5_universal",
+            "name": "通​用",
+            "bullets": [
+              "he_frag_i",
+              "he_frag_i",
+              "ap_t"
+            ]
+          },
+          {
+            "key": "ho5_ground_targets",
+            "name": "对​地",
+            "bullets": [
+              "ap_t",
+              "ap_t",
+              "he_frag_i"
+            ]
+          },
+          {
+            "key": "ho5_all_tracers",
+            "name": "曳​光",
+            "bullets": [
+              "ap_t"
+            ]
+          },
+          {
+            "key": "ho5_stealth",
+            "name": "匿​踪",
+            "bullets": [
+              "he_frag_i",
+              "he_frag_i",
+              "he_frag_i",
+              "ball_shell"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "cannonHo155",
+        "localizedName": "30 毫​米 Ho-155 机​炮",
+        "count": 2,
+        "bullets": 120,
+        "caliber": 30.0,
+        "fireRate": 500,
+        "belts": [
+          {
+            "key": "ho155_universal",
+            "name": "ho155_universal",
+            "bullets": [
+              "he_frag_i",
+              "ap_t",
+              "ap_t",
+              "he_frag",
+              "he_frag"
+            ]
+          },
+          {
+            "key": "ho155_ground_targets",
+            "name": "ho155_ground_targets",
+            "bullets": [
+              "he_frag_i",
+              "ap_t",
+              "ap_t",
+              "ap_t",
+              "ap_t"
+            ]
+          },
+          {
+            "key": "ho155_all_tracers",
+            "name": "ho155_all_tracers",
+            "bullets": [
+              "ap_t"
+            ]
+          },
+          {
+            "key": "ho155_stealth",
+            "name": "ho155_stealth",
+            "bullets": [
+              "he_frag"
+            ]
+          }
+        ]
+      }
+    ],
+    "payloads": [
+      {
+        "name": "ki_84_50kg_2bomb",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "jp_type94mod5",
+            "localizedName": "九​四​式​五​〇​瓩​爆​弹​（50 千​克）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "jp_type94mod5",
+            "localizedName": "九​四​式​五​〇​瓩​爆​弹​（50 千​克）",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "ki_84_100kg_2bomb",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "jp_type94mod10",
+            "localizedName": "九​四​式​一​〇​〇​瓩​爆​弹​（100 千​克）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "jp_type94mod10",
+            "localizedName": "九​四​式​一​〇​〇​瓩​爆​弹​（100 千​克）",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "ki_84_250kg_2bomb",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "jp_type92mod25",
+            "localizedName": "九​二​式​二​五​〇​瓩​爆​弹​（250 千​克）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "jp_type92mod25",
+            "localizedName": "九​二​式​二​五​〇​瓩​爆​弹​（250 千​克）",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

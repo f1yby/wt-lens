@@ -27,5 +27,18 @@
       "simulator": 6.0
     },
     "expMultiplier": 2.02
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "cannonNR23",
+        "localizedName": "23 毫​米 NR-23 机​炮",
+        "count": 2,
+        "bullets": 180,
+        "caliber": 23.0,
+        "fireRate": 900
+      }
+    ],
+    "payloads": []
   }
 }

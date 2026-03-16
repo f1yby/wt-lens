@@ -27,5 +27,135 @@
       "simulator": 0.86
     },
     "expMultiplier": 1.06
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "gunShKAS",
+        "localizedName": "7.62 毫​米​施​卡​斯​机​枪",
+        "count": 4,
+        "bullets": 3100,
+        "caliber": 7.6,
+        "fireRate": 1800
+      }
+    ],
+    "payloads": [
+      {
+        "name": "I16_type18_fab100",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "su_fab100",
+            "localizedName": "100 千​克 FAB-100 炸​弹​（铸​造）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab100",
+            "localizedName": "100 千​克 FAB-100 炸​弹​（铸​造）",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "I16_type18_fab50",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "su_fab50",
+            "localizedName": "50 千​克 FAB-50 炸​弹​（铸​造）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab50",
+            "localizedName": "50 千​克 FAB-50 炸​弹​（铸​造）",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "I16_type18_rockets",
+        "weapons": [
+          {
+            "trigger": "rockets",
+            "name": "su_ros_82",
+            "localizedName": "ROS-82 rockets",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_ros_82",
+            "localizedName": "ROS-82 rockets",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_ros_82",
+            "localizedName": "ROS-82 rockets",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_ros_82",
+            "localizedName": "ROS-82 rockets",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_ros_82",
+            "localizedName": "ROS-82 rockets",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_ros_82",
+            "localizedName": "ROS-82 rockets",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "I16_type18_rockets_rbs",
+        "weapons": [
+          {
+            "trigger": "rockets",
+            "name": "su_rbs82",
+            "localizedName": "RBS-82 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_rbs82",
+            "localizedName": "RBS-82 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_rbs82",
+            "localizedName": "RBS-82 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_rbs82",
+            "localizedName": "RBS-82 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_rbs82",
+            "localizedName": "RBS-82 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_rbs82",
+            "localizedName": "RBS-82 火​箭​弹",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

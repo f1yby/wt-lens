@@ -29,5 +29,26 @@
     },
     "expMultiplier": 1.18,
     "freeRepairs": 30
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "cannonVickers_S",
+        "localizedName": "40 毫​米​维​克​斯 S 级​炮",
+        "count": 1,
+        "bullets": 16,
+        "caliber": 40.0,
+        "fireRate": 100
+      },
+      {
+        "name": "cannonRollsRoyceBH",
+        "localizedName": "40 mm Rolls-Royce Type BH cannon",
+        "count": 1,
+        "bullets": 12,
+        "caliber": 40.0,
+        "fireRate": 200
+      }
+    ],
+    "payloads": []
   }
 }

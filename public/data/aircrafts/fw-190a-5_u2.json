@@ -27,5 +27,109 @@
       "simulator": 3.02
     },
     "expMultiplier": 1.42
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "cannonMG15120",
+        "localizedName": "20 毫​米 MG 151/20 机​炮",
+        "count": 2,
+        "bullets": 500,
+        "caliber": 20.0,
+        "fireRate": 700
+      }
+    ],
+    "payloads": [
+      {
+        "name": "Fw-190A-5_4xSC50",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "de_sc50",
+            "localizedName": "50 千​克 SC50JA 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "de_sc50",
+            "localizedName": "50 千​克 SC50JA 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "de_sc50",
+            "localizedName": "50 千​克 SC50JA 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "de_sc50",
+            "localizedName": "50 千​克 SC50JA 炸​弹",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "Fw-190A-5_SC250",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "de_sc250",
+            "localizedName": "250 千​克 SC260JA 炸​弹",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "Fw-190A-5_SC500",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "de_sc500",
+            "localizedName": "500 千​克 SC500K 炸​弹",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "Fw-190A-5_R6",
+        "weapons": [
+          {
+            "trigger": "rockets",
+            "name": "de_br20",
+            "localizedName": "Wfr.Gr. 21 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "de_br20",
+            "localizedName": "Wfr.Gr. 21 火​箭​弹",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "fw_190_flamm_250",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "de_flam_250",
+            "localizedName": "Flam C 250 incendiary bomb",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "fw_190_flamm_500",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "de_flam_500",
+            "localizedName": "Flam C 500 incendiary bomb",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

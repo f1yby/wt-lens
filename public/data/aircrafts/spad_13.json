@@ -27,5 +27,18 @@
       "simulator": 0.84
     },
     "expMultiplier": 1.0
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "gunVikkersMkI",
+        "localizedName": "7.7 mm Vickers Mk.I machine gun",
+        "count": 2,
+        "bullets": 1000,
+        "caliber": 7.7,
+        "fireRate": 540
+      }
+    ],
+    "payloads": []
   }
 }

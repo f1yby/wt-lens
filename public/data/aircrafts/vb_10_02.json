@@ -27,5 +27,54 @@
       "simulator": 3.08
     },
     "expMultiplier": 1.42
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "cannonHispano404",
+        "localizedName": "20 毫​米​西​斯​帕​诺​-​絮​扎 HS.404 机​炮",
+        "count": 4,
+        "bullets": 600,
+        "caliber": 20.0,
+        "fireRate": 700,
+        "belts": [
+          {
+            "key": "hispano_universal",
+            "name": "通​用",
+            "bullets": [
+              "ap_t",
+              "he_i",
+              "ap_t",
+              "he_i"
+            ]
+          },
+          {
+            "key": "hispano_tracers",
+            "name": "曳​光",
+            "bullets": [
+              "ap_t",
+              "he_i_t"
+            ]
+          },
+          {
+            "key": "hispano_stealth",
+            "name": "匿​踪",
+            "bullets": [
+              "ap",
+              "he_i"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "gunBrowning50_usaaf",
+        "localizedName": "12.7 毫​米 M2 勃​朗​宁​机​枪",
+        "count": 6,
+        "bullets": 2400,
+        "caliber": 12.7,
+        "fireRate": 750
+      }
+    ],
+    "payloads": []
   }
 }

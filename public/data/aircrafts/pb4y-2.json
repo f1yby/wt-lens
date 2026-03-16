@@ -27,5 +27,390 @@
       "simulator": 4.16
     },
     "expMultiplier": 1.54
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "gunBrowning50_turret",
+        "localizedName": "12.7 毫​米 M2 勃​朗​宁​机​枪",
+        "count": 12,
+        "bullets": 6800,
+        "caliber": 12.7,
+        "fireRate": 750
+      }
+    ],
+    "payloads": [
+      {
+        "name": "pb4y-2_20x100lbs_bombs",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "us_100lb_anm30",
+            "localizedName": "100 磅 AN-M30A1 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_100lb_anm30",
+            "localizedName": "100 磅 AN-M30A1 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_100lb_anm30",
+            "localizedName": "100 磅 AN-M30A1 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_100lb_anm30",
+            "localizedName": "100 磅 AN-M30A1 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_100lb_anm30",
+            "localizedName": "100 磅 AN-M30A1 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_100lb_anm30",
+            "localizedName": "100 磅 AN-M30A1 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_100lb_anm30",
+            "localizedName": "100 磅 AN-M30A1 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_100lb_anm30",
+            "localizedName": "100 磅 AN-M30A1 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_100lb_anm30",
+            "localizedName": "100 磅 AN-M30A1 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_100lb_anm30",
+            "localizedName": "100 磅 AN-M30A1 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_100lb_anm30",
+            "localizedName": "100 磅 AN-M30A1 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_100lb_anm30",
+            "localizedName": "100 磅 AN-M30A1 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_100lb_anm30",
+            "localizedName": "100 磅 AN-M30A1 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_100lb_anm30",
+            "localizedName": "100 磅 AN-M30A1 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_100lb_anm30",
+            "localizedName": "100 磅 AN-M30A1 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_100lb_anm30",
+            "localizedName": "100 磅 AN-M30A1 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_100lb_anm30",
+            "localizedName": "100 磅 AN-M30A1 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_100lb_anm30",
+            "localizedName": "100 磅 AN-M30A1 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_100lb_anm30",
+            "localizedName": "100 磅 AN-M30A1 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_100lb_anm30",
+            "localizedName": "100 磅 AN-M30A1 炸​弹",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "pb4y-2_8x500lbs_bombs",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "us_500lb_anm64a1",
+            "localizedName": "500 磅 AN-M64A1 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_500lb_anm64a1",
+            "localizedName": "500 磅 AN-M64A1 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_500lb_anm64a1",
+            "localizedName": "500 磅 AN-M64A1 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_500lb_anm64a1",
+            "localizedName": "500 磅 AN-M64A1 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_500lb_anm64a1",
+            "localizedName": "500 磅 AN-M64A1 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_500lb_anm64a1",
+            "localizedName": "500 磅 AN-M64A1 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_500lb_anm64a1",
+            "localizedName": "500 磅 AN-M64A1 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_500lb_anm64a1",
+            "localizedName": "500 磅 AN-M64A1 炸​弹",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "pb4y-2_4x1000lbs_bombs",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "us_1000lb_anm65a1",
+            "localizedName": "1,000 磅 AN-M65A1 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_1000lb_anm65a1",
+            "localizedName": "1,000 磅 AN-M65A1 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_1000lb_anm65a1",
+            "localizedName": "1,000 磅 AN-M65A1 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_1000lb_anm65a1",
+            "localizedName": "1,000 磅 AN-M65A1 炸​弹",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "pb4y-2_8x1000lbs_bombs",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "us_1000lb_anm65a1",
+            "localizedName": "1,000 磅 AN-M65A1 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_1000lb_anm65a1",
+            "localizedName": "1,000 磅 AN-M65A1 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_1000lb_anm65a1",
+            "localizedName": "1,000 磅 AN-M65A1 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_1000lb_anm65a1",
+            "localizedName": "1,000 磅 AN-M65A1 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_1000lb_anm65a1",
+            "localizedName": "1,000 磅 AN-M65A1 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_1000lb_anm65a1",
+            "localizedName": "1,000 磅 AN-M65A1 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_1000lb_anm65a1",
+            "localizedName": "1,000 磅 AN-M65A1 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_1000lb_anm65a1",
+            "localizedName": "1,000 磅 AN-M65A1 炸​弹",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "pb4y-2_8x1000lbs_mines",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "us_mine_mk13_mod0",
+            "localizedName": "1000 磅 A 型 Mk.1 机​载​磁​性​水​雷",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_mine_mk13_mod0",
+            "localizedName": "1000 磅 A 型 Mk.1 机​载​磁​性​水​雷",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_mine_mk13_mod0",
+            "localizedName": "1000 磅 A 型 Mk.1 机​载​磁​性​水​雷",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_mine_mk13_mod0",
+            "localizedName": "1000 磅 A 型 Mk.1 机​载​磁​性​水​雷",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_mine_mk13_mod0",
+            "localizedName": "1000 磅 A 型 Mk.1 机​载​磁​性​水​雷",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_mine_mk13_mod0",
+            "localizedName": "1000 磅 A 型 Mk.1 机​载​磁​性​水​雷",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_mine_mk13_mod0",
+            "localizedName": "1000 磅 A 型 Mk.1 机​载​磁​性​水​雷",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_mine_mk13_mod0",
+            "localizedName": "1000 磅 A 型 Mk.1 机​载​磁​性​水​雷",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "pb4y-2_4x1000lbs_mines",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "us_mine_mk13_mod0",
+            "localizedName": "1000 磅 A 型 Mk.1 机​载​磁​性​水​雷",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_mine_mk13_mod0",
+            "localizedName": "1000 磅 A 型 Mk.1 机​载​磁​性​水​雷",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_mine_mk13_mod0",
+            "localizedName": "1000 磅 A 型 Mk.1 机​载​磁​性​水​雷",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_mine_mk13_mod0",
+            "localizedName": "1000 磅 A 型 Mk.1 机​载​磁​性​水​雷",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "pb4y-2_2x2000lbs_bombs",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "us_2000lbs_anm66",
+            "localizedName": "2,000 磅 AN-M66A2 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_2000lbs_anm66",
+            "localizedName": "2,000 磅 AN-M66A2 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_2000lbs_anm66",
+            "localizedName": "2,000 磅 AN-M66A2 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_2000lbs_anm66",
+            "localizedName": "2,000 磅 AN-M66A2 炸​弹",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

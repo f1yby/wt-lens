@@ -27,5 +27,62 @@
       "simulator": 6.0
     },
     "expMultiplier": 1.96
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "cannonHo155",
+        "localizedName": "30 毫​米 Ho-155 机​炮",
+        "count": 2,
+        "bullets": 120,
+        "caliber": 30.0,
+        "fireRate": 500,
+        "belts": [
+          {
+            "key": "ho155_universal",
+            "name": "ho155_universal",
+            "bullets": [
+              "he_frag_i",
+              "ap_t",
+              "ap_t",
+              "he_frag",
+              "he_frag"
+            ]
+          },
+          {
+            "key": "ho155_ground_targets",
+            "name": "ho155_ground_targets",
+            "bullets": [
+              "he_frag_i",
+              "ap_t",
+              "ap_t",
+              "ap_t",
+              "ap_t"
+            ]
+          },
+          {
+            "key": "ho155_all_tracers",
+            "name": "ho155_all_tracers",
+            "bullets": [
+              "ap_t"
+            ]
+          },
+          {
+            "key": "ho155_stealth",
+            "name": "ho155_stealth",
+            "bullets": [
+              "he_frag"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "me_163b_undercarriage",
+        "localizedName": "me_163b_undercarriage",
+        "count": 1,
+        "bullets": 1
+      }
+    ],
+    "payloads": []
   }
 }

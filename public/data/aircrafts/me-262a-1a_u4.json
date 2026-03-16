@@ -27,5 +27,18 @@
       "simulator": 6.0
     },
     "expMultiplier": 1.78
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "cannonMk214a",
+        "localizedName": "50 毫​米 MK 214A 机​炮",
+        "count": 1,
+        "bullets": 32,
+        "caliber": 50.0,
+        "fireRate": 160
+      }
+    ],
+    "payloads": []
   }
 }

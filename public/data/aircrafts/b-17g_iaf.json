@@ -27,5 +27,291 @@
       "simulator": 5.49
     },
     "expMultiplier": 1.72
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "gunBrowning50_turret_late",
+        "localizedName": "12.7 毫​米 M2 勃​朗​宁​机​枪",
+        "count": 13,
+        "bullets": 6250,
+        "caliber": 12.7,
+        "fireRate": 750
+      }
+    ],
+    "payloads": [
+      {
+        "name": "b-17g_iaf_default",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "il_100_50_kg_gp",
+            "localizedName": "100/50 kg G.P. bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "il_100_50_kg_gp",
+            "localizedName": "100/50 kg G.P. bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "il_100_50_kg_gp",
+            "localizedName": "100/50 kg G.P. bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "il_100_50_kg_gp",
+            "localizedName": "100/50 kg G.P. bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "il_100_50_kg_gp",
+            "localizedName": "100/50 kg G.P. bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "il_100_50_kg_gp",
+            "localizedName": "100/50 kg G.P. bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "il_100_50_kg_gp",
+            "localizedName": "100/50 kg G.P. bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "il_100_50_kg_gp",
+            "localizedName": "100/50 kg G.P. bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "il_100_50_kg_gp",
+            "localizedName": "100/50 kg G.P. bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "il_100_50_kg_gp",
+            "localizedName": "100/50 kg G.P. bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "il_100_50_kg_gp",
+            "localizedName": "100/50 kg G.P. bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "il_100_50_kg_gp",
+            "localizedName": "100/50 kg G.P. bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "il_100_50_kg_gp",
+            "localizedName": "100/50 kg G.P. bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "il_100_50_kg_gp",
+            "localizedName": "100/50 kg G.P. bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "il_100_50_kg_gp",
+            "localizedName": "100/50 kg G.P. bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "il_100_50_kg_gp",
+            "localizedName": "100/50 kg G.P. bomb",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "b-17g_iaf_8x500lbs",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "il_250_50_kg_gp",
+            "localizedName": "250/50 kg G.P. bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "il_250_50_kg_gp",
+            "localizedName": "250/50 kg G.P. bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "il_250_50_kg_gp",
+            "localizedName": "250/50 kg G.P. bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "il_250_50_kg_gp",
+            "localizedName": "250/50 kg G.P. bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "il_250_50_kg_gp",
+            "localizedName": "250/50 kg G.P. bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "il_250_50_kg_gp",
+            "localizedName": "250/50 kg G.P. bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "il_250_50_kg_gp",
+            "localizedName": "250/50 kg G.P. bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "il_250_50_kg_gp",
+            "localizedName": "250/50 kg G.P. bomb",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "b-17g_iaf_12x500lbs",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "il_250_50_kg_gp",
+            "localizedName": "250/50 kg G.P. bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "il_250_50_kg_gp",
+            "localizedName": "250/50 kg G.P. bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "il_250_50_kg_gp",
+            "localizedName": "250/50 kg G.P. bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "il_250_50_kg_gp",
+            "localizedName": "250/50 kg G.P. bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "il_250_50_kg_gp",
+            "localizedName": "250/50 kg G.P. bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "il_250_50_kg_gp",
+            "localizedName": "250/50 kg G.P. bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "il_250_50_kg_gp",
+            "localizedName": "250/50 kg G.P. bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "il_250_50_kg_gp",
+            "localizedName": "250/50 kg G.P. bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "il_250_50_kg_gp",
+            "localizedName": "250/50 kg G.P. bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "il_250_50_kg_gp",
+            "localizedName": "250/50 kg G.P. bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "il_250_50_kg_gp",
+            "localizedName": "250/50 kg G.P. bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "il_250_50_kg_gp",
+            "localizedName": "250/50 kg G.P. bomb",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "b-17g_iaf_6x1000lbs",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "il_500_50_kg_gp",
+            "localizedName": "500/50 G.P. bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "il_500_50_kg_gp",
+            "localizedName": "500/50 G.P. bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "il_500_50_kg_gp",
+            "localizedName": "500/50 G.P. bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "il_500_50_kg_gp",
+            "localizedName": "500/50 G.P. bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "il_500_50_kg_gp",
+            "localizedName": "500/50 G.P. bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "il_500_50_kg_gp",
+            "localizedName": "500/50 G.P. bomb",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

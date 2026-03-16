@@ -27,5 +27,26 @@
       "simulator": 4.97
     },
     "expMultiplier": 1.78
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "cannonMK108",
+        "localizedName": "30 毫​米 MK 108 机​炮",
+        "count": 1,
+        "bullets": 90,
+        "caliber": 30.0,
+        "fireRate": 600
+      },
+      {
+        "name": "cannonMG15120",
+        "localizedName": "20 毫​米 MG 151/20 机​炮",
+        "count": 2,
+        "bullets": 350,
+        "caliber": 20.0,
+        "fireRate": 700
+      }
+    ],
+    "payloads": []
   }
 }

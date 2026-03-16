@@ -27,5 +27,640 @@
       "simulator": 5.09
     },
     "expMultiplier": 1.66
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "gunBrowning303_turret",
+        "localizedName": "7.7 毫​米​勃​朗​宁​机​枪",
+        "count": 4,
+        "bullets": 4000,
+        "caliber": 7.7,
+        "fireRate": 1000
+      },
+      {
+        "name": "gunBrowning50_raf_turret",
+        "localizedName": "12.7 毫​米 M2 勃​朗​宁​机​枪",
+        "count": 2,
+        "bullets": 5000,
+        "caliber": 12.7,
+        "fireRate": 750
+      }
+    ],
+    "payloads": [
+      {
+        "name": "lancaster_mk3_14x250lbs",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs_mc_mk1_mk2_bomb",
+            "localizedName": "M.C. 250 lb Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs_mc_mk1_mk2_bomb",
+            "localizedName": "M.C. 250 lb Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs_mc_mk1_mk2_bomb",
+            "localizedName": "M.C. 250 lb Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs_mc_mk1_mk2_bomb",
+            "localizedName": "M.C. 250 lb Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs_mc_mk1_mk2_bomb",
+            "localizedName": "M.C. 250 lb Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs_mc_mk1_mk2_bomb",
+            "localizedName": "M.C. 250 lb Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs_mc_mk1_mk2_bomb",
+            "localizedName": "M.C. 250 lb Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs_mc_mk1_mk2_bomb",
+            "localizedName": "M.C. 250 lb Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs_mc_mk1_mk2_bomb",
+            "localizedName": "M.C. 250 lb Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs_mc_mk1_mk2_bomb",
+            "localizedName": "M.C. 250 lb Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs_mc_mk1_mk2_bomb",
+            "localizedName": "M.C. 250 lb Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs_mc_mk1_mk2_bomb",
+            "localizedName": "M.C. 250 lb Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs_mc_mk1_mk2_bomb",
+            "localizedName": "M.C. 250 lb Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs_mc_mk1_mk2_bomb",
+            "localizedName": "M.C. 250 lb Mk.I bomb",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "lancaster_mk3_6x500lbs_8x250lbs",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_mc_mk1_mk4_long_tail_bomb",
+            "localizedName": "M.C. 500 lb Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_mc_mk1_mk4_long_tail_bomb",
+            "localizedName": "M.C. 500 lb Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_mc_mk1_mk4_long_tail_bomb",
+            "localizedName": "M.C. 500 lb Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_mc_mk1_mk4_long_tail_bomb",
+            "localizedName": "M.C. 500 lb Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_mc_mk1_mk4_long_tail_bomb",
+            "localizedName": "M.C. 500 lb Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_mc_mk1_mk4_long_tail_bomb",
+            "localizedName": "M.C. 500 lb Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs_mc_mk1_mk2_bomb",
+            "localizedName": "M.C. 250 lb Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs_mc_mk1_mk2_bomb",
+            "localizedName": "M.C. 250 lb Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs_mc_mk1_mk2_bomb",
+            "localizedName": "M.C. 250 lb Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs_mc_mk1_mk2_bomb",
+            "localizedName": "M.C. 250 lb Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs_mc_mk1_mk2_bomb",
+            "localizedName": "M.C. 250 lb Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs_mc_mk1_mk2_bomb",
+            "localizedName": "M.C. 250 lb Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs_mc_mk1_mk2_bomb",
+            "localizedName": "M.C. 250 lb Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs_mc_mk1_mk2_bomb",
+            "localizedName": "M.C. 250 lb Mk.I bomb",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "lancaster_mk3_14x500lbs",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_mc_mk1_mk4_long_tail_bomb",
+            "localizedName": "M.C. 500 lb Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_mc_mk1_mk4_long_tail_bomb",
+            "localizedName": "M.C. 500 lb Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_mc_mk1_mk4_long_tail_bomb",
+            "localizedName": "M.C. 500 lb Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_mc_mk1_mk4_long_tail_bomb",
+            "localizedName": "M.C. 500 lb Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_mc_mk1_mk4_long_tail_bomb",
+            "localizedName": "M.C. 500 lb Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_mc_mk1_mk4_long_tail_bomb",
+            "localizedName": "M.C. 500 lb Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_mc_mk1_mk4_long_tail_bomb",
+            "localizedName": "M.C. 500 lb Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_mc_mk1_mk4_long_tail_bomb",
+            "localizedName": "M.C. 500 lb Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_mc_mk1_mk4_long_tail_bomb",
+            "localizedName": "M.C. 500 lb Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_mc_mk1_mk4_long_tail_bomb",
+            "localizedName": "M.C. 500 lb Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_mc_mk1_mk4_long_tail_bomb",
+            "localizedName": "M.C. 500 lb Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_mc_mk1_mk4_long_tail_bomb",
+            "localizedName": "M.C. 500 lb Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_mc_mk1_mk4_long_tail_bomb",
+            "localizedName": "M.C. 500 lb Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_mc_mk1_mk4_long_tail_bomb",
+            "localizedName": "M.C. 500 lb Mk.I bomb",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "lancaster_mk3_1x1000lbs_6x500lbs_2x250lbs",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "uk_1000lbs_mc_mk1_mk2_bomb",
+            "localizedName": "M.C. 1000 lb Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_mc_mk1_mk4_long_tail_bomb",
+            "localizedName": "M.C. 500 lb Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_mc_mk1_mk4_long_tail_bomb",
+            "localizedName": "M.C. 500 lb Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_mc_mk1_mk4_long_tail_bomb",
+            "localizedName": "M.C. 500 lb Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_mc_mk1_mk4_long_tail_bomb",
+            "localizedName": "M.C. 500 lb Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_mc_mk1_mk4_long_tail_bomb",
+            "localizedName": "M.C. 500 lb Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lb_mc_mk1_mk4_long_tail_bomb",
+            "localizedName": "M.C. 500 lb Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs_mc_mk1_mk2_bomb",
+            "localizedName": "M.C. 250 lb Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs_mc_mk1_mk2_bomb",
+            "localizedName": "M.C. 250 lb Mk.I bomb",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "lancaster_mk3_6x1000lbs_3x250lbs",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs_mc_mk1_mk2_bomb",
+            "localizedName": "M.C. 250 lb Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_1000lbs_mc_mk1_mk2_bomb",
+            "localizedName": "M.C. 1000 lb Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_1000lbs_mc_mk1_mk2_bomb",
+            "localizedName": "M.C. 1000 lb Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_1000lbs_mc_mk1_mk2_bomb",
+            "localizedName": "M.C. 1000 lb Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_1000lbs_mc_mk1_mk2_bomb",
+            "localizedName": "M.C. 1000 lb Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_1000lbs_mc_mk1_mk2_bomb",
+            "localizedName": "M.C. 1000 lb Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_1000lbs_mc_mk1_mk2_bomb",
+            "localizedName": "M.C. 1000 lb Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs_mc_mk1_mk2_bomb",
+            "localizedName": "M.C. 250 lb Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs_mc_mk1_mk2_bomb",
+            "localizedName": "M.C. 250 lb Mk.I bomb",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "lancaster_mk3_14x1000lbs",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "uk_1000lbs_mc_mk1_mk2_bomb",
+            "localizedName": "M.C. 1000 lb Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_1000lbs_mc_mk1_mk2_bomb",
+            "localizedName": "M.C. 1000 lb Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_1000lbs_mc_mk1_mk2_bomb",
+            "localizedName": "M.C. 1000 lb Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_1000lbs_mc_mk1_mk2_bomb",
+            "localizedName": "M.C. 1000 lb Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_1000lbs_mc_mk1_mk2_bomb",
+            "localizedName": "M.C. 1000 lb Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_1000lbs_mc_mk1_mk2_bomb",
+            "localizedName": "M.C. 1000 lb Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_1000lbs_mc_mk1_mk2_bomb",
+            "localizedName": "M.C. 1000 lb Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_1000lbs_mc_mk1_mk2_bomb",
+            "localizedName": "M.C. 1000 lb Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_1000lbs_mc_mk1_mk2_bomb",
+            "localizedName": "M.C. 1000 lb Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_1000lbs_mc_mk1_mk2_bomb",
+            "localizedName": "M.C. 1000 lb Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_1000lbs_mc_mk1_mk2_bomb",
+            "localizedName": "M.C. 1000 lb Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_1000lbs_mc_mk1_mk2_bomb",
+            "localizedName": "M.C. 1000 lb Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_1000lbs_mc_mk1_mk2_bomb",
+            "localizedName": "M.C. 1000 lb Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_1000lbs_mc_mk1_mk2_bomb",
+            "localizedName": "M.C. 1000 lb Mk.I bomb",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "lancaster_mk3_6x1000lbs_2x250lbs_1x4000lbs",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "uk_mk2_cookie",
+            "localizedName": "4000 lb H.C. Mk.II bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_1000lbs_mc_mk1_mk2_bomb",
+            "localizedName": "M.C. 1000 lb Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_1000lbs_mc_mk1_mk2_bomb",
+            "localizedName": "M.C. 1000 lb Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_1000lbs_mc_mk1_mk2_bomb",
+            "localizedName": "M.C. 1000 lb Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_1000lbs_mc_mk1_mk2_bomb",
+            "localizedName": "M.C. 1000 lb Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_1000lbs_mc_mk1_mk2_bomb",
+            "localizedName": "M.C. 1000 lb Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_1000lbs_mc_mk1_mk2_bomb",
+            "localizedName": "M.C. 1000 lb Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_250lbs",
+            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "lancaster_mk3_cookies",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "uk_mk2_cookie",
+            "localizedName": "4000 lb H.C. Mk.II bomb",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "lancaster_mk3_1x_8000_6x_500",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "uk_8000lb_hc_mkI_n33_bomb",
+            "localizedName": "8000 lb H.C. Mk.II bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lbs",
+            "localizedName": "G.P. 500 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lbs",
+            "localizedName": "G.P. 500 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lbs",
+            "localizedName": "G.P. 500 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lbs",
+            "localizedName": "G.P. 500 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lbs",
+            "localizedName": "G.P. 500 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lbs",
+            "localizedName": "G.P. 500 lb Mk.IV bomb",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "lancaster_mk3_1x_8000",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "uk_8000lb_hc_mkI_n52_bomb",
+            "localizedName": "8000 lb H.C. Mk.II bomb",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "lancaster_mk3_1x_12000",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "uk_12000lb_hc_mkI_n52_bomb",
+            "localizedName": "12000 lb H.C Mk.I bomb",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

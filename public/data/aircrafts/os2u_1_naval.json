@@ -27,5 +27,44 @@
       "simulator": 1.21
     },
     "expMultiplier": 1.06
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "gunBrowning30_usaaf",
+        "localizedName": "7.62 毫​米​勃​朗​宁​机​枪",
+        "count": 1,
+        "bullets": 500,
+        "caliber": 7.6,
+        "fireRate": 1000
+      },
+      {
+        "name": "gunBrowning30_turret",
+        "localizedName": "7.62 毫​米​勃​朗​宁​机​枪",
+        "count": 1,
+        "bullets": 600,
+        "caliber": 7.6,
+        "fireRate": 1000
+      }
+    ],
+    "payloads": [
+      {
+        "name": "os2u_naval_default",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "us_100lb_anm30",
+            "localizedName": "100 磅 AN-M30A1 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_100lb_anm30",
+            "localizedName": "100 磅 AN-M30A1 炸​弹",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

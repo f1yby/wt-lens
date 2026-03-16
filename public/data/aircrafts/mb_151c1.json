@@ -29,5 +29,47 @@
     },
     "expMultiplier": 1.06,
     "freeRepairs": 30
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "gunMAC34",
+        "localizedName": "7.5 毫​米 MAC 1934 机​枪",
+        "count": 4,
+        "bullets": 1200,
+        "caliber": 7.5,
+        "fireRate": 1350,
+        "belts": [
+          {
+            "key": "7_5mm_universal",
+            "name": "通​用",
+            "bullets": [
+              "t_ball",
+              "ap_ball",
+              "ap_ball",
+              "i_ball",
+              "i_ball"
+            ]
+          },
+          {
+            "key": "7_5mm_all_tracers",
+            "name": "曳​光",
+            "bullets": [
+              "i_t_ball"
+            ]
+          },
+          {
+            "key": "7_5mm_stealth",
+            "name": "匿​踪",
+            "bullets": [
+              "ap_ball",
+              "ap_ball",
+              "i_ball"
+            ]
+          }
+        ]
+      }
+    ],
+    "payloads": []
   }
 }

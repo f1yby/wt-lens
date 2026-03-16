@@ -27,5 +27,65 @@
       "simulator": 6.0
     },
     "expMultiplier": 2.02
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "cannonHispanoMkII",
+        "localizedName": "20 毫​米​西​斯​帕​诺 Mk II 机​炮",
+        "count": 4,
+        "bullets": 720,
+        "caliber": 20.0,
+        "fireRate": 600,
+        "belts": [
+          {
+            "key": "hispano_universal",
+            "name": "通​用",
+            "bullets": [
+              "ap_t",
+              "he_i",
+              "sapi"
+            ]
+          },
+          {
+            "key": "hispano_tracers",
+            "name": "曳​光",
+            "bullets": [
+              "ap_t",
+              "t_shell",
+              "he_i"
+            ]
+          },
+          {
+            "key": "hispano_stealth",
+            "name": "匿​踪",
+            "bullets": [
+              "he_i",
+              "he_i",
+              "sapi"
+            ]
+          }
+        ]
+      }
+    ],
+    "payloads": [
+      {
+        "name": "meteor_fmk3_1000lb_bombs",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "uk_1000lbs_gp",
+            "localizedName": "1000 lb H.E. M.C. Mk.13 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_1000lbs_gp",
+            "localizedName": "1000 lb H.E. M.C. Mk.13 bomb",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

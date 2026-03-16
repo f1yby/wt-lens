@@ -27,5 +27,52 @@
       "simulator": 4.11
     },
     "expMultiplier": 1.6
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "gunMG17",
+        "localizedName": "7.92 毫​米 MG 17 机​枪",
+        "count": 2,
+        "bullets": 1800,
+        "caliber": 7.9,
+        "fireRate": 1200
+      },
+      {
+        "name": "cannonMG15120",
+        "localizedName": "20 毫​米 MG 151/20 机​炮",
+        "count": 2,
+        "bullets": 500,
+        "caliber": 20.0,
+        "fireRate": 700
+      },
+      {
+        "name": "cannonMGFFM",
+        "localizedName": "20 毫​米 MG FF/M 机​炮",
+        "count": 2,
+        "bullets": 180,
+        "caliber": 20.0,
+        "fireRate": 520
+      }
+    ],
+    "payloads": [
+      {
+        "name": "Fw-190A-5_R6",
+        "weapons": [
+          {
+            "trigger": "rockets",
+            "name": "de_br20",
+            "localizedName": "Wfr.Gr. 21 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "de_br20",
+            "localizedName": "Wfr.Gr. 21 火​箭​弹",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

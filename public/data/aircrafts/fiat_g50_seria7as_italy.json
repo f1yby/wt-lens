@@ -27,5 +27,36 @@
       "simulator": 0.92
     },
     "expMultiplier": 1.06
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "gunBredaSAFAT127",
+        "localizedName": "12.7 毫​米​布​雷​达​-SAFAT 机​枪",
+        "count": 2,
+        "bullets": 600,
+        "caliber": 12.7,
+        "fireRate": 700
+      }
+    ],
+    "payloads": [
+      {
+        "name": "fiat_g50_seria7as_2x50kg",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "it_50kg_t",
+            "localizedName": "50 千​克​炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "it_50kg_t",
+            "localizedName": "50 千​克​炸​弹",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

@@ -27,5 +27,432 @@
       "simulator": 6.0
     },
     "expMultiplier": 2.02
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "cannonNR23",
+        "localizedName": "23 毫​米 NR-23 机​炮",
+        "count": 2,
+        "bullets": 170,
+        "caliber": 23.0,
+        "fireRate": 900
+      },
+      {
+        "name": "cannonNR23_turret",
+        "localizedName": "23 毫​米 NR-23 机​炮",
+        "count": 2,
+        "bullets": 700,
+        "caliber": 23.0,
+        "fireRate": 900
+      },
+      {
+        "name": "su_tu_14t_rocket_booster_left1",
+        "localizedName": "su_tu_14t_rocket_booster_left1",
+        "count": 1,
+        "bullets": 1
+      },
+      {
+        "name": "su_tu_14t_rocket_booster_left2",
+        "localizedName": "su_tu_14t_rocket_booster_left2",
+        "count": 1,
+        "bullets": 1
+      },
+      {
+        "name": "su_tu_14t_rocket_booster_right1",
+        "localizedName": "su_tu_14t_rocket_booster_right1",
+        "count": 1,
+        "bullets": 1
+      },
+      {
+        "name": "su_tu_14t_rocket_booster_right2",
+        "localizedName": "su_tu_14t_rocket_booster_right2",
+        "count": 1,
+        "bullets": 1
+      }
+    ],
+    "payloads": [
+      {
+        "name": "tu_14t_fab50",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "su_fab50",
+            "localizedName": "50 千​克 FAB-50 炸​弹​（铸​造）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab50",
+            "localizedName": "50 千​克 FAB-50 炸​弹​（铸​造）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab50",
+            "localizedName": "50 千​克 FAB-50 炸​弹​（铸​造）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab50",
+            "localizedName": "50 千​克 FAB-50 炸​弹​（铸​造）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab50",
+            "localizedName": "50 千​克 FAB-50 炸​弹​（铸​造）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab50",
+            "localizedName": "50 千​克 FAB-50 炸​弹​（铸​造）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab50",
+            "localizedName": "50 千​克 FAB-50 炸​弹​（铸​造）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab50",
+            "localizedName": "50 千​克 FAB-50 炸​弹​（铸​造）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab50",
+            "localizedName": "50 千​克 FAB-50 炸​弹​（铸​造）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab50",
+            "localizedName": "50 千​克 FAB-50 炸​弹​（铸​造）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab50",
+            "localizedName": "50 千​克 FAB-50 炸​弹​（铸​造）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab50",
+            "localizedName": "50 千​克 FAB-50 炸​弹​（铸​造）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab50",
+            "localizedName": "50 千​克 FAB-50 炸​弹​（铸​造）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab50",
+            "localizedName": "50 千​克 FAB-50 炸​弹​（铸​造）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab50",
+            "localizedName": "50 千​克 FAB-50 炸​弹​（铸​造）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab50",
+            "localizedName": "50 千​克 FAB-50 炸​弹​（铸​造）",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "tu_14t_fab100",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "su_fab_100m_43",
+            "localizedName": "100 千​克 FAB-100 M-43 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab_100m_43",
+            "localizedName": "100 千​克 FAB-100 M-43 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab_100m_43",
+            "localizedName": "100 千​克 FAB-100 M-43 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab_100m_43",
+            "localizedName": "100 千​克 FAB-100 M-43 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab_100m_43",
+            "localizedName": "100 千​克 FAB-100 M-43 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab_100m_43",
+            "localizedName": "100 千​克 FAB-100 M-43 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab_100m_43",
+            "localizedName": "100 千​克 FAB-100 M-43 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab_100m_43",
+            "localizedName": "100 千​克 FAB-100 M-43 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab_100m_43",
+            "localizedName": "100 千​克 FAB-100 M-43 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab_100m_43",
+            "localizedName": "100 千​克 FAB-100 M-43 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab_100m_43",
+            "localizedName": "100 千​克 FAB-100 M-43 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab_100m_43",
+            "localizedName": "100 千​克 FAB-100 M-43 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab_100m_43",
+            "localizedName": "100 千​克 FAB-100 M-43 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab_100m_43",
+            "localizedName": "100 千​克 FAB-100 M-43 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab_100m_43",
+            "localizedName": "100 千​克 FAB-100 M-43 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab_100m_43",
+            "localizedName": "100 千​克 FAB-100 M-43 炸​弹",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "tu_14t_fab250",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "su_fab_250m_46",
+            "localizedName": "250 千​克 FAB-250 M-46 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab_250m_46",
+            "localizedName": "250 千​克 FAB-250 M-46 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab_250m_46",
+            "localizedName": "250 千​克 FAB-250 M-46 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab_250m_46",
+            "localizedName": "250 千​克 FAB-250 M-46 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab_250m_46",
+            "localizedName": "250 千​克 FAB-250 M-46 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab_250m_46",
+            "localizedName": "250 千​克 FAB-250 M-46 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab_250m_46",
+            "localizedName": "250 千​克 FAB-250 M-46 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab_250m_46",
+            "localizedName": "250 千​克 FAB-250 M-46 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab_250m_46",
+            "localizedName": "250 千​克 FAB-250 M-46 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab_250m_46",
+            "localizedName": "250 千​克 FAB-250 M-46 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab_250m_46",
+            "localizedName": "250 千​克 FAB-250 M-46 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab_250m_46",
+            "localizedName": "250 千​克 FAB-250 M-46 炸​弹",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "tu_14t_fab500",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "su_fab_500m_46",
+            "localizedName": "500 千​克 FAB-500 M-46 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab_500m_46",
+            "localizedName": "500 千​克 FAB-500 M-46 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab_500m_46",
+            "localizedName": "500 千​克 FAB-500 M-46 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab_500m_46",
+            "localizedName": "500 千​克 FAB-500 M-46 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab_500m_46",
+            "localizedName": "500 千​克 FAB-500 M-46 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab_500m_46",
+            "localizedName": "500 千​克 FAB-500 M-46 炸​弹",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "tu_14t_fab1000",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "su_fab_1000m_43",
+            "localizedName": "1000 kg FAB-1000M-43 bomb",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "tu_14t_fab1500",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "su_fab_1500m_46",
+            "localizedName": "1,500 千​克 FAB-1500 M-46 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab_1500m_46",
+            "localizedName": "1,500 千​克 FAB-1500 M-46 炸​弹",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "tu_14t_fab3000",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "su_fab_3000m_46",
+            "localizedName": "3,000 千​克 FAB-3000 M-46 炸​弹",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "tu_14t_torpedo",
+        "weapons": [
+          {
+            "trigger": "torpedoes",
+            "name": "su_45_36man_1952_torpedo",
+            "localizedName": "450 毫​米 45-36MAN 型​鱼​雷",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "tu_14t_torpedo_45_54vt",
+        "weapons": [
+          {
+            "trigger": "torpedoes",
+            "name": "su_45_54vt_1954_torpedo",
+            "localizedName": "450 mm 45-54VT torpedo for high-altitude torpedo dropping",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

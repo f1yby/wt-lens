@@ -12,5 +12,44 @@
       "simulator": 0.48
     },
     "expMultiplier": 1.0
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "gunBrowning50_early_1935",
+        "localizedName": "12.7 mm M2 Browning machine gun",
+        "count": 1,
+        "bullets": 200,
+        "caliber": 12.7,
+        "fireRate": 750
+      },
+      {
+        "name": "gunBrowning30_usaaf_1935",
+        "localizedName": "7.62 mm Browning machine gun",
+        "count": 1,
+        "bullets": 500,
+        "caliber": 7.6,
+        "fireRate": 1000
+      }
+    ],
+    "payloads": [
+      {
+        "name": "P-26A_1934_2x100lbs",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "us_100lb_anm30",
+            "localizedName": "100 磅 AN-M30A1 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_100lb_anm30",
+            "localizedName": "100 磅 AN-M30A1 炸​弹",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

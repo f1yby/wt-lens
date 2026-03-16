@@ -41,7 +41,7 @@
     "ammunitions": [
       {
         "name": "76mm_shot_mk6_ap",
-        "localizedName": "Shot Mk.6",
+        "localizedName": "AP Mk VI",
         "type": "ap_tank",
         "caliber": 76.2,
         "mass": 7.71,
@@ -56,7 +56,7 @@
       },
       {
         "name": "76mm_shell_mk1_he",
-        "localizedName": "Shell Mk.1",
+        "localizedName": "HE Mk I",
         "type": "he_frag_tank",
         "caliber": 76.2,
         "mass": 6.98,
@@ -67,7 +67,7 @@
       },
       {
         "name": "76mm_shot_mk4_apc",
-        "localizedName": "Shot Mk.4",
+        "localizedName": "APC Mk IV",
         "type": "apc_solid_medium_caliber_tank",
         "caliber": 76.2,
         "mass": 7.71,
@@ -82,7 +82,7 @@
       },
       {
         "name": "76mm_shot_mk8_apcbc",
-        "localizedName": "Shot Mk.8",
+        "localizedName": "APCBC Mk VIII",
         "type": "apcbc_solid_medium_caliber_tank",
         "caliber": 76.2,
         "mass": 7.71,
@@ -97,7 +97,7 @@
       },
       {
         "name": "76mm_shot_sv_mk1_apds",
-        "localizedName": "Shot SV Mk.1",
+        "localizedName": "APDS Mk I",
         "type": "apds_early_tank",
         "caliber": 49.5,
         "mass": 2.477,

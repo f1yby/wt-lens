@@ -27,5 +27,171 @@
       "simulator": 6.0
     },
     "expMultiplier": 1.96
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "cannonADEN",
+        "localizedName": "30 毫​米​“阿​登”​机​炮",
+        "count": 2,
+        "bullets": 400,
+        "caliber": 30.0,
+        "fireRate": 1200
+      }
+    ],
+    "payloads": [
+      {
+        "name": "swift_500lb_gp_mk4_bombs",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "uk_500lbs_43",
+            "localizedName": "G.P. 500 lb Mk.IV bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_500lbs_43",
+            "localizedName": "G.P. 500 lb Mk.IV bomb",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "swift_1000lb_gp_mk1_bombs",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "uk_1000lbs_gp_mk1",
+            "localizedName": "1000 lb G.P. Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_1000lbs_gp_mk1",
+            "localizedName": "1000 lb G.P. Mk.I bomb",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "swift_1000lb_mc_mk1_bombs",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "uk_1000lbs_mc_mk1",
+            "localizedName": "1000 lb M.C. Mk.I bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "uk_1000lbs_mc_mk1",
+            "localizedName": "1000 lb M.C. Mk.I bomb",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "swift_16x60lbs_rockets",
+        "weapons": [
+          {
+            "trigger": "rockets",
+            "name": "uk_rp3_4b",
+            "localizedName": "RP-3 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "uk_rp3_4b",
+            "localizedName": "RP-3 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "uk_rp3_4a",
+            "localizedName": "RP-3 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "uk_rp3_4a",
+            "localizedName": "RP-3 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "uk_rp3_4b",
+            "localizedName": "RP-3 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "uk_rp3_4b",
+            "localizedName": "RP-3 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "uk_rp3_4a",
+            "localizedName": "RP-3 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "uk_rp3_4a",
+            "localizedName": "RP-3 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "uk_rp3_4b",
+            "localizedName": "RP-3 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "uk_rp3_4b",
+            "localizedName": "RP-3 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "uk_rp3_4a",
+            "localizedName": "RP-3 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "uk_rp3_4a",
+            "localizedName": "RP-3 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "uk_rp3_4b",
+            "localizedName": "RP-3 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "uk_rp3_4b",
+            "localizedName": "RP-3 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "uk_rp3_4a",
+            "localizedName": "RP-3 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "uk_rp3_4a",
+            "localizedName": "RP-3 火​箭​弹",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

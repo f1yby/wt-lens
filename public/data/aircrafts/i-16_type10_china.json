@@ -27,5 +27,101 @@
       "simulator": 1.36
     },
     "expMultiplier": 1.12
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "gunShKAS",
+        "localizedName": "7.62 毫​米​施​卡​斯​机​枪",
+        "count": 4,
+        "bullets": 3100,
+        "caliber": 7.6,
+        "fireRate": 1800
+      }
+    ],
+    "payloads": [
+      {
+        "name": "i_16_type24_rockets",
+        "weapons": [
+          {
+            "trigger": "rockets",
+            "name": "su_ros_82",
+            "localizedName": "ROS-82 rockets",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_ros_82",
+            "localizedName": "ROS-82 rockets",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_ros_82",
+            "localizedName": "ROS-82 rockets",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_ros_82",
+            "localizedName": "ROS-82 rockets",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_ros_82",
+            "localizedName": "ROS-82 rockets",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_ros_82",
+            "localizedName": "ROS-82 rockets",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "i_16_type24_rockets_rbs",
+        "weapons": [
+          {
+            "trigger": "rockets",
+            "name": "su_rbs82",
+            "localizedName": "RBS-82 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_rbs82",
+            "localizedName": "RBS-82 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_rbs82",
+            "localizedName": "RBS-82 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_rbs82",
+            "localizedName": "RBS-82 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_rbs82",
+            "localizedName": "RBS-82 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_rbs82",
+            "localizedName": "RBS-82 火​箭​弹",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

@@ -27,5 +27,56 @@
       "simulator": 1.21
     },
     "expMultiplier": 1.06
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "gunMAC34_turret",
+        "localizedName": "7.5 毫​米 MAC 1934 机​枪",
+        "count": 2,
+        "bullets": 200,
+        "caliber": 7.5,
+        "fireRate": 1350,
+        "belts": [
+          {
+            "key": "7_5mm_turret_ap",
+            "name": "穿​甲",
+            "bullets": [
+              "t_ball",
+              "ap_ball",
+              "ap_ball",
+              "ap_ball"
+            ]
+          },
+          {
+            "key": "7_5mm_turret_ap_t",
+            "name": "曳​光",
+            "bullets": [
+              "t_ball",
+              "ap_ball"
+            ]
+          }
+        ]
+      }
+    ],
+    "payloads": [
+      {
+        "name": "loire_130_default",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "fr_75kg_g2_navale",
+            "localizedName": "75 kg G2 Navale bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "fr_75kg_g2_navale",
+            "localizedName": "75 kg G2 Navale bomb",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

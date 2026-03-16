@@ -27,5 +27,220 @@
       "simulator": 6.0
     },
     "expMultiplier": 1.96
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "cannonNR23",
+        "localizedName": "23 毫​米 NR-23 机​炮",
+        "count": 2,
+        "bullets": 200,
+        "caliber": 23.0,
+        "fireRate": 900
+      },
+      {
+        "name": "cannonNR23_turret",
+        "localizedName": "23 毫​米 NR-23 机​炮",
+        "count": 2,
+        "bullets": 450,
+        "caliber": 23.0,
+        "fireRate": 900
+      },
+      {
+        "name": "su_il_28_rocket_booster_left",
+        "localizedName": "su_il_28_rocket_booster_left",
+        "count": 1,
+        "bullets": 1
+      },
+      {
+        "name": "su_il_28_rocket_booster_right",
+        "localizedName": "su_il_28_rocket_booster_right",
+        "count": 1,
+        "bullets": 1
+      }
+    ],
+    "payloads": [
+      {
+        "name": "il_28_12xfab100",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "su_fab_100m_43",
+            "localizedName": "100 千​克 FAB-100 M-43 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab_100m_43",
+            "localizedName": "100 千​克 FAB-100 M-43 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab_100m_43",
+            "localizedName": "100 千​克 FAB-100 M-43 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab_100m_43",
+            "localizedName": "100 千​克 FAB-100 M-43 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab_100m_43",
+            "localizedName": "100 千​克 FAB-100 M-43 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab_100m_43",
+            "localizedName": "100 千​克 FAB-100 M-43 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab_100m_43",
+            "localizedName": "100 千​克 FAB-100 M-43 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab_100m_43",
+            "localizedName": "100 千​克 FAB-100 M-43 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab_100m_43",
+            "localizedName": "100 千​克 FAB-100 M-43 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab_100m_43",
+            "localizedName": "100 千​克 FAB-100 M-43 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab_100m_43",
+            "localizedName": "100 千​克 FAB-100 M-43 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab_100m_43",
+            "localizedName": "100 千​克 FAB-100 M-43 炸​弹",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "il_28_8xfab250",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "su_fab_250m_46",
+            "localizedName": "250 千​克 FAB-250 M-46 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab_250m_46",
+            "localizedName": "250 千​克 FAB-250 M-46 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab_250m_46",
+            "localizedName": "250 千​克 FAB-250 M-46 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab_250m_46",
+            "localizedName": "250 千​克 FAB-250 M-46 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab_250m_46",
+            "localizedName": "250 千​克 FAB-250 M-46 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab_250m_46",
+            "localizedName": "250 千​克 FAB-250 M-46 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab_250m_46",
+            "localizedName": "250 千​克 FAB-250 M-46 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab_250m_46",
+            "localizedName": "250 千​克 FAB-250 M-46 炸​弹",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "il_28_4xfab500",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "su_fab_500m_46",
+            "localizedName": "500 千​克 FAB-500 M-46 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab_500m_46",
+            "localizedName": "500 千​克 FAB-500 M-46 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab_500m_46",
+            "localizedName": "500 千​克 FAB-500 M-46 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab_500m_46",
+            "localizedName": "500 千​克 FAB-500 M-46 炸​弹",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "il_28_2xfab1500",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "su_fab_1500m_46",
+            "localizedName": "1,500 千​克 FAB-1500 M-46 炸​弹",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "il_28_1xfab3000",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "su_fab_3000m_46",
+            "localizedName": "3,000 千​克 FAB-3000 M-46 炸​弹",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

@@ -27,5 +27,58 @@
       "simulator": 0.56
     },
     "expMultiplier": 1.0
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "gunKsp_m22_37r_turret",
+        "localizedName": "8 毫​米 m/22-37 可​动​式​机​枪",
+        "count": 2,
+        "bullets": 2025,
+        "caliber": 8.0,
+        "fireRate": 1200
+      }
+    ],
+    "payloads": [
+      {
+        "name": "he_115a_2_default",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "swd_250kg_minb_m40",
+            "localizedName": "250 千​克 m/40 爆​破​炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "swd_250kg_minb_m40",
+            "localizedName": "250 千​克 m/40 爆​破​炸​弹",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "he_115a_2_500kg",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "swd_500kg_minb_m41",
+            "localizedName": "500 千​克 m/41 爆​破​炸​弹",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "he_115a_2_torpedo_m38",
+        "weapons": [
+          {
+            "trigger": "torpedoes",
+            "name": "swd_m38_torpedo",
+            "localizedName": "m/38 鱼​雷",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

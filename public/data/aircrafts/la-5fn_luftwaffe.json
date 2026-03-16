@@ -29,5 +29,47 @@
     },
     "expMultiplier": 1.42,
     "freeRepairs": 30
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "cannonShVAKS",
+        "localizedName": "20 毫​米​施​瓦​克​机​炮",
+        "count": 2,
+        "bullets": 340,
+        "caliber": 20.0,
+        "fireRate": 720,
+        "belts": [
+          {
+            "key": "shvak_universal",
+            "name": "通​用",
+            "bullets": [
+              "frag_i_t",
+              "he_frag",
+              "ap_i",
+              "frag_i_t"
+            ]
+          },
+          {
+            "key": "shvak_tracers",
+            "name": "曳​光",
+            "bullets": [
+              "frag_i_t"
+            ]
+          },
+          {
+            "key": "shvak_stealth",
+            "name": "匿​踪",
+            "bullets": [
+              "ap_i",
+              "he_frag",
+              "he_frag",
+              "frag_i"
+            ]
+          }
+        ]
+      }
+    ],
+    "payloads": []
   }
 }

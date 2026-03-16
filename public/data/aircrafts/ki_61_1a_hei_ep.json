@@ -29,5 +29,78 @@
     },
     "expMultiplier": 1.6,
     "freeRepairs": 30
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "gunHo103",
+        "localizedName": "12.7 毫​米 Ho-103 固​定​机​枪",
+        "count": 2,
+        "bullets": 500,
+        "caliber": 12.7,
+        "fireRate": 900
+      },
+      {
+        "name": "cannonMG15120",
+        "localizedName": "20 毫​米 MG 151/20 机​炮",
+        "count": 2,
+        "bullets": 240,
+        "caliber": 20.0,
+        "fireRate": 700
+      }
+    ],
+    "payloads": [
+      {
+        "name": "ki_43_2_50kg_2bomb",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "jp_type94mod5",
+            "localizedName": "九​四​式​五​〇​瓩​爆​弹​（50 千​克）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "jp_type94mod5",
+            "localizedName": "九​四​式​五​〇​瓩​爆​弹​（50 千​克）",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "ki_43_2_100kg_2bomb",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "jp_type94mod10",
+            "localizedName": "九​四​式​一​〇​〇​瓩​爆​弹​（100 千​克）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "jp_type94mod10",
+            "localizedName": "九​四​式​一​〇​〇​瓩​爆​弹​（100 千​克）",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "ki_43_2_250kg_2bomb",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "jp_type92mod25",
+            "localizedName": "九​二​式​二​五​〇​瓩​爆​弹​（250 千​克）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "jp_type92mod25",
+            "localizedName": "九​二​式​二​五​〇​瓩​爆​弹​（250 千​克）",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

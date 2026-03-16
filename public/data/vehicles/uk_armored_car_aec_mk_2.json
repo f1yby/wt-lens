@@ -41,7 +41,7 @@
     "ammunitions": [
       {
         "name": "57mm_shot_mk8t",
-        "localizedName": "Shot Mk.8",
+        "localizedName": "APC Mk VIII",
         "type": "apc_solid_medium_caliber_tank",
         "caliber": 57.0,
         "mass": 2.87,
@@ -56,7 +56,7 @@
       },
       {
         "name": "57mm_shell_mk10t",
-        "localizedName": "Shell Mk.10",
+        "localizedName": "HE Mk X",
         "type": "he_frag_tank",
         "caliber": 57.0,
         "mass": 2.72,
@@ -67,7 +67,7 @@
       },
       {
         "name": "57mm_shot_mk5t_hv",
-        "localizedName": "Shot Mk.5 HV",
+        "localizedName": "HVAP Mk V",
         "type": "ap_tank",
         "caliber": 57.0,
         "mass": 2.8,
@@ -82,7 +82,7 @@
       },
       {
         "name": "57mm_shot_mk9t",
-        "localizedName": "Shot Mk.9",
+        "localizedName": "APCBC Mk IX",
         "type": "apcbc_solid_medium_caliber_tank",
         "caliber": 57.0,
         "mass": 3.23,

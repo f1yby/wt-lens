@@ -27,5 +27,26 @@
       "simulator": 1.07
     },
     "expMultiplier": 1.12
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "cannonBK37",
+        "localizedName": "37 毫​米 BK 3.7 机​炮",
+        "count": 2,
+        "bullets": 24,
+        "caliber": 37.0,
+        "fireRate": 180
+      },
+      {
+        "name": "gunMG81_turret",
+        "localizedName": "7.92 毫​米 MG 81 机​枪",
+        "count": 2,
+        "bullets": 1700,
+        "caliber": 7.9,
+        "fireRate": 1596
+      }
+    ],
+    "payloads": []
   }
 }

@@ -29,5 +29,18 @@
     },
     "expMultiplier": 1.3,
     "freeRepairs": 30
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "gunBrowning303_raf",
+        "localizedName": "7.7 毫​米​勃​朗​宁​机​枪",
+        "count": 8,
+        "bullets": 2800,
+        "caliber": 7.7,
+        "fireRate": 1000
+      }
+    ],
+    "payloads": []
   }
 }

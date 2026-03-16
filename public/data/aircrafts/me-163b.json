@@ -27,5 +27,24 @@
       "simulator": 6.0
     },
     "expMultiplier": 1.96
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "cannonMK108",
+        "localizedName": "30 毫​米 MK 108 机​炮",
+        "count": 2,
+        "bullets": 120,
+        "caliber": 30.0,
+        "fireRate": 600
+      },
+      {
+        "name": "me_163b_undercarriage",
+        "localizedName": "me_163b_undercarriage",
+        "count": 1,
+        "bullets": 1
+      }
+    ],
+    "payloads": []
   }
 }

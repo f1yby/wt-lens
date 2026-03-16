@@ -27,5 +27,119 @@
       "simulator": 1.25
     },
     "expMultiplier": 1.12
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "gunType97",
+        "localizedName": "7.7 毫​米​九​七​式​固​定​机​枪",
+        "count": 2,
+        "bullets": 1360,
+        "caliber": 7.7,
+        "fireRate": 900,
+        "belts": [
+          {
+            "key": "7_7mm_universal",
+            "name": "通​用",
+            "bullets": [
+              "t_ball",
+              "ap_ball",
+              "he_i_ball",
+              "ap_ball"
+            ]
+          },
+          {
+            "key": "7_7_all_tracers",
+            "name": "曳​光",
+            "bullets": [
+              "t_ball",
+              "t_ball",
+              "t_ball",
+              "ap_ball"
+            ]
+          },
+          {
+            "key": "7_7_stealth",
+            "name": "匿​踪",
+            "bullets": [
+              "i_ball",
+              "ap_ball",
+              "ap_ball",
+              "ap_ball",
+              "he_i_ball"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "cannonType99",
+        "localizedName": "20 毫​米​九​九​式​一​号​固​定​机​炮",
+        "count": 2,
+        "bullets": 120,
+        "caliber": 20.0,
+        "fireRate": 516,
+        "belts": [
+          {
+            "key": "type99mk1_universal",
+            "name": "通​用",
+            "bullets": [
+              "he_frag_t",
+              "he_frag",
+              "he_frag",
+              "aphe"
+            ]
+          },
+          {
+            "key": "type99mk1_ground_targets",
+            "name": "对​地",
+            "bullets": [
+              "aphe",
+              "aphe",
+              "aphe",
+              "aphe",
+              "he_frag",
+              "he_frag_t"
+            ]
+          },
+          {
+            "key": "type99mk1_all_tracers",
+            "name": "曳​光",
+            "bullets": [
+              "he_frag_t"
+            ]
+          },
+          {
+            "key": "type99mk1_stealth",
+            "name": "匿​踪",
+            "bullets": [
+              "he_frag",
+              "he_frag",
+              "he_frag",
+              "aphe",
+              "aphe"
+            ]
+          }
+        ]
+      }
+    ],
+    "payloads": [
+      {
+        "name": "A6M2_n_2x60kg",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "jp_navy_type97mod6_60kg",
+            "localizedName": "九​七​式​六​番​陆​用​爆​弹​（60 千​克）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "jp_navy_type97mod6_60kg",
+            "localizedName": "九​七​式​六​番​陆​用​爆​弹​（60 千​克）",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

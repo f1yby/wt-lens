@@ -41,7 +41,7 @@
     "ammunitions": [
       {
         "name": "76mm_m339",
-        "localizedName": "M339 shot",
+        "localizedName": "M339",
         "type": "apbc_usa_tank",
         "caliber": 76.2,
         "mass": 6.6,
@@ -55,7 +55,7 @@
       },
       {
         "name": "76mm_m352",
-        "localizedName": "M352 shell",
+        "localizedName": "M352",
         "type": "he_frag_tank",
         "caliber": 76.1,
         "mass": 6.8,
@@ -66,7 +66,7 @@
       },
       {
         "name": "76mm_m319",
-        "localizedName": "M319 shot",
+        "localizedName": "M319",
         "type": "apcr_tank",
         "caliber": 38.1,
         "mass": 3.2,
@@ -84,7 +84,7 @@
       },
       {
         "name": "76mm_m331a2",
-        "localizedName": "M331A2 shot",
+        "localizedName": "M331A2",
         "type": "apds_early_tank",
         "caliber": 50.0,
         "mass": 2.81,

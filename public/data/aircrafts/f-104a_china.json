@@ -27,5 +27,36 @@
       "simulator": 6.0
     },
     "expMultiplier": 2.2
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "cannonM61A1_low_rpm",
+        "localizedName": "20 mm M61A1 cannon",
+        "count": 1,
+        "bullets": 725,
+        "caliber": 20.0,
+        "fireRate": 4000
+      }
+    ],
+    "payloads": [
+      {
+        "name": "f-104a_aim_9b",
+        "weapons": [
+          {
+            "trigger": "aam",
+            "name": "us_aim9b_sidewinder",
+            "localizedName": "AIM-9B",
+            "count": 1
+          },
+          {
+            "trigger": "aam",
+            "name": "us_aim9b_sidewinder",
+            "localizedName": "AIM-9B",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

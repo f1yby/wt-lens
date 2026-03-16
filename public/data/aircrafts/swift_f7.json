@@ -27,5 +27,36 @@
       "simulator": 6.0
     },
     "expMultiplier": 2.02
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "cannonADEN",
+        "localizedName": "30 毫​米​“阿​登”​机​炮",
+        "count": 2,
+        "bullets": 320,
+        "caliber": 30.0,
+        "fireRate": 1200
+      }
+    ],
+    "payloads": [
+      {
+        "name": "swift_fireflash",
+        "weapons": [
+          {
+            "trigger": "aam",
+            "name": "uk_fireflash",
+            "localizedName": "“火​闪”​空​对​空​导​弹",
+            "count": 1
+          },
+          {
+            "trigger": "aam",
+            "name": "uk_fireflash",
+            "localizedName": "“火​闪”​空​对​空​导​弹",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

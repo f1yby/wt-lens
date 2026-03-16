@@ -27,5 +27,166 @@
       "simulator": 3.38
     },
     "expMultiplier": 1.48
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "cannonM10",
+        "localizedName": "37 毫​米 M10 机​炮",
+        "count": 1,
+        "bullets": 58,
+        "caliber": 37.0,
+        "fireRate": 165
+      },
+      {
+        "name": "gunBrowning50_usaaf",
+        "localizedName": "12.7 毫​米 M2 勃​朗​宁​机​枪",
+        "count": 4,
+        "bullets": 900,
+        "caliber": 12.7,
+        "fireRate": 750
+      }
+    ],
+    "payloads": [
+      {
+        "name": "p_63a_10_1xbomb",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "us_500lb_anm64a1",
+            "localizedName": "500 磅 AN-M64A1 炸​弹",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "p_63a_10_2xbomb",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "us_500lb_anm64a1",
+            "localizedName": "500 磅 AN-M64A1 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_500lb_anm64a1",
+            "localizedName": "500 磅 AN-M64A1 炸​弹",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "p_63a_10_bomb",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "us_500lb_anm64a1",
+            "localizedName": "500 磅 AN-M64A1 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_500lb_anm64a1",
+            "localizedName": "500 磅 AN-M64A1 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_500lb_anm64a1",
+            "localizedName": "500 磅 AN-M64A1 炸​弹",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "p_63a_10_m8_bazooka",
+        "weapons": [
+          {
+            "trigger": "rockets",
+            "name": "us_m8bazooka",
+            "localizedName": "M8 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "us_m8bazooka",
+            "localizedName": "M8 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "us_m8bazooka",
+            "localizedName": "M8 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "us_m8bazooka",
+            "localizedName": "M8 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "us_m8bazooka",
+            "localizedName": "M8 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "us_m8bazooka",
+            "localizedName": "M8 火​箭​弹",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "p_63a_10_1xbomb_m8_bazooka",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "us_500lb_anm64a1",
+            "localizedName": "500 磅 AN-M64A1 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "us_m8bazooka",
+            "localizedName": "M8 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "us_m8bazooka",
+            "localizedName": "M8 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "us_m8bazooka",
+            "localizedName": "M8 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "us_m8bazooka",
+            "localizedName": "M8 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "us_m8bazooka",
+            "localizedName": "M8 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "us_m8bazooka",
+            "localizedName": "M8 火​箭​弹",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

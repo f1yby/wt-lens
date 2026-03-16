@@ -27,5 +27,18 @@
       "simulator": 1.58
     },
     "expMultiplier": 1.24
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "cannonVickers_P",
+        "localizedName": "47 毫​米​维​克​斯 P 级​炮",
+        "count": 2,
+        "bullets": 72,
+        "caliber": 47.0,
+        "fireRate": 72
+      }
+    ],
+    "payloads": []
   }
 }

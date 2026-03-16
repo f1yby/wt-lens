@@ -27,5 +27,55 @@
       "simulator": 1.53
     },
     "expMultiplier": 1.18
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "cannonHispanoMkI",
+        "localizedName": "20 毫​米​西​斯​帕​诺 Mk I 机​炮",
+        "count": 2,
+        "bullets": 120,
+        "caliber": 20.0,
+        "fireRate": 600,
+        "belts": [
+          {
+            "key": "hispano_universal",
+            "name": "通​用",
+            "bullets": [
+              "ap_t",
+              "he_i",
+              "sapi"
+            ]
+          },
+          {
+            "key": "hispano_tracers",
+            "name": "曳​光",
+            "bullets": [
+              "ap_t",
+              "t_shell",
+              "he_i"
+            ]
+          },
+          {
+            "key": "hispano_stealth",
+            "name": "匿​踪",
+            "bullets": [
+              "he_i",
+              "he_i",
+              "sapi"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "gunBrowning303_raf",
+        "localizedName": "7.7 毫​米​勃​朗​宁​机​枪",
+        "count": 4,
+        "bullets": 1400,
+        "caliber": 7.7,
+        "fireRate": 1000
+      }
+    ],
+    "payloads": []
   }
 }

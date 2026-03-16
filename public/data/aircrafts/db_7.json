@@ -29,5 +29,162 @@
     },
     "expMultiplier": 1.12,
     "freeRepairs": 30
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "gunMAC39",
+        "localizedName": "7.5 毫​米 MAC 1934 机​枪",
+        "count": 4,
+        "bullets": 2000,
+        "caliber": 7.5,
+        "fireRate": 1350,
+        "belts": [
+          {
+            "key": "7_5mm_universal",
+            "name": "通​用",
+            "bullets": [
+              "t_ball",
+              "ap_ball",
+              "ap_ball",
+              "i_ball",
+              "i_ball"
+            ]
+          },
+          {
+            "key": "7_5mm_all_tracers",
+            "name": "曳​光",
+            "bullets": [
+              "i_t_ball"
+            ]
+          },
+          {
+            "key": "7_5mm_stealth",
+            "name": "匿​踪",
+            "bullets": [
+              "ap_ball",
+              "ap_ball",
+              "i_ball"
+            ]
+          },
+          {
+            "key": "7_5mm_turret_ap",
+            "name": "穿​甲",
+            "bullets": [
+              "t_ball",
+              "ball",
+              "ball",
+              "ball",
+              "i_ball",
+              "ap_ball"
+            ]
+          },
+          {
+            "key": "7_5mm_turret_ap_t",
+            "name": "曳​光",
+            "bullets": [
+              "t_ball",
+              "ball",
+              "ball",
+              "ball",
+              "i_ball",
+              "ap_ball"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "gunMAC39_turret",
+        "localizedName": "7.5 毫​米 MAC 1934 机​枪",
+        "count": 2,
+        "bullets": 1000,
+        "caliber": 7.5,
+        "fireRate": 1350,
+        "belts": [
+          {
+            "key": "7_5mm_universal",
+            "name": "通​用",
+            "bullets": [
+              "t_ball",
+              "ball",
+              "ball",
+              "i_ball",
+              "ap_ball"
+            ]
+          },
+          {
+            "key": "7_5mm_all_tracers",
+            "name": "曳​光",
+            "bullets": [
+              "t_ball",
+              "ball",
+              "ball",
+              "i_ball",
+              "ap_ball"
+            ]
+          },
+          {
+            "key": "7_5mm_stealth",
+            "name": "匿​踪",
+            "bullets": [
+              "t_ball",
+              "ball",
+              "ball",
+              "i_ball",
+              "ap_ball"
+            ]
+          },
+          {
+            "key": "7_5mm_turret_ap",
+            "name": "穿​甲",
+            "bullets": [
+              "t_ball",
+              "ap_ball",
+              "ap_ball",
+              "ap_ball"
+            ]
+          },
+          {
+            "key": "7_5mm_turret_ap_t",
+            "name": "曳​光",
+            "bullets": [
+              "t_ball",
+              "ap_ball"
+            ]
+          }
+        ]
+      }
+    ],
+    "payloads": [
+      {
+        "name": "DB-7_bombs",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "us_500lb_anm64a1",
+            "localizedName": "500 磅 AN-M64A1 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_500lb_anm64a1",
+            "localizedName": "500 磅 AN-M64A1 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_500lb_anm64a1",
+            "localizedName": "500 磅 AN-M64A1 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "us_500lb_anm64a1",
+            "localizedName": "500 磅 AN-M64A1 炸​弹",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

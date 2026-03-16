@@ -29,5 +29,35 @@
     },
     "expMultiplier": 1.66,
     "freeRepairs": 30
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "gunMG131",
+        "localizedName": "13 毫​米 MG 131 机​枪",
+        "count": 2,
+        "bullets": 800,
+        "caliber": 13.0,
+        "fireRate": 900,
+        "belts": [
+          {
+            "key": "mg131_stealth",
+            "name": "mg131_stealth",
+            "bullets": [
+              "ap_i_ball"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "cannonMG15120",
+        "localizedName": "20 毫​米 MG 151/20 机​炮",
+        "count": 4,
+        "bullets": 780,
+        "caliber": 20.0,
+        "fireRate": 700
+      }
+    ],
+    "payloads": []
   }
 }

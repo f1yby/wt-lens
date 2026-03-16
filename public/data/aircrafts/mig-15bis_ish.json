@@ -29,5 +29,753 @@
     },
     "expMultiplier": 2.08,
     "freeRepairs": 30
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "cannonN37D",
+        "localizedName": "37 毫​米 N-37D 机​炮",
+        "count": 1,
+        "bullets": 40,
+        "caliber": 37.0,
+        "fireRate": 400
+      },
+      {
+        "name": "cannonNR23",
+        "localizedName": "23 毫​米 NR-23 机​炮",
+        "count": 2,
+        "bullets": 160,
+        "caliber": 23.0,
+        "fireRate": 900
+      }
+    ],
+    "payloads": [
+      {
+        "name": "mig_15bis_ish_100_bombs",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "su_ofab100_120",
+            "localizedName": "100 千​克 OFAB-100 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_ofab100_120",
+            "localizedName": "100 千​克 OFAB-100 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_ofab100_120",
+            "localizedName": "100 千​克 OFAB-100 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_ofab100_120",
+            "localizedName": "100 千​克 OFAB-100 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_ofab100_120",
+            "localizedName": "100 千​克 OFAB-100 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_ofab100_120",
+            "localizedName": "100 千​克 OFAB-100 炸​弹",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "mig_15bis_ish_250_bombs",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "su_ofab250",
+            "localizedName": "250 千​克 OFAB-250-270 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_ofab250",
+            "localizedName": "250 千​克 OFAB-250-270 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_ofab250",
+            "localizedName": "250 千​克 OFAB-250-270 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_ofab250",
+            "localizedName": "250 千​克 OFAB-250-270 炸​弹",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "mig_15bis_ish_500_bombs",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "su_fab500_m54",
+            "localizedName": "500 千​克 FAB-500 M-54 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab500_m54",
+            "localizedName": "500 千​克 FAB-500 M-54 炸​弹",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "mig_15bis_ish_s5k_rockets",
+        "weapons": [
+          {
+            "trigger": "rockets",
+            "name": "su_s_5kp_rocket",
+            "localizedName": "S-5KP 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_s_5kp_rocket",
+            "localizedName": "S-5KP 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_s_5kp_rocket",
+            "localizedName": "S-5KP 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_s_5kp_rocket",
+            "localizedName": "S-5KP 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_s_5kp_rocket",
+            "localizedName": "S-5KP 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_s_5kp_rocket",
+            "localizedName": "S-5KP 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_s_5kp_rocket",
+            "localizedName": "S-5KP 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_s_5kp_rocket",
+            "localizedName": "S-5KP 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_s_5kp_rocket",
+            "localizedName": "S-5KP 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_s_5kp_rocket",
+            "localizedName": "S-5KP 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_s_5kp_rocket",
+            "localizedName": "S-5KP 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_s_5kp_rocket",
+            "localizedName": "S-5KP 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_s_5kp_rocket",
+            "localizedName": "S-5KP 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_s_5kp_rocket",
+            "localizedName": "S-5KP 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_s_5kp_rocket",
+            "localizedName": "S-5KP 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_s_5kp_rocket",
+            "localizedName": "S-5KP 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_s_5kp_rocket",
+            "localizedName": "S-5KP 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_s_5kp_rocket",
+            "localizedName": "S-5KP 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_s_5kp_rocket",
+            "localizedName": "S-5KP 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_s_5kp_rocket",
+            "localizedName": "S-5KP 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_s_5kp_rocket",
+            "localizedName": "S-5KP 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_s_5kp_rocket",
+            "localizedName": "S-5KP 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_s_5kp_rocket",
+            "localizedName": "S-5KP 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_s_5kp_rocket",
+            "localizedName": "S-5KP 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_s_5kp_rocket",
+            "localizedName": "S-5KP 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_s_5kp_rocket",
+            "localizedName": "S-5KP 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_s_5kp_rocket",
+            "localizedName": "S-5KP 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_s_5kp_rocket",
+            "localizedName": "S-5KP 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_s_5kp_rocket",
+            "localizedName": "S-5KP 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_s_5kp_rocket",
+            "localizedName": "S-5KP 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_s_5kp_rocket",
+            "localizedName": "S-5KP 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_s_5kp_rocket",
+            "localizedName": "S-5KP 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_s_5kp_rocket",
+            "localizedName": "S-5KP 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_s_5kp_rocket",
+            "localizedName": "S-5KP 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_s_5kp_rocket",
+            "localizedName": "S-5KP 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_s_5kp_rocket",
+            "localizedName": "S-5KP 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_s_5kp_rocket",
+            "localizedName": "S-5KP 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_s_5kp_rocket",
+            "localizedName": "S-5KP 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_s_5kp_rocket",
+            "localizedName": "S-5KP 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_s_5kp_rocket",
+            "localizedName": "S-5KP 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_s_5kp_rocket",
+            "localizedName": "S-5KP 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_s_5kp_rocket",
+            "localizedName": "S-5KP 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_s_5kp_rocket",
+            "localizedName": "S-5KP 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_s_5kp_rocket",
+            "localizedName": "S-5KP 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_s_5kp_rocket",
+            "localizedName": "S-5KP 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_s_5kp_rocket",
+            "localizedName": "S-5KP 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_s_5kp_rocket",
+            "localizedName": "S-5KP 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_s_5kp_rocket",
+            "localizedName": "S-5KP 火​箭​弹",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "mig_15bis_ish_s5m_rockets",
+        "weapons": [
+          {
+            "trigger": "rockets",
+            "name": "su_s_5m_rocket",
+            "localizedName": "S-5M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_s_5m_rocket",
+            "localizedName": "S-5M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_s_5m_rocket",
+            "localizedName": "S-5M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_s_5m_rocket",
+            "localizedName": "S-5M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_s_5m_rocket",
+            "localizedName": "S-5M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_s_5m_rocket",
+            "localizedName": "S-5M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_s_5m_rocket",
+            "localizedName": "S-5M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_s_5m_rocket",
+            "localizedName": "S-5M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_s_5m_rocket",
+            "localizedName": "S-5M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_s_5m_rocket",
+            "localizedName": "S-5M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_s_5m_rocket",
+            "localizedName": "S-5M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_s_5m_rocket",
+            "localizedName": "S-5M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_s_5m_rocket",
+            "localizedName": "S-5M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_s_5m_rocket",
+            "localizedName": "S-5M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_s_5m_rocket",
+            "localizedName": "S-5M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_s_5m_rocket",
+            "localizedName": "S-5M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_s_5m_rocket",
+            "localizedName": "S-5M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_s_5m_rocket",
+            "localizedName": "S-5M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_s_5m_rocket",
+            "localizedName": "S-5M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_s_5m_rocket",
+            "localizedName": "S-5M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_s_5m_rocket",
+            "localizedName": "S-5M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_s_5m_rocket",
+            "localizedName": "S-5M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_s_5m_rocket",
+            "localizedName": "S-5M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_s_5m_rocket",
+            "localizedName": "S-5M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_s_5m_rocket",
+            "localizedName": "S-5M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_s_5m_rocket",
+            "localizedName": "S-5M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_s_5m_rocket",
+            "localizedName": "S-5M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_s_5m_rocket",
+            "localizedName": "S-5M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_s_5m_rocket",
+            "localizedName": "S-5M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_s_5m_rocket",
+            "localizedName": "S-5M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_s_5m_rocket",
+            "localizedName": "S-5M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_s_5m_rocket",
+            "localizedName": "S-5M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_s_5m_rocket",
+            "localizedName": "S-5M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_s_5m_rocket",
+            "localizedName": "S-5M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_s_5m_rocket",
+            "localizedName": "S-5M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_s_5m_rocket",
+            "localizedName": "S-5M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_s_5m_rocket",
+            "localizedName": "S-5M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_s_5m_rocket",
+            "localizedName": "S-5M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_s_5m_rocket",
+            "localizedName": "S-5M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_s_5m_rocket",
+            "localizedName": "S-5M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_s_5m_rocket",
+            "localizedName": "S-5M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_s_5m_rocket",
+            "localizedName": "S-5M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_s_5m_rocket",
+            "localizedName": "S-5M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_s_5m_rocket",
+            "localizedName": "S-5M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_s_5m_rocket",
+            "localizedName": "S-5M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_s_5m_rocket",
+            "localizedName": "S-5M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_s_5m_rocket",
+            "localizedName": "S-5M 火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_s_5m_rocket",
+            "localizedName": "S-5M 火​箭​弹",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "mig_15bis_ish_c1of_rockets",
+        "weapons": [
+          {
+            "trigger": "rockets",
+            "name": "su_c1of_rocket",
+            "localizedName": "S-1of 火​箭​彈",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_c1of_rocket",
+            "localizedName": "S-1of 火​箭​彈",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_c1of_rocket",
+            "localizedName": "S-1of 火​箭​彈",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_c1of_rocket",
+            "localizedName": "S-1of 火​箭​彈",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_c1of_rocket",
+            "localizedName": "S-1of 火​箭​彈",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_c1of_rocket",
+            "localizedName": "S-1of 火​箭​彈",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_c1of_rocket",
+            "localizedName": "S-1of 火​箭​彈",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "su_c1of_rocket",
+            "localizedName": "S-1of 火​箭​彈",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

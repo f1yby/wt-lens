@@ -27,5 +27,1240 @@
       "simulator": 6.0
     },
     "expMultiplier": 1.9
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "cannonType_23_1_plane_turret",
+        "localizedName": "23 mm Type 23-1 cannon",
+        "count": 10,
+        "bullets": 3150,
+        "caliber": 23.0,
+        "fireRate": 900
+      }
+    ],
+    "payloads": [
+      {
+        "name": "tu-4_default",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "su_fab250",
+            "localizedName": "250 千​克 FAB-250 M-43 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab250",
+            "localizedName": "250 千​克 FAB-250 M-43 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab250",
+            "localizedName": "250 千​克 FAB-250 M-43 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab250",
+            "localizedName": "250 千​克 FAB-250 M-43 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab250",
+            "localizedName": "250 千​克 FAB-250 M-43 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab250",
+            "localizedName": "250 千​克 FAB-250 M-43 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab250",
+            "localizedName": "250 千​克 FAB-250 M-43 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab250",
+            "localizedName": "250 千​克 FAB-250 M-43 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab250",
+            "localizedName": "250 千​克 FAB-250 M-43 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab250",
+            "localizedName": "250 千​克 FAB-250 M-43 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab250",
+            "localizedName": "250 千​克 FAB-250 M-43 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab250",
+            "localizedName": "250 千​克 FAB-250 M-43 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab250",
+            "localizedName": "250 千​克 FAB-250 M-43 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab250",
+            "localizedName": "250 千​克 FAB-250 M-43 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab250",
+            "localizedName": "250 千​克 FAB-250 M-43 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab250",
+            "localizedName": "250 千​克 FAB-250 M-43 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab250",
+            "localizedName": "250 千​克 FAB-250 M-43 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab250",
+            "localizedName": "250 千​克 FAB-250 M-43 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab250",
+            "localizedName": "250 千​克 FAB-250 M-43 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab250",
+            "localizedName": "250 千​克 FAB-250 M-43 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab250",
+            "localizedName": "250 千​克 FAB-250 M-43 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab250",
+            "localizedName": "250 千​克 FAB-250 M-43 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab250",
+            "localizedName": "250 千​克 FAB-250 M-43 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab250",
+            "localizedName": "250 千​克 FAB-250 M-43 炸​弹",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "tu-4_china_40xfab100",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_100_2",
+            "localizedName": "100 kg 100-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_100_2",
+            "localizedName": "100 kg 100-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_100_2",
+            "localizedName": "100 kg 100-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_100_2",
+            "localizedName": "100 kg 100-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_100_2",
+            "localizedName": "100 kg 100-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_100_2",
+            "localizedName": "100 kg 100-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_100_2",
+            "localizedName": "100 kg 100-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_100_2",
+            "localizedName": "100 kg 100-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_100_2",
+            "localizedName": "100 kg 100-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_100_2",
+            "localizedName": "100 kg 100-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_100_2",
+            "localizedName": "100 kg 100-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_100_2",
+            "localizedName": "100 kg 100-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_100_2",
+            "localizedName": "100 kg 100-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_100_2",
+            "localizedName": "100 kg 100-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_100_2",
+            "localizedName": "100 kg 100-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_100_2",
+            "localizedName": "100 kg 100-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_100_2",
+            "localizedName": "100 kg 100-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_100_2",
+            "localizedName": "100 kg 100-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_100_2",
+            "localizedName": "100 kg 100-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_100_2",
+            "localizedName": "100 kg 100-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_100_2",
+            "localizedName": "100 kg 100-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_100_2",
+            "localizedName": "100 kg 100-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_100_2",
+            "localizedName": "100 kg 100-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_100_2",
+            "localizedName": "100 kg 100-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_100_2",
+            "localizedName": "100 kg 100-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_100_2",
+            "localizedName": "100 kg 100-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_100_2",
+            "localizedName": "100 kg 100-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_100_2",
+            "localizedName": "100 kg 100-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_100_2",
+            "localizedName": "100 kg 100-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_100_2",
+            "localizedName": "100 kg 100-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_100_2",
+            "localizedName": "100 kg 100-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_100_2",
+            "localizedName": "100 kg 100-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_100_2",
+            "localizedName": "100 kg 100-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_100_2",
+            "localizedName": "100 kg 100-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_100_2",
+            "localizedName": "100 kg 100-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_100_2",
+            "localizedName": "100 kg 100-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_100_2",
+            "localizedName": "100 kg 100-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_100_2",
+            "localizedName": "100 kg 100-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_100_2",
+            "localizedName": "100 kg 100-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_100_2",
+            "localizedName": "100 kg 100-2 bomb",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "tu-4_china_40xfab250",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_250_2",
+            "localizedName": "250 kg 250-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_250_2",
+            "localizedName": "250 kg 250-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_250_2",
+            "localizedName": "250 kg 250-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_250_2",
+            "localizedName": "250 kg 250-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_250_2",
+            "localizedName": "250 kg 250-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_250_2",
+            "localizedName": "250 kg 250-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_250_2",
+            "localizedName": "250 kg 250-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_250_2",
+            "localizedName": "250 kg 250-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_250_2",
+            "localizedName": "250 kg 250-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_250_2",
+            "localizedName": "250 kg 250-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_250_2",
+            "localizedName": "250 kg 250-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_250_2",
+            "localizedName": "250 kg 250-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_250_2",
+            "localizedName": "250 kg 250-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_250_2",
+            "localizedName": "250 kg 250-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_250_2",
+            "localizedName": "250 kg 250-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_250_2",
+            "localizedName": "250 kg 250-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_250_2",
+            "localizedName": "250 kg 250-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_250_2",
+            "localizedName": "250 kg 250-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_250_2",
+            "localizedName": "250 kg 250-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_250_2",
+            "localizedName": "250 kg 250-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_250_2",
+            "localizedName": "250 kg 250-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_250_2",
+            "localizedName": "250 kg 250-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_250_2",
+            "localizedName": "250 kg 250-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_250_2",
+            "localizedName": "250 kg 250-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_250_2",
+            "localizedName": "250 kg 250-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_250_2",
+            "localizedName": "250 kg 250-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_250_2",
+            "localizedName": "250 kg 250-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_250_2",
+            "localizedName": "250 kg 250-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_250_2",
+            "localizedName": "250 kg 250-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_250_2",
+            "localizedName": "250 kg 250-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_250_2",
+            "localizedName": "250 kg 250-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_250_2",
+            "localizedName": "250 kg 250-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_250_2",
+            "localizedName": "250 kg 250-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_250_2",
+            "localizedName": "250 kg 250-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_250_2",
+            "localizedName": "250 kg 250-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_250_2",
+            "localizedName": "250 kg 250-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_250_2",
+            "localizedName": "250 kg 250-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_250_2",
+            "localizedName": "250 kg 250-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_250_2",
+            "localizedName": "250 kg 250-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_250_2",
+            "localizedName": "250 kg 250-2 bomb",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "tu-4_china_12xfab500",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_500_2",
+            "localizedName": "500 kg 500-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_500_2",
+            "localizedName": "500 kg 500-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_500_2",
+            "localizedName": "500 kg 500-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_500_2",
+            "localizedName": "500 kg 500-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_500_2",
+            "localizedName": "500 kg 500-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_500_2",
+            "localizedName": "500 kg 500-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_500_2",
+            "localizedName": "500 kg 500-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_500_2",
+            "localizedName": "500 kg 500-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_500_2",
+            "localizedName": "500 kg 500-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_500_2",
+            "localizedName": "500 kg 500-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_500_2",
+            "localizedName": "500 kg 500-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_500_2",
+            "localizedName": "500 kg 500-2 bomb",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "tu-4_china_20xfab500",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_500_2",
+            "localizedName": "500 kg 500-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_500_2",
+            "localizedName": "500 kg 500-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_500_2",
+            "localizedName": "500 kg 500-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_500_2",
+            "localizedName": "500 kg 500-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_500_2",
+            "localizedName": "500 kg 500-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_500_2",
+            "localizedName": "500 kg 500-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_500_2",
+            "localizedName": "500 kg 500-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_500_2",
+            "localizedName": "500 kg 500-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_500_2",
+            "localizedName": "500 kg 500-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_500_2",
+            "localizedName": "500 kg 500-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_500_2",
+            "localizedName": "500 kg 500-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_500_2",
+            "localizedName": "500 kg 500-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_500_2",
+            "localizedName": "500 kg 500-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_500_2",
+            "localizedName": "500 kg 500-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_500_2",
+            "localizedName": "500 kg 500-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_500_2",
+            "localizedName": "500 kg 500-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_500_2",
+            "localizedName": "500 kg 500-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_500_2",
+            "localizedName": "500 kg 500-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_500_2",
+            "localizedName": "500 kg 500-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_500_2",
+            "localizedName": "500 kg 500-2 bomb",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "tu-4_8xfab1000",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "su_fab_1000m_44",
+            "localizedName": "1000 kg FAB-1000M-44 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab_1000m_44",
+            "localizedName": "1000 kg FAB-1000M-44 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab_1000m_44",
+            "localizedName": "1000 kg FAB-1000M-44 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab_1000m_44",
+            "localizedName": "1000 kg FAB-1000M-44 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab_1000m_44",
+            "localizedName": "1000 kg FAB-1000M-44 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab_1000m_44",
+            "localizedName": "1000 kg FAB-1000M-44 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab_1000m_44",
+            "localizedName": "1000 kg FAB-1000M-44 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "su_fab_1000m_44",
+            "localizedName": "1000 kg FAB-1000M-44 bomb",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "tu-4_china_8xfab1500",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_1500_2",
+            "localizedName": "1500 kg 1500-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_1500_2",
+            "localizedName": "1500 kg 1500-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_1500_2",
+            "localizedName": "1500 kg 1500-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_1500_2",
+            "localizedName": "1500 kg 1500-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_1500_2",
+            "localizedName": "1500 kg 1500-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_1500_2",
+            "localizedName": "1500 kg 1500-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_1500_2",
+            "localizedName": "1500 kg 1500-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_1500_2",
+            "localizedName": "1500 kg 1500-2 bomb",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "tu-4_china_4xfab3000",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_3000_2",
+            "localizedName": "3000 kg 3000-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_3000_2",
+            "localizedName": "3000 kg 3000-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_3000_2",
+            "localizedName": "3000 kg 3000-2 bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_3000_2",
+            "localizedName": "3000 kg 3000-2 bomb",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "tu-4_china_40xfab250_incedniary",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_250_2_incendiary",
+            "localizedName": "250-2 incendiary bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_250_2_incendiary",
+            "localizedName": "250-2 incendiary bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_250_2_incendiary",
+            "localizedName": "250-2 incendiary bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_250_2_incendiary",
+            "localizedName": "250-2 incendiary bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_250_2_incendiary",
+            "localizedName": "250-2 incendiary bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_250_2_incendiary",
+            "localizedName": "250-2 incendiary bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_250_2_incendiary",
+            "localizedName": "250-2 incendiary bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_250_2_incendiary",
+            "localizedName": "250-2 incendiary bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_250_2_incendiary",
+            "localizedName": "250-2 incendiary bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_250_2_incendiary",
+            "localizedName": "250-2 incendiary bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_250_2_incendiary",
+            "localizedName": "250-2 incendiary bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_250_2_incendiary",
+            "localizedName": "250-2 incendiary bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_250_2_incendiary",
+            "localizedName": "250-2 incendiary bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_250_2_incendiary",
+            "localizedName": "250-2 incendiary bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_250_2_incendiary",
+            "localizedName": "250-2 incendiary bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_250_2_incendiary",
+            "localizedName": "250-2 incendiary bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_250_2_incendiary",
+            "localizedName": "250-2 incendiary bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_250_2_incendiary",
+            "localizedName": "250-2 incendiary bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_250_2_incendiary",
+            "localizedName": "250-2 incendiary bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_250_2_incendiary",
+            "localizedName": "250-2 incendiary bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_250_2_incendiary",
+            "localizedName": "250-2 incendiary bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_250_2_incendiary",
+            "localizedName": "250-2 incendiary bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_250_2_incendiary",
+            "localizedName": "250-2 incendiary bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_250_2_incendiary",
+            "localizedName": "250-2 incendiary bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_250_2_incendiary",
+            "localizedName": "250-2 incendiary bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_250_2_incendiary",
+            "localizedName": "250-2 incendiary bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_250_2_incendiary",
+            "localizedName": "250-2 incendiary bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_250_2_incendiary",
+            "localizedName": "250-2 incendiary bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_250_2_incendiary",
+            "localizedName": "250-2 incendiary bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_250_2_incendiary",
+            "localizedName": "250-2 incendiary bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_250_2_incendiary",
+            "localizedName": "250-2 incendiary bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_250_2_incendiary",
+            "localizedName": "250-2 incendiary bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_250_2_incendiary",
+            "localizedName": "250-2 incendiary bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_250_2_incendiary",
+            "localizedName": "250-2 incendiary bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_250_2_incendiary",
+            "localizedName": "250-2 incendiary bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_250_2_incendiary",
+            "localizedName": "250-2 incendiary bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_250_2_incendiary",
+            "localizedName": "250-2 incendiary bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_250_2_incendiary",
+            "localizedName": "250-2 incendiary bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_250_2_incendiary",
+            "localizedName": "250-2 incendiary bomb",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "cn_gp_250_2_incendiary",
+            "localizedName": "250-2 incendiary bomb",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

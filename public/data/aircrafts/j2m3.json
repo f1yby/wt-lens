@@ -27,5 +27,196 @@
       "simulator": 4.4
     },
     "expMultiplier": 1.66
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "cannonType99",
+        "localizedName": "20 毫​米​九​九​式​一​号​固​定​机​炮",
+        "count": 2,
+        "bullets": 380,
+        "caliber": 20.0,
+        "fireRate": 516,
+        "belts": [
+          {
+            "key": "type99mk1_universal",
+            "name": "通​用",
+            "bullets": [
+              "he_frag_t",
+              "he_frag",
+              "he_frag",
+              "aphe"
+            ]
+          },
+          {
+            "key": "type99mk1_ground_targets",
+            "name": "对​地",
+            "bullets": [
+              "aphe",
+              "aphe",
+              "aphe",
+              "aphe",
+              "he_frag",
+              "he_frag_t"
+            ]
+          },
+          {
+            "key": "type99mk1_all_tracers",
+            "name": "曳​光",
+            "bullets": [
+              "he_frag_t"
+            ]
+          },
+          {
+            "key": "type99mk1_stealth",
+            "name": "匿​踪",
+            "bullets": [
+              "he_frag",
+              "he_frag",
+              "he_frag",
+              "aphe",
+              "aphe"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "cannonType99Mk2",
+        "localizedName": "20 毫​米​九​九​式​二​号​固​定​机​炮",
+        "count": 2,
+        "bullets": 420,
+        "caliber": 20.0,
+        "fireRate": 490,
+        "belts": [
+          {
+            "key": "type99mk1_universal",
+            "name": "通​用",
+            "bullets": [
+              "t_shell",
+              "frag_i",
+              "frag_i",
+              "aphe"
+            ]
+          },
+          {
+            "key": "type99mk1_ground_targets",
+            "name": "对​地",
+            "bullets": [
+              "t_shell",
+              "frag_i",
+              "frag_i",
+              "aphe"
+            ]
+          },
+          {
+            "key": "type99mk1_all_tracers",
+            "name": "曳​光",
+            "bullets": [
+              "t_shell",
+              "frag_i",
+              "frag_i",
+              "aphe"
+            ]
+          },
+          {
+            "key": "type99mk1_stealth",
+            "name": "匿​踪",
+            "bullets": [
+              "t_shell",
+              "frag_i",
+              "frag_i",
+              "aphe"
+            ]
+          }
+        ]
+      }
+    ],
+    "payloads": [
+      {
+        "name": "j2m3_bombs",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "jp_navy_type97mod6_60kg",
+            "localizedName": "九​七​式​六​番​陆​用​爆​弹​（60 千​克）",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "jp_navy_type97mod6_60kg",
+            "localizedName": "九​七​式​六​番​陆​用​爆​弹​（60 千​克）",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "a7m_9kg_rockets",
+        "weapons": [
+          {
+            "trigger": "rockets",
+            "name": "jp_navy_rocket_type3_number1_9kg",
+            "localizedName": "三​式​一​番​二​八​号​一​型​火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "jp_navy_rocket_type3_number1_9kg",
+            "localizedName": "三​式​一​番​二​八​号​一​型​火​箭​弹",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "a7m_13kg_rockets",
+        "weapons": [
+          {
+            "trigger": "rockets",
+            "name": "jp_navy_rocket_type5_number1_13kg",
+            "localizedName": "五​式​一​番​九​号​火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "jp_navy_rocket_type5_number1_13kg",
+            "localizedName": "五​式​一​番​九​号​火​箭​弹",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "a7m_66kg_rockets",
+        "weapons": [
+          {
+            "trigger": "rockets",
+            "name": "jp_navy_rocket_type3_number6_66kg",
+            "localizedName": "三​式​六​番​二​七​号​一​型​火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "jp_navy_rocket_type3_number6_66kg",
+            "localizedName": "三​式​六​番​二​七​号​一​型​火​箭​弹",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "a7m_84kg_rockets",
+        "weapons": [
+          {
+            "trigger": "rockets",
+            "name": "jp_navy_rocket_type5_number6_84kg",
+            "localizedName": "五​式​六​番​九​号​火​箭​弹",
+            "count": 1
+          },
+          {
+            "trigger": "rockets",
+            "name": "jp_navy_rocket_type5_number6_84kg",
+            "localizedName": "五​式​六​番​九​号​火​箭​弹",
+            "count": 1
+          }
+        ]
+      }
+    ]
   }
 }

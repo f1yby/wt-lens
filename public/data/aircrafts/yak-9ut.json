@@ -27,5 +27,26 @@
       "simulator": 5.28
     },
     "expMultiplier": 1.78
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "cannonNS23",
+        "localizedName": "23 毫​米 NS-23 机​炮",
+        "count": 1,
+        "bullets": 80,
+        "caliber": 23.0,
+        "fireRate": 600
+      },
+      {
+        "name": "cannonB20S",
+        "localizedName": "20 毫​米 B-20S 机​炮",
+        "count": 2,
+        "bullets": 240,
+        "caliber": 20.0,
+        "fireRate": 750
+      }
+    ],
+    "payloads": []
   }
 }

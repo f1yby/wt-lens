@@ -44,7 +44,7 @@
     "ammunitions": [
       {
         "name": "105mm_TYPE83_HEAT",
-        "localizedName": "Type-83 HEAT",
+        "localizedName": "1983 年​式​破​甲​弹",
         "type": "heat_fs_tank",
         "caliber": 105.0,
         "mass": 11.0,
@@ -56,7 +56,7 @@
       },
       {
         "name": "105mm_TYPE83_APDS",
-        "localizedName": "Type-83 APDS",
+        "localizedName": "1983 年​式​脱​壳​穿​甲​弹",
         "type": "apds_fs_tungsten_l10_l15_tank",
         "caliber": 33.0,
         "mass": 4.2,
@@ -100,7 +100,7 @@
       },
       {
         "name": "105mm_dtb_1_he",
-        "localizedName": "DTB-1",
+        "localizedName": "DTB-1​尾​翼​稳​定​杀​爆​弹\n",
         "type": "he_frag_radio_fuse",
         "caliber": 105.0,
         "mass": 16.2,
