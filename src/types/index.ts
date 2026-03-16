@@ -215,8 +215,20 @@ export interface VehicleIndexEntry {
   unreleased?: boolean;
   releaseDate?: string;
   ghost?: boolean;
-  /** Raw performance data (snake_case keys) for comparison charts - included in index since v2 */
-  performance?: Record<string, unknown>;
+  /** Lightweight performance summary for comparison charts (snake_case) */
+  perf?: {
+    power_to_weight?: number;
+    max_speed?: number;
+    max_reverse_speed?: number;
+    reload_time?: number;
+    penetration?: number;
+    traverse_speed?: number;
+    elevation_speed?: number;
+    gunner_thermal_diagonal?: number;
+    commander_thermal_diagonal?: number;
+    stabilizer_value?: number;
+    elevation_range_value?: number;
+  };
 }
 
 /**
