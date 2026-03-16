@@ -1,6 +1,6 @@
 import type { Vehicle, Ammunition, MainGun, PenetrationData, GameMode, VehicleStats, StatsMonthRange, EconomyData, VehicleIndexEntry, VehicleDetailEntry, StatsHistoryEntry } from '../types';
 import { getDefaultStatsMonthRange, getMonthRangeCacheKey } from '../types';
-import { StatSharkEntry, cleanName, buildStatsMapByMonthRange, convertToVehicleStats, loadStatsForRange } from './base';
+import { StatSharkEntry, cleanName, buildStatsMapByMonthRange, convertToVehicleStats, loadStatsForRange, loadStatsForVehicles } from './base';
 
 // Raw data types from JSON
 interface DatamineEntry {
@@ -433,25 +433,64 @@ export async function mergeStatsIntoVehicles(
 ): Promise<Vehicle[]> {
   // Load stats (this also initializes statsMonthService)
   const stats = await loadStatsForRange(range);
-  
+
   const resolvedRange = (range && range.startMonth && range.endMonth)
     ? range
     : getDefaultStatsMonthRange();
-  
+
   const statsMapByMode = buildStatsMapByMonthRange(stats, resolvedRange);
-  
+
   // Merge stats into vehicles
   return vehicles.map(vehicle => {
     const statsByMode = statsMapByMode.get(vehicle.id);
-    
+
     if (!statsByMode) return vehicle;
-    
+
     const statsByModeRecord: Record<GameMode, VehicleStats | undefined> = {
       arcade: convertToVehicleStats(statsByMode.arcade),
       historical: convertToVehicleStats(statsByMode.historical),
       simulation: convertToVehicleStats(statsByMode.simulation),
     };
-    
+
+    return {
+      ...vehicle,
+      stats: statsByModeRecord.historical,
+      statsByMode: statsByModeRecord,
+    };
+  });
+}
+
+/**
+ * Load stats for specific vehicles only and merge into existing vehicles array.
+ * Much faster than mergeStatsIntoVehicles when you only need a few vehicles' stats.
+ */
+export async function mergeStatsForVehicles(
+  vehicles: Vehicle[],
+  vehicleIds: string[],
+  range?: StatsMonthRange
+): Promise<Vehicle[]> {
+  if (vehicleIds.length === 0) return vehicles;
+
+  // Load stats only for requested vehicles
+  const stats = await loadStatsForVehicles(vehicleIds);
+
+  const resolvedRange = (range && range.startMonth && range.endMonth)
+    ? range
+    : getDefaultStatsMonthRange();
+
+  const statsMapByMode = buildStatsMapByMonthRange(stats, resolvedRange);
+
+  // Merge stats into vehicles (only for requested IDs)
+  return vehicles.map(vehicle => {
+    const statsByMode = statsMapByMode.get(vehicle.id);
+    if (!statsByMode) return vehicle;
+
+    const statsByModeRecord: Record<GameMode, VehicleStats | undefined> = {
+      arcade: convertToVehicleStats(statsByMode.arcade),
+      historical: convertToVehicleStats(statsByMode.historical),
+      simulation: convertToVehicleStats(statsByMode.simulation),
+    };
+
     return {
       ...vehicle,
       stats: statsByModeRecord.historical,

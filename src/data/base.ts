@@ -132,6 +132,18 @@ export async function loadStatsForRange(_range?: StatsMonthRange): Promise<StatS
   return loadStatsHistoryBatch(meta.vehicleIds);
 }
 
+/**
+ * Load stats data for specific vehicle IDs only.
+ * Much faster than loading all stats when you only need a few vehicles.
+ */
+export async function loadStatsForVehicles(vehicleIds: string[]): Promise<StatSharkEntry[]> {
+  // Ensure meta is loaded first (initializes statsMonthService)
+  await loadStatsMeta();
+  
+  // Load stats for only the requested vehicles
+  return loadStatsHistoryBatch(vehicleIds);
+}
+
 // ============================================================================
 // Backward-compatible shared stats loader
 // ============================================================================

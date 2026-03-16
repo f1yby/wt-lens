@@ -24,7 +24,7 @@ import MobilitySection from '../components/MobilitySection';
 import ArmamentsSection from '../components/ArmamentsSection';
 import OpticsSection from '../components/OpticsSection';
 
-import { loadVehiclesLight, mergeStatsIntoVehicles, getVehicleStatsByMode, loadVehicleDetail } from '../data/vehicles';
+import { loadVehiclesLight, mergeStatsForVehicles, getVehicleStatsByMode, loadVehicleDetail } from '../data/vehicles';
 import { VEHICLE_TYPE_LABELS, BATTLE_RATINGS, ECONOMIC_TYPE_GRADIENTS } from '../types';
 import type { Vehicle, VehicleType, GroundVehicleType } from '../types';
 import { getVehicleImagePath, getFlagImagePath } from '../utils/paths';
@@ -51,12 +51,18 @@ export default function VehicleDetailPage() {
   const { gameMode, handleGameModeChange } = useGameMode();
   const { statsMonthRange, handleStatsMonthRangeChange } = useStatsMonthRange();
 
-  // Load vehicle data - basic info + stats + current vehicle detail
+  // Load vehicle data - basic info + current vehicle's stats + detail
   useEffect(() => {
     setLoading(true);
-    
+
     loadVehiclesLight()
-      .then(basicVehicles => mergeStatsIntoVehicles(basicVehicles, statsMonthRange))
+      .then(basicVehicles => {
+        // Only load stats for current vehicle
+        if (id) {
+          return mergeStatsForVehicles(basicVehicles, [id], statsMonthRange);
+        }
+        return basicVehicles;
+      })
       .then(vehiclesWithStats => {
         if (id) {
           loadVehicleDetail(id).then(detail => {
@@ -156,32 +162,40 @@ export default function VehicleDetailPage() {
     });
   }, [vehicle, vehicles, effectiveBrRange, selectedTypes, gameMode]);
 
-  // Load performance data when BR range or vehicle type filter changes
+  // Load stats + performance data for comparison vehicles when BR range or type filter changes
   useEffect(() => {
     if (loading || !vehicle || !typesInitialized) return;
 
-    // Find vehicles in BR range that need performance data
-    const idsToLoad: string[] = [];
+    // Find vehicles in BR range that need data
+    const idsNeedingStats: string[] = [];
+    const idsNeedingPerformance: string[] = [];
     for (const v of vehicles) {
       if (v.id === vehicle.id) continue; // Already loaded
       const vBR = getVehicleBR(v, gameMode);
       if (vBR < effectiveBrRange[0] || vBR > effectiveBrRange[1]) continue;
       if (selectedTypes.length > 0 && !selectedTypes.includes(v.vehicleType)) continue;
-      if (v.performance.horsepower) continue; // Already has performance data
-      idsToLoad.push(v.id);
+      if (!v.stats) idsNeedingStats.push(v.id);
+      else if (v.performance.horsepower === 0) idsNeedingPerformance.push(v.id);
     }
 
-    if (idsToLoad.length === 0) return;
-
-    // Load all at once
-    Promise.all(idsToLoad.map(vid => loadVehicleDetail(vid)))
-      .then(details => {
-        const detailMap = new Map(details.filter(Boolean).map(d => [d!.id, d]));
-        setVehicles(prev => prev.map(v => {
-          const detail = detailMap.get(v.id);
-          return detail ? { ...v, performance: detail.performance } : v;
-        }));
+    // Load stats for vehicles that need it
+    if (idsNeedingStats.length > 0) {
+      mergeStatsForVehicles(vehicles, idsNeedingStats, statsMonthRange).then(updated => {
+        setVehicles(updated);
       });
+    }
+
+    // Load performance for vehicles that need it
+    if (idsNeedingPerformance.length > 0) {
+      Promise.all(idsNeedingPerformance.map(vid => loadVehicleDetail(vid)))
+        .then(details => {
+          const detailMap = new Map(details.filter(Boolean).map(d => [d!.id, d]));
+          setVehicles(prev => prev.map(v => {
+            const detail = detailMap.get(v.id);
+            return detail ? { ...v, performance: detail.performance } : v;
+          }));
+        });
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [loading, vehicle?.id, typesInitialized, effectiveBrRange[0], effectiveBrRange[1], selectedTypes.join(',')]);
 
