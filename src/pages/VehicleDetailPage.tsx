@@ -1,5 +1,5 @@
 import { useParams, useNavigate } from 'react-router-dom';
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect, useMemo, useRef } from 'react';
 import {
   Container,
   Typography,
@@ -24,7 +24,7 @@ import MobilitySection from '../components/MobilitySection';
 import ArmamentsSection from '../components/ArmamentsSection';
 import OpticsSection from '../components/OpticsSection';
 
-import { loadVehicles, getVehicleStatsByMode, loadVehicleDetail } from '../data/vehicles';
+import { loadVehiclesLight, mergeStatsIntoVehicles, getVehicleStatsByMode, loadVehicleDetail, loadVehicles } from '../data/vehicles';
 import { VEHICLE_TYPE_LABELS, BATTLE_RATINGS, ECONOMIC_TYPE_GRADIENTS } from '../types';
 import type { Vehicle, VehicleType, GroundVehicleType } from '../types';
 import { getVehicleImagePath, getFlagImagePath } from '../utils/paths';
@@ -46,40 +46,56 @@ export default function VehicleDetailPage() {
   const [selectedTypes, setSelectedTypes] = useState<VehicleType[]>([]);
   const [brRange, setBrRange] = useState<[number, number] | null>(null);
   const [typesInitialized, setTypesInitialized] = useState(false);
-  const [detailLoaded, setDetailLoaded] = useState<string | null>(null);
+  const comparisonsLoadedRef = useRef(false);
 
   // Use custom hooks for game mode and stats month management
   const { gameMode, handleGameModeChange } = useGameMode();
   const { statsMonthRange, handleStatsMonthRangeChange } = useStatsMonthRange();
 
-  // Reload data when month range changes
+  // Step 1: Fast load - basic info + stats + current vehicle detail
   useEffect(() => {
     setLoading(true);
-    loadVehicles(statsMonthRange)
-      .then(data => {
-        setVehicles(data);
+    comparisonsLoadedRef.current = false; // Reset on month range change
+    
+    // Load lightweight vehicle list + stats
+    loadVehiclesLight()
+      .then(basicVehicles => mergeStatsIntoVehicles(basicVehicles, statsMonthRange))
+      .then(vehiclesWithStats => {
+        setVehicles(vehiclesWithStats);
         setLoading(false);
+        
+        // Load current vehicle's detail immediately
+        if (id) {
+          loadVehicleDetail(id).then(detail => {
+            if (!detail) return;
+            setVehicles(prev => prev.map(v =>
+              v.id === id
+                ? { ...v, performance: detail.performance, economy: detail.economy ?? v.economy }
+                : v
+            ));
+          });
+        }
       })
-      .catch(() => {
-        setLoading(false);
+      .catch(() => setLoading(false));
+  }, [statsMonthRange, id]);
+
+  // Step 2: Async load - all vehicle details for comparison charts (only once)
+  useEffect(() => {
+    if (vehicles.length === 0 || comparisonsLoadedRef.current) return;
+    
+    comparisonsLoadedRef.current = true;
+    
+    loadVehicles(statsMonthRange)
+      .then(fullVehicles => {
+        // Merge performance data into existing vehicles
+        setVehicles(prev => prev.map(v => {
+          const full = fullVehicles.find(f => f.id === v.id);
+          return full ? { ...v, performance: full.performance } : v;
+        }));
       });
-  }, [statsMonthRange]);
+  }, [vehicles.length, statsMonthRange]);
 
   const vehicle = vehicles.find(v => v.id === id);
-
-  // Load detailed performance + economy data for the current vehicle
-  useEffect(() => {
-    if (!id || vehicles.length === 0 || detailLoaded === id) return;
-    loadVehicleDetail(id).then(detail => {
-      if (!detail) return;
-      setVehicles(prev => prev.map(v =>
-        v.id === id
-          ? { ...v, performance: detail.performance, economy: detail.economy ?? v.economy }
-          : v
-      ));
-      setDetailLoaded(id);
-    });
-  }, [id, vehicles.length, detailLoaded]);
 
   // Default selectedTypes to current vehicle's type
   useEffect(() => {
@@ -93,18 +109,24 @@ export default function VehicleDetailPage() {
   useEffect(() => {
     setTypesInitialized(false);
     setBrRange(null);
-    setDetailLoaded(null);
   }, [id]);
 
-  // Default BR range: vehicle BR ± 1.0, snapped to BATTLE_RATINGS
+  // Compute available BRs from loaded vehicles
+  const availableBRs = useMemo(() => {
+    if (vehicles.length === 0) return BATTLE_RATINGS;
+    const maxBR = Math.max(...vehicles.map(v => getVehicleBR(v, gameMode)));
+    return BATTLE_RATINGS.filter(br => br <= maxBR);
+  }, [vehicles, gameMode]);
+
+  // Default BR range: vehicle BR ± 1.0, snapped to available BRs
   const effectiveBrRange: [number, number] = useMemo(() => {
     if (brRange) return brRange;
-    if (!vehicle) return [BATTLE_RATINGS[0], BATTLE_RATINGS[BATTLE_RATINGS.length - 1]];
+    if (!vehicle) return [availableBRs[0], availableBRs[availableBRs.length - 1]];
     const br = getVehicleBR(vehicle, gameMode);
-    const lo = BATTLE_RATINGS.filter(b => b >= br - 1.0)[0] ?? BATTLE_RATINGS[0];
-    const hi = [...BATTLE_RATINGS].reverse().find(b => b <= br + 1.0) ?? BATTLE_RATINGS[BATTLE_RATINGS.length - 1];
+    const lo = availableBRs.filter(b => b >= br - 1.0)[0] ?? availableBRs[0];
+    const hi = [...availableBRs].reverse().find(b => b <= br + 1.0) ?? availableBRs[availableBRs.length - 1];
     return [lo, hi];
-  }, [brRange, vehicle, gameMode]);
+  }, [brRange, vehicle, gameMode, availableBRs]);
 
   const filter: ComparisonFilter = useMemo(() => ({
     vehicleTypes: selectedTypes,
@@ -142,11 +164,12 @@ export default function VehicleDetailPage() {
     return vehicles.filter(v => {
       // Always include current vehicle
       if (v.id === vehicle.id) return true;
-      if (v.battleRating < effectiveBrRange[0] || v.battleRating > effectiveBrRange[1]) return false;
+      const vBR = getVehicleBR(v, gameMode);
+      if (vBR < effectiveBrRange[0] || vBR > effectiveBrRange[1]) return false;
       if (selectedTypes.length > 0 && !selectedTypes.includes(v.vehicleType)) return false;
       return true;
     });
-  }, [vehicle, vehicles, effectiveBrRange, selectedTypes]);
+  }, [vehicle, vehicles, effectiveBrRange, selectedTypes, gameMode]);
 
   if (loading) {
     return (
@@ -601,6 +624,7 @@ export default function VehicleDetailPage() {
             <BRGridSelector
               brRange={effectiveBrRange}
               onBrRangeChange={(range) => setBrRange(range)}
+              availableBRs={availableBRs}
             />
           </Stack>
         </Paper>

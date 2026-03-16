@@ -97,14 +97,30 @@ const vehicleDetailCache = new Map<string, VehicleDetailEntry>();
 const vehicleStatsHistoryCache = new Map<string, StatsHistoryEntry[]>();
 
 /**
- * Load datamine data from vehicles-index.json.
- * Performance data is NOT included — use loadVehicleDetail() for individual vehicle details.
- * This is sufficient for list pages (HomePage) that only need basic vehicle info + stats.
+ * Load datamine data with performance from detail files.
+ * This is needed for comparison charts that require performance data from all vehicles.
  */
 async function loadDatamineData(): Promise<DatamineEntry[]> {
   if (datamineData) return datamineData;
   
   const index = await loadVehicleIndex();
+  
+  // Load all detail files to get performance data for comparison charts
+  const detailPromises = index.map(async entry => {
+    try {
+      const response = await fetch(`/wt-lens/data/vehicles/${entry.id}.json`);
+      if (!response.ok) {
+        return { id: entry.id, performance: {} };
+      }
+      const detail = await response.json();
+      return { id: entry.id, performance: detail.performance ?? {} };
+    } catch {
+      return { id: entry.id, performance: {} };
+    }
+  });
+  
+  const details = await Promise.all(detailPromises);
+  const detailMap = new Map(details.map(d => [d.id, d.performance]));
   
   datamineData = index.map(entry => ({
     id: entry.id,
@@ -116,8 +132,7 @@ async function loadDatamineData(): Promise<DatamineEntry[]> {
     br: entry.br,
     vehicle_type: entry.vehicleType,
     economic_type: entry.economicType,
-    // Performance data is empty in index - load from detail files for comparison charts
-    performance: {},
+    performance: detailMap.get(entry.id) ?? {},
     imageUrl: entry.imageUrl ?? '',
     source: 'split_index',
     unreleased: entry.unreleased,
@@ -340,37 +355,39 @@ function mergeVehicleData(stats: StatSharkEntry[], datamine: DatamineEntry[], ra
   return vehicles;
 }
 
-// Cache for light vehicles (without stats) - shared across month ranges
+// Cache for light vehicles (without stats/performance) - shared across month ranges
 let lightVehiclesCache: Vehicle[] | null = null;
 
 /**
- * Load vehicles without stats data (fast, for initial render).
- * Returns vehicles with basic info only - no stats/performance data.
+ * Load vehicles without stats or performance data (fast, for initial render).
+ * Returns vehicles with basic info only - optimized for list pages like HomePage.
+ * This does NOT load detail files, keeping initial load fast.
  */
 export async function loadVehiclesLight(): Promise<Vehicle[]> {
   if (lightVehiclesCache) return lightVehiclesCache;
   
-  const datamine = await loadDatamineData();
+  const index = await loadVehicleIndex();
   
-  // Build vehicles without stats
-  const vehicles: Vehicle[] = datamine.map(entry => ({
+  // Build vehicles without stats or performance (just basic info from index)
+  const vehicles: Vehicle[] = index.map(entry => ({
     id: entry.id,
     name: entry.name,
     localizedName: cleanName(entry.localizedName),
     nation: entry.nation as Vehicle['nation'],
     rank: entry.rank ?? 1,
-    battleRating: entry.battle_rating ?? 1.0,
+    battleRating: entry.battleRating ?? 1.0,
     br: entry.br,
-    vehicleType: entry.vehicle_type as Vehicle['vehicleType'],
-    economicType: (entry.economic_type as Vehicle['economicType']) ?? 'regular',
-    performance: convertPerformance(entry.performance),
+    vehicleType: entry.vehicleType as Vehicle['vehicleType'],
+    economicType: (entry.economicType as Vehicle['economicType']) ?? 'regular',
+    // Performance is empty for light load - use loadVehicleDetail() for individual vehicles
+    performance: convertPerformance({}),
     stats: undefined,
     statsByMode: undefined,
-    imageUrl: entry.imageUrl,
+    imageUrl: entry.imageUrl ?? '',
     unreleased: entry.unreleased ?? false,
     releaseDate: entry.releaseDate,
     ghost: entry.ghost ?? false,
-    economy: entry.economy,
+    economy: undefined,
   }));
   
   lightVehiclesCache = vehicles;
