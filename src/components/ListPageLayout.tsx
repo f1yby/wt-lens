@@ -37,6 +37,8 @@ export interface ListPageLayoutProps<T extends string = string> {
 
   // --- Display ---
   loading: boolean;
+  /** Optional: stats data is loading in background */
+  loadingStats?: boolean;
   filteredCount: number;
   countLabel: string; // e.g. "个载具", "架飞机", "艘舰船"
 
@@ -65,6 +67,7 @@ export default function ListPageLayout<T extends string = string>({
   onUseGroundBRChange,
   typeOptions,
   loading,
+  loadingStats,
   filteredCount,
   countLabel,
   children,
@@ -118,6 +121,7 @@ export default function ListPageLayout<T extends string = string>({
         <Box sx={{ mb: 2, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <Typography variant="body2" sx={{ color: '#737373' }}>
             {loading ? '加载中...' : `显示 ${filteredCount} ${countLabel}`}
+            {loadingStats && <Typography component="span" sx={{ color: '#9ca3af', ml: 1 }}>(加载统计数据中...)</Typography>}
           </Typography>
         </Box>
 

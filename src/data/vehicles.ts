@@ -116,8 +116,8 @@ async function loadDatamineData(): Promise<DatamineEntry[]> {
     br: entry.br,
     vehicle_type: entry.vehicleType,
     economic_type: entry.economicType,
-    // Use lightweight perf summary for comparison charts
-    performance: entry.perf ?? {},
+    // Performance data is empty in index - load from detail files for comparison charts
+    performance: {},
     imageUrl: entry.imageUrl ?? '',
     source: 'split_index',
     unreleased: entry.unreleased,
@@ -158,8 +158,6 @@ export async function loadVehicleIndex(): Promise<VehicleIndexEntry[]> {
     unreleased: entry.unreleased as boolean | undefined,
     releaseDate: entry.releaseDate as string | undefined,
     ghost: entry.ghost as boolean | undefined,
-    // Lightweight performance summary for comparison charts
-    perf: entry.perf as VehicleIndexEntry['perf'],
   }));
   return vehicleIndexData;
 }
@@ -340,6 +338,80 @@ function mergeVehicleData(stats: StatSharkEntry[], datamine: DatamineEntry[], ra
   }
 
   return vehicles;
+}
+
+// Cache for light vehicles (without stats) - shared across month ranges
+let lightVehiclesCache: Vehicle[] | null = null;
+
+/**
+ * Load vehicles without stats data (fast, for initial render).
+ * Returns vehicles with basic info only - no stats/performance data.
+ */
+export async function loadVehiclesLight(): Promise<Vehicle[]> {
+  if (lightVehiclesCache) return lightVehiclesCache;
+  
+  const datamine = await loadDatamineData();
+  
+  // Build vehicles without stats
+  const vehicles: Vehicle[] = datamine.map(entry => ({
+    id: entry.id,
+    name: entry.name,
+    localizedName: cleanName(entry.localizedName),
+    nation: entry.nation as Vehicle['nation'],
+    rank: entry.rank ?? 1,
+    battleRating: entry.battle_rating ?? 1.0,
+    br: entry.br,
+    vehicleType: entry.vehicle_type as Vehicle['vehicleType'],
+    economicType: (entry.economic_type as Vehicle['economicType']) ?? 'regular',
+    performance: convertPerformance(entry.performance),
+    stats: undefined,
+    statsByMode: undefined,
+    imageUrl: entry.imageUrl,
+    unreleased: entry.unreleased ?? false,
+    releaseDate: entry.releaseDate,
+    ghost: entry.ghost ?? false,
+    economy: entry.economy,
+  }));
+  
+  lightVehiclesCache = vehicles;
+  return vehicles;
+}
+
+/**
+ * Load stats data and merge into existing vehicles array.
+ * Returns a new vehicles array with stats populated.
+ */
+export async function mergeStatsIntoVehicles(
+  vehicles: Vehicle[],
+  range?: StatsMonthRange
+): Promise<Vehicle[]> {
+  // Load stats (this also initializes statsMonthService)
+  const stats = await loadStatsForRange(range);
+  
+  const resolvedRange = (range && range.startMonth && range.endMonth)
+    ? range
+    : getDefaultStatsMonthRange();
+  
+  const statsMapByMode = buildStatsMapByMonthRange(stats, resolvedRange);
+  
+  // Merge stats into vehicles
+  return vehicles.map(vehicle => {
+    const statsByMode = statsMapByMode.get(vehicle.id);
+    
+    if (!statsByMode) return vehicle;
+    
+    const statsByModeRecord: Record<GameMode, VehicleStats | undefined> = {
+      arcade: convertToVehicleStats(statsByMode.arcade),
+      historical: convertToVehicleStats(statsByMode.historical),
+      simulation: convertToVehicleStats(statsByMode.simulation),
+    };
+    
+    return {
+      ...vehicle,
+      stats: statsByModeRecord.historical,
+      statsByMode: statsByModeRecord,
+    };
+  });
 }
 
 /**

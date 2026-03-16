@@ -1,12 +1,11 @@
-import { useState, useMemo, useEffect, useCallback } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import ListPageLayout from '../components/ListPageLayout';
 import VehicleTechTree from '../components/VehicleTechTree';
-import { loadVehicles } from '../data/vehicles';
+import { loadVehiclesLight, mergeStatsIntoVehicles } from '../data/vehicles';
 import type { Nation, VehicleType, Vehicle } from '../types';
 import { BATTLE_RATINGS } from '../types';
 import { useGameMode } from '../hooks/useGameMode';
 import { useStatsMonthRange } from '../hooks/useStatsMonth';
-import { useRangeLoader } from '../hooks/useRangeLoader';
 
 export default function HomePage() {
   const [selectedNations, setSelectedNations] = useState<Nation[]>([]);
@@ -14,12 +13,30 @@ export default function HomePage() {
   const [selectedType, setSelectedType] = useState<VehicleType | 'all'>('all');
   const [showUnreleased, setShowUnreleased] = useState(false);
   const [showGhost, setShowGhost] = useState(false);
+  const [vehicles, setVehicles] = useState<Vehicle[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [loadingStats, setLoadingStats] = useState(false);
 
   const { gameMode, handleGameModeChange } = useGameMode();
   const { statsMonthRange, handleStatsMonthRangeChange } = useStatsMonthRange();
 
-  const loader = useCallback(loadVehicles, []);
-  const { data: vehicles, loading } = useRangeLoader<Vehicle[]>(loader, statsMonthRange);
+  // Step 1: Load vehicle list immediately (fast, no stats)
+  useEffect(() => {
+    setLoading(true);
+    loadVehiclesLight()
+      .then(setVehicles)
+      .finally(() => setLoading(false));
+  }, []);
+
+  // Step 2: Load stats on demand when month range changes
+  useEffect(() => {
+    if (vehicles.length === 0) return;
+    
+    setLoadingStats(true);
+    mergeStatsIntoVehicles(vehicles, statsMonthRange)
+      .then(setVehicles)
+      .finally(() => setLoadingStats(false));
+  }, [statsMonthRange]);
 
   const safeVehicles = vehicles ?? [];
 
@@ -67,6 +84,7 @@ export default function HomePage() {
       statsMonthRange={statsMonthRange}
       onStatsMonthRangeChange={handleStatsMonthRangeChange}
       loading={loading}
+      loadingStats={loadingStats}
       filteredCount={filteredVehicles.length}
       countLabel="个载具"
     >

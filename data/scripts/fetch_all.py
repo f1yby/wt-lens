@@ -1483,22 +1483,8 @@ GROUND_INDEX_FIELDS = {
     'vehicle_type', 'economic_type', 'imageUrl', 'unreleased', 'releaseDate', 'ghost'
 }
 
-# Performance metrics needed for comparison charts (lightweight subset)
-PERFORMANCE_SUMMARY_FIELDS = [
-    'power_to_weight', 'max_speed', 'max_reverse_speed', 'reload_time', 'penetration',
-    'traverse_speed', 'elevation_speed', 'gunner_thermal_diagonal', 'commander_thermal_diagonal',
-    'stabilizer_value', 'elevation_range_value'
-]
-
 # Aircraft/Ships use camelCase keys — exclude heavy fields (economy)
 AIRCRAFT_SHIP_HEAVY_FIELDS = {'economy'}
-
-
-def _extract_performance_summary(performance: dict[str, Any] | None) -> dict[str, Any] | None:
-    """Extract lightweight performance summary for comparison charts."""
-    if not performance:
-        return None
-    return {k: performance.get(k) for k in PERFORMANCE_SUMMARY_FIELDS}
 
 
 def _split_vehicle_data(vehicle_dict: dict[str, Any]) -> tuple[dict[str, Any], dict[str, Any]]:
@@ -1509,16 +1495,10 @@ def _split_vehicle_data(vehicle_dict: dict[str, Any]) -> tuple[dict[str, Any], d
     """
     index_entry = {k: v for k, v in vehicle_dict.items() if k in GROUND_INDEX_FIELDS}
     
-    # Add lightweight performance summary for comparison charts
-    performance = vehicle_dict.get('performance')
-    perf_summary = _extract_performance_summary(performance)
-    if perf_summary:
-        index_entry['perf'] = perf_summary
-    
     # Detail entry contains id + heavy fields (performance, economy)
     detail_entry = {
         'id': vehicle_dict['id'],
-        'performance': performance,
+        'performance': vehicle_dict.get('performance'),
         'economy': vehicle_dict.get('economy'),
     }
     
