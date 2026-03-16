@@ -54,6 +54,38 @@
               "he_frag_t_ball",
               "ap_t_ball",
               "he_frag_t_ball"
+            ],
+            "bulletsData": [
+              {
+                "type": "ap_t_ball",
+                "mass": 0.072,
+                "speed": 850.0
+              },
+              {
+                "type": "he_frag_t_ball",
+                "mass": 0.057,
+                "speed": 960.0,
+                "explosiveMass": 0.0019,
+                "explosiveType": "petn",
+                "tntEquivalent": 0.00247,
+                "hitPowerMult": 5.0,
+                "fireChance": 5.0
+              },
+              {
+                "type": "ap_t_ball",
+                "mass": 0.072,
+                "speed": 850.0
+              },
+              {
+                "type": "he_frag_t_ball",
+                "mass": 0.057,
+                "speed": 960.0,
+                "explosiveMass": 0.0019,
+                "explosiveType": "petn",
+                "tntEquivalent": 0.00247,
+                "hitPowerMult": 5.0,
+                "fireChance": 5.0
+              }
             ]
           },
           {
@@ -64,6 +96,45 @@
               "he_frag_t_ball",
               "he_frag_t_ball",
               "he_frag_t_ball"
+            ],
+            "bulletsData": [
+              {
+                "type": "ap_i",
+                "mass": 0.059,
+                "speed": 960.0,
+                "penetration": 34.0,
+                "fireChance": 10.0
+              },
+              {
+                "type": "he_frag_t_ball",
+                "mass": 0.057,
+                "speed": 960.0,
+                "explosiveMass": 0.0019,
+                "explosiveType": "petn",
+                "tntEquivalent": 0.00247,
+                "hitPowerMult": 5.0,
+                "fireChance": 5.0
+              },
+              {
+                "type": "he_frag_t_ball",
+                "mass": 0.057,
+                "speed": 960.0,
+                "explosiveMass": 0.0019,
+                "explosiveType": "petn",
+                "tntEquivalent": 0.00247,
+                "hitPowerMult": 5.0,
+                "fireChance": 5.0
+              },
+              {
+                "type": "he_frag_t_ball",
+                "mass": 0.057,
+                "speed": 960.0,
+                "explosiveMass": 0.0019,
+                "explosiveType": "petn",
+                "tntEquivalent": 0.00247,
+                "hitPowerMult": 5.0,
+                "fireChance": 5.0
+              }
             ]
           }
         ]

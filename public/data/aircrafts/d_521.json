@@ -46,6 +46,36 @@
               "he_i",
               "ap_t",
               "he_i"
+            ],
+            "bulletsData": [
+              {
+                "type": "ap_t",
+                "mass": 0.124,
+                "speed": 880.0
+              },
+              {
+                "type": "he_i",
+                "mass": 0.124,
+                "speed": 880.0,
+                "explosiveMass": 0.01,
+                "explosiveType": "pentolite",
+                "tntEquivalent": 0.0126,
+                "fireChance": 2.5
+              },
+              {
+                "type": "ap_t",
+                "mass": 0.124,
+                "speed": 880.0
+              },
+              {
+                "type": "he_i",
+                "mass": 0.124,
+                "speed": 880.0,
+                "explosiveMass": 0.01,
+                "explosiveType": "pentolite",
+                "tntEquivalent": 0.0126,
+                "fireChance": 2.5
+              }
             ]
           },
           {
@@ -54,6 +84,22 @@
             "bullets": [
               "ap_t",
               "he_i_t"
+            ],
+            "bulletsData": [
+              {
+                "type": "ap_t",
+                "mass": 0.124,
+                "speed": 880.0
+              },
+              {
+                "type": "he_i_t",
+                "mass": 0.124,
+                "speed": 880.0,
+                "explosiveMass": 0.008,
+                "explosiveType": "pentolite",
+                "tntEquivalent": 0.01008,
+                "fireChance": 3.1
+              }
             ]
           },
           {
@@ -62,6 +108,22 @@
             "bullets": [
               "ap",
               "he_i"
+            ],
+            "bulletsData": [
+              {
+                "type": "ap",
+                "mass": 0.124,
+                "speed": 880.0
+              },
+              {
+                "type": "he_i",
+                "mass": 0.124,
+                "speed": 880.0,
+                "explosiveMass": 0.01,
+                "explosiveType": "pentolite",
+                "tntEquivalent": 0.0126,
+                "fireChance": 2.5
+              }
             ]
           }
         ]
@@ -83,6 +145,44 @@
               "ap_ball",
               "i_ball",
               "i_ball"
+            ],
+            "bulletsData": [
+              {
+                "type": "t_ball",
+                "mass": 0.0095,
+                "speed": 835.0,
+                "penetration": 5.0,
+                "hitPowerMult": 2.9,
+                "fireChance": 1.5
+              },
+              {
+                "type": "ap_ball",
+                "mass": 0.0108,
+                "speed": 853.0,
+                "penetration": 13.0
+              },
+              {
+                "type": "ap_ball",
+                "mass": 0.0108,
+                "speed": 853.0,
+                "penetration": 13.0
+              },
+              {
+                "type": "i_ball",
+                "mass": 0.00907,
+                "speed": 920.0,
+                "penetration": 3.5,
+                "hitPowerMult": 2.5,
+                "fireChance": 4.0
+              },
+              {
+                "type": "i_ball",
+                "mass": 0.00907,
+                "speed": 920.0,
+                "penetration": 3.5,
+                "hitPowerMult": 2.5,
+                "fireChance": 4.0
+              }
             ]
           },
           {
@@ -90,6 +190,16 @@
             "name": "曳​光",
             "bullets": [
               "i_t_ball"
+            ],
+            "bulletsData": [
+              {
+                "type": "i_t_ball",
+                "mass": 0.00907,
+                "speed": 920.0,
+                "penetration": 3.5,
+                "hitPowerMult": 2.5,
+                "fireChance": 5.0
+              }
             ]
           },
           {
@@ -99,6 +209,28 @@
               "ap_ball",
               "ap_ball",
               "i_ball"
+            ],
+            "bulletsData": [
+              {
+                "type": "ap_ball",
+                "mass": 0.0108,
+                "speed": 853.0,
+                "penetration": 13.0
+              },
+              {
+                "type": "ap_ball",
+                "mass": 0.0108,
+                "speed": 853.0,
+                "penetration": 13.0
+              },
+              {
+                "type": "i_ball",
+                "mass": 0.00907,
+                "speed": 920.0,
+                "penetration": 3.5,
+                "hitPowerMult": 2.5,
+                "fireChance": 4.0
+              }
             ]
           }
         ]

@@ -47,6 +47,32 @@
               "ap_t",
               "he_i",
               "sapi"
+            ],
+            "bulletsData": [
+              {
+                "type": "ap_t",
+                "mass": 0.141,
+                "speed": 822.0,
+                "fireChance": 2.5
+              },
+              {
+                "type": "he_i",
+                "mass": 0.13,
+                "speed": 853.0,
+                "explosiveMass": 0.0064,
+                "explosiveType": "tetryl",
+                "tntEquivalent": 0.00768,
+                "fireChance": 2.5
+              },
+              {
+                "type": "sapi",
+                "mass": 0.134,
+                "speed": 844.0,
+                "explosiveMass": 0.01166,
+                "explosiveType": "s_r_379",
+                "tntEquivalent": 2e-05,
+                "fireChance": 8.0
+              }
             ]
           },
           {
@@ -56,6 +82,31 @@
               "ap_t",
               "t_shell",
               "he_i"
+            ],
+            "bulletsData": [
+              {
+                "type": "ap_t",
+                "mass": 0.141,
+                "speed": 822.0,
+                "fireChance": 2.5
+              },
+              {
+                "type": "t_shell",
+                "mass": 0.132,
+                "speed": 835.0,
+                "penetration": 17.0,
+                "hitPowerMult": 7.0,
+                "fireChance": 3.0
+              },
+              {
+                "type": "he_i",
+                "mass": 0.13,
+                "speed": 853.0,
+                "explosiveMass": 0.0064,
+                "explosiveType": "tetryl",
+                "tntEquivalent": 0.00768,
+                "fireChance": 2.5
+              }
             ]
           },
           {
@@ -65,6 +116,35 @@
               "he_i",
               "he_i",
               "sapi"
+            ],
+            "bulletsData": [
+              {
+                "type": "he_i",
+                "mass": 0.13,
+                "speed": 853.0,
+                "explosiveMass": 0.0064,
+                "explosiveType": "tetryl",
+                "tntEquivalent": 0.00768,
+                "fireChance": 2.5
+              },
+              {
+                "type": "he_i",
+                "mass": 0.13,
+                "speed": 853.0,
+                "explosiveMass": 0.0064,
+                "explosiveType": "tetryl",
+                "tntEquivalent": 0.00768,
+                "fireChance": 2.5
+              },
+              {
+                "type": "sapi",
+                "mass": 0.134,
+                "speed": 844.0,
+                "explosiveMass": 0.01166,
+                "explosiveType": "s_r_379",
+                "tntEquivalent": 2e-05,
+                "fireChance": 8.0
+              }
             ]
           }
         ]

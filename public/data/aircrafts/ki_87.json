@@ -49,6 +49,47 @@
               "ap_t",
               "he_frag",
               "he_frag"
+            ],
+            "bulletsData": [
+              {
+                "type": "he_frag_i",
+                "mass": 0.235,
+                "speed": 700.0,
+                "explosiveMass": 0.0275,
+                "explosiveType": "tnt",
+                "tntEquivalent": 0.0275,
+                "fireChance": 3.5
+              },
+              {
+                "type": "ap_t",
+                "mass": 0.235,
+                "speed": 700.0,
+                "fireChance": 3.0
+              },
+              {
+                "type": "ap_t",
+                "mass": 0.235,
+                "speed": 700.0,
+                "fireChance": 3.0
+              },
+              {
+                "type": "he_frag",
+                "mass": 0.235,
+                "speed": 700.0,
+                "explosiveMass": 0.039,
+                "explosiveType": "pentolite",
+                "tntEquivalent": 0.04914,
+                "fireChance": 3.5
+              },
+              {
+                "type": "he_frag",
+                "mass": 0.235,
+                "speed": 700.0,
+                "explosiveMass": 0.039,
+                "explosiveType": "pentolite",
+                "tntEquivalent": 0.04914,
+                "fireChance": 3.5
+              }
             ]
           },
           {
@@ -60,6 +101,41 @@
               "ap_t",
               "ap_t",
               "ap_t"
+            ],
+            "bulletsData": [
+              {
+                "type": "he_frag_i",
+                "mass": 0.235,
+                "speed": 700.0,
+                "explosiveMass": 0.0275,
+                "explosiveType": "tnt",
+                "tntEquivalent": 0.0275,
+                "fireChance": 3.5
+              },
+              {
+                "type": "ap_t",
+                "mass": 0.235,
+                "speed": 700.0,
+                "fireChance": 3.0
+              },
+              {
+                "type": "ap_t",
+                "mass": 0.235,
+                "speed": 700.0,
+                "fireChance": 3.0
+              },
+              {
+                "type": "ap_t",
+                "mass": 0.235,
+                "speed": 700.0,
+                "fireChance": 3.0
+              },
+              {
+                "type": "ap_t",
+                "mass": 0.235,
+                "speed": 700.0,
+                "fireChance": 3.0
+              }
             ]
           },
           {
@@ -67,6 +143,14 @@
             "name": "ho155_all_tracers",
             "bullets": [
               "ap_t"
+            ],
+            "bulletsData": [
+              {
+                "type": "ap_t",
+                "mass": 0.235,
+                "speed": 700.0,
+                "fireChance": 3.0
+              }
             ]
           },
           {
@@ -74,6 +158,17 @@
             "name": "ho155_stealth",
             "bullets": [
               "he_frag"
+            ],
+            "bulletsData": [
+              {
+                "type": "he_frag",
+                "mass": 0.235,
+                "speed": 700.0,
+                "explosiveMass": 0.039,
+                "explosiveType": "pentolite",
+                "tntEquivalent": 0.04914,
+                "fireChance": 3.5
+              }
             ]
           }
         ]
@@ -93,6 +188,32 @@
               "he_frag_i",
               "he_frag_i",
               "ap_t"
+            ],
+            "bulletsData": [
+              {
+                "type": "he_frag_i",
+                "mass": 0.0843,
+                "speed": 800.0,
+                "explosiveMass": 0.00453,
+                "explosiveType": "rdx",
+                "tntEquivalent": 0.00634,
+                "fireChance": 2.5
+              },
+              {
+                "type": "he_frag_i",
+                "mass": 0.0843,
+                "speed": 800.0,
+                "explosiveMass": 0.00453,
+                "explosiveType": "rdx",
+                "tntEquivalent": 0.00634,
+                "fireChance": 2.5
+              },
+              {
+                "type": "ap_t",
+                "mass": 0.1232,
+                "speed": 702.0,
+                "fireChance": 2.5
+              }
             ]
           },
           {
@@ -102,6 +223,29 @@
               "ap_t",
               "ap_t",
               "he_frag_i"
+            ],
+            "bulletsData": [
+              {
+                "type": "ap_t",
+                "mass": 0.1232,
+                "speed": 702.0,
+                "fireChance": 2.5
+              },
+              {
+                "type": "ap_t",
+                "mass": 0.1232,
+                "speed": 702.0,
+                "fireChance": 2.5
+              },
+              {
+                "type": "he_frag_i",
+                "mass": 0.0843,
+                "speed": 800.0,
+                "explosiveMass": 0.00453,
+                "explosiveType": "rdx",
+                "tntEquivalent": 0.00634,
+                "fireChance": 2.5
+              }
             ]
           },
           {
@@ -109,6 +253,14 @@
             "name": "曳​光",
             "bullets": [
               "ap_t"
+            ],
+            "bulletsData": [
+              {
+                "type": "ap_t",
+                "mass": 0.1232,
+                "speed": 702.0,
+                "fireChance": 2.5
+              }
             ]
           },
           {
@@ -119,6 +271,42 @@
               "he_frag_i",
               "he_frag_i",
               "ball_shell"
+            ],
+            "bulletsData": [
+              {
+                "type": "he_frag_i",
+                "mass": 0.0843,
+                "speed": 800.0,
+                "explosiveMass": 0.00453,
+                "explosiveType": "rdx",
+                "tntEquivalent": 0.00634,
+                "fireChance": 2.5
+              },
+              {
+                "type": "he_frag_i",
+                "mass": 0.0843,
+                "speed": 800.0,
+                "explosiveMass": 0.00453,
+                "explosiveType": "rdx",
+                "tntEquivalent": 0.00634,
+                "fireChance": 2.5
+              },
+              {
+                "type": "he_frag_i",
+                "mass": 0.0843,
+                "speed": 800.0,
+                "explosiveMass": 0.00453,
+                "explosiveType": "rdx",
+                "tntEquivalent": 0.00634,
+                "fireChance": 2.5
+              },
+              {
+                "type": "ball_shell",
+                "mass": 0.0845,
+                "speed": 800.0,
+                "penetration": 16.0,
+                "hitPowerMult": 11.0
+              }
             ]
           }
         ]

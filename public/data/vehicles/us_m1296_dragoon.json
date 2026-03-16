@@ -37,10 +37,10 @@
       "name": "30mm_xm_813",
       "caliber": 30.0,
       "reloadTime": 0.2,
-      "autoLoader": false,
+      "autoLoader": true,
       "reloadTimes": {
-        "base": 0.26,
-        "expert": 0.23,
+        "base": 0.2,
+        "expert": 0.2,
         "ace": 0.2
       },
       "rateOfFire": 200,
@@ -97,6 +97,17 @@
         "explosiveMassKg": 0.032,
         "explosiveType": "hexal",
         "tntEquivalent": 0.045
+      },
+      {
+        "name": "30mm_mk_310",
+        "localizedName": "MK310",
+        "type": "he_tf",
+        "caliber": 30.0,
+        "mass": 0.424,
+        "muzzleVelocity": 970.0,
+        "explosiveMassKg": 0.04,
+        "explosiveType": "hexal",
+        "tntEquivalent": 0.056
       }
     ],
     "penetrationData": {
@@ -106,7 +117,7 @@
         "angle60": 57.0
       }
     },
-    "autoLoader": false,
+    "autoLoader": true,
     "engine_manufacturer": null,
     "engine_model": null,
     "engine_type": null,
@@ -148,7 +159,7 @@
         "bulletType": "ap_ball"
       }
     ],
-    "main_gun_ammo": 420,
+    "main_gun_ammo": 624,
     "driver_nv_resolution": [
       800,
       600

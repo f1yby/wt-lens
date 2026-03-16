@@ -46,6 +46,34 @@
               "ap_ball",
               "ap_ball",
               "ap_ball"
+            ],
+            "bulletsData": [
+              {
+                "type": "he_frag_t_ball",
+                "mass": 0.042,
+                "speed": 900.0,
+                "penetration": 3.5,
+                "explosiveMass": 0.0035,
+                "explosiveType": "tnt",
+                "tntEquivalent": 0.0035,
+                "hitPowerMult": 3.0,
+                "fireChance": 2.0
+              },
+              {
+                "type": "ap_ball",
+                "mass": 0.051,
+                "speed": 810.0
+              },
+              {
+                "type": "ap_ball",
+                "mass": 0.051,
+                "speed": 810.0
+              },
+              {
+                "type": "ap_ball",
+                "mass": 0.051,
+                "speed": 810.0
+              }
             ]
           },
           {
@@ -56,6 +84,46 @@
               "he_frag_t_ball",
               "ap_ball",
               "he_frag_t_ball"
+            ],
+            "bulletsData": [
+              {
+                "type": "he_frag_t_ball",
+                "mass": 0.042,
+                "speed": 900.0,
+                "penetration": 3.5,
+                "explosiveMass": 0.0035,
+                "explosiveType": "tnt",
+                "tntEquivalent": 0.0035,
+                "hitPowerMult": 3.0,
+                "fireChance": 2.0
+              },
+              {
+                "type": "he_frag_t_ball",
+                "mass": 0.042,
+                "speed": 900.0,
+                "penetration": 3.5,
+                "explosiveMass": 0.0035,
+                "explosiveType": "tnt",
+                "tntEquivalent": 0.0035,
+                "hitPowerMult": 3.0,
+                "fireChance": 2.0
+              },
+              {
+                "type": "ap_ball",
+                "mass": 0.051,
+                "speed": 810.0
+              },
+              {
+                "type": "he_frag_t_ball",
+                "mass": 0.042,
+                "speed": 900.0,
+                "penetration": 3.5,
+                "explosiveMass": 0.0035,
+                "explosiveType": "tnt",
+                "tntEquivalent": 0.0035,
+                "hitPowerMult": 3.0,
+                "fireChance": 2.0
+              }
             ]
           },
           {
@@ -63,6 +131,13 @@
             "name": "13_2_akan_m39_stealth",
             "bullets": [
               "ap_ball"
+            ],
+            "bulletsData": [
+              {
+                "type": "ap_ball",
+                "mass": 0.051,
+                "speed": 810.0
+              }
             ]
           }
         ]

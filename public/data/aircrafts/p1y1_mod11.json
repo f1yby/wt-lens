@@ -47,6 +47,53 @@
               "aphe",
               "aphe",
               "aphe"
+            ],
+            "bulletsData": [
+              {
+                "type": "he_frag_t",
+                "mass": 0.127,
+                "speed": 600.0,
+                "explosiveMass": 0.005,
+                "explosiveType": "pentolite",
+                "tntEquivalent": 0.0063,
+                "fireChance": 2.5
+              },
+              {
+                "type": "aphe",
+                "mass": 0.131,
+                "speed": 600.0,
+                "explosiveMass": 0.004,
+                "explosiveType": "pentolite",
+                "tntEquivalent": 0.00504,
+                "fireChance": 3.0
+              },
+              {
+                "type": "aphe",
+                "mass": 0.131,
+                "speed": 600.0,
+                "explosiveMass": 0.004,
+                "explosiveType": "detonite",
+                "tntEquivalent": 0.00504,
+                "fireChance": 3.0
+              },
+              {
+                "type": "aphe",
+                "mass": 0.131,
+                "speed": 600.0,
+                "explosiveMass": 0.004,
+                "explosiveType": "pentolite",
+                "tntEquivalent": 0.00504,
+                "fireChance": 3.0
+              },
+              {
+                "type": "aphe",
+                "mass": 0.131,
+                "speed": 600.0,
+                "explosiveMass": 0.004,
+                "explosiveType": "detonite",
+                "tntEquivalent": 0.00504,
+                "fireChance": 3.0
+              }
             ]
           }
         ]

@@ -34,7 +34,7 @@
         "name": "cannonMG15120_turret",
         "localizedName": "20 毫​米 MG 151/20 机​炮",
         "count": 2,
-        "bullets": 1900,
+        "bullets": 1000,
         "caliber": 20.0,
         "fireRate": 750,
         "belts": [
@@ -47,6 +47,43 @@
               "aphe",
               "i_t",
               "ap_i"
+            ],
+            "bulletsData": [
+              {
+                "type": "ap_i",
+                "mass": 0.117,
+                "speed": 705.0,
+                "fireChance": 12.0
+              },
+              {
+                "type": "ap_i",
+                "mass": 0.117,
+                "speed": 705.0,
+                "fireChance": 12.0
+              },
+              {
+                "type": "aphe",
+                "mass": 0.117,
+                "speed": 720.0,
+                "explosiveMass": 0.00459,
+                "explosiveType": "petn",
+                "tntEquivalent": 0.00597,
+                "fireChance": 3.0
+              },
+              {
+                "type": "i_t",
+                "mass": 0.116,
+                "speed": 720.0,
+                "penetration": 21.0,
+                "hitPowerMult": 10.0,
+                "fireChance": 10.0
+              },
+              {
+                "type": "ap_i",
+                "mass": 0.117,
+                "speed": 720.0,
+                "fireChance": 12.0
+              }
             ]
           }
         ]

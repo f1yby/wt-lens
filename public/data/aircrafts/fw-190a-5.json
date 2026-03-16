@@ -47,36 +47,6 @@
         "fireRate": 700
       }
     ],
-    "payloads": [
-      {
-        "name": "Fw-190A-5_R1",
-        "weapons": [
-          {
-            "trigger": "additional gun",
-            "name": "cannonMG15120_underwing",
-            "localizedName": "20 毫​米 MG 151/20 机​炮",
-            "count": 125
-          },
-          {
-            "trigger": "additional gun",
-            "name": "cannonMG15120_underwing",
-            "localizedName": "20 毫​米 MG 151/20 机​炮",
-            "count": 125
-          },
-          {
-            "trigger": "additional gun",
-            "name": "cannonMG15120_underwing",
-            "localizedName": "20 毫​米 MG 151/20 机​炮",
-            "count": 125
-          },
-          {
-            "trigger": "additional gun",
-            "name": "cannonMG15120_underwing",
-            "localizedName": "20 毫​米 MG 151/20 机​炮",
-            "count": 125
-          }
-        ]
-      }
-    ]
+    "payloads": []
   }
 }

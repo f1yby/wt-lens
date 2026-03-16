@@ -43,6 +43,16 @@
             "name": "type88_ground_targets",
             "bullets": [
               "he_i_t"
+            ],
+            "bulletsData": [
+              {
+                "type": "he_i_t",
+                "mass": 6.17,
+                "speed": 830.0,
+                "explosiveMass": 0.49,
+                "explosiveType": "tnt",
+                "tntEquivalent": 0.49
+              }
             ]
           }
         ]

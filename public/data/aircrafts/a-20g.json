@@ -49,35 +49,6 @@
     ],
     "payloads": [
       {
-        "name": "A-20G_500lb",
-        "weapons": [
-          {
-            "trigger": "bombs",
-            "name": "us_500lb_anm64a1",
-            "localizedName": "500 磅 AN-M64A1 炸​弹",
-            "count": 1
-          },
-          {
-            "trigger": "bombs",
-            "name": "us_500lb_anm64a1",
-            "localizedName": "500 磅 AN-M64A1 炸​弹",
-            "count": 1
-          },
-          {
-            "trigger": "bombs",
-            "name": "us_500lb_anm64a1",
-            "localizedName": "500 磅 AN-M64A1 炸​弹",
-            "count": 1
-          },
-          {
-            "trigger": "bombs",
-            "name": "us_500lb_anm64a1",
-            "localizedName": "500 磅 AN-M64A1 炸​弹",
-            "count": 1
-          }
-        ]
-      },
-      {
         "name": "a20g_4x250lb",
         "weapons": [
           {
@@ -131,23 +102,6 @@
             "trigger": "bombs",
             "name": "us_500lb_anm64a1",
             "localizedName": "500 磅 AN-M64A1 炸​弹",
-            "count": 1
-          }
-        ]
-      },
-      {
-        "name": "a20g_torpedo",
-        "weapons": [
-          {
-            "trigger": "torpedoes",
-            "name": "test_torpedo",
-            "localizedName": "test_torpedo",
-            "count": 1
-          },
-          {
-            "trigger": "torpedoes",
-            "name": "test_torpedo",
-            "localizedName": "test_torpedo",
             "count": 1
           }
         ]

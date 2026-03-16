@@ -62,6 +62,34 @@
               "ap_ball",
               "ap_ball",
               "ap_ball"
+            ],
+            "bulletsData": [
+              {
+                "type": "t_ball",
+                "mass": 0.0101,
+                "speed": 811.0,
+                "penetration": 5.0,
+                "hitPowerMult": 2.9,
+                "fireChance": 1.5
+              },
+              {
+                "type": "ap_ball",
+                "mass": 0.0105,
+                "speed": 811.0,
+                "penetration": 13.0
+              },
+              {
+                "type": "ap_ball",
+                "mass": 0.0105,
+                "speed": 811.0,
+                "penetration": 13.0
+              },
+              {
+                "type": "ap_ball",
+                "mass": 0.0105,
+                "speed": 811.0,
+                "penetration": 13.0
+              }
             ]
           },
           {
@@ -70,6 +98,22 @@
             "bullets": [
               "t_ball",
               "ap_ball"
+            ],
+            "bulletsData": [
+              {
+                "type": "t_ball",
+                "mass": 0.0101,
+                "speed": 811.0,
+                "penetration": 5.0,
+                "hitPowerMult": 2.9,
+                "fireChance": 1.5
+              },
+              {
+                "type": "ap_ball",
+                "mass": 0.0105,
+                "speed": 811.0,
+                "penetration": 13.0
+              }
             ]
           }
         ]

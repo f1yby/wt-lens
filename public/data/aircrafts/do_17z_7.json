@@ -47,6 +47,43 @@
               "ball",
               "ap_i_ball",
               "he_ball"
+            ],
+            "bulletsData": [
+              {
+                "type": "ap_t_ball",
+                "mass": 0.01,
+                "speed": 905.0,
+                "penetration": 9.0
+              },
+              {
+                "type": "ball",
+                "mass": 0.01,
+                "speed": 855.0,
+                "penetration": 5.0,
+                "hitPowerMult": 2.9
+              },
+              {
+                "type": "ball",
+                "mass": 0.01,
+                "speed": 855.0,
+                "penetration": 5.0,
+                "hitPowerMult": 2.9
+              },
+              {
+                "type": "ap_i_ball",
+                "mass": 0.01015,
+                "speed": 905.0,
+                "penetration": 7.5,
+                "fireChance": 5.0
+              },
+              {
+                "type": "he_ball",
+                "mass": 0.01085,
+                "speed": 855.0,
+                "penetration": 3.5,
+                "hitPowerMult": 2.5,
+                "fireChance": 4.0
+              }
             ]
           },
           {
@@ -58,6 +95,43 @@
               "ball",
               "ap_i_ball",
               "he_ball"
+            ],
+            "bulletsData": [
+              {
+                "type": "ap_t_ball",
+                "mass": 0.01,
+                "speed": 905.0,
+                "penetration": 9.0
+              },
+              {
+                "type": "ball",
+                "mass": 0.01,
+                "speed": 855.0,
+                "penetration": 5.0,
+                "hitPowerMult": 2.9
+              },
+              {
+                "type": "ball",
+                "mass": 0.01,
+                "speed": 855.0,
+                "penetration": 5.0,
+                "hitPowerMult": 2.9
+              },
+              {
+                "type": "ap_i_ball",
+                "mass": 0.01015,
+                "speed": 905.0,
+                "penetration": 7.5,
+                "fireChance": 5.0
+              },
+              {
+                "type": "he_ball",
+                "mass": 0.01085,
+                "speed": 855.0,
+                "penetration": 3.5,
+                "hitPowerMult": 2.5,
+                "fireChance": 4.0
+              }
             ]
           },
           {
@@ -69,6 +143,43 @@
               "ball",
               "ap_i_ball",
               "he_ball"
+            ],
+            "bulletsData": [
+              {
+                "type": "ap_t_ball",
+                "mass": 0.01,
+                "speed": 905.0,
+                "penetration": 9.0
+              },
+              {
+                "type": "ball",
+                "mass": 0.01,
+                "speed": 855.0,
+                "penetration": 5.0,
+                "hitPowerMult": 2.9
+              },
+              {
+                "type": "ball",
+                "mass": 0.01,
+                "speed": 855.0,
+                "penetration": 5.0,
+                "hitPowerMult": 2.9
+              },
+              {
+                "type": "ap_i_ball",
+                "mass": 0.01015,
+                "speed": 905.0,
+                "penetration": 7.5,
+                "fireChance": 5.0
+              },
+              {
+                "type": "he_ball",
+                "mass": 0.01085,
+                "speed": 855.0,
+                "penetration": 3.5,
+                "hitPowerMult": 2.5,
+                "fireChance": 4.0
+              }
             ]
           },
           {
@@ -80,6 +191,43 @@
               "ball",
               "ap_i_ball",
               "he_ball"
+            ],
+            "bulletsData": [
+              {
+                "type": "ap_t_ball",
+                "mass": 0.01,
+                "speed": 905.0,
+                "penetration": 9.0
+              },
+              {
+                "type": "ball",
+                "mass": 0.01,
+                "speed": 855.0,
+                "penetration": 5.0,
+                "hitPowerMult": 2.9
+              },
+              {
+                "type": "ball",
+                "mass": 0.01,
+                "speed": 855.0,
+                "penetration": 5.0,
+                "hitPowerMult": 2.9
+              },
+              {
+                "type": "ap_i_ball",
+                "mass": 0.01015,
+                "speed": 905.0,
+                "penetration": 7.5,
+                "fireChance": 5.0
+              },
+              {
+                "type": "he_ball",
+                "mass": 0.01085,
+                "speed": 855.0,
+                "penetration": 3.5,
+                "hitPowerMult": 2.5,
+                "fireChance": 4.0
+              }
             ]
           }
         ]
@@ -102,82 +250,6 @@
       }
     ],
     "payloads": [
-      {
-        "name": "do_17z_7_SC50",
-        "weapons": [
-          {
-            "trigger": "bombs",
-            "name": "de_sc50",
-            "localizedName": "50 千​克 SC50JA 炸​弹",
-            "count": 1
-          },
-          {
-            "trigger": "bombs",
-            "name": "de_sc50",
-            "localizedName": "50 千​克 SC50JA 炸​弹",
-            "count": 1
-          },
-          {
-            "trigger": "bombs",
-            "name": "de_sc50",
-            "localizedName": "50 千​克 SC50JA 炸​弹",
-            "count": 1
-          },
-          {
-            "trigger": "bombs",
-            "name": "de_sc50",
-            "localizedName": "50 千​克 SC50JA 炸​弹",
-            "count": 1
-          },
-          {
-            "trigger": "bombs",
-            "name": "de_sc50",
-            "localizedName": "50 千​克 SC50JA 炸​弹",
-            "count": 1
-          },
-          {
-            "trigger": "bombs",
-            "name": "de_sc50",
-            "localizedName": "50 千​克 SC50JA 炸​弹",
-            "count": 1
-          },
-          {
-            "trigger": "bombs",
-            "name": "de_sc50",
-            "localizedName": "50 千​克 SC50JA 炸​弹",
-            "count": 1
-          },
-          {
-            "trigger": "bombs",
-            "name": "de_sc50",
-            "localizedName": "50 千​克 SC50JA 炸​弹",
-            "count": 1
-          },
-          {
-            "trigger": "bombs",
-            "name": "de_sc50",
-            "localizedName": "50 千​克 SC50JA 炸​弹",
-            "count": 1
-          },
-          {
-            "trigger": "bombs",
-            "name": "de_sc50",
-            "localizedName": "50 千​克 SC50JA 炸​弹",
-            "count": 1
-          }
-        ]
-      },
-      {
-        "name": "do_17z_7_SC250",
-        "weapons": [
-          {
-            "trigger": "bombs",
-            "name": "de_sc250",
-            "localizedName": "250 千​克 SC260JA 炸​弹",
-            "count": 1
-          }
-        ]
-      },
       {
         "name": "do_17z_7_flamm_250",
         "weapons": [

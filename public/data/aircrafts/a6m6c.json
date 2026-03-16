@@ -49,6 +49,47 @@
               "ap_ball",
               "he_i_ball",
               "he_i_ball"
+            ],
+            "bulletsData": [
+              {
+                "type": "t_ball",
+                "mass": 0.0438,
+                "speed": 850.0,
+                "penetration": 10.0,
+                "hitPowerMult": 8.0
+              },
+              {
+                "type": "ap_ball",
+                "mass": 0.0519,
+                "speed": 815.0
+              },
+              {
+                "type": "ap_ball",
+                "mass": 0.0519,
+                "speed": 815.0
+              },
+              {
+                "type": "he_i_ball",
+                "mass": 0.041,
+                "speed": 850.0,
+                "penetration": 3.5,
+                "explosiveMass": 0.0023,
+                "explosiveType": "cyclonite",
+                "tntEquivalent": 0.00322,
+                "hitPowerMult": 3.0,
+                "fireChance": 2.0
+              },
+              {
+                "type": "he_i_ball",
+                "mass": 0.041,
+                "speed": 850.0,
+                "penetration": 3.5,
+                "explosiveMass": 0.0023,
+                "explosiveType": "cyclonite",
+                "tntEquivalent": 0.00322,
+                "hitPowerMult": 3.0,
+                "fireChance": 2.0
+              }
             ]
           },
           {
@@ -60,6 +101,41 @@
               "ap_ball",
               "ap_ball",
               "he_i_ball"
+            ],
+            "bulletsData": [
+              {
+                "type": "t_ball",
+                "mass": 0.0438,
+                "speed": 850.0,
+                "penetration": 10.0,
+                "hitPowerMult": 8.0
+              },
+              {
+                "type": "ap_ball",
+                "mass": 0.0519,
+                "speed": 815.0
+              },
+              {
+                "type": "ap_ball",
+                "mass": 0.0519,
+                "speed": 815.0
+              },
+              {
+                "type": "ap_ball",
+                "mass": 0.0519,
+                "speed": 815.0
+              },
+              {
+                "type": "he_i_ball",
+                "mass": 0.041,
+                "speed": 850.0,
+                "penetration": 3.5,
+                "explosiveMass": 0.0023,
+                "explosiveType": "cyclonite",
+                "tntEquivalent": 0.00322,
+                "hitPowerMult": 3.0,
+                "fireChance": 2.0
+              }
             ]
           },
           {
@@ -67,6 +143,19 @@
             "name": "type3_stealth",
             "bullets": [
               "he_i_ball"
+            ],
+            "bulletsData": [
+              {
+                "type": "he_i_ball",
+                "mass": 0.041,
+                "speed": 850.0,
+                "penetration": 3.5,
+                "explosiveMass": 0.0023,
+                "explosiveType": "cyclonite",
+                "tntEquivalent": 0.00322,
+                "hitPowerMult": 3.0,
+                "fireChance": 2.0
+              }
             ]
           }
         ]
@@ -87,6 +176,44 @@
               "he_frag",
               "he_frag",
               "aphe"
+            ],
+            "bulletsData": [
+              {
+                "type": "he_frag_t",
+                "mass": 0.127,
+                "speed": 750.0,
+                "explosiveMass": 0.005,
+                "explosiveType": "pentolite",
+                "tntEquivalent": 0.0063,
+                "fireChance": 2.5
+              },
+              {
+                "type": "he_frag",
+                "mass": 0.127,
+                "speed": 750.0,
+                "explosiveMass": 0.0099,
+                "explosiveType": "pentolite",
+                "tntEquivalent": 0.01247,
+                "fireChance": 2.5
+              },
+              {
+                "type": "he_frag",
+                "mass": 0.127,
+                "speed": 750.0,
+                "explosiveMass": 0.0099,
+                "explosiveType": "pentolite",
+                "tntEquivalent": 0.01247,
+                "fireChance": 2.5
+              },
+              {
+                "type": "aphe",
+                "mass": 0.131,
+                "speed": 750.0,
+                "explosiveMass": 0.004,
+                "explosiveType": "detonite",
+                "tntEquivalent": 0.00504,
+                "fireChance": 3.0
+              }
             ]
           },
           {
@@ -99,6 +226,62 @@
               "aphe",
               "he_frag",
               "he_frag_t"
+            ],
+            "bulletsData": [
+              {
+                "type": "aphe",
+                "mass": 0.131,
+                "speed": 750.0,
+                "explosiveMass": 0.004,
+                "explosiveType": "detonite",
+                "tntEquivalent": 0.00504,
+                "fireChance": 3.0
+              },
+              {
+                "type": "aphe",
+                "mass": 0.131,
+                "speed": 750.0,
+                "explosiveMass": 0.004,
+                "explosiveType": "detonite",
+                "tntEquivalent": 0.00504,
+                "fireChance": 3.0
+              },
+              {
+                "type": "aphe",
+                "mass": 0.131,
+                "speed": 750.0,
+                "explosiveMass": 0.004,
+                "explosiveType": "detonite",
+                "tntEquivalent": 0.00504,
+                "fireChance": 3.0
+              },
+              {
+                "type": "aphe",
+                "mass": 0.131,
+                "speed": 750.0,
+                "explosiveMass": 0.004,
+                "explosiveType": "detonite",
+                "tntEquivalent": 0.00504,
+                "fireChance": 3.0
+              },
+              {
+                "type": "he_frag",
+                "mass": 0.127,
+                "speed": 750.0,
+                "explosiveMass": 0.0099,
+                "explosiveType": "pentolite",
+                "tntEquivalent": 0.01247,
+                "fireChance": 2.5
+              },
+              {
+                "type": "he_frag_t",
+                "mass": 0.127,
+                "speed": 750.0,
+                "explosiveMass": 0.005,
+                "explosiveType": "pentolite",
+                "tntEquivalent": 0.0063,
+                "fireChance": 2.5
+              }
             ]
           },
           {
@@ -106,6 +289,17 @@
             "name": "曳​光",
             "bullets": [
               "he_frag_t"
+            ],
+            "bulletsData": [
+              {
+                "type": "he_frag_t",
+                "mass": 0.127,
+                "speed": 750.0,
+                "explosiveMass": 0.005,
+                "explosiveType": "pentolite",
+                "tntEquivalent": 0.0063,
+                "fireChance": 2.5
+              }
             ]
           },
           {
@@ -117,6 +311,53 @@
               "he_frag",
               "aphe",
               "aphe"
+            ],
+            "bulletsData": [
+              {
+                "type": "he_frag",
+                "mass": 0.127,
+                "speed": 750.0,
+                "explosiveMass": 0.0099,
+                "explosiveType": "pentolite",
+                "tntEquivalent": 0.01247,
+                "fireChance": 2.5
+              },
+              {
+                "type": "he_frag",
+                "mass": 0.127,
+                "speed": 750.0,
+                "explosiveMass": 0.0099,
+                "explosiveType": "pentolite",
+                "tntEquivalent": 0.01247,
+                "fireChance": 2.5
+              },
+              {
+                "type": "he_frag",
+                "mass": 0.127,
+                "speed": 750.0,
+                "explosiveMass": 0.0099,
+                "explosiveType": "pentolite",
+                "tntEquivalent": 0.01247,
+                "fireChance": 2.5
+              },
+              {
+                "type": "aphe",
+                "mass": 0.131,
+                "speed": 750.0,
+                "explosiveMass": 0.004,
+                "explosiveType": "detonite",
+                "tntEquivalent": 0.00504,
+                "fireChance": 3.0
+              },
+              {
+                "type": "aphe",
+                "mass": 0.131,
+                "speed": 750.0,
+                "explosiveMass": 0.004,
+                "explosiveType": "detonite",
+                "tntEquivalent": 0.00504,
+                "fireChance": 3.0
+              }
             ]
           }
         ]

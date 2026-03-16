@@ -43,6 +43,14 @@
             "name": "mg131_stealth",
             "bullets": [
               "ap_i_ball"
+            ],
+            "bulletsData": [
+              {
+                "type": "ap_i_ball",
+                "mass": 0.038,
+                "speed": 710.0,
+                "fireChance": 10.0
+              }
             ]
           }
         ]
@@ -71,6 +79,39 @@
               "ap_i_ball",
               "he_i_ball",
               "ap_i_ball"
+            ],
+            "bulletsData": [
+              {
+                "type": "i_t_ball",
+                "mass": 0.0335,
+                "speed": 755.0,
+                "penetration": 7.0,
+                "hitPowerMult": 4.0,
+                "fireChance": 8.0
+              },
+              {
+                "type": "ap_i_ball",
+                "mass": 0.038,
+                "speed": 710.0,
+                "fireChance": 10.0
+              },
+              {
+                "type": "he_i_ball",
+                "mass": 0.034,
+                "speed": 750.0,
+                "penetration": 3.5,
+                "explosiveMass": 0.001,
+                "explosiveType": "petn",
+                "tntEquivalent": 0.0013,
+                "hitPowerMult": 3.0,
+                "fireChance": 2.0
+              },
+              {
+                "type": "ap_i_ball",
+                "mass": 0.038,
+                "speed": 710.0,
+                "fireChance": 10.0
+              }
             ]
           }
         ]

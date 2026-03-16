@@ -45,6 +45,14 @@
             "name": "mg131_stealth",
             "bullets": [
               "ap_i_ball"
+            ],
+            "bulletsData": [
+              {
+                "type": "ap_i_ball",
+                "mass": 0.038,
+                "speed": 710.0,
+                "fireChance": 10.0
+              }
             ]
           }
         ]
@@ -124,40 +132,6 @@
             "name": "cannonMK108_underwing",
             "localizedName": "30 毫​米 MK 108 机​炮",
             "count": 35
-          }
-        ]
-      },
-      {
-        "name": "Bf-109G-6_R6",
-        "weapons": [
-          {
-            "trigger": "additional gun",
-            "name": "cannonMG15120_underwing",
-            "localizedName": "20 毫​米 MG 151/20 机​炮",
-            "count": 135
-          },
-          {
-            "trigger": "additional gun",
-            "name": "cannonMG15120_underwing",
-            "localizedName": "20 毫​米 MG 151/20 机​炮",
-            "count": 135
-          }
-        ]
-      },
-      {
-        "name": "Bf-109G-6_W",
-        "weapons": [
-          {
-            "trigger": "rockets",
-            "name": "de_br20",
-            "localizedName": "Wfr.Gr. 21 火​箭​弹",
-            "count": 1
-          },
-          {
-            "trigger": "rockets",
-            "name": "de_br20",
-            "localizedName": "Wfr.Gr. 21 火​箭​弹",
-            "count": 1
           }
         ]
       }

@@ -45,6 +45,14 @@
             "name": "mg131_stealth",
             "bullets": [
               "ap_i_ball"
+            ],
+            "bulletsData": [
+              {
+                "type": "ap_i_ball",
+                "mass": 0.038,
+                "speed": 710.0,
+                "fireChance": 10.0
+              }
             ]
           }
         ]

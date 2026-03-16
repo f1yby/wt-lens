@@ -47,6 +47,38 @@
               "ap_t_ball",
               "ap_t_ball",
               "i_ball"
+            ],
+            "bulletsData": [
+              {
+                "type": "t_ball",
+                "mass": 0.032,
+                "speed": 750.0,
+                "penetration": 10.0,
+                "hitPowerMult": 8.0
+              },
+              {
+                "type": "ap_t_ball",
+                "mass": 0.032,
+                "speed": 750.0
+              },
+              {
+                "type": "ap_t_ball",
+                "mass": 0.032,
+                "speed": 750.0
+              },
+              {
+                "type": "ap_t_ball",
+                "mass": 0.032,
+                "speed": 750.0
+              },
+              {
+                "type": "i_ball",
+                "mass": 0.032,
+                "speed": 750.0,
+                "penetration": 10.0,
+                "hitPowerMult": 8.0,
+                "fireChance": 2.0
+              }
             ]
           }
         ]

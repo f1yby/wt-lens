@@ -47,6 +47,47 @@
               "ap_t",
               "he_frag",
               "he_frag"
+            ],
+            "bulletsData": [
+              {
+                "type": "he_frag_i",
+                "mass": 0.235,
+                "speed": 700.0,
+                "explosiveMass": 0.0275,
+                "explosiveType": "tnt",
+                "tntEquivalent": 0.0275,
+                "fireChance": 3.5
+              },
+              {
+                "type": "ap_t",
+                "mass": 0.235,
+                "speed": 700.0,
+                "fireChance": 3.0
+              },
+              {
+                "type": "ap_t",
+                "mass": 0.235,
+                "speed": 700.0,
+                "fireChance": 3.0
+              },
+              {
+                "type": "he_frag",
+                "mass": 0.235,
+                "speed": 700.0,
+                "explosiveMass": 0.039,
+                "explosiveType": "pentolite",
+                "tntEquivalent": 0.04914,
+                "fireChance": 3.5
+              },
+              {
+                "type": "he_frag",
+                "mass": 0.235,
+                "speed": 700.0,
+                "explosiveMass": 0.039,
+                "explosiveType": "pentolite",
+                "tntEquivalent": 0.04914,
+                "fireChance": 3.5
+              }
             ]
           },
           {
@@ -58,6 +99,41 @@
               "ap_t",
               "ap_t",
               "ap_t"
+            ],
+            "bulletsData": [
+              {
+                "type": "he_frag_i",
+                "mass": 0.235,
+                "speed": 700.0,
+                "explosiveMass": 0.0275,
+                "explosiveType": "tnt",
+                "tntEquivalent": 0.0275,
+                "fireChance": 3.5
+              },
+              {
+                "type": "ap_t",
+                "mass": 0.235,
+                "speed": 700.0,
+                "fireChance": 3.0
+              },
+              {
+                "type": "ap_t",
+                "mass": 0.235,
+                "speed": 700.0,
+                "fireChance": 3.0
+              },
+              {
+                "type": "ap_t",
+                "mass": 0.235,
+                "speed": 700.0,
+                "fireChance": 3.0
+              },
+              {
+                "type": "ap_t",
+                "mass": 0.235,
+                "speed": 700.0,
+                "fireChance": 3.0
+              }
             ]
           },
           {
@@ -65,6 +141,14 @@
             "name": "ho155_all_tracers",
             "bullets": [
               "ap_t"
+            ],
+            "bulletsData": [
+              {
+                "type": "ap_t",
+                "mass": 0.235,
+                "speed": 700.0,
+                "fireChance": 3.0
+              }
             ]
           },
           {
@@ -72,6 +156,17 @@
             "name": "ho155_stealth",
             "bullets": [
               "he_frag"
+            ],
+            "bulletsData": [
+              {
+                "type": "he_frag",
+                "mass": 0.235,
+                "speed": 700.0,
+                "explosiveMass": 0.039,
+                "explosiveType": "pentolite",
+                "tntEquivalent": 0.04914,
+                "fireChance": 3.5
+              }
             ]
           }
         ]

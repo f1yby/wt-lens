@@ -100,6 +100,17 @@
             "angle60": 294.3
           }
         }
+      },
+      {
+        "name": "120mm_f1_he",
+        "localizedName": "F1 HE",
+        "type": "he_frag_tank",
+        "caliber": 120.0,
+        "mass": 16.8,
+        "muzzleVelocity": 1050.0,
+        "explosiveMassKg": 3.0,
+        "explosiveType": "comp_b",
+        "tntEquivalent": 3.81
       }
     ],
     "penetrationData": {

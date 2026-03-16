@@ -31,10 +31,10 @@
       "name": "155mm_L_31",
       "caliber": 155.0,
       "reloadTime": 5.0,
-      "autoLoader": false,
+      "autoLoader": true,
       "reloadTimes": {
-        "base": 6.5,
-        "expert": 5.75,
+        "base": 5.0,
+        "expert": 5.0,
         "ace": 5.0
       }
     },
@@ -100,7 +100,7 @@
       }
     ],
     "penetrationData": null,
-    "autoLoader": false,
+    "autoLoader": true,
     "engine_manufacturer": "cummins",
     "engine_model": "vta_903t_v8",
     "engine_type": null,

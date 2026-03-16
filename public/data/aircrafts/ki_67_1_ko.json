@@ -53,6 +53,29 @@
               "ap_t",
               "ap_t",
               "he_frag_i"
+            ],
+            "bulletsData": [
+              {
+                "type": "ap_t",
+                "mass": 0.1232,
+                "speed": 702.0,
+                "fireChance": 2.5
+              },
+              {
+                "type": "ap_t",
+                "mass": 0.1232,
+                "speed": 702.0,
+                "fireChance": 2.5
+              },
+              {
+                "type": "he_frag_i",
+                "mass": 0.0843,
+                "speed": 800.0,
+                "explosiveMass": 0.00453,
+                "explosiveType": "rdx",
+                "tntEquivalent": 0.00634,
+                "fireChance": 2.5
+              }
             ]
           }
         ]

@@ -5,7 +5,7 @@
     "weight": 15.0,
     "power_to_weight": 13.33,
     "max_reverse_speed": 11.8,
-    "reload_time": 10.0,
+    "reload_time": 8.99,
     "penetration": 120.0,
     "max_speed": 40.1,
     "crew_count": 5,
@@ -30,18 +30,18 @@
     "mainGun": {
       "name": "105mm_type_91",
       "caliber": 105.0,
-      "reloadTime": 10.0,
+      "reloadTime": 8.99,
       "autoLoader": false,
       "reloadTimes": {
-        "base": 13.0,
-        "expert": 11.5,
-        "ace": 10.0
+        "base": 11.69,
+        "expert": 10.34,
+        "ace": 8.99
       }
     },
     "ammunitions": [
       {
         "name": "105mm_type91_he",
-        "localizedName": "105mm_type91_he",
+        "localizedName": "Type 91 HE",
         "type": "he_frag_tank",
         "caliber": 105.0,
         "mass": 15.76,
@@ -52,7 +52,7 @@
       },
       {
         "name": "105mm_type91_heat",
-        "localizedName": "105mm_type91_heat",
+        "localizedName": "Type 3 Type 3 HEAT",
         "type": "heat_tank",
         "caliber": 105.0,
         "mass": 10.91,

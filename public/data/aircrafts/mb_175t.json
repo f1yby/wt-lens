@@ -46,6 +46,42 @@
               "i_t",
               "aphe",
               "he_i_mine"
+            ],
+            "bulletsData": [
+              {
+                "type": "i_t",
+                "mass": 0.116,
+                "speed": 720.0,
+                "penetration": 21.0,
+                "hitPowerMult": 10.0,
+                "fireChance": 10.0
+              },
+              {
+                "type": "i_t",
+                "mass": 0.116,
+                "speed": 720.0,
+                "penetration": 21.0,
+                "hitPowerMult": 10.0,
+                "fireChance": 10.0
+              },
+              {
+                "type": "aphe",
+                "mass": 0.117,
+                "speed": 720.0,
+                "explosiveMass": 0.00459,
+                "explosiveType": "petn",
+                "tntEquivalent": 0.00597,
+                "fireChance": 3.0
+              },
+              {
+                "type": "he_i_mine",
+                "mass": 0.092,
+                "speed": 785.0,
+                "explosiveMass": 0.0186,
+                "explosiveType": "ha_41",
+                "tntEquivalent": 0.02604,
+                "fireChance": 2.5
+              }
             ]
           }
         ]
@@ -67,6 +103,43 @@
               "aphe",
               "i_t",
               "ap_i"
+            ],
+            "bulletsData": [
+              {
+                "type": "ap_i",
+                "mass": 0.117,
+                "speed": 705.0,
+                "fireChance": 12.0
+              },
+              {
+                "type": "ap_i",
+                "mass": 0.117,
+                "speed": 705.0,
+                "fireChance": 12.0
+              },
+              {
+                "type": "aphe",
+                "mass": 0.117,
+                "speed": 720.0,
+                "explosiveMass": 0.00459,
+                "explosiveType": "petn",
+                "tntEquivalent": 0.00597,
+                "fireChance": 3.0
+              },
+              {
+                "type": "i_t",
+                "mass": 0.116,
+                "speed": 720.0,
+                "penetration": 21.0,
+                "hitPowerMult": 10.0,
+                "fireChance": 10.0
+              },
+              {
+                "type": "ap_i",
+                "mass": 0.117,
+                "speed": 720.0,
+                "fireChance": 12.0
+              }
             ]
           }
         ]

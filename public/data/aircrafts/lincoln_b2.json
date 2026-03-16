@@ -53,6 +53,29 @@
               "he_i",
               "ap_t",
               "ap_t"
+            ],
+            "bulletsData": [
+              {
+                "type": "he_i",
+                "mass": 0.13,
+                "speed": 853.0,
+                "explosiveMass": 0.0064,
+                "explosiveType": "tetryl",
+                "tntEquivalent": 0.00768,
+                "fireChance": 2.5
+              },
+              {
+                "type": "ap_t",
+                "mass": 0.141,
+                "speed": 822.0,
+                "fireChance": 2.5
+              },
+              {
+                "type": "ap_t",
+                "mass": 0.141,
+                "speed": 822.0,
+                "fireChance": 2.5
+              }
             ]
           }
         ]

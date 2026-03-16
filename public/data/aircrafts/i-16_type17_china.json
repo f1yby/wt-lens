@@ -54,6 +54,41 @@
               "he_frag_i",
               "he_frag",
               "t_shell"
+            ],
+            "bulletsData": [
+              {
+                "type": "he_frag",
+                "mass": 0.091,
+                "speed": 800.0,
+                "explosiveMass": 0.004,
+                "explosiveType": "tetryl",
+                "tntEquivalent": 0.0048
+              },
+              {
+                "type": "he_frag_i",
+                "mass": 0.091,
+                "speed": 800.0,
+                "explosiveMass": 0.003,
+                "explosiveType": "tetryl",
+                "tntEquivalent": 0.0036,
+                "fireChance": 2.5
+              },
+              {
+                "type": "he_frag",
+                "mass": 0.091,
+                "speed": 800.0,
+                "explosiveMass": 0.004,
+                "explosiveType": "tetryl",
+                "tntEquivalent": 0.0048
+              },
+              {
+                "type": "t_shell",
+                "mass": 0.091,
+                "speed": 800.0,
+                "penetration": 10.0,
+                "hitPowerMult": 10.0,
+                "fireChance": 3.0
+              }
             ]
           }
         ]
