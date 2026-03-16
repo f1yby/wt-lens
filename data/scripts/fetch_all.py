@@ -1511,18 +1511,26 @@ def save_ground_vehicles_split(vehicles: list[VehicleData], output_dir: Path):
     Creates:
         - vehicles-index.json: Lightweight index for list rendering
         - vehicles/{id}.json: Individual vehicle detail files
+        - vehicles-performance.json: All performance data for comparison charts
     """
     output_dir.mkdir(parents=True, exist_ok=True)
     vehicles_dir = output_dir / "vehicles"
     vehicles_dir.mkdir(parents=True, exist_ok=True)
     
     index_entries: list[dict[str, Any]] = []
+    performance_entries: list[dict[str, Any]] = []
     
     for v in vehicles:
         vehicle_dict = vehicle_data_to_dict(v)
         index_entry, detail_entry = _split_vehicle_data(vehicle_dict)
         
         index_entries.append(index_entry)
+        
+        # Collect performance data for comparison charts
+        performance_entries.append({
+            'id': v.id,
+            'performance': detail_entry.get('performance'),
+        })
         
         # Save individual vehicle detail file
         detail_path = vehicles_dir / f"{v.id}.json"
@@ -1534,8 +1542,14 @@ def save_ground_vehicles_split(vehicles: list[VehicleData], output_dir: Path):
     with open(index_path, 'w', encoding='utf-8') as f:
         json.dump(index_entries, f, ensure_ascii=False, indent=2)
     
+    # Save performance summary file for comparison charts
+    performance_path = output_dir / "vehicles-performance.json"
+    with open(performance_path, 'w', encoding='utf-8') as f:
+        json.dump(performance_entries, f, ensure_ascii=False, indent=2)
+    
     print(f"Saved split data: {len(index_entries)} index entries + {len(vehicles)} detail files")
     print(f"  Index: {index_path}")
+    print(f"  Performance: {performance_path}")
     print(f"  Details: {vehicles_dir}/")
 
 

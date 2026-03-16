@@ -97,31 +97,60 @@ const vehicleDetailCache = new Map<string, VehicleDetailEntry>();
 const vehicleStatsHistoryCache = new Map<string, StatsHistoryEntry[]>();
 
 /**
- * Load datamine data with performance from detail files.
+ * Load datamine data with performance.
  * This is needed for comparison charts that require performance data from all vehicles.
  */
 async function loadDatamineData(): Promise<DatamineEntry[]> {
   if (datamineData) return datamineData;
-  
+
   const index = await loadVehicleIndex();
-  
-  // Load all detail files to get performance data for comparison charts
+
+  // Try to load performance summary file first (faster)
+  try {
+    const response = await fetch('/wt-lens/data/vehicles-performance.json');
+    if (response.ok) {
+      const performanceData: Array<{ id: string; performance: DatamineEntry['performance'] }> = await response.json();
+      const performanceMap = new Map(performanceData.map(p => [p.id, p.performance]));
+
+      datamineData = index.map(entry => ({
+        id: entry.id,
+        name: entry.name,
+        localizedName: entry.localizedName,
+        nation: entry.nation,
+        rank: entry.rank,
+        battle_rating: entry.battleRating,
+        br: entry.br,
+        vehicle_type: entry.vehicleType,
+        economic_type: entry.economicType,
+        performance: performanceMap.get(entry.id) ?? {},
+        imageUrl: entry.imageUrl ?? '',
+        source: 'split_index',
+        unreleased: entry.unreleased,
+        releaseDate: entry.releaseDate,
+        ghost: entry.ghost,
+      }));
+
+      return datamineData!;
+    }
+  } catch {
+    // Fall through to load individual files
+  }
+
+  // Fallback: load individual detail files
   const detailPromises = index.map(async entry => {
     try {
       const response = await fetch(`/wt-lens/data/vehicles/${entry.id}.json`);
-      if (!response.ok) {
-        return { id: entry.id, performance: {} };
-      }
+      if (!response.ok) return { id: entry.id, performance: {} };
       const detail = await response.json();
       return { id: entry.id, performance: detail.performance ?? {} };
     } catch {
       return { id: entry.id, performance: {} };
     }
   });
-  
+
   const details = await Promise.all(detailPromises);
   const detailMap = new Map(details.map(d => [d.id, d.performance]));
-  
+
   datamineData = index.map(entry => ({
     id: entry.id,
     name: entry.name,
@@ -139,7 +168,7 @@ async function loadDatamineData(): Promise<DatamineEntry[]> {
     releaseDate: entry.releaseDate,
     ghost: entry.ghost,
   }));
-  
+
   return datamineData!;
 }
 

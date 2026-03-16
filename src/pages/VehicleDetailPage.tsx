@@ -1,5 +1,5 @@
 import { useParams, useNavigate } from 'react-router-dom';
-import { useState, useEffect, useMemo, useRef } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import {
   Container,
   Typography,
@@ -24,7 +24,7 @@ import MobilitySection from '../components/MobilitySection';
 import ArmamentsSection from '../components/ArmamentsSection';
 import OpticsSection from '../components/OpticsSection';
 
-import { loadVehiclesLight, mergeStatsIntoVehicles, getVehicleStatsByMode, loadVehicleDetail, loadVehicles } from '../data/vehicles';
+import { loadVehiclesLight, mergeStatsIntoVehicles, getVehicleStatsByMode, loadVehicleDetail } from '../data/vehicles';
 import { VEHICLE_TYPE_LABELS, BATTLE_RATINGS, ECONOMIC_TYPE_GRADIENTS } from '../types';
 import type { Vehicle, VehicleType, GroundVehicleType } from '../types';
 import { getVehicleImagePath, getFlagImagePath } from '../utils/paths';
@@ -46,54 +46,39 @@ export default function VehicleDetailPage() {
   const [selectedTypes, setSelectedTypes] = useState<VehicleType[]>([]);
   const [brRange, setBrRange] = useState<[number, number] | null>(null);
   const [typesInitialized, setTypesInitialized] = useState(false);
-  const comparisonsLoadedRef = useRef(false);
 
   // Use custom hooks for game mode and stats month management
   const { gameMode, handleGameModeChange } = useGameMode();
   const { statsMonthRange, handleStatsMonthRangeChange } = useStatsMonthRange();
 
-  // Step 1: Fast load - basic info + stats + current vehicle detail
+  // Load vehicle data - basic info + stats + current vehicle detail
   useEffect(() => {
     setLoading(true);
-    comparisonsLoadedRef.current = false; // Reset on month range change
     
-    // Load lightweight vehicle list + stats
     loadVehiclesLight()
       .then(basicVehicles => mergeStatsIntoVehicles(basicVehicles, statsMonthRange))
       .then(vehiclesWithStats => {
-        setVehicles(vehiclesWithStats);
-        setLoading(false);
-        
-        // Load current vehicle's detail immediately
         if (id) {
           loadVehicleDetail(id).then(detail => {
-            if (!detail) return;
-            setVehicles(prev => prev.map(v =>
+            if (!detail) {
+              setVehicles(vehiclesWithStats);
+              setLoading(false);
+              return;
+            }
+            setVehicles(vehiclesWithStats.map(v =>
               v.id === id
                 ? { ...v, performance: detail.performance, economy: detail.economy ?? v.economy }
                 : v
             ));
+            setLoading(false);
           });
+        } else {
+          setVehicles(vehiclesWithStats);
+          setLoading(false);
         }
       })
       .catch(() => setLoading(false));
   }, [statsMonthRange, id]);
-
-  // Step 2: Async load - all vehicle details for comparison charts (only once)
-  useEffect(() => {
-    if (vehicles.length === 0 || comparisonsLoadedRef.current) return;
-    
-    comparisonsLoadedRef.current = true;
-    
-    loadVehicles(statsMonthRange)
-      .then(fullVehicles => {
-        // Merge performance data into existing vehicles
-        setVehicles(prev => prev.map(v => {
-          const full = fullVehicles.find(f => f.id === v.id);
-          return full ? { ...v, performance: full.performance } : v;
-        }));
-      });
-  }, [vehicles.length, statsMonthRange]);
 
   const vehicle = vehicles.find(v => v.id === id);
 
@@ -170,6 +155,32 @@ export default function VehicleDetailPage() {
       return true;
     });
   }, [vehicle, vehicles, effectiveBrRange, selectedTypes, gameMode]);
+
+  // Load performance data for comparison vehicles (only those in BR range)
+  useEffect(() => {
+    if (loading || !vehicle) return;
+    
+    // Find vehicles that need performance data loaded
+    const vehiclesNeedingData = stabilizerComparisonVehicles.filter(
+      v => !v.performance.horsepower && v.id !== id
+    );
+    
+    if (vehiclesNeedingData.length === 0) return;
+    
+    // Load performance data for these vehicles
+    const idsToLoad = vehiclesNeedingData.map(v => v.id);
+    Promise.all(idsToLoad.map(vid => loadVehicleDetail(vid)))
+      .then(details => {
+        const detailMap = new Map(details.filter(Boolean).map(d => [d!.id, d]));
+        setVehicles(prev => prev.map(v => {
+          const detail = detailMap.get(v.id);
+          if (detail) {
+            return { ...v, performance: detail.performance };
+          }
+          return v;
+        }));
+      });
+  }, [stabilizerComparisonVehicles, loading, vehicle, id]);
 
   if (loading) {
     return (
