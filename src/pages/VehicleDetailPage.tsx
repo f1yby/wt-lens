@@ -135,7 +135,6 @@ export default function VehicleDetailPage() {
       penetration: generateVehicleComparisonData(vehicle.id, 'penetration', vehicles, gameMode, filter),
       traverseSpeed: generateVehicleComparisonData(vehicle.id, 'traverseSpeed', vehicles, gameMode, filter),
       elevationSpeed: generateVehicleComparisonData(vehicle.id, 'elevationSpeed', vehicles, gameMode, filter),
-      elevationMin: generateVehicleComparisonData(vehicle.id, 'elevationMin', vehicles, gameMode, filter),
       gunnerThermal: generateVehicleComparisonData(vehicle.id, 'gunnerThermal', vehicles, gameMode, filter),
       commanderThermal: generateVehicleComparisonData(vehicle.id, 'commanderThermal', vehicles, gameMode, filter),
     };
@@ -174,28 +173,28 @@ export default function VehicleDetailPage() {
       const vBR = getVehicleBR(v, gameMode);
       if (vBR < effectiveBrRange[0] || vBR > effectiveBrRange[1]) continue;
       if (selectedTypes.length > 0 && !selectedTypes.includes(v.vehicleType)) continue;
+      // Check stats and performance independently (both may need loading)
       if (!v.stats) idsNeedingStats.push(v.id);
-      else if (v.performance.horsepower === 0) idsNeedingPerformance.push(v.id);
+      if (v.performance.horsepower === 0) idsNeedingPerformance.push(v.id);
     }
 
-    // Load stats for vehicles that need it
-    if (idsNeedingStats.length > 0) {
-      mergeStatsForVehicles(vehicles, idsNeedingStats, statsMonthRange).then(updated => {
-        setVehicles(updated);
-      });
-    }
+    // Load stats and performance in parallel, then update once
+    const statsPromise = idsNeedingStats.length > 0
+      ? mergeStatsForVehicles(vehicles, idsNeedingStats, statsMonthRange)
+      : Promise.resolve(vehicles);
 
-    // Load performance for vehicles that need it
-    if (idsNeedingPerformance.length > 0) {
-      Promise.all(idsNeedingPerformance.map(vid => loadVehicleDetail(vid)))
-        .then(details => {
-          const detailMap = new Map(details.filter(Boolean).map(d => [d!.id, d]));
-          setVehicles(prev => prev.map(v => {
-            const detail = detailMap.get(v.id);
-            return detail ? { ...v, performance: detail.performance } : v;
-          }));
-        });
-    }
+    const performancePromise = idsNeedingPerformance.length > 0
+      ? Promise.all(idsNeedingPerformance.map(vid => loadVehicleDetail(vid)))
+          .then(details => new Map(details.filter(Boolean).map(d => [d!.id, d])))
+      : Promise.resolve(new Map<string, { id: string; performance: Vehicle['performance'] }>());
+
+    Promise.all([statsPromise, performancePromise]).then(([vehiclesWithStats, detailMap]) => {
+      // Merge both updates into final vehicles array
+      setVehicles(vehiclesWithStats.map(v => {
+        const detail = detailMap.get(v.id);
+        return detail ? { ...v, performance: detail.performance } : v;
+      }));
+    });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [loading, vehicle?.id, typesInitialized, effectiveBrRange[0], effectiveBrRange[1], selectedTypes.join(',')]);
 
@@ -665,73 +664,73 @@ export default function VehicleDetailPage() {
           {/* 1. 胜率 */}
           {statsComparisons?.winRate && (
             <Grid item xs={12} md={4}>
-              <DistributionChart data={statsComparisons.winRate} title="胜率" unit="%" brInfo={{ vehicleBR: getVehicleBR(vehicle, gameMode), brMin: effectiveBrRange[0], brMax: effectiveBrRange[1] }} />
+              <DistributionChart data={statsComparisons.winRate} title="胜率" unit="%" />
             </Grid>
           )}
           {/* 2. KR */}
           {statsComparisons?.killPerSpawn && (
             <Grid item xs={12} md={4}>
-              <DistributionChart data={statsComparisons.killPerSpawn} title="KR (每重生击毁)" unit="" brInfo={{ vehicleBR: getVehicleBR(vehicle, gameMode), brMin: effectiveBrRange[0], brMax: effectiveBrRange[1] }} />
+              <DistributionChart data={statsComparisons.killPerSpawn} title="KR (每重生击毁)" unit="" />
             </Grid>
           )}
           {/* 3. 每次重生经验 */}
           {statsComparisons?.expPerSpawn && (
             <Grid item xs={12} md={4}>
-              <DistributionChart data={statsComparisons.expPerSpawn} title="每次重生经验" unit=" RP" brInfo={{ vehicleBR: getVehicleBR(vehicle, gameMode), brMin: effectiveBrRange[0], brMax: effectiveBrRange[1] }} />
+              <DistributionChart data={statsComparisons.expPerSpawn} title="每次重生经验" unit=" RP" />
             </Grid>
           )}
           {/* 4. 装填 */}
           {comparisons?.reloadTime && (
             <Grid item xs={12} md={4}>
-              <DistributionChart data={comparisons.reloadTime} title="装填时间" unit="s" brInfo={{ vehicleBR: getVehicleBR(vehicle, gameMode), brMin: effectiveBrRange[0], brMax: effectiveBrRange[1] }} />
+              <DistributionChart data={comparisons.reloadTime} title="装填时间" unit="s" />
             </Grid>
           )}
           {/* 5. 功重比 */}
           {comparisons?.powerToWeight && (
             <Grid item xs={12} md={4}>
-              <DistributionChart data={comparisons.powerToWeight} title="功重比" unit="hp/t" brInfo={{ vehicleBR: vehicle.battleRating, brMin: effectiveBrRange[0], brMax: effectiveBrRange[1] }} />
+              <DistributionChart data={comparisons.powerToWeight} title="功重比" unit="hp/t" />
             </Grid>
           )}
           {/* 6. 穿深 */}
           {comparisons?.penetration && (
             <Grid item xs={12} md={4}>
-              <DistributionChart data={comparisons.penetration} title="穿深" unit="mm" brInfo={{ vehicleBR: getVehicleBR(vehicle, gameMode), brMin: effectiveBrRange[0], brMax: effectiveBrRange[1] }} />
+              <DistributionChart data={comparisons.penetration} title="穿深" unit="mm" />
             </Grid>
           )}
           {/* 7. 方向机速度 */}
           {comparisons?.traverseSpeed && (
             <Grid item xs={12} md={4}>
-              <DistributionChart data={comparisons.traverseSpeed} title="方向机速度" unit="°/s" brInfo={{ vehicleBR: getVehicleBR(vehicle, gameMode), brMin: effectiveBrRange[0], brMax: effectiveBrRange[1] }} />
+              <DistributionChart data={comparisons.traverseSpeed} title="方向机速度" unit="°/s" />
             </Grid>
           )}
           {/* 8. 高低机速度 */}
           {comparisons?.elevationSpeed && (
             <Grid item xs={12} md={4}>
-              <DistributionChart data={comparisons.elevationSpeed} title="高低机速度" unit="°/s" brInfo={{ vehicleBR: getVehicleBR(vehicle, gameMode), brMin: effectiveBrRange[0], brMax: effectiveBrRange[1] }} />
+              <DistributionChart data={comparisons.elevationSpeed} title="高低机速度" unit="°/s" />
             </Grid>
           )}
           {/* 9. 倒车极速 */}
           {comparisons?.maxReverseSpeed && (
             <Grid item xs={12} md={4}>
-              <DistributionChart data={comparisons.maxReverseSpeed} title="倒车速度" unit="km/h" brInfo={{ vehicleBR: getVehicleBR(vehicle, gameMode), brMin: effectiveBrRange[0], brMax: effectiveBrRange[1] }} />
+              <DistributionChart data={comparisons.maxReverseSpeed} title="倒车速度" unit="km/h" />
             </Grid>
           )}
           {/* 10. 前进极速 */}
           {comparisons?.maxSpeed && (
             <Grid item xs={12} md={4}>
-              <DistributionChart data={comparisons.maxSpeed} title="前进极速" unit="km/h" brInfo={{ vehicleBR: vehicle.battleRating, brMin: effectiveBrRange[0], brMax: effectiveBrRange[1] }} />
+              <DistributionChart data={comparisons.maxSpeed} title="前进极速" unit="km/h" />
             </Grid>
           )}
           {/* 11. 炮手热成像 */}
           {comparisons?.gunnerThermal && (
             <Grid item xs={12} md={4}>
-              <DistributionChart data={comparisons.gunnerThermal} title="炮手热成像" unit="像素" brInfo={{ vehicleBR: vehicle.battleRating, brMin: effectiveBrRange[0], brMax: effectiveBrRange[1] }} />
+              <DistributionChart data={comparisons.gunnerThermal} title="炮手热成像" unit="像素" />
             </Grid>
           )}
           {/* 12. 车长热成像 */}
           {comparisons?.commanderThermal && (
             <Grid item xs={12} md={4}>
-              <DistributionChart data={comparisons.commanderThermal} title="车长热成像" unit="像素" brInfo={{ vehicleBR: getVehicleBR(vehicle, gameMode), brMin: effectiveBrRange[0], brMax: effectiveBrRange[1] }} />
+              <DistributionChart data={comparisons.commanderThermal} title="车长热成像" unit="像素" />
             </Grid>
           )}
           {/* 13. 稳定器 */}
@@ -743,8 +742,6 @@ export default function VehicleDetailPage() {
             />
           </Grid>
         </Grid>
-
-
       </Container>
     </Box>
   );

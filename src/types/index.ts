@@ -531,6 +531,7 @@ export interface DistributionData {
     isCurrent?: boolean;
     vehicleId?: string;
     isSameNation?: boolean;
+    dotColor?: string;
   }[];
   currentVehicleBin: number;
   currentVehicleValue: number;

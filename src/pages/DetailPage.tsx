@@ -400,17 +400,17 @@ export default function DetailPage<V extends BaseVehicle, T extends string>({ co
           {/* Stats Charts */}
           {statsComparisons?.winRate && (
             <Grid item xs={12} md={4}>
-              <DistributionChart data={statsComparisons.winRate} title="胜率" unit="%" navPrefix={config.navPrefix} brInfo={{ vehicleBR, brMin: effectiveBrRange[0], brMax: effectiveBrRange[1] }} />
+              <DistributionChart data={statsComparisons.winRate} title="胜率" unit="%" navPrefix={config.navPrefix} />
             </Grid>
           )}
           {statsComparisons?.killPerSpawn && (
             <Grid item xs={12} md={4}>
-              <DistributionChart data={statsComparisons.killPerSpawn} title="KR (每重生击毁)" unit="" navPrefix={config.navPrefix} brInfo={{ vehicleBR, brMin: effectiveBrRange[0], brMax: effectiveBrRange[1] }} />
+              <DistributionChart data={statsComparisons.killPerSpawn} title="KR (每重生击毁)" unit="" navPrefix={config.navPrefix} />
             </Grid>
           )}
           {statsComparisons?.expPerSpawn && (
             <Grid item xs={12} md={4}>
-              <DistributionChart data={statsComparisons.expPerSpawn} title="每次重生经验" unit=" RP" navPrefix={config.navPrefix} brInfo={{ vehicleBR, brMin: effectiveBrRange[0], brMax: effectiveBrRange[1] }} />
+              <DistributionChart data={statsComparisons.expPerSpawn} title="每次重生经验" unit=" RP" navPrefix={config.navPrefix} />
             </Grid>
           )}
         </Grid>
