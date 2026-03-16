@@ -1,5 +1,5 @@
 import { useParams, useNavigate } from 'react-router-dom';
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect, useMemo, useRef } from 'react';
 import {
   Container,
   Typography,
@@ -46,6 +46,7 @@ export default function VehicleDetailPage() {
   const [selectedTypes, setSelectedTypes] = useState<VehicleType[]>([]);
   const [brRange, setBrRange] = useState<[number, number] | null>(null);
   const [typesInitialized, setTypesInitialized] = useState(false);
+  const loadedPerformanceIds = useRef<Set<string>>(new Set());
 
   // Use custom hooks for game mode and stats month management
   const { gameMode, handleGameModeChange } = useGameMode();
@@ -54,6 +55,7 @@ export default function VehicleDetailPage() {
   // Load vehicle data - basic info + stats + current vehicle detail
   useEffect(() => {
     setLoading(true);
+    loadedPerformanceIds.current = new Set(); // Reset on reload
     
     loadVehiclesLight()
       .then(basicVehicles => mergeStatsIntoVehicles(basicVehicles, statsMonthRange))
@@ -65,6 +67,7 @@ export default function VehicleDetailPage() {
               setLoading(false);
               return;
             }
+            loadedPerformanceIds.current.add(id);
             setVehicles(vehiclesWithStats.map(v =>
               v.id === id
                 ? { ...v, performance: detail.performance, economy: detail.economy ?? v.economy }
@@ -159,14 +162,17 @@ export default function VehicleDetailPage() {
   // Load performance data for comparison vehicles (only those in BR range)
   useEffect(() => {
     if (loading || !vehicle) return;
-    
-    // Find vehicles that need performance data loaded
+
+    // Find vehicles that need performance data loaded (not already loaded)
     const vehiclesNeedingData = stabilizerComparisonVehicles.filter(
-      v => !v.performance.horsepower && v.id !== id
+      v => !loadedPerformanceIds.current.has(v.id)
     );
-    
+
     if (vehiclesNeedingData.length === 0) return;
-    
+
+    // Mark as loading immediately to prevent duplicate requests
+    vehiclesNeedingData.forEach(v => loadedPerformanceIds.current.add(v.id));
+
     // Load performance data for these vehicles
     const idsToLoad = vehiclesNeedingData.map(v => v.id);
     Promise.all(idsToLoad.map(vid => loadVehicleDetail(vid)))
@@ -180,7 +186,7 @@ export default function VehicleDetailPage() {
           return v;
         }));
       });
-  }, [stabilizerComparisonVehicles, loading, vehicle, id]);
+  }, [stabilizerComparisonVehicles, loading, vehicle]);
 
   if (loading) {
     return (
