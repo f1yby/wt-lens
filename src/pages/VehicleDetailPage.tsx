@@ -1,5 +1,5 @@
 import { useParams, useNavigate } from 'react-router-dom';
-import { useState, useEffect, useMemo, useRef } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import {
   Container,
   Typography,
@@ -46,7 +46,6 @@ export default function VehicleDetailPage() {
   const [selectedTypes, setSelectedTypes] = useState<VehicleType[]>([]);
   const [brRange, setBrRange] = useState<[number, number] | null>(null);
   const [typesInitialized, setTypesInitialized] = useState(false);
-  const loadedPerformanceIds = useRef<Set<string>>(new Set());
 
   // Use custom hooks for game mode and stats month management
   const { gameMode, handleGameModeChange } = useGameMode();
@@ -55,7 +54,6 @@ export default function VehicleDetailPage() {
   // Load vehicle data - basic info + stats + current vehicle detail
   useEffect(() => {
     setLoading(true);
-    loadedPerformanceIds.current = new Set(); // Reset on reload
     
     loadVehiclesLight()
       .then(basicVehicles => mergeStatsIntoVehicles(basicVehicles, statsMonthRange))
@@ -67,7 +65,6 @@ export default function VehicleDetailPage() {
               setLoading(false);
               return;
             }
-            loadedPerformanceIds.current.add(id);
             setVehicles(vehiclesWithStats.map(v =>
               v.id === id
                 ? { ...v, performance: detail.performance, economy: detail.economy ?? v.economy }
@@ -159,34 +156,34 @@ export default function VehicleDetailPage() {
     });
   }, [vehicle, vehicles, effectiveBrRange, selectedTypes, gameMode]);
 
-  // Load performance data for comparison vehicles (only those in BR range)
+  // Load performance data when BR range or vehicle type filter changes
   useEffect(() => {
-    if (loading || !vehicle) return;
+    if (loading || !vehicle || !typesInitialized) return;
 
-    // Find vehicles that need performance data loaded (not already loaded)
-    const vehiclesNeedingData = stabilizerComparisonVehicles.filter(
-      v => !loadedPerformanceIds.current.has(v.id)
-    );
+    // Find vehicles in BR range that need performance data
+    const idsToLoad: string[] = [];
+    for (const v of vehicles) {
+      if (v.id === vehicle.id) continue; // Already loaded
+      const vBR = getVehicleBR(v, gameMode);
+      if (vBR < effectiveBrRange[0] || vBR > effectiveBrRange[1]) continue;
+      if (selectedTypes.length > 0 && !selectedTypes.includes(v.vehicleType)) continue;
+      if (v.performance.horsepower) continue; // Already has performance data
+      idsToLoad.push(v.id);
+    }
 
-    if (vehiclesNeedingData.length === 0) return;
+    if (idsToLoad.length === 0) return;
 
-    // Mark as loading immediately to prevent duplicate requests
-    vehiclesNeedingData.forEach(v => loadedPerformanceIds.current.add(v.id));
-
-    // Load performance data for these vehicles
-    const idsToLoad = vehiclesNeedingData.map(v => v.id);
+    // Load all at once
     Promise.all(idsToLoad.map(vid => loadVehicleDetail(vid)))
       .then(details => {
         const detailMap = new Map(details.filter(Boolean).map(d => [d!.id, d]));
         setVehicles(prev => prev.map(v => {
           const detail = detailMap.get(v.id);
-          if (detail) {
-            return { ...v, performance: detail.performance };
-          }
-          return v;
+          return detail ? { ...v, performance: detail.performance } : v;
         }));
       });
-  }, [stabilizerComparisonVehicles, loading, vehicle]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [loading, vehicle?.id, typesInitialized, effectiveBrRange[0], effectiveBrRange[1], selectedTypes.join(',')]);
 
   if (loading) {
     return (
