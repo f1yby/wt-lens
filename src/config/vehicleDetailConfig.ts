@@ -2,7 +2,7 @@
  * Vehicle detail page configuration
  * Provides type-specific settings for the generic DetailPage component
  */
-import type { GameMode, Nation, DistributionData, MetricType, EconomyData } from '../types';
+import type { GameMode, Nation, DistributionData, MetricType, EconomyData, StatsMonthRange } from '../types';
 
 /** Base vehicle interface shared by all vehicle types */
 export interface BaseVehicle {
@@ -37,8 +37,14 @@ export interface VehicleDetailConfig<V extends BaseVehicle, T extends string = s
   /** Route prefix for navigation */
   navPrefix: string;
   
-  /** Load all vehicles of this type */
+  /** Load all vehicles of this type (full data with stats) */
   loadVehicles: () => Promise<V[]>;
+  
+  /** Load lightweight vehicle list without stats (for progressive loading) */
+  loadLightList?: () => Promise<V[]>;
+  
+  /** Load stats for specific vehicle IDs (for progressive loading) */
+  loadStatsForIds?: (vehicles: V[], ids: string[], range: StatsMonthRange, mode: GameMode) => Promise<V[]>;
   
   /** Load detailed data for a single vehicle */
   loadDetail?: (id: string) => Promise<{ performance?: unknown; economy?: EconomyData } | null>;
@@ -85,4 +91,7 @@ export interface VehicleDetailConfig<V extends BaseVehicle, T extends string = s
   
   /** Render performance stats bar in header (for ground vehicles) */
   renderHeaderStats?: (vehicle: V, gameMode: GameMode) => React.ReactNode;
+  
+  /** Check if vehicle has stats loaded */
+  hasStats?: (vehicle: V) => boolean;
 }

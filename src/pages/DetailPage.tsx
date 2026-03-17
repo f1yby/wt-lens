@@ -20,12 +20,15 @@ import Navbar from '../components/Navbar';
 import DistributionChart from '../components/DistributionChart';
 import { BRGridSelector } from '../components/VehicleFilter';
 import GameModeSelector from '../components/GameModeSelector';
+import MonthRangeSelector from '../components/MonthSelector';
 import EconomySection from '../components/EconomySection';
 import { BATTLE_RATINGS, ECONOMIC_TYPE_GRADIENTS } from '../types';
 import type { EconomyData } from '../types';
 import { getFlagImagePath } from '../utils/paths';
 import { getWinRateColor } from '../utils/gameMode';
 import { useGameMode } from '../hooks/useGameMode';
+import { useStatsMonthRange } from '../hooks/useStatsMonth';
+import { useDetailPageLoader, useSimpleDetailLoader } from '../hooks/useDetailPageLoader';
 import type { VehicleDetailConfig, BaseVehicle } from '../config/vehicleDetailConfig';
 
 interface DetailPageProps<V extends BaseVehicle, T extends string> {
@@ -36,8 +39,6 @@ export default function DetailPage<V extends BaseVehicle, T extends string>({ co
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
 
-  const [vehicleList, setVehicleList] = useState<V[]>([]);
-  const [loading, setLoading] = useState(true);
   const [selectedTypes, setSelectedTypes] = useState<T[]>([]);
   const [brRange, setBrRange] = useState<[number, number] | null>(null);
   const [typesInitialized, setTypesInitialized] = useState(false);
@@ -45,21 +46,44 @@ export default function DetailPage<V extends BaseVehicle, T extends string>({ co
   const [detailData, setDetailData] = useState<unknown>(undefined);
 
   const { gameMode, handleGameModeChange } = useGameMode();
+  const { statsMonthRange, handleStatsMonthRangeChange } = useStatsMonthRange();
 
-  // Load vehicles
-  useEffect(() => {
-    setLoading(true);
-    config.loadVehicles()
-      .then(data => {
-        setVehicleList(data);
-        setLoading(false);
-      })
-      .catch(() => setLoading(false));
-  }, []);
+  // Check if progressive loading is available
+  const useProgressiveLoading = !!(config.loadLightList && config.loadStatsForIds);
 
-  const vehicle = vehicleList.find(v => v.id === id);
+  // Progressive loading hook (fast initial load, lazy load comparison data)
+  const progressiveLoader = useDetailPageLoader(
+    {
+      loadLightList: config.loadLightList!,
+      loadStatsForIds: config.loadStatsForIds!,
+      loadDetail: config.loadDetail,
+      getId: (v: V) => v.id,
+      hasStats: config.hasStats ?? ((v: V) => !!(v as unknown as { stats?: unknown }).stats),
+      getBR: (v: V) => config.getBR(v, gameMode),
+      getType: (v: V) => config.getType(v) as string,
+    },
+    id,
+    statsMonthRange,
+    gameMode,
+    selectedTypes as string[],
+    brRange ?? [0, 99],
+  );
 
-  // Load economy data
+  // Simple loading hook (load all at once, for backwards compatibility)
+  const simpleLoader = useSimpleDetailLoader(
+    config.loadVehicles,
+    id,
+    config.loadDetail,
+  );
+
+  // Use appropriate loader based on config
+  const vehicles = useProgressiveLoading ? progressiveLoader.vehicles : simpleLoader.vehicles;
+  const loading = useProgressiveLoading ? progressiveLoader.loading : simpleLoader.loading;
+  const loadingStats = useProgressiveLoading ? progressiveLoader.loadingStats : false;
+
+  const vehicle = vehicles.find(v => v.id === id);
+
+  // Load economy/detail data for current vehicle
   useEffect(() => {
     if (!vehicle || !config.loadDetail) return;
     setEconomyData(undefined);
@@ -106,11 +130,11 @@ export default function DetailPage<V extends BaseVehicle, T extends string>({ co
   const statsComparisons = useMemo(() => {
     if (!vehicle) return null;
     return {
-      killPerSpawn: config.generateStatsComparison(vehicle.id, 'killPerSpawn', vehicleList, gameMode, filter),
-      winRate: config.generateStatsComparison(vehicle.id, 'winRate', vehicleList, gameMode, filter),
-      expPerSpawn: config.generateStatsComparison(vehicle.id, 'expPerSpawn', vehicleList, gameMode, filter),
+      killPerSpawn: config.generateStatsComparison(vehicle.id, 'killPerSpawn', vehicles, gameMode, filter),
+      winRate: config.generateStatsComparison(vehicle.id, 'winRate', vehicles, gameMode, filter),
+      expPerSpawn: config.generateStatsComparison(vehicle.id, 'expPerSpawn', vehicles, gameMode, filter),
     };
-  }, [vehicle, vehicleList, gameMode, filter]);
+  }, [vehicle, vehicles, gameMode, filter]);
 
   // Navigation handler
   const handleNavigate = useCallback((url: string) => navigate(url), [navigate]);
@@ -336,9 +360,25 @@ export default function DetailPage<V extends BaseVehicle, T extends string>({ co
         {config.renderAdditionalSections?.(vehicle, gameMode, handleNavigate, detailData)}
 
         {/* Game Mode Selector */}
-        <Box sx={{ mb: 3 }}>
+        <Box sx={{ mb: 3, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <GameModeSelector currentMode={gameMode} onModeChange={handleGameModeChange} />
+          {config.showMonthRangeSelector && (
+            <MonthRangeSelector
+              currentRange={statsMonthRange}
+              onRangeChange={handleStatsMonthRangeChange}
+            />
+          )}
         </Box>
+
+        {/* Loading indicator for progressive loading */}
+        {loadingStats && (
+          <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, mb: 2 }}>
+            <CircularProgress size={16} />
+            <Typography variant="body2" sx={{ color: '#737373' }}>
+              加载对比数据中...
+            </Typography>
+          </Box>
+        )}
 
         {/* Comparison Charts */}
         <Typography variant="h5" sx={{ color: '#171717', fontWeight: 600, mb: 2 }}>

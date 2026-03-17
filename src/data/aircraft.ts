@@ -244,6 +244,96 @@ export async function loadAircraftWithPackagedStats(
   return merged;
 }
 
+// Cache for light aircraft list (no stats)
+let lightAircraftCache: AircraftVehicle[] | null = null;
+
+/**
+ * Load lightweight aircraft list without stats.
+ * Used for detail pages to reduce initial load time.
+ */
+export async function loadAircraftLight(): Promise<AircraftVehicle[]> {
+  if (lightAircraftCache) return lightAircraftCache;
+  
+  const aircraft = await loadAircraftData();
+  
+  const vehicles: AircraftVehicle[] = aircraft.map(entry => ({
+    id: entry.id,
+    name: entry.name,
+    localizedName: cleanName(entry.localizedName),
+    nation: entry.nation as AircraftVehicle['nation'],
+    rank: entry.rank ?? 1,
+    battleRating: entry.battleRating ?? 1.0,
+    groundBattleRating: entry.groundBattleRating,
+    aircraftType: entry.aircraftType as AircraftType,
+    economicType: (entry.economicType as AircraftVehicle['economicType']) ?? 'regular',
+    performance: undefined,
+    stats: undefined,
+    statsByMode: undefined,
+    imageUrl: entry.imageUrl,
+    unreleased: entry.unreleased ?? false,
+    releaseDate: entry.releaseDate,
+    ghost: entry.ghost ?? false,
+  }));
+  
+  lightAircraftCache = vehicles;
+  return vehicles;
+}
+
+/**
+ * Merge packaged stats into existing aircraft array for specific IDs.
+ * Used for detail pages to load stats on demand.
+ */
+export async function mergePackagedStatsForAircraft(
+  aircraft: AircraftVehicle[],
+  vehicleIds: string[],
+  range: StatsMonthRange,
+  mode: GameMode,
+): Promise<AircraftVehicle[]> {
+  if (vehicleIds.length === 0) return aircraft;
+  
+  const resolvedRange = (range && range.startMonth && range.endMonth)
+    ? range
+    : getDefaultStatsMonthRange();
+  
+  // Load packaged stats (need both fixed-wing and helicopter for potential mixed requests)
+  const statsPromises: Promise<StatSharkEntry[]>[] = [];
+  const categories: VehicleCategory[] = ['aircraft', 'helicopter'];
+  
+  for (const category of categories) {
+    statsPromises.push(loadPackagedStatsForCategory(resolvedRange, category, mode));
+  }
+  
+  const statsArrays = await Promise.all(statsPromises);
+  const allStats = statsArrays.flat();
+  
+  // Build stats map
+  const statsMap = new Map<string, StatSharkEntry>();
+  for (const entry of allStats) {
+    statsMap.set(entry.id, entry);
+  }
+  
+  // Merge stats into aircraft (only for requested IDs)
+  return aircraft.map(a => {
+    if (!vehicleIds.includes(a.id)) return a;
+    
+    const entry = statsMap.get(a.id);
+    if (!entry) return a;
+    
+    const vehicleStats = convertToVehicleStats(entry);
+    const statsByModeRecord: Record<GameMode, VehicleStats | undefined> = {
+      arcade: mode === 'arcade' ? vehicleStats : undefined,
+      historical: mode === 'historical' ? vehicleStats : undefined,
+      simulation: mode === 'simulation' ? vehicleStats : undefined,
+    };
+    
+    return {
+      ...a,
+      stats: vehicleStats,
+      statsByMode: statsByModeRecord,
+    };
+  });
+}
+
 /**
  * Get aircraft stats for a specific game mode
  * Returns the stats for the given mode, or falls back to default stats

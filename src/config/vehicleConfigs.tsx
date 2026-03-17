@@ -5,9 +5,9 @@ import type { Vehicle, GroundVehicleType, GameMode } from '../types';
 import type { AircraftVehicle, AircraftType } from '../types';
 import type { ShipVehicle, ShipType } from '../types';
 import { VEHICLE_TYPE_LABELS, AIRCRAFT_TYPE_LABELS, SHIP_TYPE_LABELS } from '../types';
-import { loadVehicles as loadVehiclesBase, getVehicleStatsByMode, loadVehicleDetail } from '../data/vehicles';
-import { loadAircraft, getAircraftStatsByMode, loadAircraftDetail } from '../data/aircraft';
-import { loadShips, getShipStatsByMode, loadShipDetail } from '../data/ships';
+import { loadVehicles as loadVehiclesBase, getVehicleStatsByMode, loadVehicleDetail, loadVehiclesLight, mergePackagedStatsIntoVehicles } from '../data/vehicles';
+import { loadAircraft, getAircraftStatsByMode, loadAircraftDetail, loadAircraftLight, mergePackagedStatsForAircraft } from '../data/aircraft';
+import { loadShips, getShipStatsByMode, loadShipDetail, loadShipsLight, mergePackagedStatsForShips } from '../data/ships';
 import { getVehicleImagePath, getAircraftImagePath, getShipImagePath } from '../utils/paths';
 import { generateGenericStatsComparisonData } from '../utils/vehicleComparison';
 import type { VehicleDetailConfig } from './vehicleDetailConfig';
@@ -28,9 +28,16 @@ export const vehicleConfig: VehicleDetailConfig<Vehicle, GroundVehicleType> = {
   listPath: '/',
   navPrefix: '/vehicle',
   
+  // Full load (for backwards compatibility)
   loadVehicles: async () => {
     // Ground vehicles use default month range (empty = latest)
     return loadVehiclesBase({ startMonth: '', endMonth: '' });
+  },
+  
+  // Progressive loading support
+  loadLightList: loadVehiclesLight,
+  loadStatsForIds: async (vehicles, _ids, range, mode) => {
+    return mergePackagedStatsIntoVehicles(vehicles, range, mode);
   },
   loadDetail: loadVehicleDetail,
   
@@ -50,6 +57,7 @@ export const vehicleConfig: VehicleDetailConfig<Vehicle, GroundVehicleType> = {
     ),
   
   showMonthRangeSelector: true,
+  hasStats: (v) => !!v.stats,
   
   performanceCharts: [
     { metric: 'reloadTime', title: '装填时间', unit: 's' },
@@ -86,7 +94,19 @@ export function createAircraftConfig(isHelicopter: boolean): VehicleDetailConfig
     listPath: isHelicopter ? '/helicopter' : '/aircraft',
     navPrefix: isHelicopter ? '/helicopter' : '/aircraft',
     
+    // Full load (for backwards compatibility)
     loadVehicles: loadAircraft,
+    
+    // Progressive loading support
+    loadLightList: async () => {
+      const all = await loadAircraftLight();
+      return isHelicopter 
+        ? all.filter(a => a.aircraftType === 'helicopter')
+        : all.filter(a => a.aircraftType !== 'helicopter');
+    },
+    loadStatsForIds: async (aircraft, ids, range, mode) => {
+      return mergePackagedStatsForAircraft(aircraft, ids, range, mode);
+    },
     loadDetail: loadAircraftDetail,
     
     getStats: (a, mode) => getAircraftStatsByMode(a, mode) ?? null,
@@ -105,6 +125,7 @@ export function createAircraftConfig(isHelicopter: boolean): VehicleDetailConfig
       ),
     
     showMonthRangeSelector: false,
+    hasStats: (a) => !!a.stats,
 
     renderAdditionalSections: (_vehicle, _gameMode, _onNavigate, detailData) => {
       // Cast detailData to get weapons
@@ -146,7 +167,14 @@ export const shipConfig: VehicleDetailConfig<ShipVehicle, ShipType> = {
   listPath: '/ship',
   navPrefix: '/ship',
   
+  // Full load (for backwards compatibility)
   loadVehicles: loadShips,
+  
+  // Progressive loading support
+  loadLightList: loadShipsLight,
+  loadStatsForIds: async (ships, ids, range, mode) => {
+    return mergePackagedStatsForShips(ships, ids, range, mode);
+  },
   loadDetail: loadShipDetail,
   
   getStats: (s, mode) => getShipStatsByMode(s, mode) ?? null,
@@ -165,4 +193,5 @@ export const shipConfig: VehicleDetailConfig<ShipVehicle, ShipType> = {
     ),
   
   showMonthRangeSelector: false,
+  hasStats: (s) => !!s.stats,
 };

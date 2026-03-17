@@ -232,6 +232,87 @@ export async function loadShipsWithPackagedStats(
   return merged;
 }
 
+// Cache for light ships list (no stats)
+let lightShipsCache: ShipVehicle[] | null = null;
+
+/**
+ * Load lightweight ship list without stats.
+ * Used for detail pages to reduce initial load time.
+ */
+export async function loadShipsLight(): Promise<ShipVehicle[]> {
+  if (lightShipsCache) return lightShipsCache;
+  
+  const ships = await loadShipsData();
+  
+  const vehicles: ShipVehicle[] = ships.map(entry => ({
+    id: entry.id,
+    name: entry.name,
+    localizedName: cleanName(entry.localizedName),
+    nation: entry.nation as ShipVehicle['nation'],
+    rank: entry.rank ?? 1,
+    battleRating: entry.battleRating ?? 1.0,
+    shipType: entry.shipType as ShipType,
+    economicType: (entry.economicType as ShipVehicle['economicType']) ?? 'regular',
+    performance: undefined,
+    stats: undefined,
+    statsByMode: undefined,
+    imageUrl: entry.imageUrl,
+    unreleased: entry.unreleased ?? false,
+    releaseDate: entry.releaseDate,
+    ghost: entry.ghost ?? false,
+  }));
+  
+  lightShipsCache = vehicles;
+  return vehicles;
+}
+
+/**
+ * Merge packaged stats into existing ships array for specific IDs.
+ * Used for detail pages to load stats on demand.
+ */
+export async function mergePackagedStatsForShips(
+  ships: ShipVehicle[],
+  vehicleIds: string[],
+  range: StatsMonthRange,
+  mode: GameMode,
+): Promise<ShipVehicle[]> {
+  if (vehicleIds.length === 0) return ships;
+  
+  const resolvedRange = (range && range.startMonth && range.endMonth)
+    ? range
+    : getDefaultStatsMonthRange();
+  
+  // Load packaged stats
+  const stats = await loadPackagedStatsForCategory(resolvedRange, 'ship' as VehicleCategory, mode);
+  
+  // Build stats map
+  const statsMap = new Map<string, StatSharkEntry>();
+  for (const entry of stats) {
+    statsMap.set(entry.id, entry);
+  }
+  
+  // Merge stats into ships (only for requested IDs)
+  return ships.map(s => {
+    if (!vehicleIds.includes(s.id)) return s;
+    
+    const entry = statsMap.get(s.id);
+    if (!entry) return s;
+    
+    const vehicleStats = convertToVehicleStats(entry);
+    const statsByModeRecord: Record<GameMode, VehicleStats | undefined> = {
+      arcade: mode === 'arcade' ? vehicleStats : undefined,
+      historical: mode === 'historical' ? vehicleStats : undefined,
+      simulation: mode === 'simulation' ? vehicleStats : undefined,
+    };
+    
+    return {
+      ...s,
+      stats: vehicleStats,
+      statsByMode: statsByModeRecord,
+    };
+  });
+}
+
 /**
  * Get ship stats for a specific game mode
  * Returns the stats for the given mode, or falls back to default stats
