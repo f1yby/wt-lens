@@ -124,7 +124,7 @@ export function createAircraftConfig(isHelicopter: boolean): VehicleDetailConfig
         filter, aircraftTypeFilter
       ),
     
-    showMonthRangeSelector: false,
+    showMonthRangeSelector: true,
     hasStats: (a) => !!a.stats,
 
     renderAdditionalSections: (_vehicle, _gameMode, _onNavigate, detailData) => {
@@ -192,6 +192,6 @@ export const shipConfig: VehicleDetailConfig<ShipVehicle, ShipType> = {
       filter, shipTypeFilter
     ),
   
-  showMonthRangeSelector: false,
+  showMonthRangeSelector: true,
   hasStats: (s) => !!s.stats,
 };
