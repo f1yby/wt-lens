@@ -1,6 +1,6 @@
 import type { ShipVehicle, ShipType, VehicleStats, GameMode, StatsMonthRange, EconomyData } from '../types';
 import { getDefaultStatsMonthRange, getMonthRangeCacheKey } from '../types';
-import { StatSharkEntry, cleanName, buildStatsMapByMonthRange, convertToVehicleStats, loadStatsForRange } from './base';
+import { StatSharkEntry, cleanName, buildStatsMapByMonthRange, convertToVehicleStats, loadStatsForRange, loadPackagedStatsForCategory, VehicleCategory } from './base';
 
 interface ShipEntry {
   id: string;
@@ -162,6 +162,72 @@ export async function loadShips(range?: StatsMonthRange): Promise<ShipVehicle[]>
   const ships = await loadShipsData();
 
   const merged = mergeShipsData(stats, ships, resolvedRange);
+  shipsByMonthRange.set(cacheKey, merged);
+  return merged;
+}
+
+/**
+ * Load ships with packaged stats (faster than loadShips).
+ * Loads stats from pre-packaged files organized by month, category, and mode.
+ * 
+ * @param range - Month range to load
+ * @param mode - Game mode to load (arcade, historical, simulation)
+ */
+export async function loadShipsWithPackagedStats(
+  range: StatsMonthRange,
+  mode: GameMode
+): Promise<ShipVehicle[]> {
+  const resolvedRange = (range && range.startMonth && range.endMonth)
+    ? range
+    : getDefaultStatsMonthRange();
+  
+  const cacheKey = `${getMonthRangeCacheKey(resolvedRange)}-${mode}`;
+  
+  if (shipsByMonthRange.has(cacheKey)) {
+    return shipsByMonthRange.get(cacheKey)!;
+  }
+
+  // Load packaged stats
+  const stats = await loadPackagedStatsForCategory(resolvedRange, 'ship' as VehicleCategory, mode);
+
+  const ships = await loadShipsData();
+  
+  // Build stats map
+  const statsMap = new Map<string, StatSharkEntry>();
+  for (const entry of stats) {
+    statsMap.set(entry.id, entry);
+  }
+
+  // Merge stats into ships
+  const merged: ShipVehicle[] = ships.map(shipEntry => {
+    const entry = statsMap.get(shipEntry.id);
+    
+    const vehicleStats = entry ? convertToVehicleStats(entry) : undefined;
+    const statsByModeRecord: Record<GameMode, VehicleStats | undefined> = {
+      arcade: mode === 'arcade' ? vehicleStats : undefined,
+      historical: mode === 'historical' ? vehicleStats : undefined,
+      simulation: mode === 'simulation' ? vehicleStats : undefined,
+    };
+
+    return {
+      id: shipEntry.id,
+      name: shipEntry.name,
+      localizedName: cleanName(shipEntry.localizedName),
+      nation: shipEntry.nation as ShipVehicle['nation'],
+      rank: entry?.rank ?? shipEntry.rank ?? 1,
+      battleRating: entry?.br ?? shipEntry.battleRating ?? 1.0,
+      shipType: shipEntry.shipType as ShipType,
+      economicType: (shipEntry.economicType as ShipVehicle['economicType']) ?? 'regular',
+      performance: undefined,
+      stats: vehicleStats,
+      statsByMode: statsByModeRecord,
+      imageUrl: shipEntry.imageUrl,
+      unreleased: shipEntry.unreleased ?? false,
+      releaseDate: shipEntry.releaseDate,
+      ghost: shipEntry.ghost ?? false,
+    };
+  });
+
   shipsByMonthRange.set(cacheKey, merged);
   return merged;
 }

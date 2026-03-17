@@ -2,12 +2,12 @@ import { useState, useMemo, useEffect, useCallback } from 'react';
 import ListPageLayout from '../components/ListPageLayout';
 import type { TypeOption } from '../components/VehicleFilter';
 import AircraftTechTree from '../components/AircraftTechTree';
-import { loadAircraft } from '../data/aircraft';
-import type { Nation, AircraftType, AircraftVehicle } from '../types';
+import { loadAircraftWithPackagedStats } from '../data/aircraft';
+import type { Nation, AircraftType, AircraftVehicle, GameMode, StatsMonthRange } from '../types';
 import { BATTLE_RATINGS } from '../types';
 import { useGameMode } from '../hooks/useGameMode';
 import { useStatsMonthRange } from '../hooks/useStatsMonth';
-import { useRangeLoader } from '../hooks/useRangeLoader';
+import { usePackagedLoader } from '../hooks/usePackagedLoader';
 
 const AIRCRAFT_TYPES: TypeOption<AircraftType>[] = [
   { value: 'all', label: '全部' },
@@ -27,8 +27,12 @@ export default function AircraftPage() {
   const { gameMode, handleGameModeChange } = useGameMode();
   const { statsMonthRange, handleStatsMonthRangeChange } = useStatsMonthRange();
 
-  const loader = useCallback(loadAircraft, []);
-  const { data, loading } = useRangeLoader<AircraftVehicle[]>(loader, statsMonthRange);
+  // Loader for packaged stats (fixed-wing aircraft)
+  const loader = useCallback(
+    (range: StatsMonthRange, mode: GameMode) => loadAircraftWithPackagedStats(range, mode, false),
+    []
+  );
+  const { data, loading } = usePackagedLoader<AircraftVehicle[]>(loader, statsMonthRange, gameMode);
   const aircraft = data ?? [];
 
   // 计算数据中的实际最大 BR（排除直升机），根据当前 BR 模式动态生成

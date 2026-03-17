@@ -1,6 +1,6 @@
 import type { Vehicle, Ammunition, MainGun, PenetrationData, GameMode, VehicleStats, StatsMonthRange, EconomyData, VehicleIndexEntry, VehicleDetailEntry, StatsHistoryEntry } from '../types';
 import { getDefaultStatsMonthRange, getMonthRangeCacheKey } from '../types';
-import { StatSharkEntry, cleanName, buildStatsMapByMonthRange, convertToVehicleStats, loadStatsForRange, loadStatsForVehicles } from './base';
+import { StatSharkEntry, cleanName, buildStatsMapByMonthRange, convertToVehicleStats, loadStatsForRange, loadStatsForVehicles, loadPackagedStatsForCategory, VehicleCategory } from './base';
 
 // Raw data types from JSON
 interface DatamineEntry {
@@ -455,6 +455,52 @@ export async function mergeStatsIntoVehicles(
     return {
       ...vehicle,
       stats: statsByModeRecord.historical,
+      statsByMode: statsByModeRecord,
+    };
+  });
+}
+
+/**
+ * Load stats data from packaged files and merge into existing vehicles array.
+ * This is much faster than mergeStatsIntoVehicles() as it loads a single pre-packaged file.
+ * 
+ * @param vehicles - Vehicles array to merge stats into
+ * @param range - Month range to load
+ * @param mode - Game mode to load (arcade, historical, simulation)
+ */
+export async function mergePackagedStatsIntoVehicles(
+  vehicles: Vehicle[],
+  range: StatsMonthRange,
+  mode: GameMode
+): Promise<Vehicle[]> {
+  const resolvedRange = (range && range.startMonth && range.endMonth)
+    ? range
+    : getDefaultStatsMonthRange();
+
+  // Load packaged stats for ground vehicles
+  const stats = await loadPackagedStatsForCategory(resolvedRange, 'ground' as VehicleCategory, mode);
+
+  // Build stats map (since we only have one mode, we can use a simpler map)
+  const statsMap = new Map<string, StatSharkEntry>();
+  for (const entry of stats) {
+    statsMap.set(entry.id, entry);
+  }
+
+  // Merge stats into vehicles
+  return vehicles.map(vehicle => {
+    const entry = statsMap.get(vehicle.id);
+    if (!entry) return vehicle;
+
+    const vehicleStats = convertToVehicleStats(entry);
+    const statsByModeRecord: Record<GameMode, VehicleStats | undefined> = {
+      arcade: mode === 'arcade' ? vehicleStats : undefined,
+      historical: mode === 'historical' ? vehicleStats : undefined,
+      simulation: mode === 'simulation' ? vehicleStats : undefined,
+    };
+
+    return {
+      ...vehicle,
+      stats: vehicleStats,
       statsByMode: statsByModeRecord,
     };
   });

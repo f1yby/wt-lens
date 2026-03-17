@@ -1,7 +1,7 @@
-import { useState, useMemo, useEffect } from 'react';
+import { useState, useMemo, useEffect, useRef } from 'react';
 import ListPageLayout from '../components/ListPageLayout';
 import VehicleTechTree from '../components/VehicleTechTree';
-import { loadVehiclesLight, mergeStatsIntoVehicles } from '../data/vehicles';
+import { loadVehiclesLight, mergePackagedStatsIntoVehicles } from '../data/vehicles';
 import type { Nation, VehicleType, Vehicle } from '../types';
 import { BATTLE_RATINGS } from '../types';
 import { useGameMode } from '../hooks/useGameMode';
@@ -19,6 +19,9 @@ export default function HomePage() {
 
   const { gameMode, handleGameModeChange } = useGameMode();
   const { statsMonthRange, handleStatsMonthRangeChange } = useStatsMonthRange();
+  
+  // Track last loaded params to avoid duplicate loads
+  const lastLoadRef = useRef<string | null>(null);
 
   // Step 1: Load vehicle list immediately (fast, no stats)
   useEffect(() => {
@@ -28,15 +31,22 @@ export default function HomePage() {
       .finally(() => setLoading(false));
   }, []);
 
-  // Step 2: Load stats on demand when month range changes
+  // Step 2: Load stats on demand when month range or game mode changes
   useEffect(() => {
-    if (vehicles.length === 0) return;
+    if (vehicles.length === 0 || !statsMonthRange.startMonth || !statsMonthRange.endMonth) return;
+    
+    // Skip if same params as last load
+    const loadKey = `${statsMonthRange.startMonth}-${statsMonthRange.endMonth}-${gameMode}`;
+    if (lastLoadRef.current === loadKey) return;
     
     setLoadingStats(true);
-    mergeStatsIntoVehicles(vehicles, statsMonthRange)
+    mergePackagedStatsIntoVehicles(vehicles, statsMonthRange, gameMode)
       .then(setVehicles)
+      .then(() => {
+        lastLoadRef.current = loadKey;
+      })
       .finally(() => setLoadingStats(false));
-  }, [statsMonthRange]);
+  }, [statsMonthRange, gameMode, vehicles.length]);
 
   const safeVehicles = vehicles ?? [];
 

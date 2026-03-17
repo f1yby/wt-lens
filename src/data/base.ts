@@ -5,6 +5,7 @@
 import type { GameMode, VehicleStats, StatsMonthId, StatsMonthRange } from '../types';
 import { getDefaultStatsMonth, getDefaultStatsMonthRange, getMonthsInRange, isSingleMonthRange } from '../types';
 import { initStatsMonthService, isServiceInitialized } from '../services/statsMonthService';
+import { loadPackagedIndex, loadPackagedStatsForRange } from './statsPackaged';
 
 /**
  * StatShark entry from stats data files
@@ -55,6 +56,50 @@ export async function loadStatsMeta(): Promise<StatsMeta> {
     // We create minimal StatSharkEntry stubs just to extract month IDs
     if (!isServiceInitialized()) {
       const stubs: StatSharkEntry[] = meta.months.map(m => ({
+        id: '__meta__',
+        name: '__meta__',
+        mode: 'historical' as const,
+        battles: 0,
+        win_rate: 0,
+        avg_kills_per_spawn: 0,
+        month: m,
+      }));
+      initStatsMonthService(stubs);
+    }
+
+    return meta;
+  })();
+
+  return _statsMetaPromise;
+}
+
+/**
+ * Load stats meta from packaged index (alternative to stats-meta.json).
+ * Uses the pre-packaged stats index file.
+ */
+export async function loadStatsMetaFromPackaged(): Promise<StatsMeta> {
+  if (_statsMeta) return _statsMeta;
+  if (_statsMetaPromise) return _statsMetaPromise;
+
+  _statsMetaPromise = (async () => {
+    const index = await loadPackagedIndex();
+    
+    // Convert packaged month format to diff_ format
+    // 2026-february-march -> diff_2026_february_march
+    const months = index.months.map(m => `diff_${m.replace(/-/g, '_')}`);
+    const latestMonth = `diff_${index.latestMonth.replace(/-/g, '_')}`;
+    
+    const meta: StatsMeta = {
+      months,
+      latestMonth,
+      vehicleIds: [], // Not needed for packaged mode
+    };
+    
+    _statsMeta = meta;
+
+    // Initialize stats month service from the month list
+    if (!isServiceInitialized()) {
+      const stubs: StatSharkEntry[] = months.map(m => ({
         id: '__meta__',
         name: '__meta__',
         mode: 'historical' as const,
@@ -123,6 +168,7 @@ async function loadStatsHistoryBatch(vehicleIds: string[]): Promise<StatSharkEnt
 /**
  * Load stats data for the given month range.
  * Always loads from stats/{id}.json for all vehicles listed in stats-meta.
+ * @deprecated Use loadPackagedStatsForCategory() instead for better performance.
  */
 export async function loadStatsForRange(_range?: StatsMonthRange): Promise<StatSharkEntry[]> {
   // Always ensure meta is loaded first (this initializes statsMonthService)
@@ -130,6 +176,30 @@ export async function loadStatsForRange(_range?: StatsMonthRange): Promise<StatS
 
   // Load from stats/{id}.json for ALL vehicles listed in meta
   return loadStatsHistoryBatch(meta.vehicleIds);
+}
+
+/**
+ * Vehicle categories for packaged stats loading
+ */
+export type VehicleCategory = 'ground' | 'aircraft' | 'helicopter' | 'ship';
+
+/**
+ * Load packaged stats for a specific category and game mode.
+ * This is the preferred way to load stats data - it loads a single pre-packaged file.
+ * 
+ * @param range - Month range to load
+ * @param category - Vehicle category (ground, aircraft, helicopter, ship)
+ * @param mode - Game mode (arcade, historical, simulation)
+ */
+export async function loadPackagedStatsForCategory(
+  range: StatsMonthRange,
+  category: VehicleCategory,
+  mode: GameMode
+): Promise<StatSharkEntry[]> {
+  // Ensure meta is loaded first (initializes statsMonthService)
+  await loadStatsMetaFromPackaged();
+  
+  return loadPackagedStatsForRange(range, category, mode);
 }
 
 /**

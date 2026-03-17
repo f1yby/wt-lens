@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback } from 'react';
 import type { StatsMonthRange } from '../types';
 import { isValidMonthRange, getDefaultStatsMonthRange } from '../types';
 import { isServiceInitialized } from '../services/statsMonthService';
-import { loadStatsMeta } from '../data/base';
+import { loadStatsMetaFromPackaged } from '../data/base';
 
 /**
  * Return type for useStatsMonthRange hook
@@ -39,12 +39,12 @@ export function useStatsMonthRange(): UseStatsMonthRangeReturn {
   // Once service is initialized, resolve the default range.
   // Before that, statsMonthRange is empty and pages show a loading state.
   //
-  // IMPORTANT: We must call loadStatsMeta() ourselves to trigger service
+  // IMPORTANT: We must call loadStatsMetaFromPackaged() ourselves to trigger service
   // initialization. Otherwise there's a deadlock:
   //   - This hook waits for service init to set range
   //   - Pages wait for non-empty range to call loadVehicles()
-  //   - loadVehicles() calls loadStatsMeta() which inits the service
-  //   → Nobody kicks off loadStatsMeta() → stuck forever
+  //   - loadVehicles() calls loadStatsMetaFromPackaged() which inits the service
+  //   → Nobody kicks off loadStatsMetaFromPackaged() → stuck forever
   useEffect(() => {
     // If service is already ready (e.g. hot-reload), set immediately
     if (isServiceInitialized()) {
@@ -55,8 +55,8 @@ export function useStatsMonthRange(): UseStatsMonthRangeReturn {
       return;
     }
 
-    // Kick off meta loading to initialize the service
-    loadStatsMeta().then(() => {
+    // Kick off packaged meta loading to initialize the service
+    loadStatsMetaFromPackaged().then(() => {
       const defaultRange = getDefaultStatsMonthRange();
       if (defaultRange.startMonth && defaultRange.endMonth) {
         setStatsMonthRange(defaultRange);

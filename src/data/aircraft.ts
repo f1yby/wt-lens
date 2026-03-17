@@ -1,6 +1,6 @@
 import type { AircraftVehicle, AircraftType, VehicleStats, GameMode, StatsMonthRange, EconomyData, AircraftWeapons } from '../types';
 import { getDefaultStatsMonthRange, getMonthRangeCacheKey } from '../types';
-import { StatSharkEntry, cleanName, buildStatsMapByMonthRange, convertToVehicleStats, loadStatsForRange } from './base';
+import { StatSharkEntry, cleanName, buildStatsMapByMonthRange, convertToVehicleStats, loadStatsForRange, loadPackagedStatsForCategory, VehicleCategory } from './base';
 
 interface AircraftEntry {
   id: string;
@@ -165,6 +165,81 @@ export async function loadAircraft(range?: StatsMonthRange): Promise<AircraftVeh
   const aircraft = await loadAircraftData();
 
   const merged = mergeAircraftData(stats, aircraft, resolvedRange);
+  aircraftByMonthRange.set(cacheKey, merged);
+  return merged;
+}
+
+/**
+ * Load aircraft with packaged stats (faster than loadAircraft).
+ * Loads stats from pre-packaged files organized by month, category, and mode.
+ * 
+ * @param range - Month range to load
+ * @param mode - Game mode to load (arcade, historical, simulation)
+ * @param isHelicopter - If true, loads helicopter stats; otherwise loads fixed-wing aircraft
+ */
+export async function loadAircraftWithPackagedStats(
+  range: StatsMonthRange,
+  mode: GameMode,
+  isHelicopter: boolean = false
+): Promise<AircraftVehicle[]> {
+  const resolvedRange = (range && range.startMonth && range.endMonth)
+    ? range
+    : getDefaultStatsMonthRange();
+  
+  const cacheKey = `${getMonthRangeCacheKey(resolvedRange)}-${mode}-${isHelicopter ? 'heli' : 'fixed'}`;
+  
+  if (aircraftByMonthRange.has(cacheKey)) {
+    return aircraftByMonthRange.get(cacheKey)!;
+  }
+
+  // Load packaged stats
+  const category: VehicleCategory = isHelicopter ? 'helicopter' : 'aircraft';
+  const stats = await loadPackagedStatsForCategory(resolvedRange, category, mode);
+
+  const aircraft = await loadAircraftData();
+  
+  // Filter by aircraft type
+  const filteredAircraft = isHelicopter
+    ? aircraft.filter(a => a.aircraftType === 'helicopter')
+    : aircraft.filter(a => a.aircraftType !== 'helicopter');
+
+  // Build stats map
+  const statsMap = new Map<string, StatSharkEntry>();
+  for (const entry of stats) {
+    statsMap.set(entry.id, entry);
+  }
+
+  // Merge stats into aircraft
+  const merged: AircraftVehicle[] = filteredAircraft.map(aircraftEntry => {
+    const entry = statsMap.get(aircraftEntry.id);
+    
+    const vehicleStats = entry ? convertToVehicleStats(entry) : undefined;
+    const statsByModeRecord: Record<GameMode, VehicleStats | undefined> = {
+      arcade: mode === 'arcade' ? vehicleStats : undefined,
+      historical: mode === 'historical' ? vehicleStats : undefined,
+      simulation: mode === 'simulation' ? vehicleStats : undefined,
+    };
+
+    return {
+      id: aircraftEntry.id,
+      name: aircraftEntry.name,
+      localizedName: cleanName(aircraftEntry.localizedName),
+      nation: aircraftEntry.nation as AircraftVehicle['nation'],
+      rank: entry?.rank ?? aircraftEntry.rank ?? 1,
+      battleRating: entry?.br ?? aircraftEntry.battleRating ?? 1.0,
+      groundBattleRating: aircraftEntry.groundBattleRating,
+      aircraftType: aircraftEntry.aircraftType as AircraftType,
+      economicType: (aircraftEntry.economicType as AircraftVehicle['economicType']) ?? 'regular',
+      performance: undefined,
+      stats: vehicleStats,
+      statsByMode: statsByModeRecord,
+      imageUrl: aircraftEntry.imageUrl,
+      unreleased: aircraftEntry.unreleased ?? false,
+      releaseDate: aircraftEntry.releaseDate,
+      ghost: aircraftEntry.ghost ?? false,
+    };
+  });
+
   aircraftByMonthRange.set(cacheKey, merged);
   return merged;
 }

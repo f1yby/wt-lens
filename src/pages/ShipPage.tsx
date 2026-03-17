@@ -2,12 +2,12 @@ import { useState, useMemo, useEffect, useCallback } from 'react';
 import ListPageLayout from '../components/ListPageLayout';
 import type { TypeOption } from '../components/VehicleFilter';
 import ShipTechTree from '../components/ShipTechTree';
-import { loadShips } from '../data/ships';
-import type { Nation, ShipType, ShipVehicle } from '../types';
+import { loadShipsWithPackagedStats } from '../data/ships';
+import type { Nation, ShipType, ShipVehicle, GameMode, StatsMonthRange } from '../types';
 import { BATTLE_RATINGS } from '../types';
 import { useGameMode } from '../hooks/useGameMode';
 import { useStatsMonthRange } from '../hooks/useStatsMonth';
-import { useRangeLoader } from '../hooks/useRangeLoader';
+import { usePackagedLoader } from '../hooks/usePackagedLoader';
 
 const SHIP_TYPES: TypeOption<ShipType>[] = [
   { value: 'all', label: '全部' },
@@ -36,8 +36,12 @@ export default function ShipPage() {
   const { gameMode, handleGameModeChange } = useGameMode();
   const { statsMonthRange, handleStatsMonthRangeChange } = useStatsMonthRange();
 
-  const loader = useCallback(loadShips, []);
-  const { data, loading } = useRangeLoader<ShipVehicle[]>(loader, statsMonthRange);
+  // Loader for packaged stats
+  const loader = useCallback(
+    (range: StatsMonthRange, mode: GameMode) => loadShipsWithPackagedStats(range, mode),
+    []
+  );
+  const { data, loading } = usePackagedLoader<ShipVehicle[]>(loader, statsMonthRange, gameMode);
   const ships = data ?? [];
 
   // 计算舰船数据中的实际最大 BR
