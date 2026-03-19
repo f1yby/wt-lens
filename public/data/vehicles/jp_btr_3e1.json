@@ -9,7 +9,7 @@
     "penetration": null,
     "max_speed": 99.9,
     "crew_count": 5,
-    "elevation_speed": 14.0,
+    "elevation_speed": 35.0,
     "traverse_speed": 35.0,
     "has_stabilizer": true,
     "stabilizer_type": "both",
@@ -101,7 +101,7 @@
     "main_gun_ammo": 400,
     "driver_nv_resolution": null,
     "has_smoke_grenades": true,
-    "has_ess": false,
+    "has_ess": true,
     "has_laser_rangefinder": true
   },
   "economy": {
@@ -113,15 +113,15 @@
     "aceTrainingRP": 890000,
     "repairCost": {
       "arcade": [
-        3153,
+        2950,
         5335
       ],
       "realistic": [
-        3130,
+        2929,
         5297
       ],
       "simulator": [
-        3833,
+        3587,
         6487
       ]
     },
