@@ -5,7 +5,7 @@
     "weight": 43.0,
     "power_to_weight": 16.74,
     "max_reverse_speed": 11.5,
-    "reload_time": 10.0,
+    "reload_time": 6.49,
     "penetration": 20.0,
     "max_speed": 49.9,
     "crew_count": 5,
@@ -30,12 +30,12 @@
     "mainGun": {
       "name": "155mm_L_39",
       "caliber": 155.0,
-      "reloadTime": 10.0,
+      "reloadTime": 6.49,
       "autoLoader": false,
       "reloadTimes": {
-        "base": 13.0,
-        "expert": 11.5,
-        "ace": 10.0
+        "base": 8.44,
+        "expert": 7.46,
+        "ace": 6.49
       }
     },
     "ammunitions": [
