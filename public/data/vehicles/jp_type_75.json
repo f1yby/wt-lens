@@ -6,7 +6,7 @@
     "power_to_weight": 20.55,
     "max_reverse_speed": 18.8,
     "reload_time": 10.0,
-    "penetration": 20.0,
+    "penetration": null,
     "max_speed": 47.0,
     "crew_count": 5,
     "elevation_speed": 15.0,
@@ -46,21 +46,6 @@
         "caliber": 155.0,
         "mass": 43.1,
         "muzzleVelocity": 580.0,
-        "armorPowerTable": [
-          {
-            "penetration": 20.0,
-            "distance": 100.0
-          },
-          {
-            "penetration": 16.0,
-            "distance": 4000.0
-          },
-          {
-            "penetration": 0.0,
-            "distance": 10000.0
-          }
-        ],
-        "penetration0m": 20.0,
         "explosiveMassKg": 6.98,
         "explosiveType": "comp_b",
         "tntEquivalent": 8.865

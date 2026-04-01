@@ -1,0 +1,447 @@
+{
+  "id": "nt_a_7e",
+  "economy": {
+    "researchCost": 260000,
+    "purchaseCost": 720000,
+    "crewTraining": 200000,
+    "expertTraining": 720000,
+    "aceTrainingGE": 3200,
+    "aceTrainingRP": 1210000,
+    "repairCost": {
+      "arcade": [
+        3619,
+        4891
+      ],
+      "realistic": [
+        9549,
+        12905
+      ],
+      "simulator": [
+        10981,
+        14839
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.82,
+      "realistic": 3.25,
+      "simulator": 6.0
+    },
+    "expMultiplier": 2.44
+  },
+  "weapons": {
+    "fixed_weapons": [],
+    "payloads": [
+      {
+        "name": "nt_a_7e_default",
+        "weapons": [
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "nt_a_7e_rockets_lau18",
+        "weapons": [
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "nt_a_7e_rockets_zuni",
+        "weapons": [
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "nt_a_7e_bomb_mk82",
+        "weapons": [
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "nt_a_7e_bomb_mk83",
+        "weapons": [
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "nt_a_7e_bomb_mk84",
+        "weapons": [
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "nt_a_7e_rocket_agm_62",
+        "weapons": [
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "nt_a_7e_rocket_agm_88",
+        "weapons": [
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "nt_a_7e_b61_30kt",
+        "weapons": [
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          }
+        ]
+      }
+    ]
+  }
+}

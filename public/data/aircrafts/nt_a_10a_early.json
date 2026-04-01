@@ -1,0 +1,301 @@
+{
+  "id": "nt_a_10a_early",
+  "economy": {
+    "researchCost": 210000,
+    "purchaseCost": 580000,
+    "crewTraining": 165000,
+    "expertTraining": 580000,
+    "aceTrainingGE": 2800,
+    "aceTrainingRP": 1080000,
+    "repairCost": {
+      "arcade": [
+        3005,
+        4401
+      ],
+      "realistic": [
+        8476,
+        12410
+      ],
+      "simulator": [
+        9865,
+        14443
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.96,
+      "realistic": 3.09,
+      "simulator": 6.0
+    },
+    "expMultiplier": 2.32
+  },
+  "weapons": {
+    "fixed_weapons": [],
+    "payloads": [
+      {
+        "name": "nt_a_10a_default",
+        "weapons": [
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "nt_a_10a_early_3x_500lb_mk_82_aim_9l",
+        "weapons": [
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "nt_a_10a_early_2000lb_mk_84_aim_9l",
+        "weapons": [
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "nt_a_10a_early_2000lb_gbu_8_aim_9l",
+        "weapons": [
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "nt_a_10a_early_3x_agm_65b_aim_9l",
+        "weapons": [
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,397 @@
+{
+  "id": "nt_mig_23mld",
+  "economy": {
+    "researchCost": 260000,
+    "purchaseCost": 720000,
+    "crewTraining": 200000,
+    "expertTraining": 720000,
+    "aceTrainingGE": 3200,
+    "aceTrainingRP": 1210000,
+    "repairCost": {
+      "arcade": [
+        2793,
+        4065
+      ],
+      "realistic": [
+        8215,
+        11957
+      ],
+      "simulator": [
+        8475,
+        12337
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.02,
+      "realistic": 3.16,
+      "simulator": 6.0
+    },
+    "expMultiplier": 2.44
+  },
+  "weapons": {
+    "fixed_weapons": [],
+    "payloads": [
+      {
+        "name": "nt_mig_23mld_default",
+        "weapons": [
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "nt_mig_23mld_rocket_r24r",
+        "weapons": [
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "nt_mig_23mld_rocket_r24t",
+        "weapons": [
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "nt_mig_23mld_rocket_r24t_r24r",
+        "weapons": [
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "nt_mig_23mld_rn_28",
+        "weapons": [
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "nt_mig_23mld_rocket_b8m",
+        "weapons": [
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "nt_mig_23mld_rocket_s24",
+        "weapons": [
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "nt_mig_23mld_rocket_kh23",
+        "weapons": [
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "nt_mig_23mld_bomb_ofab100_120",
+        "weapons": [
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "nt_mig_23mld_bomb_fab250m_62",
+        "weapons": [
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "nt_mig_23mld_bomb_fab500m_62",
+        "weapons": [
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          }
+        ]
+      }
+    ]
+  }
+}

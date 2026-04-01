@@ -1,0 +1,102 @@
+{
+  "id": "tu_95m",
+  "economy": {
+    "researchCost": 170000,
+    "purchaseCost": 480000,
+    "crewTraining": 135000,
+    "expertTraining": 480000,
+    "aceTrainingGE": 2400,
+    "aceTrainingRP": 950000,
+    "repairCost": {
+      "arcade": [
+        3836,
+        4837
+      ],
+      "realistic": [
+        13534,
+        17066
+      ],
+      "simulator": [
+        19233,
+        24254
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.1,
+      "realistic": 3.34,
+      "simulator": 6.0
+    },
+    "expMultiplier": 2.2
+  },
+  "weapons": {
+    "fixed_weapons": [],
+    "payloads": [
+      {
+        "name": "tu_95m_nt_default",
+        "weapons": [
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "tu_95m_fab_500",
+        "weapons": [
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "tu_95m_fab_1500",
+        "weapons": [
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "tu_95m_fab_3000",
+        "weapons": [
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "tu_95m_fab_5000",
+        "weapons": [
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "tu_95m_fab_9000",
+        "weapons": [
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "id": "nt_tu_95m",
+  "economy": {
+    "researchCost": 260000,
+    "purchaseCost": 720000,
+    "crewTraining": 200000,
+    "expertTraining": 720000,
+    "aceTrainingGE": 3200,
+    "aceTrainingRP": 1210000,
+    "repairCost": {
+      "arcade": [
+        5427,
+        5488
+      ],
+      "realistic": [
+        18333,
+        18537
+      ],
+      "simulator": [
+        18728,
+        18936
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.3,
+      "realistic": 3.8,
+      "simulator": 6.0
+    },
+    "expMultiplier": 2.44
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "cannon_am23_tu_95_turret",
+        "localizedName": "23 mm AM-23 cannon",
+        "count": 6,
+        "bullets": 2500,
+        "caliber": 23.0,
+        "fireRate": 600
+      },
+      {
+        "name": "countermeasure_split_launcher_am_23",
+        "localizedName": "Countermeasures",
+        "count": 1,
+        "bullets": 400
+      },
+      {
+        "name": "countermeasure_chaff_only_large_a32a",
+        "localizedName": "Large caliber chaff countermeasures",
+        "count": 2,
+        "bullets": 1000
+      }
+    ],
+    "payloads": [
+      {
+        "name": "nt_tu_95m_default",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "su_rds37",
+            "localizedName": "RDS-37 nuclear bomb (1.6 Mt)",
+            "count": 1
+          }
+        ]
+      }
+    ]
+  }
+}
