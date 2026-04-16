@@ -9,12 +9,12 @@
     "aceTrainingRP": 1010000,
     "repairCost": {
       "arcade": [
-        2938,
-        4258
+        2884,
+        4180
       ],
       "realistic": [
-        9434,
-        13673
+        10119,
+        14665
       ],
       "simulator": [
         9463,
@@ -22,7 +22,7 @@
       ]
     },
     "rewardMultiplier": {
-      "arcade": 1.29,
+      "arcade": 1.25,
       "realistic": 3.8,
       "simulator": 6.0
     },
