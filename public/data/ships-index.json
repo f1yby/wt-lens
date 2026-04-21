@@ -4277,6 +4277,24 @@
     "releaseDate": "2020-09-14"
   },
   {
+    "id": "jp_destroyer_suzutsuki",
+    "name": "jp_destroyer_suzutsuki",
+    "localizedName": "IJN Suzutsuki",
+    "nation": "japan",
+    "rank": 3,
+    "battleRating": 5.0,
+    "br": {
+      "arcade": 5.0,
+      "realistic": 5.0,
+      "simulator": 5.0
+    },
+    "shipType": "destroyer",
+    "economicType": "premium",
+    "imageUrl": "ships/jp_destroyer_suzutsuki.webp",
+    "unreleased": true,
+    "releaseDate": "2026-04-22"
+  },
+  {
     "id": "jp_destroyer_tade",
     "name": "jp_destroyer_tade",
     "localizedName": "蓼",
