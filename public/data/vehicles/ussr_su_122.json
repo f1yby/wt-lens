@@ -5,7 +5,7 @@
     "weight": 30.9,
     "power_to_weight": 16.18,
     "max_reverse_speed": 8.4,
-    "reload_time": 18.18,
+    "reload_time": 16.67,
     "penetration": 160.0,
     "max_speed": 55.0,
     "crew_count": 5,
@@ -30,12 +30,12 @@
     "mainGun": {
       "name": "122mm_M30",
       "caliber": 122.0,
-      "reloadTime": 18.18,
+      "reloadTime": 16.67,
       "autoLoader": false,
       "reloadTimes": {
-        "base": 23.63,
-        "expert": 20.91,
-        "ace": 18.18
+        "base": 21.67,
+        "expert": 19.17,
+        "ace": 16.67
       }
     },
     "ammunitions": [
