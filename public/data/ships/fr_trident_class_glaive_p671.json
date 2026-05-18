@@ -1,0 +1,30 @@
+{
+  "id": "fr_trident_class_glaive_p671",
+  "economy": {
+    "researchCost": 26000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 1450,
+    "crewTraining": 10000,
+    "expertTraining": 115000,
+    "aceTrainingGE": 500,
+    "aceTrainingRP": 640000,
+    "repairCost": {
+      "arcade": [
+        704,
+        704
+      ],
+      "realistic": [
+        906,
+        906
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.67,
+      "realistic": 2.5,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.42,
+    "freeRepairs": 30
+  },
+  "weapons": null
+}
