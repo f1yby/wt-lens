@@ -630,6 +630,22 @@
     "releaseDate": "2023-09-19"
   },
   {
+    "id": "cn_mbt2000_sm",
+    "name": "cn_mbt2000_sm",
+    "localizedName": "◍​MBT-2000",
+    "nation": "china",
+    "rank": 7,
+    "battle_rating": 11.7,
+    "br": {
+      "arcade": 11.7,
+      "realistic": 11.7,
+      "simulator": 11.7
+    },
+    "vehicle_type": "medium_tank",
+    "economic_type": "premium",
+    "imageUrl": "vehicles/cn_mbt2000_sm.webp"
+  },
+  {
     "id": "cn_object_122tm",
     "name": "cn_object_122tm",
     "localizedName": "122 三​机",
@@ -10153,6 +10169,22 @@
     "releaseDate": "2024-03-13"
   },
   {
+    "id": "jp_type_90b_sm",
+    "name": "jp_type_90b_sm",
+    "localizedName": "◍​90 式​战​车 (B)",
+    "nation": "japan",
+    "rank": 7,
+    "battle_rating": 11.7,
+    "br": {
+      "arcade": 11.7,
+      "realistic": 11.7,
+      "simulator": 11.7
+    },
+    "vehicle_type": "medium_tank",
+    "economic_type": "premium",
+    "imageUrl": "vehicles/jp_type_90b_sm.webp"
+  },
+  {
     "id": "jp_type_93",
     "name": "jp_type_93",
     "localizedName": "93 式​近 SAM",
@@ -12867,6 +12899,22 @@
     "economic_type": "premium",
     "imageUrl": "vehicles/uk_challenger_2_megatron.webp",
     "releaseDate": "2023-12-14"
+  },
+  {
+    "id": "uk_challenger_2_megatron_sm",
+    "name": "uk_challenger_2_megatron_sm",
+    "localizedName": "◍​挑​战​者 2 OES",
+    "nation": "britain",
+    "rank": 7,
+    "battle_rating": 11.7,
+    "br": {
+      "arcade": 11.7,
+      "realistic": 11.7,
+      "simulator": 11.7
+    },
+    "vehicle_type": "medium_tank",
+    "economic_type": "premium",
+    "imageUrl": "vehicles/uk_challenger_2_megatron_sm.webp"
   },
   {
     "id": "uk_challenger_2_tes",
