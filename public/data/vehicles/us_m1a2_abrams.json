@@ -4,7 +4,7 @@
     "horsepower": 1519.0,
     "weight": 62.05,
     "power_to_weight": 24.48,
-    "max_reverse_speed": 38.2,
+    "max_reverse_speed": 40.2,
     "reload_time": 5.0,
     "penetration": 629.1,
     "max_speed": 68.3,
@@ -144,20 +144,20 @@
     "forward_gears": 8,
     "reverse_gears": 4,
     "forward_gear_speeds": [
-      8.4,
-      15.9,
-      21.0,
-      31.2,
-      38.2,
-      49.2,
-      58.4,
+      7.4,
+      14.8,
+      19.6,
+      28.9,
+      35.5,
+      46.2,
+      55.1,
       68.3
     ],
     "reverse_gear_speeds": [
-      5.6,
-      11.3,
-      17.6,
-      38.2
+      5.3,
+      10.5,
+      16.4,
+      40.2
     ],
     "steer_type": "clutch_braking",
     "empty_weight": 61.05,
@@ -201,31 +201,31 @@
     "has_laser_rangefinder": true
   },
   "economy": {
-    "researchCost": 400000,
-    "purchaseCost": 1080000,
-    "crewTraining": 310000,
-    "expertTraining": 1080000,
+    "researchCost": 350000,
+    "purchaseCost": 950000,
+    "crewTraining": 270000,
+    "expertTraining": 950000,
     "aceTrainingGE": 2200,
-    "aceTrainingRP": 1280000,
+    "aceTrainingRP": 1210000,
     "repairCost": {
       "arcade": [
-        4401,
-        6943
+        4379,
+        6908
       ],
       "realistic": [
-        4274,
-        6742
+        4240,
+        6688
       ],
       "simulator": [
-        5413,
-        8538
+        5372,
+        8474
       ]
     },
     "rewardMultiplier": {
-      "arcade": 1.55,
-      "realistic": 1.94,
-      "simulator": 2.06
+      "arcade": 1.54,
+      "realistic": 1.92,
+      "simulator": 2.04
     },
-    "expMultiplier": 2.5
+    "expMultiplier": 2.44
   }
 }

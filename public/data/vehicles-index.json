@@ -345,7 +345,7 @@
     "name": "cn_m24_chaffee",
     "localizedName": "␗​M24",
     "nation": "china",
-    "rank": 2,
+    "rank": 3,
     "battle_rating": 4.0,
     "br": {
       "arcade": 3.7,
@@ -747,6 +747,24 @@
     "economic_type": "regular",
     "imageUrl": "vehicles/cn_pgz_625_fb10.webp",
     "releaseDate": "2025-06-25"
+  },
+  {
+    "id": "cn_pgz_88",
+    "name": "cn_pgz_88",
+    "localizedName": "PGZ88",
+    "nation": "china",
+    "rank": 5,
+    "battle_rating": 7.7,
+    "br": {
+      "arcade": 7.7,
+      "realistic": 7.7,
+      "simulator": 7.7
+    },
+    "vehicle_type": "spaa",
+    "economic_type": "regular",
+    "imageUrl": "vehicles/cn_pgz_88.webp",
+    "unreleased": true,
+    "releaseDate": "2026-06-09"
   },
   {
     "id": "cn_plz_05",
@@ -2670,6 +2688,24 @@
     "releaseDate": "2021-12-17"
   },
   {
+    "id": "fr_leopard_1a5be",
+    "name": "fr_leopard_1a5be",
+    "localizedName": "Leopard 1A5BE",
+    "nation": "france",
+    "rank": 6,
+    "battle_rating": 9.3,
+    "br": {
+      "arcade": 9.3,
+      "realistic": 9.3,
+      "simulator": 9.3
+    },
+    "vehicle_type": "medium_tank",
+    "economic_type": "regular",
+    "imageUrl": "vehicles/fr_leopard_1a5be.webp",
+    "unreleased": true,
+    "releaseDate": "2026-06-09"
+  },
+  {
     "id": "fr_leopard_2a4nl",
     "name": "fr_leopard_2a4nl",
     "localizedName": "豹 2A4NL",
@@ -3850,6 +3886,24 @@
     "economic_type": "regular",
     "imageUrl": "vehicles/germ_garford_putilov.webp",
     "releaseDate": "2025-04-01"
+  },
+  {
+    "id": "germ_hummel",
+    "name": "germ_hummel",
+    "localizedName": "Hummel",
+    "nation": "germany",
+    "rank": 2,
+    "battle_rating": 3.7,
+    "br": {
+      "arcade": 3.7,
+      "realistic": 3.7,
+      "simulator": 3.7
+    },
+    "vehicle_type": "tank_destroyer",
+    "economic_type": "regular",
+    "imageUrl": "vehicles/germ_hummel.webp",
+    "unreleased": true,
+    "releaseDate": "2026-06-09"
   },
   {
     "id": "germ_infanterie_kampfpanzer_churchill",
@@ -5656,6 +5710,24 @@
     "releaseDate": "2024-09-10"
   },
   {
+    "id": "germ_schutzenpanzer_puma_vjtf_mod",
+    "name": "germ_schutzenpanzer_puma_vjtf_mod",
+    "localizedName": "Puma u14",
+    "nation": "germany",
+    "rank": 7,
+    "battle_rating": 11.0,
+    "br": {
+      "arcade": 11.0,
+      "realistic": 11.0,
+      "simulator": 11.0
+    },
+    "vehicle_type": "light_tank",
+    "economic_type": "premium",
+    "imageUrl": "vehicles/germ_schutzenpanzer_puma_vjtf_mod.webp",
+    "unreleased": true,
+    "releaseDate": "2026-06-09"
+  },
+  {
     "id": "germ_sdkfz_221_s_pz_b_41",
     "name": "germ_sdkfz_221_s_pz_b_41",
     "localizedName": "Sd.Kfz. 221/sPzB 41",
@@ -6423,6 +6495,24 @@
     "economic_type": "regular",
     "imageUrl": "vehicles/il_eitan.webp",
     "releaseDate": "2026-03-18"
+  },
+  {
+    "id": "il_hunter_afv",
+    "name": "il_hunter_afv",
+    "localizedName": "Hunter AFV",
+    "nation": "israel",
+    "rank": 7,
+    "battle_rating": 10.7,
+    "br": {
+      "arcade": 10.7,
+      "realistic": 10.7,
+      "simulator": 10.7
+    },
+    "vehicle_type": "light_tank",
+    "economic_type": "regular",
+    "imageUrl": null,
+    "unreleased": true,
+    "releaseDate": "2026-06-09"
   },
   {
     "id": "il_m109",
@@ -8498,6 +8588,24 @@
     "releaseDate": "2018-12-18"
   },
   {
+    "id": "it_palmaria",
+    "name": "it_palmaria",
+    "localizedName": "Palmaria",
+    "nation": "italy",
+    "rank": 4,
+    "battle_rating": 6.7,
+    "br": {
+      "arcade": 6.7,
+      "realistic": 6.7,
+      "simulator": 6.7
+    },
+    "vehicle_type": "tank_destroyer",
+    "economic_type": "regular",
+    "imageUrl": null,
+    "unreleased": true,
+    "releaseDate": "2026-06-09"
+  },
+  {
     "id": "it_pzh_2000_hu",
     "name": "it_pzh_2000_hu",
     "localizedName": "PzH 2000HU",
@@ -9074,6 +9182,24 @@
     "economic_type": "clan",
     "imageUrl": "vehicles/jp_icv_prototype.webp",
     "releaseDate": "2024-09-10"
+  },
+  {
+    "id": "jp_leopard_2ri",
+    "name": "jp_leopard_2ri",
+    "localizedName": "Leopard 2RI",
+    "nation": "japan",
+    "rank": 8,
+    "battle_rating": 12.7,
+    "br": {
+      "arcade": 12.7,
+      "realistic": 12.7,
+      "simulator": 12.7
+    },
+    "vehicle_type": "medium_tank",
+    "economic_type": "regular",
+    "imageUrl": "vehicles/jp_leopard_2ri.webp",
+    "unreleased": true,
+    "releaseDate": "2026-06-09"
   },
   {
     "id": "jp_m163_vulcan",
@@ -11009,6 +11135,24 @@
     "economic_type": "regular",
     "imageUrl": "vehicles/sw_nasams_launcher.webp",
     "releaseDate": "2025-12-16"
+  },
+  {
+    "id": "sw_nomads",
+    "name": "sw_nomads",
+    "localizedName": "NOMADS",
+    "nation": "sweden",
+    "rank": 8,
+    "battle_rating": 12.0,
+    "br": {
+      "arcade": 12.0,
+      "realistic": 12.0,
+      "simulator": 12.0
+    },
+    "vehicle_type": "spaa",
+    "economic_type": "regular",
+    "imageUrl": "vehicles/sw_nomads.webp",
+    "unreleased": true,
+    "releaseDate": "2026-06-09"
   },
   {
     "id": "sw_patria_amv_ctcv_105",
@@ -13534,6 +13678,42 @@
     "releaseDate": "2023-10-31"
   },
   {
+    "id": "uk_m1a1_aim_abrams",
+    "name": "uk_m1a1_aim_abrams",
+    "localizedName": "M1A1",
+    "nation": "britain",
+    "rank": 7,
+    "battle_rating": 12.0,
+    "br": {
+      "arcade": 12.0,
+      "realistic": 12.0,
+      "simulator": 12.0
+    },
+    "vehicle_type": "medium_tank",
+    "economic_type": "clan",
+    "imageUrl": null,
+    "unreleased": true,
+    "releaseDate": "2026-06-09"
+  },
+  {
+    "id": "uk_m1a2_sep3_abrams",
+    "name": "uk_m1a2_sep3_abrams",
+    "localizedName": "M1A2",
+    "nation": "britain",
+    "rank": 8,
+    "battle_rating": 12.7,
+    "br": {
+      "arcade": 12.7,
+      "realistic": 12.7,
+      "simulator": 12.7
+    },
+    "vehicle_type": "medium_tank",
+    "economic_type": "regular",
+    "imageUrl": null,
+    "unreleased": true,
+    "releaseDate": "2026-06-09"
+  },
+  {
     "id": "uk_m3_stuart",
     "name": "uk_m3_stuart",
     "localizedName": "斯​图​亚​特 I",
@@ -14961,7 +15141,7 @@
     "name": "us_m1a2_abrams",
     "localizedName": "M1A2",
     "nation": "usa",
-    "rank": 8,
+    "rank": 7,
     "battle_rating": 12.0,
     "br": {
       "arcade": 12.0,
@@ -14989,6 +15169,42 @@
     "economic_type": "regular",
     "imageUrl": "vehicles/us_m1a2_sep2_abrams.webp",
     "releaseDate": "2023-12-14"
+  },
+  {
+    "id": "us_m1a2_sep2_abrams_trophy",
+    "name": "us_m1a2_sep2_abrams_trophy",
+    "localizedName": "M1A2 (Trophy-HV)",
+    "nation": "usa",
+    "rank": 8,
+    "battle_rating": 12.7,
+    "br": {
+      "arcade": 12.7,
+      "realistic": 12.7,
+      "simulator": 12.7
+    },
+    "vehicle_type": "medium_tank",
+    "economic_type": "regular",
+    "imageUrl": null,
+    "unreleased": true,
+    "releaseDate": "2026-06-09"
+  },
+  {
+    "id": "us_m1a2_sep3_abrams",
+    "name": "us_m1a2_sep3_abrams",
+    "localizedName": "M1A2C",
+    "nation": "usa",
+    "rank": 8,
+    "battle_rating": 12.7,
+    "br": {
+      "arcade": 12.7,
+      "realistic": 12.7,
+      "simulator": 12.7
+    },
+    "vehicle_type": "medium_tank",
+    "economic_type": "regular",
+    "imageUrl": null,
+    "unreleased": true,
+    "releaseDate": "2026-06-09"
   },
   {
     "id": "us_m1a2_sep_abrams",
@@ -15045,7 +15261,7 @@
     "name": "us_m24_chaffee",
     "localizedName": "M24",
     "nation": "usa",
-    "rank": 2,
+    "rank": 3,
     "battle_rating": 4.0,
     "br": {
       "arcade": 3.7,
@@ -15061,7 +15277,7 @@
     "name": "us_m24_chaffee_tl",
     "localizedName": "M24 (TL)",
     "nation": "usa",
-    "rank": 2,
+    "rank": 3,
     "battle_rating": 4.0,
     "br": {
       "arcade": 3.7,
@@ -15867,6 +16083,24 @@
     "vehicle_type": "medium_tank",
     "economic_type": "regular",
     "imageUrl": "vehicles/us_m60a1.webp"
+  },
+  {
+    "id": "us_m60a1_rise_mod",
+    "name": "us_m60a1_rise_mod",
+    "localizedName": "M60A1 Predator",
+    "nation": "usa",
+    "rank": 6,
+    "battle_rating": 8.7,
+    "br": {
+      "arcade": 8.7,
+      "realistic": 8.7,
+      "simulator": 8.7
+    },
+    "vehicle_type": "medium_tank",
+    "economic_type": "premium",
+    "imageUrl": "vehicles/us_m60a1_rise_mod.webp",
+    "unreleased": true,
+    "releaseDate": "2026-06-09"
   },
   {
     "id": "us_m60a1_rise_passive_era",
@@ -19619,6 +19853,24 @@
     "economic_type": "regular",
     "imageUrl": "vehicles/ussr_t_90m_2020.webp",
     "releaseDate": "2023-12-14"
+  },
+  {
+    "id": "ussr_t_90m_arena_m",
+    "name": "ussr_t_90m_arena_m",
+    "localizedName": "T-90M (Arena-M)",
+    "nation": "ussr",
+    "rank": 8,
+    "battle_rating": 12.7,
+    "br": {
+      "arcade": 12.7,
+      "realistic": 12.7,
+      "simulator": 12.7
+    },
+    "vehicle_type": "medium_tank",
+    "economic_type": "regular",
+    "imageUrl": "vehicles/ussr_t_90m_arena_m.webp",
+    "unreleased": true,
+    "releaseDate": "2026-06-09"
   },
   {
     "id": "ussr_to_55",

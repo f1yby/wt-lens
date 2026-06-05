@@ -1,13 +1,13 @@
 {
   "id": "germ_flakpanzer_I_ausf_A",
   "performance": {
-    "horsepower": 57.0,
+    "horsepower": 60.0,
     "weight": 5.5,
-    "power_to_weight": 10.36,
-    "max_reverse_speed": 5.8,
+    "power_to_weight": 10.91,
+    "max_reverse_speed": 6.9,
     "reload_time": 3.0,
     "penetration": 37.7,
-    "max_speed": 30.9,
+    "max_speed": 37.0,
     "crew_count": 5,
     "elevation_speed": 20.0,
     "traverse_speed": 35.0,
@@ -80,15 +80,15 @@
     "forward_gears": 6,
     "reverse_gears": 1,
     "forward_gear_speeds": [
-      1.9,
-      5.1,
-      8.8,
-      12.3,
-      20.6,
-      30.9
+      2.2,
+      6.2,
+      10.6,
+      14.8,
+      24.7,
+      37.0
     ],
     "reverse_gear_speeds": [
-      5.8
+      6.9
     ],
     "steer_type": "clutch_braking",
     "empty_weight": 5.4,

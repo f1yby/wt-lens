@@ -4,10 +4,10 @@
     "horsepower": 635.0,
     "weight": 50.8,
     "power_to_weight": 12.5,
-    "max_reverse_speed": 12.1,
+    "max_reverse_speed": 12.9,
     "reload_time": 14.93,
     "penetration": 241.4,
-    "max_speed": 37.3,
+    "max_speed": 37.2,
     "crew_count": 5,
     "elevation_speed": 4.5,
     "traverse_speed": 18.0,
@@ -80,16 +80,17 @@
     "transmission_model": null,
     "transmission_type": null,
     "forward_gears": 5,
-    "reverse_gears": 1,
+    "reverse_gears": 2,
     "forward_gear_speeds": [
       4.3,
       10.9,
-      17.6,
-      27.8,
-      37.3
+      17.5,
+      27.7,
+      37.2
     ],
     "reverse_gear_speeds": [
-      12.1
+      2.2,
+      12.9
     ],
     "steer_type": "clutch_braking",
     "empty_weight": 49.26,

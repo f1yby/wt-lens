@@ -1,0 +1,30 @@
+{
+  "id": "germ_cruiser_admiral_scheer",
+  "economy": {
+    "researchCost": 90000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 7480,
+    "crewTraining": 10000,
+    "expertTraining": 450000,
+    "aceTrainingGE": 1400,
+    "aceTrainingRP": 1240000,
+    "repairCost": {
+      "arcade": [
+        6533,
+        6533
+      ],
+      "realistic": [
+        5863,
+        5863
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 9.0,
+      "realistic": 12.0,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.84,
+    "freeRepairs": 30
+  },
+  "weapons": null
+}

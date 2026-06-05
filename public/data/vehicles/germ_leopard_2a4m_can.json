@@ -100,6 +100,17 @@
             "angle60": 291.7
           }
         }
+      },
+      {
+        "name": "120mm_im_he",
+        "localizedName": "IM HE",
+        "type": "he_frag_fs_tank",
+        "caliber": 120.0,
+        "mass": 16.0,
+        "muzzleVelocity": 1000.0,
+        "explosiveMassKg": 3.2,
+        "explosiveType": "comp_b",
+        "tntEquivalent": 4.064
       }
     ],
     "penetrationData": {

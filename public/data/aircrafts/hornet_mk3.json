@@ -1,32 +1,32 @@
 {
   "id": "hornet_mk3",
   "economy": {
-    "researchCost": 46000,
-    "purchaseCost": 155000,
-    "crewTraining": 45000,
-    "expertTraining": 155000,
-    "aceTrainingGE": 820,
-    "aceTrainingRP": 440000,
+    "researchCost": 54000,
+    "purchaseCost": 185000,
+    "crewTraining": 52000,
+    "expertTraining": 185000,
+    "aceTrainingGE": 940,
+    "aceTrainingRP": 480000,
     "repairCost": {
       "arcade": [
-        1921,
-        2668
+        2358,
+        3275
       ],
       "realistic": [
-        4637,
-        6241
+        5684,
+        7650
       ],
       "simulator": [
-        6690,
-        9004
+        8199,
+        11036
       ]
     },
     "rewardMultiplier": {
-      "arcade": 0.85,
-      "realistic": 1.95,
-      "simulator": 4.08
+      "arcade": 0.93,
+      "realistic": 2.13,
+      "simulator": 4.44
     },
-    "expMultiplier": 1.6
+    "expMultiplier": 1.66
   },
   "weapons": {
     "fixed_weapons": [],

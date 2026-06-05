@@ -6,7 +6,7 @@
     "power_to_weight": 7.92,
     "max_reverse_speed": 4.8,
     "reload_time": 5.5,
-    "penetration": 77.2,
+    "penetration": 74.3,
     "max_speed": 37.0,
     "crew_count": 5,
     "elevation_speed": 4.0,
@@ -45,28 +45,28 @@
         "type": "aphe_tank",
         "caliber": 75.0,
         "mass": 6.4,
-        "muzzleVelocity": 570.0,
+        "muzzleVelocity": 555.0,
         "deMarre": {
           "fullCaliber": 75.0,
           "isApcbc": false,
           "explosiveMass": 0.09,
           "Cx": 0.5
         },
-        "penetration0m": 77.2,
+        "penetration0m": 74.3,
         "explosiveMassKg": 0.09,
         "explosiveType": "tnt",
         "tntEquivalent": 0.09
       },
       {
-        "name": "75mm_mle1917",
-        "localizedName": "Mle1917",
+        "name": "75mm_mle1915",
+        "localizedName": "Mle1915",
         "type": "he_frag_tank",
         "caliber": 75.0,
-        "mass": 6.125,
-        "muzzleVelocity": 577.0,
-        "explosiveMassKg": 0.675,
+        "mass": 5.37,
+        "muzzleVelocity": 389.0,
+        "explosiveMassKg": 0.74,
         "explosiveType": "tnt",
-        "tntEquivalent": 0.675
+        "tntEquivalent": 0.74
       }
     ],
     "penetrationData": null,

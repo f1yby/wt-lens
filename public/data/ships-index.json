@@ -153,6 +153,24 @@
     "releaseDate": "2025-11-11"
   },
   {
+    "id": "fr_battleship_richelieu_class_jean_bart",
+    "name": "fr_battleship_richelieu_class_jean_bart",
+    "localizedName": "Jean Bart",
+    "nation": "france",
+    "rank": 7,
+    "battleRating": 8.3,
+    "br": {
+      "arcade": 8.3,
+      "realistic": 8.3,
+      "simulator": 8.3
+    },
+    "shipType": "battleship",
+    "economicType": "premium",
+    "imageUrl": "ships/fr_battleship_richelieu_class_jean_bart.webp",
+    "unreleased": true,
+    "releaseDate": "2026-06-09"
+  },
+  {
     "id": "fr_battleship_richelieu_class_richelieu",
     "name": "fr_battleship_richelieu_class_richelieu",
     "localizedName": "黎​塞​留",
@@ -1341,6 +1359,24 @@
     "releaseDate": "2019-09-10"
   },
   {
+    "id": "germ_cruiser_admiral_scheer",
+    "name": "germ_cruiser_admiral_scheer",
+    "localizedName": "Admiral Scheer",
+    "nation": "germany",
+    "rank": 4,
+    "battleRating": 6.0,
+    "br": {
+      "arcade": 6.0,
+      "realistic": 6.0,
+      "simulator": 6.0
+    },
+    "shipType": "heavy_cruiser",
+    "economicType": "premium",
+    "imageUrl": "ships/germ_cruiser_admiral_scheer.webp",
+    "unreleased": true,
+    "releaseDate": "2026-06-09"
+  },
+  {
     "id": "germ_cruiser_elbing",
     "name": "germ_cruiser_elbing",
     "localizedName": "埃​尔​宾",
@@ -1843,6 +1879,24 @@
     "shipType": "destroyer",
     "economicType": "regular",
     "imageUrl": "ships/germ_kanonenboot_k2.webp"
+  },
+  {
+    "id": "germ_kanonenboot_k4_lorelei",
+    "name": "germ_kanonenboot_k4_lorelei",
+    "localizedName": "Lorelei",
+    "nation": "germany",
+    "rank": 1,
+    "battleRating": 3.7,
+    "br": {
+      "arcade": 3.7,
+      "realistic": 3.7,
+      "simulator": 3.7
+    },
+    "shipType": "destroyer",
+    "economicType": "regular",
+    "imageUrl": null,
+    "unreleased": true,
+    "releaseDate": "2026-06-09"
   },
   {
     "id": "germ_km5",
@@ -3119,6 +3173,24 @@
     "economicType": "regular",
     "imageUrl": "ships/it_mas441.webp",
     "releaseDate": "2024-09-10"
+  },
+  {
+    "id": "it_mas_classe429",
+    "name": "it_mas_classe429",
+    "localizedName": "MAS 429",
+    "nation": "italy",
+    "rank": 1,
+    "battleRating": 1.3,
+    "br": {
+      "arcade": 1.3,
+      "realistic": 1.3,
+      "simulator": 1.3
+    },
+    "shipType": "gun_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/it_mas_classe429.webp",
+    "unreleased": true,
+    "releaseDate": "2026-06-09"
   },
   {
     "id": "it_mas_classe500_3",
@@ -4837,6 +4909,24 @@
     "releaseDate": "2019-05-28"
   },
   {
+    "id": "jp_ujishima_msc",
+    "name": "jp_ujishima_msc",
+    "localizedName": "JDS Ujishima (MSC-655)",
+    "nation": "japan",
+    "rank": 2,
+    "battleRating": 1.7,
+    "br": {
+      "arcade": 1.7,
+      "realistic": 1.7,
+      "simulator": 1.7
+    },
+    "shipType": "submarine_chaser",
+    "economicType": "regular",
+    "imageUrl": "ships/jp_ujishima_msc.webp",
+    "unreleased": true,
+    "releaseDate": "2026-06-09"
+  },
+  {
     "id": "jp_yuri_class_asagao",
     "name": "jp_yuri_class_asagao",
     "localizedName": "朝​颜",
@@ -4920,6 +5010,24 @@
     "economicType": "regular",
     "imageUrl": "ships/uk_73ft_vosper_type1.webp",
     "releaseDate": "2026-03-18"
+  },
+  {
+    "id": "uk_73ft_vosper_type2",
+    "name": "uk_73ft_vosper_type2",
+    "localizedName": "MTB-523",
+    "nation": "britain",
+    "rank": 2,
+    "battleRating": 2.0,
+    "br": {
+      "arcade": 2.0,
+      "realistic": 2.0,
+      "simulator": 2.0
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "premium",
+    "imageUrl": "ships/uk_73ft_vosper_type2.webp",
+    "unreleased": true,
+    "releaseDate": "2026-06-09"
   },
   {
     "id": "uk_attack_class_arrow",
@@ -5976,6 +6084,24 @@
     "releaseDate": "2021-09-07"
   },
   {
+    "id": "uk_egret_class",
+    "name": "uk_egret_class",
+    "localizedName": "HMS Egret",
+    "nation": "britain",
+    "rank": 2,
+    "battleRating": 4.3,
+    "br": {
+      "arcade": 4.3,
+      "realistic": 4.3,
+      "simulator": 4.3
+    },
+    "shipType": "destroyer",
+    "economicType": "regular",
+    "imageUrl": "ships/uk_egret_class.webp",
+    "unreleased": true,
+    "releaseDate": "2026-06-09"
+  },
+  {
     "id": "uk_fairmile_a_ml100",
     "name": "uk_fairmile_a_ml100",
     "localizedName": "ML100",
@@ -6619,6 +6745,24 @@
     "releaseDate": "2023-03-07"
   },
   {
+    "id": "us_battleship_north_carolina_class",
+    "name": "us_battleship_north_carolina_class",
+    "localizedName": "USS North Carolina",
+    "nation": "usa",
+    "rank": 7,
+    "battleRating": 8.3,
+    "br": {
+      "arcade": 8.3,
+      "realistic": 8.3,
+      "simulator": 8.3
+    },
+    "shipType": "battleship",
+    "economicType": "regular",
+    "imageUrl": "ships/us_battleship_north_carolina_class.webp",
+    "unreleased": true,
+    "releaseDate": "2026-06-09"
+  },
+  {
     "id": "us_battleship_north_dakota",
     "name": "us_battleship_north_dakota",
     "localizedName": "北​达​科​他",
@@ -7256,6 +7400,24 @@
     "economicType": "premium",
     "imageUrl": "ships/us_destroyer_gearing_frank_knox.webp",
     "releaseDate": "2022-10-26"
+  },
+  {
+    "id": "us_destroyer_gridley",
+    "name": "us_destroyer_gridley",
+    "localizedName": "USS Gridley",
+    "nation": "usa",
+    "rank": 2,
+    "battleRating": 4.0,
+    "br": {
+      "arcade": 4.0,
+      "realistic": 4.0,
+      "simulator": 4.0
+    },
+    "shipType": "destroyer",
+    "economicType": "regular",
+    "imageUrl": "ships/us_destroyer_gridley.webp",
+    "unreleased": true,
+    "releaseDate": "2026-06-09"
   },
   {
     "id": "us_destroyer_mitscher",
@@ -8171,6 +8333,24 @@
     "economicType": "regular",
     "imageUrl": "ships/ussr_cruiser_chapayev.webp",
     "releaseDate": "2019-09-10"
+  },
+  {
+    "id": "ussr_cruiser_chervona_ukraina",
+    "name": "ussr_cruiser_chervona_ukraina",
+    "localizedName": "Chervona Ukraina",
+    "nation": "ussr",
+    "rank": 3,
+    "battleRating": 5.3,
+    "br": {
+      "arcade": 5.3,
+      "realistic": 5.3,
+      "simulator": 5.3
+    },
+    "shipType": "light_cruiser",
+    "economicType": "regular",
+    "imageUrl": null,
+    "unreleased": true,
+    "releaseDate": "2026-06-09"
   },
   {
     "id": "ussr_cruiser_kerch",

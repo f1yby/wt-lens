@@ -1,0 +1,185 @@
+{
+  "id": "fw_189c_0",
+  "economy": {
+    "researchCost": 4000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 400,
+    "crewTraining": 450,
+    "expertTraining": 3000,
+    "aceTrainingGE": 45,
+    "aceTrainingRP": 220000,
+    "repairCost": {
+      "arcade": [
+        115,
+        115
+      ],
+      "realistic": [
+        151,
+        151
+      ],
+      "simulator": [
+        314,
+        314
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.27,
+      "realistic": 0.53,
+      "simulator": 1.22
+    },
+    "expMultiplier": 1.0,
+    "freeRepairs": 30
+  },
+  "weapons": {
+    "fixed_weapons": [
+      {
+        "name": "cannonMG15115",
+        "localizedName": "15 毫​米 MG 151/15 机​炮",
+        "count": 2,
+        "bullets": 400,
+        "caliber": 15.0,
+        "fireRate": 700,
+        "belts": [
+          {
+            "key": "mg15115_universal",
+            "name": "mg15115_universal",
+            "bullets": [
+              "ap_t_ball",
+              "he_frag_t_ball",
+              "ap_t_ball",
+              "he_frag_t_ball"
+            ],
+            "bulletsData": [
+              {
+                "type": "ap_t_ball",
+                "mass": 0.072,
+                "speed": 850.0
+              },
+              {
+                "type": "he_frag_t_ball",
+                "mass": 0.057,
+                "speed": 960.0,
+                "explosiveMass": 0.0019,
+                "explosiveType": "petn",
+                "tntEquivalent": 0.00247,
+                "hitPowerMult": 5.0,
+                "fireChance": 5.0
+              },
+              {
+                "type": "ap_t_ball",
+                "mass": 0.072,
+                "speed": 850.0
+              },
+              {
+                "type": "he_frag_t_ball",
+                "mass": 0.057,
+                "speed": 960.0,
+                "explosiveMass": 0.0019,
+                "explosiveType": "petn",
+                "tntEquivalent": 0.00247,
+                "hitPowerMult": 5.0,
+                "fireChance": 5.0
+              }
+            ]
+          },
+          {
+            "key": "mg15115_air_targets",
+            "name": "mg15115_air_targets",
+            "bullets": [
+              "ap_i",
+              "he_frag_t_ball",
+              "he_frag_t_ball",
+              "he_frag_t_ball"
+            ],
+            "bulletsData": [
+              {
+                "type": "ap_i",
+                "mass": 0.059,
+                "speed": 960.0,
+                "penetration": 34.0,
+                "fireChance": 10.0
+              },
+              {
+                "type": "he_frag_t_ball",
+                "mass": 0.057,
+                "speed": 960.0,
+                "explosiveMass": 0.0019,
+                "explosiveType": "petn",
+                "tntEquivalent": 0.00247,
+                "hitPowerMult": 5.0,
+                "fireChance": 5.0
+              },
+              {
+                "type": "he_frag_t_ball",
+                "mass": 0.057,
+                "speed": 960.0,
+                "explosiveMass": 0.0019,
+                "explosiveType": "petn",
+                "tntEquivalent": 0.00247,
+                "hitPowerMult": 5.0,
+                "fireChance": 5.0
+              },
+              {
+                "type": "he_frag_t_ball",
+                "mass": 0.057,
+                "speed": 960.0,
+                "explosiveMass": 0.0019,
+                "explosiveType": "petn",
+                "tntEquivalent": 0.00247,
+                "hitPowerMult": 5.0,
+                "fireChance": 5.0
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "gunMG17",
+        "localizedName": "7.92 毫​米 MG 17 机​枪",
+        "count": 4,
+        "bullets": 1000,
+        "caliber": 7.9,
+        "fireRate": 1200
+      },
+      {
+        "name": "gunMG81_turret",
+        "localizedName": "7.92 毫​米 MG 81 机​枪",
+        "count": 1,
+        "bullets": 750,
+        "caliber": 7.9,
+        "fireRate": 1596
+      }
+    ],
+    "payloads": [
+      {
+        "name": "fw_189c_0_4xsc50",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "de_sc50",
+            "localizedName": "50 千​克 SC50JA 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "de_sc50",
+            "localizedName": "50 千​克 SC50JA 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "de_sc50",
+            "localizedName": "50 千​克 SC50JA 炸​弹",
+            "count": 1
+          },
+          {
+            "trigger": "bombs",
+            "name": "de_sc50",
+            "localizedName": "50 千​克 SC50JA 炸​弹",
+            "count": 1
+          }
+        ]
+      }
+    ]
+  }
+}

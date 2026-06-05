@@ -1,32 +1,32 @@
 {
   "id": "tornado_adv",
   "economy": {
-    "researchCost": 260000,
-    "purchaseCost": 720000,
-    "crewTraining": 200000,
-    "expertTraining": 720000,
-    "aceTrainingGE": 3200,
-    "aceTrainingRP": 1210000,
+    "researchCost": 290000,
+    "purchaseCost": 780000,
+    "crewTraining": 220000,
+    "expertTraining": 780000,
+    "aceTrainingGE": 3400,
+    "aceTrainingRP": 1280000,
     "repairCost": {
       "arcade": [
-        2691,
-        4065
+        2712,
+        4097
       ],
       "realistic": [
-        7916,
-        11957
+        7974,
+        12046
       ],
       "simulator": [
-        8610,
-        13006
+        8659,
+        13081
       ]
     },
     "rewardMultiplier": {
-      "arcade": 1.02,
-      "realistic": 3.16,
+      "arcade": 1.03,
+      "realistic": 3.19,
       "simulator": 6.0
     },
-    "expMultiplier": 2.44
+    "expMultiplier": 2.5
   },
   "weapons": {
     "fixed_weapons": [],

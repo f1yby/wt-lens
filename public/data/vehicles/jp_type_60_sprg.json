@@ -40,8 +40,8 @@
     },
     "ammunitions": [
       {
-        "name": "106mm_m344a1",
-        "localizedName": "M344A1",
+        "name": "106mm_type_64_heat",
+        "localizedName": "Type 64 HEAT",
         "type": "heat_grenade_tank",
         "caliber": 106.0,
         "mass": 7.96,
@@ -52,8 +52,8 @@
         "tntEquivalent": 1.6
       },
       {
-        "name": "106mm_m361a1",
-        "localizedName": "M361A1",
+        "name": "106mm_type_68_hesh",
+        "localizedName": "Type 68 HESH",
         "type": "hesh_tank",
         "caliber": 106.0,
         "mass": 7.95,

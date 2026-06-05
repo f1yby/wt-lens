@@ -126,6 +126,15 @@
         "reloadTime": 8.0,
         "rateOfFire": 648,
         "bulletType": "ap_ball"
+      },
+      {
+        "trigger": "gunner4",
+        "name": "7_62mm_M1919A4",
+        "caliber": 7.6,
+        "ammo": 3000,
+        "reloadTime": 8.0,
+        "rateOfFire": 500,
+        "bulletType": "ap_ball"
       }
     ],
     "main_gun_ammo": 70,

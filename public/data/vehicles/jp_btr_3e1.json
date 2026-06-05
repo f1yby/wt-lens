@@ -21,12 +21,9 @@
       -180.0,
       180.0
     ],
-    "gunner_thermal_resolution": [
-      800,
-      600
-    ],
+    "gunner_thermal_resolution": null,
     "commander_thermal_resolution": null,
-    "gunner_thermal_diagonal": 1000.0,
+    "gunner_thermal_diagonal": null,
     "commander_thermal_diagonal": null,
     "stabilizer_value": 1,
     "elevation_range_value": 64.0,
@@ -99,7 +96,10 @@
       }
     ],
     "main_gun_ammo": 400,
-    "driver_nv_resolution": null,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
     "has_smoke_grenades": true,
     "has_ess": true,
     "has_laser_rangefinder": true

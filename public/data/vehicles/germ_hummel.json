@@ -1,0 +1,213 @@
+{
+  "id": "germ_hummel",
+  "performance": {
+    "horsepower": 300.0,
+    "weight": 21.0,
+    "power_to_weight": 14.29,
+    "max_reverse_speed": 7.5,
+    "reload_time": 14.99,
+    "penetration": 193.5,
+    "max_speed": 40.0,
+    "crew_count": 5,
+    "elevation_speed": 4.0,
+    "traverse_speed": 12.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -3.0,
+      42.0
+    ],
+    "traverse_range": [
+      -15.0,
+      15.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 45.0,
+    "mainGun": {
+      "name": "150mm_sfh_18",
+      "caliber": 150.0,
+      "reloadTime": 14.99,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 19.49,
+        "expert": 17.24,
+        "ace": 14.99
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "150mm_gr_19_he",
+        "localizedName": "Gr.19",
+        "type": "he_frag_tank",
+        "caliber": 150.0,
+        "mass": 43.5,
+        "muzzleVelocity": 520.0,
+        "armorPowerTable": [
+          {
+            "penetration": 20.0,
+            "distance": 100.0
+          },
+          {
+            "penetration": 16.0,
+            "distance": 4000.0
+          },
+          {
+            "penetration": 0.0,
+            "distance": 10000.0
+          }
+        ],
+        "penetration0m": 20.0,
+        "explosiveMassKg": 4.3,
+        "explosiveType": "fp02",
+        "tntEquivalent": 4.3
+      },
+      {
+        "name": "150mm_gr_39_hl_a_heat",
+        "localizedName": "Gr.39 Hl/A",
+        "type": "heat_tank",
+        "caliber": 150.0,
+        "mass": 25.0,
+        "muzzleVelocity": 375.0,
+        "penetration0m": 185.0,
+        "explosiveMassKg": 4.16,
+        "explosiveType": "rdx_tnt",
+        "tntEquivalent": 5.325
+      },
+      {
+        "name": "150mm_gr_19_nb",
+        "localizedName": "Gr.19 Nb",
+        "type": "smoke_tank",
+        "caliber": 150.0,
+        "mass": 39.0,
+        "muzzleVelocity": 520.0,
+        "explosiveMassKg": 0.05,
+        "explosiveType": "smoke_composition",
+        "tntEquivalent": 0.05
+      },
+      {
+        "name": "150mm_gr_36_he",
+        "localizedName": "Gr.36",
+        "type": "he_frag_tank",
+        "caliber": 150.0,
+        "mass": 43.5,
+        "muzzleVelocity": 520.0,
+        "armorPowerTable": [
+          {
+            "penetration": 20.0,
+            "distance": 100.0
+          },
+          {
+            "penetration": 16.0,
+            "distance": 4000.0
+          },
+          {
+            "penetration": 0.0,
+            "distance": 10000.0
+          }
+        ],
+        "penetration0m": 20.0,
+        "explosiveMassKg": 5.1,
+        "explosiveType": "fp02",
+        "tntEquivalent": 5.1
+      },
+      {
+        "name": "150mm_gr_19_be_sap",
+        "localizedName": "Gr.19 Be",
+        "type": "sapcbc_tank",
+        "caliber": 150.0,
+        "mass": 43.5,
+        "muzzleVelocity": 520.0,
+        "deMarre": {
+          "fullCaliber": 150.0,
+          "isApcbc": true,
+          "explosiveMass": 3.18
+        },
+        "penetration0m": 111.0,
+        "explosiveMassKg": 3.18,
+        "explosiveType": "fp02",
+        "tntEquivalent": 3.18
+      },
+      {
+        "name": "150mm_pzgr_39_ts",
+        "localizedName": "Pzgr.39 TS",
+        "type": "apcbc_tank",
+        "caliber": 88.0,
+        "mass": 9.85,
+        "muzzleVelocity": 880.0,
+        "deMarre": {
+          "fullCaliber": 88.0,
+          "isApcbc": true,
+          "explosiveMass": 0.059,
+          "Cx": 0.3
+        },
+        "penetration0m": 193.5,
+        "explosiveMassKg": 0.059,
+        "explosiveType": "h10",
+        "tntEquivalent": 0.083
+      }
+    ],
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 3000.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 6,
+    "reverse_gears": 1,
+    "forward_gear_speeds": [
+      4.2,
+      6.7,
+      11.4,
+      16.0,
+      26.7,
+      40.0
+    ],
+    "reverse_gear_speeds": [
+      7.5
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 20.7,
+    "track_width": 0.4,
+    "secondary_weapons": null,
+    "main_gun_ammo": 18,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": false,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 11000,
+    "purchaseCost": 22000,
+    "crewTraining": 6300,
+    "expertTraining": 22000,
+    "aceTrainingGE": 210,
+    "aceTrainingRP": 220000,
+    "repairCost": {
+      "arcade": [
+        718,
+        912
+      ],
+      "realistic": [
+        854,
+        1084
+      ],
+      "simulator": [
+        1055,
+        1339
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 0.5,
+      "realistic": 0.76,
+      "simulator": 0.97
+    },
+    "expMultiplier": 1.24
+  }
+}

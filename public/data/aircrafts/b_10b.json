@@ -31,54 +31,15 @@
     "freeRepairs": 30
   },
   "weapons": {
-    "fixed_weapons": [
-      {
-        "name": "gunBrowning30_turret",
-        "localizedName": "7.62 毫​米​勃​朗​宁​机​枪",
-        "count": 3,
-        "bullets": 1800,
-        "caliber": 7.6,
-        "fireRate": 1000
-      }
-    ],
+    "fixed_weapons": [],
     "payloads": [
       {
         "name": "b_10b_250lb",
         "weapons": [
           {
-            "trigger": "bombs",
-            "name": "us_250lb_anm57",
-            "localizedName": "250 磅 AN-M57 炸​弹",
-            "count": 1
-          },
-          {
-            "trigger": "bombs",
-            "name": "us_250lb_anm57",
-            "localizedName": "250 磅 AN-M57 炸​弹",
-            "count": 1
-          },
-          {
-            "trigger": "bombs",
-            "name": "us_250lb_anm57",
-            "localizedName": "250 磅 AN-M57 炸​弹",
-            "count": 1
-          },
-          {
-            "trigger": "bombs",
-            "name": "us_250lb_anm57",
-            "localizedName": "250 磅 AN-M57 炸​弹",
-            "count": 1
-          },
-          {
-            "trigger": "bombs",
-            "name": "us_250lb_anm57",
-            "localizedName": "250 磅 AN-M57 炸​弹",
-            "count": 1
-          },
-          {
-            "trigger": "bombs",
-            "name": "us_250lb_anm57",
-            "localizedName": "250 磅 AN-M57 炸​弹",
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
             "count": 1
           }
         ]
@@ -87,15 +48,21 @@
         "name": "b_10b_500lb",
         "weapons": [
           {
-            "trigger": "bombs",
-            "name": "us_500lb_anm64a1",
-            "localizedName": "500 磅 AN-M64A1 炸​弹",
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
             "count": 1
           },
           {
-            "trigger": "bombs",
-            "name": "us_500lb_anm64a1",
-            "localizedName": "500 磅 AN-M64A1 炸​弹",
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
             "count": 1
           }
         ]
@@ -104,15 +71,21 @@
         "name": "b_10b_1000lb",
         "weapons": [
           {
-            "trigger": "bombs",
-            "name": "us_1000lb_anm65a1",
-            "localizedName": "1,000 磅 AN-M65A1 炸​弹",
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
             "count": 1
           },
           {
-            "trigger": "bombs",
-            "name": "us_1000lb_anm65a1",
-            "localizedName": "1,000 磅 AN-M65A1 炸​弹",
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
             "count": 1
           }
         ]
@@ -121,9 +94,15 @@
         "name": "b_10b_2000lb",
         "weapons": [
           {
-            "trigger": "bombs",
-            "name": "us_2000lbs_anm66",
-            "localizedName": "2,000 磅 AN-M66A2 炸​弹",
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
             "count": 1
           }
         ]

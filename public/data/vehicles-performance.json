@@ -2452,7 +2452,7 @@
       "horsepower": 1519.0,
       "weight": 62.05,
       "power_to_weight": 24.48,
-      "max_reverse_speed": 38.2,
+      "max_reverse_speed": 40.2,
       "reload_time": 5.0,
       "penetration": 628.3,
       "max_speed": 68.3,
@@ -2580,20 +2580,20 @@
       "forward_gears": 8,
       "reverse_gears": 4,
       "forward_gear_speeds": [
-        8.4,
-        15.9,
-        21.0,
-        31.2,
-        38.2,
-        49.2,
-        58.4,
+        7.4,
+        14.8,
+        19.6,
+        28.9,
+        35.5,
+        46.2,
+        55.1,
         68.3
       ],
       "reverse_gear_speeds": [
-        5.6,
-        11.3,
-        17.6,
-        38.2
+        5.3,
+        10.5,
+        16.4,
+        40.2
       ],
       "steer_type": "clutch_braking",
       "empty_weight": 61.05,
@@ -5833,8 +5833,8 @@
     "id": "cn_pgz_04a",
     "performance": {
       "horsepower": 383.0,
-      "weight": 22.7,
-      "power_to_weight": 16.87,
+      "weight": 22.5,
+      "power_to_weight": 17.02,
       "max_reverse_speed": 17.3,
       "reload_time": 4.0,
       "penetration": 63.5,
@@ -5926,7 +5926,7 @@
         17.3
       ],
       "steer_type": "clutch_braking",
-      "empty_weight": 22.0,
+      "empty_weight": 21.8,
       "track_width": 0.33,
       "secondary_weapons": [
         {
@@ -6153,6 +6153,111 @@
     }
   },
   {
+    "id": "cn_pgz_88",
+    "performance": {
+      "horsepower": 580.0,
+      "weight": 35.0,
+      "power_to_weight": 16.57,
+      "max_reverse_speed": 7.5,
+      "reload_time": 1.0,
+      "penetration": 86.5,
+      "max_speed": 50.0,
+      "crew_count": 5,
+      "elevation_speed": 45.0,
+      "traverse_speed": 40.0,
+      "has_stabilizer": true,
+      "stabilizer_type": "both",
+      "elevation_range": [
+        -5.0,
+        85.0
+      ],
+      "traverse_range": [
+        -180.0,
+        180.0
+      ],
+      "gunner_thermal_resolution": null,
+      "commander_thermal_resolution": null,
+      "gunner_thermal_diagonal": null,
+      "commander_thermal_diagonal": null,
+      "stabilizer_value": 1,
+      "elevation_range_value": 90.0,
+      "mainGun": {
+        "name": "37mm_type_76",
+        "caliber": 37.0,
+        "reloadTime": 1.0,
+        "autoLoader": false,
+        "reloadTimes": {
+          "base": 1.3,
+          "expert": 1.15,
+          "ace": 1.0
+        },
+        "rateOfFire": 360,
+        "beltReloadTime": 1.0
+      },
+      "ammunitions": [
+        {
+          "name": "37mm_heit_1955",
+          "localizedName": "HEI-T",
+          "type": "he_frag_i_t",
+          "caliber": 37.0,
+          "mass": 0.732,
+          "muzzleVelocity": 1000.0,
+          "explosiveMassKg": 0.037,
+          "explosiveType": "a_ix_2",
+          "tntEquivalent": 0.052
+        },
+        {
+          "name": "37mm_apit_1955",
+          "localizedName": "AP-T",
+          "type": "ap_t",
+          "caliber": 37.0,
+          "mass": 0.77,
+          "muzzleVelocity": 1000.0,
+          "deMarre": {
+            "fullCaliber": 37.0,
+            "isApcbc": false,
+            "explosiveMass": 0,
+            "Cx": 0.3698
+          },
+          "penetration0m": 86.5
+        }
+      ],
+      "penetrationData": null,
+      "autoLoader": false,
+      "engine_manufacturer": "CNGC",
+      "engine_model": "12150L",
+      "engine_type": null,
+      "engine_max_rpm": 2000.0,
+      "transmission_manufacturer": null,
+      "transmission_model": null,
+      "transmission_type": null,
+      "forward_gears": 5,
+      "reverse_gears": 1,
+      "forward_gear_speeds": [
+        7.5,
+        16.3,
+        21.7,
+        31.9,
+        50.0
+      ],
+      "reverse_gear_speeds": [
+        7.5
+      ],
+      "steer_type": "clutch_braking",
+      "empty_weight": 34.0,
+      "track_width": 0.58,
+      "secondary_weapons": null,
+      "main_gun_ammo": 250,
+      "driver_nv_resolution": [
+        800,
+        600
+      ],
+      "has_smoke_grenades": false,
+      "has_ess": true,
+      "has_laser_rangefinder": false
+    }
+  },
+  {
     "id": "cn_plz_05",
     "performance": {
       "horsepower": 800.0,
@@ -6229,8 +6334,8 @@
           },
           "penetration0m": 255.2,
           "explosiveMassKg": 5.1,
-          "explosiveType": "tnt",
-          "tntEquivalent": 5.1
+          "explosiveType": "jhl_3",
+          "tntEquivalent": 7.14
         }
       ],
       "penetrationData": null,
@@ -10337,7 +10442,7 @@
       ],
       "steer_type": "clutch_braking",
       "empty_weight": 12.7,
-      "track_width": 0.35,
+      "track_width": 0.28,
       "secondary_weapons": [
         {
           "trigger": "gunner1",
@@ -16031,16 +16136,16 @@
           "trigger": "gunner1",
           "name": "7_62mm_M1919A4",
           "caliber": 7.6,
-          "ammo": 2000,
+          "ammo": 3250,
           "reloadTime": 8.0,
           "rateOfFire": 500,
           "bulletType": "ap_ball"
         },
         {
           "trigger": "gunner2",
-          "name": "12_7mm_M2_HB",
+          "name": "12_7mm_M2_HB_for_chaffee",
           "caliber": 12.7,
-          "ammo": 1000,
+          "ammo": 420,
           "reloadTime": 8.0,
           "rateOfFire": 575,
           "bulletType": "ap_i_t_ball_M20"
@@ -21289,7 +21394,7 @@
         {
           "name": "120mm_f1_he",
           "localizedName": "F1 HE",
-          "type": "he_frag_tank",
+          "type": "he_frag_fs_tank",
           "caliber": 120.0,
           "mass": 16.8,
           "muzzleVelocity": 1050.0,
@@ -21469,7 +21574,7 @@
         {
           "name": "120mm_f1_he",
           "localizedName": "F1 HE",
-          "type": "he_frag_tank",
+          "type": "he_frag_fs_tank",
           "caliber": 120.0,
           "mass": 16.8,
           "muzzleVelocity": 1050.0,
@@ -21640,7 +21745,7 @@
         {
           "name": "120mm_f1_he",
           "localizedName": "F1 HE",
-          "type": "he_frag_tank",
+          "type": "he_frag_fs_tank",
           "caliber": 120.0,
           "mass": 16.8,
           "muzzleVelocity": 1050.0,
@@ -21814,7 +21919,7 @@
         {
           "name": "120mm_f1_he",
           "localizedName": "F1 HE",
-          "type": "he_frag_tank",
+          "type": "he_frag_fs_tank",
           "caliber": 120.0,
           "mass": 16.8,
           "muzzleVelocity": 1050.0,
@@ -21873,6 +21978,185 @@
         }
       ],
       "main_gun_ammo": 40,
+      "driver_nv_resolution": [
+        800,
+        600
+      ],
+      "has_smoke_grenades": true,
+      "has_ess": false,
+      "has_laser_rangefinder": true
+    }
+  },
+  {
+    "id": "fr_leopard_1a5be",
+    "performance": {
+      "horsepower": 830.0,
+      "weight": 42.5,
+      "power_to_weight": 19.53,
+      "max_reverse_speed": 25.1,
+      "reload_time": 6.67,
+      "penetration": 420.7,
+      "max_speed": 65.2,
+      "crew_count": 5,
+      "elevation_speed": 7.0,
+      "traverse_speed": 24.0,
+      "has_stabilizer": true,
+      "stabilizer_type": "both",
+      "elevation_range": [
+        -9.0,
+        20.0
+      ],
+      "traverse_range": [
+        -180.0,
+        180.0
+      ],
+      "gunner_thermal_resolution": [
+        500,
+        300
+      ],
+      "commander_thermal_resolution": null,
+      "gunner_thermal_diagonal": 583.1,
+      "commander_thermal_diagonal": null,
+      "stabilizer_value": 1,
+      "elevation_range_value": 29.0,
+      "mainGun": {
+        "name": "105mm_L7A3_Radpanzer",
+        "caliber": 105.0,
+        "reloadTime": 6.67,
+        "autoLoader": false,
+        "reloadTimes": {
+          "base": 8.67,
+          "expert": 7.67,
+          "ace": 6.67
+        }
+      },
+      "ammunitions": [
+        {
+          "name": "105mm_dm12",
+          "localizedName": "DM12",
+          "type": "heat_fs_tank",
+          "caliber": 105.0,
+          "mass": 10.5,
+          "muzzleVelocity": 1173.5,
+          "penetration0m": 400.0,
+          "explosiveMassKg": 0.97,
+          "explosiveType": "comp_b",
+          "tntEquivalent": 1.232
+        },
+        {
+          "name": "105mm_dm502",
+          "localizedName": "DM502",
+          "type": "hesh_tank",
+          "caliber": 105.0,
+          "mass": 11.2,
+          "muzzleVelocity": 731.5,
+          "penetration0m": 127.0,
+          "explosiveMassKg": 2.9937,
+          "explosiveType": "comp_a",
+          "tntEquivalent": 3.772
+        },
+        {
+          "name": "105mm_dm23",
+          "localizedName": "DM23",
+          "type": "apds_fs_tungsten_l10_l15_tank",
+          "caliber": 33.0,
+          "mass": 4.2,
+          "muzzleVelocity": 1455.0,
+          "lanzOdermatt": {
+            "workingLength": 327.0,
+            "density": 17500.0,
+            "material": "tungsten",
+            "Cx": 0.2676
+          },
+          "penetration0m": 337.9,
+          "penetrationData": {
+            "at0m": {
+              "angle0": 337.9,
+              "angle30": 292.6,
+              "angle60": 169.0
+            }
+          }
+        },
+        {
+          "name": "105mm_dm33",
+          "localizedName": "DM33",
+          "type": "apds_fs_long_tank",
+          "caliber": 26.0,
+          "mass": 3.79,
+          "muzzleVelocity": 1455.0,
+          "lanzOdermatt": {
+            "workingLength": 510.0,
+            "density": 17500.0,
+            "material": "tungsten",
+            "Cx": 0.4
+          },
+          "penetration0m": 420.7,
+          "penetrationData": {
+            "at0m": {
+              "angle0": 420.7,
+              "angle30": 364.3,
+              "angle60": 210.4
+            }
+          }
+        }
+      ],
+      "penetrationData": {
+        "at0m": {
+          "angle0": 420.7,
+          "angle30": 364.3,
+          "angle60": 210.4
+        }
+      },
+      "autoLoader": false,
+      "engine_manufacturer": null,
+      "engine_model": null,
+      "engine_type": null,
+      "engine_max_rpm": 2200.0,
+      "transmission_manufacturer": null,
+      "transmission_model": null,
+      "transmission_type": null,
+      "forward_gears": 8,
+      "reverse_gears": 4,
+      "forward_gear_speeds": [
+        7.0,
+        14.0,
+        18.0,
+        25.1,
+        30.5,
+        39.0,
+        48.8,
+        65.2
+      ],
+      "reverse_gear_speeds": [
+        7.0,
+        14.0,
+        18.0,
+        25.1
+      ],
+      "steer_type": "clutch_braking",
+      "empty_weight": 42.0,
+      "track_width": 0.55,
+      "secondary_weapons": [
+        {
+          "trigger": "gunner1",
+          "name": "7_62mm_FN_MAG60_40",
+          "caliber": 7.6,
+          "ammo": 4600,
+          "reloadTime": 8.0,
+          "rateOfFire": 1000,
+          "bulletType": "ap_ball"
+        },
+        {
+          "trigger": "gunner2",
+          "name": "7_62mm_FN_MAG60_40",
+          "caliber": 7.6,
+          "ammo": 2000,
+          "reloadTime": 8.0,
+          "rateOfFire": 1000,
+          "bulletType": "ap_ball"
+        }
+      ],
+      "main_gun_ammo": 60,
       "driver_nv_resolution": [
         800,
         600
@@ -25419,7 +25703,7 @@
         {
           "name": "120mm_f1_he",
           "localizedName": "F1 HE",
-          "type": "he_frag_tank",
+          "type": "he_frag_fs_tank",
           "caliber": 120.0,
           "mass": 16.8,
           "muzzleVelocity": 1050.0,
@@ -26821,7 +27105,7 @@
       "power_to_weight": 7.92,
       "max_reverse_speed": 4.8,
       "reload_time": 5.5,
-      "penetration": 77.2,
+      "penetration": 74.3,
       "max_speed": 37.0,
       "crew_count": 5,
       "elevation_speed": 4.0,
@@ -26860,28 +27144,28 @@
           "type": "aphe_tank",
           "caliber": 75.0,
           "mass": 6.4,
-          "muzzleVelocity": 570.0,
+          "muzzleVelocity": 555.0,
           "deMarre": {
             "fullCaliber": 75.0,
             "isApcbc": false,
             "explosiveMass": 0.09,
             "Cx": 0.5
           },
-          "penetration0m": 77.2,
+          "penetration0m": 74.3,
           "explosiveMassKg": 0.09,
           "explosiveType": "tnt",
           "tntEquivalent": 0.09
         },
         {
-          "name": "75mm_mle1917",
-          "localizedName": "Mle1917",
+          "name": "75mm_mle1915",
+          "localizedName": "Mle1915",
           "type": "he_frag_tank",
           "caliber": 75.0,
-          "mass": 6.125,
-          "muzzleVelocity": 577.0,
-          "explosiveMassKg": 0.675,
+          "mass": 5.37,
+          "muzzleVelocity": 389.0,
+          "explosiveMassKg": 0.74,
           "explosiveType": "tnt",
-          "tntEquivalent": 0.675
+          "tntEquivalent": 0.74
         }
       ],
       "penetrationData": null,
@@ -27144,7 +27428,7 @@
       "ammunitions": [
         {
           "name": "atam_mistral_sam",
-          "localizedName": "Mistral surface-to-air missiles",
+          "localizedName": "Mistral",
           "type": "sam_tank",
           "caliber": 90.0,
           "mass": 19.7,
@@ -29484,7 +29768,7 @@
       "power_to_weight": 12.0,
       "max_reverse_speed": 7.2,
       "reload_time": 0.24,
-      "penetration": 49.7,
+      "penetration": 52.6,
       "max_speed": 38.7,
       "crew_count": 5,
       "elevation_speed": 20.0,
@@ -29524,26 +29808,26 @@
           "localizedName": "Sprgr. 18",
           "type": "frag_i_t",
           "caliber": 37.0,
-          "mass": 0.62,
-          "muzzleVelocity": 820.0,
-          "explosiveMassKg": 0.029,
+          "mass": 0.612,
+          "muzzleVelocity": 840.0,
+          "explosiveMassKg": 0.026,
           "explosiveType": "np_10",
-          "tntEquivalent": 0.038
+          "tntEquivalent": 0.034
         },
         {
           "name": "37mm_pzgr_belt",
           "localizedName": "PzGr",
           "type": "aphe",
           "caliber": 37.0,
-          "mass": 0.685,
-          "muzzleVelocity": 770.0,
+          "mass": 0.7,
+          "muzzleVelocity": 790.0,
           "deMarre": {
             "fullCaliber": 37.0,
             "isApcbc": false,
             "explosiveMass": 0.013,
             "Cx": 0.6
           },
-          "penetration0m": 49.7,
+          "penetration0m": 52.6,
           "explosiveMassKg": 0.013,
           "explosiveType": "petn",
           "tntEquivalent": 0.017
@@ -29553,8 +29837,8 @@
           "localizedName": "M.Gr. 18",
           "type": "he_i_t",
           "caliber": 37.0,
-          "mass": 0.55,
-          "muzzleVelocity": 914.0,
+          "mass": 0.565,
+          "muzzleVelocity": 900.0,
           "explosiveMassKg": 0.09,
           "explosiveType": "hta",
           "tntEquivalent": 0.115
@@ -29601,7 +29885,7 @@
       "power_to_weight": 12.0,
       "max_reverse_speed": 7.2,
       "reload_time": 0.24,
-      "penetration": 49.7,
+      "penetration": 52.6,
       "max_speed": 38.7,
       "crew_count": 5,
       "elevation_speed": 20.0,
@@ -29641,26 +29925,26 @@
           "localizedName": "Sprgr. 18",
           "type": "frag_i_t",
           "caliber": 37.0,
-          "mass": 0.62,
-          "muzzleVelocity": 820.0,
-          "explosiveMassKg": 0.029,
+          "mass": 0.612,
+          "muzzleVelocity": 840.0,
+          "explosiveMassKg": 0.026,
           "explosiveType": "np_10",
-          "tntEquivalent": 0.038
+          "tntEquivalent": 0.034
         },
         {
           "name": "37mm_pzgr_belt",
           "localizedName": "PzGr",
           "type": "aphe",
           "caliber": 37.0,
-          "mass": 0.685,
-          "muzzleVelocity": 770.0,
+          "mass": 0.7,
+          "muzzleVelocity": 790.0,
           "deMarre": {
             "fullCaliber": 37.0,
             "isApcbc": false,
             "explosiveMass": 0.013,
             "Cx": 0.6
           },
-          "penetration0m": 49.7,
+          "penetration0m": 52.6,
           "explosiveMassKg": 0.013,
           "explosiveType": "petn",
           "tntEquivalent": 0.017
@@ -29670,8 +29954,8 @@
           "localizedName": "M.Gr. 18",
           "type": "he_i_t",
           "caliber": 37.0,
-          "mass": 0.55,
-          "muzzleVelocity": 914.0,
+          "mass": 0.565,
+          "muzzleVelocity": 900.0,
           "explosiveMassKg": 0.09,
           "explosiveType": "hta",
           "tntEquivalent": 0.115
@@ -29728,7 +30012,7 @@
       "power_to_weight": 12.0,
       "max_reverse_speed": 7.2,
       "reload_time": 0.24,
-      "penetration": 49.7,
+      "penetration": 52.6,
       "max_speed": 38.7,
       "crew_count": 5,
       "elevation_speed": 20.0,
@@ -29768,26 +30052,26 @@
           "localizedName": "Sprgr. 18",
           "type": "frag_i_t",
           "caliber": 37.0,
-          "mass": 0.62,
-          "muzzleVelocity": 820.0,
-          "explosiveMassKg": 0.029,
+          "mass": 0.612,
+          "muzzleVelocity": 840.0,
+          "explosiveMassKg": 0.026,
           "explosiveType": "np_10",
-          "tntEquivalent": 0.038
+          "tntEquivalent": 0.034
         },
         {
           "name": "37mm_pzgr_belt",
           "localizedName": "PzGr",
           "type": "aphe",
           "caliber": 37.0,
-          "mass": 0.685,
-          "muzzleVelocity": 770.0,
+          "mass": 0.7,
+          "muzzleVelocity": 790.0,
           "deMarre": {
             "fullCaliber": 37.0,
             "isApcbc": false,
             "explosiveMass": 0.013,
             "Cx": 0.6
           },
-          "penetration0m": 49.7,
+          "penetration0m": 52.6,
           "explosiveMassKg": 0.013,
           "explosiveType": "petn",
           "tntEquivalent": 0.017
@@ -29797,8 +30081,8 @@
           "localizedName": "M.Gr. 18",
           "type": "he_i_t",
           "caliber": 37.0,
-          "mass": 0.55,
-          "muzzleVelocity": 914.0,
+          "mass": 0.565,
+          "muzzleVelocity": 900.0,
           "explosiveMassKg": 0.09,
           "explosiveType": "hta",
           "tntEquivalent": 0.115
@@ -29953,13 +30237,13 @@
   {
     "id": "germ_flakpanzer_I_ausf_A",
     "performance": {
-      "horsepower": 57.0,
+      "horsepower": 60.0,
       "weight": 5.5,
-      "power_to_weight": 10.36,
-      "max_reverse_speed": 5.8,
+      "power_to_weight": 10.91,
+      "max_reverse_speed": 6.9,
       "reload_time": 3.0,
       "penetration": 37.7,
-      "max_speed": 30.9,
+      "max_speed": 37.0,
       "crew_count": 5,
       "elevation_speed": 20.0,
       "traverse_speed": 35.0,
@@ -30032,15 +30316,15 @@
       "forward_gears": 6,
       "reverse_gears": 1,
       "forward_gear_speeds": [
-        1.9,
-        5.1,
-        8.8,
-        12.3,
-        20.6,
-        30.9
+        2.2,
+        6.2,
+        10.6,
+        14.8,
+        24.7,
+        37.0
       ],
       "reverse_gear_speeds": [
-        5.8
+        6.9
       ],
       "steer_type": "clutch_braking",
       "empty_weight": 5.4,
@@ -30752,6 +31036,191 @@
         }
       ],
       "main_gun_ammo": 44,
+      "driver_nv_resolution": null,
+      "has_smoke_grenades": false,
+      "has_ess": false,
+      "has_laser_rangefinder": false
+    }
+  },
+  {
+    "id": "germ_hummel",
+    "performance": {
+      "horsepower": 300.0,
+      "weight": 21.0,
+      "power_to_weight": 14.29,
+      "max_reverse_speed": 7.5,
+      "reload_time": 14.99,
+      "penetration": 193.5,
+      "max_speed": 40.0,
+      "crew_count": 5,
+      "elevation_speed": 4.0,
+      "traverse_speed": 12.0,
+      "has_stabilizer": false,
+      "stabilizer_type": "none",
+      "elevation_range": [
+        -3.0,
+        42.0
+      ],
+      "traverse_range": [
+        -15.0,
+        15.0
+      ],
+      "gunner_thermal_resolution": null,
+      "commander_thermal_resolution": null,
+      "gunner_thermal_diagonal": null,
+      "commander_thermal_diagonal": null,
+      "stabilizer_value": 0,
+      "elevation_range_value": 45.0,
+      "mainGun": {
+        "name": "150mm_sfh_18",
+        "caliber": 150.0,
+        "reloadTime": 14.99,
+        "autoLoader": false,
+        "reloadTimes": {
+          "base": 19.49,
+          "expert": 17.24,
+          "ace": 14.99
+        }
+      },
+      "ammunitions": [
+        {
+          "name": "150mm_gr_19_he",
+          "localizedName": "Gr.19",
+          "type": "he_frag_tank",
+          "caliber": 150.0,
+          "mass": 43.5,
+          "muzzleVelocity": 520.0,
+          "armorPowerTable": [
+            {
+              "penetration": 20.0,
+              "distance": 100.0
+            },
+            {
+              "penetration": 16.0,
+              "distance": 4000.0
+            },
+            {
+              "penetration": 0.0,
+              "distance": 10000.0
+            }
+          ],
+          "penetration0m": 20.0,
+          "explosiveMassKg": 4.3,
+          "explosiveType": "fp02",
+          "tntEquivalent": 4.3
+        },
+        {
+          "name": "150mm_gr_39_hl_a_heat",
+          "localizedName": "Gr.39 Hl/A",
+          "type": "heat_tank",
+          "caliber": 150.0,
+          "mass": 25.0,
+          "muzzleVelocity": 375.0,
+          "penetration0m": 185.0,
+          "explosiveMassKg": 4.16,
+          "explosiveType": "rdx_tnt",
+          "tntEquivalent": 5.325
+        },
+        {
+          "name": "150mm_gr_19_nb",
+          "localizedName": "Gr.19 Nb",
+          "type": "smoke_tank",
+          "caliber": 150.0,
+          "mass": 39.0,
+          "muzzleVelocity": 520.0,
+          "explosiveMassKg": 0.05,
+          "explosiveType": "smoke_composition",
+          "tntEquivalent": 0.05
+        },
+        {
+          "name": "150mm_gr_36_he",
+          "localizedName": "Gr.36",
+          "type": "he_frag_tank",
+          "caliber": 150.0,
+          "mass": 43.5,
+          "muzzleVelocity": 520.0,
+          "armorPowerTable": [
+            {
+              "penetration": 20.0,
+              "distance": 100.0
+            },
+            {
+              "penetration": 16.0,
+              "distance": 4000.0
+            },
+            {
+              "penetration": 0.0,
+              "distance": 10000.0
+            }
+          ],
+          "penetration0m": 20.0,
+          "explosiveMassKg": 5.1,
+          "explosiveType": "fp02",
+          "tntEquivalent": 5.1
+        },
+        {
+          "name": "150mm_gr_19_be_sap",
+          "localizedName": "Gr.19 Be",
+          "type": "sapcbc_tank",
+          "caliber": 150.0,
+          "mass": 43.5,
+          "muzzleVelocity": 520.0,
+          "deMarre": {
+            "fullCaliber": 150.0,
+            "isApcbc": true,
+            "explosiveMass": 3.18
+          },
+          "penetration0m": 111.0,
+          "explosiveMassKg": 3.18,
+          "explosiveType": "fp02",
+          "tntEquivalent": 3.18
+        },
+        {
+          "name": "150mm_pzgr_39_ts",
+          "localizedName": "Pzgr.39 TS",
+          "type": "apcbc_tank",
+          "caliber": 88.0,
+          "mass": 9.85,
+          "muzzleVelocity": 880.0,
+          "deMarre": {
+            "fullCaliber": 88.0,
+            "isApcbc": true,
+            "explosiveMass": 0.059,
+            "Cx": 0.3
+          },
+          "penetration0m": 193.5,
+          "explosiveMassKg": 0.059,
+          "explosiveType": "h10",
+          "tntEquivalent": 0.083
+        }
+      ],
+      "penetrationData": null,
+      "autoLoader": false,
+      "engine_manufacturer": null,
+      "engine_model": null,
+      "engine_type": null,
+      "engine_max_rpm": 3000.0,
+      "transmission_manufacturer": null,
+      "transmission_model": null,
+      "transmission_type": null,
+      "forward_gears": 6,
+      "reverse_gears": 1,
+      "forward_gear_speeds": [
+        4.2,
+        6.7,
+        11.4,
+        16.0,
+        26.7,
+        40.0
+      ],
+      "reverse_gear_speeds": [
+        7.5
+      ],
+      "steer_type": "clutch_braking",
+      "empty_weight": 20.7,
+      "track_width": 0.4,
+      "secondary_weapons": null,
+      "main_gun_ammo": 18,
       "driver_nv_resolution": null,
       "has_smoke_grenades": false,
       "has_ess": false,
@@ -31630,8 +32099,8 @@
     "id": "germ_kpz_70",
     "performance": {
       "horsepower": 1500.0,
-      "weight": 51.7,
-      "power_to_weight": 29.01,
+      "weight": 50.4,
+      "power_to_weight": 29.76,
       "max_reverse_speed": 64.0,
       "reload_time": 6.0,
       "penetration": 285.4,
@@ -31783,7 +32252,7 @@
         64.0
       ],
       "steer_type": "clutch_braking",
-      "empty_weight": 51.3,
+      "empty_weight": 50.0,
       "track_width": 0.635,
       "secondary_weapons": [
         {
@@ -32163,7 +32632,16 @@
           "trigger": "gunner1",
           "name": "7_62mm_DT",
           "caliber": 7.6,
-          "ammo": 3024,
+          "ammo": 2024,
+          "reloadTime": 8.0,
+          "rateOfFire": 600,
+          "bulletType": "ap_i_ball"
+        },
+        {
+          "trigger": "gunner4",
+          "name": "7_62mm_DT",
+          "caliber": 7.6,
+          "ammo": 1000,
           "reloadTime": 8.0,
           "rateOfFire": 600,
           "bulletType": "ap_i_ball"
@@ -33461,6 +33939,17 @@
               "angle60": 291.7
             }
           }
+        },
+        {
+          "name": "120mm_im_he",
+          "localizedName": "IM HE",
+          "type": "he_frag_fs_tank",
+          "caliber": 120.0,
+          "mass": 16.0,
+          "muzzleVelocity": 1000.0,
+          "explosiveMassKg": 3.2,
+          "explosiveType": "comp_b",
+          "tntEquivalent": 4.064
         }
       ],
       "penetrationData": {
@@ -33628,6 +34117,17 @@
               "angle60": 291.7
             }
           }
+        },
+        {
+          "name": "120mm_im_he",
+          "localizedName": "IM HE",
+          "type": "he_frag_fs_tank",
+          "caliber": 120.0,
+          "mass": 16.0,
+          "muzzleVelocity": 1000.0,
+          "explosiveMassKg": 3.2,
+          "explosiveType": "comp_b",
+          "tntEquivalent": 4.064
         }
       ],
       "penetrationData": {
@@ -40368,9 +40868,9 @@
   {
     "id": "germ_pzkpfw_III_ausf_B",
     "performance": {
-      "horsepower": 265.0,
+      "horsepower": 300.0,
       "weight": 16.0,
-      "power_to_weight": 16.56,
+      "power_to_weight": 18.75,
       "max_reverse_speed": 5.5,
       "reload_time": 2.86,
       "penetration": 89.0,
@@ -46950,6 +47450,193 @@
     }
   },
   {
+    "id": "germ_schutzenpanzer_puma_vjtf_mod",
+    "performance": {
+      "horsepower": 1088.0,
+      "weight": 43.0,
+      "power_to_weight": 25.3,
+      "max_reverse_speed": 30.1,
+      "reload_time": 0.2,
+      "penetration": 120.9,
+      "max_speed": 70.2,
+      "crew_count": 5,
+      "elevation_speed": 45.0,
+      "traverse_speed": 45.0,
+      "has_stabilizer": true,
+      "stabilizer_type": "both",
+      "elevation_range": [
+        -10.0,
+        45.0
+      ],
+      "traverse_range": [
+        -180.0,
+        180.0
+      ],
+      "gunner_thermal_resolution": [
+        1200,
+        800
+      ],
+      "commander_thermal_resolution": [
+        1200,
+        800
+      ],
+      "gunner_thermal_diagonal": 1442.2,
+      "commander_thermal_diagonal": 1442.2,
+      "stabilizer_value": 1,
+      "elevation_range_value": 55.0,
+      "mainGun": {
+        "name": "30mm_Rheinmetall_MK_30_2_ABM",
+        "caliber": 30.0,
+        "reloadTime": 0.2,
+        "autoLoader": false,
+        "reloadTimes": {
+          "base": 0.26,
+          "expert": 0.23,
+          "ace": 0.2
+        },
+        "rateOfFire": 200,
+        "beltReloadTime": 0.2
+      },
+      "ammunitions": [
+        {
+          "name": "30mm_mk320",
+          "localizedName": "MK320",
+          "type": "apds_autocannon",
+          "caliber": 18.0,
+          "mass": 0.19,
+          "muzzleVelocity": 1480.0,
+          "deMarre": {
+            "fullCaliber": 30.0,
+            "isApcbc": false,
+            "explosiveMass": 0,
+            "isApcr": true,
+            "coreCaliber": 18.0,
+            "coreMass": 0.19,
+            "Cx": 0.13
+          },
+          "penetration0m": 95.1
+        },
+        {
+          "name": "30mm_pmc287",
+          "localizedName": "PMC287",
+          "type": "apds_fs_long_tank",
+          "caliber": 8.5,
+          "mass": 0.165,
+          "muzzleVelocity": 1405.0,
+          "lanzOdermatt": {
+            "workingLength": 150.0,
+            "density": 17500.0,
+            "material": "tungsten",
+            "Cx": 0.3744
+          },
+          "penetration0m": 120.9,
+          "penetrationData": {
+            "at0m": {
+              "angle0": 120.9,
+              "angle30": 104.7,
+              "angle60": 60.5
+            }
+          }
+        },
+        {
+          "name": "30mm_mk_266",
+          "localizedName": "MK266",
+          "type": "he_i_t",
+          "caliber": 30.0,
+          "mass": 0.362,
+          "muzzleVelocity": 1080.0,
+          "explosiveMassKg": 0.032,
+          "explosiveType": "hexal",
+          "tntEquivalent": 0.045
+        },
+        {
+          "name": "30mm_pmc308",
+          "localizedName": "PMC308",
+          "type": "ahead",
+          "caliber": 30.0,
+          "mass": 0.36,
+          "muzzleVelocity": 1100.0,
+          "explosiveMassKg": 0.0005,
+          "explosiveType": "clx_663",
+          "tntEquivalent": 0.001
+        }
+      ],
+      "penetrationData": {
+        "at0m": {
+          "angle0": 120.9,
+          "angle30": 104.7,
+          "angle60": 60.5
+        }
+      },
+      "autoLoader": false,
+      "engine_manufacturer": null,
+      "engine_model": null,
+      "engine_type": null,
+      "engine_max_rpm": 3800.0,
+      "transmission_manufacturer": null,
+      "transmission_model": null,
+      "transmission_type": null,
+      "forward_gears": 10,
+      "reverse_gears": 5,
+      "forward_gear_speeds": [
+        5.0,
+        8.0,
+        15.0,
+        22.0,
+        30.1,
+        42.1,
+        48.7,
+        54.3,
+        63.4,
+        70.2
+      ],
+      "reverse_gear_speeds": [
+        5.0,
+        8.0,
+        15.0,
+        22.0,
+        30.1
+      ],
+      "steer_type": "clutch_braking",
+      "empty_weight": 42.0,
+      "track_width": 0.5,
+      "secondary_weapons": [
+        {
+          "trigger": "gunner1",
+          "name": "5_56mm_MG4",
+          "caliber": 5.6,
+          "ammo": 2000,
+          "reloadTime": 8.0,
+          "rateOfFire": 890,
+          "bulletType": "ball"
+        },
+        {
+          "trigger": "gunner5",
+          "name": "110mm_mells_rocket_launchr",
+          "caliber": 110.0,
+          "ammo": 4,
+          "reloadTime": 10.0,
+          "rateOfFire": 120,
+          "bulletType": "atgm_tandem_tank",
+          "maxDistance": 5500,
+          "maxSpeed": 180,
+          "guidanceType": "optical",
+          "penetration": 900,
+          "explosiveMass": 0.9,
+          "explosiveType": "lx14"
+        }
+      ],
+      "main_gun_ammo": 400,
+      "driver_nv_resolution": [
+        800,
+        600
+      ],
+      "has_smoke_grenades": true,
+      "has_ess": false,
+      "has_laser_rangefinder": true
+    }
+  },
+  {
     "id": "germ_sdkfz_221_s_pz_b_41",
     "performance": {
       "horsepower": 75.0,
@@ -48597,7 +49284,7 @@
       "power_to_weight": 12.5,
       "max_reverse_speed": 8.8,
       "reload_time": 0.38,
-      "penetration": 49.7,
+      "penetration": 52.6,
       "max_speed": 49.8,
       "crew_count": 5,
       "elevation_speed": 20.0,
@@ -48637,26 +49324,26 @@
           "localizedName": "Sprgr. 18",
           "type": "frag_i_t",
           "caliber": 37.0,
-          "mass": 0.62,
-          "muzzleVelocity": 820.0,
-          "explosiveMassKg": 0.029,
+          "mass": 0.612,
+          "muzzleVelocity": 840.0,
+          "explosiveMassKg": 0.026,
           "explosiveType": "np_10",
-          "tntEquivalent": 0.038
+          "tntEquivalent": 0.034
         },
         {
           "name": "37mm_pzgr_belt",
           "localizedName": "PzGr",
           "type": "aphe",
           "caliber": 37.0,
-          "mass": 0.685,
-          "muzzleVelocity": 770.0,
+          "mass": 0.7,
+          "muzzleVelocity": 790.0,
           "deMarre": {
             "fullCaliber": 37.0,
             "isApcbc": false,
             "explosiveMass": 0.013,
             "Cx": 0.6
           },
-          "penetration0m": 49.7,
+          "penetration0m": 52.6,
           "explosiveMassKg": 0.013,
           "explosiveType": "petn",
           "tntEquivalent": 0.017
@@ -48666,8 +49353,8 @@
           "localizedName": "M.Gr. 18",
           "type": "he_i_t",
           "caliber": 37.0,
-          "mass": 0.55,
-          "muzzleVelocity": 914.0,
+          "mass": 0.565,
+          "muzzleVelocity": 900.0,
           "explosiveMassKg": 0.09,
           "explosiveType": "hta",
           "tntEquivalent": 0.115
@@ -53351,6 +54038,183 @@
       "has_smoke_grenades": true,
       "has_ess": false,
       "has_laser_rangefinder": true
+    }
+  },
+  {
+    "id": "il_hunter_afv",
+    "performance": {
+      "horsepower": 815.0,
+      "weight": 29.5,
+      "power_to_weight": 27.63,
+      "max_reverse_speed": 70.0,
+      "reload_time": 0.2,
+      "penetration": 114.0,
+      "max_speed": 70.0,
+      "crew_count": 5,
+      "elevation_speed": 45.0,
+      "traverse_speed": 45.0,
+      "has_stabilizer": true,
+      "stabilizer_type": "both",
+      "elevation_range": [
+        -10.0,
+        45.0
+      ],
+      "traverse_range": [
+        -180.0,
+        180.0
+      ],
+      "gunner_thermal_resolution": [
+        1200,
+        800
+      ],
+      "commander_thermal_resolution": [
+        1200,
+        800
+      ],
+      "gunner_thermal_diagonal": 1442.2,
+      "commander_thermal_diagonal": 1442.2,
+      "stabilizer_value": 1,
+      "elevation_range_value": 55.0,
+      "mainGun": {
+        "name": "30mm_Bushmaster_2_Mk_44_NAMER",
+        "caliber": 30.0,
+        "reloadTime": 0.2,
+        "autoLoader": false,
+        "reloadTimes": {
+          "base": 0.26,
+          "expert": 0.23,
+          "ace": 0.2
+        },
+        "rateOfFire": 200,
+        "beltReloadTime": 0.2
+      },
+      "ammunitions": [
+        {
+          "name": "30mm_mk320",
+          "localizedName": "MK320",
+          "type": "apds_autocannon",
+          "caliber": 18.0,
+          "mass": 0.19,
+          "muzzleVelocity": 1480.0,
+          "deMarre": {
+            "fullCaliber": 30.0,
+            "isApcbc": false,
+            "explosiveMass": 0,
+            "isApcr": true,
+            "coreCaliber": 18.0,
+            "coreMass": 0.19,
+            "Cx": 0.13
+          },
+          "penetration0m": 95.1
+        },
+        {
+          "name": "30mm_mk258",
+          "localizedName": "MK258",
+          "type": "apds_fs_long_tank",
+          "caliber": 9.0,
+          "mass": 0.17,
+          "muzzleVelocity": 1430.0,
+          "lanzOdermatt": {
+            "workingLength": 130.0,
+            "density": 17500.0,
+            "material": "tungsten",
+            "Cx": 0.3
+          },
+          "penetration0m": 114.0,
+          "penetrationData": {
+            "at0m": {
+              "angle0": 114.0,
+              "angle30": 98.7,
+              "angle60": 57.0
+            }
+          }
+        },
+        {
+          "name": "30mm_mk_266",
+          "localizedName": "MK266",
+          "type": "he_i_t",
+          "caliber": 30.0,
+          "mass": 0.362,
+          "muzzleVelocity": 1080.0,
+          "explosiveMassKg": 0.032,
+          "explosiveType": "hexal",
+          "tntEquivalent": 0.045
+        }
+      ],
+      "penetrationData": {
+        "at0m": {
+          "angle0": 114.0,
+          "angle30": 98.7,
+          "angle60": 57.0
+        }
+      },
+      "autoLoader": false,
+      "engine_manufacturer": "rolls-royce",
+      "engine_model": "mtu_8v_199_te20",
+      "engine_type": null,
+      "engine_max_rpm": 2300.0,
+      "transmission_manufacturer": null,
+      "transmission_model": null,
+      "transmission_type": null,
+      "forward_gears": 8,
+      "reverse_gears": 8,
+      "forward_gear_speeds": [
+        6.2,
+        8.9,
+        12.7,
+        17.5,
+        20.7,
+        31.4,
+        44.8,
+        70.0
+      ],
+      "reverse_gear_speeds": [
+        6.2,
+        8.9,
+        12.7,
+        17.5,
+        20.7,
+        31.4,
+        44.8,
+        70.0
+      ],
+      "steer_type": "clutch_braking",
+      "empty_weight": 28.5,
+      "track_width": 0.5,
+      "secondary_weapons": [
+        {
+          "trigger": "gunner1",
+          "name": "110mm_Spike_kf_41_rocket_launchr",
+          "caliber": 110.0,
+          "ammo": 4,
+          "reloadTime": 10.0,
+          "rateOfFire": 120,
+          "bulletType": "atgm_tandem_tank",
+          "maxDistance": 5500,
+          "maxSpeed": 180,
+          "guidanceType": "optical",
+          "penetration": 900,
+          "explosiveMass": 0.9,
+          "explosiveType": "lx14"
+        },
+        {
+          "trigger": "gunner2",
+          "name": "7_62mm_FN_MAG60_40",
+          "caliber": 7.6,
+          "ammo": 2000,
+          "reloadTime": 8.0,
+          "rateOfFire": 1000,
+          "bulletType": "ap_ball"
+        }
+      ],
+      "main_gun_ammo": 200,
+      "driver_nv_resolution": [
+        800,
+        600
+      ],
+      "has_smoke_grenades": true,
+      "has_ess": false,
+      "has_laser_rangefinder": false
     }
   },
   {
@@ -61988,7 +62852,7 @@
         {
           "name": "120mm_f1_he",
           "localizedName": "F1 HE",
-          "type": "he_frag_tank",
+          "type": "he_frag_fs_tank",
           "caliber": 120.0,
           "mass": 16.8,
           "muzzleVelocity": 1050.0,
@@ -63413,7 +64277,7 @@
         {
           "name": "120mm_f1_he",
           "localizedName": "F1 HE",
-          "type": "he_frag_tank",
+          "type": "he_frag_fs_tank",
           "caliber": 120.0,
           "mass": 16.8,
           "muzzleVelocity": 1050.0,
@@ -63603,7 +64467,7 @@
         {
           "name": "120mm_f1_he",
           "localizedName": "F1 HE",
-          "type": "he_frag_tank",
+          "type": "he_frag_fs_tank",
           "caliber": 120.0,
           "mass": 16.8,
           "muzzleVelocity": 1050.0,
@@ -63798,7 +64662,7 @@
         {
           "name": "120mm_f1_he",
           "localizedName": "F1 HE",
-          "type": "he_frag_tank",
+          "type": "he_frag_fs_tank",
           "caliber": 120.0,
           "mass": 16.8,
           "muzzleVelocity": 1050.0,
@@ -63979,7 +64843,7 @@
         {
           "name": "120mm_f1_he",
           "localizedName": "F1 HE",
-          "type": "he_frag_tank",
+          "type": "he_frag_fs_tank",
           "caliber": 120.0,
           "mass": 16.8,
           "muzzleVelocity": 1050.0,
@@ -64169,7 +65033,7 @@
         {
           "name": "120mm_f1_he",
           "localizedName": "F1 HE",
-          "type": "he_frag_tank",
+          "type": "he_frag_fs_tank",
           "caliber": 120.0,
           "mass": 16.8,
           "muzzleVelocity": 1050.0,
@@ -64378,7 +65242,7 @@
         {
           "name": "120mm_f1_he",
           "localizedName": "F1 HE",
-          "type": "he_frag_tank",
+          "type": "he_frag_fs_tank",
           "caliber": 120.0,
           "mass": 16.8,
           "muzzleVelocity": 1050.0,
@@ -64570,7 +65434,7 @@
         {
           "name": "120mm_f1_he",
           "localizedName": "F1 HE",
-          "type": "he_frag_tank",
+          "type": "he_frag_fs_tank",
           "caliber": 120.0,
           "mass": 16.8,
           "muzzleVelocity": 1050.0,
@@ -71041,6 +71905,129 @@
     }
   },
   {
+    "id": "it_palmaria",
+    "performance": {
+      "horsepower": 740.0,
+      "weight": 46.0,
+      "power_to_weight": 16.09,
+      "max_reverse_speed": 24.0,
+      "reload_time": 10.0,
+      "penetration": null,
+      "max_speed": 60.2,
+      "crew_count": 5,
+      "elevation_speed": 7.0,
+      "traverse_speed": 11.0,
+      "has_stabilizer": false,
+      "stabilizer_type": "none",
+      "elevation_range": [
+        -5.0,
+        70.0
+      ],
+      "traverse_range": [
+        -180.0,
+        180.0
+      ],
+      "gunner_thermal_resolution": null,
+      "commander_thermal_resolution": null,
+      "gunner_thermal_diagonal": null,
+      "commander_thermal_diagonal": null,
+      "stabilizer_value": 0,
+      "elevation_range_value": 75.0,
+      "mainGun": {
+        "name": "155mm_FH70_L_39",
+        "caliber": 155.0,
+        "reloadTime": 10.0,
+        "autoLoader": true,
+        "reloadTimes": {
+          "base": 10.0,
+          "expert": 10.0,
+          "ace": 10.0
+        }
+      },
+      "ammunitions": [
+        {
+          "name": "155mm_m107",
+          "localizedName": "M107",
+          "type": "he_frag_tank",
+          "caliber": 155.0,
+          "mass": 43.1,
+          "muzzleVelocity": 827.0,
+          "explosiveMassKg": 6.98,
+          "explosiveType": "comp_b",
+          "tntEquivalent": 8.865
+        },
+        {
+          "name": "155mm_p5",
+          "localizedName": "P5",
+          "type": "smoke_tank",
+          "caliber": 155.0,
+          "mass": 43.5,
+          "muzzleVelocity": 827.0,
+          "explosiveMassKg": 0.05,
+          "explosiveType": "smoke_composition",
+          "tntEquivalent": 0.05
+        },
+        {
+          "name": "155mm_p3",
+          "localizedName": "P3",
+          "type": "he_frag_tank",
+          "caliber": 155.0,
+          "mass": 43.5,
+          "muzzleVelocity": 827.0,
+          "explosiveMassKg": 11.7,
+          "explosiveType": "comp_b",
+          "tntEquivalent": 14.859
+        }
+      ],
+      "penetrationData": null,
+      "autoLoader": true,
+      "engine_manufacturer": null,
+      "engine_model": null,
+      "engine_type": null,
+      "engine_max_rpm": 2200.0,
+      "transmission_manufacturer": null,
+      "transmission_model": null,
+      "transmission_type": null,
+      "forward_gears": 8,
+      "reverse_gears": 4,
+      "forward_gear_speeds": [
+        6.5,
+        13.0,
+        16.6,
+        23.1,
+        28.2,
+        36.0,
+        45.1,
+        60.2
+      ],
+      "reverse_gear_speeds": [
+        6.5,
+        13.0,
+        16.6,
+        24.0
+      ],
+      "steer_type": "clutch_braking",
+      "empty_weight": 45.5,
+      "track_width": 0.55,
+      "secondary_weapons": [
+        {
+          "trigger": "gunner2",
+          "name": "7_62mm_FN_MAG60_40",
+          "caliber": 7.6,
+          "ammo": 600,
+          "reloadTime": 8.0,
+          "rateOfFire": 1000,
+          "bulletType": "ap_ball"
+        }
+      ],
+      "main_gun_ammo": 30,
+      "driver_nv_resolution": null,
+      "has_smoke_grenades": true,
+      "has_ess": false,
+      "has_laser_rangefinder": false
+    }
+  },
+  {
     "id": "it_pzh_2000_hu",
     "performance": {
       "horsepower": 1000.0,
@@ -74987,12 +75974,9 @@
         -180.0,
         180.0
       ],
-      "gunner_thermal_resolution": [
-        800,
-        600
-      ],
+      "gunner_thermal_resolution": null,
       "commander_thermal_resolution": null,
-      "gunner_thermal_diagonal": 1000.0,
+      "gunner_thermal_diagonal": null,
       "commander_thermal_diagonal": null,
       "stabilizer_value": 1,
       "elevation_range_value": 64.0,
@@ -75065,7 +76049,10 @@
         }
       ],
       "main_gun_ammo": 400,
-      "driver_nv_resolution": null,
+      "driver_nv_resolution": [
+        800,
+        600
+      ],
       "has_smoke_grenades": true,
       "has_ess": true,
       "has_laser_rangefinder": true
@@ -75597,6 +76584,187 @@
       ],
       "main_gun_ammo": 360,
       "driver_nv_resolution": null,
+      "has_smoke_grenades": true,
+      "has_ess": false,
+      "has_laser_rangefinder": true
+    }
+  },
+  {
+    "id": "jp_leopard_2ri",
+    "performance": {
+      "horsepower": 1500.0,
+      "weight": 63.5,
+      "power_to_weight": 23.62,
+      "max_reverse_speed": 31.0,
+      "reload_time": 6.0,
+      "penetration": 623.6,
+      "max_speed": 68.2,
+      "crew_count": 5,
+      "elevation_speed": 40.0,
+      "traverse_speed": 40.0,
+      "has_stabilizer": true,
+      "stabilizer_type": "both",
+      "elevation_range": [
+        -9.0,
+        20.0
+      ],
+      "traverse_range": [
+        -180.0,
+        180.0
+      ],
+      "gunner_thermal_resolution": [
+        1200,
+        800
+      ],
+      "commander_thermal_resolution": [
+        1200,
+        800
+      ],
+      "gunner_thermal_diagonal": 1442.2,
+      "commander_thermal_diagonal": 1442.2,
+      "stabilizer_value": 1,
+      "elevation_range_value": 29.0,
+      "mainGun": {
+        "name": "120mm_Rheinmetall_L44_2PL",
+        "caliber": 120.0,
+        "reloadTime": 6.0,
+        "autoLoader": false,
+        "reloadTimes": {
+          "base": 7.8,
+          "expert": 6.9,
+          "ace": 6.0
+        }
+      },
+      "ammunitions": [
+        {
+          "name": "120mm_dm12a1",
+          "localizedName": "DM12A1",
+          "type": "heat_fs_tank",
+          "caliber": 120.0,
+          "mass": 13.5,
+          "muzzleVelocity": 1140.0,
+          "penetration0m": 480.0,
+          "explosiveMassKg": 1.64,
+          "explosiveType": "comp_b",
+          "tntEquivalent": 2.083
+        },
+        {
+          "name": "120mm_dm33",
+          "localizedName": "DM33",
+          "type": "apds_fs_long_tank",
+          "caliber": 25.0,
+          "mass": 4.3,
+          "muzzleVelocity": 1640.0,
+          "lanzOdermatt": {
+            "workingLength": 510.0,
+            "density": 17500.0,
+            "material": "tungsten",
+            "Cx": 0.55
+          },
+          "penetration0m": 481.5,
+          "penetrationData": {
+            "at0m": {
+              "angle0": 481.5,
+              "angle30": 417.0,
+              "angle60": 240.8
+            }
+          }
+        },
+        {
+          "name": "120mm_dm_11",
+          "localizedName": "DM11",
+          "type": "he_frag_dist_fuse",
+          "caliber": 120.0,
+          "mass": 19.0,
+          "muzzleVelocity": 980.0,
+          "explosiveMassKg": 3.0,
+          "explosiveType": "comp_b",
+          "tntEquivalent": 3.81
+        },
+        {
+          "name": "120mm_dm53",
+          "localizedName": "DM53",
+          "type": "apds_fs_long_l30_tank",
+          "caliber": 23.0,
+          "mass": 5.0,
+          "muzzleVelocity": 1670.0,
+          "lanzOdermatt": {
+            "workingLength": 685.0,
+            "density": 17500.0,
+            "material": "tungsten",
+            "Cx": 0.74
+          },
+          "penetration0m": 623.6,
+          "penetrationData": {
+            "at0m": {
+              "angle0": 623.6,
+              "angle30": 540.1,
+              "angle60": 311.8
+            }
+          }
+        }
+      ],
+      "penetrationData": {
+        "at0m": {
+          "angle0": 623.6,
+          "angle30": 540.1,
+          "angle60": 311.8
+        }
+      },
+      "autoLoader": false,
+      "engine_manufacturer": "mtu",
+      "engine_model": "mb_873_ka_501",
+      "engine_type": null,
+      "engine_max_rpm": 2600.0,
+      "transmission_manufacturer": null,
+      "transmission_model": null,
+      "transmission_type": null,
+      "forward_gears": 8,
+      "reverse_gears": 4,
+      "forward_gear_speeds": [
+        7.6,
+        15.2,
+        20.4,
+        31.0,
+        36.7,
+        44.9,
+        54.2,
+        68.2
+      ],
+      "reverse_gear_speeds": [
+        7.6,
+        15.2,
+        20.4,
+        31.0
+      ],
+      "steer_type": "clutch_braking",
+      "empty_weight": 62.2,
+      "track_width": 0.55,
+      "secondary_weapons": [
+        {
+          "trigger": "gunner1",
+          "name": "7_62mm_sm2_v1",
+          "caliber": 7.6,
+          "ammo": 4400,
+          "reloadTime": 8.0,
+          "rateOfFire": 1000,
+          "bulletType": "ap_ball"
+        },
+        {
+          "trigger": "gunner2",
+          "name": "7_62mm_sm2_v1",
+          "caliber": 7.6,
+          "ammo": 2000,
+          "reloadTime": 8.0,
+          "rateOfFire": 1000,
+          "bulletType": "ap_ball"
+        }
+      ],
+      "main_gun_ammo": 42,
+      "driver_nv_resolution": [
+        800,
+        600
+      ],
       "has_smoke_grenades": true,
       "has_ess": false,
       "has_laser_rangefinder": true
@@ -80269,7 +81437,7 @@
         },
         {
           "name": "105mm_type91_heat",
-          "localizedName": "Type 3 Type 3 HEAT",
+          "localizedName": "Type 3 HEAT",
           "type": "heat_tank",
           "caliber": 105.0,
           "mass": 10.91,
@@ -81225,8 +82393,8 @@
     "id": "jp_type_4_chi_to_late",
     "performance": {
       "horsepower": 500.0,
-      "weight": 29.94,
-      "power_to_weight": 16.7,
+      "weight": 30.8,
+      "power_to_weight": 16.23,
       "max_reverse_speed": 8.2,
       "reload_time": 6.45,
       "penetration": 151.0,
@@ -81335,7 +82503,7 @@
         8.2
       ],
       "steer_type": "clutch_braking",
-      "empty_weight": 29.46,
+      "empty_weight": 30.32,
       "track_width": 0.4,
       "secondary_weapons": [
         {
@@ -82142,8 +83310,8 @@
       },
       "ammunitions": [
         {
-          "name": "106mm_m344a1",
-          "localizedName": "M344A1",
+          "name": "106mm_type_64_heat",
+          "localizedName": "Type 64 HEAT",
           "type": "heat_grenade_tank",
           "caliber": 106.0,
           "mass": 7.96,
@@ -82154,8 +83322,8 @@
           "tntEquivalent": 1.6
         },
         {
-          "name": "106mm_m361a1",
-          "localizedName": "M361A1",
+          "name": "106mm_type_68_hesh",
+          "localizedName": "Type 68 HESH",
           "type": "hesh_tank",
           "caliber": 106.0,
           "mass": 7.95,
@@ -83664,7 +84832,7 @@
           "caliber": 0,
           "ammo": 30,
           "reloadTime": 8.0,
-          "rateOfFire": 144
+          "rateOfFire": 150
         },
         {
           "trigger": "gunner1",
@@ -87620,9 +88788,9 @@
   {
     "id": "sw_cv_90120",
     "performance": {
-      "horsepower": 815.0,
+      "horsepower": 816.0,
       "weight": 35.0,
-      "power_to_weight": 23.29,
+      "power_to_weight": 23.31,
       "max_reverse_speed": 40.2,
       "reload_time": 5.0,
       "penetration": 600.2,
@@ -88105,11 +89273,11 @@
       "secondary_weapons": [
         {
           "trigger": "gunner1",
-          "name": "7_62mm_Ksp_39_Strv",
+          "name": "7_92mm_MG3",
           "caliber": 7.6,
           "ammo": 4000,
           "reloadTime": 8.0,
-          "rateOfFire": 648,
+          "rateOfFire": 1200,
           "bulletType": "ap_ball"
         }
       ],
@@ -88959,7 +90127,7 @@
       "has_stabilizer": true,
       "stabilizer_type": "both",
       "elevation_range": [
-        -8.0,
+        -10.0,
         15.0
       ],
       "traverse_range": [
@@ -88971,7 +90139,7 @@
       "gunner_thermal_diagonal": null,
       "commander_thermal_diagonal": null,
       "stabilizer_value": 1,
-      "elevation_range_value": 23.0,
+      "elevation_range_value": 25.0,
       "mainGun": {
         "name": "105mm_Bofors_ikv",
         "caliber": 105.0,
@@ -89634,7 +90802,7 @@
           "trigger": "gunner2",
           "name": "7_62mm_DT",
           "caliber": 7.6,
-          "ammo": 1400,
+          "ammo": 1386,
           "reloadTime": 8.0,
           "rateOfFire": 600,
           "bulletType": "ap_i_ball"
@@ -91134,7 +92302,7 @@
       "ammunitions": [
         {
           "name": "us_aim_9x_block_2",
-          "localizedName": "AIM-9X Block 2",
+          "localizedName": "AIM-9X Block II",
           "type": "sam_tank",
           "caliber": 127.0,
           "mass": 88.0,
@@ -91195,6 +92363,111 @@
       "has_smoke_grenades": false,
       "has_ess": false,
       "has_laser_rangefinder": false
+    }
+  },
+  {
+    "id": "sw_nomads",
+    "performance": {
+      "horsepower": 625.0,
+      "weight": 28.0,
+      "power_to_weight": 22.32,
+      "max_reverse_speed": 14.8,
+      "reload_time": 2.0,
+      "penetration": null,
+      "max_speed": 70.0,
+      "crew_count": 5,
+      "elevation_speed": 0.0,
+      "traverse_speed": 0.0,
+      "has_stabilizer": false,
+      "stabilizer_type": "none",
+      "elevation_range": [
+        -0.0,
+        0.0
+      ],
+      "traverse_range": [
+        -0.0,
+        0.0
+      ],
+      "gunner_thermal_resolution": [
+        1200,
+        800
+      ],
+      "commander_thermal_resolution": null,
+      "gunner_thermal_diagonal": 1442.2,
+      "commander_thermal_diagonal": null,
+      "stabilizer_value": 0,
+      "elevation_range_value": 0.0,
+      "mainGun": {
+        "name": "127mm_aim_9x_nomads",
+        "caliber": 127.0,
+        "reloadTime": 2.0,
+        "autoLoader": false,
+        "reloadTimes": {
+          "base": 2.6,
+          "expert": 2.3,
+          "ace": 2.0
+        }
+      },
+      "ammunitions": [
+        {
+          "name": "us_aim_9x_block_2",
+          "localizedName": "AIM-9X Block II",
+          "type": "sam_tank",
+          "caliber": 127.0,
+          "mass": 88.0,
+          "muzzleVelocity": 780.0
+        }
+      ],
+      "penetrationData": null,
+      "autoLoader": false,
+      "engine_manufacturer": null,
+      "engine_model": null,
+      "engine_type": null,
+      "engine_max_rpm": 2300.0,
+      "transmission_manufacturer": null,
+      "transmission_model": null,
+      "transmission_type": null,
+      "forward_gears": 12,
+      "reverse_gears": 4,
+      "forward_gear_speeds": [
+        3.4,
+        6.8,
+        9.3,
+        14.8,
+        19.1,
+        27.1,
+        31.0,
+        36.2,
+        42.6,
+        51.8,
+        59.5,
+        70.0
+      ],
+      "reverse_gear_speeds": [
+        3.4,
+        6.8,
+        9.3,
+        14.8
+      ],
+      "steer_type": "clutch_braking",
+      "empty_weight": 27.5,
+      "track_width": 0.45,
+      "secondary_weapons": [
+        {
+          "trigger": "gunner1",
+          "name": "12_7mm_M2_HB_for_400",
+          "caliber": 12.7,
+          "ammo": 800,
+          "reloadTime": 8.0,
+          "rateOfFire": 575,
+          "bulletType": "ap_i_t_ball_M20"
+        }
+      ],
+      "main_gun_ammo": 4,
+      "driver_nv_resolution": null,
+      "has_smoke_grenades": true,
+      "has_ess": false,
+      "has_laser_rangefinder": true
     }
   },
   {
@@ -94399,6 +95672,15 @@
           "reloadTime": 8.0,
           "rateOfFire": 648,
           "bulletType": "ap_ball"
+        },
+        {
+          "trigger": "gunner4",
+          "name": "7_62mm_M1919A4",
+          "caliber": 7.6,
+          "ammo": 3000,
+          "reloadTime": 8.0,
+          "rateOfFire": 500,
+          "bulletType": "ap_ball"
         }
       ],
       "main_gun_ammo": 70,
@@ -97350,13 +98632,13 @@
   {
     "id": "sw_strv_m41_s2",
     "performance": {
-      "horsepower": 165.0,
+      "horsepower": 160.0,
       "weight": 10.5,
-      "power_to_weight": 15.71,
-      "max_reverse_speed": 5.9,
+      "power_to_weight": 15.24,
+      "max_reverse_speed": 5.3,
       "reload_time": 3.12,
       "penetration": 62.0,
-      "max_speed": 40.8,
+      "max_speed": 43.0,
       "crew_count": 5,
       "elevation_speed": 4.0,
       "traverse_speed": 14.0,
@@ -97452,14 +98734,14 @@
       "forward_gears": 5,
       "reverse_gears": 1,
       "forward_gear_speeds": [
-        4.0,
-        10.0,
-        16.0,
-        25.5,
-        40.8
+        4.2,
+        10.5,
+        16.9,
+        26.9,
+        43.0
       ],
       "reverse_gear_speeds": [
-        5.9
+        5.3
       ],
       "steer_type": "clutch_braking",
       "empty_weight": 10.3,
@@ -100921,7 +102203,7 @@
       "power_to_weight": 21.09,
       "max_reverse_speed": 3.8,
       "reload_time": 5.0,
-      "penetration": 103.5,
+      "penetration": 104.0,
       "max_speed": 64.3,
       "crew_count": 5,
       "elevation_speed": 4.0,
@@ -100992,19 +102274,22 @@
           "tntEquivalent": 0.05
         },
         {
-          "name": "75mm_m61_solid",
-          "localizedName": "M61 shot",
-          "type": "apcbc_solid_medium_caliber_tank",
+          "name": "75mm_m61",
+          "localizedName": "M61",
+          "type": "apcbc_tank",
           "caliber": 75.0,
-          "mass": 6.53,
+          "mass": 6.79,
           "muzzleVelocity": 618.0,
           "deMarre": {
             "fullCaliber": 75.0,
             "isApcbc": true,
-            "explosiveMass": 0,
-            "Cx": 0.5
+            "explosiveMass": 0.065,
+            "Cx": 0.379
           },
-          "penetration0m": 103.5
+          "penetration0m": 104.0,
+          "explosiveMassKg": 0.065,
+          "explosiveType": "exp_d",
+          "tntEquivalent": 0.064
         }
       ],
       "penetrationData": null,
@@ -101057,7 +102342,7 @@
       "power_to_weight": 20.94,
       "max_reverse_speed": 3.8,
       "reload_time": 5.0,
-      "penetration": 103.5,
+      "penetration": 104.0,
       "max_speed": 64.3,
       "crew_count": 5,
       "elevation_speed": 4.0,
@@ -101128,19 +102413,22 @@
           "tntEquivalent": 0.05
         },
         {
-          "name": "75mm_m61_solid",
-          "localizedName": "M61 shot",
-          "type": "apcbc_solid_medium_caliber_tank",
+          "name": "75mm_m61",
+          "localizedName": "M61",
+          "type": "apcbc_tank",
           "caliber": 75.0,
-          "mass": 6.53,
+          "mass": 6.79,
           "muzzleVelocity": 618.0,
           "deMarre": {
             "fullCaliber": 75.0,
             "isApcbc": true,
-            "explosiveMass": 0,
-            "Cx": 0.5
+            "explosiveMass": 0.065,
+            "Cx": 0.379
           },
-          "penetration0m": 103.5
+          "penetration0m": 104.0,
+          "explosiveMassKg": 0.065,
+          "explosiveType": "exp_d",
+          "tntEquivalent": 0.064
         }
       ],
       "penetrationData": null,
@@ -102813,7 +104101,7 @@
       "power_to_weight": 8.41,
       "max_reverse_speed": 1.8,
       "reload_time": 5.0,
-      "penetration": 103.5,
+      "penetration": 104.0,
       "max_speed": 21.7,
       "crew_count": 5,
       "elevation_speed": 4.0,
@@ -102821,7 +104109,7 @@
       "has_stabilizer": false,
       "stabilizer_type": "none",
       "elevation_range": [
-        -12.0,
+        -12.5,
         20.0
       ],
       "traverse_range": [
@@ -102833,7 +104121,7 @@
       "gunner_thermal_diagonal": null,
       "commander_thermal_diagonal": null,
       "stabilizer_value": 0,
-      "elevation_range_value": 32.0,
+      "elevation_range_value": 32.5,
       "mainGun": {
         "name": "75mm_QQF_MkV",
         "caliber": 75.0,
@@ -102884,19 +104172,22 @@
           "tntEquivalent": 0.05
         },
         {
-          "name": "75mm_m61_solid",
-          "localizedName": "M61 shot",
-          "type": "apcbc_solid_medium_caliber_tank",
+          "name": "75mm_m61",
+          "localizedName": "M61",
+          "type": "apcbc_tank",
           "caliber": 75.0,
-          "mass": 6.53,
+          "mass": 6.79,
           "muzzleVelocity": 618.0,
           "deMarre": {
             "fullCaliber": 75.0,
             "isApcbc": true,
-            "explosiveMass": 0,
-            "Cx": 0.5
+            "explosiveMass": 0.065,
+            "Cx": 0.379
           },
-          "penetration0m": 103.5
+          "penetration0m": 104.0,
+          "explosiveMassKg": 0.065,
+          "explosiveType": "exp_d",
+          "tntEquivalent": 0.064
         }
       ],
       "penetrationData": null,
@@ -102948,7 +104239,7 @@
       "power_to_weight": 7.86,
       "max_reverse_speed": 1.8,
       "reload_time": 5.0,
-      "penetration": 103.5,
+      "penetration": 104.0,
       "max_speed": 21.7,
       "crew_count": 5,
       "elevation_speed": 4.0,
@@ -103019,19 +104310,22 @@
           "tntEquivalent": 0.05
         },
         {
-          "name": "75mm_m61_solid",
-          "localizedName": "M61 shot",
-          "type": "apcbc_solid_medium_caliber_tank",
+          "name": "75mm_m61",
+          "localizedName": "M61",
+          "type": "apcbc_tank",
           "caliber": 75.0,
-          "mass": 6.53,
+          "mass": 6.79,
           "muzzleVelocity": 618.0,
           "deMarre": {
             "fullCaliber": 75.0,
             "isApcbc": true,
-            "explosiveMass": 0,
-            "Cx": 0.5
+            "explosiveMass": 0.065,
+            "Cx": 0.379
           },
-          "penetration0m": 103.5
+          "penetration0m": 104.0,
+          "explosiveMassKg": 0.065,
+          "explosiveType": "exp_d",
+          "tntEquivalent": 0.064
         }
       ],
       "penetrationData": null,
@@ -103092,7 +104386,7 @@
       "power_to_weight": 15.7,
       "max_reverse_speed": 2.8,
       "reload_time": 5.0,
-      "penetration": 103.5,
+      "penetration": 104.0,
       "max_speed": 48.2,
       "crew_count": 5,
       "elevation_speed": 4.0,
@@ -103163,19 +104457,22 @@
           "tntEquivalent": 0.05
         },
         {
-          "name": "75mm_m61_solid",
-          "localizedName": "M61 shot",
-          "type": "apcbc_solid_medium_caliber_tank",
+          "name": "75mm_m61",
+          "localizedName": "M61",
+          "type": "apcbc_tank",
           "caliber": 75.0,
-          "mass": 6.53,
+          "mass": 6.79,
           "muzzleVelocity": 618.0,
           "deMarre": {
             "fullCaliber": 75.0,
             "isApcbc": true,
-            "explosiveMass": 0,
-            "Cx": 0.5
+            "explosiveMass": 0.065,
+            "Cx": 0.379
           },
-          "penetration0m": 103.5
+          "penetration0m": 104.0,
+          "explosiveMassKg": 0.065,
+          "explosiveType": "exp_d",
+          "tntEquivalent": 0.064
         }
       ],
       "penetrationData": null,
@@ -103719,8 +105016,8 @@
     "id": "uk_ac1_sentinel",
     "performance": {
       "horsepower": 340.0,
-      "weight": 26.0,
-      "power_to_weight": 13.08,
+      "weight": 28.45,
+      "power_to_weight": 11.95,
       "max_reverse_speed": 5.6,
       "reload_time": 2.78,
       "penetration": 89.0,
@@ -103838,7 +105135,7 @@
         5.6
       ],
       "steer_type": "clutch_braking",
-      "empty_weight": 25.6,
+      "empty_weight": 28.05,
       "track_width": 0.41,
       "secondary_weapons": [
         {
@@ -104320,9 +105617,9 @@
           "caliber": 95.0,
           "mass": 11.34,
           "muzzleVelocity": 320.0,
-          "explosiveMassKg": 0.666,
+          "explosiveMassKg": 1.36,
           "explosiveType": "amatol",
-          "tntEquivalent": 0.626
+          "tntEquivalent": 1.278
         },
         {
           "name": "95mm_shell_se_mk1",
@@ -104374,10 +105671,10 @@
       "horsepower": 160.0,
       "weight": 12.82,
       "power_to_weight": 12.48,
-      "max_reverse_speed": 12.8,
+      "max_reverse_speed": 14.9,
       "reload_time": 4.0,
       "penetration": 132.1,
-      "max_speed": 66.8,
+      "max_speed": 78.0,
       "crew_count": 5,
       "elevation_speed": 15.0,
       "traverse_speed": 24.0,
@@ -104478,18 +105775,18 @@
       "forward_gears": 8,
       "reverse_gears": 2,
       "forward_gear_speeds": [
-        6.4,
-        9.6,
-        14.4,
-        18.5,
-        24.8,
-        28.9,
-        41.8,
-        66.8
+        7.5,
+        11.2,
+        16.8,
+        21.5,
+        29.0,
+        33.8,
+        48.8,
+        78.0
       ],
       "reverse_gear_speeds": [
-        5.6,
-        12.8
+        6.6,
+        14.9
       ],
       "steer_type": null,
       "empty_weight": 12.62,
@@ -104654,7 +105951,7 @@
           "type": "he_frag_tank",
           "caliber": 155.0,
           "mass": 43.1,
-          "muzzleVelocity": 940.0,
+          "muzzleVelocity": 810.0,
           "explosiveMassKg": 6.98,
           "explosiveType": "comp_b",
           "tntEquivalent": 8.865
@@ -104665,7 +105962,7 @@
           "type": "smoke_tank",
           "caliber": 155.0,
           "mass": 40.8,
-          "muzzleVelocity": 940.0,
+          "muzzleVelocity": 810.0,
           "explosiveMassKg": 0.05,
           "explosiveType": "smoke_composition",
           "tntEquivalent": 0.05
@@ -104676,7 +105973,7 @@
           "type": "he_frag_radio_fuse",
           "caliber": 155.0,
           "mass": 43.1,
-          "muzzleVelocity": 940.0,
+          "muzzleVelocity": 810.0,
           "explosiveMassKg": 6.98,
           "explosiveType": "comp_b",
           "tntEquivalent": 8.865
@@ -104687,7 +105984,7 @@
           "type": "he_frag_tank",
           "caliber": 155.0,
           "mass": 43.5,
-          "muzzleVelocity": 940.0,
+          "muzzleVelocity": 810.0,
           "explosiveMassKg": 11.3,
           "explosiveType": "comp_b",
           "tntEquivalent": 14.351
@@ -105562,6 +106859,15 @@
         {
           "trigger": "gunner1",
           "name": "7_62mm_L3A1",
+          "caliber": 7.6,
+          "ammo": 3000,
+          "reloadTime": 8.0,
+          "rateOfFire": 500,
+          "bulletType": "ap_ball"
+        },
+        {
+          "trigger": "gunner4",
+          "name": "7_62mm_M1919A4",
           "caliber": 7.6,
           "ammo": 3000,
           "reloadTime": 8.0,
@@ -111455,10 +112761,10 @@
       "horsepower": 216.0,
       "weight": 15.88,
       "power_to_weight": 13.6,
-      "max_reverse_speed": 7.5,
+      "max_reverse_speed": 7.7,
       "reload_time": 4.0,
       "penetration": null,
-      "max_speed": 47.7,
+      "max_speed": 46.3,
       "crew_count": 5,
       "elevation_speed": 50.0,
       "traverse_speed": 90.0,
@@ -111466,7 +112772,7 @@
       "stabilizer_type": "both",
       "elevation_range": [
         -10.0,
-        85.0
+        80.0
       ],
       "traverse_range": [
         -180.0,
@@ -111477,7 +112783,7 @@
       "gunner_thermal_diagonal": null,
       "commander_thermal_diagonal": null,
       "stabilizer_value": 1,
-      "elevation_range_value": 95.0,
+      "elevation_range_value": 90.0,
       "mainGun": null,
       "ammunitions": null,
       "penetrationData": null,
@@ -111492,18 +112798,18 @@
       "forward_gears": 8,
       "reverse_gears": 2,
       "forward_gear_speeds": [
-        6.0,
-        11.9,
-        15.3,
-        21.2,
-        26.1,
-        34.0,
-        39.7,
-        47.7
+        4.4,
+        8.8,
+        12.2,
+        14.3,
+        17.2,
+        23.9,
+        33.3,
+        46.3
       ],
       "reverse_gear_speeds": [
-        3.7,
-        7.5
+        3.9,
+        7.7
       ],
       "steer_type": "clutch_braking",
       "empty_weight": 15.0,
@@ -111525,10 +112831,10 @@
       "horsepower": 190.0,
       "weight": 8.22,
       "power_to_weight": 23.11,
-      "max_reverse_speed": 80.0,
+      "max_reverse_speed": 86.6,
       "reload_time": 0.5,
       "penetration": 700.0,
-      "max_speed": 80.0,
+      "max_speed": 86.6,
       "crew_count": 5,
       "elevation_speed": 4.0,
       "traverse_speed": 18.0,
@@ -111594,22 +112900,22 @@
       "forward_gears": 7,
       "reverse_gears": 7,
       "forward_gear_speeds": [
-        4.1,
-        9.2,
-        12.8,
-        21.3,
-        38.5,
-        50.7,
-        80.0
+        4.4,
+        10.0,
+        13.9,
+        23.1,
+        41.7,
+        54.9,
+        86.6
       ],
       "reverse_gear_speeds": [
-        4.1,
-        9.2,
-        12.8,
-        21.3,
-        38.5,
-        50.7,
-        80.0
+        4.4,
+        10.0,
+        13.9,
+        23.1,
+        41.7,
+        54.9,
+        86.6
       ],
       "steer_type": "clutch_braking",
       "empty_weight": 8.08,
@@ -111641,10 +112947,10 @@
       "horsepower": 195.0,
       "weight": 7.76,
       "power_to_weight": 25.13,
-      "max_reverse_speed": 80.9,
+      "max_reverse_speed": 86.6,
       "reload_time": 0.8,
       "penetration": 110.0,
-      "max_speed": 80.9,
+      "max_speed": 86.6,
       "crew_count": 5,
       "elevation_speed": 30.0,
       "traverse_speed": 30.0,
@@ -111763,22 +113069,22 @@
       "forward_gears": 7,
       "reverse_gears": 7,
       "forward_gear_speeds": [
-        4.1,
-        9.7,
-        12.9,
-        21.5,
-        38.6,
-        51.5,
-        80.9
+        4.4,
+        10.4,
+        13.8,
+        23.1,
+        41.3,
+        55.1,
+        86.6
       ],
       "reverse_gear_speeds": [
-        4.1,
-        9.7,
-        12.9,
-        21.5,
-        38.6,
-        51.5,
-        80.9
+        4.4,
+        10.4,
+        13.8,
+        23.1,
+        41.3,
+        55.1,
+        86.6
       ],
       "steer_type": "clutch_braking",
       "empty_weight": 7.56,
@@ -111947,10 +113253,10 @@
       "horsepower": 635.0,
       "weight": 50.8,
       "power_to_weight": 12.5,
-      "max_reverse_speed": 12.1,
+      "max_reverse_speed": 12.9,
       "reload_time": 14.93,
       "penetration": 241.4,
-      "max_speed": 37.3,
+      "max_speed": 37.2,
       "crew_count": 5,
       "elevation_speed": 4.5,
       "traverse_speed": 18.0,
@@ -112023,16 +113329,17 @@
       "transmission_model": null,
       "transmission_type": null,
       "forward_gears": 5,
-      "reverse_gears": 1,
+      "reverse_gears": 2,
       "forward_gear_speeds": [
         4.3,
         10.9,
-        17.6,
-        27.8,
-        37.3
+        17.5,
+        27.7,
+        37.2
       ],
       "reverse_gear_speeds": [
-        12.1
+        2.2,
+        12.9
       ],
       "steer_type": "clutch_braking",
       "empty_weight": 49.26,
@@ -113182,6 +114489,360 @@
       "has_smoke_grenades": false,
       "has_ess": false,
       "has_laser_rangefinder": false
+    }
+  },
+  {
+    "id": "uk_m1a1_aim_abrams",
+    "performance": {
+      "horsepower": 1519.0,
+      "weight": 62.0,
+      "power_to_weight": 24.5,
+      "max_reverse_speed": 40.2,
+      "reload_time": 5.0,
+      "penetration": 583.3,
+      "max_speed": 68.3,
+      "crew_count": 5,
+      "elevation_speed": 24.0,
+      "traverse_speed": 40.0,
+      "has_stabilizer": true,
+      "stabilizer_type": "both",
+      "elevation_range": [
+        -10.0,
+        20.0
+      ],
+      "traverse_range": [
+        -180.0,
+        180.0
+      ],
+      "gunner_thermal_resolution": [
+        800,
+        600
+      ],
+      "commander_thermal_resolution": null,
+      "gunner_thermal_diagonal": 1000.0,
+      "commander_thermal_diagonal": null,
+      "stabilizer_value": 1,
+      "elevation_range_value": 30.0,
+      "mainGun": {
+        "name": "120mm_M256_KE_W",
+        "caliber": 120.0,
+        "reloadTime": 5.0,
+        "autoLoader": false,
+        "reloadTimes": {
+          "base": 6.5,
+          "expert": 5.75,
+          "ace": 5.0
+        }
+      },
+      "ammunitions": [
+        {
+          "name": "120mm_m830",
+          "localizedName": "M830",
+          "type": "heat_fs_tank",
+          "caliber": 120.0,
+          "mass": 13.1,
+          "muzzleVelocity": 1140.0,
+          "penetration0m": 480.0,
+          "explosiveMassKg": 1.64,
+          "explosiveType": "comp_a",
+          "tntEquivalent": 2.066
+        },
+        {
+          "name": "120mm_ke_w",
+          "localizedName": "KE-W",
+          "type": "apds_fs_long_l30_tank",
+          "caliber": 22.0,
+          "mass": 4.0,
+          "muzzleVelocity": 1585.0,
+          "lanzOdermatt": {
+            "workingLength": 680.0,
+            "density": 17500.0,
+            "material": "tungsten",
+            "Cx": 0.68
+          },
+          "penetration0m": 583.3,
+          "penetrationData": {
+            "at0m": {
+              "angle0": 583.3,
+              "angle30": 505.2,
+              "angle60": 291.7
+            }
+          }
+        },
+        {
+          "name": "120mm_m830a1",
+          "localizedName": "M830A1",
+          "type": "heat_mp_vt_tank",
+          "caliber": 120.0,
+          "mass": 11.4,
+          "muzzleVelocity": 1410.0,
+          "penetration0m": 350.0,
+          "explosiveMassKg": 0.966,
+          "explosiveType": "comp_a",
+          "tntEquivalent": 1.217
+        }
+      ],
+      "penetrationData": {
+        "at0m": {
+          "angle0": 583.3,
+          "angle30": 505.2,
+          "angle60": 291.7
+        }
+      },
+      "autoLoader": false,
+      "engine_manufacturer": "honeywell",
+      "engine_model": "agt_1500",
+      "engine_type": "gasturbine",
+      "engine_max_rpm": 3000.0,
+      "transmission_manufacturer": "allison",
+      "transmission_model": "x_1100_3b",
+      "transmission_type": "auto",
+      "forward_gears": 8,
+      "reverse_gears": 4,
+      "forward_gear_speeds": [
+        7.4,
+        14.8,
+        19.6,
+        28.9,
+        35.5,
+        46.2,
+        55.1,
+        68.3
+      ],
+      "reverse_gear_speeds": [
+        5.3,
+        10.5,
+        16.4,
+        40.2
+      ],
+      "steer_type": "clutch_braking",
+      "empty_weight": 61.0,
+      "track_width": 0.635,
+      "secondary_weapons": [
+        {
+          "trigger": "gunner1",
+          "name": "12_7mm_M2_HB",
+          "caliber": 12.7,
+          "ammo": 900,
+          "reloadTime": 8.0,
+          "rateOfFire": 575,
+          "bulletType": "ap_i_t_ball_M20"
+        },
+        {
+          "trigger": "gunner2",
+          "name": "7_62mm_M240",
+          "caliber": 7.6,
+          "ammo": 1400,
+          "reloadTime": 8.0,
+          "rateOfFire": 940,
+          "bulletType": "ap_ball"
+        },
+        {
+          "trigger": "gunner3",
+          "name": "7_62mm_M240",
+          "caliber": 7.6,
+          "ammo": 10000,
+          "reloadTime": 8.0,
+          "rateOfFire": 940,
+          "bulletType": "ap_ball"
+        }
+      ],
+      "main_gun_ammo": 40,
+      "driver_nv_resolution": [
+        800,
+        600
+      ],
+      "has_smoke_grenades": true,
+      "has_ess": true,
+      "has_laser_rangefinder": true
+    }
+  },
+  {
+    "id": "uk_m1a2_sep3_abrams",
+    "performance": {
+      "horsepower": 1519.0,
+      "weight": 63.0,
+      "power_to_weight": 24.11,
+      "max_reverse_speed": 40.2,
+      "reload_time": 5.0,
+      "penetration": 628.3,
+      "max_speed": 68.3,
+      "crew_count": 5,
+      "elevation_speed": 24.0,
+      "traverse_speed": 40.0,
+      "has_stabilizer": true,
+      "stabilizer_type": "both",
+      "elevation_range": [
+        -10.0,
+        20.0
+      ],
+      "traverse_range": [
+        -180.0,
+        180.0
+      ],
+      "gunner_thermal_resolution": [
+        800,
+        600
+      ],
+      "commander_thermal_resolution": [
+        800,
+        600
+      ],
+      "gunner_thermal_diagonal": 1000.0,
+      "commander_thermal_diagonal": 1000.0,
+      "stabilizer_value": 1,
+      "elevation_range_value": 30.0,
+      "mainGun": {
+        "name": "120mm_m256_m1a2t",
+        "caliber": 120.0,
+        "reloadTime": 5.0,
+        "autoLoader": false,
+        "reloadTimes": {
+          "base": 6.5,
+          "expert": 5.75,
+          "ace": 5.0
+        }
+      },
+      "ammunitions": [
+        {
+          "name": "120mm_m830",
+          "localizedName": "M830",
+          "type": "heat_fs_tank",
+          "caliber": 120.0,
+          "mass": 13.1,
+          "muzzleVelocity": 1140.0,
+          "penetration0m": 480.0,
+          "explosiveMassKg": 1.64,
+          "explosiveType": "comp_a",
+          "tntEquivalent": 2.066
+        },
+        {
+          "name": "120mm_ke_w",
+          "localizedName": "KE-W",
+          "type": "apds_fs_long_l30_tank",
+          "caliber": 22.0,
+          "mass": 4.0,
+          "muzzleVelocity": 1585.0,
+          "lanzOdermatt": {
+            "workingLength": 680.0,
+            "density": 17500.0,
+            "material": "tungsten",
+            "Cx": 0.68
+          },
+          "penetration0m": 583.3,
+          "penetrationData": {
+            "at0m": {
+              "angle0": 583.3,
+              "angle30": 505.2,
+              "angle60": 291.7
+            }
+          }
+        },
+        {
+          "name": "120mm_m830a1",
+          "localizedName": "M830A1",
+          "type": "heat_mp_vt_tank",
+          "caliber": 120.0,
+          "mass": 11.4,
+          "muzzleVelocity": 1410.0,
+          "penetration0m": 350.0,
+          "explosiveMassKg": 0.966,
+          "explosiveType": "comp_a",
+          "tntEquivalent": 1.217
+        },
+        {
+          "name": "120mm_ke_w_a2",
+          "localizedName": "KE-W A2",
+          "type": "apds_fs_long_l30_tank",
+          "caliber": 22.0,
+          "mass": 4.0,
+          "muzzleVelocity": 1700.0,
+          "lanzOdermatt": {
+            "workingLength": 680.0,
+            "density": 17500.0,
+            "material": "tungsten",
+            "Cx": 0.68
+          },
+          "penetration0m": 628.3,
+          "penetrationData": {
+            "at0m": {
+              "angle0": 628.3,
+              "angle30": 544.1,
+              "angle60": 314.2
+            }
+          }
+        }
+      ],
+      "penetrationData": {
+        "at0m": {
+          "angle0": 628.3,
+          "angle30": 544.1,
+          "angle60": 314.2
+        }
+      },
+      "autoLoader": false,
+      "engine_manufacturer": "honeywell",
+      "engine_model": "agt_1500",
+      "engine_type": "gasturbine",
+      "engine_max_rpm": 3000.0,
+      "transmission_manufacturer": "allison",
+      "transmission_model": "x_1100_3b",
+      "transmission_type": "auto",
+      "forward_gears": 8,
+      "reverse_gears": 4,
+      "forward_gear_speeds": [
+        7.4,
+        14.8,
+        19.6,
+        28.9,
+        35.5,
+        46.2,
+        55.1,
+        68.3
+      ],
+      "reverse_gear_speeds": [
+        5.3,
+        10.5,
+        16.4,
+        40.2
+      ],
+      "steer_type": "clutch_braking",
+      "empty_weight": 62.0,
+      "track_width": 0.635,
+      "secondary_weapons": [
+        {
+          "trigger": "gunner1",
+          "name": "12_7mm_M2_HB",
+          "caliber": 12.7,
+          "ammo": 900,
+          "reloadTime": 8.0,
+          "rateOfFire": 575,
+          "bulletType": "ap_i_t_ball_M20"
+        },
+        {
+          "trigger": "gunner2",
+          "name": "7_62mm_M240",
+          "caliber": 7.6,
+          "ammo": 1400,
+          "reloadTime": 8.0,
+          "rateOfFire": 940,
+          "bulletType": "ap_ball"
+        },
+        {
+          "trigger": "gunner3",
+          "name": "7_62mm_M240",
+          "caliber": 7.6,
+          "ammo": 10000,
+          "reloadTime": 8.0,
+          "rateOfFire": 940,
+          "bulletType": "ap_ball"
+        }
+      ],
+      "main_gun_ammo": 42,
+      "driver_nv_resolution": null,
+      "has_smoke_grenades": true,
+      "has_ess": true,
+      "has_laser_rangefinder": true
     }
   },
   {
@@ -114373,7 +116034,7 @@
       "power_to_weight": 14.34,
       "max_reverse_speed": 5.0,
       "reload_time": 2.86,
-      "penetration": 87.7,
+      "penetration": 85.9,
       "max_speed": 38.7,
       "crew_count": 5,
       "elevation_speed": 4.0,
@@ -114421,18 +116082,32 @@
           "penetration0m": 79.0
         },
         {
+          "name": "37mm_m74",
+          "localizedName": "M74",
+          "type": "ap_tank",
+          "caliber": 37.0,
+          "mass": 0.87,
+          "muzzleVelocity": 870.0,
+          "deMarre": {
+            "fullCaliber": 37.0,
+            "isApcbc": false,
+            "explosiveMass": 0
+          },
+          "penetration0m": 77.3
+        },
+        {
           "name": "37mm_m51b1",
           "localizedName": "M51B1 shot",
           "type": "apcbc_solid_medium_caliber_tank",
           "caliber": 37.0,
           "mass": 0.87,
-          "muzzleVelocity": 883.0,
+          "muzzleVelocity": 870.0,
           "deMarre": {
             "fullCaliber": 37.0,
             "isApcbc": true,
             "explosiveMass": 0
           },
-          "penetration0m": 87.7
+          "penetration0m": 85.9
         }
       ],
       "penetrationData": null,
@@ -118156,7 +119831,7 @@
       "power_to_weight": 9.17,
       "max_reverse_speed": 2.8,
       "reload_time": 5.0,
-      "penetration": 103.5,
+      "penetration": 104.0,
       "max_speed": 24.0,
       "crew_count": 5,
       "elevation_speed": 4.0,
@@ -118227,19 +119902,22 @@
           "tntEquivalent": 0.05
         },
         {
-          "name": "75mm_m61_solid",
-          "localizedName": "M61 shot",
-          "type": "apcbc_solid_medium_caliber_tank",
+          "name": "75mm_m61",
+          "localizedName": "M61",
+          "type": "apcbc_tank",
           "caliber": 75.0,
-          "mass": 6.53,
+          "mass": 6.79,
           "muzzleVelocity": 618.0,
           "deMarre": {
             "fullCaliber": 75.0,
             "isApcbc": true,
-            "explosiveMass": 0,
-            "Cx": 0.5
+            "explosiveMass": 0.065,
+            "Cx": 0.379
           },
-          "penetration0m": 103.5
+          "penetration0m": 104.0,
+          "explosiveMassKg": 0.065,
+          "explosiveType": "exp_d",
+          "tntEquivalent": 0.064
         }
       ],
       "penetrationData": null,
@@ -118648,7 +120326,7 @@
           "type": "he_frag_tank",
           "caliber": 155.0,
           "mass": 43.1,
-          "muzzleVelocity": 940.0,
+          "muzzleVelocity": 684.0,
           "explosiveMassKg": 6.98,
           "explosiveType": "comp_b",
           "tntEquivalent": 8.865
@@ -118659,7 +120337,7 @@
           "type": "smoke_tank",
           "caliber": 155.0,
           "mass": 40.8,
-          "muzzleVelocity": 940.0,
+          "muzzleVelocity": 684.0,
           "explosiveMassKg": 0.05,
           "explosiveType": "smoke_composition",
           "tntEquivalent": 0.05
@@ -118670,7 +120348,7 @@
           "type": "he_frag_radio_fuse",
           "caliber": 155.0,
           "mass": 43.1,
-          "muzzleVelocity": 940.0,
+          "muzzleVelocity": 684.0,
           "explosiveMassKg": 6.98,
           "explosiveType": "comp_b",
           "tntEquivalent": 8.865
@@ -118681,7 +120359,7 @@
           "type": "he_frag_tank",
           "caliber": 155.0,
           "mass": 43.5,
-          "muzzleVelocity": 940.0,
+          "muzzleVelocity": 684.0,
           "explosiveMassKg": 11.3,
           "explosiveType": "comp_b",
           "tntEquivalent": 14.351
@@ -122159,12 +123837,12 @@
           "tntEquivalent": 1.232
         },
         {
-          "name": "105mm_m393a2",
-          "localizedName": "M393",
+          "name": "105mm_m393a3",
+          "localizedName": "M393A3",
           "type": "hesh_tank",
           "caliber": 105.0,
           "mass": 11.2,
-          "muzzleVelocity": 731.5,
+          "muzzleVelocity": 753.0,
           "penetration0m": 127.0,
           "explosiveMassKg": 2.9937,
           "explosiveType": "comp_a",
@@ -123601,10 +125279,10 @@
       "horsepower": 1519.0,
       "weight": 55.7,
       "power_to_weight": 27.27,
-      "max_reverse_speed": 38.2,
+      "max_reverse_speed": 40.2,
       "reload_time": 5.0,
       "penetration": 372.6,
-      "max_speed": 71.9,
+      "max_speed": 72.0,
       "crew_count": 5,
       "elevation_speed": 24.0,
       "traverse_speed": 40.0,
@@ -123774,20 +125452,20 @@
       "forward_gears": 8,
       "reverse_gears": 4,
       "forward_gear_speeds": [
-        8.4,
-        15.9,
-        21.0,
-        31.2,
-        38.2,
-        49.2,
-        58.4,
-        71.9
+        7.8,
+        15.6,
+        20.7,
+        30.4,
+        37.5,
+        48.6,
+        58.0,
+        72.0
       ],
       "reverse_gear_speeds": [
-        5.6,
-        11.3,
-        17.6,
-        38.2
+        5.5,
+        11.1,
+        17.3,
+        40.2
       ],
       "steer_type": "clutch_braking",
       "empty_weight": 54.7,
@@ -123837,10 +125515,10 @@
       "horsepower": 1519.0,
       "weight": 55.7,
       "power_to_weight": 27.27,
-      "max_reverse_speed": 38.2,
+      "max_reverse_speed": 40.2,
       "reload_time": 5.0,
       "penetration": 372.6,
-      "max_speed": 71.9,
+      "max_speed": 72.0,
       "crew_count": 5,
       "elevation_speed": 24.0,
       "traverse_speed": 40.0,
@@ -124010,20 +125688,20 @@
       "forward_gears": 8,
       "reverse_gears": 4,
       "forward_gear_speeds": [
-        8.4,
-        15.9,
-        21.0,
-        31.2,
-        38.2,
-        49.2,
-        58.4,
-        71.9
+        7.8,
+        15.6,
+        20.7,
+        30.4,
+        37.5,
+        48.6,
+        58.0,
+        72.0
       ],
       "reverse_gear_speeds": [
-        5.6,
-        11.3,
-        17.6,
-        38.2
+        5.5,
+        11.1,
+        17.3,
+        40.2
       ],
       "steer_type": "clutch_braking",
       "empty_weight": 54.7,
@@ -124071,10 +125749,10 @@
       "horsepower": 1519.0,
       "weight": 56.8,
       "power_to_weight": 26.74,
-      "max_reverse_speed": 38.2,
+      "max_reverse_speed": 36.1,
       "reload_time": 5.0,
       "penetration": 522.2,
-      "max_speed": 68.3,
+      "max_speed": 66.6,
       "crew_count": 5,
       "elevation_speed": 24.0,
       "traverse_speed": 40.0,
@@ -124207,20 +125885,20 @@
       "forward_gears": 8,
       "reverse_gears": 4,
       "forward_gear_speeds": [
-        8.4,
-        15.9,
-        21.0,
-        31.2,
-        38.2,
-        49.2,
-        58.4,
-        68.3
+        7.2,
+        14.5,
+        19.1,
+        28.2,
+        34.6,
+        45.0,
+        53.7,
+        66.6
       ],
       "reverse_gear_speeds": [
-        5.6,
-        11.3,
-        17.6,
-        38.2
+        5.1,
+        10.2,
+        16.0,
+        36.1
       ],
       "steer_type": "clutch_braking",
       "empty_weight": 55.8,
@@ -124270,7 +125948,7 @@
       "horsepower": 1519.0,
       "weight": 57.15,
       "power_to_weight": 26.58,
-      "max_reverse_speed": 38.2,
+      "max_reverse_speed": 40.2,
       "reload_time": 5.0,
       "penetration": 600.6,
       "max_speed": 68.3,
@@ -124407,20 +126085,20 @@
       "forward_gears": 8,
       "reverse_gears": 4,
       "forward_gear_speeds": [
-        8.4,
-        15.9,
-        21.0,
-        31.2,
-        38.2,
-        49.2,
-        58.4,
+        7.4,
+        14.8,
+        19.6,
+        28.9,
+        35.5,
+        46.2,
+        55.1,
         68.3
       ],
       "reverse_gear_speeds": [
-        5.6,
-        11.3,
-        17.6,
-        38.2
+        5.3,
+        10.5,
+        16.4,
+        40.2
       ],
       "steer_type": "clutch_braking",
       "empty_weight": 56.15,
@@ -124470,7 +126148,7 @@
       "horsepower": 1519.0,
       "weight": 62.0,
       "power_to_weight": 24.5,
-      "max_reverse_speed": 38.2,
+      "max_reverse_speed": 40.2,
       "reload_time": 5.0,
       "penetration": 583.3,
       "max_speed": 68.3,
@@ -124573,20 +126251,20 @@
       "forward_gears": 8,
       "reverse_gears": 4,
       "forward_gear_speeds": [
-        8.4,
-        15.9,
-        21.0,
-        31.2,
-        38.2,
-        49.2,
-        58.4,
+        7.4,
+        14.8,
+        19.6,
+        28.9,
+        35.5,
+        46.2,
+        55.1,
         68.3
       ],
       "reverse_gear_speeds": [
-        5.6,
-        11.3,
-        17.6,
-        38.2
+        5.3,
+        10.5,
+        16.4,
+        40.2
       ],
       "steer_type": "clutch_braking",
       "empty_weight": 61.0,
@@ -124636,7 +126314,7 @@
       "horsepower": 1519.0,
       "weight": 61.23,
       "power_to_weight": 24.81,
-      "max_reverse_speed": 38.2,
+      "max_reverse_speed": 40.2,
       "reload_time": 5.0,
       "penetration": 629.1,
       "max_speed": 68.3,
@@ -124773,20 +126451,20 @@
       "forward_gears": 8,
       "reverse_gears": 4,
       "forward_gear_speeds": [
-        8.4,
-        15.9,
-        21.0,
-        31.2,
-        38.2,
-        49.2,
-        58.4,
+        7.4,
+        14.8,
+        19.6,
+        28.9,
+        35.5,
+        46.2,
+        55.1,
         68.3
       ],
       "reverse_gear_speeds": [
-        5.6,
-        11.3,
-        17.6,
-        38.2
+        5.3,
+        10.5,
+        16.4,
+        40.2
       ],
       "steer_type": "clutch_braking",
       "empty_weight": 60.0,
@@ -124836,7 +126514,7 @@
       "horsepower": 1519.0,
       "weight": 61.23,
       "power_to_weight": 24.81,
-      "max_reverse_speed": 38.2,
+      "max_reverse_speed": 40.2,
       "reload_time": 5.0,
       "penetration": 629.1,
       "max_speed": 68.3,
@@ -124961,20 +126639,20 @@
       "forward_gears": 8,
       "reverse_gears": 4,
       "forward_gear_speeds": [
-        8.4,
-        15.9,
-        21.0,
-        31.2,
-        38.2,
-        49.2,
-        58.4,
+        7.4,
+        14.8,
+        19.6,
+        28.9,
+        35.5,
+        46.2,
+        55.1,
         68.3
       ],
       "reverse_gear_speeds": [
-        5.6,
-        11.3,
-        17.6,
-        38.2
+        5.3,
+        10.5,
+        16.4,
+        40.2
       ],
       "steer_type": "clutch_braking",
       "empty_weight": 60.0,
@@ -125024,7 +126702,7 @@
       "horsepower": 1519.0,
       "weight": 61.23,
       "power_to_weight": 24.81,
-      "max_reverse_speed": 38.2,
+      "max_reverse_speed": 40.2,
       "reload_time": 5.0,
       "penetration": 629.1,
       "max_speed": 68.3,
@@ -125149,20 +126827,20 @@
       "forward_gears": 8,
       "reverse_gears": 4,
       "forward_gear_speeds": [
-        8.4,
-        15.9,
-        21.0,
-        31.2,
-        38.2,
-        49.2,
-        58.4,
+        7.4,
+        14.8,
+        19.6,
+        28.9,
+        35.5,
+        46.2,
+        55.1,
         68.3
       ],
       "reverse_gear_speeds": [
-        5.6,
-        11.3,
-        17.6,
-        38.2
+        5.3,
+        10.5,
+        16.4,
+        40.2
       ],
       "steer_type": "clutch_braking",
       "empty_weight": 60.0,
@@ -125212,7 +126890,7 @@
       "horsepower": 1519.0,
       "weight": 62.05,
       "power_to_weight": 24.48,
-      "max_reverse_speed": 38.2,
+      "max_reverse_speed": 40.2,
       "reload_time": 5.0,
       "penetration": 629.1,
       "max_speed": 68.3,
@@ -125352,20 +127030,20 @@
       "forward_gears": 8,
       "reverse_gears": 4,
       "forward_gear_speeds": [
-        8.4,
-        15.9,
-        21.0,
-        31.2,
-        38.2,
-        49.2,
-        58.4,
+        7.4,
+        14.8,
+        19.6,
+        28.9,
+        35.5,
+        46.2,
+        55.1,
         68.3
       ],
       "reverse_gear_speeds": [
-        5.6,
-        11.3,
-        17.6,
-        38.2
+        5.3,
+        10.5,
+        16.4,
+        40.2
       ],
       "steer_type": "clutch_braking",
       "empty_weight": 61.05,
@@ -125415,9 +127093,9 @@
       "horsepower": 1519.0,
       "weight": 63.0,
       "power_to_weight": 24.11,
-      "max_reverse_speed": 38.2,
+      "max_reverse_speed": 40.2,
       "reload_time": 5.0,
-      "penetration": 629.1,
+      "penetration": 633.425,
       "max_speed": 68.3,
       "crew_count": 5,
       "elevation_speed": 24.0,
@@ -125445,7 +127123,7 @@
       "stabilizer_value": 1,
       "elevation_range_value": 30.0,
       "mainGun": {
-        "name": "120mm_M256_M1A2",
+        "name": "120mm_M256_M1A3",
         "caliber": 120.0,
         "reloadTime": 5.0,
         "autoLoader": false,
@@ -125503,26 +127181,63 @@
           "tntEquivalent": 1.217
         },
         {
-          "name": "120mm_m829a2",
-          "localizedName": "M829A2",
+          "name": "120mm_m829a3",
+          "localizedName": "M829A3",
           "type": "apds_fs_long_l30_tank",
-          "caliber": 22.0,
-          "mass": 4.921,
-          "muzzleVelocity": 1680.0,
-          "lanzOdermatt": {
-            "workingLength": 680.0,
-            "density": 18600.0,
-            "material": "depletedUranium",
-            "Cx": 0.7687
-          },
-          "penetration0m": 629.1,
-          "penetrationData": {
-            "at0m": {
-              "angle0": 629.1,
-              "angle30": 544.8,
-              "angle60": 314.6
+          "caliber": 25.0,
+          "mass": 6.5,
+          "muzzleVelocity": 1555.0,
+          "armorPowerTable": [
+            {
+              "penetration": 633.425,
+              "distance": 10.0
+            },
+            {
+              "penetration": 631.675,
+              "distance": 100.0
+            },
+            {
+              "penetration": 624.05,
+              "distance": 500.0
+            },
+            {
+              "penetration": 614.325,
+              "distance": 1000.0
+            },
+            {
+              "penetration": 604.55,
+              "distance": 1500.0
+            },
+            {
+              "penetration": 594.525,
+              "distance": 2000.0
+            },
+            {
+              "penetration": 584.3,
+              "distance": 2500.0
+            },
+            {
+              "penetration": 573.95,
+              "distance": 3000.0
+            },
+            {
+              "penetration": 563.5,
+              "distance": 3500.0
+            },
+            {
+              "penetration": 552.85,
+              "distance": 4000.0
+            },
+            {
+              "penetration": 5.0,
+              "distance": 10000.0
+            },
+            {
+              "penetration": 0.0,
+              "distance": 20000.0
             }
-          }
+          ],
+          "penetration0m": 633.425
         },
         {
           "name": "120mm_m908",
@@ -125537,13 +127252,7 @@
           "tntEquivalent": 1.217
         }
       ],
-      "penetrationData": {
-        "at0m": {
-          "angle0": 629.1,
-          "angle30": 544.8,
-          "angle60": 314.6
-        }
-      },
+      "penetrationData": {},
       "autoLoader": false,
       "engine_manufacturer": "honeywell",
       "engine_model": "agt_1500",
@@ -125555,20 +127264,20 @@
       "forward_gears": 8,
       "reverse_gears": 4,
       "forward_gear_speeds": [
-        8.4,
-        15.9,
-        21.0,
-        31.2,
-        38.2,
-        49.2,
-        58.4,
+        7.4,
+        14.8,
+        19.6,
+        28.9,
+        35.5,
+        46.2,
+        55.1,
         68.3
       ],
       "reverse_gear_speeds": [
-        5.6,
-        11.3,
-        17.6,
-        38.2
+        5.3,
+        10.5,
+        16.4,
+        40.2
       ],
       "steer_type": "clutch_braking",
       "empty_weight": 62.0,
@@ -125626,14 +127335,14 @@
     }
   },
   {
-    "id": "us_m1a2_sep_abrams",
+    "id": "us_m1a2_sep2_abrams_trophy",
     "performance": {
       "horsepower": 1519.0,
-      "weight": 62.2,
-      "power_to_weight": 24.42,
-      "max_reverse_speed": 38.2,
+      "weight": 63.0,
+      "power_to_weight": 24.11,
+      "max_reverse_speed": 40.2,
       "reload_time": 5.0,
-      "penetration": 629.1,
+      "penetration": 633.425,
       "max_speed": 68.3,
       "crew_count": 5,
       "elevation_speed": 24.0,
@@ -125661,7 +127370,7 @@
       "stabilizer_value": 1,
       "elevation_range_value": 30.0,
       "mainGun": {
-        "name": "120mm_M256_M1A2",
+        "name": "120mm_M256_M1A3",
         "caliber": 120.0,
         "reloadTime": 5.0,
         "autoLoader": false,
@@ -125719,26 +127428,63 @@
           "tntEquivalent": 1.217
         },
         {
-          "name": "120mm_m829a2",
-          "localizedName": "M829A2",
+          "name": "120mm_m829a3",
+          "localizedName": "M829A3",
           "type": "apds_fs_long_l30_tank",
-          "caliber": 22.0,
-          "mass": 4.921,
-          "muzzleVelocity": 1680.0,
-          "lanzOdermatt": {
-            "workingLength": 680.0,
-            "density": 18600.0,
-            "material": "depletedUranium",
-            "Cx": 0.7687
-          },
-          "penetration0m": 629.1,
-          "penetrationData": {
-            "at0m": {
-              "angle0": 629.1,
-              "angle30": 544.8,
-              "angle60": 314.6
+          "caliber": 25.0,
+          "mass": 6.5,
+          "muzzleVelocity": 1555.0,
+          "armorPowerTable": [
+            {
+              "penetration": 633.425,
+              "distance": 10.0
+            },
+            {
+              "penetration": 631.675,
+              "distance": 100.0
+            },
+            {
+              "penetration": 624.05,
+              "distance": 500.0
+            },
+            {
+              "penetration": 614.325,
+              "distance": 1000.0
+            },
+            {
+              "penetration": 604.55,
+              "distance": 1500.0
+            },
+            {
+              "penetration": 594.525,
+              "distance": 2000.0
+            },
+            {
+              "penetration": 584.3,
+              "distance": 2500.0
+            },
+            {
+              "penetration": 573.95,
+              "distance": 3000.0
+            },
+            {
+              "penetration": 563.5,
+              "distance": 3500.0
+            },
+            {
+              "penetration": 552.85,
+              "distance": 4000.0
+            },
+            {
+              "penetration": 5.0,
+              "distance": 10000.0
+            },
+            {
+              "penetration": 0.0,
+              "distance": 20000.0
             }
-          }
+          ],
+          "penetration0m": 633.425
         },
         {
           "name": "120mm_m908",
@@ -125753,13 +127499,7 @@
           "tntEquivalent": 1.217
         }
       ],
-      "penetrationData": {
-        "at0m": {
-          "angle0": 629.1,
-          "angle30": 544.8,
-          "angle60": 314.6
-        }
-      },
+      "penetrationData": {},
       "autoLoader": false,
       "engine_manufacturer": "honeywell",
       "engine_model": "agt_1500",
@@ -125771,20 +127511,507 @@
       "forward_gears": 8,
       "reverse_gears": 4,
       "forward_gear_speeds": [
-        8.4,
-        15.9,
-        21.0,
-        31.2,
-        38.2,
-        49.2,
-        58.4,
+        7.4,
+        14.8,
+        19.6,
+        28.9,
+        35.5,
+        46.2,
+        55.1,
         68.3
       ],
       "reverse_gear_speeds": [
-        5.6,
-        11.3,
-        17.6,
-        38.2
+        5.3,
+        10.5,
+        16.4,
+        40.2
+      ],
+      "steer_type": "clutch_braking",
+      "empty_weight": 62.0,
+      "track_width": 0.635,
+      "secondary_weapons": [
+        {
+          "trigger": "gunner1",
+          "name": "12_7mm_M2_HB_for_400",
+          "caliber": 12.7,
+          "ammo": 800,
+          "reloadTime": 8.0,
+          "rateOfFire": 575,
+          "bulletType": "ap_i_t_ball_M20"
+        },
+        {
+          "trigger": "gunner2",
+          "name": "7_62mm_M240",
+          "caliber": 7.6,
+          "ammo": 1400,
+          "reloadTime": 8.0,
+          "rateOfFire": 940,
+          "bulletType": "ap_ball"
+        },
+        {
+          "trigger": "gunner3",
+          "name": "7_62mm_M240",
+          "caliber": 7.6,
+          "ammo": 10000,
+          "reloadTime": 8.0,
+          "rateOfFire": 940,
+          "bulletType": "ap_ball"
+        },
+        {
+          "trigger": "gunner5",
+          "name": "66mm_modern_us_smoke_grenade_launcher",
+          "caliber": 0,
+          "ammo": 12,
+          "rateOfFire": 2400
+        }
+      ],
+      "main_gun_ammo": 42,
+      "driver_nv_resolution": null,
+      "has_smoke_grenades": true,
+      "has_ess": true,
+      "has_laser_rangefinder": true
+    }
+  },
+  {
+    "id": "us_m1a2_sep3_abrams",
+    "performance": {
+      "horsepower": 1519.0,
+      "weight": 63.0,
+      "power_to_weight": 24.11,
+      "max_reverse_speed": 40.2,
+      "reload_time": 5.0,
+      "penetration": 633.425,
+      "max_speed": 68.3,
+      "crew_count": 5,
+      "elevation_speed": 24.0,
+      "traverse_speed": 40.0,
+      "has_stabilizer": true,
+      "stabilizer_type": "both",
+      "elevation_range": [
+        -10.0,
+        20.0
+      ],
+      "traverse_range": [
+        -180.0,
+        180.0
+      ],
+      "gunner_thermal_resolution": [
+        800,
+        600
+      ],
+      "commander_thermal_resolution": [
+        800,
+        600
+      ],
+      "gunner_thermal_diagonal": 1000.0,
+      "commander_thermal_diagonal": 1000.0,
+      "stabilizer_value": 1,
+      "elevation_range_value": 30.0,
+      "mainGun": {
+        "name": "120mm_M256_M1A3",
+        "caliber": 120.0,
+        "reloadTime": 5.0,
+        "autoLoader": false,
+        "reloadTimes": {
+          "base": 6.5,
+          "expert": 5.75,
+          "ace": 5.0
+        }
+      },
+      "ammunitions": [
+        {
+          "name": "120mm_m830",
+          "localizedName": "M830",
+          "type": "heat_fs_tank",
+          "caliber": 120.0,
+          "mass": 13.1,
+          "muzzleVelocity": 1140.0,
+          "penetration0m": 480.0,
+          "explosiveMassKg": 1.64,
+          "explosiveType": "comp_a",
+          "tntEquivalent": 2.066
+        },
+        {
+          "name": "120mm_m829",
+          "localizedName": "M829",
+          "type": "apds_fs_long_tank",
+          "caliber": 27.0,
+          "mass": 4.268,
+          "muzzleVelocity": 1670.0,
+          "lanzOdermatt": {
+            "workingLength": 460.0,
+            "density": 18600.0,
+            "material": "depletedUranium",
+            "Cx": 0.4603
+          },
+          "penetration0m": 469.3,
+          "penetrationData": {
+            "at0m": {
+              "angle0": 469.3,
+              "angle30": 406.4,
+              "angle60": 234.7
+            }
+          }
+        },
+        {
+          "name": "120mm_m830a1",
+          "localizedName": "M830A1",
+          "type": "heat_mp_vt_tank",
+          "caliber": 120.0,
+          "mass": 11.4,
+          "muzzleVelocity": 1410.0,
+          "penetration0m": 350.0,
+          "explosiveMassKg": 0.966,
+          "explosiveType": "comp_a",
+          "tntEquivalent": 1.217
+        },
+        {
+          "name": "120mm_m829a3",
+          "localizedName": "M829A3",
+          "type": "apds_fs_long_l30_tank",
+          "caliber": 25.0,
+          "mass": 6.5,
+          "muzzleVelocity": 1555.0,
+          "armorPowerTable": [
+            {
+              "penetration": 633.425,
+              "distance": 10.0
+            },
+            {
+              "penetration": 631.675,
+              "distance": 100.0
+            },
+            {
+              "penetration": 624.05,
+              "distance": 500.0
+            },
+            {
+              "penetration": 614.325,
+              "distance": 1000.0
+            },
+            {
+              "penetration": 604.55,
+              "distance": 1500.0
+            },
+            {
+              "penetration": 594.525,
+              "distance": 2000.0
+            },
+            {
+              "penetration": 584.3,
+              "distance": 2500.0
+            },
+            {
+              "penetration": 573.95,
+              "distance": 3000.0
+            },
+            {
+              "penetration": 563.5,
+              "distance": 3500.0
+            },
+            {
+              "penetration": 552.85,
+              "distance": 4000.0
+            },
+            {
+              "penetration": 5.0,
+              "distance": 10000.0
+            },
+            {
+              "penetration": 0.0,
+              "distance": 20000.0
+            }
+          ],
+          "penetration0m": 633.425
+        },
+        {
+          "name": "120mm_m908",
+          "localizedName": "M908",
+          "type": "he_or_tank",
+          "caliber": 80.0,
+          "mass": 11.4,
+          "muzzleVelocity": 1410.0,
+          "penetration0m": 300.0,
+          "explosiveMassKg": 0.966,
+          "explosiveType": "comp_a",
+          "tntEquivalent": 1.217
+        },
+        {
+          "name": "120mm_xm1147",
+          "localizedName": "XM1147",
+          "type": "he_frag_dist_fuse",
+          "caliber": 120.0,
+          "mass": 13.0,
+          "muzzleVelocity": 1150.0,
+          "explosiveMassKg": 2.3,
+          "explosiveType": "pax_3",
+          "tntEquivalent": 3.22
+        }
+      ],
+      "penetrationData": {},
+      "autoLoader": false,
+      "engine_manufacturer": "honeywell",
+      "engine_model": "agt_1500",
+      "engine_type": "gasturbine",
+      "engine_max_rpm": 3000.0,
+      "transmission_manufacturer": "allison",
+      "transmission_model": "x_1100_3b",
+      "transmission_type": "auto",
+      "forward_gears": 8,
+      "reverse_gears": 4,
+      "forward_gear_speeds": [
+        7.4,
+        14.8,
+        19.6,
+        28.9,
+        35.5,
+        46.2,
+        55.1,
+        68.3
+      ],
+      "reverse_gear_speeds": [
+        5.3,
+        10.5,
+        16.4,
+        40.2
+      ],
+      "steer_type": "clutch_braking",
+      "empty_weight": 62.0,
+      "track_width": 0.635,
+      "secondary_weapons": [
+        {
+          "trigger": "gunner1",
+          "name": "12_7mm_M2_HB_for_400",
+          "caliber": 12.7,
+          "ammo": 800,
+          "reloadTime": 8.0,
+          "rateOfFire": 575,
+          "bulletType": "ap_i_t_ball_M20"
+        },
+        {
+          "trigger": "gunner2",
+          "name": "7_62mm_M240",
+          "caliber": 7.6,
+          "ammo": 1400,
+          "reloadTime": 8.0,
+          "rateOfFire": 940,
+          "bulletType": "ap_ball"
+        },
+        {
+          "trigger": "gunner3",
+          "name": "7_62mm_M240",
+          "caliber": 7.6,
+          "ammo": 10000,
+          "reloadTime": 8.0,
+          "rateOfFire": 940,
+          "bulletType": "ap_ball"
+        },
+        {
+          "trigger": "gunner5",
+          "name": "66mm_modern_us_smoke_grenade_launcher",
+          "caliber": 0,
+          "ammo": 12,
+          "rateOfFire": 2400
+        }
+      ],
+      "main_gun_ammo": 42,
+      "driver_nv_resolution": null,
+      "has_smoke_grenades": true,
+      "has_ess": true,
+      "has_laser_rangefinder": true
+    }
+  },
+  {
+    "id": "us_m1a2_sep_abrams",
+    "performance": {
+      "horsepower": 1519.0,
+      "weight": 62.2,
+      "power_to_weight": 24.42,
+      "max_reverse_speed": 40.2,
+      "reload_time": 5.0,
+      "penetration": 633.425,
+      "max_speed": 68.3,
+      "crew_count": 5,
+      "elevation_speed": 24.0,
+      "traverse_speed": 40.0,
+      "has_stabilizer": true,
+      "stabilizer_type": "both",
+      "elevation_range": [
+        -10.0,
+        20.0
+      ],
+      "traverse_range": [
+        -180.0,
+        180.0
+      ],
+      "gunner_thermal_resolution": [
+        800,
+        600
+      ],
+      "commander_thermal_resolution": [
+        800,
+        600
+      ],
+      "gunner_thermal_diagonal": 1000.0,
+      "commander_thermal_diagonal": 1000.0,
+      "stabilizer_value": 1,
+      "elevation_range_value": 30.0,
+      "mainGun": {
+        "name": "120mm_M256_M1A3",
+        "caliber": 120.0,
+        "reloadTime": 5.0,
+        "autoLoader": false,
+        "reloadTimes": {
+          "base": 6.5,
+          "expert": 5.75,
+          "ace": 5.0
+        }
+      },
+      "ammunitions": [
+        {
+          "name": "120mm_m830",
+          "localizedName": "M830",
+          "type": "heat_fs_tank",
+          "caliber": 120.0,
+          "mass": 13.1,
+          "muzzleVelocity": 1140.0,
+          "penetration0m": 480.0,
+          "explosiveMassKg": 1.64,
+          "explosiveType": "comp_a",
+          "tntEquivalent": 2.066
+        },
+        {
+          "name": "120mm_m829",
+          "localizedName": "M829",
+          "type": "apds_fs_long_tank",
+          "caliber": 27.0,
+          "mass": 4.268,
+          "muzzleVelocity": 1670.0,
+          "lanzOdermatt": {
+            "workingLength": 460.0,
+            "density": 18600.0,
+            "material": "depletedUranium",
+            "Cx": 0.4603
+          },
+          "penetration0m": 469.3,
+          "penetrationData": {
+            "at0m": {
+              "angle0": 469.3,
+              "angle30": 406.4,
+              "angle60": 234.7
+            }
+          }
+        },
+        {
+          "name": "120mm_m830a1",
+          "localizedName": "M830A1",
+          "type": "heat_mp_vt_tank",
+          "caliber": 120.0,
+          "mass": 11.4,
+          "muzzleVelocity": 1410.0,
+          "penetration0m": 350.0,
+          "explosiveMassKg": 0.966,
+          "explosiveType": "comp_a",
+          "tntEquivalent": 1.217
+        },
+        {
+          "name": "120mm_m829a3",
+          "localizedName": "M829A3",
+          "type": "apds_fs_long_l30_tank",
+          "caliber": 25.0,
+          "mass": 6.5,
+          "muzzleVelocity": 1555.0,
+          "armorPowerTable": [
+            {
+              "penetration": 633.425,
+              "distance": 10.0
+            },
+            {
+              "penetration": 631.675,
+              "distance": 100.0
+            },
+            {
+              "penetration": 624.05,
+              "distance": 500.0
+            },
+            {
+              "penetration": 614.325,
+              "distance": 1000.0
+            },
+            {
+              "penetration": 604.55,
+              "distance": 1500.0
+            },
+            {
+              "penetration": 594.525,
+              "distance": 2000.0
+            },
+            {
+              "penetration": 584.3,
+              "distance": 2500.0
+            },
+            {
+              "penetration": 573.95,
+              "distance": 3000.0
+            },
+            {
+              "penetration": 563.5,
+              "distance": 3500.0
+            },
+            {
+              "penetration": 552.85,
+              "distance": 4000.0
+            },
+            {
+              "penetration": 5.0,
+              "distance": 10000.0
+            },
+            {
+              "penetration": 0.0,
+              "distance": 20000.0
+            }
+          ],
+          "penetration0m": 633.425
+        },
+        {
+          "name": "120mm_m908",
+          "localizedName": "M908",
+          "type": "he_or_tank",
+          "caliber": 80.0,
+          "mass": 11.4,
+          "muzzleVelocity": 1410.0,
+          "penetration0m": 300.0,
+          "explosiveMassKg": 0.966,
+          "explosiveType": "comp_a",
+          "tntEquivalent": 1.217
+        }
+      ],
+      "penetrationData": {},
+      "autoLoader": false,
+      "engine_manufacturer": "honeywell",
+      "engine_model": "agt_1500",
+      "engine_type": "gasturbine",
+      "engine_max_rpm": 3000.0,
+      "transmission_manufacturer": "allison",
+      "transmission_model": "x_1100_3b",
+      "transmission_type": "auto",
+      "forward_gears": 8,
+      "reverse_gears": 4,
+      "forward_gear_speeds": [
+        7.4,
+        14.8,
+        19.6,
+        28.9,
+        35.5,
+        46.2,
+        55.1,
+        68.3
+      ],
+      "reverse_gear_speeds": [
+        5.3,
+        10.5,
+        16.4,
+        40.2
       ],
       "steer_type": "clutch_braking",
       "empty_weight": 61.2,
@@ -127830,7 +130057,7 @@
       "power_to_weight": 14.45,
       "max_reverse_speed": 5.0,
       "reload_time": 2.86,
-      "penetration": 87.7,
+      "penetration": 85.9,
       "max_speed": 38.6,
       "crew_count": 5,
       "elevation_speed": 4.0,
@@ -127878,18 +130105,32 @@
           "penetration0m": 79.0
         },
         {
+          "name": "37mm_m74",
+          "localizedName": "M74",
+          "type": "ap_tank",
+          "caliber": 37.0,
+          "mass": 0.87,
+          "muzzleVelocity": 870.0,
+          "deMarre": {
+            "fullCaliber": 37.0,
+            "isApcbc": false,
+            "explosiveMass": 0
+          },
+          "penetration0m": 77.3
+        },
+        {
           "name": "37mm_m51b1",
           "localizedName": "M51B1 shot",
           "type": "apcbc_solid_medium_caliber_tank",
           "caliber": 37.0,
           "mass": 0.87,
-          "muzzleVelocity": 883.0,
+          "muzzleVelocity": 870.0,
           "deMarre": {
             "fullCaliber": 37.0,
             "isApcbc": true,
             "explosiveMass": 0
           },
-          "penetration0m": 87.7
+          "penetration0m": 85.9
         }
       ],
       "penetrationData": null,
@@ -133685,6 +135926,216 @@
     }
   },
   {
+    "id": "us_m60a1_rise_mod",
+    "performance": {
+      "horsepower": 750.0,
+      "weight": 53.16,
+      "power_to_weight": 14.11,
+      "max_reverse_speed": 8.3,
+      "reload_time": 6.67,
+      "penetration": 292.4,
+      "max_speed": 47.7,
+      "crew_count": 5,
+      "elevation_speed": 4.0,
+      "traverse_speed": 22.5,
+      "has_stabilizer": true,
+      "stabilizer_type": "both",
+      "elevation_range": [
+        -10.0,
+        20.0
+      ],
+      "traverse_range": [
+        -180.0,
+        180.0
+      ],
+      "gunner_thermal_resolution": null,
+      "commander_thermal_resolution": null,
+      "gunner_thermal_diagonal": null,
+      "commander_thermal_diagonal": null,
+      "stabilizer_value": 1,
+      "elevation_range_value": 30.0,
+      "mainGun": {
+        "name": "105mm_M68_XM",
+        "caliber": 105.0,
+        "reloadTime": 6.67,
+        "autoLoader": false,
+        "reloadTimes": {
+          "base": 8.67,
+          "expert": 7.67,
+          "ace": 6.67
+        }
+      },
+      "ammunitions": [
+        {
+          "name": "105mm_m728",
+          "localizedName": "M728",
+          "type": "apds_l15_tank",
+          "caliber": 61.0,
+          "mass": 4.53,
+          "muzzleVelocity": 1426.0,
+          "deMarre": {
+            "fullCaliber": 105.0,
+            "isApcbc": false,
+            "explosiveMass": 0,
+            "isApcr": true,
+            "coreCaliber": 61.0,
+            "coreMass": 3.2,
+            "Cx": 0.1761
+          },
+          "penetration0m": 211.2
+        },
+        {
+          "name": "105mm_m393a2",
+          "localizedName": "M393",
+          "type": "hesh_tank",
+          "caliber": 105.0,
+          "mass": 11.2,
+          "muzzleVelocity": 731.5,
+          "penetration0m": 127.0,
+          "explosiveMassKg": 2.9937,
+          "explosiveType": "comp_a",
+          "tntEquivalent": 3.772
+        },
+        {
+          "name": "105mm_m456",
+          "localizedName": "M456",
+          "type": "heat_fs_tank",
+          "caliber": 105.0,
+          "mass": 10.5,
+          "muzzleVelocity": 1173.5,
+          "penetration0m": 400.0,
+          "explosiveMassKg": 0.97,
+          "explosiveType": "comp_b",
+          "tntEquivalent": 1.232
+        },
+        {
+          "name": "105mm_m416",
+          "localizedName": "M416",
+          "type": "smoke_tank",
+          "caliber": 105.0,
+          "mass": 11.6,
+          "muzzleVelocity": 731.5,
+          "explosiveMassKg": 0.05,
+          "explosiveType": "smoke_composition",
+          "tntEquivalent": 0.05
+        },
+        {
+          "name": "105mm_m735",
+          "localizedName": "M735",
+          "type": "apds_fs_tungsten_l10_l15_tank",
+          "caliber": 31.8,
+          "mass": 3.719,
+          "muzzleVelocity": 1501.1,
+          "armorPowerTable": [
+            {
+              "penetration": 292.4,
+              "distance": 10.0
+            },
+            {
+              "penetration": 290.6,
+              "distance": 100.0
+            },
+            {
+              "penetration": 284.0,
+              "distance": 500.0
+            },
+            {
+              "penetration": 275.0,
+              "distance": 1000.0
+            },
+            {
+              "penetration": 265.9,
+              "distance": 1500.0
+            },
+            {
+              "penetration": 256.5,
+              "distance": 2000.0
+            },
+            {
+              "penetration": 246.7,
+              "distance": 2500.0
+            },
+            {
+              "penetration": 236.7,
+              "distance": 3000.0
+            },
+            {
+              "penetration": 215.5,
+              "distance": 4000.0
+            },
+            {
+              "penetration": 192.7,
+              "distance": 5000.0
+            },
+            {
+              "penetration": 50.0,
+              "distance": 10000.0
+            },
+            {
+              "penetration": 0.0,
+              "distance": 20000.0
+            }
+          ],
+          "penetration0m": 292.4
+        }
+      ],
+      "penetrationData": {},
+      "autoLoader": false,
+      "engine_manufacturer": null,
+      "engine_model": null,
+      "engine_type": null,
+      "engine_max_rpm": 2400.0,
+      "transmission_manufacturer": null,
+      "transmission_model": null,
+      "transmission_type": null,
+      "forward_gears": 6,
+      "reverse_gears": 2,
+      "forward_gear_speeds": [
+        8.6,
+        11.4,
+        17.2,
+        25.0,
+        33.9,
+        47.7
+      ],
+      "reverse_gear_speeds": [
+        6.1,
+        8.3
+      ],
+      "steer_type": "clutch_braking",
+      "empty_weight": 52.56,
+      "track_width": 0.55,
+      "secondary_weapons": [
+        {
+          "trigger": "gunner1",
+          "name": "12_7mm_M85",
+          "caliber": 12.7,
+          "ammo": 900,
+          "reloadTime": 8.0,
+          "rateOfFire": 625,
+          "bulletType": "ap_i_ball_M8"
+        },
+        {
+          "trigger": "gunner2",
+          "name": "7_62mm_M240",
+          "caliber": 7.6,
+          "ammo": 6000,
+          "reloadTime": 8.0,
+          "rateOfFire": 940,
+          "bulletType": "ap_ball"
+        }
+      ],
+      "main_gun_ammo": 63,
+      "driver_nv_resolution": [
+        800,
+        600
+      ],
+      "has_smoke_grenades": true,
+      "has_ess": true,
+      "has_laser_rangefinder": false
+    }
+  },
+  {
     "id": "us_m60a1_rise_passive_era",
     "performance": {
       "horsepower": 750.0,
@@ -136353,7 +138804,7 @@
       "power_to_weight": 14.34,
       "max_reverse_speed": 5.0,
       "reload_time": 2.86,
-      "penetration": 87.7,
+      "penetration": 85.9,
       "max_speed": 38.7,
       "crew_count": 5,
       "elevation_speed": 4.0,
@@ -136401,18 +138852,32 @@
           "penetration0m": 79.0
         },
         {
+          "name": "37mm_m74",
+          "localizedName": "M74",
+          "type": "ap_tank",
+          "caliber": 37.0,
+          "mass": 0.87,
+          "muzzleVelocity": 870.0,
+          "deMarre": {
+            "fullCaliber": 37.0,
+            "isApcbc": false,
+            "explosiveMass": 0
+          },
+          "penetration0m": 77.3
+        },
+        {
           "name": "37mm_m51b1",
           "localizedName": "M51B1 shot",
           "type": "apcbc_solid_medium_caliber_tank",
           "caliber": 37.0,
           "mass": 0.87,
-          "muzzleVelocity": 883.0,
+          "muzzleVelocity": 870.0,
           "deMarre": {
             "fullCaliber": 37.0,
             "isApcbc": true,
             "explosiveMass": 0
           },
-          "penetration0m": 87.7
+          "penetration0m": 85.9
         }
       ],
       "penetrationData": null,
@@ -136569,7 +139034,7 @@
       "ammunitions": [
         {
           "name": "us_aim_9x_block_2",
-          "localizedName": "AIM-9X Block 2",
+          "localizedName": "AIM-9X Block II",
           "type": "sam_tank",
           "caliber": 127.0,
           "mass": 88.0,
@@ -144592,7 +147057,7 @@
       ],
       "steer_type": "clutch_braking",
       "empty_weight": 12.7,
-      "track_width": 0.35,
+      "track_width": 0.28,
       "secondary_weapons": [
         {
           "trigger": "gunner1",
@@ -149148,7 +151613,16 @@
           "trigger": "gunner1",
           "name": "7_62mm_DT",
           "caliber": 7.6,
-          "ammo": 3024,
+          "ammo": 2024,
+          "reloadTime": 8.0,
+          "rateOfFire": 600,
+          "bulletType": "ap_i_ball"
+        },
+        {
+          "trigger": "gunner4",
+          "name": "7_62mm_DT",
+          "caliber": 7.6,
+          "ammo": 1000,
           "reloadTime": 8.0,
           "rateOfFire": 600,
           "bulletType": "ap_i_ball"
@@ -149427,7 +151901,16 @@
           "trigger": "gunner1",
           "name": "7_62mm_DT",
           "caliber": 7.6,
-          "ammo": 3024,
+          "ammo": 2024,
+          "reloadTime": 8.0,
+          "rateOfFire": 600,
+          "bulletType": "ap_i_ball"
+        },
+        {
+          "trigger": "gunner4",
+          "name": "7_62mm_DT",
+          "caliber": 7.6,
+          "ammo": 1000,
           "reloadTime": 8.0,
           "rateOfFire": 600,
           "bulletType": "ap_i_ball"
@@ -149567,7 +152050,16 @@
           "trigger": "gunner1",
           "name": "7_62mm_DT",
           "caliber": 7.6,
-          "ammo": 3087,
+          "ammo": 2087,
+          "reloadTime": 8.0,
+          "rateOfFire": 600,
+          "bulletType": "ap_i_ball"
+        },
+        {
+          "trigger": "gunner4",
+          "name": "7_62mm_DT",
+          "caliber": 7.6,
+          "ammo": 1000,
           "reloadTime": 8.0,
           "rateOfFire": 600,
           "bulletType": "ap_i_ball"
@@ -150510,7 +153002,7 @@
       "power_to_weight": 14.45,
       "max_reverse_speed": 5.0,
       "reload_time": 2.86,
-      "penetration": 87.7,
+      "penetration": 85.9,
       "max_speed": 38.6,
       "crew_count": 5,
       "elevation_speed": 4.0,
@@ -150558,18 +153050,32 @@
           "penetration0m": 79.0
         },
         {
+          "name": "37mm_m74",
+          "localizedName": "M74",
+          "type": "ap_tank",
+          "caliber": 37.0,
+          "mass": 0.87,
+          "muzzleVelocity": 870.0,
+          "deMarre": {
+            "fullCaliber": 37.0,
+            "isApcbc": false,
+            "explosiveMass": 0
+          },
+          "penetration0m": 77.3
+        },
+        {
           "name": "37mm_m51b1",
           "localizedName": "M51B1 shot",
           "type": "apcbc_solid_medium_caliber_tank",
           "caliber": 37.0,
           "mass": 0.87,
-          "muzzleVelocity": 883.0,
+          "muzzleVelocity": 870.0,
           "deMarre": {
             "fullCaliber": 37.0,
             "isApcbc": true,
             "explosiveMass": 0
           },
-          "penetration0m": 87.7
+          "penetration0m": 85.9
         }
       ],
       "penetrationData": null,
@@ -166414,6 +168920,228 @@
         }
       ],
       "main_gun_ammo": 40,
+      "driver_nv_resolution": [
+        800,
+        600
+      ],
+      "has_smoke_grenades": true,
+      "has_ess": true,
+      "has_laser_rangefinder": true
+    }
+  },
+  {
+    "id": "ussr_t_90m_arena_m",
+    "performance": {
+      "horsepower": 1130.0,
+      "weight": 50.0,
+      "power_to_weight": 22.6,
+      "max_reverse_speed": 4.2,
+      "reload_time": 7.0,
+      "penetration": 580.3,
+      "max_speed": 60.0,
+      "crew_count": 5,
+      "elevation_speed": 40.0,
+      "traverse_speed": 40.0,
+      "has_stabilizer": true,
+      "stabilizer_type": "both",
+      "elevation_range": [
+        -6.0,
+        13.78
+      ],
+      "traverse_range": [
+        -180.0,
+        180.0
+      ],
+      "gunner_thermal_resolution": [
+        800,
+        600
+      ],
+      "commander_thermal_resolution": [
+        800,
+        600
+      ],
+      "gunner_thermal_diagonal": 1000.0,
+      "commander_thermal_diagonal": 1000.0,
+      "stabilizer_value": 1,
+      "elevation_range_value": 19.8,
+      "mainGun": {
+        "name": "125mm_2A46_M5",
+        "caliber": 125.0,
+        "reloadTime": 7.0,
+        "autoLoader": true,
+        "reloadTimes": {
+          "base": 7.0,
+          "expert": 7.0,
+          "ace": 7.0
+        }
+      },
+      "ammunitions": [
+        {
+          "name": "125mm_3bk_18m",
+          "localizedName": "3BK18M",
+          "type": "heat_fs_tank",
+          "caliber": 125.0,
+          "mass": 19.0,
+          "muzzleVelocity": 905.0,
+          "penetration0m": 550.0,
+          "explosiveMassKg": 1.754,
+          "explosiveType": "ocfol",
+          "tntEquivalent": 2.578
+        },
+        {
+          "name": "125mm_3of_26",
+          "localizedName": "3OF26",
+          "type": "he_frag_fs_tank",
+          "caliber": 125.0,
+          "mass": 23.0,
+          "muzzleVelocity": 850.0,
+          "explosiveMassKg": 3.402,
+          "explosiveType": "a_ix_2",
+          "tntEquivalent": 4.763
+        },
+        {
+          "name": "125mm_3of_82",
+          "localizedName": "3OF82",
+          "type": "he_frag_dist_fuse",
+          "caliber": 125.0,
+          "mass": 23.0,
+          "muzzleVelocity": 850.0,
+          "explosiveMassKg": 3.0,
+          "explosiveType": "a_ix_2",
+          "tntEquivalent": 4.2
+        },
+        {
+          "name": "125mm_3bm60",
+          "localizedName": "3BM60",
+          "type": "apds_fs_long_l30_tank",
+          "caliber": 22.0,
+          "mass": 5.12,
+          "muzzleVelocity": 1660.0,
+          "lanzOdermatt": {
+            "workingLength": 640.0,
+            "density": 17500.0,
+            "material": "tungsten",
+            "Cx": 0.843
+          },
+          "penetration0m": 580.3,
+          "penetrationData": {
+            "at0m": {
+              "angle0": 580.3,
+              "angle30": 502.6,
+              "angle60": 290.2
+            }
+          }
+        },
+        {
+          "name": "125mm_3bm42",
+          "localizedName": "3BM42",
+          "type": "apds_fs_tungsten_caliber_fins_tank",
+          "caliber": 32.0,
+          "mass": 4.85,
+          "muzzleVelocity": 1700.0,
+          "armorPowerTable": [
+            {
+              "penetration": 457.0,
+              "distance": 10.0
+            },
+            {
+              "penetration": 454.0,
+              "distance": 100.0
+            },
+            {
+              "penetration": 445.0,
+              "distance": 500.0
+            },
+            {
+              "penetration": 431.0,
+              "distance": 1000.0
+            },
+            {
+              "penetration": 419.0,
+              "distance": 1500.0
+            },
+            {
+              "penetration": 406.0,
+              "distance": 2000.0
+            },
+            {
+              "penetration": 380.0,
+              "distance": 3000.0
+            },
+            {
+              "penetration": 5.0,
+              "distance": 10000.0
+            },
+            {
+              "penetration": 0.0,
+              "distance": 20000.0
+            }
+          ],
+          "penetration0m": 457.0
+        },
+        {
+          "name": "125mm_9m_119m1",
+          "localizedName": "9M119M1​“反​射”",
+          "type": "atgm_tandem_tank",
+          "caliber": 125.0,
+          "mass": 17.2,
+          "muzzleVelocity": 470.0,
+          "penetration0m": 850.0
+        }
+      ],
+      "penetrationData": {
+        "at0m": {
+          "angle0": 580.3,
+          "angle30": 502.6,
+          "angle60": 290.2
+        }
+      },
+      "autoLoader": true,
+      "engine_manufacturer": "chtz",
+      "engine_model": "v_92s2f",
+      "engine_type": null,
+      "engine_max_rpm": 2000.0,
+      "transmission_manufacturer": null,
+      "transmission_model": null,
+      "transmission_type": null,
+      "forward_gears": 7,
+      "reverse_gears": 1,
+      "forward_gear_speeds": [
+        7.3,
+        13.6,
+        17.2,
+        21.5,
+        29.6,
+        40.9,
+        60.0
+      ],
+      "reverse_gear_speeds": [
+        4.2
+      ],
+      "steer_type": "clutch_braking",
+      "empty_weight": 49.5,
+      "track_width": 0.584,
+      "secondary_weapons": [
+        {
+          "trigger": "gunner1",
+          "name": "7_62mm_PKT",
+          "caliber": 7.6,
+          "ammo": 2000,
+          "reloadTime": 8.0,
+          "rateOfFire": 700,
+          "bulletType": "ap_i_ball"
+        },
+        {
+          "trigger": "gunner2",
+          "name": "12_7mm_6P50_Kord_t_90m_2020",
+          "caliber": 12.7,
+          "ammo": 300,
+          "reloadTime": 5.0,
+          "rateOfFire": 700,
+          "bulletType": "ap_i_t_ball"
+        }
+      ],
+      "main_gun_ammo": 30,
       "driver_nv_resolution": [
         800,
         600

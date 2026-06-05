@@ -6,7 +6,7 @@
     "power_to_weight": 12.0,
     "max_reverse_speed": 7.2,
     "reload_time": 0.24,
-    "penetration": 49.7,
+    "penetration": 52.6,
     "max_speed": 38.7,
     "crew_count": 5,
     "elevation_speed": 20.0,
@@ -46,26 +46,26 @@
         "localizedName": "Sprgr. 18",
         "type": "frag_i_t",
         "caliber": 37.0,
-        "mass": 0.62,
-        "muzzleVelocity": 820.0,
-        "explosiveMassKg": 0.029,
+        "mass": 0.612,
+        "muzzleVelocity": 840.0,
+        "explosiveMassKg": 0.026,
         "explosiveType": "np_10",
-        "tntEquivalent": 0.038
+        "tntEquivalent": 0.034
       },
       {
         "name": "37mm_pzgr_belt",
         "localizedName": "PzGr",
         "type": "aphe",
         "caliber": 37.0,
-        "mass": 0.685,
-        "muzzleVelocity": 770.0,
+        "mass": 0.7,
+        "muzzleVelocity": 790.0,
         "deMarre": {
           "fullCaliber": 37.0,
           "isApcbc": false,
           "explosiveMass": 0.013,
           "Cx": 0.6
         },
-        "penetration0m": 49.7,
+        "penetration0m": 52.6,
         "explosiveMassKg": 0.013,
         "explosiveType": "petn",
         "tntEquivalent": 0.017
@@ -75,8 +75,8 @@
         "localizedName": "M.Gr. 18",
         "type": "he_i_t",
         "caliber": 37.0,
-        "mass": 0.55,
-        "muzzleVelocity": 914.0,
+        "mass": 0.565,
+        "muzzleVelocity": 900.0,
         "explosiveMassKg": 0.09,
         "explosiveType": "hta",
         "tntEquivalent": 0.115

@@ -1,0 +1,30 @@
+{
+  "id": "fr_battleship_richelieu_class_jean_bart",
+  "economy": {
+    "researchCost": 400000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 9270,
+    "crewTraining": 10000,
+    "expertTraining": 1890000,
+    "aceTrainingGE": 2800,
+    "aceTrainingRP": 2150000,
+    "repairCost": {
+      "arcade": [
+        19621,
+        19621
+      ],
+      "realistic": [
+        16865,
+        16865
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 9.0,
+      "realistic": 12.0,
+      "simulator": 1.0
+    },
+    "expMultiplier": 2.32,
+    "freeRepairs": 30
+  },
+  "weapons": null
+}

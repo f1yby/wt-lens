@@ -34,18 +34,7 @@
     "fixed_weapons": [],
     "payloads": [
       {
-        "name": "spitfire_lf_mk9c_cw_greece_bomb",
-        "weapons": [
-          {
-            "trigger": "",
-            "name": "",
-            "localizedName": "",
-            "count": 1
-          }
-        ]
-      },
-      {
-        "name": "spitfire_lf_mk9c_cw_greece_bomb_x2",
+        "name": "spitfire_ix_bombs_250lb_anm57_wing",
         "weapons": [
           {
             "trigger": "",
@@ -62,7 +51,24 @@
         ]
       },
       {
-        "name": "spitfire_lf_mk9c_cw_greece_bomb_m64",
+        "name": "spitfire_ix_bombs_250lb_gp_wing",
+        "weapons": [
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "spitfire_ix_bombs_250lb_anm57",
         "weapons": [
           {
             "trigger": "",
@@ -73,7 +79,40 @@
         ]
       },
       {
-        "name": "spitfire_lf_mk9c_cw_greece_bomb_sap",
+        "name": "spitfire_ix_bombs_250lb_gp",
+        "weapons": [
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "spitfire_ix_bombs_500lb_anm64a1",
+        "weapons": [
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "spitfire_ix_bombs_500lb_gp",
+        "weapons": [
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "spitfire_ix_bombs_500lb_sap",
         "weapons": [
           {
             "trigger": "",

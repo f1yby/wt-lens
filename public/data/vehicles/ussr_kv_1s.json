@@ -125,7 +125,16 @@
         "trigger": "gunner1",
         "name": "7_62mm_DT",
         "caliber": 7.6,
-        "ammo": 3087,
+        "ammo": 2087,
+        "reloadTime": 8.0,
+        "rateOfFire": 600,
+        "bulletType": "ap_i_ball"
+      },
+      {
+        "trigger": "gunner4",
+        "name": "7_62mm_DT",
+        "caliber": 7.6,
+        "ammo": 1000,
         "reloadTime": 8.0,
         "rateOfFire": 600,
         "bulletType": "ap_i_ball"

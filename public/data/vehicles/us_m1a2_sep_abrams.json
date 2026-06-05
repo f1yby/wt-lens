@@ -4,9 +4,9 @@
     "horsepower": 1519.0,
     "weight": 62.2,
     "power_to_weight": 24.42,
-    "max_reverse_speed": 38.2,
+    "max_reverse_speed": 40.2,
     "reload_time": 5.0,
-    "penetration": 629.1,
+    "penetration": 633.425,
     "max_speed": 68.3,
     "crew_count": 5,
     "elevation_speed": 24.0,
@@ -34,7 +34,7 @@
     "stabilizer_value": 1,
     "elevation_range_value": 30.0,
     "mainGun": {
-      "name": "120mm_M256_M1A2",
+      "name": "120mm_M256_M1A3",
       "caliber": 120.0,
       "reloadTime": 5.0,
       "autoLoader": false,
@@ -92,26 +92,63 @@
         "tntEquivalent": 1.217
       },
       {
-        "name": "120mm_m829a2",
-        "localizedName": "M829A2",
+        "name": "120mm_m829a3",
+        "localizedName": "M829A3",
         "type": "apds_fs_long_l30_tank",
-        "caliber": 22.0,
-        "mass": 4.921,
-        "muzzleVelocity": 1680.0,
-        "lanzOdermatt": {
-          "workingLength": 680.0,
-          "density": 18600.0,
-          "material": "depletedUranium",
-          "Cx": 0.7687
-        },
-        "penetration0m": 629.1,
-        "penetrationData": {
-          "at0m": {
-            "angle0": 629.1,
-            "angle30": 544.8,
-            "angle60": 314.6
+        "caliber": 25.0,
+        "mass": 6.5,
+        "muzzleVelocity": 1555.0,
+        "armorPowerTable": [
+          {
+            "penetration": 633.425,
+            "distance": 10.0
+          },
+          {
+            "penetration": 631.675,
+            "distance": 100.0
+          },
+          {
+            "penetration": 624.05,
+            "distance": 500.0
+          },
+          {
+            "penetration": 614.325,
+            "distance": 1000.0
+          },
+          {
+            "penetration": 604.55,
+            "distance": 1500.0
+          },
+          {
+            "penetration": 594.525,
+            "distance": 2000.0
+          },
+          {
+            "penetration": 584.3,
+            "distance": 2500.0
+          },
+          {
+            "penetration": 573.95,
+            "distance": 3000.0
+          },
+          {
+            "penetration": 563.5,
+            "distance": 3500.0
+          },
+          {
+            "penetration": 552.85,
+            "distance": 4000.0
+          },
+          {
+            "penetration": 5.0,
+            "distance": 10000.0
+          },
+          {
+            "penetration": 0.0,
+            "distance": 20000.0
           }
-        }
+        ],
+        "penetration0m": 633.425
       },
       {
         "name": "120mm_m908",
@@ -126,13 +163,7 @@
         "tntEquivalent": 1.217
       }
     ],
-    "penetrationData": {
-      "at0m": {
-        "angle0": 629.1,
-        "angle30": 544.8,
-        "angle60": 314.6
-      }
-    },
+    "penetrationData": {},
     "autoLoader": false,
     "engine_manufacturer": "honeywell",
     "engine_model": "agt_1500",
@@ -144,20 +175,20 @@
     "forward_gears": 8,
     "reverse_gears": 4,
     "forward_gear_speeds": [
-      8.4,
-      15.9,
-      21.0,
-      31.2,
-      38.2,
-      49.2,
-      58.4,
+      7.4,
+      14.8,
+      19.6,
+      28.9,
+      35.5,
+      46.2,
+      55.1,
       68.3
     ],
     "reverse_gear_speeds": [
-      5.6,
-      11.3,
-      17.6,
-      38.2
+      5.3,
+      10.5,
+      16.4,
+      40.2
     ],
     "steer_type": "clutch_braking",
     "empty_weight": 61.2,
@@ -205,31 +236,31 @@
     "has_laser_rangefinder": true
   },
   "economy": {
-    "researchCost": 200000,
-    "purchaseCost": 1100000,
+    "researchCost": 400000,
+    "purchaseCost": 1080000,
     "crewTraining": 310000,
-    "expertTraining": 1100000,
-    "aceTrainingGE": 2300,
-    "aceTrainingRP": 1350000,
+    "expertTraining": 1080000,
+    "aceTrainingGE": 2200,
+    "aceTrainingRP": 1280000,
     "repairCost": {
       "arcade": [
-        4291,
-        7012
+        4249,
+        6943
       ],
       "realistic": [
-        4159,
-        6796
+        4126,
+        6742
       ],
       "simulator": [
-        5264,
-        8602
+        5225,
+        8538
       ]
     },
     "rewardMultiplier": {
-      "arcade": 1.57,
-      "realistic": 1.96,
-      "simulator": 2.08
+      "arcade": 1.55,
+      "realistic": 1.94,
+      "simulator": 2.06
     },
-    "expMultiplier": 2.56
+    "expMultiplier": 2.5
   }
 }

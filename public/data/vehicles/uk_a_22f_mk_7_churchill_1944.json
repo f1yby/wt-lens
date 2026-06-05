@@ -6,7 +6,7 @@
     "power_to_weight": 8.41,
     "max_reverse_speed": 1.8,
     "reload_time": 5.0,
-    "penetration": 103.5,
+    "penetration": 104.0,
     "max_speed": 21.7,
     "crew_count": 5,
     "elevation_speed": 4.0,
@@ -14,7 +14,7 @@
     "has_stabilizer": false,
     "stabilizer_type": "none",
     "elevation_range": [
-      -12.0,
+      -12.5,
       20.0
     ],
     "traverse_range": [
@@ -26,7 +26,7 @@
     "gunner_thermal_diagonal": null,
     "commander_thermal_diagonal": null,
     "stabilizer_value": 0,
-    "elevation_range_value": 32.0,
+    "elevation_range_value": 32.5,
     "mainGun": {
       "name": "75mm_QQF_MkV",
       "caliber": 75.0,
@@ -77,19 +77,22 @@
         "tntEquivalent": 0.05
       },
       {
-        "name": "75mm_m61_solid",
-        "localizedName": "M61 shot",
-        "type": "apcbc_solid_medium_caliber_tank",
+        "name": "75mm_m61",
+        "localizedName": "M61",
+        "type": "apcbc_tank",
         "caliber": 75.0,
-        "mass": 6.53,
+        "mass": 6.79,
         "muzzleVelocity": 618.0,
         "deMarre": {
           "fullCaliber": 75.0,
           "isApcbc": true,
-          "explosiveMass": 0,
-          "Cx": 0.5
+          "explosiveMass": 0.065,
+          "Cx": 0.379
         },
-        "penetration0m": 103.5
+        "penetration0m": 104.0,
+        "explosiveMassKg": 0.065,
+        "explosiveType": "exp_d",
+        "tntEquivalent": 0.064
       }
     ],
     "penetrationData": null,

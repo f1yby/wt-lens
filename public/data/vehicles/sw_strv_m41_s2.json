@@ -1,13 +1,13 @@
 {
   "id": "sw_strv_m41_s2",
   "performance": {
-    "horsepower": 165.0,
+    "horsepower": 160.0,
     "weight": 10.5,
-    "power_to_weight": 15.71,
-    "max_reverse_speed": 5.9,
+    "power_to_weight": 15.24,
+    "max_reverse_speed": 5.3,
     "reload_time": 3.12,
     "penetration": 62.0,
-    "max_speed": 40.8,
+    "max_speed": 43.0,
     "crew_count": 5,
     "elevation_speed": 4.0,
     "traverse_speed": 14.0,
@@ -103,14 +103,14 @@
     "forward_gears": 5,
     "reverse_gears": 1,
     "forward_gear_speeds": [
-      4.0,
-      10.0,
-      16.0,
-      25.5,
-      40.8
+      4.2,
+      10.5,
+      16.9,
+      26.9,
+      43.0
     ],
     "reverse_gear_speeds": [
-      5.9
+      5.3
     ],
     "steer_type": "clutch_braking",
     "empty_weight": 10.3,

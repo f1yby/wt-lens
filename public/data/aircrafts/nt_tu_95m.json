@@ -34,7 +34,7 @@
         "name": "cannon_am23_tu_95_turret",
         "localizedName": "23 mm AM-23 cannon",
         "count": 6,
-        "bullets": 2500,
+        "bullets": 3400,
         "caliber": 23.0,
         "fireRate": 1250
       },
@@ -58,7 +58,7 @@
           {
             "trigger": "bombs",
             "name": "su_rds37",
-            "localizedName": "RDS-37 nuclear bomb (1.6 Mt)",
+            "localizedName": "RDS-37 thermonuclear bomb (1.6 Mt)",
             "count": 1
           }
         ]
