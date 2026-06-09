@@ -1,9 +1,9 @@
 {
   "id": "it_palmaria",
   "performance": {
-    "horsepower": 740.0,
+    "horsepower": 750.0,
     "weight": 46.0,
-    "power_to_weight": 16.09,
+    "power_to_weight": 16.3,
     "max_reverse_speed": 24.0,
     "reload_time": 10.0,
     "penetration": null,
@@ -46,6 +46,17 @@
         "caliber": 155.0,
         "mass": 43.1,
         "muzzleVelocity": 827.0,
+        "explosiveMassKg": 6.98,
+        "explosiveType": "comp_b",
+        "tntEquivalent": 8.865
+      },
+      {
+        "name": "155mm_m107_pf",
+        "localizedName": "M107 (PF)",
+        "type": "he_frag_radio_fuse",
+        "caliber": 155.0,
+        "mass": 43.1,
+        "muzzleVelocity": 580.0,
         "explosiveMassKg": 6.98,
         "explosiveType": "comp_b",
         "tntEquivalent": 8.865

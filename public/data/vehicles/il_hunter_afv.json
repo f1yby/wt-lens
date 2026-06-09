@@ -172,7 +172,7 @@
     ],
     "has_smoke_grenades": true,
     "has_ess": false,
-    "has_laser_rangefinder": false
+    "has_laser_rangefinder": true
   },
   "economy": {
     "researchCost": 260000,
@@ -183,15 +183,15 @@
     "aceTrainingRP": 1080000,
     "repairCost": {
       "arcade": [
-        4003,
+        3905,
         6530
       ],
       "realistic": [
-        3710,
+        3619,
         6053
       ],
       "simulator": [
-        4427,
+        4318,
         7221
       ]
     },

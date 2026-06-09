@@ -6163,8 +6163,8 @@
       "penetration": 86.5,
       "max_speed": 50.0,
       "crew_count": 5,
-      "elevation_speed": 45.0,
-      "traverse_speed": 40.0,
+      "elevation_speed": 40.0,
+      "traverse_speed": 60.0,
       "has_stabilizer": true,
       "stabilizer_type": "both",
       "elevation_range": [
@@ -6254,7 +6254,7 @@
       ],
       "has_smoke_grenades": false,
       "has_ess": true,
-      "has_laser_rangefinder": false
+      "has_laser_rangefinder": true
     }
   },
   {
@@ -31115,7 +31115,7 @@
           "type": "heat_tank",
           "caliber": 150.0,
           "mass": 25.0,
-          "muzzleVelocity": 375.0,
+          "muzzleVelocity": 465.0,
           "penetration0m": 185.0,
           "explosiveMassKg": 4.16,
           "explosiveType": "rdx_tnt",
@@ -54214,7 +54214,7 @@
       ],
       "has_smoke_grenades": true,
       "has_ess": false,
-      "has_laser_rangefinder": false
+      "has_laser_rangefinder": true
     }
   },
   {
@@ -71907,9 +71907,9 @@
   {
     "id": "it_palmaria",
     "performance": {
-      "horsepower": 740.0,
+      "horsepower": 750.0,
       "weight": 46.0,
-      "power_to_weight": 16.09,
+      "power_to_weight": 16.3,
       "max_reverse_speed": 24.0,
       "reload_time": 10.0,
       "penetration": null,
@@ -71952,6 +71952,17 @@
           "caliber": 155.0,
           "mass": 43.1,
           "muzzleVelocity": 827.0,
+          "explosiveMassKg": 6.98,
+          "explosiveType": "comp_b",
+          "tntEquivalent": 8.865
+        },
+        {
+          "name": "155mm_m107_pf",
+          "localizedName": "M107 (PF)",
+          "type": "he_frag_radio_fuse",
+          "caliber": 155.0,
+          "mass": 43.1,
+          "muzzleVelocity": 580.0,
           "explosiveMassKg": 6.98,
           "explosiveType": "comp_b",
           "tntEquivalent": 8.865
@@ -114661,8 +114672,8 @@
     "id": "uk_m1a2_sep3_abrams",
     "performance": {
       "horsepower": 1519.0,
-      "weight": 63.0,
-      "power_to_weight": 24.11,
+      "weight": 66.76,
+      "power_to_weight": 22.75,
       "max_reverse_speed": 40.2,
       "reload_time": 5.0,
       "penetration": 628.3,
@@ -114807,7 +114818,7 @@
         40.2
       ],
       "steer_type": "clutch_braking",
-      "empty_weight": 62.0,
+      "empty_weight": 65.76,
       "track_width": 0.635,
       "secondary_weapons": [
         {
@@ -127091,8 +127102,8 @@
     "id": "us_m1a2_sep2_abrams",
     "performance": {
       "horsepower": 1519.0,
-      "weight": 63.0,
-      "power_to_weight": 24.11,
+      "weight": 64.3,
+      "power_to_weight": 23.62,
       "max_reverse_speed": 40.2,
       "reload_time": 5.0,
       "penetration": 633.425,
@@ -127280,7 +127291,7 @@
         40.2
       ],
       "steer_type": "clutch_braking",
-      "empty_weight": 62.0,
+      "empty_weight": 63.3,
       "track_width": 0.635,
       "secondary_weapons": [
         {
@@ -127338,8 +127349,8 @@
     "id": "us_m1a2_sep2_abrams_trophy",
     "performance": {
       "horsepower": 1519.0,
-      "weight": 63.0,
-      "power_to_weight": 24.11,
+      "weight": 66.5,
+      "power_to_weight": 22.84,
       "max_reverse_speed": 40.2,
       "reload_time": 5.0,
       "penetration": 633.425,
@@ -127527,7 +127538,7 @@
         40.2
       ],
       "steer_type": "clutch_braking",
-      "empty_weight": 62.0,
+      "empty_weight": 65.5,
       "track_width": 0.635,
       "secondary_weapons": [
         {
@@ -127576,8 +127587,8 @@
     "id": "us_m1a2_sep3_abrams",
     "performance": {
       "horsepower": 1519.0,
-      "weight": 63.0,
-      "power_to_weight": 24.11,
+      "weight": 66.76,
+      "power_to_weight": 22.75,
       "max_reverse_speed": 40.2,
       "reload_time": 5.0,
       "penetration": 633.425,
@@ -127738,7 +127749,7 @@
         },
         {
           "name": "120mm_xm1147",
-          "localizedName": "XM1147",
+          "localizedName": "M1147",
           "type": "he_frag_dist_fuse",
           "caliber": 120.0,
           "mass": 13.0,
@@ -127776,7 +127787,7 @@
         40.2
       ],
       "steer_type": "clutch_braking",
-      "empty_weight": 62.0,
+      "empty_weight": 65.76,
       "track_width": 0.635,
       "secondary_weapons": [
         {

@@ -9,8 +9,8 @@
     "penetration": 86.5,
     "max_speed": 50.0,
     "crew_count": 5,
-    "elevation_speed": 45.0,
-    "traverse_speed": 40.0,
+    "elevation_speed": 40.0,
+    "traverse_speed": 60.0,
     "has_stabilizer": true,
     "stabilizer_type": "both",
     "elevation_range": [
@@ -100,7 +100,7 @@
     ],
     "has_smoke_grenades": false,
     "has_ess": true,
-    "has_laser_rangefinder": false
+    "has_laser_rangefinder": true
   },
   "economy": {
     "researchCost": 95000,
@@ -111,15 +111,15 @@
     "aceTrainingRP": 670000,
     "repairCost": {
       "arcade": [
-        4055,
+        3973,
         5480
       ],
       "realistic": [
-        3680,
+        3605,
         4973
       ],
       "simulator": [
-        4939,
+        4839,
         6674
       ]
     },

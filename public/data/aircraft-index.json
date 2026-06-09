@@ -95818,7 +95818,6 @@
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": null,
-    "unreleased": true,
     "releaseDate": "2026-06-09",
     "weapons": {
       "fixed_weapons": [
@@ -98953,7 +98952,6 @@
     "economicType": "premium",
     "imageUrl": "aircrafts/f_14d.webp",
     "groundBattleRating": 12.0,
-    "unreleased": true,
     "releaseDate": "2026-06-09",
     "weapons": {
       "fixed_weapons": [],
@@ -109655,7 +109653,6 @@
     "economicType": "regular",
     "imageUrl": "aircrafts/f_16a_block_72v_china.webp",
     "groundBattleRating": 13.0,
-    "unreleased": true,
     "releaseDate": "2026-06-09",
     "weapons": {
       "fixed_weapons": [],
@@ -112490,7 +112487,6 @@
     "economicType": "premium",
     "imageUrl": "aircrafts/f_16am_block_15_mlu_fs_belgium.webp",
     "groundBattleRating": 12.7,
-    "unreleased": true,
     "releaseDate": "2026-06-09",
     "weapons": {
       "fixed_weapons": [],
@@ -141783,7 +141779,6 @@
     "aircraftType": "assault",
     "economicType": "premium",
     "imageUrl": "aircrafts/fw_189c_0.webp",
-    "unreleased": true,
     "releaseDate": "2026-06-09",
     "weapons": {
       "fixed_weapons": [
@@ -160726,7 +160721,6 @@
     "aircraftType": "assault",
     "economicType": "premium",
     "imageUrl": "aircrafts/ia_58a_pucara.webp",
-    "unreleased": true,
     "releaseDate": "2026-06-09",
     "weapons": {
       "fixed_weapons": [],
@@ -171067,12 +171061,6 @@
               "name": "",
               "localizedName": "",
               "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
             }
           ]
         },
@@ -174217,7 +174205,6 @@
     "economicType": "premium",
     "imageUrl": "aircrafts/j_22m1a.webp",
     "groundBattleRating": 10.7,
-    "unreleased": true,
     "releaseDate": "2026-06-09",
     "weapons": {
       "fixed_weapons": [],
@@ -179946,7 +179933,6 @@
     "economicType": "regular",
     "imageUrl": "aircrafts/jh_7a2.webp",
     "groundBattleRating": 12.3,
-    "unreleased": true,
     "releaseDate": "2026-06-09",
     "weapons": {
       "fixed_weapons": [],
@@ -196823,7 +196809,7 @@
     "aircraftType": "assault",
     "economicType": "regular",
     "imageUrl": null,
-    "unreleased": true,
+    "groundBattleRating": 7.3,
     "releaseDate": "2026-06-09",
     "weapons": {
       "fixed_weapons": [],
@@ -202112,7 +202098,6 @@
     "economicType": "regular",
     "imageUrl": null,
     "groundBattleRating": 12.3,
-    "unreleased": true,
     "releaseDate": "2026-06-09",
     "weapons": {
       "fixed_weapons": [],
@@ -214225,7 +214210,6 @@
     "aircraftType": "helicopter",
     "economicType": "regular",
     "imageUrl": null,
-    "unreleased": true,
     "releaseDate": "2026-06-09",
     "weapons": {
       "fixed_weapons": [],
@@ -226384,7 +226368,6 @@
     "economicType": "clan",
     "imageUrl": null,
     "groundBattleRating": 11.3,
-    "unreleased": true,
     "releaseDate": "2026-06-09",
     "weapons": {
       "fixed_weapons": [],
@@ -235014,7 +234997,6 @@
     "economicType": "regular",
     "imageUrl": null,
     "groundBattleRating": 12.3,
-    "unreleased": true,
     "releaseDate": "2026-06-09",
     "weapons": {
       "fixed_weapons": [],
@@ -277966,7 +277948,6 @@
     "economicType": "premium",
     "imageUrl": "aircrafts/saab_ajs37_early.webp",
     "groundBattleRating": 10.7,
-    "unreleased": true,
     "releaseDate": "2026-06-09",
     "weapons": {
       "fixed_weapons": [],
@@ -349931,7 +349912,6 @@
     "economicType": "regular",
     "imageUrl": "aircrafts/washington_b1.webp",
     "groundBattleRating": 6.7,
-    "unreleased": true,
     "releaseDate": "2026-06-09",
     "weapons": {
       "fixed_weapons": [
@@ -350596,7 +350576,6 @@
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/welkin_fmk1.webp",
-    "unreleased": true,
     "releaseDate": "2026-06-09",
     "weapons": {
       "fixed_weapons": [
@@ -357359,7 +357338,6 @@
     "economicType": "regular",
     "imageUrl": "aircrafts/yak_130_early.webp",
     "groundBattleRating": 9.3,
-    "unreleased": true,
     "releaseDate": "2026-06-09",
     "weapons": {
       "fixed_weapons": [],
@@ -357644,6 +357622,35 @@
         },
         {
           "name": "yak_130_early_kab_500kr",
+          "weapons": [
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            },
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            },
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            },
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "name": "yak_130_early_zb_500",
           "weapons": [
             {
               "trigger": "",
