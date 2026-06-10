@@ -32,7 +32,7 @@
     "fixed_weapons": [],
     "payloads": [
       {
-        "name": "mig_29kr_9_41r_2x_r73_2x77_default",
+        "name": "mig_29kr_9_41r_default",
         "weapons": [
           {
             "trigger": "",
@@ -61,152 +61,7 @@
         ]
       },
       {
-        "name": "mig_29kr_9_41r_8x_r73",
-        "weapons": [
-          {
-            "trigger": "",
-            "name": "",
-            "localizedName": "",
-            "count": 1
-          },
-          {
-            "trigger": "",
-            "name": "",
-            "localizedName": "",
-            "count": 1
-          },
-          {
-            "trigger": "",
-            "name": "",
-            "localizedName": "",
-            "count": 1
-          },
-          {
-            "trigger": "",
-            "name": "",
-            "localizedName": "",
-            "count": 1
-          },
-          {
-            "trigger": "",
-            "name": "",
-            "localizedName": "",
-            "count": 1
-          },
-          {
-            "trigger": "",
-            "name": "",
-            "localizedName": "",
-            "count": 1
-          },
-          {
-            "trigger": "",
-            "name": "",
-            "localizedName": "",
-            "count": 1
-          },
-          {
-            "trigger": "",
-            "name": "",
-            "localizedName": "",
-            "count": 1
-          }
-        ]
-      },
-      {
-        "name": "mig_29kr_9_41r_4x_r27t",
-        "weapons": [
-          {
-            "trigger": "",
-            "name": "",
-            "localizedName": "",
-            "count": 1
-          },
-          {
-            "trigger": "",
-            "name": "",
-            "localizedName": "",
-            "count": 1
-          },
-          {
-            "trigger": "",
-            "name": "",
-            "localizedName": "",
-            "count": 1
-          },
-          {
-            "trigger": "",
-            "name": "",
-            "localizedName": "",
-            "count": 1
-          }
-        ]
-      },
-      {
-        "name": "mig_29kr_9_41r_4x_r27r",
-        "weapons": [
-          {
-            "trigger": "",
-            "name": "",
-            "localizedName": "",
-            "count": 1
-          },
-          {
-            "trigger": "",
-            "name": "",
-            "localizedName": "",
-            "count": 1
-          },
-          {
-            "trigger": "",
-            "name": "",
-            "localizedName": "",
-            "count": 1
-          },
-          {
-            "trigger": "",
-            "name": "",
-            "localizedName": "",
-            "count": 1
-          }
-        ]
-      },
-      {
-        "name": "mig_29kr_9_41r_2x_r27et",
-        "weapons": [
-          {
-            "trigger": "",
-            "name": "",
-            "localizedName": "",
-            "count": 1
-          },
-          {
-            "trigger": "",
-            "name": "",
-            "localizedName": "",
-            "count": 1
-          }
-        ]
-      },
-      {
-        "name": "mig_29kr_9_41r_2x_r27er",
-        "weapons": [
-          {
-            "trigger": "",
-            "name": "",
-            "localizedName": "",
-            "count": 1
-          },
-          {
-            "trigger": "",
-            "name": "",
-            "localizedName": "",
-            "count": 1
-          }
-        ]
-      },
-      {
-        "name": "mig_29kr_9_41r_8x_r77",
+        "name": "mig_29kr_9_41r_r73",
         "weapons": [
           {
             "trigger": "",
@@ -259,7 +114,7 @@
         ]
       },
       {
-        "name": "mig_29kr_9_41r_4x_b8m1",
+        "name": "mig_29kr_9_41r_r27t",
         "weapons": [
           {
             "trigger": "",
@@ -288,7 +143,7 @@
         ]
       },
       {
-        "name": "mig_29kr_9_41r_4x_c13",
+        "name": "mig_29kr_9_41r_r27r",
         "weapons": [
           {
             "trigger": "",
@@ -317,7 +172,82 @@
         ]
       },
       {
-        "name": "mig_29kr_9_41r_4x_s_24_b",
+        "name": "mig_29kr_9_41r_r27et",
+        "weapons": [
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "mig_29kr_9_41_r27er",
+        "weapons": [
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "mig_29kr_9_41r_r77",
+        "weapons": [
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "mig_29kr_9_41r_b8m1",
         "weapons": [
           {
             "trigger": "",
@@ -346,7 +276,65 @@
         ]
       },
       {
-        "name": "mig_29kr_9_41r_4x_s_25_o",
+        "name": "mig_29kr_9_41r_c13",
+        "weapons": [
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "mig_29kr_9_41r_s_24_b",
+        "weapons": [
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "mig_29kr_9_41r_s_25_o",
         "weapons": [
           {
             "trigger": "",
@@ -520,7 +508,7 @@
         ]
       },
       {
-        "name": "mig_29kr_9_41r_16x_fab_100_120",
+        "name": "mig_29kr_9_41r_fab_100_120",
         "weapons": [
           {
             "trigger": "",
@@ -549,7 +537,7 @@
         ]
       },
       {
-        "name": "mig_29kr_9_41r_8x_fab_250m_62",
+        "name": "mig_29kr_9_41r_fab_250m_62",
         "weapons": [
           {
             "trigger": "",
@@ -578,7 +566,7 @@
         ]
       },
       {
-        "name": "mig_29kr_9_41r_8x_fab_500m_62",
+        "name": "mig_29kr_9_41r_fab_500m_62",
         "weapons": [
           {
             "trigger": "",
@@ -607,7 +595,7 @@
         ]
       },
       {
-        "name": "mig_29kr_9_41r_8x_ofab_250sh",
+        "name": "mig_29kr_9_41r_ofab_250sh",
         "weapons": [
           {
             "trigger": "",
@@ -636,7 +624,7 @@
         ]
       },
       {
-        "name": "mig_29kr_9_41r_8x_fab_500sh",
+        "name": "mig_29kr_9_41r_fab_500sh",
         "weapons": [
           {
             "trigger": "",
@@ -694,7 +682,7 @@
         ]
       },
       {
-        "name": "mig_29kr_9_41r_4x_zb500",
+        "name": "mig_29kr_9_41r_zb500",
         "weapons": [
           {
             "trigger": "",

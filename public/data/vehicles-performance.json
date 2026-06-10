@@ -31172,8 +31172,8 @@
           },
           "penetration0m": 111.0,
           "explosiveMassKg": 3.18,
-          "explosiveType": "fp02",
-          "tntEquivalent": 3.18
+          "explosiveType": "ph_salz_h10",
+          "tntEquivalent": 3.88
         },
         {
           "name": "150mm_pzgr_39_ts",
@@ -71962,7 +71962,7 @@
           "type": "he_frag_radio_fuse",
           "caliber": 155.0,
           "mass": 43.1,
-          "muzzleVelocity": 580.0,
+          "muzzleVelocity": 827.0,
           "explosiveMassKg": 6.98,
           "explosiveType": "comp_b",
           "tntEquivalent": 8.865
@@ -76627,12 +76627,9 @@
         1200,
         800
       ],
-      "commander_thermal_resolution": [
-        1200,
-        800
-      ],
+      "commander_thermal_resolution": null,
       "gunner_thermal_diagonal": 1442.2,
-      "commander_thermal_diagonal": 1442.2,
+      "commander_thermal_diagonal": null,
       "stabilizer_value": 1,
       "elevation_range_value": 29.0,
       "mainGun": {
