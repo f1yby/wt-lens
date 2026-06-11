@@ -95817,7 +95817,7 @@
     },
     "aircraftType": "fighter",
     "economicType": "regular",
-    "imageUrl": null,
+    "imageUrl": "aircrafts/f_101c.webp",
     "releaseDate": "2026-06-09",
     "weapons": {
       "fixed_weapons": [
@@ -99578,35 +99578,6 @@
         },
         {
           "name": "f_14d_aim_7m",
-          "weapons": [
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "name": "f_14d_aim_54a",
           "weapons": [
             {
               "trigger": "",
@@ -141894,7 +141865,7 @@
         {
           "name": "gunMG81_turret",
           "localizedName": "7.92 毫​米 MG 81 机​枪",
-          "count": 1,
+          "count": 2,
           "bullets": 750,
           "caliber": 7.9,
           "fireRate": 1596
@@ -196854,7 +196825,7 @@
     },
     "aircraftType": "assault",
     "economicType": "regular",
-    "imageUrl": null,
+    "imageUrl": "aircrafts/l_39za_art_thailand.webp",
     "groundBattleRating": 7.3,
     "releaseDate": "2026-06-09",
     "weapons": {
@@ -202142,7 +202113,7 @@
     },
     "aircraftType": "assault",
     "economicType": "regular",
-    "imageUrl": null,
+    "imageUrl": "aircrafts/m_346fa.webp",
     "groundBattleRating": 12.3,
     "releaseDate": "2026-06-09",
     "weapons": {
@@ -214255,7 +214226,7 @@
     },
     "aircraftType": "helicopter",
     "economicType": "regular",
-    "imageUrl": null,
+    "imageUrl": "aircrafts/mi_24d_german.webp",
     "releaseDate": "2026-06-09",
     "weapons": {
       "fixed_weapons": [],
@@ -226412,7 +226383,7 @@
     },
     "aircraftType": "fighter",
     "economicType": "clan",
-    "imageUrl": null,
+    "imageUrl": "aircrafts/mig_21_2000_iaf.webp",
     "groundBattleRating": 11.3,
     "releaseDate": "2026-06-09",
     "weapons": {
@@ -235041,7 +235012,7 @@
     },
     "aircraftType": "fighter",
     "economicType": "regular",
-    "imageUrl": null,
+    "imageUrl": "aircrafts/mig_29kr_9_41r.webp",
     "groundBattleRating": 12.3,
     "releaseDate": "2026-06-09",
     "weapons": {
