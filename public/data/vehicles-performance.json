@@ -36104,7 +36104,7 @@
           "bulletType": "ap_ball"
         }
       ],
-      "main_gun_ammo": 55,
+      "main_gun_ammo": 60,
       "driver_nv_resolution": [
         800,
         600
@@ -41982,7 +41982,7 @@
           "bulletType": "ap_ball"
         }
       ],
-      "main_gun_ammo": 84,
+      "main_gun_ammo": 82,
       "driver_nv_resolution": null,
       "has_smoke_grenades": true,
       "has_ess": false,
@@ -130324,6 +130324,15 @@
         },
         {
           "trigger": "gunner4",
+          "name": "7_62mm_M1919A4",
+          "caliber": 7.6,
+          "ammo": 2000,
+          "reloadTime": 8.0,
+          "rateOfFire": 500,
+          "bulletType": "ap_ball"
+        },
+        {
+          "trigger": "gunner5",
           "name": "7_62mm_M1919A4",
           "caliber": 7.6,
           "ammo": 2000,
