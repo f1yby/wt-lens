@@ -155,7 +155,7 @@
   {
     "id": "fr_battleship_richelieu_class_jean_bart",
     "name": "fr_battleship_richelieu_class_jean_bart",
-    "localizedName": "Jean Bart",
+    "localizedName": "让·巴​尔",
     "nation": "france",
     "rank": 7,
     "battleRating": 8.3,
@@ -167,7 +167,7 @@
     "shipType": "battleship",
     "economicType": "premium",
     "imageUrl": "ships/fr_battleship_richelieu_class_jean_bart.webp",
-    "releaseDate": "2026-06-09"
+    "releaseDate": "2026-06-24"
   },
   {
     "id": "fr_battleship_richelieu_class_richelieu",
@@ -1360,19 +1360,19 @@
   {
     "id": "germ_cruiser_admiral_scheer",
     "name": "germ_cruiser_admiral_scheer",
-    "localizedName": "Admiral Scheer",
+    "localizedName": "舍​尔​海​军​上​将",
     "nation": "germany",
     "rank": 4,
-    "battleRating": 6.0,
+    "battleRating": 5.7,
     "br": {
-      "arcade": 6.0,
-      "realistic": 6.0,
-      "simulator": 6.0
+      "arcade": 5.7,
+      "realistic": 5.7,
+      "simulator": 5.7
     },
     "shipType": "heavy_cruiser",
     "economicType": "premium",
     "imageUrl": "ships/germ_cruiser_admiral_scheer.webp",
-    "releaseDate": "2026-06-09"
+    "releaseDate": "2026-06-24"
   },
   {
     "id": "germ_cruiser_elbing",
@@ -1881,7 +1881,7 @@
   {
     "id": "germ_kanonenboot_k4_lorelei",
     "name": "germ_kanonenboot_k4_lorelei",
-    "localizedName": "Lorelei",
+    "localizedName": "罗​雷​莱",
     "nation": "germany",
     "rank": 1,
     "battleRating": 3.7,
@@ -1893,7 +1893,7 @@
     "shipType": "destroyer",
     "economicType": "regular",
     "imageUrl": "ships/germ_kanonenboot_k4_lorelei.webp",
-    "releaseDate": "2026-06-09"
+    "releaseDate": "2026-06-24"
   },
   {
     "id": "germ_km5",
@@ -3186,7 +3186,7 @@
     "shipType": "gun_boat",
     "economicType": "regular",
     "imageUrl": "ships/it_mas_classe429.webp",
-    "releaseDate": "2026-06-09"
+    "releaseDate": "2026-06-24"
   },
   {
     "id": "it_mas_classe500_3",
@@ -4907,7 +4907,7 @@
   {
     "id": "jp_ujishima_msc",
     "name": "jp_ujishima_msc",
-    "localizedName": "JDS Ujishima (MSC-655)",
+    "localizedName": "宇​治​岛",
     "nation": "japan",
     "rank": 2,
     "battleRating": 1.7,
@@ -4919,7 +4919,7 @@
     "shipType": "submarine_chaser",
     "economicType": "regular",
     "imageUrl": "ships/jp_ujishima_msc.webp",
-    "releaseDate": "2026-06-09"
+    "releaseDate": "2026-06-24"
   },
   {
     "id": "jp_yuri_class_asagao",
@@ -5009,7 +5009,7 @@
   {
     "id": "uk_73ft_vosper_type2",
     "name": "uk_73ft_vosper_type2",
-    "localizedName": "MTB-523",
+    "localizedName": "MTB523",
     "nation": "britain",
     "rank": 2,
     "battleRating": 2.0,
@@ -5021,7 +5021,7 @@
     "shipType": "torpedo_boat",
     "economicType": "premium",
     "imageUrl": "ships/uk_73ft_vosper_type2.webp",
-    "releaseDate": "2026-06-09"
+    "releaseDate": "2026-06-24"
   },
   {
     "id": "uk_attack_class_arrow",
@@ -6080,7 +6080,7 @@
   {
     "id": "uk_egret_class",
     "name": "uk_egret_class",
-    "localizedName": "HMS Egret",
+    "localizedName": "白​鹭",
     "nation": "britain",
     "rank": 2,
     "battleRating": 4.3,
@@ -6092,7 +6092,7 @@
     "shipType": "destroyer",
     "economicType": "regular",
     "imageUrl": "ships/uk_egret_class.webp",
-    "releaseDate": "2026-06-09"
+    "releaseDate": "2026-06-24"
   },
   {
     "id": "uk_fairmile_a_ml100",
@@ -6740,7 +6740,7 @@
   {
     "id": "us_battleship_north_carolina_class",
     "name": "us_battleship_north_carolina_class",
-    "localizedName": "USS North Carolina",
+    "localizedName": "北​卡​罗​来​纳",
     "nation": "usa",
     "rank": 7,
     "battleRating": 8.3,
@@ -6752,7 +6752,7 @@
     "shipType": "battleship",
     "economicType": "regular",
     "imageUrl": "ships/us_battleship_north_carolina_class.webp",
-    "releaseDate": "2026-06-09"
+    "releaseDate": "2026-06-24"
   },
   {
     "id": "us_battleship_north_dakota",
@@ -7396,7 +7396,7 @@
   {
     "id": "us_destroyer_gridley",
     "name": "us_destroyer_gridley",
-    "localizedName": "USS Gridley",
+    "localizedName": "格​里​德​利",
     "nation": "usa",
     "rank": 2,
     "battleRating": 4.0,
@@ -7408,7 +7408,7 @@
     "shipType": "destroyer",
     "economicType": "regular",
     "imageUrl": "ships/us_destroyer_gridley.webp",
-    "releaseDate": "2026-06-09"
+    "releaseDate": "2026-06-24"
   },
   {
     "id": "us_destroyer_mitscher",
@@ -8328,7 +8328,7 @@
   {
     "id": "ussr_cruiser_chervona_ukraina",
     "name": "ussr_cruiser_chervona_ukraina",
-    "localizedName": "Chervona Ukraina",
+    "localizedName": "红​色​乌​克​兰",
     "nation": "ussr",
     "rank": 3,
     "battleRating": 5.3,
@@ -8340,7 +8340,7 @@
     "shipType": "light_cruiser",
     "economicType": "regular",
     "imageUrl": "ships/ussr_cruiser_chervona_ukraina.webp",
-    "releaseDate": "2026-06-09"
+    "releaseDate": "2026-06-24"
   },
   {
     "id": "ussr_cruiser_kerch",

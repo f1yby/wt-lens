@@ -4849,7 +4849,7 @@
       "fixed_weapons": [],
       "payloads": [
         {
-          "name": "a6m3_zero_ptb",
+          "name": "a6m3_default",
           "weapons": [
             {
               "trigger": "",
@@ -23067,6 +23067,12 @@
         {
           "name": "ah_6m_2_hellfire_default",
           "weapons": [
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            },
             {
               "trigger": "",
               "name": "",
@@ -95818,7 +95824,7 @@
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/f_101c.webp",
-    "releaseDate": "2026-06-09",
+    "releaseDate": "2026-06-24",
     "weapons": {
       "fixed_weapons": [
         {
@@ -98550,6 +98556,64 @@
           ]
         },
         {
+          "name": "f_14b_aim_9l",
+          "weapons": [
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            },
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            },
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            },
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "name": "f_14b_aim_9l_bol",
+          "weapons": [
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            },
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            },
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            },
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            }
+          ]
+        },
+        {
           "name": "f_14b_aim_9m",
           "weapons": [
             {
@@ -98952,7 +99016,7 @@
     "economicType": "premium",
     "imageUrl": "aircrafts/f_14d.webp",
     "groundBattleRating": 12.0,
-    "releaseDate": "2026-06-09",
+    "releaseDate": "2026-06-24",
     "weapons": {
       "fixed_weapons": [],
       "payloads": [
@@ -109611,7 +109675,7 @@
   {
     "id": "f_16a_block_72v_china",
     "name": "f_16a_block_72v_china",
-    "localizedName": "␗F-16V",
+    "localizedName": "␗​F-16V",
     "nation": "china",
     "rank": 9,
     "battleRating": 14.3,
@@ -109624,7 +109688,7 @@
     "economicType": "regular",
     "imageUrl": "aircrafts/f_16a_block_72v_china.webp",
     "groundBattleRating": 13.0,
-    "releaseDate": "2026-06-09",
+    "releaseDate": "2026-06-24",
     "weapons": {
       "fixed_weapons": [],
       "payloads": [
@@ -112458,7 +112522,7 @@
     "economicType": "premium",
     "imageUrl": "aircrafts/f_16am_block_20_mlu_netherlands.webp",
     "groundBattleRating": 12.7,
-    "releaseDate": "2026-06-09",
+    "releaseDate": "2026-06-24",
     "weapons": {
       "fixed_weapons": [],
       "payloads": [
@@ -115963,7 +116027,7 @@
   {
     "id": "f_16c_block_50",
     "name": "f_16c_block_50",
-    "localizedName": "F-16C",
+    "localizedName": "F-16CM",
     "nation": "usa",
     "rank": 8,
     "battleRating": 13.7,
@@ -124477,7 +124541,7 @@
           ]
         },
         {
-          "name": "fa_18a_hug_2_raaf_aim_9l_bol_pod",
+          "name": "fa_18a_hug_2_raaf_agm_88",
           "weapons": [
             {
               "trigger": "",
@@ -124506,304 +124570,7 @@
           ]
         },
         {
-          "name": "fa_18a_hug_2_raaf_aim_9m_bol_pod",
-          "weapons": [
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "name": "fa_18a_hug_2_raaf_aim_120_bol_pod",
-          "weapons": [
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "name": "fa_18a_hug_2_raaf_aim_120c_bol_pod",
-          "weapons": [
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "name": "fa_18a_hug_2_raaf_gbu_38_bol_pod",
-          "weapons": [
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "name": "fa_18a_hug_2_raaf_gbu_54_bol_pod",
-          "weapons": [
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "name": "fa_18a_hug_2_raaf_gbu_32_bol_pod",
-          "weapons": [
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "name": "fa_18a_hug_2_raaf_gbu_31_bol_pod",
-          "weapons": [
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "name": "fa_18a_hug_2_raaf_gbu_62_laser_bol_pod",
-          "weapons": [
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "name": "fa_18a_hug_2_raaf_gbu_64_bol_pod",
-          "weapons": [
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "name": "fa_18a_hug_2_raaf_agm_154a1_bol_pod",
+          "name": "fa_18a_hug_2_raaf_agm_84",
           "weapons": [
             {
               "trigger": "",
@@ -129551,432 +129318,6 @@
         },
         {
           "name": "fa_18c_mlu_2_finland_agm_154a1",
-          "weapons": [
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "name": "fa_18c_mlu_2_finland_bol_pod",
-          "weapons": [
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "name": "fa_18c_mlu_2_finland_aim_9l_bol_pod",
-          "weapons": [
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "name": "fa_18c_mlu_2_finland_aim_9m_bol_pod",
-          "weapons": [
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "name": "fa_18c_mlu_2_finland_aim_120_bol_pod",
-          "weapons": [
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "name": "fa_18c_mlu_2_finland_aim_120c_bol_pod",
-          "weapons": [
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "name": "fa_18c_mlu_2_finland_gbu_38_bol_pod",
-          "weapons": [
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "name": "fa_18c_mlu_2_finland_gbu_54_bol_pod",
-          "weapons": [
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "name": "fa_18c_mlu_2_finland_gbu_32_bol_pod",
-          "weapons": [
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "name": "fa_18c_mlu_2_finland_gbu_31_bol_pod",
-          "weapons": [
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "name": "fa_18c_mlu_2_finland_gbu_62_bol_pod",
-          "weapons": [
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "name": "fa_18c_mlu_2_finland_gbu_64_bol_pod",
-          "weapons": [
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "name": "fa_18c_mlu_2_finland_agm_154a1_bol_pod",
           "weapons": [
             {
               "trigger": "",
@@ -141733,7 +141074,7 @@
     "aircraftType": "assault",
     "economicType": "premium",
     "imageUrl": "aircrafts/fw_189c_0.webp",
-    "releaseDate": "2026-06-09",
+    "releaseDate": "2026-06-24",
     "weapons": {
       "fixed_weapons": [
         {
@@ -142196,7 +141537,7 @@
           "name": "gunType92_turret",
           "localizedName": "7.7 毫​米​九​二​式​旋​回​机​枪",
           "count": 4,
-          "bullets": 4000,
+          "bullets": 2328,
           "caliber": 7.7,
           "fireRate": 700,
           "belts": [
@@ -142277,7 +141618,7 @@
           "name": "cannonType99_turret",
           "localizedName": "20 毫​米​九​九​式​一​号​旋​回​机​炮",
           "count": 1,
-          "bullets": 1000,
+          "bullets": 360,
           "caliber": 20.0,
           "fireRate": 516,
           "belts": [
@@ -160675,7 +160016,7 @@
     "aircraftType": "assault",
     "economicType": "premium",
     "imageUrl": "aircrafts/ia_58a_pucara.webp",
-    "releaseDate": "2026-06-09",
+    "releaseDate": "2026-06-24",
     "weapons": {
       "fixed_weapons": [],
       "payloads": [
@@ -171019,41 +170360,7 @@
           ]
         },
         {
-          "name": "j_10c_yj91_111",
-          "weapons": [
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "name": "j_10c_yj91_112",
-          "weapons": [
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "name": "j_10c_yj91_113",
+          "name": "j_10c_yj91a",
           "weapons": [
             {
               "trigger": "",
@@ -171101,6 +170408,23 @@
               "localizedName": "",
               "count": 1
             },
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            },
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "name": "j_10c_yj91as",
+          "weapons": [
             {
               "trigger": "",
               "name": "",
@@ -172566,7 +171890,7 @@
           ]
         },
         {
-          "name": "j_11b_yj91_111",
+          "name": "j_11b_yj91as",
           "weapons": [
             {
               "trigger": "",
@@ -172595,36 +171919,7 @@
           ]
         },
         {
-          "name": "j_11b_yj91_112",
-          "weapons": [
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "name": "j_11b_yj91_113",
+          "name": "j_11b_yj91a",
           "weapons": [
             {
               "trigger": "",
@@ -173472,7 +172767,7 @@
           ]
         },
         {
-          "name": "j_15t_yj91_111",
+          "name": "j_15t_yj91as",
           "weapons": [
             {
               "trigger": "",
@@ -173513,48 +172808,7 @@
           ]
         },
         {
-          "name": "j_15t_yj91_112",
-          "weapons": [
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "name": "j_15t_yj91_113",
+          "name": "j_15t_yj91a",
           "weapons": [
             {
               "trigger": "",
@@ -174159,7 +173413,7 @@
     "economicType": "premium",
     "imageUrl": "aircrafts/j_22m1a.webp",
     "groundBattleRating": 10.7,
-    "releaseDate": "2026-06-09",
+    "releaseDate": "2026-06-24",
     "weapons": {
       "fixed_weapons": [],
       "payloads": [
@@ -179920,7 +179174,7 @@
   {
     "id": "jh_7a2",
     "name": "jh_7a2",
-    "localizedName": "JH-7A2",
+    "localizedName": "歼​轰​-7A2",
     "nation": "china",
     "rank": 8,
     "battleRating": 13.0,
@@ -179933,7 +179187,7 @@
     "economicType": "regular",
     "imageUrl": "aircrafts/jh_7a2.webp",
     "groundBattleRating": 12.3,
-    "releaseDate": "2026-06-09",
+    "releaseDate": "2026-06-24",
     "weapons": {
       "fixed_weapons": [],
       "payloads": [
@@ -180758,6 +180012,35 @@
         },
         {
           "name": "jh_7a2_yj_83k",
+          "weapons": [
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            },
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            },
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            },
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "name": "jh_7a2_yj91as",
           "weapons": [
             {
               "trigger": "",
@@ -182396,7 +181679,7 @@
           "name": "cannonMG15120",
           "localizedName": "20 毫​米 MG 151/20 机​炮",
           "count": 4,
-          "bullets": 760,
+          "bullets": 800,
           "caliber": 20.0,
           "fireRate": 700
         },
@@ -182404,7 +181687,7 @@
           "name": "cannonMK108",
           "localizedName": "30 毫​米 MK 108 机​炮",
           "count": 2,
-          "bullets": 220,
+          "bullets": 260,
           "caliber": 30.0,
           "fireRate": 600
         },
@@ -196797,7 +196080,7 @@
   {
     "id": "l_39za_art_thailand",
     "name": "l_39za_art_thailand",
-    "localizedName": "▄L-39ZA/ART Albatros",
+    "localizedName": "▄​L-39ZA/ART 信​天​翁",
     "nation": "japan",
     "rank": 5,
     "battleRating": 6.7,
@@ -196810,7 +196093,7 @@
     "economicType": "regular",
     "imageUrl": "aircrafts/l_39za_art_thailand.webp",
     "groundBattleRating": 7.3,
-    "releaseDate": "2026-06-09",
+    "releaseDate": "2026-06-24",
     "weapons": {
       "fixed_weapons": [],
       "payloads": [
@@ -202098,7 +201381,7 @@
     "economicType": "regular",
     "imageUrl": "aircrafts/m_346fa.webp",
     "groundBattleRating": 12.3,
-    "releaseDate": "2026-06-09",
+    "releaseDate": "2026-06-24",
     "weapons": {
       "fixed_weapons": [],
       "payloads": [
@@ -208568,23 +207851,6 @@
           ]
         },
         {
-          "name": "md_500_tow_late_2_tow_default",
-          "weapons": [
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            }
-          ]
-        },
-        {
           "name": "md_500_tow_late_2_tow",
           "weapons": [
             {
@@ -210700,7 +209966,7 @@
           "name": "cannonMK103",
           "localizedName": "30 毫​米 MK 103 机​炮",
           "count": 2,
-          "bullets": 240,
+          "bullets": 200,
           "caliber": 30.0,
           "fireRate": 450
         },
@@ -210809,7 +210075,7 @@
   {
     "id": "me_210a_1",
     "name": "me_210a_1",
-    "localizedName": "Me 210A-1",
+    "localizedName": "Me 210 A-1",
     "nation": "germany",
     "rank": 2,
     "battleRating": 2.7,
@@ -214198,7 +213464,7 @@
   {
     "id": "mi_24d_german",
     "name": "mi_24d_german",
-    "localizedName": "◊Mi-24D",
+    "localizedName": "◊​米​-24D",
     "nation": "germany",
     "rank": 6,
     "battleRating": 8.7,
@@ -214210,7 +213476,7 @@
     "aircraftType": "helicopter",
     "economicType": "regular",
     "imageUrl": "aircrafts/mi_24d_german.webp",
-    "releaseDate": "2026-06-09",
+    "releaseDate": "2026-06-24",
     "weapons": {
       "fixed_weapons": [],
       "payloads": [
@@ -214244,90 +213510,8 @@
           ]
         },
         {
-          "name": "mi_24d_ub32_9m17m",
-          "weapons": [
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            }
-          ]
-        },
-        {
           "name": "mi_24d_s_24",
           "weapons": [
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "name": "mi_24d_s_24_9m17m",
-          "weapons": [
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
             {
               "trigger": "",
               "name": "",
@@ -214401,47 +213585,6 @@
           ]
         },
         {
-          "name": "mi_24d_4xfab250_9m17m",
-          "weapons": [
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            }
-          ]
-        },
-        {
           "name": "mi_24d_2xfab500",
           "weapons": [
             {
@@ -214459,78 +213602,8 @@
           ]
         },
         {
-          "name": "mi_24d_2xfab500_9m17m",
-          "weapons": [
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            }
-          ]
-        },
-        {
           "name": "mi_24d_upk_23_250",
           "weapons": [
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "name": "mi_24d_upk_23_250_9m17m",
-          "weapons": [
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
             {
               "trigger": "",
               "name": "",
@@ -217583,23 +216656,6 @@
           ]
         },
         {
-          "name": "mi_4av_2x9m17m_default",
-          "weapons": [
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            }
-          ]
-        },
-        {
           "name": "mi_4av_4x9m17m",
           "weapons": [
             {
@@ -218486,6 +217542,18 @@
               "name": "",
               "localizedName": "",
               "count": 1
+            },
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            },
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
             }
           ]
         },
@@ -218811,6 +217879,18 @@
         {
           "name": "mi_8tv_ub32_9m17_default",
           "weapons": [
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            },
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            },
             {
               "trigger": "",
               "name": "",
@@ -226355,7 +225435,7 @@
   {
     "id": "mig_21_2000_iaf",
     "name": "mig_21_2000_iaf",
-    "localizedName": "MiG-21 2000",
+    "localizedName": "​米​格​-21 2000",
     "nation": "israel",
     "rank": 7,
     "battleRating": 12.0,
@@ -226368,7 +225448,7 @@
     "economicType": "clan",
     "imageUrl": "aircrafts/mig_21_2000_iaf.webp",
     "groundBattleRating": 11.3,
-    "releaseDate": "2026-06-09",
+    "releaseDate": "2026-06-24",
     "weapons": {
       "fixed_weapons": [],
       "payloads": [
@@ -231564,6 +230644,17 @@
       "fixed_weapons": [],
       "payloads": [
         {
+          "name": "mig_29_9_12_default",
+          "weapons": [
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            }
+          ]
+        },
+        {
           "name": "mig_29_9_12_r60m_default",
           "weapons": [
             {
@@ -232106,17 +231197,6 @@
               "count": 1
             }
           ]
-        },
-        {
-          "name": "mig_29_9_12_fuel_tank",
-          "weapons": [
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            }
-          ]
         }
       ]
     }
@@ -232141,6 +231221,17 @@
     "weapons": {
       "fixed_weapons": [],
       "payloads": [
+        {
+          "name": "mig_29_9_12_germany_default",
+          "weapons": [
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            }
+          ]
+        },
         {
           "name": "mig_29_9_12_germany_r60mk_default",
           "weapons": [
@@ -232677,17 +231768,6 @@
               "localizedName": "",
               "count": 1
             },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "name": "mig_29_9_12_germany_fuel_tank",
-          "weapons": [
             {
               "trigger": "",
               "name": "",
@@ -233316,6 +232396,17 @@
       "fixed_weapons": [],
       "payloads": [
         {
+          "name": "mig_29_9_12_germany_default",
+          "weapons": [
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            }
+          ]
+        },
+        {
           "name": "mig_29_9_12_germany_r60mk_default",
           "weapons": [
             {
@@ -233851,17 +232942,6 @@
               "localizedName": "",
               "count": 1
             },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "name": "mig_29_9_12_germany_fuel_tank",
-          "weapons": [
             {
               "trigger": "",
               "name": "",
@@ -234984,7 +234064,7 @@
   {
     "id": "mig_29kr_9_41r",
     "name": "mig_29kr_9_41r",
-    "localizedName": "MiG-29KR (9-41R)",
+    "localizedName": "米​格​-29K",
     "nation": "ussr",
     "rank": 8,
     "battleRating": 13.7,
@@ -234997,7 +234077,7 @@
     "economicType": "regular",
     "imageUrl": "aircrafts/mig_29kr_9_41r.webp",
     "groundBattleRating": 12.3,
-    "releaseDate": "2026-06-09",
+    "releaseDate": "2026-06-24",
     "weapons": {
       "fixed_weapons": [],
       "payloads": [
@@ -235033,12 +234113,60 @@
               "name": "",
               "localizedName": "",
               "count": 1
+            },
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            },
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            },
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            },
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
             }
           ]
         },
         {
           "name": "mig_29kr_9_41r_drop_tank",
           "weapons": [
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            },
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            },
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            },
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            },
             {
               "trigger": "",
               "name": "",
@@ -236931,7 +236059,7 @@
   {
     "id": "mig_29smt_9_19",
     "name": "mig_29smt_9_19",
-    "localizedName": "米​格​-29SMT (9-19)",
+    "localizedName": "米​格​-29SMT",
     "nation": "ussr",
     "rank": 8,
     "battleRating": 13.3,
@@ -238367,6 +237495,52 @@
         },
         {
           "name": "mirage_2000_5f_bgl_1000",
+          "weapons": [
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            },
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "name": "mirage_2000_5f_pgm_500_laser",
+          "weapons": [
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            },
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            },
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            },
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "name": "mirage_2000_5f_pgm_2000_laser",
           "weapons": [
             {
               "trigger": "",
@@ -239953,6 +239127,64 @@
         {
           "name": "mirage_2000d_rmv_bgl_400",
           "weapons": [
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            },
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            },
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "name": "mirage_2000d_rmv_pgm_500_laser",
+          "weapons": [
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            },
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            },
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            },
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "name": "mirage_2000d_rmv_pgm_2000_laser",
+          "weapons": [
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            },
             {
               "trigger": "",
               "name": "",
@@ -253949,7 +253181,7 @@
           "name": "cannon_am23_tu_95_turret",
           "localizedName": "23 mm AM-23 cannon",
           "count": 6,
-          "bullets": 3400,
+          "bullets": 4400,
           "caliber": 23.0,
           "fireRate": 1250
         },
@@ -254105,6 +253337,12 @@
               "name": "",
               "localizedName": "",
               "count": 1
+            },
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
             }
           ]
         },
@@ -254229,6 +253467,12 @@
         {
           "name": "oh_58d_hellfire_defult",
           "weapons": [
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            },
             {
               "trigger": "",
               "name": "",
@@ -275309,17 +274553,6 @@
           ]
         },
         {
-          "name": "sa_342l_china_hj_8_default",
-          "weapons": [
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            }
-          ]
-        },
-        {
           "name": "sa_342l_china_hf_27",
           "weapons": [
             {
@@ -275445,23 +274678,6 @@
         },
         {
           "name": "sa_342m_rocket_atam_mistral",
-          "weapons": [
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "name": "sa_342m_hot_default",
           "weapons": [
             {
               "trigger": "",
@@ -277848,7 +277064,7 @@
   {
     "id": "saab_ajs37_early",
     "name": "saab_ajs37_early",
-    "localizedName": "AJS37 (Early)",
+    "localizedName": "AJS 37 早​期​型",
     "nation": "sweden",
     "rank": 7,
     "battleRating": 11.0,
@@ -277861,7 +277077,7 @@
     "economicType": "premium",
     "imageUrl": "aircrafts/saab_ajs37_early.webp",
     "groundBattleRating": 10.7,
-    "releaseDate": "2026-06-09",
+    "releaseDate": "2026-06-24",
     "weapons": {
       "fixed_weapons": [],
       "payloads": [
@@ -323436,6 +322652,47 @@
           ]
         },
         {
+          "name": "su_30mkk_yj91as",
+          "weapons": [
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            },
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            },
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            },
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            },
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            },
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            }
+          ]
+        },
+        {
           "name": "su_30mkk_yj91_111",
           "weapons": [
             {
@@ -335128,23 +334385,6 @@
           ]
         },
         {
-          "name": "tiger_uht_4x_hot3",
-          "weapons": [
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            }
-          ]
-        },
-        {
           "name": "tiger_uht_hot3",
           "weapons": [
             {
@@ -336494,6 +335734,70 @@
           ]
         },
         {
+          "name": "tornado_gr1_pgm_500_laser",
+          "weapons": [
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            },
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            },
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            },
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            },
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "name": "tornado_gr1_pgm_2000_laser",
+          "weapons": [
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            },
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            },
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            },
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            }
+          ]
+        },
+        {
           "name": "tornado_gr1_pgm_500",
           "weapons": [
             {
@@ -337374,6 +336678,70 @@
         },
         {
           "name": "tornado_gr4_1000lb_default",
+          "weapons": [
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            },
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            },
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            },
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "name": "tornado_gr4_pgm_500_laser",
+          "weapons": [
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            },
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            },
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            },
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            },
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "name": "tornado_gr4_pgm_2000_laser",
           "weapons": [
             {
               "trigger": "",
@@ -349640,7 +349008,7 @@
   {
     "id": "washington_b1",
     "name": "washington_b1",
-    "localizedName": "Washington B.Mk.I",
+    "localizedName": "华​盛​顿 B.Mk.I",
     "nation": "britain",
     "rank": 5,
     "battleRating": 7.0,
@@ -349653,7 +349021,7 @@
     "economicType": "regular",
     "imageUrl": "aircrafts/washington_b1.webp",
     "groundBattleRating": 6.7,
-    "releaseDate": "2026-06-09",
+    "releaseDate": "2026-06-24",
     "weapons": {
       "fixed_weapons": [
         {
@@ -350305,7 +349673,7 @@
   {
     "id": "welkin_fmk1",
     "name": "welkin_fmk1",
-    "localizedName": "Welkin F.Mk.I",
+    "localizedName": "苍​穹 F.Mk.I",
     "nation": "britain",
     "rank": 4,
     "battleRating": 4.7,
@@ -350317,7 +349685,7 @@
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/welkin_fmk1.webp",
-    "releaseDate": "2026-06-09",
+    "releaseDate": "2026-06-24",
     "weapons": {
       "fixed_weapons": [
         {
@@ -353818,7 +353186,7 @@
   {
     "id": "yak-1_early",
     "name": "yak-1_early",
-    "localizedName": "雅​克​-1",
+    "localizedName": "雅​克​-1 (19)",
     "nation": "ussr",
     "rank": 2,
     "battleRating": 2.3,
@@ -357066,7 +356434,7 @@
   {
     "id": "yak_130_early",
     "name": "yak_130_early",
-    "localizedName": "Yak-130",
+    "localizedName": "雅​克​-130",
     "nation": "ussr",
     "rank": 6,
     "battleRating": 9.0,
@@ -357079,7 +356447,7 @@
     "economicType": "regular",
     "imageUrl": "aircrafts/yak_130_early.webp",
     "groundBattleRating": 9.3,
-    "releaseDate": "2026-06-09",
+    "releaseDate": "2026-06-24",
     "weapons": {
       "fixed_weapons": [],
       "payloads": [
@@ -359209,17 +358577,6 @@
           ]
         },
         {
-          "name": "z_11wa_hj_8_default",
-          "weapons": [
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            }
-          ]
-        },
-        {
           "name": "z_11wa_hf_27",
           "weapons": [
             {
@@ -359695,17 +359052,6 @@
               "localizedName": "",
               "count": 1
             },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "name": "z_9w_hf_6_default",
-          "weapons": [
             {
               "trigger": "",
               "name": "",

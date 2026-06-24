@@ -32,6 +32,17 @@
     "fixed_weapons": [],
     "payloads": [
       {
+        "name": "mig_29_9_12_germany_default",
+        "weapons": [
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          }
+        ]
+      },
+      {
         "name": "mig_29_9_12_germany_r60mk_default",
         "weapons": [
           {
@@ -567,17 +578,6 @@
             "localizedName": "",
             "count": 1
           },
-          {
-            "trigger": "",
-            "name": "",
-            "localizedName": "",
-            "count": 1
-          }
-        ]
-      },
-      {
-        "name": "mig_29_9_12_germany_fuel_tank",
-        "weapons": [
           {
             "trigger": "",
             "name": "",
