@@ -96,10 +96,7 @@
       }
     ],
     "main_gun_ammo": 400,
-    "driver_nv_resolution": [
-      800,
-      600
-    ],
+    "driver_nv_resolution": null,
     "has_smoke_grenades": true,
     "has_ess": true,
     "has_laser_rangefinder": true
@@ -113,15 +110,15 @@
     "aceTrainingRP": 890000,
     "repairCost": {
       "arcade": [
-        2950,
+        3233,
         5335
       ],
       "realistic": [
-        2929,
+        3210,
         5297
       ],
       "simulator": [
-        3587,
+        3931,
         6487
       ]
     },
