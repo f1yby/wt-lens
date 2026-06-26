@@ -34,7 +34,7 @@
     "stabilizer_value": 1,
     "elevation_range_value": 30.0,
     "mainGun": {
-      "name": "120mm_L30A1",
+      "name": "120mm_L30A1_2e",
       "caliber": 120.0,
       "reloadTime": 5.0,
       "autoLoader": false,
@@ -45,28 +45,6 @@
       }
     },
     "ammunitions": [
-      {
-        "name": "120mm_l23a1",
-        "localizedName": "L23A1",
-        "type": "apds_fs_long_tank",
-        "caliber": 29.0,
-        "mass": 3.89,
-        "muzzleVelocity": 1535.0,
-        "lanzOdermatt": {
-          "workingLength": 410.0,
-          "density": 17500.0,
-          "material": "tungsten",
-          "Cx": 0.3498
-        },
-        "penetration0m": 396.9,
-        "penetrationData": {
-          "at0m": {
-            "angle0": 396.9,
-            "angle30": 343.7,
-            "angle60": 198.5
-          }
-        }
-      },
       {
         "name": "120mm_l37a7",
         "localizedName": "L37A7",
@@ -91,28 +69,6 @@
         "tntEquivalent": 0.05
       },
       {
-        "name": "120mm_l26",
-        "localizedName": "L26",
-        "type": "apds_fs_long_tank",
-        "caliber": 26.7,
-        "mass": 4.3,
-        "muzzleVelocity": 1650.0,
-        "lanzOdermatt": {
-          "workingLength": 500.0,
-          "density": 18600.0,
-          "material": "depletedUranium",
-          "Cx": 0.4513
-        },
-        "penetration0m": 493.8,
-        "penetrationData": {
-          "at0m": {
-            "angle0": 493.8,
-            "angle30": 427.6,
-            "angle60": 246.9
-          }
-        }
-      },
-      {
         "name": "120mm_l27a1",
         "localizedName": "L27A1",
         "type": "apds_fs_long_l30_tank",
@@ -131,6 +87,28 @@
             "angle0": 564.4,
             "angle30": 488.8,
             "angle60": 282.2
+          }
+        }
+      },
+      {
+        "name": "120mm_l26",
+        "localizedName": "L26",
+        "type": "apds_fs_long_tank",
+        "caliber": 26.7,
+        "mass": 4.3,
+        "muzzleVelocity": 1650.0,
+        "lanzOdermatt": {
+          "workingLength": 500.0,
+          "density": 18600.0,
+          "material": "depletedUranium",
+          "Cx": 0.4513
+        },
+        "penetration0m": 493.8,
+        "penetrationData": {
+          "at0m": {
+            "angle0": 493.8,
+            "angle30": 427.6,
+            "angle60": 246.9
           }
         }
       }

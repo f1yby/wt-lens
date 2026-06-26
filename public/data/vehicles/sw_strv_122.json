@@ -6,7 +6,7 @@
     "power_to_weight": 23.99,
     "max_reverse_speed": 31.0,
     "reload_time": 6.0,
-    "penetration": 588.6,
+    "penetration": 623.6,
     "max_speed": 68.2,
     "crew_count": 5,
     "elevation_speed": 40.0,
@@ -46,61 +46,6 @@
     },
     "ammunitions": [
       {
-        "name": "120mm_dm23",
-        "localizedName": "DM23",
-        "type": "apds_fs_tungsten_l10_l15_tank",
-        "caliber": 32.0,
-        "mass": 4.3,
-        "muzzleVelocity": 1640.0,
-        "lanzOdermatt": {
-          "workingLength": 360.0,
-          "density": 17500.0,
-          "material": "tungsten",
-          "Cx": 0.3056
-        },
-        "penetration0m": 408.1,
-        "penetrationData": {
-          "at0m": {
-            "angle0": 408.1,
-            "angle30": 353.4,
-            "angle60": 204.1
-          }
-        }
-      },
-      {
-        "name": "120mm_slsgr_m95",
-        "localizedName": "m/95 曳​光​榴​弹",
-        "type": "he_frag_fs_tank",
-        "caliber": 120.0,
-        "mass": 17.5,
-        "muzzleVelocity": 736.0,
-        "explosiveMassKg": 2.7,
-        "explosiveType": "comp_b",
-        "tntEquivalent": 3.429
-      },
-      {
-        "name": "120mm_dm33",
-        "localizedName": "DM33",
-        "type": "apds_fs_long_tank",
-        "caliber": 25.0,
-        "mass": 4.3,
-        "muzzleVelocity": 1640.0,
-        "lanzOdermatt": {
-          "workingLength": 510.0,
-          "density": 17500.0,
-          "material": "tungsten",
-          "Cx": 0.55
-        },
-        "penetration0m": 481.5,
-        "penetrationData": {
-          "at0m": {
-            "angle0": 481.5,
-            "angle30": 417.0,
-            "angle60": 240.8
-          }
-        }
-      },
-      {
         "name": "120mm_slpprj_m95",
         "localizedName": "m/95 曳​光​穿​甲​弹",
         "type": "apds_fs_long_l30_tank",
@@ -121,13 +66,46 @@
             "angle60": 294.3
           }
         }
+      },
+      {
+        "name": "120mm_slsgr_m95",
+        "localizedName": "m/95 曳​光​榴​弹",
+        "type": "he_frag_fs_tank",
+        "caliber": 120.0,
+        "mass": 17.5,
+        "muzzleVelocity": 736.0,
+        "explosiveMassKg": 2.7,
+        "explosiveType": "comp_b",
+        "tntEquivalent": 3.429
+      },
+      {
+        "name": "120mm_dm53",
+        "localizedName": "DM53",
+        "type": "apds_fs_long_l30_tank",
+        "caliber": 23.0,
+        "mass": 5.0,
+        "muzzleVelocity": 1670.0,
+        "lanzOdermatt": {
+          "workingLength": 685.0,
+          "density": 17500.0,
+          "material": "tungsten",
+          "Cx": 0.74
+        },
+        "penetration0m": 623.6,
+        "penetrationData": {
+          "at0m": {
+            "angle0": 623.6,
+            "angle30": 540.1,
+            "angle60": 311.8
+          }
+        }
       }
     ],
     "penetrationData": {
       "at0m": {
-        "angle0": 588.6,
-        "angle30": 509.7,
-        "angle60": 294.3
+        "angle0": 623.6,
+        "angle30": 540.1,
+        "angle60": 311.8
       }
     },
     "autoLoader": false,

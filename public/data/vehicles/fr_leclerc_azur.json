@@ -55,24 +55,24 @@
         "tntEquivalent": 2.083
       },
       {
-        "name": "120mm_ofl_120_g1",
-        "localizedName": "OFL 120 G1",
-        "type": "apds_fs_long_tank",
-        "caliber": 26.0,
-        "mass": 3.8,
-        "muzzleVelocity": 1780.0,
+        "name": "120mm_ofl_120_f2",
+        "localizedName": "OFL 120 F2",
+        "type": "apds_fs_long_l30_tank",
+        "caliber": 22.0,
+        "mass": 4.4,
+        "muzzleVelocity": 1740.0,
         "lanzOdermatt": {
-          "workingLength": 380.0,
-          "density": 17500.0,
-          "material": "tungsten",
-          "Cx": 0.49
+          "workingLength": 585.0,
+          "density": 18600.0,
+          "material": "depletedUranium",
+          "Cx": 0.611
         },
-        "penetration0m": 425.0,
+        "penetration0m": 562.1,
         "penetrationData": {
           "at0m": {
-            "angle0": 425.0,
-            "angle30": 368.1,
-            "angle60": 212.5
+            "angle0": 562.1,
+            "angle30": 486.8,
+            "angle60": 281.1
           }
         }
       },

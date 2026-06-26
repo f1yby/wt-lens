@@ -31,7 +31,7 @@
     "stabilizer_value": 1,
     "elevation_range_value": 29.0,
     "mainGun": {
-      "name": "120mm_Rheinmetall_L44_2PL",
+      "name": "120mm_Rheinmetall_L44_2RI",
       "caliber": 120.0,
       "reloadTime": 6.0,
       "autoLoader": false,
@@ -55,24 +55,24 @@
         "tntEquivalent": 2.083
       },
       {
-        "name": "120mm_dm33",
-        "localizedName": "DM33",
-        "type": "apds_fs_long_tank",
-        "caliber": 25.0,
-        "mass": 4.3,
-        "muzzleVelocity": 1640.0,
+        "name": "120mm_dm43",
+        "localizedName": "DM43",
+        "type": "apds_fs_long_l30_tank",
+        "caliber": 22.0,
+        "mass": 4.0,
+        "muzzleVelocity": 1660.0,
         "lanzOdermatt": {
-          "workingLength": 510.0,
+          "workingLength": 585.0,
           "density": 17500.0,
           "material": "tungsten",
-          "Cx": 0.55
+          "Cx": 0.611
         },
-        "penetration0m": 481.5,
+        "penetration0m": 535.6,
         "penetrationData": {
           "at0m": {
-            "angle0": 481.5,
-            "angle30": 417.0,
-            "angle60": 240.8
+            "angle0": 535.6,
+            "angle30": 463.8,
+            "angle60": 267.8
           }
         }
       },

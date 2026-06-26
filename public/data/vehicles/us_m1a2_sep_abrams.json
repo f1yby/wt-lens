@@ -58,24 +58,24 @@
         "tntEquivalent": 2.066
       },
       {
-        "name": "120mm_m829",
-        "localizedName": "M829",
-        "type": "apds_fs_long_tank",
-        "caliber": 27.0,
-        "mass": 4.268,
-        "muzzleVelocity": 1670.0,
+        "name": "120mm_m829a2",
+        "localizedName": "M829A2",
+        "type": "apds_fs_long_l30_tank",
+        "caliber": 22.0,
+        "mass": 4.921,
+        "muzzleVelocity": 1680.0,
         "lanzOdermatt": {
-          "workingLength": 460.0,
+          "workingLength": 680.0,
           "density": 18600.0,
           "material": "depletedUranium",
-          "Cx": 0.4603
+          "Cx": 0.7687
         },
-        "penetration0m": 469.3,
+        "penetration0m": 629.1,
         "penetrationData": {
           "at0m": {
-            "angle0": 469.3,
-            "angle30": 406.4,
-            "angle60": 234.7
+            "angle0": 629.1,
+            "angle30": 544.8,
+            "angle60": 314.6
           }
         }
       },

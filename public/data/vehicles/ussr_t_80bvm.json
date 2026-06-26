@@ -88,51 +88,26 @@
         }
       },
       {
-        "name": "125mm_3bm42",
-        "localizedName": "3BM42",
-        "type": "apds_fs_tungsten_caliber_fins_tank",
-        "caliber": 32.0,
-        "mass": 4.85,
-        "muzzleVelocity": 1700.0,
-        "armorPowerTable": [
-          {
-            "penetration": 457.0,
-            "distance": 10.0
-          },
-          {
-            "penetration": 454.0,
-            "distance": 100.0
-          },
-          {
-            "penetration": 445.0,
-            "distance": 500.0
-          },
-          {
-            "penetration": 431.0,
-            "distance": 1000.0
-          },
-          {
-            "penetration": 419.0,
-            "distance": 1500.0
-          },
-          {
-            "penetration": 406.0,
-            "distance": 2000.0
-          },
-          {
-            "penetration": 380.0,
-            "distance": 3000.0
-          },
-          {
-            "penetration": 5.0,
-            "distance": 10000.0
-          },
-          {
-            "penetration": 0.0,
-            "distance": 20000.0
+        "name": "125mm_3bm42_2",
+        "localizedName": "3BM42-2",
+        "type": "apds_fs_long_l30_tank",
+        "caliber": 21.0,
+        "mass": 3.9,
+        "muzzleVelocity": 1750.0,
+        "lanzOdermatt": {
+          "workingLength": 565.0,
+          "density": 17500.0,
+          "material": "tungsten",
+          "Cx": 0.85
+        },
+        "penetration0m": 544.1,
+        "penetrationData": {
+          "at0m": {
+            "angle0": 544.1,
+            "angle30": 471.2,
+            "angle60": 272.1
           }
-        ],
-        "penetration0m": 457.0
+        }
       },
       {
         "name": "125mm_9m_119m1",

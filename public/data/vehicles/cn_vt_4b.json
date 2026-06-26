@@ -34,7 +34,7 @@
     "stabilizer_value": 1,
     "elevation_range_value": 18.0,
     "mainGun": {
-      "name": "125mm_ZPT_98",
+      "name": "125mm_ZPT_98_vt4b",
       "caliber": 125.0,
       "reloadTime": 6.67,
       "autoLoader": true,
@@ -69,24 +69,24 @@
         "tntEquivalent": 4.967
       },
       {
-        "name": "125mm_125_1",
-        "localizedName": "Type 1985-I APFSDS",
+        "name": "125mm_dtw_125",
+        "localizedName": "DTW-125​尾​翼​稳​定​穿​甲​弹",
         "type": "apds_fs_long_tank",
-        "caliber": 28.0,
-        "mass": 4.02,
-        "muzzleVelocity": 1730.0,
+        "caliber": 23.0,
+        "mass": 4.83,
+        "muzzleVelocity": 1740.0,
         "lanzOdermatt": {
-          "workingLength": 437.0,
+          "workingLength": 570.0,
           "density": 17500.0,
           "material": "tungsten",
-          "Cx": 0.3693
+          "Cx": 0.71
         },
-        "penetration0m": 466.3,
+        "penetration0m": 551.8,
         "penetrationData": {
           "at0m": {
-            "angle0": 466.3,
-            "angle30": 403.8,
-            "angle60": 233.2
+            "angle0": 551.8,
+            "angle30": 477.9,
+            "angle60": 275.9
           }
         }
       },
