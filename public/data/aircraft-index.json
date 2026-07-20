@@ -160552,6 +160552,63 @@
     }
   },
   {
+    "id": "iar_81c_db_605",
+    "name": "iar_81c_db_605",
+    "localizedName": "IAR-81C (DB 605)",
+    "nation": "italy",
+    "rank": 2,
+    "battleRating": 2.7,
+    "br": {
+      "arcade": 2.7,
+      "realistic": 2.7,
+      "simulator": 2.7
+    },
+    "aircraftType": "fighter",
+    "economicType": "premium",
+    "imageUrl": "aircrafts/iar_81c_db_605.webp",
+    "unreleased": true,
+    "releaseDate": "2026-07-22",
+    "weapons": {
+      "fixed_weapons": [],
+      "payloads": [
+        {
+          "name": "iar_81c_rockets",
+          "weapons": [
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            },
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "name": "iar_81c_2x50kg",
+          "weapons": [
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            },
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
     "id": "iar_93b",
     "name": "iar_93b",
     "localizedName": "IAR-93B",

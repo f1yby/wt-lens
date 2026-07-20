@@ -7835,6 +7835,24 @@
     "releaseDate": "2018-12-18"
   },
   {
+    "id": "it_fiat_6616_ub",
+    "name": "it_fiat_6616_ub",
+    "localizedName": "FIAT 6616UB",
+    "nation": "italy",
+    "rank": 4,
+    "battle_rating": 6.0,
+    "br": {
+      "arcade": 6.0,
+      "realistic": 6.0,
+      "simulator": 6.0
+    },
+    "vehicle_type": "light_tank",
+    "economic_type": "premium",
+    "imageUrl": "vehicles/it_fiat_6616_ub.webp",
+    "unreleased": true,
+    "releaseDate": "2026-07-22"
+  },
+  {
     "id": "it_fiat_cm52",
     "name": "it_fiat_cm52",
     "localizedName": "CM52 (M45)",
@@ -13503,6 +13521,24 @@
     "economic_type": "regular",
     "imageUrl": "vehicles/uk_fv107_scimitar.webp",
     "releaseDate": "2024-11-19"
+  },
+  {
+    "id": "uk_fv107_scimitar_mk2",
+    "name": "uk_fv107_scimitar_mk2",
+    "localizedName": "Scimitar Mk.2",
+    "nation": "britain",
+    "rank": 6,
+    "battle_rating": 8.0,
+    "br": {
+      "arcade": 8.0,
+      "realistic": 8.0,
+      "simulator": 8.0
+    },
+    "vehicle_type": "light_tank",
+    "economic_type": "regular",
+    "imageUrl": "vehicles/uk_fv107_scimitar_mk2.webp",
+    "unreleased": true,
+    "releaseDate": "2026-07-22"
   },
   {
     "id": "uk_fv221_caernarvon",

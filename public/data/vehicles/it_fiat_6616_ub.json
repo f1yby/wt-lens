@@ -1,0 +1,122 @@
+{
+  "id": "it_fiat_6616_ub",
+  "performance": {
+    "horsepower": 160.0,
+    "weight": 8.5,
+    "power_to_weight": 18.82,
+    "max_reverse_speed": 19.4,
+    "reload_time": 8.0,
+    "penetration": null,
+    "max_speed": 100.0,
+    "crew_count": 5,
+    "elevation_speed": 10.0,
+    "traverse_speed": 46.0,
+    "has_stabilizer": false,
+    "stabilizer_type": "none",
+    "elevation_range": [
+      -10.0,
+      45.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": null,
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": null,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 0,
+    "elevation_range_value": 55.0,
+    "mainGun": null,
+    "ammunitions": null,
+    "penetrationData": null,
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 3200.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 10,
+    "reverse_gears": 2,
+    "forward_gear_speeds": [
+      12.8,
+      18.0,
+      22.4,
+      31.6,
+      35.2,
+      49.5,
+      56.4,
+      71.1,
+      79.4,
+      100.0
+    ],
+    "reverse_gear_speeds": [
+      13.8,
+      19.4
+    ],
+    "steer_type": null,
+    "empty_weight": 8.0,
+    "track_width": 0.2,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "57mm_ub_16",
+        "caliber": 57.0,
+        "ammo": 16,
+        "reloadTime": 2.5,
+        "rateOfFire": 150,
+        "bulletType": "heat_grenade_tank",
+        "maxDistance": 4000,
+        "penetration": 250,
+        "explosiveMass": 0.44,
+        "explosiveType": "hta"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "7_92mm_MG3",
+        "caliber": 7.6,
+        "ammo": 2200,
+        "reloadTime": 8.0,
+        "rateOfFire": 1200,
+        "bulletType": "ap_ball"
+      }
+    ],
+    "main_gun_ammo": 400,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": false
+  },
+  "economy": {
+    "researchCost": 71000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 6090,
+    "crewTraining": 10000,
+    "expertTraining": 340000,
+    "aceTrainingGE": 890,
+    "aceTrainingRP": 1140000,
+    "repairCost": {
+      "arcade": [
+        2010,
+        2010
+      ],
+      "realistic": [
+        2424,
+        2424
+      ],
+      "simulator": [
+        3103,
+        3103
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.38,
+      "realistic": 3.13,
+      "simulator": 4.03
+    },
+    "expMultiplier": 1.78,
+    "freeRepairs": 30
+  }
+}
