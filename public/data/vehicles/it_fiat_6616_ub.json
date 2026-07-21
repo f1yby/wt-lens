@@ -10,12 +10,12 @@
     "max_speed": 100.0,
     "crew_count": 5,
     "elevation_speed": 10.0,
-    "traverse_speed": 46.0,
+    "traverse_speed": 30.0,
     "has_stabilizer": false,
     "stabilizer_type": "none",
     "elevation_range": [
-      -10.0,
-      45.0
+      -5.0,
+      35.0
     ],
     "traverse_range": [
       -180.0,
@@ -26,7 +26,7 @@
     "gunner_thermal_diagonal": null,
     "commander_thermal_diagonal": null,
     "stabilizer_value": 0,
-    "elevation_range_value": 55.0,
+    "elevation_range_value": 40.0,
     "mainGun": null,
     "ammunitions": null,
     "penetrationData": null,
@@ -69,6 +69,7 @@
         "rateOfFire": 150,
         "bulletType": "heat_grenade_tank",
         "maxDistance": 4000,
+        "maxSpeed": 480,
         "penetration": 250,
         "explosiveMass": 0.44,
         "explosiveType": "hta"
@@ -77,7 +78,7 @@
         "trigger": "gunner2",
         "name": "7_92mm_MG3",
         "caliber": 7.6,
-        "ammo": 2200,
+        "ammo": 1000,
         "reloadTime": 8.0,
         "rateOfFire": 1200,
         "bulletType": "ap_ball"
