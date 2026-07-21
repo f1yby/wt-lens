@@ -1,33 +1,33 @@
 {
   "id": "iar_81c_db_605",
   "economy": {
-    "researchCost": 11000,
+    "researchCost": 18000,
     "purchaseCost": 0,
-    "purchaseCostGold": 1000,
-    "crewTraining": 4800,
-    "expertTraining": 32000,
-    "aceTrainingGE": 250,
-    "aceTrainingRP": 440000,
+    "purchaseCostGold": 1300,
+    "crewTraining": 10000,
+    "expertTraining": 67000,
+    "aceTrainingGE": 400,
+    "aceTrainingRP": 570000,
     "repairCost": {
       "arcade": [
-        428,
-        428
+        570,
+        570
       ],
       "realistic": [
-        788,
-        788
+        1172,
+        1172
       ],
       "simulator": [
-        1130,
-        1130
+        1603,
+        1603
       ]
     },
     "rewardMultiplier": {
-      "arcade": 0.83,
-      "realistic": 1.98,
-      "simulator": 4.01
+      "arcade": 1.14,
+      "realistic": 2.74,
+      "simulator": 5.56
     },
-    "expMultiplier": 1.24,
+    "expMultiplier": 1.36,
     "freeRepairs": 30
   },
   "weapons": {
