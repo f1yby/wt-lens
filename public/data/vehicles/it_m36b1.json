@@ -5,7 +5,7 @@
     "weight": 30.85,
     "power_to_weight": 16.21,
     "max_reverse_speed": 6.3,
-    "reload_time": 7.5,
+    "reload_time": 6.99,
     "penetration": 305.0,
     "max_speed": 48.2,
     "crew_count": 5,
@@ -30,12 +30,12 @@
     "mainGun": {
       "name": "90mm_90_50_M3A1",
       "caliber": 90.0,
-      "reloadTime": 7.5,
+      "reloadTime": 6.99,
       "autoLoader": false,
       "reloadTimes": {
-        "base": 9.75,
-        "expert": 8.62,
-        "ace": 7.5
+        "base": 9.09,
+        "expert": 8.04,
+        "ace": 6.99
       }
     },
     "ammunitions": [

@@ -1,33 +1,33 @@
 {
   "id": "fw_189c_0",
   "economy": {
-    "researchCost": 4000,
+    "researchCost": 7900,
     "purchaseCost": 0,
-    "purchaseCostGold": 400,
-    "crewTraining": 450,
-    "expertTraining": 3000,
-    "aceTrainingGE": 45,
-    "aceTrainingRP": 220000,
+    "purchaseCostGold": 700,
+    "crewTraining": 2300,
+    "expertTraining": 15000,
+    "aceTrainingGE": 125,
+    "aceTrainingRP": 320000,
     "repairCost": {
       "arcade": [
-        115,
-        115
+        231,
+        231
       ],
       "realistic": [
-        151,
-        151
+        291,
+        291
       ],
       "simulator": [
-        314,
-        314
+        558,
+        558
       ]
     },
     "rewardMultiplier": {
-      "arcade": 0.27,
-      "realistic": 0.53,
-      "simulator": 1.22
+      "arcade": 0.53,
+      "realistic": 1.04,
+      "simulator": 2.42
     },
-    "expMultiplier": 1.0,
+    "expMultiplier": 1.12,
     "freeRepairs": 30
   },
   "weapons": {

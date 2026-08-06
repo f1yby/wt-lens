@@ -5,7 +5,7 @@
     "weight": 7.2,
     "power_to_weight": 18.06,
     "max_reverse_speed": 7.2,
-    "reload_time": 3.33,
+    "reload_time": 2.86,
     "penetration": 47.8,
     "max_speed": 49.7,
     "crew_count": 5,
@@ -30,12 +30,12 @@
     "mainGun": {
       "name": "37mm_Type100",
       "caliber": 37.0,
-      "reloadTime": 3.33,
+      "reloadTime": 2.86,
       "autoLoader": false,
       "reloadTimes": {
-        "base": 4.33,
-        "expert": 3.83,
-        "ace": 3.33
+        "base": 3.72,
+        "expert": 3.29,
+        "ace": 2.86
       }
     },
     "ammunitions": [

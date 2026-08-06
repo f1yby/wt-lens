@@ -5,7 +5,7 @@
     "weight": 44.9,
     "power_to_weight": 18.04,
     "max_reverse_speed": 8.3,
-    "reload_time": 6.67,
+    "reload_time": 6.0,
     "penetration": 329.7,
     "max_speed": 45.5,
     "crew_count": 5,
@@ -30,12 +30,12 @@
     "mainGun": {
       "name": "90mm_M41",
       "caliber": 90.0,
-      "reloadTime": 6.67,
+      "reloadTime": 6.0,
       "autoLoader": false,
       "reloadTimes": {
-        "base": 8.67,
-        "expert": 7.67,
-        "ace": 6.67
+        "base": 7.8,
+        "expert": 6.9,
+        "ace": 6.0
       }
     },
     "ammunitions": [

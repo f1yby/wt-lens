@@ -5,7 +5,7 @@
     "weight": 11.6,
     "power_to_weight": 9.48,
     "max_reverse_speed": 4.7,
-    "reload_time": 6.9,
+    "reload_time": 5.0,
     "penetration": 86.7,
     "max_speed": 36.0,
     "crew_count": 5,
@@ -30,12 +30,12 @@
     "mainGun": {
       "name": "76mm_F34",
       "caliber": 76.2,
-      "reloadTime": 6.9,
+      "reloadTime": 5.0,
       "autoLoader": false,
       "reloadTimes": {
-        "base": 8.97,
-        "expert": 7.93,
-        "ace": 6.9
+        "base": 6.5,
+        "expert": 5.75,
+        "ace": 5.0
       }
     },
     "ammunitions": [

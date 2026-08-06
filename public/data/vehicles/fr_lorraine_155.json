@@ -5,7 +5,7 @@
     "weight": 29.95,
     "power_to_weight": 20.03,
     "max_reverse_speed": 7.1,
-    "reload_time": 20.0,
+    "reload_time": 14.99,
     "penetration": null,
     "max_speed": 54.6,
     "crew_count": 5,
@@ -30,12 +30,12 @@
     "mainGun": {
       "name": "155mm_Obusier_Modele_1950",
       "caliber": 155.0,
-      "reloadTime": 20.0,
+      "reloadTime": 14.99,
       "autoLoader": false,
       "reloadTimes": {
-        "base": 26.0,
-        "expert": 23.0,
-        "ace": 20.0
+        "base": 19.49,
+        "expert": 17.24,
+        "ace": 14.99
       }
     },
     "ammunitions": [

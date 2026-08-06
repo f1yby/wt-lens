@@ -5,7 +5,7 @@
     "weight": 28.12,
     "power_to_weight": 17.78,
     "max_reverse_speed": 6.2,
-    "reload_time": 7.5,
+    "reload_time": 6.99,
     "penetration": 185.4,
     "max_speed": 47.9,
     "crew_count": 5,
@@ -30,12 +30,12 @@
     "mainGun": {
       "name": "90mm_M3_open_turret_without_MB",
       "caliber": 90.0,
-      "reloadTime": 7.5,
+      "reloadTime": 6.99,
       "autoLoader": false,
       "reloadTimes": {
-        "base": 9.75,
-        "expert": 8.62,
-        "ace": 7.5
+        "base": 9.09,
+        "expert": 8.04,
+        "ace": 6.99
       }
     },
     "ammunitions": [

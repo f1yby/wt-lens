@@ -5,7 +5,7 @@
     "weight": 25.7,
     "power_to_weight": 11.67,
     "max_reverse_speed": 7.2,
-    "reload_time": 5.88,
+    "reload_time": 5.0,
     "penetration": 192.0,
     "max_speed": 38.7,
     "crew_count": 5,
@@ -30,12 +30,12 @@
     "mainGun": {
       "name": "75mm_KwK40_L48",
       "caliber": 75.0,
-      "reloadTime": 5.88,
+      "reloadTime": 5.0,
       "autoLoader": false,
       "reloadTimes": {
-        "base": 7.64,
-        "expert": 6.76,
-        "ace": 5.88
+        "base": 6.5,
+        "expert": 5.75,
+        "ace": 5.0
       }
     },
     "ammunitions": [

@@ -5,7 +5,7 @@
     "weight": 8.2,
     "power_to_weight": 12.8,
     "max_reverse_speed": 42.3,
-    "reload_time": 3.0,
+    "reload_time": 2.0,
     "penetration": 71.2,
     "max_speed": 71.6,
     "crew_count": 5,
@@ -30,12 +30,12 @@
     "mainGun": {
       "name": "25mm_SA_34",
       "caliber": 25.0,
-      "reloadTime": 3.0,
+      "reloadTime": 2.0,
       "autoLoader": false,
       "reloadTimes": {
-        "base": 3.9,
-        "expert": 3.45,
-        "ace": 3.0
+        "base": 2.6,
+        "expert": 2.3,
+        "ace": 2.0
       }
     },
     "ammunitions": [

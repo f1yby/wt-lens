@@ -1975,7 +1975,7 @@
       "weight": 18.4,
       "power_to_weight": 13.59,
       "max_reverse_speed": 4.8,
-      "reload_time": 5.0,
+      "reload_time": 4.0,
       "penetration": 145.7,
       "max_speed": 39.9,
       "crew_count": 5,
@@ -2000,12 +2000,12 @@
       "mainGun": {
         "name": "57mm_ZIS2",
         "caliber": 57.0,
-        "reloadTime": 5.0,
+        "reloadTime": 4.0,
         "autoLoader": false,
         "reloadTimes": {
-          "base": 6.5,
-          "expert": 5.75,
-          "ace": 5.0
+          "base": 5.2,
+          "expert": 4.6,
+          "ace": 4.0
         }
       },
       "ammunitions": [
@@ -2798,7 +2798,7 @@
       "weight": 28.12,
       "power_to_weight": 17.78,
       "max_reverse_speed": 6.2,
-      "reload_time": 7.5,
+      "reload_time": 6.99,
       "penetration": 185.4,
       "max_speed": 47.9,
       "crew_count": 5,
@@ -2823,12 +2823,12 @@
       "mainGun": {
         "name": "90mm_M3_open_turret_without_MB",
         "caliber": 90.0,
-        "reloadTime": 7.5,
+        "reloadTime": 6.99,
         "autoLoader": false,
         "reloadTimes": {
-          "base": 9.75,
-          "expert": 8.62,
-          "ace": 7.5
+          "base": 9.09,
+          "expert": 8.04,
+          "ace": 6.99
         }
       },
       "ammunitions": [
@@ -3415,7 +3415,7 @@
       "weight": 44.9,
       "power_to_weight": 18.04,
       "max_reverse_speed": 8.3,
-      "reload_time": 6.67,
+      "reload_time": 6.0,
       "penetration": 329.7,
       "max_speed": 45.5,
       "crew_count": 5,
@@ -3440,12 +3440,12 @@
       "mainGun": {
         "name": "90mm_M41",
         "caliber": 90.0,
-        "reloadTime": 6.67,
+        "reloadTime": 6.0,
         "autoLoader": false,
         "reloadTimes": {
-          "base": 8.67,
-          "expert": 7.67,
-          "ace": 6.67
+          "base": 7.8,
+          "expert": 6.9,
+          "ace": 6.0
         }
       },
       "ammunitions": [
@@ -10479,7 +10479,7 @@
       "weight": 7.46,
       "power_to_weight": 16.09,
       "max_reverse_speed": 10.2,
-      "reload_time": 3.33,
+      "reload_time": 2.86,
       "penetration": 34.5,
       "max_speed": 48.1,
       "crew_count": 5,
@@ -10504,12 +10504,12 @@
       "mainGun": {
         "name": "37mm_type_94",
         "caliber": 37.0,
-        "reloadTime": 3.33,
+        "reloadTime": 2.86,
         "autoLoader": false,
         "reloadTimes": {
-          "base": 4.33,
-          "expert": 3.83,
-          "ace": 3.33
+          "base": 3.72,
+          "expert": 3.29,
+          "ace": 2.86
         }
       },
       "ammunitions": [
@@ -14494,7 +14494,7 @@
       "weight": 9.7,
       "power_to_weight": 12.37,
       "max_reverse_speed": 5.5,
-      "reload_time": 6.0,
+      "reload_time": 4.0,
       "penetration": 27.6,
       "max_speed": 40.1,
       "crew_count": 5,
@@ -14519,12 +14519,12 @@
       "mainGun": {
         "name": "47mm_SA_34",
         "caliber": 47.0,
-        "reloadTime": 6.0,
+        "reloadTime": 4.0,
         "autoLoader": false,
         "reloadTimes": {
-          "base": 7.8,
-          "expert": 6.9,
-          "ace": 6.0
+          "base": 5.2,
+          "expert": 4.6,
+          "ace": 4.0
         }
       },
       "ammunitions": [
@@ -14696,7 +14696,7 @@
       "weight": 8.2,
       "power_to_weight": 12.8,
       "max_reverse_speed": 42.3,
-      "reload_time": 3.0,
+      "reload_time": 2.0,
       "penetration": 71.2,
       "max_speed": 71.6,
       "crew_count": 5,
@@ -14721,12 +14721,12 @@
       "mainGun": {
         "name": "25mm_SA_34",
         "caliber": 25.0,
-        "reloadTime": 3.0,
+        "reloadTime": 2.0,
         "autoLoader": false,
         "reloadTimes": {
-          "base": 3.9,
-          "expert": 3.45,
-          "ace": 3.0
+          "base": 2.6,
+          "expert": 2.3,
+          "ace": 2.0
         }
       },
       "ammunitions": [
@@ -15172,7 +15172,7 @@
       "weight": 6.5,
       "power_to_weight": 12.62,
       "max_reverse_speed": 6.9,
-      "reload_time": 3.0,
+      "reload_time": 2.0,
       "penetration": 71.2,
       "max_speed": 60.3,
       "crew_count": 5,
@@ -15197,12 +15197,12 @@
       "mainGun": {
         "name": "25mm_SA_34",
         "caliber": 25.0,
-        "reloadTime": 3.0,
+        "reloadTime": 2.0,
         "autoLoader": false,
         "reloadTimes": {
-          "base": 3.9,
-          "expert": 3.45,
-          "ace": 3.0
+          "base": 2.6,
+          "expert": 2.3,
+          "ace": 2.0
         }
       },
       "ammunitions": [
@@ -22997,7 +22997,7 @@
       "weight": 29.95,
       "power_to_weight": 20.03,
       "max_reverse_speed": 7.1,
-      "reload_time": 20.0,
+      "reload_time": 14.99,
       "penetration": null,
       "max_speed": 54.6,
       "crew_count": 5,
@@ -23022,12 +23022,12 @@
       "mainGun": {
         "name": "155mm_Obusier_Modele_1950",
         "caliber": 155.0,
-        "reloadTime": 20.0,
+        "reloadTime": 14.99,
         "autoLoader": false,
         "reloadTimes": {
-          "base": 26.0,
-          "expert": 23.0,
-          "ace": 20.0
+          "base": 19.49,
+          "expert": 17.24,
+          "ace": 14.99
         }
       },
       "ammunitions": [
@@ -23719,7 +23719,7 @@
       "weight": 29.94,
       "power_to_weight": 13.69,
       "max_reverse_speed": 5.2,
-      "reload_time": 7.5,
+      "reload_time": 6.99,
       "penetration": 305.0,
       "max_speed": 40.2,
       "crew_count": 5,
@@ -23744,12 +23744,12 @@
       "mainGun": {
         "name": "90mm_M3_M36B2",
         "caliber": 90.0,
-        "reloadTime": 7.5,
+        "reloadTime": 6.99,
         "autoLoader": false,
         "reloadTimes": {
-          "base": 9.75,
-          "expert": 8.62,
-          "ace": 7.5
+          "base": 9.09,
+          "expert": 8.04,
+          "ace": 6.99
         }
       },
       "ammunitions": [
@@ -37120,7 +37120,7 @@
       "weight": 47.8,
       "power_to_weight": 17.26,
       "max_reverse_speed": 8.4,
-      "reload_time": 6.67,
+      "reload_time": 6.0,
       "penetration": 329.7,
       "max_speed": 48.3,
       "crew_count": 5,
@@ -37145,12 +37145,12 @@
       "mainGun": {
         "name": "90mm_Kanone_M41",
         "caliber": 90.0,
-        "reloadTime": 6.67,
+        "reloadTime": 6.0,
         "autoLoader": false,
         "reloadTimes": {
-          "base": 8.67,
-          "expert": 7.67,
-          "ace": 6.67
+          "base": 7.8,
+          "expert": 6.9,
+          "ace": 6.0
         }
       },
       "ammunitions": [
@@ -37948,7 +37948,7 @@
       "weight": 25.7,
       "power_to_weight": 11.67,
       "max_reverse_speed": 7.2,
-      "reload_time": 5.88,
+      "reload_time": 5.0,
       "penetration": 192.0,
       "max_speed": 38.7,
       "crew_count": 5,
@@ -37973,12 +37973,12 @@
       "mainGun": {
         "name": "75mm_KwK40_L48",
         "caliber": 75.0,
-        "reloadTime": 5.88,
+        "reloadTime": 5.0,
         "autoLoader": false,
         "reloadTimes": {
-          "base": 7.64,
-          "expert": 6.76,
-          "ace": 5.88
+          "base": 6.5,
+          "expert": 5.75,
+          "ace": 5.0
         }
       },
       "ammunitions": [
@@ -38279,7 +38279,7 @@
       "weight": 46.0,
       "power_to_weight": 13.04,
       "max_reverse_speed": 3.5,
-      "reload_time": 7.5,
+      "reload_time": 6.99,
       "penetration": 287.1,
       "max_speed": 45.8,
       "crew_count": 5,
@@ -38304,12 +38304,12 @@
       "mainGun": {
         "name": "88mm_PaK43",
         "caliber": 88.0,
-        "reloadTime": 7.5,
+        "reloadTime": 6.99,
         "autoLoader": false,
         "reloadTimes": {
-          "base": 9.75,
-          "expert": 8.62,
-          "ace": 7.5
+          "base": 9.09,
+          "expert": 8.04,
+          "ace": 6.99
         }
       },
       "ammunitions": [
@@ -38687,7 +38687,7 @@
       "weight": 46.0,
       "power_to_weight": 13.04,
       "max_reverse_speed": 3.5,
-      "reload_time": 7.5,
+      "reload_time": 6.99,
       "penetration": 287.1,
       "max_speed": 45.8,
       "crew_count": 5,
@@ -38712,12 +38712,12 @@
       "mainGun": {
         "name": "88mm_PaK43",
         "caliber": 88.0,
-        "reloadTime": 7.5,
+        "reloadTime": 6.99,
         "autoLoader": false,
         "reloadTimes": {
-          "base": 9.75,
-          "expert": 8.62,
-          "ace": 7.5
+          "base": 9.09,
+          "expert": 8.04,
+          "ace": 6.99
         }
       },
       "ammunitions": [
@@ -39338,7 +39338,7 @@
       "weight": 26.2,
       "power_to_weight": 11.45,
       "max_reverse_speed": 7.5,
-      "reload_time": 7.41,
+      "reload_time": 6.99,
       "penetration": 239.3,
       "max_speed": 34.8,
       "crew_count": 5,
@@ -39363,12 +39363,12 @@
       "mainGun": {
         "name": "75mm_PaK42",
         "caliber": 75.0,
-        "reloadTime": 7.41,
+        "reloadTime": 6.99,
         "autoLoader": false,
         "reloadTimes": {
-          "base": 9.63,
-          "expert": 8.52,
-          "ace": 7.41
+          "base": 9.09,
+          "expert": 8.04,
+          "ace": 6.99
         }
       },
       "ammunitions": [
@@ -42634,7 +42634,7 @@
       "weight": 10.5,
       "power_to_weight": 19.05,
       "max_reverse_speed": 10.4,
-      "reload_time": 5.88,
+      "reload_time": 3.7,
       "penetration": 137.1,
       "max_speed": 55.7,
       "crew_count": 5,
@@ -42659,12 +42659,12 @@
       "mainGun": {
         "name": "50mm_PaK38",
         "caliber": 50.0,
-        "reloadTime": 5.88,
+        "reloadTime": 3.7,
         "autoLoader": false,
         "reloadTimes": {
-          "base": 7.64,
-          "expert": 6.76,
-          "ace": 5.88
+          "base": 4.81,
+          "expert": 4.25,
+          "ace": 3.7
         }
       },
       "ammunitions": [
@@ -43209,7 +43209,7 @@
       "weight": 22.65,
       "power_to_weight": 13.25,
       "max_reverse_speed": 8.0,
-      "reload_time": 5.88,
+      "reload_time": 5.0,
       "penetration": 172.6,
       "max_speed": 42.8,
       "crew_count": 5,
@@ -43234,12 +43234,12 @@
       "mainGun": {
         "name": "75mm_KwK40_L43",
         "caliber": 75.0,
-        "reloadTime": 5.88,
+        "reloadTime": 5.0,
         "autoLoader": false,
         "reloadTimes": {
-          "base": 7.64,
-          "expert": 6.76,
-          "ace": 5.88
+          "base": 6.5,
+          "expert": 5.75,
+          "ace": 5.0
         }
       },
       "ammunitions": [
@@ -43364,7 +43364,7 @@
       "weight": 23.65,
       "power_to_weight": 12.68,
       "max_reverse_speed": 7.5,
-      "reload_time": 5.88,
+      "reload_time": 5.0,
       "penetration": 172.6,
       "max_speed": 40.0,
       "crew_count": 5,
@@ -43389,12 +43389,12 @@
       "mainGun": {
         "name": "75mm_KwK40_L43",
         "caliber": 75.0,
-        "reloadTime": 5.88,
+        "reloadTime": 5.0,
         "autoLoader": false,
         "reloadTimes": {
-          "base": 7.64,
-          "expert": 6.76,
-          "ace": 5.88
+          "base": 6.5,
+          "expert": 5.75,
+          "ace": 5.0
         }
       },
       "ammunitions": [
@@ -43519,7 +43519,7 @@
       "weight": 26.35,
       "power_to_weight": 11.39,
       "max_reverse_speed": 7.2,
-      "reload_time": 5.88,
+      "reload_time": 5.0,
       "penetration": 192.0,
       "max_speed": 38.7,
       "crew_count": 5,
@@ -43544,12 +43544,12 @@
       "mainGun": {
         "name": "75mm_KwK40_L48",
         "caliber": 75.0,
-        "reloadTime": 5.88,
+        "reloadTime": 5.0,
         "autoLoader": false,
         "reloadTimes": {
-          "base": 7.64,
-          "expert": 6.76,
-          "ace": 5.88
+          "base": 6.5,
+          "expert": 5.75,
+          "ace": 5.0
         }
       },
       "ammunitions": [
@@ -43683,7 +43683,7 @@
       "weight": 25.4,
       "power_to_weight": 11.81,
       "max_reverse_speed": 7.2,
-      "reload_time": 5.88,
+      "reload_time": 5.0,
       "penetration": 192.0,
       "max_speed": 38.7,
       "crew_count": 5,
@@ -43708,12 +43708,12 @@
       "mainGun": {
         "name": "75mm_KwK40_L48",
         "caliber": 75.0,
-        "reloadTime": 5.88,
+        "reloadTime": 5.0,
         "autoLoader": false,
         "reloadTimes": {
-          "base": 7.64,
-          "expert": 6.76,
-          "ace": 5.88
+          "base": 6.5,
+          "expert": 5.75,
+          "ace": 5.0
         }
       },
       "ammunitions": [
@@ -47643,7 +47643,7 @@
       "weight": 4.0,
       "power_to_weight": 18.75,
       "max_reverse_speed": 15.0,
-      "reload_time": 3.0,
+      "reload_time": 2.0,
       "penetration": 87.0,
       "max_speed": 80.0,
       "crew_count": 5,
@@ -47668,12 +47668,12 @@
       "mainGun": {
         "name": "28_20mm_s_Pz_B_41",
         "caliber": 20.0,
-        "reloadTime": 3.0,
+        "reloadTime": 2.0,
         "autoLoader": false,
         "reloadTimes": {
-          "base": 3.9,
-          "expert": 3.45,
-          "ace": 3.0
+          "base": 2.6,
+          "expert": 2.3,
+          "ace": 2.0
         }
       },
       "ammunitions": [
@@ -50126,7 +50126,7 @@
       "weight": 23.2,
       "power_to_weight": 12.93,
       "max_reverse_speed": 7.5,
-      "reload_time": 5.88,
+      "reload_time": 5.0,
       "penetration": 172.6,
       "max_speed": 40.3,
       "crew_count": 5,
@@ -50151,12 +50151,12 @@
       "mainGun": {
         "name": "75mm_StuK40_L43",
         "caliber": 75.0,
-        "reloadTime": 5.88,
+        "reloadTime": 5.0,
         "autoLoader": false,
         "reloadTimes": {
-          "base": 7.64,
-          "expert": 6.76,
-          "ace": 5.88
+          "base": 6.5,
+          "expert": 5.75,
+          "ace": 5.0
         }
       },
       "ammunitions": [
@@ -50271,7 +50271,7 @@
       "weight": 24.35,
       "power_to_weight": 12.32,
       "max_reverse_speed": 7.5,
-      "reload_time": 5.88,
+      "reload_time": 5.0,
       "penetration": 192.0,
       "max_speed": 40.3,
       "crew_count": 5,
@@ -50296,12 +50296,12 @@
       "mainGun": {
         "name": "75mm_StuK40_L48",
         "caliber": 75.0,
-        "reloadTime": 5.88,
+        "reloadTime": 5.0,
         "autoLoader": false,
         "reloadTimes": {
-          "base": 7.64,
-          "expert": 6.76,
-          "ace": 5.88
+          "base": 6.5,
+          "expert": 5.75,
+          "ace": 5.0
         }
       },
       "ammunitions": [
@@ -54770,7 +54770,7 @@
       "weight": 44.9,
       "power_to_weight": 18.04,
       "max_reverse_speed": 8.3,
-      "reload_time": 6.67,
+      "reload_time": 6.0,
       "penetration": 329.7,
       "max_speed": 45.5,
       "crew_count": 5,
@@ -54795,12 +54795,12 @@
       "mainGun": {
         "name": "90mm_M41",
         "caliber": 90.0,
-        "reloadTime": 6.67,
+        "reloadTime": 6.0,
         "autoLoader": false,
         "reloadTimes": {
-          "base": 8.67,
-          "expert": 7.67,
-          "ace": 6.67
+          "base": 7.8,
+          "expert": 6.9,
+          "ace": 6.0
         }
       },
       "ammunitions": [
@@ -55272,7 +55272,7 @@
       "weight": 47.8,
       "power_to_weight": 17.26,
       "max_reverse_speed": 8.4,
-      "reload_time": 6.67,
+      "reload_time": 6.0,
       "penetration": 329.7,
       "max_speed": 48.3,
       "crew_count": 5,
@@ -55297,12 +55297,12 @@
       "mainGun": {
         "name": "90mm_M41",
         "caliber": 90.0,
-        "reloadTime": 6.67,
+        "reloadTime": 6.0,
         "autoLoader": false,
         "reloadTimes": {
-          "base": 8.67,
-          "expert": 7.67,
-          "ace": 6.67
+          "base": 7.8,
+          "expert": 6.9,
+          "ace": 6.0
         }
       },
       "ammunitions": [
@@ -68111,7 +68111,7 @@
       "weight": 11.0,
       "power_to_weight": 11.82,
       "max_reverse_speed": 4.9,
-      "reload_time": 3.12,
+      "reload_time": 2.86,
       "penetration": 35.0,
       "max_speed": 33.7,
       "crew_count": 5,
@@ -68136,12 +68136,12 @@
       "mainGun": {
         "name": "37mm_Vickers_Terni_37_40_M18",
         "caliber": 37.0,
-        "reloadTime": 3.12,
+        "reloadTime": 2.86,
         "autoLoader": false,
         "reloadTimes": {
-          "base": 4.06,
-          "expert": 3.59,
-          "ace": 3.12
+          "base": 3.72,
+          "expert": 3.29,
+          "ace": 2.86
         }
       },
       "ammunitions": [
@@ -69695,7 +69695,7 @@
       "weight": 30.85,
       "power_to_weight": 16.21,
       "max_reverse_speed": 6.3,
-      "reload_time": 7.5,
+      "reload_time": 6.99,
       "penetration": 305.0,
       "max_speed": 48.2,
       "crew_count": 5,
@@ -69720,12 +69720,12 @@
       "mainGun": {
         "name": "90mm_90_50_M3A1",
         "caliber": 90.0,
-        "reloadTime": 7.5,
+        "reloadTime": 6.99,
         "autoLoader": false,
         "reloadTimes": {
-          "base": 9.75,
-          "expert": 8.62,
-          "ace": 7.5
+          "base": 9.09,
+          "expert": 8.04,
+          "ace": 6.99
         }
       },
       "ammunitions": [
@@ -72428,7 +72428,7 @@
       "weight": 23.65,
       "power_to_weight": 12.68,
       "max_reverse_speed": 7.5,
-      "reload_time": 5.88,
+      "reload_time": 5.0,
       "penetration": 192.0,
       "max_speed": 40.0,
       "crew_count": 5,
@@ -72453,12 +72453,12 @@
       "mainGun": {
         "name": "75mm_KwK40_L48",
         "caliber": 75.0,
-        "reloadTime": 5.88,
+        "reloadTime": 5.0,
         "autoLoader": false,
         "reloadTimes": {
-          "base": 7.64,
-          "expert": 6.76,
-          "ace": 5.88
+          "base": 6.5,
+          "expert": 5.75,
+          "ace": 5.0
         }
       },
       "ammunitions": [
@@ -73257,7 +73257,7 @@
       "weight": 13.1,
       "power_to_weight": 12.21,
       "max_reverse_speed": 5.2,
-      "reload_time": 5.99,
+      "reload_time": 5.0,
       "penetration": 100.0,
       "max_speed": 33.3,
       "crew_count": 5,
@@ -73282,12 +73282,12 @@
       "mainGun": {
         "name": "75mm_Ansaldo_75_18_M34",
         "caliber": 75.0,
-        "reloadTime": 5.99,
+        "reloadTime": 5.0,
         "autoLoader": false,
         "reloadTimes": {
-          "base": 7.79,
-          "expert": 6.89,
-          "ace": 5.99
+          "base": 6.5,
+          "expert": 5.75,
+          "ace": 5.0
         }
       },
       "ammunitions": [
@@ -73410,7 +73410,7 @@
       "weight": 14.5,
       "power_to_weight": 11.03,
       "max_reverse_speed": 5.2,
-      "reload_time": 7.5,
+      "reload_time": 6.0,
       "penetration": 100.0,
       "max_speed": 33.3,
       "crew_count": 5,
@@ -73435,12 +73435,12 @@
       "mainGun": {
         "name": "75mm_Ansaldo_75_32_M37",
         "caliber": 75.0,
-        "reloadTime": 7.5,
+        "reloadTime": 6.0,
         "autoLoader": false,
         "reloadTimes": {
-          "base": 9.75,
-          "expert": 8.62,
-          "ace": 7.5
+          "base": 7.8,
+          "expert": 6.9,
+          "ace": 6.0
         }
       },
       "ammunitions": [
@@ -74679,7 +74679,7 @@
       "weight": 24.35,
       "power_to_weight": 12.32,
       "max_reverse_speed": 7.5,
-      "reload_time": 5.88,
+      "reload_time": 5.0,
       "penetration": 192.0,
       "max_speed": 40.3,
       "crew_count": 5,
@@ -74704,12 +74704,12 @@
       "mainGun": {
         "name": "75mm_StuK40_L48",
         "caliber": 75.0,
-        "reloadTime": 5.88,
+        "reloadTime": 5.0,
         "autoLoader": false,
         "reloadTimes": {
-          "base": 7.64,
-          "expert": 6.76,
-          "ace": 5.88
+          "base": 6.5,
+          "expert": 5.75,
+          "ace": 5.0
         }
       },
       "ammunitions": [
@@ -77203,7 +77203,7 @@
       "weight": 29.94,
       "power_to_weight": 16.7,
       "max_reverse_speed": 6.2,
-      "reload_time": 7.5,
+      "reload_time": 6.99,
       "penetration": 305.0,
       "max_speed": 47.8,
       "crew_count": 5,
@@ -77228,12 +77228,12 @@
       "mainGun": {
         "name": "90mm_M3A1",
         "caliber": 90.0,
-        "reloadTime": 7.5,
+        "reloadTime": 6.99,
         "autoLoader": false,
         "reloadTimes": {
-          "base": 9.75,
-          "expert": 8.62,
-          "ace": 7.5
+          "base": 9.09,
+          "expert": 8.04,
+          "ace": 6.99
         }
       },
       "ammunitions": [
@@ -81586,7 +81586,7 @@
       "weight": 9.07,
       "power_to_weight": 12.68,
       "max_reverse_speed": 10.0,
-      "reload_time": 4.0,
+      "reload_time": 2.86,
       "penetration": 57.9,
       "max_speed": 40.0,
       "crew_count": 5,
@@ -81611,12 +81611,12 @@
       "mainGun": {
         "name": "37mm_Type1",
         "caliber": 37.0,
-        "reloadTime": 4.0,
+        "reloadTime": 2.86,
         "autoLoader": false,
         "reloadTimes": {
-          "base": 5.2,
-          "expert": 4.6,
-          "ace": 4.0
+          "base": 3.72,
+          "expert": 3.29,
+          "ace": 2.86
         }
       },
       "ammunitions": [
@@ -86526,7 +86526,7 @@
       "weight": 7.46,
       "power_to_weight": 16.09,
       "max_reverse_speed": 10.2,
-      "reload_time": 3.33,
+      "reload_time": 2.86,
       "penetration": 34.5,
       "max_speed": 48.1,
       "crew_count": 5,
@@ -86551,12 +86551,12 @@
       "mainGun": {
         "name": "37mm_type_94",
         "caliber": 37.0,
-        "reloadTime": 3.33,
+        "reloadTime": 2.86,
         "autoLoader": false,
         "reloadTimes": {
-          "base": 4.33,
-          "expert": 3.83,
-          "ace": 3.33
+          "base": 3.72,
+          "expert": 3.29,
+          "ace": 2.86
         }
       },
       "ammunitions": [
@@ -86626,7 +86626,7 @@
       "weight": 7.46,
       "power_to_weight": 16.09,
       "max_reverse_speed": 10.2,
-      "reload_time": 3.33,
+      "reload_time": 2.86,
       "penetration": 34.5,
       "max_speed": 48.1,
       "crew_count": 5,
@@ -86651,12 +86651,12 @@
       "mainGun": {
         "name": "37mm_type_94",
         "caliber": 37.0,
-        "reloadTime": 3.33,
+        "reloadTime": 2.86,
         "autoLoader": false,
         "reloadTimes": {
-          "base": 4.33,
-          "expert": 3.83,
-          "ace": 3.33
+          "base": 3.72,
+          "expert": 3.29,
+          "ace": 2.86
         }
       },
       "ammunitions": [
@@ -87435,7 +87435,7 @@
       "weight": 7.2,
       "power_to_weight": 18.06,
       "max_reverse_speed": 7.2,
-      "reload_time": 3.33,
+      "reload_time": 2.86,
       "penetration": 47.8,
       "max_speed": 49.7,
       "crew_count": 5,
@@ -87460,12 +87460,12 @@
       "mainGun": {
         "name": "37mm_Type100",
         "caliber": 37.0,
-        "reloadTime": 3.33,
+        "reloadTime": 2.86,
         "autoLoader": false,
         "reloadTimes": {
-          "base": 4.33,
-          "expert": 3.83,
-          "ace": 3.33
+          "base": 3.72,
+          "expert": 3.29,
+          "ace": 2.86
         }
       },
       "ammunitions": [
@@ -87777,7 +87777,7 @@
       "weight": 33.5,
       "power_to_weight": 17.91,
       "max_reverse_speed": 3.0,
-      "reload_time": 7.41,
+      "reload_time": 6.99,
       "penetration": 161.1,
       "max_speed": 51.5,
       "crew_count": 5,
@@ -87802,12 +87802,12 @@
       "mainGun": {
         "name": "77mm_QQF_Mk_II_L50",
         "caliber": 76.2,
-        "reloadTime": 7.41,
+        "reloadTime": 6.99,
         "autoLoader": false,
         "reloadTimes": {
-          "base": 9.63,
-          "expert": 8.52,
-          "ace": 7.41
+          "base": 9.09,
+          "expert": 8.04,
+          "ace": 6.99
         }
       },
       "ammunitions": [
@@ -94231,7 +94231,7 @@
       "weight": 25.0,
       "power_to_weight": 12.0,
       "max_reverse_speed": 7.2,
-      "reload_time": 5.88,
+      "reload_time": 5.0,
       "penetration": 192.0,
       "max_speed": 38.7,
       "crew_count": 5,
@@ -94256,12 +94256,12 @@
       "mainGun": {
         "name": "75mm_KwK40_L48",
         "caliber": 75.0,
-        "reloadTime": 5.88,
+        "reloadTime": 5.0,
         "autoLoader": false,
         "reloadTimes": {
-          "base": 7.64,
-          "expert": 6.76,
-          "ace": 5.88
+          "base": 6.5,
+          "expert": 5.75,
+          "ace": 5.0
         }
       },
       "ammunitions": [
@@ -104565,7 +104565,7 @@
       "weight": 33.5,
       "power_to_weight": 17.91,
       "max_reverse_speed": 3.0,
-      "reload_time": 7.41,
+      "reload_time": 6.99,
       "penetration": 161.1,
       "max_speed": 51.5,
       "crew_count": 5,
@@ -104590,12 +104590,12 @@
       "mainGun": {
         "name": "77mm_QQF_Mk_II_L50",
         "caliber": 76.2,
-        "reloadTime": 7.41,
+        "reloadTime": 6.99,
         "autoLoader": false,
         "reloadTimes": {
-          "base": 9.63,
-          "expert": 8.52,
-          "ace": 7.41
+          "base": 9.09,
+          "expert": 8.04,
+          "ace": 6.99
         }
       },
       "ammunitions": [
@@ -104723,7 +104723,7 @@
       "weight": 33.5,
       "power_to_weight": 17.91,
       "max_reverse_speed": 3.0,
-      "reload_time": 7.41,
+      "reload_time": 6.99,
       "penetration": 161.1,
       "max_speed": 51.5,
       "crew_count": 5,
@@ -104748,12 +104748,12 @@
       "mainGun": {
         "name": "77mm_QQF_Mk_II_L50",
         "caliber": 76.2,
-        "reloadTime": 7.41,
+        "reloadTime": 6.99,
         "autoLoader": false,
         "reloadTimes": {
-          "base": 9.63,
-          "expert": 8.52,
-          "ace": 7.41
+          "base": 9.09,
+          "expert": 8.04,
+          "ace": 6.99
         }
       },
       "ammunitions": [
@@ -113103,7 +113103,7 @@
       "power_to_weight": 19.17,
       "max_reverse_speed": 80.0,
       "reload_time": 0.8,
-      "penetration": 110.0,
+      "penetration": 110.5,
       "max_speed": 80.0,
       "crew_count": 5,
       "elevation_speed": 30.0,
@@ -113215,9 +113215,37 @@
             }
           ],
           "penetration0m": 110.0
+        },
+        {
+          "name": "30mm_l21a1",
+          "localizedName": "L21A1",
+          "type": "apds_fs_long_tank",
+          "caliber": 8.5,
+          "mass": 0.16,
+          "muzzleVelocity": 1325.0,
+          "lanzOdermatt": {
+            "workingLength": 150.0,
+            "density": 17500.0,
+            "material": "tungsten",
+            "Cx": 0.3744
+          },
+          "penetration0m": 110.5,
+          "penetrationData": {
+            "at0m": {
+              "angle0": 110.5,
+              "angle30": 95.7,
+              "angle60": 55.3
+            }
+          }
         }
       ],
-      "penetrationData": null,
+      "penetrationData": {
+        "at0m": {
+          "angle0": 110.5,
+          "angle30": 95.7,
+          "angle60": 55.3
+        }
+      },
       "autoLoader": false,
       "engine_manufacturer": null,
       "engine_model": "6B_TA",
@@ -122884,7 +122912,7 @@
       "weight": 18.4,
       "power_to_weight": 13.59,
       "max_reverse_speed": 4.8,
-      "reload_time": 5.0,
+      "reload_time": 4.0,
       "penetration": 145.7,
       "max_speed": 39.9,
       "crew_count": 5,
@@ -122909,12 +122937,12 @@
       "mainGun": {
         "name": "57mm_ZIS2",
         "caliber": 57.0,
-        "reloadTime": 5.0,
+        "reloadTime": 4.0,
         "autoLoader": false,
         "reloadTimes": {
-          "base": 6.5,
-          "expert": 5.75,
-          "ace": 5.0
+          "base": 5.2,
+          "expert": 4.6,
+          "ace": 4.0
         }
       },
       "ammunitions": [
@@ -125189,7 +125217,7 @@
       "weight": 20.4,
       "power_to_weight": 19.61,
       "max_reverse_speed": 27.0,
-      "reload_time": 7.5,
+      "reload_time": 6.99,
       "penetration": 282.4,
       "max_speed": 83.7,
       "crew_count": 5,
@@ -125214,12 +125242,12 @@
       "mainGun": {
         "name": "90mm_M3_open_turret",
         "caliber": 90.0,
-        "reloadTime": 7.5,
+        "reloadTime": 6.99,
         "autoLoader": false,
         "reloadTimes": {
-          "base": 9.75,
-          "expert": 8.62,
-          "ace": 7.5
+          "base": 9.09,
+          "expert": 8.04,
+          "ace": 6.99
         }
       },
       "ammunitions": [
@@ -129798,7 +129826,7 @@
       "weight": 28.12,
       "power_to_weight": 17.78,
       "max_reverse_speed": 6.2,
-      "reload_time": 7.5,
+      "reload_time": 6.99,
       "penetration": 282.4,
       "max_speed": 47.9,
       "crew_count": 5,
@@ -129823,12 +129851,12 @@
       "mainGun": {
         "name": "90mm_M3_open_turret_without_MB",
         "caliber": 90.0,
-        "reloadTime": 7.5,
+        "reloadTime": 6.99,
         "autoLoader": false,
         "reloadTimes": {
-          "base": 9.75,
-          "expert": 8.62,
-          "ace": 7.5
+          "base": 9.09,
+          "expert": 8.04,
+          "ace": 6.99
         }
       },
       "ammunitions": [
@@ -129954,7 +129982,7 @@
       "weight": 29.94,
       "power_to_weight": 13.69,
       "max_reverse_speed": 5.2,
-      "reload_time": 7.5,
+      "reload_time": 6.99,
       "penetration": 305.0,
       "max_speed": 40.2,
       "crew_count": 5,
@@ -129979,12 +130007,12 @@
       "mainGun": {
         "name": "90mm_M3_M36B2",
         "caliber": 90.0,
-        "reloadTime": 7.5,
+        "reloadTime": 6.99,
         "autoLoader": false,
         "reloadTimes": {
-          "base": 9.75,
-          "expert": 8.62,
-          "ace": 7.5
+          "base": 9.09,
+          "expert": 8.04,
+          "ace": 6.99
         }
       },
       "ammunitions": [
@@ -131862,7 +131890,7 @@
       "weight": 44.9,
       "power_to_weight": 18.04,
       "max_reverse_speed": 8.3,
-      "reload_time": 6.67,
+      "reload_time": 6.0,
       "penetration": 329.7,
       "max_speed": 45.5,
       "crew_count": 5,
@@ -131887,12 +131915,12 @@
       "mainGun": {
         "name": "90mm_M41",
         "caliber": 90.0,
-        "reloadTime": 6.67,
+        "reloadTime": 6.0,
         "autoLoader": false,
         "reloadTimes": {
-          "base": 8.67,
-          "expert": 7.67,
-          "ace": 6.67
+          "base": 7.8,
+          "expert": 6.9,
+          "ace": 6.0
         }
       },
       "ammunitions": [
@@ -149441,7 +149469,7 @@
       "weight": 44.0,
       "power_to_weight": 11.82,
       "max_reverse_speed": 14.3,
-      "reload_time": 7.41,
+      "reload_time": 6.99,
       "penetration": 222.6,
       "max_speed": 37.0,
       "crew_count": 5,
@@ -149466,12 +149494,12 @@
       "mainGun": {
         "name": "85mm_D5T",
         "caliber": 85.0,
-        "reloadTime": 7.41,
+        "reloadTime": 6.99,
         "autoLoader": false,
         "reloadTimes": {
-          "base": 9.63,
-          "expert": 8.52,
-          "ace": 7.41
+          "base": 9.09,
+          "expert": 8.04,
+          "ace": 6.99
         }
       },
       "ammunitions": [
@@ -149594,7 +149622,7 @@
       "weight": 44.0,
       "power_to_weight": 11.82,
       "max_reverse_speed": 14.3,
-      "reload_time": 7.41,
+      "reload_time": 6.99,
       "penetration": 222.6,
       "max_speed": 37.0,
       "crew_count": 5,
@@ -149619,12 +149647,12 @@
       "mainGun": {
         "name": "85mm_D5T",
         "caliber": 85.0,
-        "reloadTime": 7.41,
+        "reloadTime": 6.99,
         "autoLoader": false,
         "reloadTimes": {
-          "base": 9.63,
-          "expert": 8.52,
-          "ace": 7.41
+          "base": 9.09,
+          "expert": 8.04,
+          "ace": 6.99
         }
       },
       "ammunitions": [
@@ -153037,7 +153065,7 @@
       "weight": 46.0,
       "power_to_weight": 13.04,
       "max_reverse_speed": 16.3,
-      "reload_time": 7.41,
+      "reload_time": 6.99,
       "penetration": 148.1,
       "max_speed": 42.1,
       "crew_count": 5,
@@ -153062,12 +153090,12 @@
       "mainGun": {
         "name": "85mm_D5T",
         "caliber": 85.0,
-        "reloadTime": 7.41,
+        "reloadTime": 6.99,
         "autoLoader": false,
         "reloadTimes": {
-          "base": 9.63,
-          "expert": 8.52,
-          "ace": 7.41
+          "base": 9.09,
+          "expert": 8.04,
+          "ace": 6.99
         }
       },
       "ammunitions": [
@@ -157121,7 +157149,7 @@
       "weight": 9.5,
       "power_to_weight": 10.95,
       "max_reverse_speed": 5.2,
-      "reload_time": 4.27,
+      "reload_time": 4.0,
       "penetration": 145.7,
       "max_speed": 39.9,
       "crew_count": 5,
@@ -157146,12 +157174,12 @@
       "mainGun": {
         "name": "57mm_ZIS4",
         "caliber": 57.0,
-        "reloadTime": 4.27,
+        "reloadTime": 4.0,
         "autoLoader": false,
         "reloadTimes": {
-          "base": 5.55,
-          "expert": 4.91,
-          "ace": 4.27
+          "base": 5.2,
+          "expert": 4.6,
+          "ace": 4.0
         }
       },
       "ammunitions": [
@@ -157344,7 +157372,7 @@
       "weight": 11.6,
       "power_to_weight": 9.48,
       "max_reverse_speed": 4.7,
-      "reload_time": 6.9,
+      "reload_time": 5.0,
       "penetration": 86.7,
       "max_speed": 36.0,
       "crew_count": 5,
@@ -157369,12 +157397,12 @@
       "mainGun": {
         "name": "76mm_F34",
         "caliber": 76.2,
-        "reloadTime": 6.9,
+        "reloadTime": 5.0,
         "autoLoader": false,
         "reloadTimes": {
-          "base": 8.97,
-          "expert": 7.93,
-          "ace": 6.9
+          "base": 6.5,
+          "expert": 5.75,
+          "ace": 5.0
         }
       },
       "ammunitions": [
@@ -157716,7 +157744,7 @@
       "weight": 29.6,
       "power_to_weight": 16.89,
       "max_reverse_speed": 8.4,
-      "reload_time": 7.41,
+      "reload_time": 6.99,
       "penetration": 148.1,
       "max_speed": 55.0,
       "crew_count": 5,
@@ -157741,12 +157769,12 @@
       "mainGun": {
         "name": "85mm_D5S",
         "caliber": 85.0,
-        "reloadTime": 7.41,
+        "reloadTime": 6.99,
         "autoLoader": false,
         "reloadTimes": {
-          "base": 9.63,
-          "expert": 8.52,
-          "ace": 7.41
+          "base": 9.09,
+          "expert": 8.04,
+          "ace": 6.99
         }
       },
       "ammunitions": [
@@ -157837,7 +157865,7 @@
       "weight": 12.3,
       "power_to_weight": 11.38,
       "max_reverse_speed": 5.3,
-      "reload_time": 7.41,
+      "reload_time": 6.99,
       "penetration": 222.6,
       "max_speed": 40.2,
       "crew_count": 5,
@@ -157862,12 +157890,12 @@
       "mainGun": {
         "name": "85mm_D5S",
         "caliber": 85.0,
-        "reloadTime": 7.41,
+        "reloadTime": 6.99,
         "autoLoader": false,
         "reloadTimes": {
-          "base": 9.63,
-          "expert": 8.52,
-          "ace": 7.41
+          "base": 9.09,
+          "expert": 8.04,
+          "ace": 6.99
         }
       },
       "ammunitions": [
@@ -157975,7 +158003,7 @@
       "weight": 31.6,
       "power_to_weight": 15.82,
       "max_reverse_speed": 8.4,
-      "reload_time": 7.41,
+      "reload_time": 6.99,
       "penetration": 222.6,
       "max_speed": 55.0,
       "crew_count": 5,
@@ -158000,12 +158028,12 @@
       "mainGun": {
         "name": "85mm_D5S",
         "caliber": 85.0,
-        "reloadTime": 7.41,
+        "reloadTime": 6.99,
         "autoLoader": false,
         "reloadTimes": {
-          "base": 9.63,
-          "expert": 8.52,
-          "ace": 7.41
+          "base": 9.09,
+          "expert": 8.04,
+          "ace": 6.99
         }
       },
       "ammunitions": [

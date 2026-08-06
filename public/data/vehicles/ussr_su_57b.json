@@ -5,7 +5,7 @@
     "weight": 9.5,
     "power_to_weight": 10.95,
     "max_reverse_speed": 5.2,
-    "reload_time": 4.27,
+    "reload_time": 4.0,
     "penetration": 145.7,
     "max_speed": 39.9,
     "crew_count": 5,
@@ -30,12 +30,12 @@
     "mainGun": {
       "name": "57mm_ZIS4",
       "caliber": 57.0,
-      "reloadTime": 4.27,
+      "reloadTime": 4.0,
       "autoLoader": false,
       "reloadTimes": {
-        "base": 5.55,
-        "expert": 4.91,
-        "ace": 4.27
+        "base": 5.2,
+        "expert": 4.6,
+        "ace": 4.0
       }
     },
     "ammunitions": [

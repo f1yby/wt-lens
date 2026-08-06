@@ -5,7 +5,7 @@
     "weight": 10.5,
     "power_to_weight": 19.05,
     "max_reverse_speed": 10.4,
-    "reload_time": 5.88,
+    "reload_time": 3.7,
     "penetration": 137.1,
     "max_speed": 55.7,
     "crew_count": 5,
@@ -30,12 +30,12 @@
     "mainGun": {
       "name": "50mm_PaK38",
       "caliber": 50.0,
-      "reloadTime": 5.88,
+      "reloadTime": 3.7,
       "autoLoader": false,
       "reloadTimes": {
-        "base": 7.64,
-        "expert": 6.76,
-        "ace": 5.88
+        "base": 4.81,
+        "expert": 4.25,
+        "ace": 3.7
       }
     },
     "ammunitions": [

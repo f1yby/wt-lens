@@ -6,7 +6,7 @@
     "power_to_weight": 19.17,
     "max_reverse_speed": 80.0,
     "reload_time": 0.8,
-    "penetration": 110.0,
+    "penetration": 110.5,
     "max_speed": 80.0,
     "crew_count": 5,
     "elevation_speed": 30.0,
@@ -118,9 +118,37 @@
           }
         ],
         "penetration0m": 110.0
+      },
+      {
+        "name": "30mm_l21a1",
+        "localizedName": "L21A1",
+        "type": "apds_fs_long_tank",
+        "caliber": 8.5,
+        "mass": 0.16,
+        "muzzleVelocity": 1325.0,
+        "lanzOdermatt": {
+          "workingLength": 150.0,
+          "density": 17500.0,
+          "material": "tungsten",
+          "Cx": 0.3744
+        },
+        "penetration0m": 110.5,
+        "penetrationData": {
+          "at0m": {
+            "angle0": 110.5,
+            "angle30": 95.7,
+            "angle60": 55.3
+          }
+        }
       }
     ],
-    "penetrationData": null,
+    "penetrationData": {
+      "at0m": {
+        "angle0": 110.5,
+        "angle30": 95.7,
+        "angle60": 55.3
+      }
+    },
     "autoLoader": false,
     "engine_manufacturer": null,
     "engine_model": "6B_TA",
@@ -181,15 +209,15 @@
     "aceTrainingRP": 830000,
     "repairCost": {
       "arcade": [
-        3217,
+        3063,
         5123
       ],
       "realistic": [
-        3464,
+        3299,
         5517
       ],
       "simulator": [
-        4136,
+        3939,
         6587
       ]
     },

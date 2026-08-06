@@ -5,7 +5,7 @@
     "weight": 33.5,
     "power_to_weight": 17.91,
     "max_reverse_speed": 3.0,
-    "reload_time": 7.41,
+    "reload_time": 6.99,
     "penetration": 161.1,
     "max_speed": 51.5,
     "crew_count": 5,
@@ -30,12 +30,12 @@
     "mainGun": {
       "name": "77mm_QQF_Mk_II_L50",
       "caliber": 76.2,
-      "reloadTime": 7.41,
+      "reloadTime": 6.99,
       "autoLoader": false,
       "reloadTimes": {
-        "base": 9.63,
-        "expert": 8.52,
-        "ace": 7.41
+        "base": 9.09,
+        "expert": 8.04,
+        "ace": 6.99
       }
     },
     "ammunitions": [

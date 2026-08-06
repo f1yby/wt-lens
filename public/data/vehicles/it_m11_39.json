@@ -5,7 +5,7 @@
     "weight": 11.0,
     "power_to_weight": 11.82,
     "max_reverse_speed": 4.9,
-    "reload_time": 3.12,
+    "reload_time": 2.86,
     "penetration": 35.0,
     "max_speed": 33.7,
     "crew_count": 5,
@@ -30,12 +30,12 @@
     "mainGun": {
       "name": "37mm_Vickers_Terni_37_40_M18",
       "caliber": 37.0,
-      "reloadTime": 3.12,
+      "reloadTime": 2.86,
       "autoLoader": false,
       "reloadTimes": {
-        "base": 4.06,
-        "expert": 3.59,
-        "ace": 3.12
+        "base": 3.72,
+        "expert": 3.29,
+        "ace": 2.86
       }
     },
     "ammunitions": [

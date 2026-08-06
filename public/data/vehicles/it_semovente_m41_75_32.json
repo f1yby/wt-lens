@@ -5,7 +5,7 @@
     "weight": 14.5,
     "power_to_weight": 11.03,
     "max_reverse_speed": 5.2,
-    "reload_time": 7.5,
+    "reload_time": 6.0,
     "penetration": 100.0,
     "max_speed": 33.3,
     "crew_count": 5,
@@ -30,12 +30,12 @@
     "mainGun": {
       "name": "75mm_Ansaldo_75_32_M37",
       "caliber": 75.0,
-      "reloadTime": 7.5,
+      "reloadTime": 6.0,
       "autoLoader": false,
       "reloadTimes": {
-        "base": 9.75,
-        "expert": 8.62,
-        "ace": 7.5
+        "base": 7.8,
+        "expert": 6.9,
+        "ace": 6.0
       }
     },
     "ammunitions": [

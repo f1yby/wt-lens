@@ -5,7 +5,7 @@
     "weight": 9.7,
     "power_to_weight": 12.37,
     "max_reverse_speed": 5.5,
-    "reload_time": 6.0,
+    "reload_time": 4.0,
     "penetration": 27.6,
     "max_speed": 40.1,
     "crew_count": 5,
@@ -30,12 +30,12 @@
     "mainGun": {
       "name": "47mm_SA_34",
       "caliber": 47.0,
-      "reloadTime": 6.0,
+      "reloadTime": 4.0,
       "autoLoader": false,
       "reloadTimes": {
-        "base": 7.8,
-        "expert": 6.9,
-        "ace": 6.0
+        "base": 5.2,
+        "expert": 4.6,
+        "ace": 4.0
       }
     },
     "ammunitions": [
