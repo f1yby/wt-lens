@@ -1,0 +1,190 @@
+{
+  "id": "uk_arjun_mk1",
+  "performance": {
+    "horsepower": 1400.0,
+    "weight": 58.5,
+    "power_to_weight": 23.93,
+    "max_reverse_speed": 32.1,
+    "reload_time": 6.0,
+    "penetration": 396.7,
+    "max_speed": 70.2,
+    "crew_count": 5,
+    "elevation_speed": 20.0,
+    "traverse_speed": 40.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "both",
+    "elevation_range": [
+      -10.0,
+      20.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": [
+      500,
+      300
+    ],
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": 583.1,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 30.0,
+    "mainGun": {
+      "name": "120mm_arjun_mk1",
+      "caliber": 120.0,
+      "reloadTime": 6.0,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 7.8,
+        "expert": 6.9,
+        "ace": 6.0
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "120mm_Arjun_Mk1",
+        "localizedName": "120 mm Mk1 APFSDS",
+        "type": "apds_fs_long_tank",
+        "caliber": 28.0,
+        "mass": 3.8,
+        "muzzleVelocity": 1660.0,
+        "lanzOdermatt": {
+          "workingLength": 365.0,
+          "density": 17500.0,
+          "material": "tungsten",
+          "Cx": 0.3498
+        },
+        "penetration0m": 396.7,
+        "penetrationData": {
+          "at0m": {
+            "angle0": 396.7,
+            "angle30": 343.6,
+            "angle60": 198.4
+          }
+        }
+      },
+      {
+        "name": "120mm_Arjun_PCB",
+        "localizedName": "120 mm PCB",
+        "type": "sap_tank",
+        "caliber": 120.0,
+        "mass": 16.2,
+        "muzzleVelocity": 803.0,
+        "deMarre": {
+          "fullCaliber": 120.0,
+          "isApcbc": false,
+          "explosiveMass": 1.5
+        },
+        "penetration0m": 117.1,
+        "explosiveMassKg": 1.5,
+        "explosiveType": "torpex",
+        "tntEquivalent": 1.8
+      },
+      {
+        "name": "120mm_arjun_HESH",
+        "localizedName": "120 mm HESH",
+        "type": "hesh_tank",
+        "caliber": 120.0,
+        "mass": 17.34,
+        "muzzleVelocity": 670.0,
+        "penetration0m": 152.0,
+        "explosiveMassKg": 4.08,
+        "explosiveType": "rdx",
+        "tntEquivalent": 5.712
+      }
+    ],
+    "penetrationData": {
+      "at0m": {
+        "angle0": 396.7,
+        "angle30": 343.6,
+        "angle60": 198.4
+      }
+    },
+    "autoLoader": false,
+    "engine_manufacturer": null,
+    "engine_model": null,
+    "engine_type": null,
+    "engine_max_rpm": 2400.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 8,
+    "reverse_gears": 4,
+    "forward_gear_speeds": [
+      9.4,
+      14.6,
+      24.2,
+      32.1,
+      37.9,
+      46.5,
+      55.9,
+      70.2
+    ],
+    "reverse_gear_speeds": [
+      8.8,
+      15.7,
+      21.1,
+      32.1
+    ],
+    "steer_type": "clutch_braking",
+    "empty_weight": 57.5,
+    "track_width": 0.55,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "7_62mm_FN_MAG60_40",
+        "caliber": 7.6,
+        "ammo": 3000,
+        "reloadTime": 8.0,
+        "rateOfFire": 1000,
+        "bulletType": "ap_ball"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "12_7mm_NSV_t_80",
+        "caliber": 12.7,
+        "ammo": 1000,
+        "reloadTime": 5.0,
+        "rateOfFire": 700,
+        "bulletType": "ap_i_t_ball"
+      }
+    ],
+    "main_gun_ammo": 39,
+    "driver_nv_resolution": [
+      800,
+      600
+    ],
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": true
+  },
+  "economy": {
+    "researchCost": 350000,
+    "purchaseCost": 950000,
+    "crewTraining": 270000,
+    "expertTraining": 950000,
+    "aceTrainingGE": 2200,
+    "aceTrainingRP": 1210000,
+    "repairCost": {
+      "arcade": [
+        4560,
+        6787
+      ],
+      "realistic": [
+        4483,
+        6671
+      ],
+      "simulator": [
+        5255,
+        7820
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.55,
+      "realistic": 2.01,
+      "simulator": 2.4
+    },
+    "expMultiplier": 2.44
+  }
+}

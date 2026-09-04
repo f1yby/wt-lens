@@ -1,32 +1,32 @@
 {
   "id": "j5n1",
   "economy": {
-    "researchCost": 33000,
-    "purchaseCost": 105000,
-    "crewTraining": 30000,
-    "expertTraining": 105000,
-    "aceTrainingGE": 590,
-    "aceTrainingRP": 360000,
+    "researchCost": 40000,
+    "purchaseCost": 135000,
+    "crewTraining": 39000,
+    "expertTraining": 135000,
+    "aceTrainingGE": 700,
+    "aceTrainingRP": 390000,
     "repairCost": {
       "arcade": [
-        1194,
-        1576
+        1504,
+        1984
       ],
       "realistic": [
-        2802,
-        3588
+        3559,
+        4557
       ],
       "simulator": [
-        4217,
-        5400
+        5315,
+        6805
       ]
     },
     "rewardMultiplier": {
-      "arcade": 0.7,
-      "realistic": 1.58,
-      "simulator": 3.33
+      "arcade": 0.77,
+      "realistic": 1.75,
+      "simulator": 3.69
     },
-    "expMultiplier": 1.48
+    "expMultiplier": 1.54
   },
   "weapons": {
     "fixed_weapons": [
@@ -183,12 +183,12 @@
         ]
       },
       {
-        "name": "cannonType99Mk2",
-        "localizedName": "20 毫​米​九​九​式​二​号​固​定​机​炮",
+        "name": "cannonType99Mk2_Kai",
+        "localizedName": "20 mm Type 99 Mark 2 Model 4 Kai",
         "count": 2,
         "bullets": 400,
         "caliber": 20.0,
-        "fireRate": 490,
+        "fireRate": 620,
         "belts": [
           {
             "key": "type99mk2_universal",

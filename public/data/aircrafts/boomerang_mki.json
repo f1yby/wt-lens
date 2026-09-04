@@ -66,7 +66,7 @@
               {
                 "type": "he_i",
                 "mass": 0.13,
-                "speed": 853.0,
+                "speed": 868.7,
                 "explosiveMass": 0.0064,
                 "explosiveType": "tetryl",
                 "tntEquivalent": 0.00768,
@@ -88,8 +88,8 @@
             "name": "曳​光",
             "bullets": [
               "ap_t",
-              "t_shell",
-              "he_i"
+              "he_i",
+              "ap_t"
             ],
             "bulletsData": [
               {
@@ -99,20 +99,18 @@
                 "fireChance": 2.5
               },
               {
-                "type": "t_shell",
-                "mass": 0.132,
-                "speed": 835.0,
-                "penetration": 17.0,
-                "hitPowerMult": 7.0,
-                "fireChance": 3.0
-              },
-              {
                 "type": "he_i",
                 "mass": 0.13,
-                "speed": 853.0,
+                "speed": 868.7,
                 "explosiveMass": 0.0064,
                 "explosiveType": "tetryl",
                 "tntEquivalent": 0.00768,
+                "fireChance": 2.5
+              },
+              {
+                "type": "ap_t",
+                "mass": 0.141,
+                "speed": 822.0,
                 "fireChance": 2.5
               }
             ]
@@ -129,7 +127,7 @@
               {
                 "type": "he_i",
                 "mass": 0.13,
-                "speed": 853.0,
+                "speed": 868.7,
                 "explosiveMass": 0.0064,
                 "explosiveType": "tetryl",
                 "tntEquivalent": 0.00768,
@@ -138,7 +136,7 @@
               {
                 "type": "he_i",
                 "mass": 0.13,
-                "speed": 853.0,
+                "speed": 868.7,
                 "explosiveMass": 0.0064,
                 "explosiveType": "tetryl",
                 "tntEquivalent": 0.00768,

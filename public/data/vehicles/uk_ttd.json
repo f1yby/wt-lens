@@ -43,6 +43,28 @@
     },
     "ammunitions": [
       {
+        "name": "105mm_dm63",
+        "localizedName": "DM63",
+        "type": "apds_fs_long_l30_tank",
+        "caliber": 24.0,
+        "mass": 4.4,
+        "muzzleVelocity": 1455.0,
+        "lanzOdermatt": {
+          "workingLength": 535.0,
+          "density": 17500.0,
+          "material": "tungsten",
+          "Cx": 0.5301
+        },
+        "penetration0m": 430.2,
+        "penetrationData": {
+          "at0m": {
+            "angle0": 430.2,
+            "angle30": 372.6,
+            "angle60": 215.1
+          }
+        }
+      },
+      {
         "name": "105mm_imi_m152",
         "localizedName": "M152",
         "type": "heat_fs_tank",
@@ -73,28 +95,6 @@
             "angle0": 337.9,
             "angle30": 292.6,
             "angle60": 169.0
-          }
-        }
-      },
-      {
-        "name": "105mm_dm63",
-        "localizedName": "DM63",
-        "type": "apds_fs_long_l30_tank",
-        "caliber": 24.0,
-        "mass": 4.4,
-        "muzzleVelocity": 1455.0,
-        "lanzOdermatt": {
-          "workingLength": 535.0,
-          "density": 17500.0,
-          "material": "tungsten",
-          "Cx": 0.5301
-        },
-        "penetration0m": 430.2,
-        "penetrationData": {
-          "at0m": {
-            "angle0": 430.2,
-            "angle30": 372.6,
-            "angle60": 215.1
           }
         }
       }

@@ -2,8 +2,8 @@
   "id": "uk_a_22f_mk_7_churchill_crocodile",
   "performance": {
     "horsepower": 355.0,
-    "weight": 45.15,
-    "power_to_weight": 7.86,
+    "weight": 47.0,
+    "power_to_weight": 7.55,
     "max_reverse_speed": 1.8,
     "reload_time": 5.0,
     "penetration": 104.0,
@@ -14,7 +14,7 @@
     "has_stabilizer": false,
     "stabilizer_type": "none",
     "elevation_range": [
-      -12.0,
+      -12.5,
       20.0
     ],
     "traverse_range": [
@@ -26,7 +26,7 @@
     "gunner_thermal_diagonal": null,
     "commander_thermal_diagonal": null,
     "stabilizer_value": 0,
-    "elevation_range_value": 32.0,
+    "elevation_range_value": 32.5,
     "mainGun": {
       "name": "75mm_QQF_MkV",
       "caliber": 75.0,
@@ -116,7 +116,7 @@
       1.8
     ],
     "steer_type": "clutch_braking",
-    "empty_weight": 44.65,
+    "empty_weight": 46.5,
     "track_width": 0.6,
     "secondary_weapons": [
       {

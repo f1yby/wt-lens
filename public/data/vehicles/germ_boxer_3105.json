@@ -5,7 +5,7 @@
     "weight": 38.0,
     "power_to_weight": 18.95,
     "max_reverse_speed": 18.8,
-    "reload_time": 5.0,
+    "reload_time": 7.46,
     "penetration": 430.2,
     "max_speed": 103.0,
     "crew_count": 5,
@@ -36,12 +36,12 @@
     "mainGun": {
       "name": "105mm_cockerill_hp",
       "caliber": 105.0,
-      "reloadTime": 5.0,
+      "reloadTime": 7.46,
       "autoLoader": true,
       "reloadTimes": {
-        "base": 5.0,
-        "expert": 5.0,
-        "ace": 5.0
+        "base": 7.46,
+        "expert": 7.46,
+        "ace": 7.46
       }
     },
     "ammunitions": [

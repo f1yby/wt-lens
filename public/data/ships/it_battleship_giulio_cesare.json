@@ -1,0 +1,30 @@
+{
+  "id": "it_battleship_giulio_cesare",
+  "economy": {
+    "researchCost": 220000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 8560,
+    "crewTraining": 10000,
+    "expertTraining": 1070000,
+    "aceTrainingGE": 2000,
+    "aceTrainingRP": 1660000,
+    "repairCost": {
+      "arcade": [
+        19208,
+        19208
+      ],
+      "realistic": [
+        19481,
+        19481
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 8.89,
+      "realistic": 12.0,
+      "simulator": 1.0
+    },
+    "expMultiplier": 2.08,
+    "freeRepairs": 30
+  },
+  "weapons": null
+}

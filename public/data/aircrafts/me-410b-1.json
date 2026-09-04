@@ -189,18 +189,40 @@
         ]
       },
       {
-        "name": "Me_410A-1_2xSC500",
+        "name": "Me_410A-1_SC500",
         "weapons": [
           {
             "trigger": "bombs",
             "name": "de_sc500",
             "localizedName": "500 千​克 SC500K 炸​弹",
             "count": 1
+          }
+        ]
+      },
+      {
+        "name": "Me_410A-1_2xPD500",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "de_pd500_ap",
+            "localizedName": "500 kg PD500 armor-piercing bomb",
+            "count": 1
           },
           {
             "trigger": "bombs",
-            "name": "de_sc500",
-            "localizedName": "500 千​克 SC500K 炸​弹",
+            "name": "de_pd500_ap",
+            "localizedName": "500 kg PD500 armor-piercing bomb",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "Me_410A-1_PC1000",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "de_pc1000_ap",
+            "localizedName": "1000 kg PC1000 armor-piercing bomb",
             "count": 1
           }
         ]

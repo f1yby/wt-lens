@@ -43,18 +43,6 @@
     },
     "ammunitions": [
       {
-        "name": "105mm_m456a2",
-        "localizedName": "M456A2",
-        "type": "heat_fs_tank",
-        "caliber": 105.0,
-        "mass": 10.5,
-        "muzzleVelocity": 1173.5,
-        "penetration0m": 400.0,
-        "explosiveMassKg": 0.97,
-        "explosiveType": "comp_b",
-        "tntEquivalent": 1.232
-      },
-      {
         "name": "105mm_m393a2",
         "localizedName": "M393",
         "type": "hesh_tank",
@@ -76,6 +64,18 @@
         "explosiveMassKg": 0.05,
         "explosiveType": "smoke_composition",
         "tntEquivalent": 0.05
+      },
+      {
+        "name": "105mm_m456a2",
+        "localizedName": "M456A2",
+        "type": "heat_fs_tank",
+        "caliber": 105.0,
+        "mass": 10.5,
+        "muzzleVelocity": 1173.5,
+        "penetration0m": 400.0,
+        "explosiveMassKg": 0.97,
+        "explosiveType": "comp_b",
+        "tntEquivalent": 1.232
       },
       {
         "name": "105mm_m735",

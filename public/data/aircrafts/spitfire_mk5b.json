@@ -29,133 +29,97 @@
     "expMultiplier": 1.24
   },
   "weapons": {
-    "fixed_weapons": [
+    "fixed_weapons": [],
+    "payloads": [
       {
-        "name": "cannonHispanoMkII",
-        "localizedName": "20 毫​米​西​斯​帕​诺 Mk II 机​炮",
-        "count": 2,
-        "bullets": 120,
-        "caliber": 20.0,
-        "fireRate": 600,
-        "belts": [
+        "name": "spitfire_v_bombs_250lb_anm57_wing",
+        "weapons": [
           {
-            "key": "hispano_universal",
-            "name": "通​用",
-            "bullets": [
-              "ap_t",
-              "he_i",
-              "sapi"
-            ],
-            "bulletsData": [
-              {
-                "type": "ap_t",
-                "mass": 0.141,
-                "speed": 822.0,
-                "fireChance": 2.5
-              },
-              {
-                "type": "he_i",
-                "mass": 0.13,
-                "speed": 853.0,
-                "explosiveMass": 0.0064,
-                "explosiveType": "tetryl",
-                "tntEquivalent": 0.00768,
-                "fireChance": 2.5
-              },
-              {
-                "type": "sapi",
-                "mass": 0.134,
-                "speed": 844.0,
-                "explosiveMass": 0.01166,
-                "explosiveType": "s_r_379",
-                "tntEquivalent": 2e-05,
-                "fireChance": 8.0
-              }
-            ]
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
           },
           {
-            "key": "hispano_tracers",
-            "name": "曳​光",
-            "bullets": [
-              "ap_t",
-              "t_shell",
-              "he_i"
-            ],
-            "bulletsData": [
-              {
-                "type": "ap_t",
-                "mass": 0.141,
-                "speed": 822.0,
-                "fireChance": 2.5
-              },
-              {
-                "type": "t_shell",
-                "mass": 0.132,
-                "speed": 835.0,
-                "penetration": 17.0,
-                "hitPowerMult": 7.0,
-                "fireChance": 3.0
-              },
-              {
-                "type": "he_i",
-                "mass": 0.13,
-                "speed": 853.0,
-                "explosiveMass": 0.0064,
-                "explosiveType": "tetryl",
-                "tntEquivalent": 0.00768,
-                "fireChance": 2.5
-              }
-            ]
-          },
-          {
-            "key": "hispano_stealth",
-            "name": "匿​踪",
-            "bullets": [
-              "he_i",
-              "he_i",
-              "sapi"
-            ],
-            "bulletsData": [
-              {
-                "type": "he_i",
-                "mass": 0.13,
-                "speed": 853.0,
-                "explosiveMass": 0.0064,
-                "explosiveType": "tetryl",
-                "tntEquivalent": 0.00768,
-                "fireChance": 2.5
-              },
-              {
-                "type": "he_i",
-                "mass": 0.13,
-                "speed": 853.0,
-                "explosiveMass": 0.0064,
-                "explosiveType": "tetryl",
-                "tntEquivalent": 0.00768,
-                "fireChance": 2.5
-              },
-              {
-                "type": "sapi",
-                "mass": 0.134,
-                "speed": 844.0,
-                "explosiveMass": 0.01166,
-                "explosiveType": "s_r_379",
-                "tntEquivalent": 2e-05,
-                "fireChance": 8.0
-              }
-            ]
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
           }
         ]
       },
       {
-        "name": "gunBrowning303_raf",
-        "localizedName": "7.7 毫​米​勃​朗​宁​机​枪",
-        "count": 4,
-        "bullets": 1400,
-        "caliber": 7.7,
-        "fireRate": 1000
+        "name": "spitfire_v_bombs_250lb_gp_wing",
+        "weapons": [
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "spitfire_v_bombs_250lb_anm57",
+        "weapons": [
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "spitfire_v_bombs_250lb_gp",
+        "weapons": [
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "spitfire_v_bombs_500lb_anm64a1",
+        "weapons": [
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "spitfire_v_bombs_500lb_gp",
+        "weapons": [
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "spitfire_v_bombs_500lb_sap",
+        "weapons": [
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          }
+        ]
       }
-    ],
-    "payloads": []
+    ]
   }
 }

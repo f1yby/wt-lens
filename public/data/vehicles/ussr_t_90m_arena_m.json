@@ -91,6 +91,15 @@
         }
       },
       {
+        "name": "125mm_9m_119m1",
+        "localizedName": "9M119M1​“反​射”",
+        "type": "atgm_tandem_tank",
+        "caliber": 125.0,
+        "mass": 17.2,
+        "muzzleVelocity": 470.0,
+        "penetration0m": 850.0
+      },
+      {
         "name": "125mm_3bm42_2",
         "localizedName": "3BM42-2",
         "type": "apds_fs_long_l30_tank",
@@ -111,15 +120,6 @@
             "angle60": 272.1
           }
         }
-      },
-      {
-        "name": "125mm_9m_119m1",
-        "localizedName": "9M119M1​“反​射”",
-        "type": "atgm_tandem_tank",
-        "caliber": 125.0,
-        "mass": 17.2,
-        "muzzleVelocity": 470.0,
-        "penetration0m": 850.0
       },
       {
         "name": "125mm_3of_82",
@@ -203,15 +203,15 @@
     "aceTrainingRP": 1430000,
     "repairCost": {
       "arcade": [
-        4444,
+        3897,
         7285
       ],
       "realistic": [
-        4229,
+        3709,
         6932
       ],
       "simulator": [
-        5338,
+        4682,
         8752
       ]
     },

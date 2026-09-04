@@ -70,6 +70,17 @@
         "tntEquivalent": 3.772
       },
       {
+        "name": "105mm_m416",
+        "localizedName": "M416",
+        "type": "smoke_tank",
+        "caliber": 105.0,
+        "mass": 11.6,
+        "muzzleVelocity": 731.5,
+        "explosiveMassKg": 0.05,
+        "explosiveType": "smoke_composition",
+        "tntEquivalent": 0.05
+      },
+      {
         "name": "105mm_m456",
         "localizedName": "M456",
         "type": "heat_fs_tank",
@@ -80,17 +91,6 @@
         "explosiveMassKg": 0.97,
         "explosiveType": "comp_b",
         "tntEquivalent": 1.232
-      },
-      {
-        "name": "105mm_m416",
-        "localizedName": "M416",
-        "type": "smoke_tank",
-        "caliber": 105.0,
-        "mass": 11.6,
-        "muzzleVelocity": 731.5,
-        "explosiveMassKg": 0.05,
-        "explosiveType": "smoke_composition",
-        "tntEquivalent": 0.05
       },
       {
         "name": "105mm_dm23",

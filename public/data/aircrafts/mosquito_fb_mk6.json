@@ -29,181 +29,37 @@
     "expMultiplier": 1.42
   },
   "weapons": {
-    "fixed_weapons": [
-      {
-        "name": "cannonHispanoMkII",
-        "localizedName": "20 毫​米​西​斯​帕​诺 Mk II 机​炮",
-        "count": 4,
-        "bullets": 600,
-        "caliber": 20.0,
-        "fireRate": 600,
-        "belts": [
-          {
-            "key": "hispano_universal",
-            "name": "通​用",
-            "bullets": [
-              "ap_t",
-              "he_i",
-              "sapi"
-            ],
-            "bulletsData": [
-              {
-                "type": "ap_t",
-                "mass": 0.141,
-                "speed": 822.0,
-                "fireChance": 2.5
-              },
-              {
-                "type": "he_i",
-                "mass": 0.13,
-                "speed": 853.0,
-                "explosiveMass": 0.0064,
-                "explosiveType": "tetryl",
-                "tntEquivalent": 0.00768,
-                "fireChance": 2.5
-              },
-              {
-                "type": "sapi",
-                "mass": 0.134,
-                "speed": 844.0,
-                "explosiveMass": 0.01166,
-                "explosiveType": "s_r_379",
-                "tntEquivalent": 2e-05,
-                "fireChance": 8.0
-              }
-            ]
-          },
-          {
-            "key": "hispano_tracers",
-            "name": "曳​光",
-            "bullets": [
-              "ap_t",
-              "t_shell",
-              "he_i"
-            ],
-            "bulletsData": [
-              {
-                "type": "ap_t",
-                "mass": 0.141,
-                "speed": 822.0,
-                "fireChance": 2.5
-              },
-              {
-                "type": "t_shell",
-                "mass": 0.132,
-                "speed": 835.0,
-                "penetration": 17.0,
-                "hitPowerMult": 7.0,
-                "fireChance": 3.0
-              },
-              {
-                "type": "he_i",
-                "mass": 0.13,
-                "speed": 853.0,
-                "explosiveMass": 0.0064,
-                "explosiveType": "tetryl",
-                "tntEquivalent": 0.00768,
-                "fireChance": 2.5
-              }
-            ]
-          },
-          {
-            "key": "hispano_stealth",
-            "name": "匿​踪",
-            "bullets": [
-              "he_i",
-              "he_i",
-              "sapi"
-            ],
-            "bulletsData": [
-              {
-                "type": "he_i",
-                "mass": 0.13,
-                "speed": 853.0,
-                "explosiveMass": 0.0064,
-                "explosiveType": "tetryl",
-                "tntEquivalent": 0.00768,
-                "fireChance": 2.5
-              },
-              {
-                "type": "he_i",
-                "mass": 0.13,
-                "speed": 853.0,
-                "explosiveMass": 0.0064,
-                "explosiveType": "tetryl",
-                "tntEquivalent": 0.00768,
-                "fireChance": 2.5
-              },
-              {
-                "type": "sapi",
-                "mass": 0.134,
-                "speed": 844.0,
-                "explosiveMass": 0.01166,
-                "explosiveType": "s_r_379",
-                "tntEquivalent": 2e-05,
-                "fireChance": 8.0
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "name": "gunBrowning303_raf",
-        "localizedName": "7.7 毫​米​勃​朗​宁​机​枪",
-        "count": 4,
-        "bullets": 3000,
-        "caliber": 7.7,
-        "fireRate": 1000
-      }
-    ],
+    "fixed_weapons": [],
     "payloads": [
       {
-        "name": "mosquito_fb_mk6_2x250lbs",
+        "name": "mosquito_fb_mk6_250lbs",
         "weapons": [
           {
-            "trigger": "bombs",
-            "name": "uk_250lbs",
-            "localizedName": "G.P. 250 lb Mk.IV bomb",
-            "count": 1
-          },
-          {
-            "trigger": "bombs",
-            "name": "uk_250lbs",
-            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
             "count": 1
           }
         ]
       },
       {
-        "name": "mosquito_fb_mk6_2x500lbs",
+        "name": "mosquito_fb_mk6_500lbs",
         "weapons": [
           {
-            "trigger": "bombs",
-            "name": "uk_500lbs",
-            "localizedName": "G.P. 500 lb Mk.IV bomb",
-            "count": 1
-          },
-          {
-            "trigger": "bombs",
-            "name": "uk_500lbs",
-            "localizedName": "G.P. 500 lb Mk.IV bomb",
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
             "count": 1
           }
         ]
       },
       {
-        "name": "mosquito_fb_mk6_2x500lbs_sap",
+        "name": "mosquito_fb_mk6_500lbs_sap",
         "weapons": [
           {
-            "trigger": "bombs",
-            "name": "uk_500lb_sap_mkII_ap",
-            "localizedName": "500 LB S.A.P. Mk.II bomb",
-            "count": 1
-          },
-          {
-            "trigger": "bombs",
-            "name": "uk_500lb_sap_mkII_ap",
-            "localizedName": "500 LB S.A.P. Mk.II bomb",
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
             "count": 1
           }
         ]
@@ -212,51 +68,15 @@
         "name": "mosquito_fb_mk6_rockets",
         "weapons": [
           {
-            "trigger": "rockets",
-            "name": "uk_rp3",
-            "localizedName": "RP-3 火​箭​弹",
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
             "count": 1
           },
           {
-            "trigger": "rockets",
-            "name": "uk_rp3",
-            "localizedName": "RP-3 火​箭​弹",
-            "count": 1
-          },
-          {
-            "trigger": "rockets",
-            "name": "uk_rp3",
-            "localizedName": "RP-3 火​箭​弹",
-            "count": 1
-          },
-          {
-            "trigger": "rockets",
-            "name": "uk_rp3",
-            "localizedName": "RP-3 火​箭​弹",
-            "count": 1
-          },
-          {
-            "trigger": "rockets",
-            "name": "uk_rp3",
-            "localizedName": "RP-3 火​箭​弹",
-            "count": 1
-          },
-          {
-            "trigger": "rockets",
-            "name": "uk_rp3",
-            "localizedName": "RP-3 火​箭​弹",
-            "count": 1
-          },
-          {
-            "trigger": "rockets",
-            "name": "uk_rp3",
-            "localizedName": "RP-3 火​箭​弹",
-            "count": 1
-          },
-          {
-            "trigger": "rockets",
-            "name": "uk_rp3",
-            "localizedName": "RP-3 火​箭​弹",
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
             "count": 1
           }
         ]
@@ -265,27 +85,21 @@
         "name": "mosquito_fb_mk6_uncle_tom",
         "weapons": [
           {
-            "trigger": "rockets",
-            "name": "uk_uncle_tom_a",
-            "localizedName": "“汤​姆​叔​叔”​火​箭​弹",
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
             "count": 1
           },
           {
-            "trigger": "rockets",
-            "name": "uk_uncle_tom_a",
-            "localizedName": "“汤​姆​叔​叔”​火​箭​弹",
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
             "count": 1
           },
           {
-            "trigger": "rockets",
-            "name": "uk_uncle_tom_b",
-            "localizedName": "“汤​姆​叔​叔”​火​箭​弹",
-            "count": 1
-          },
-          {
-            "trigger": "rockets",
-            "name": "uk_uncle_tom_b",
-            "localizedName": "“汤​姆​叔​叔”​火​箭​弹",
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
             "count": 1
           }
         ]

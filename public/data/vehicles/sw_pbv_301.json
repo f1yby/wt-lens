@@ -42,15 +42,15 @@
     },
     "ammunitions": [
       {
-        "name": "20mm_slsgr_m42",
-        "localizedName": "m/42 曳​光​榴​弹",
+        "name": "20mm_akan_m45_b_he",
+        "localizedName": "20 mm HE",
         "type": "he_frag_i_t",
         "caliber": 20.0,
-        "mass": 0.136,
-        "muzzleVelocity": 845.0,
-        "explosiveMassKg": 0.006,
-        "explosiveType": "petn",
-        "tntEquivalent": 0.008
+        "mass": 0.122,
+        "muzzleVelocity": 850.0,
+        "explosiveMassKg": 0.015,
+        "explosiveType": "tnt",
+        "tntEquivalent": 0.015
       },
       {
         "name": "20mm_slpgr_m42",

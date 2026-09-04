@@ -1,32 +1,32 @@
 {
   "id": "su_17m4",
   "economy": {
-    "researchCost": 230000,
-    "purchaseCost": 630000,
-    "crewTraining": 180000,
-    "expertTraining": 630000,
-    "aceTrainingGE": 3000,
-    "aceTrainingRP": 1140000,
+    "researchCost": 260000,
+    "purchaseCost": 720000,
+    "crewTraining": 200000,
+    "expertTraining": 720000,
+    "aceTrainingGE": 3200,
+    "aceTrainingRP": 1210000,
     "repairCost": {
       "arcade": [
-        2925,
-        4283
+        2979,
+        4362
       ],
       "realistic": [
-        7922,
-        11599
+        8077,
+        11826
       ],
       "simulator": [
-        10043,
-        14705
+        10281,
+        15053
       ]
     },
     "rewardMultiplier": {
-      "arcade": 0.84,
-      "realistic": 3.18,
+      "arcade": 0.86,
+      "realistic": 3.26,
       "simulator": 6.0
     },
-    "expMultiplier": 2.38
+    "expMultiplier": 2.44
   },
   "weapons": {
     "fixed_weapons": [],

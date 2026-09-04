@@ -204,6 +204,24 @@
     "releaseDate": "2025-02-27"
   },
   {
+    "id": "fr_cruiser_algerie_class",
+    "name": "fr_cruiser_algerie_class",
+    "localizedName": "Algerie",
+    "nation": "france",
+    "rank": 5,
+    "battleRating": 6.0,
+    "br": {
+      "arcade": 6.0,
+      "realistic": 6.0,
+      "simulator": 6.0
+    },
+    "shipType": "heavy_cruiser",
+    "economicType": "regular",
+    "imageUrl": "ships/fr_cruiser_algerie_class.webp",
+    "unreleased": true,
+    "releaseDate": "2026-09-08"
+  },
+  {
     "id": "fr_cruiser_chateaurenault_class_guichen",
     "name": "fr_cruiser_chateaurenault_class_guichen",
     "localizedName": "吉​尚",
@@ -746,6 +764,24 @@
     "economicType": "regular",
     "imageUrl": "ships/fr_lcg_m_l9059.webp",
     "releaseDate": "2024-09-10"
+  },
+  {
+    "id": "fr_lcm_monitor",
+    "name": "fr_lcm_monitor",
+    "localizedName": "LCM(65)",
+    "nation": "france",
+    "rank": 1,
+    "battleRating": 1.7,
+    "br": {
+      "arcade": 1.7,
+      "realistic": 1.7,
+      "simulator": 1.7
+    },
+    "shipType": "gun_boat",
+    "economicType": "regular",
+    "imageUrl": "ships/fr_lcm_monitor.webp",
+    "unreleased": true,
+    "releaseDate": "2026-09-08"
   },
   {
     "id": "fr_marne_class_aisne",
@@ -2078,6 +2114,24 @@
     "imageUrl": "ships/germ_rboot_r301.webp"
   },
   {
+    "id": "germ_rboot_r310",
+    "name": "germ_rboot_r310",
+    "localizedName": "R-310",
+    "nation": "germany",
+    "rank": 2,
+    "battleRating": 2.3,
+    "br": {
+      "arcade": 2.3,
+      "realistic": 2.3,
+      "simulator": 2.3
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "premium",
+    "imageUrl": "ships/germ_rboot_r310.webp",
+    "unreleased": true,
+    "releaseDate": "2026-09-08"
+  },
+  {
     "id": "germ_rboot_r41",
     "name": "germ_rboot_r41",
     "localizedName": "R 41",
@@ -2558,6 +2612,24 @@
     "economicType": "regular",
     "imageUrl": "ships/it_battleship_francesco_caracciolo.webp",
     "releaseDate": "2024-11-19"
+  },
+  {
+    "id": "it_battleship_giulio_cesare",
+    "name": "it_battleship_giulio_cesare",
+    "localizedName": "RN Giulio Cesare",
+    "nation": "italy",
+    "rank": 6,
+    "battleRating": 7.3,
+    "br": {
+      "arcade": 7.3,
+      "realistic": 7.3,
+      "simulator": 7.3
+    },
+    "shipType": "battleship",
+    "economicType": "premium",
+    "imageUrl": "ships/it_battleship_giulio_cesare.webp",
+    "unreleased": true,
+    "releaseDate": "2026-09-08"
   },
   {
     "id": "it_battleship_leonardo_da_vinci",
@@ -4871,6 +4943,24 @@
     "releaseDate": "2023-09-19"
   },
   {
+    "id": "jp_type9_pt809",
+    "name": "jp_type9_pt809",
+    "localizedName": "PT-809",
+    "nation": "japan",
+    "rank": 3,
+    "battleRating": 2.3,
+    "br": {
+      "arcade": 2.3,
+      "realistic": 2.3,
+      "simulator": 2.3
+    },
+    "shipType": "torpedo_boat",
+    "economicType": "premium",
+    "imageUrl": "ships/jp_type9_pt809.webp",
+    "unreleased": true,
+    "releaseDate": "2026-09-08"
+  },
+  {
     "id": "jp_type_11_pt_15",
     "name": "jp_type_11_pt_15",
     "localizedName": "PT-15",
@@ -5209,6 +5299,24 @@
     "economicType": "premium",
     "imageUrl": "ships/uk_battleship_iron_duke.webp",
     "releaseDate": "2023-10-31"
+  },
+  {
+    "id": "uk_battleship_lion_class",
+    "name": "uk_battleship_lion_class",
+    "localizedName": "HMS Lion",
+    "nation": "britain",
+    "rank": 7,
+    "battleRating": 8.7,
+    "br": {
+      "arcade": 8.7,
+      "realistic": 8.7,
+      "simulator": 8.7
+    },
+    "shipType": "battleship",
+    "economicType": "regular",
+    "imageUrl": "ships/uk_battleship_lion_class.webp",
+    "unreleased": true,
+    "releaseDate": "2026-09-08"
   },
   {
     "id": "uk_battleship_marlborough",
@@ -7411,6 +7519,24 @@
     "releaseDate": "2026-06-24"
   },
   {
+    "id": "us_destroyer_mahan_class",
+    "name": "us_destroyer_mahan_class",
+    "localizedName": "USS Mahan",
+    "nation": "usa",
+    "rank": 2,
+    "battleRating": 4.3,
+    "br": {
+      "arcade": 4.3,
+      "realistic": 4.3,
+      "simulator": 4.3
+    },
+    "shipType": "destroyer",
+    "economicType": "regular",
+    "imageUrl": "ships/us_destroyer_mahan_class.webp",
+    "unreleased": true,
+    "releaseDate": "2026-09-08"
+  },
+  {
     "id": "us_destroyer_mitscher",
     "name": "us_destroyer_mitscher",
     "localizedName": "米​彻​尔",
@@ -8897,6 +9023,24 @@
     "economicType": "regular",
     "imageUrl": "ships/ussr_destroyer_regele_ferdinand_class_letuchiy.webp",
     "releaseDate": "2022-12-20"
+  },
+  {
+    "id": "ussr_fugas_t1_strela",
+    "name": "ussr_fugas_t1_strela",
+    "localizedName": "Strela",
+    "nation": "ussr",
+    "rank": 3,
+    "battleRating": 2.7,
+    "br": {
+      "arcade": 2.7,
+      "realistic": 2.7,
+      "simulator": 2.7
+    },
+    "shipType": "submarine_chaser",
+    "economicType": "regular",
+    "imageUrl": "ships/ussr_fugas_t1_strela.webp",
+    "unreleased": true,
+    "releaseDate": "2026-09-08"
   },
   {
     "id": "ussr_g5_mtb",

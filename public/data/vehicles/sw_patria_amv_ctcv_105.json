@@ -5,7 +5,7 @@
     "weight": 26.0,
     "power_to_weight": 21.15,
     "max_reverse_speed": 16.9,
-    "reload_time": 5.0,
+    "reload_time": 7.46,
     "penetration": 420.7,
     "max_speed": 100.1,
     "crew_count": 5,
@@ -33,12 +33,12 @@
     "mainGun": {
       "name": "105mm_XC8_L50",
       "caliber": 105.0,
-      "reloadTime": 5.0,
+      "reloadTime": 7.46,
       "autoLoader": true,
       "reloadTimes": {
-        "base": 5.0,
-        "expert": 5.0,
-        "ace": 5.0
+        "base": 7.46,
+        "expert": 7.46,
+        "ace": 7.46
       }
     },
     "ammunitions": [

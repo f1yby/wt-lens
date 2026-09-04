@@ -59,13 +59,13 @@
         "localizedName": "OFL 120 G1",
         "type": "apds_fs_long_tank",
         "caliber": 26.0,
-        "mass": 3.8,
+        "mass": 3.755,
         "muzzleVelocity": 1650.0,
         "lanzOdermatt": {
           "workingLength": 380.0,
           "density": 17500.0,
           "material": "tungsten",
-          "Cx": 0.49
+          "Cx": 0.4222
         },
         "penetration0m": 394.8,
         "penetrationData": {

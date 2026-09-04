@@ -55,17 +55,6 @@
         "tntEquivalent": 2.578
       },
       {
-        "name": "125mm_3of_26",
-        "localizedName": "3OF26",
-        "type": "he_frag_fs_tank",
-        "caliber": 125.0,
-        "mass": 23.0,
-        "muzzleVelocity": 850.0,
-        "explosiveMassKg": 3.402,
-        "explosiveType": "a_ix_2",
-        "tntEquivalent": 4.763
-      },
-      {
         "name": "125mm_3bm42",
         "localizedName": "3BM42",
         "type": "apds_fs_tungsten_caliber_fins_tank",
@@ -111,6 +100,17 @@
           }
         ],
         "penetration0m": 457.0
+      },
+      {
+        "name": "125mm_3of_26",
+        "localizedName": "3OF26",
+        "type": "he_frag_fs_tank",
+        "caliber": 125.0,
+        "mass": 23.0,
+        "muzzleVelocity": 850.0,
+        "explosiveMassKg": 3.402,
+        "explosiveType": "a_ix_2",
+        "tntEquivalent": 4.763
       },
       {
         "name": "125mm_9m_119",

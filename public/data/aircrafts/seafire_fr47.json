@@ -29,129 +29,55 @@
     "expMultiplier": 1.66
   },
   "weapons": {
-    "fixed_weapons": [
+    "fixed_weapons": [],
+    "payloads": [
       {
-        "name": "cannonHispanoMkV",
-        "localizedName": "20 毫​米​西​斯​帕​诺 Mk V 机​炮",
-        "count": 4,
-        "bullets": 496,
-        "caliber": 20.0,
-        "fireRate": 750,
-        "belts": [
+        "name": "seafire_fr47_4rockets",
+        "weapons": [
           {
-            "key": "hispano_universal",
-            "name": "通​用",
-            "bullets": [
-              "ap_t",
-              "he_i",
-              "sapi"
-            ],
-            "bulletsData": [
-              {
-                "type": "ap_t",
-                "mass": 0.141,
-                "speed": 801.0,
-                "fireChance": 2.5
-              },
-              {
-                "type": "he_i",
-                "mass": 0.13,
-                "speed": 833.0,
-                "explosiveMass": 0.0064,
-                "explosiveType": "tetryl",
-                "tntEquivalent": 0.00768,
-                "fireChance": 2.5
-              },
-              {
-                "type": "sapi",
-                "mass": 0.134,
-                "speed": 824.0,
-                "explosiveMass": 0.01166,
-                "explosiveType": "s_r_379",
-                "tntEquivalent": 2e-05,
-                "fireChance": 8.0
-              }
-            ]
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
           },
           {
-            "key": "hispano_tracers",
-            "name": "曳​光",
-            "bullets": [
-              "ap_t",
-              "he_i",
-              "t_shell"
-            ],
-            "bulletsData": [
-              {
-                "type": "ap_t",
-                "mass": 0.141,
-                "speed": 801.0,
-                "fireChance": 2.5
-              },
-              {
-                "type": "he_i",
-                "mass": 0.13,
-                "speed": 833.0,
-                "explosiveMass": 0.0064,
-                "explosiveType": "tetryl",
-                "tntEquivalent": 0.00768,
-                "fireChance": 2.5
-              },
-              {
-                "type": "t_shell",
-                "mass": 0.132,
-                "speed": 815.0,
-                "penetration": 17.0,
-                "hitPowerMult": 7.0,
-                "fireChance": 3.0
-              }
-            ]
-          },
-          {
-            "key": "hispano_stealth",
-            "name": "匿​踪",
-            "bullets": [
-              "he_i",
-              "sapi"
-            ],
-            "bulletsData": [
-              {
-                "type": "he_i",
-                "mass": 0.13,
-                "speed": 824.0,
-                "explosiveMass": 0.0064,
-                "explosiveType": "tetryl",
-                "tntEquivalent": 0.00768,
-                "fireChance": 2.5
-              },
-              {
-                "type": "sapi",
-                "mass": 0.134,
-                "speed": 844.0,
-                "explosiveMass": 0.01166,
-                "explosiveType": "s_r_379",
-                "tntEquivalent": 2e-05,
-                "fireChance": 8.0
-              }
-            ]
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
           }
         ]
-      }
-    ],
-    "payloads": [
+      },
+      {
+        "name": "seafire_fr47_8rockets",
+        "weapons": [
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          }
+        ]
+      },
       {
         "name": "seafire_fr47_2x250lbs",
         "weapons": [
           {
-            "trigger": "bombs",
-            "name": "uk_250lbs",
-            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
             "count": 1
           },
           {
-            "trigger": "bombs",
-            "name": "uk_250lbs",
-            "localizedName": "G.P. 250 lb Mk.IV bomb",
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
             "count": 1
           }
         ]
@@ -160,97 +86,32 @@
         "name": "seafire_fr47_2x500lbs",
         "weapons": [
           {
-            "trigger": "bombs",
-            "name": "uk_500lbs",
-            "localizedName": "G.P. 500 lb Mk.IV bomb",
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
             "count": 1
           },
           {
-            "trigger": "bombs",
-            "name": "uk_500lbs",
-            "localizedName": "G.P. 500 lb Mk.IV bomb",
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
             "count": 1
           }
         ]
       },
       {
-        "name": "4_rockets",
+        "name": "seafire_fr47_2x500lb_sap",
         "weapons": [
           {
-            "trigger": "rockets",
-            "name": "uk_rp3_3",
-            "localizedName": "RP-3 火​箭​弹",
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
             "count": 1
           },
           {
-            "trigger": "rockets",
-            "name": "uk_rp3_3",
-            "localizedName": "RP-3 火​箭​弹",
-            "count": 1
-          },
-          {
-            "trigger": "rockets",
-            "name": "uk_rp3_3",
-            "localizedName": "RP-3 火​箭​弹",
-            "count": 1
-          },
-          {
-            "trigger": "rockets",
-            "name": "uk_rp3_3",
-            "localizedName": "RP-3 火​箭​弹",
-            "count": 1
-          }
-        ]
-      },
-      {
-        "name": "8_rockets",
-        "weapons": [
-          {
-            "trigger": "rockets",
-            "name": "uk_rp3_4b",
-            "localizedName": "RP-3 火​箭​弹",
-            "count": 1
-          },
-          {
-            "trigger": "rockets",
-            "name": "uk_rp3_4b",
-            "localizedName": "RP-3 火​箭​弹",
-            "count": 1
-          },
-          {
-            "trigger": "rockets",
-            "name": "uk_rp3_4b",
-            "localizedName": "RP-3 火​箭​弹",
-            "count": 1
-          },
-          {
-            "trigger": "rockets",
-            "name": "uk_rp3_4b",
-            "localizedName": "RP-3 火​箭​弹",
-            "count": 1
-          },
-          {
-            "trigger": "rockets",
-            "name": "uk_rp3_4a",
-            "localizedName": "RP-3 火​箭​弹",
-            "count": 1
-          },
-          {
-            "trigger": "rockets",
-            "name": "uk_rp3_4a",
-            "localizedName": "RP-3 火​箭​弹",
-            "count": 1
-          },
-          {
-            "trigger": "rockets",
-            "name": "uk_rp3_4a",
-            "localizedName": "RP-3 火​箭​弹",
-            "count": 1
-          },
-          {
-            "trigger": "rockets",
-            "name": "uk_rp3_4a",
-            "localizedName": "RP-3 火​箭​弹",
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
             "count": 1
           }
         ]

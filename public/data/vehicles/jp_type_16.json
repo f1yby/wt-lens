@@ -46,28 +46,15 @@
     },
     "ammunitions": [
       {
-        "name": "105mm_type91",
-        "localizedName": "91 式",
-        "type": "heat_fs_tank",
+        "name": "105mm_m416",
+        "localizedName": "M416",
+        "type": "smoke_tank",
         "caliber": 105.0,
-        "mass": 9.4,
-        "muzzleVelocity": 1150.0,
-        "penetration0m": 400.0,
-        "explosiveMassKg": 1.2,
-        "explosiveType": "comp_b",
-        "tntEquivalent": 1.524
-      },
-      {
-        "name": "105mm_type75",
-        "localizedName": "75 式",
-        "type": "hesh_tank",
-        "caliber": 105.0,
-        "mass": 10.8,
-        "muzzleVelocity": 760.0,
-        "penetration0m": 127.0,
-        "explosiveMassKg": 2.7,
-        "explosiveType": "comp_a",
-        "tntEquivalent": 3.402
+        "mass": 11.6,
+        "muzzleVelocity": 731.5,
+        "explosiveMassKg": 0.05,
+        "explosiveType": "smoke_composition",
+        "tntEquivalent": 0.05
       },
       {
         "name": "105mm_m735",
@@ -129,15 +116,28 @@
         "penetration0m": 292.4
       },
       {
-        "name": "105mm_m416",
-        "localizedName": "M416",
-        "type": "smoke_tank",
+        "name": "105mm_type91",
+        "localizedName": "91 式",
+        "type": "heat_fs_tank",
         "caliber": 105.0,
-        "mass": 11.6,
-        "muzzleVelocity": 731.5,
-        "explosiveMassKg": 0.05,
-        "explosiveType": "smoke_composition",
-        "tntEquivalent": 0.05
+        "mass": 9.4,
+        "muzzleVelocity": 1150.0,
+        "penetration0m": 400.0,
+        "explosiveMassKg": 1.2,
+        "explosiveType": "comp_b",
+        "tntEquivalent": 1.524
+      },
+      {
+        "name": "105mm_type75",
+        "localizedName": "75 式",
+        "type": "hesh_tank",
+        "caliber": 105.0,
+        "mass": 10.8,
+        "muzzleVelocity": 760.0,
+        "penetration0m": 127.0,
+        "explosiveMassKg": 2.7,
+        "explosiveType": "comp_a",
+        "tntEquivalent": 3.402
       },
       {
         "name": "105mm_type93",

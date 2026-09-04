@@ -58,6 +58,17 @@
         "penetration0m": 204.5
       },
       {
+        "name": "105mm_m416",
+        "localizedName": "M416",
+        "type": "smoke_tank",
+        "caliber": 105.0,
+        "mass": 11.6,
+        "muzzleVelocity": 731.5,
+        "explosiveMassKg": 0.05,
+        "explosiveType": "smoke_composition",
+        "tntEquivalent": 0.05
+      },
+      {
         "name": "105mm_type75",
         "localizedName": "75 式",
         "type": "hesh_tank",
@@ -68,17 +79,6 @@
         "explosiveMassKg": 2.7,
         "explosiveType": "comp_a",
         "tntEquivalent": 3.402
-      },
-      {
-        "name": "105mm_m416",
-        "localizedName": "M416",
-        "type": "smoke_tank",
-        "caliber": 105.0,
-        "mass": 11.6,
-        "muzzleVelocity": 731.5,
-        "explosiveMassKg": 0.05,
-        "explosiveType": "smoke_composition",
-        "tntEquivalent": 0.05
       }
     ],
     "penetrationData": null,

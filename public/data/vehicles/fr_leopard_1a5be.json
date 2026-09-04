@@ -31,7 +31,7 @@
     "stabilizer_value": 1,
     "elevation_range_value": 29.0,
     "mainGun": {
-      "name": "105mm_L7A3_Radpanzer",
+      "name": "105mm_L7A3_leopard_1a5be",
       "caliber": 105.0,
       "reloadTime": 6.67,
       "autoLoader": false,
@@ -43,8 +43,8 @@
     },
     "ammunitions": [
       {
-        "name": "105mm_dm12",
-        "localizedName": "DM12",
+        "name": "105mm_m1061",
+        "localizedName": "M1061",
         "type": "heat_fs_tank",
         "caliber": 105.0,
         "mass": 10.5,
@@ -55,8 +55,8 @@
         "tntEquivalent": 1.232
       },
       {
-        "name": "105mm_dm502",
-        "localizedName": "DM502",
+        "name": "105mm_m393a2",
+        "localizedName": "M393",
         "type": "hesh_tank",
         "caliber": 105.0,
         "mass": 11.2,
@@ -109,6 +109,17 @@
             "angle60": 210.4
           }
         }
+      },
+      {
+        "name": "105mm_m_1010",
+        "localizedName": "M1010",
+        "type": "he_frag_tank",
+        "caliber": 105.0,
+        "mass": 12.1,
+        "muzzleVelocity": 700.0,
+        "explosiveMassKg": 2.0,
+        "explosiveType": "comp_b",
+        "tntEquivalent": 2.54
       }
     ],
     "penetrationData": {

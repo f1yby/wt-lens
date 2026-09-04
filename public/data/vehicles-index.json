@@ -103,6 +103,23 @@
     "releaseDate": "2025-11-11"
   },
   {
+    "id": "cn_fk_2000",
+    "name": "cn_fk_2000",
+    "localizedName": "FK-2000",
+    "nation": "china",
+    "rank": 8,
+    "battle_rating": 12.0,
+    "br": {
+      "arcade": 12.0,
+      "realistic": 12.0,
+      "simulator": 12.0
+    },
+    "vehicle_type": "spaa",
+    "economic_type": "regular",
+    "imageUrl": "vehicles/cn_fk_2000.webp",
+    "releaseDate": "2026-09-01"
+  },
+  {
     "id": "cn_gmc_cckw_353_m45_quad",
     "name": "cn_gmc_cckw_353_m45_quad",
     "localizedName": "CCKW 353 (M45)",
@@ -158,7 +175,7 @@
     "name": "cn_hq_17",
     "localizedName": "红​旗​-17",
     "nation": "china",
-    "rank": 8,
+    "rank": 7,
     "battle_rating": 11.7,
     "br": {
       "arcade": 11.7,
@@ -783,6 +800,23 @@
     "releaseDate": "2024-11-19"
   },
   {
+    "id": "cn_plz_45",
+    "name": "cn_plz_45",
+    "localizedName": "PLZ45",
+    "nation": "china",
+    "rank": 4,
+    "battle_rating": 6.3,
+    "br": {
+      "arcade": 6.3,
+      "realistic": 6.3,
+      "simulator": 6.3
+    },
+    "vehicle_type": "tank_destroyer",
+    "economic_type": "premium",
+    "imageUrl": "vehicles/cn_plz_45.webp",
+    "releaseDate": "2026-09-01"
+  },
+  {
     "id": "cn_plz_83",
     "name": "cn_plz_83",
     "localizedName": "PLZ83",
@@ -1059,7 +1093,7 @@
     "name": "cn_tor_m1",
     "localizedName": "␗​道​尔​-M1",
     "nation": "china",
-    "rank": 8,
+    "rank": 7,
     "battle_rating": 11.3,
     "br": {
       "arcade": 11.3,
@@ -2364,6 +2398,23 @@
     "releaseDate": "2017-12-18"
   },
   {
+    "id": "fr_arl_44_mod",
+    "name": "fr_arl_44_mod",
+    "localizedName": "ARL-44 Bayard",
+    "nation": "france",
+    "rank": 3,
+    "battle_rating": 5.3,
+    "br": {
+      "arcade": 5.3,
+      "realistic": 5.3,
+      "simulator": 5.3
+    },
+    "vehicle_type": "heavy_tank",
+    "economic_type": "premium",
+    "imageUrl": null,
+    "releaseDate": "2026-09-01"
+  },
+  {
     "id": "fr_b1_bis",
     "name": "fr_b1_bis",
     "localizedName": "B1 bis",
@@ -2532,6 +2583,23 @@
     "economic_type": "clan",
     "imageUrl": "vehicles/fr_cv_9035_nl.webp",
     "releaseDate": "2024-09-10"
+  },
+  {
+    "id": "fr_embt",
+    "name": "fr_embt",
+    "localizedName": "EMBT",
+    "nation": "france",
+    "rank": 8,
+    "battle_rating": 12.7,
+    "br": {
+      "arcade": 12.7,
+      "realistic": 12.7,
+      "simulator": 12.7
+    },
+    "vehicle_type": "medium_tank",
+    "economic_type": "regular",
+    "imageUrl": "vehicles/fr_embt.webp",
+    "releaseDate": "2026-09-01"
   },
   {
     "id": "fr_fcm_36",
@@ -3638,6 +3706,23 @@
     "releaseDate": "2026-03-18"
   },
   {
+    "id": "germ_embt",
+    "name": "germ_embt",
+    "localizedName": "EMBT",
+    "nation": "germany",
+    "rank": 8,
+    "battle_rating": 12.7,
+    "br": {
+      "arcade": 12.7,
+      "realistic": 12.7,
+      "simulator": 12.7
+    },
+    "vehicle_type": "medium_tank",
+    "economic_type": "regular",
+    "imageUrl": "vehicles/germ_embt.webp",
+    "releaseDate": "2026-09-01"
+  },
+  {
     "id": "germ_erprobungstrager_3_achs_turm",
     "name": "germ_erprobungstrager_3_achs_turm",
     "localizedName": "三​稳​炮​塔​测​试​车",
@@ -4425,7 +4510,7 @@
     "name": "germ_m44",
     "localizedName": "◄​M44",
     "nation": "germany",
-    "rank": 3,
+    "rank": 2,
     "battle_rating": 3.7,
     "br": {
       "arcade": 3.7,
@@ -4442,7 +4527,7 @@
     "name": "germ_m55",
     "localizedName": "◄​M55",
     "nation": "germany",
-    "rank": 3,
+    "rank": 2,
     "battle_rating": 3.7,
     "br": {
       "arcade": 3.7,
@@ -6060,7 +6145,7 @@
     "name": "germ_stug_III_ausf_G",
     "localizedName": "三​号​突​击​炮 G 型",
     "nation": "germany",
-    "rank": 2,
+    "rank": 3,
     "battle_rating": 4.0,
     "br": {
       "arcade": 4.0,
@@ -6374,6 +6459,23 @@
     "releaseDate": "2021-10-26"
   },
   {
+    "id": "il_9a33bm3",
+    "name": "il_9a33bm3",
+    "localizedName": "◐Osa-AKM",
+    "nation": "israel",
+    "rank": 7,
+    "battle_rating": 10.3,
+    "br": {
+      "arcade": 10.3,
+      "realistic": 10.3,
+      "simulator": 10.3
+    },
+    "vehicle_type": "spaa",
+    "economic_type": "regular",
+    "imageUrl": "vehicles/il_9a33bm3.webp",
+    "releaseDate": "2026-09-01"
+  },
+  {
     "id": "il_aml_90",
     "name": "il_aml_90",
     "localizedName": "​AML 90",
@@ -6508,6 +6610,23 @@
     "economic_type": "regular",
     "imageUrl": "vehicles/il_hunter_afv.webp",
     "releaseDate": "2026-06-24"
+  },
+  {
+    "id": "il_leopard_2a6_hel",
+    "name": "il_leopard_2a6_hel",
+    "localizedName": "◐Leopard 2HEL",
+    "nation": "israel",
+    "rank": 8,
+    "battle_rating": 12.7,
+    "br": {
+      "arcade": 12.7,
+      "realistic": 12.7,
+      "simulator": 12.7
+    },
+    "vehicle_type": "medium_tank",
+    "economic_type": "regular",
+    "imageUrl": "vehicles/il_leopard_2a6_hel.webp",
+    "releaseDate": "2026-09-01"
   },
   {
     "id": "il_m109",
@@ -7075,7 +7194,7 @@
     "name": "il_mim_72_chaparral",
     "localizedName": "​改​进​型​小​檞​树",
     "nation": "israel",
-    "rank": 7,
+    "rank": 6,
     "battle_rating": 9.3,
     "br": {
       "arcade": 9.3,
@@ -7109,7 +7228,7 @@
     "name": "il_namer_tsrikhon",
     "localizedName": "雌​虎 (UT30)",
     "nation": "israel",
-    "rank": 8,
+    "rank": 7,
     "battle_rating": 11.3,
     "br": {
       "arcade": 11.3,
@@ -7256,6 +7375,23 @@
     "economic_type": "regular",
     "imageUrl": "vehicles/il_tiran_6.webp",
     "releaseDate": "2024-09-10"
+  },
+  {
+    "id": "il_tor_m1",
+    "name": "il_tor_m1",
+    "localizedName": "◐Tor-M1",
+    "nation": "israel",
+    "rank": 7,
+    "battle_rating": 11.3,
+    "br": {
+      "arcade": 11.3,
+      "realistic": 11.3,
+      "simulator": 11.3
+    },
+    "vehicle_type": "spaa",
+    "economic_type": "regular",
+    "imageUrl": "vehicles/il_tor_m1.webp",
+    "releaseDate": "2026-09-01"
   },
   {
     "id": "il_zsu_23_4",
@@ -8617,6 +8753,23 @@
     "releaseDate": "2026-06-24"
   },
   {
+    "id": "it_pzh_2000",
+    "name": "it_pzh_2000",
+    "localizedName": "▄PzH 2000",
+    "nation": "italy",
+    "rank": 5,
+    "battle_rating": 7.7,
+    "br": {
+      "arcade": 8.0,
+      "realistic": 7.7,
+      "simulator": 7.7
+    },
+    "vehicle_type": "tank_destroyer",
+    "economic_type": "regular",
+    "imageUrl": "vehicles/it_pzh_2000.webp",
+    "releaseDate": "2026-09-01"
+  },
+  {
     "id": "it_pzh_2000_hu",
     "name": "it_pzh_2000_hu",
     "localizedName": "PzH 2000HU",
@@ -9142,6 +9295,23 @@
     "economic_type": "regular",
     "imageUrl": "vehicles/jp_halftrack_m16.webp",
     "releaseDate": "2021-09-07"
+  },
+  {
+    "id": "jp_harimau",
+    "name": "jp_harimau",
+    "localizedName": "Harimau",
+    "nation": "japan",
+    "rank": 7,
+    "battle_rating": 10.3,
+    "br": {
+      "arcade": 10.3,
+      "realistic": 10.3,
+      "simulator": 10.3
+    },
+    "vehicle_type": "medium_tank",
+    "economic_type": "regular",
+    "imageUrl": "vehicles/jp_harimau.webp",
+    "releaseDate": "2026-09-01"
   },
   {
     "id": "jp_hiro_sha",
@@ -12318,7 +12488,7 @@
     "name": "uk_a27m_cromwell_5",
     "localizedName": "克​伦​威​尔 V",
     "nation": "britain",
-    "rank": 2,
+    "rank": 3,
     "battle_rating": 4.0,
     "br": {
       "arcade": 3.7,
@@ -12334,7 +12504,7 @@
     "name": "uk_a27m_cromwell_5_rp3",
     "localizedName": "克​伦​威​尔 V/RP-3",
     "nation": "britain",
-    "rank": 2,
+    "rank": 3,
     "battle_rating": 4.0,
     "br": {
       "arcade": 3.7,
@@ -12702,6 +12872,23 @@
     "economic_type": "premium",
     "imageUrl": "vehicles/uk_alecto_mk_1.webp",
     "releaseDate": "2022-04-07"
+  },
+  {
+    "id": "uk_arjun_mk1",
+    "name": "uk_arjun_mk1",
+    "localizedName": "Arjun Mk 1",
+    "nation": "britain",
+    "rank": 7,
+    "battle_rating": 10.7,
+    "br": {
+      "arcade": 10.7,
+      "realistic": 10.7,
+      "simulator": 10.7
+    },
+    "vehicle_type": "medium_tank",
+    "economic_type": "regular",
+    "imageUrl": "vehicles/uk_arjun_mk1.webp",
+    "releaseDate": "2026-09-01"
   },
   {
     "id": "uk_armored_car_aec_mk_2",
@@ -16224,6 +16411,23 @@
     "releaseDate": "2021-05-12"
   },
   {
+    "id": "us_m7",
+    "name": "us_m7",
+    "localizedName": "M7",
+    "nation": "usa",
+    "rank": 2,
+    "battle_rating": 3.7,
+    "br": {
+      "arcade": 3.7,
+      "realistic": 3.7,
+      "simulator": 3.7
+    },
+    "vehicle_type": "medium_tank",
+    "economic_type": "regular",
+    "imageUrl": "vehicles/us_m7.webp",
+    "releaseDate": "2026-09-01"
+  },
+  {
     "id": "us_m728",
     "name": "us_m728",
     "localizedName": "M728",
@@ -17251,7 +17455,7 @@
     "name": "ussr_9p157",
     "localizedName": "菊​花​-S",
     "nation": "ussr",
-    "rank": 7,
+    "rank": 6,
     "battle_rating": 9.3,
     "br": {
       "arcade": 9.3,
@@ -17893,6 +18097,23 @@
     "imageUrl": "vehicles/ussr_is_2_1944_revenge.webp"
   },
   {
+    "id": "ussr_is_2m_kit_4rank",
+    "name": "ussr_is_2m_kit_4rank",
+    "localizedName": "IS-2M (Be Prepared!)",
+    "nation": "ussr",
+    "rank": 4,
+    "battle_rating": 6.7,
+    "br": {
+      "arcade": 6.7,
+      "realistic": 6.7,
+      "simulator": 6.7
+    },
+    "vehicle_type": "heavy_tank",
+    "economic_type": "premium",
+    "imageUrl": "vehicles/ussr_is_2m_kit_4rank.webp",
+    "releaseDate": "2026-09-01"
+  },
+  {
     "id": "ussr_is_3",
     "name": "ussr_is_3",
     "localizedName": "IS-3",
@@ -18264,6 +18485,23 @@
     "releaseDate": "2023-03-07"
   },
   {
+    "id": "ussr_m53_59_kit_4rank",
+    "name": "ussr_m53_59_kit_4rank",
+    "localizedName": "M53/59 (Be Prepared!)",
+    "nation": "ussr",
+    "rank": 4,
+    "battle_rating": 6.3,
+    "br": {
+      "arcade": 6.3,
+      "realistic": 6.3,
+      "simulator": 6.3
+    },
+    "vehicle_type": "spaa",
+    "economic_type": "premium",
+    "imageUrl": "vehicles/ussr_m53_59_kit_4rank.webp",
+    "releaseDate": "2026-09-01"
+  },
+  {
     "id": "ussr_object_120",
     "name": "ussr_object_120",
     "localizedName": "120 工​程",
@@ -18362,6 +18600,23 @@
     "economic_type": "regular",
     "imageUrl": "vehicles/ussr_object_292.webp",
     "releaseDate": "2024-02-01"
+  },
+  {
+    "id": "ussr_object_416",
+    "name": "ussr_object_416",
+    "localizedName": "Object 416",
+    "nation": "ussr",
+    "rank": 5,
+    "battle_rating": 7.0,
+    "br": {
+      "arcade": 7.0,
+      "realistic": 7.0,
+      "simulator": 7.0
+    },
+    "vehicle_type": "tank_destroyer",
+    "economic_type": "regular",
+    "imageUrl": null,
+    "releaseDate": "2026-09-01"
   },
   {
     "id": "ussr_object_435",
@@ -19322,6 +19577,23 @@
     "vehicle_type": "medium_tank",
     "economic_type": "premium",
     "imageUrl": "vehicles/ussr_t_44_122.webp"
+  },
+  {
+    "id": "ussr_t_44_kit_4rank",
+    "name": "ussr_t_44_kit_4rank",
+    "localizedName": "T-44 (Be Prepared!)",
+    "nation": "ussr",
+    "rank": 4,
+    "battle_rating": 6.7,
+    "br": {
+      "arcade": 6.7,
+      "realistic": 6.7,
+      "simulator": 6.7
+    },
+    "vehicle_type": "medium_tank",
+    "economic_type": "premium",
+    "imageUrl": "vehicles/ussr_t_44_kit_4rank.webp",
+    "releaseDate": "2026-09-01"
   },
   {
     "id": "ussr_t_44_po",

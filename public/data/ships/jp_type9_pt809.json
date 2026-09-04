@@ -1,0 +1,30 @@
+{
+  "id": "jp_type9_pt809",
+  "economy": {
+    "researchCost": 36000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 1600,
+    "crewTraining": 10000,
+    "expertTraining": 180000,
+    "aceTrainingGE": 590,
+    "aceTrainingRP": 710000,
+    "repairCost": {
+      "arcade": [
+        693,
+        693
+      ],
+      "realistic": [
+        993,
+        993
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 2.03,
+      "realistic": 3.19,
+      "simulator": 1.0
+    },
+    "expMultiplier": 1.48,
+    "freeRepairs": 30
+  },
+  "weapons": null
+}

@@ -138,6 +138,15 @@
         "reloadTime": 8.0,
         "rateOfFire": 900,
         "bulletType": "ap_ball"
+      },
+      {
+        "trigger": "gunner2",
+        "name": "7_92mm_MG34",
+        "caliber": 7.9,
+        "ammo": 2100,
+        "reloadTime": 8.0,
+        "rateOfFire": 900,
+        "bulletType": "ap_ball"
       }
     ],
     "main_gun_ammo": 92,

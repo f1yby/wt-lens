@@ -31,12 +31,12 @@
   "weapons": {
     "fixed_weapons": [
       {
-        "name": "cannonHispanoMkV",
-        "localizedName": "20 毫​米​西​斯​帕​诺 Mk V 机​炮",
+        "name": "cannonHispanoMkII",
+        "localizedName": "20 毫​米​西​斯​帕​诺 Mk II 机​炮",
         "count": 4,
         "bullets": 780,
         "caliber": 20.0,
-        "fireRate": 750,
+        "fireRate": 600,
         "belts": [
           {
             "key": "hispano_universal",
@@ -50,13 +50,13 @@
               {
                 "type": "ap_t",
                 "mass": 0.141,
-                "speed": 801.0,
+                "speed": 822.0,
                 "fireChance": 2.5
               },
               {
                 "type": "he_i",
                 "mass": 0.13,
-                "speed": 833.0,
+                "speed": 868.7,
                 "explosiveMass": 0.0064,
                 "explosiveType": "tetryl",
                 "tntEquivalent": 0.00768,
@@ -65,7 +65,7 @@
               {
                 "type": "sapi",
                 "mass": 0.134,
-                "speed": 824.0,
+                "speed": 844.0,
                 "explosiveMass": 0.01166,
                 "explosiveType": "s_r_379",
                 "tntEquivalent": 2e-05,
@@ -79,31 +79,29 @@
             "bullets": [
               "ap_t",
               "he_i",
-              "t_shell"
+              "ap_t"
             ],
             "bulletsData": [
               {
                 "type": "ap_t",
                 "mass": 0.141,
-                "speed": 801.0,
+                "speed": 822.0,
                 "fireChance": 2.5
               },
               {
                 "type": "he_i",
                 "mass": 0.13,
-                "speed": 833.0,
+                "speed": 868.7,
                 "explosiveMass": 0.0064,
                 "explosiveType": "tetryl",
                 "tntEquivalent": 0.00768,
                 "fireChance": 2.5
               },
               {
-                "type": "t_shell",
-                "mass": 0.132,
-                "speed": 815.0,
-                "penetration": 17.0,
-                "hitPowerMult": 7.0,
-                "fireChance": 3.0
+                "type": "ap_t",
+                "mass": 0.141,
+                "speed": 822.0,
+                "fireChance": 2.5
               }
             ]
           },
@@ -112,13 +110,23 @@
             "name": "匿​踪",
             "bullets": [
               "he_i",
+              "he_i",
               "sapi"
             ],
             "bulletsData": [
               {
                 "type": "he_i",
                 "mass": 0.13,
-                "speed": 824.0,
+                "speed": 868.7,
+                "explosiveMass": 0.0064,
+                "explosiveType": "tetryl",
+                "tntEquivalent": 0.00768,
+                "fireChance": 2.5
+              },
+              {
+                "type": "he_i",
+                "mass": 0.13,
+                "speed": 868.7,
                 "explosiveMass": 0.0064,
                 "explosiveType": "tetryl",
                 "tntEquivalent": 0.00768,

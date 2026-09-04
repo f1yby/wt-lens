@@ -137,20 +137,20 @@
       },
       {
         "trigger": "gunner2",
-        "name": "7_62mm_M240",
+        "name": "7_62mm_FN_MAG58_200",
         "caliber": 7.6,
         "ammo": 1400,
         "reloadTime": 8.0,
-        "rateOfFire": 940,
+        "rateOfFire": 1000,
         "bulletType": "ap_ball"
       },
       {
         "trigger": "gunner3",
-        "name": "7_62mm_M240",
+        "name": "7_62mm_FN_MAG58_200",
         "caliber": 7.6,
         "ammo": 10000,
         "reloadTime": 8.0,
-        "rateOfFire": 940,
+        "rateOfFire": 1000,
         "bulletType": "ap_ball"
       }
     ],

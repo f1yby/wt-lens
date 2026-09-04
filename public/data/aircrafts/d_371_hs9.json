@@ -45,8 +45,7 @@
             "name": "通​用",
             "bullets": [
               "he_i_t",
-              "ap",
-              "t_shell"
+              "ap"
             ],
             "bulletsData": [
               {
@@ -62,14 +61,6 @@
                 "type": "ap",
                 "mass": 0.127,
                 "speed": 820.0
-              },
-              {
-                "type": "t_shell",
-                "mass": 0.127,
-                "speed": 820.0,
-                "penetration": 17.0,
-                "hitPowerMult": 7.0,
-                "fireChance": 3.0
               }
             ]
           },
@@ -77,23 +68,24 @@
             "key": "hispano_tracers",
             "name": "曳​光",
             "bullets": [
+              "he_i_t",
               "ap",
-              "t_shell",
               "he_i_t"
             ],
             "bulletsData": [
               {
+                "type": "he_i_t",
+                "mass": 0.127,
+                "speed": 820.0,
+                "explosiveMass": 0.01,
+                "explosiveType": "pentolite",
+                "tntEquivalent": 0.0126,
+                "fireChance": 3.1
+              },
+              {
                 "type": "ap",
                 "mass": 0.127,
                 "speed": 820.0
-              },
-              {
-                "type": "t_shell",
-                "mass": 0.127,
-                "speed": 820.0,
-                "penetration": 17.0,
-                "hitPowerMult": 7.0,
-                "fireChance": 3.0
               },
               {
                 "type": "he_i_t",

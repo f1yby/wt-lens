@@ -40,6 +40,18 @@
     },
     "ammunitions": [
       {
+        "name": "105mm_m456",
+        "localizedName": "M456",
+        "type": "heat_fs_tank",
+        "caliber": 105.0,
+        "mass": 10.5,
+        "muzzleVelocity": 1173.5,
+        "penetration0m": 400.0,
+        "explosiveMassKg": 0.97,
+        "explosiveType": "comp_b",
+        "tntEquivalent": 1.232
+      },
+      {
         "name": "105mm_m728",
         "localizedName": "M728",
         "type": "apds_l15_tank",
@@ -68,18 +80,6 @@
         "explosiveMassKg": 2.9937,
         "explosiveType": "comp_a",
         "tntEquivalent": 3.772
-      },
-      {
-        "name": "105mm_m456",
-        "localizedName": "M456",
-        "type": "heat_fs_tank",
-        "caliber": 105.0,
-        "mass": 10.5,
-        "muzzleVelocity": 1173.5,
-        "penetration0m": 400.0,
-        "explosiveMassKg": 0.97,
-        "explosiveType": "comp_b",
-        "tntEquivalent": 1.232
       },
       {
         "name": "105mm_m416",

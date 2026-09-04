@@ -51,9 +51,9 @@
             "name": "mg15115_universal",
             "bullets": [
               "ap_t_ball",
-              "he_frag_t_ball",
+              "he_frag_i_t",
               "ap_t_ball",
-              "he_frag_t_ball"
+              "he_frag_i_t"
             ],
             "bulletsData": [
               {
@@ -62,14 +62,13 @@
                 "speed": 850.0
               },
               {
-                "type": "he_frag_t_ball",
+                "type": "he_frag_i_t",
                 "mass": 0.057,
                 "speed": 960.0,
                 "explosiveMass": 0.0019,
                 "explosiveType": "petn",
                 "tntEquivalent": 0.00247,
-                "hitPowerMult": 5.0,
-                "fireChance": 5.0
+                "fireChance": 2.0
               },
               {
                 "type": "ap_t_ball",
@@ -77,14 +76,13 @@
                 "speed": 850.0
               },
               {
-                "type": "he_frag_t_ball",
+                "type": "he_frag_i_t",
                 "mass": 0.057,
                 "speed": 960.0,
                 "explosiveMass": 0.0019,
                 "explosiveType": "petn",
                 "tntEquivalent": 0.00247,
-                "hitPowerMult": 5.0,
-                "fireChance": 5.0
+                "fireChance": 2.0
               }
             ]
           },
@@ -92,48 +90,59 @@
             "key": "mg15115_air_targets",
             "name": "mg15115_air_targets",
             "bullets": [
-              "ap_i",
-              "he_frag_t_ball",
-              "he_frag_t_ball",
-              "he_frag_t_ball"
+              "ap_i_ball",
+              "he_frag_i_t",
+              "he_frag_i_t",
+              "he_frag_i_t"
             ],
             "bulletsData": [
               {
-                "type": "ap_i",
+                "type": "ap_i_ball",
                 "mass": 0.059,
                 "speed": 960.0,
-                "penetration": 34.0,
                 "fireChance": 10.0
               },
               {
-                "type": "he_frag_t_ball",
+                "type": "he_frag_i_t",
                 "mass": 0.057,
                 "speed": 960.0,
                 "explosiveMass": 0.0019,
                 "explosiveType": "petn",
                 "tntEquivalent": 0.00247,
-                "hitPowerMult": 5.0,
-                "fireChance": 5.0
+                "fireChance": 2.0
               },
               {
-                "type": "he_frag_t_ball",
+                "type": "he_frag_i_t",
                 "mass": 0.057,
                 "speed": 960.0,
                 "explosiveMass": 0.0019,
                 "explosiveType": "petn",
                 "tntEquivalent": 0.00247,
-                "hitPowerMult": 5.0,
-                "fireChance": 5.0
+                "fireChance": 2.0
               },
               {
-                "type": "he_frag_t_ball",
+                "type": "he_frag_i_t",
                 "mass": 0.057,
                 "speed": 960.0,
                 "explosiveMass": 0.0019,
                 "explosiveType": "petn",
                 "tntEquivalent": 0.00247,
-                "hitPowerMult": 5.0,
-                "fireChance": 5.0
+                "fireChance": 2.0
+              }
+            ]
+          },
+          {
+            "key": "mg15115_stealth",
+            "name": "mg15115_stealth",
+            "bullets": [
+              "ap_i_ball"
+            ],
+            "bulletsData": [
+              {
+                "type": "ap_i_ball",
+                "mass": 0.059,
+                "speed": 960.0,
+                "fireChance": 10.0
               }
             ]
           }

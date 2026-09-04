@@ -1,0 +1,194 @@
+{
+  "id": "germ_embt",
+  "performance": {
+    "horsepower": 1500.0,
+    "weight": 58.8,
+    "power_to_weight": 25.51,
+    "max_reverse_speed": 27.7,
+    "reload_time": 5.0,
+    "penetration": 575.9,
+    "max_speed": 61.1,
+    "crew_count": 5,
+    "elevation_speed": 30.0,
+    "traverse_speed": 40.0,
+    "has_stabilizer": true,
+    "stabilizer_type": "both",
+    "elevation_range": [
+      -8.0,
+      20.0
+    ],
+    "traverse_range": [
+      -180.0,
+      180.0
+    ],
+    "gunner_thermal_resolution": [
+      800,
+      600
+    ],
+    "commander_thermal_resolution": null,
+    "gunner_thermal_diagonal": 1000.0,
+    "commander_thermal_diagonal": null,
+    "stabilizer_value": 1,
+    "elevation_range_value": 28.0,
+    "mainGun": {
+      "name": "120mm_GIAT_CN120_26_F1",
+      "caliber": 120.0,
+      "reloadTime": 5.0,
+      "autoLoader": true,
+      "reloadTimes": {
+        "base": 5.0,
+        "expert": 5.0,
+        "ace": 5.0
+      }
+    },
+    "ammunitions": [
+      {
+        "name": "120mm_occ_120_g1",
+        "localizedName": "OCC 120 G1",
+        "type": "heat_fs_tank",
+        "caliber": 120.0,
+        "mass": 14.4,
+        "muzzleVelocity": 1100.0,
+        "penetration0m": 480.0,
+        "explosiveMassKg": 1.64,
+        "explosiveType": "comp_b",
+        "tntEquivalent": 2.083
+      },
+      {
+        "name": "120mm_ofl_120_f2",
+        "localizedName": "OFL 120 F2",
+        "type": "apds_fs_long_l30_tank",
+        "caliber": 22.0,
+        "mass": 4.4,
+        "muzzleVelocity": 1740.0,
+        "lanzOdermatt": {
+          "workingLength": 585.0,
+          "density": 18600.0,
+          "material": "depletedUranium",
+          "Cx": 0.611
+        },
+        "penetration0m": 562.1,
+        "penetrationData": {
+          "at0m": {
+            "angle0": 562.1,
+            "angle30": 486.8,
+            "angle60": 281.1
+          }
+        }
+      },
+      {
+        "name": "120mm_ofl_120_f1",
+        "localizedName": "OFL 120 F1",
+        "type": "apds_fs_long_l30_tank",
+        "caliber": 22.0,
+        "mass": 4.0,
+        "muzzleVelocity": 1790.0,
+        "lanzOdermatt": {
+          "workingLength": 585.0,
+          "density": 17500.0,
+          "material": "tungsten",
+          "Cx": 0.611
+        },
+        "penetration0m": 575.9,
+        "penetrationData": {
+          "at0m": {
+            "angle0": 575.9,
+            "angle30": 498.7,
+            "angle60": 288.0
+          }
+        }
+      },
+      {
+        "name": "120mm_f1_he",
+        "localizedName": "F1 HE",
+        "type": "he_frag_fs_tank",
+        "caliber": 120.0,
+        "mass": 16.8,
+        "muzzleVelocity": 1050.0,
+        "explosiveMassKg": 3.0,
+        "explosiveType": "comp_b",
+        "tntEquivalent": 3.81
+      }
+    ],
+    "penetrationData": {
+      "at0m": {
+        "angle0": 575.9,
+        "angle30": 498.7,
+        "angle60": 288.0
+      }
+    },
+    "autoLoader": true,
+    "engine_manufacturer": "mtu",
+    "engine_model": "mb_873_ka_501",
+    "engine_type": null,
+    "engine_max_rpm": 2600.0,
+    "transmission_manufacturer": null,
+    "transmission_model": null,
+    "transmission_type": null,
+    "forward_gears": 8,
+    "reverse_gears": 4,
+    "forward_gear_speeds": [
+      6.8,
+      13.6,
+      18.3,
+      27.7,
+      32.8,
+      40.2,
+      48.5,
+      61.1
+    ],
+    "reverse_gear_speeds": [
+      6.8,
+      13.6,
+      18.3,
+      27.7
+    ],
+    "steer_type": "double_differential",
+    "empty_weight": 57.3,
+    "track_width": 0.55,
+    "secondary_weapons": [
+      {
+        "trigger": "gunner1",
+        "name": "12_7mm_M2_HB_for_leclerc",
+        "caliber": 12.7,
+        "ammo": 6000,
+        "reloadTime": 8.0,
+        "rateOfFire": 575,
+        "bulletType": "ap_i_t_ball_M20"
+      }
+    ],
+    "main_gun_ammo": 44,
+    "driver_nv_resolution": null,
+    "has_smoke_grenades": true,
+    "has_ess": false,
+    "has_laser_rangefinder": true
+  },
+  "economy": {
+    "researchCost": 400000,
+    "purchaseCost": 1080000,
+    "crewTraining": 310000,
+    "expertTraining": 1080000,
+    "aceTrainingGE": 2200,
+    "aceTrainingRP": 1280000,
+    "repairCost": {
+      "arcade": [
+        4390,
+        7173
+      ],
+      "realistic": [
+        4190,
+        6847
+      ],
+      "simulator": [
+        5294,
+        8651
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.5,
+      "realistic": 1.88,
+      "simulator": 2.0
+    },
+    "expMultiplier": 2.5
+  }
+}

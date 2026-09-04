@@ -43,6 +43,17 @@
     },
     "ammunitions": [
       {
+        "name": "105mm_m416",
+        "localizedName": "M416",
+        "type": "smoke_tank",
+        "caliber": 105.0,
+        "mass": 11.6,
+        "muzzleVelocity": 731.5,
+        "explosiveMassKg": 0.05,
+        "explosiveType": "smoke_composition",
+        "tntEquivalent": 0.05
+      },
+      {
         "name": "105mm_m728",
         "localizedName": "M728",
         "type": "apds_l15_tank",
@@ -59,41 +70,6 @@
           "Cx": 0.1761
         },
         "penetration0m": 211.2
-      },
-      {
-        "name": "105mm_m393a2",
-        "localizedName": "M393",
-        "type": "hesh_tank",
-        "caliber": 105.0,
-        "mass": 11.2,
-        "muzzleVelocity": 731.5,
-        "penetration0m": 127.0,
-        "explosiveMassKg": 2.9937,
-        "explosiveType": "comp_a",
-        "tntEquivalent": 3.772
-      },
-      {
-        "name": "105mm_m456",
-        "localizedName": "M456",
-        "type": "heat_fs_tank",
-        "caliber": 105.0,
-        "mass": 10.5,
-        "muzzleVelocity": 1173.5,
-        "penetration0m": 400.0,
-        "explosiveMassKg": 0.97,
-        "explosiveType": "comp_b",
-        "tntEquivalent": 1.232
-      },
-      {
-        "name": "105mm_m416",
-        "localizedName": "M416",
-        "type": "smoke_tank",
-        "caliber": 105.0,
-        "mass": 11.6,
-        "muzzleVelocity": 731.5,
-        "explosiveMassKg": 0.05,
-        "explosiveType": "smoke_composition",
-        "tntEquivalent": 0.05
       },
       {
         "name": "105mm_m735",
@@ -153,6 +129,30 @@
           }
         ],
         "penetration0m": 292.4
+      },
+      {
+        "name": "105mm_m393a2",
+        "localizedName": "M393",
+        "type": "hesh_tank",
+        "caliber": 105.0,
+        "mass": 11.2,
+        "muzzleVelocity": 731.5,
+        "penetration0m": 127.0,
+        "explosiveMassKg": 2.9937,
+        "explosiveType": "comp_a",
+        "tntEquivalent": 3.772
+      },
+      {
+        "name": "105mm_m456",
+        "localizedName": "M456",
+        "type": "heat_fs_tank",
+        "caliber": 105.0,
+        "mass": 10.5,
+        "muzzleVelocity": 1173.5,
+        "penetration0m": 400.0,
+        "explosiveMassKg": 0.97,
+        "explosiveType": "comp_b",
+        "tntEquivalent": 1.232
       }
     ],
     "penetrationData": {},

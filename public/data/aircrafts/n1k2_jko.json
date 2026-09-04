@@ -31,12 +31,12 @@
   "weapons": {
     "fixed_weapons": [
       {
-        "name": "cannonType99Mk2",
-        "localizedName": "20 毫​米​九​九​式​二​号​固​定​机​炮",
+        "name": "cannonType99Mk2_Kai",
+        "localizedName": "20 mm Type 99 Mark 2 Model 4 Kai",
         "count": 4,
         "bullets": 900,
         "caliber": 20.0,
-        "fireRate": 490,
+        "fireRate": 620,
         "belts": [
           {
             "key": "type99mk2_universal",

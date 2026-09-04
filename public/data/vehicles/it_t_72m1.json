@@ -52,15 +52,26 @@
         "tntEquivalent": 1.881
       },
       {
-        "name": "125mm_3of_26",
-        "localizedName": "3OF26",
-        "type": "he_frag_fs_tank",
-        "caliber": 125.0,
-        "mass": 23.0,
-        "muzzleVelocity": 850.0,
-        "explosiveMassKg": 3.402,
-        "explosiveType": "a_ix_2",
-        "tntEquivalent": 4.763
+        "name": "125mm_3bm9",
+        "localizedName": "3BM9",
+        "type": "apds_fs_full_body_steel_tank",
+        "caliber": 44.0,
+        "mass": 3.6,
+        "muzzleVelocity": 1800.0,
+        "lanzOdermatt": {
+          "workingLength": 410.0,
+          "density": 7760.0,
+          "material": "steel",
+          "Cx": 0.3105
+        },
+        "penetration0m": 210.4,
+        "penetrationData": {
+          "at0m": {
+            "angle0": 210.4,
+            "angle30": 182.2,
+            "angle60": 105.2
+          }
+        }
       },
       {
         "name": "125mm_3bm15",
@@ -157,26 +168,15 @@
         "penetration0m": 425.0
       },
       {
-        "name": "125mm_3bm9",
-        "localizedName": "3BM9",
-        "type": "apds_fs_full_body_steel_tank",
-        "caliber": 44.0,
-        "mass": 3.6,
-        "muzzleVelocity": 1800.0,
-        "lanzOdermatt": {
-          "workingLength": 410.0,
-          "density": 7760.0,
-          "material": "steel",
-          "Cx": 0.3105
-        },
-        "penetration0m": 210.4,
-        "penetrationData": {
-          "at0m": {
-            "angle0": 210.4,
-            "angle30": 182.2,
-            "angle60": 105.2
-          }
-        }
+        "name": "125mm_3of_26",
+        "localizedName": "3OF26",
+        "type": "he_frag_fs_tank",
+        "caliber": 125.0,
+        "mass": 23.0,
+        "muzzleVelocity": 850.0,
+        "explosiveMassKg": 3.402,
+        "explosiveType": "a_ix_2",
+        "tntEquivalent": 4.763
       }
     ],
     "penetrationData": {},

@@ -79,7 +79,7 @@
             "bullets": [
               "ap_t",
               "he_i",
-              "t_shell"
+              "ap_t"
             ],
             "bulletsData": [
               {
@@ -98,12 +98,10 @@
                 "fireChance": 2.5
               },
               {
-                "type": "t_shell",
-                "mass": 0.132,
-                "speed": 815.0,
-                "penetration": 17.0,
-                "hitPowerMult": 7.0,
-                "fireChance": 3.0
+                "type": "ap_t",
+                "mass": 0.141,
+                "speed": 801.0,
+                "fireChance": 2.5
               }
             ]
           },

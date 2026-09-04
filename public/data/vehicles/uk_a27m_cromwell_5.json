@@ -137,31 +137,31 @@
     "has_laser_rangefinder": false
   },
   "economy": {
-    "researchCost": 11000,
-    "purchaseCost": 22000,
-    "crewTraining": 6300,
-    "expertTraining": 22000,
-    "aceTrainingGE": 210,
-    "aceTrainingRP": 220000,
+    "researchCost": 18000,
+    "purchaseCost": 47000,
+    "crewTraining": 13000,
+    "expertTraining": 47000,
+    "aceTrainingGE": 330,
+    "aceTrainingRP": 280000,
     "repairCost": {
       "arcade": [
-        684,
-        924
+        942,
+        1274
       ],
       "realistic": [
-        782,
-        1057
+        1078,
+        1457
       ],
       "simulator": [
-        948,
-        1281
+        1321,
+        1785
       ]
     },
     "rewardMultiplier": {
-      "arcade": 0.46,
-      "realistic": 0.65,
-      "simulator": 0.74
+      "arcade": 0.63,
+      "realistic": 0.9,
+      "simulator": 1.03
     },
-    "expMultiplier": 1.24
+    "expMultiplier": 1.36
   }
 }

@@ -40,18 +40,6 @@
     },
     "ammunitions": [
       {
-        "name": "105mm_m456a2",
-        "localizedName": "M456A2",
-        "type": "heat_fs_tank",
-        "caliber": 105.0,
-        "mass": 10.5,
-        "muzzleVelocity": 1173.5,
-        "penetration0m": 400.0,
-        "explosiveMassKg": 0.97,
-        "explosiveType": "comp_b",
-        "tntEquivalent": 1.232
-      },
-      {
         "name": "105mm_m393a2",
         "localizedName": "M393",
         "type": "hesh_tank",
@@ -62,28 +50,6 @@
         "explosiveMassKg": 2.9937,
         "explosiveType": "comp_a",
         "tntEquivalent": 3.772
-      },
-      {
-        "name": "105mm_c76a1",
-        "localizedName": "C76A1",
-        "type": "apds_fs_long_tank",
-        "caliber": 26.0,
-        "mass": 3.6,
-        "muzzleVelocity": 1509.0,
-        "lanzOdermatt": {
-          "workingLength": 375.0,
-          "density": 17500.0,
-          "material": "tungsten",
-          "Cx": 0.45
-        },
-        "penetration0m": 353.1,
-        "penetrationData": {
-          "at0m": {
-            "angle0": 353.1,
-            "angle30": 305.8,
-            "angle60": 176.6
-          }
-        }
       },
       {
         "name": "105mm_dm33",
@@ -104,6 +70,40 @@
             "angle0": 420.7,
             "angle30": 364.3,
             "angle60": 210.4
+          }
+        }
+      },
+      {
+        "name": "105mm_m456a2",
+        "localizedName": "M456A2",
+        "type": "heat_fs_tank",
+        "caliber": 105.0,
+        "mass": 10.5,
+        "muzzleVelocity": 1173.5,
+        "penetration0m": 400.0,
+        "explosiveMassKg": 0.97,
+        "explosiveType": "comp_b",
+        "tntEquivalent": 1.232
+      },
+      {
+        "name": "105mm_c76a1",
+        "localizedName": "C76A1",
+        "type": "apds_fs_long_tank",
+        "caliber": 26.0,
+        "mass": 3.6,
+        "muzzleVelocity": 1509.0,
+        "lanzOdermatt": {
+          "workingLength": 375.0,
+          "density": 17500.0,
+          "material": "tungsten",
+          "Cx": 0.45
+        },
+        "penetration0m": 353.1,
+        "penetrationData": {
+          "at0m": {
+            "angle0": 353.1,
+            "angle30": 305.8,
+            "angle60": 176.6
           }
         }
       }

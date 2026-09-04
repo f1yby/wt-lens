@@ -58,18 +58,6 @@
         "penetration0m": 204.5
       },
       {
-        "name": "105mm_type75",
-        "localizedName": "75 式",
-        "type": "hesh_tank",
-        "caliber": 105.0,
-        "mass": 10.8,
-        "muzzleVelocity": 760.0,
-        "penetration0m": 127.0,
-        "explosiveMassKg": 2.7,
-        "explosiveType": "comp_a",
-        "tntEquivalent": 3.402
-      },
-      {
         "name": "105mm_m456",
         "localizedName": "M456",
         "type": "heat_fs_tank",
@@ -80,6 +68,18 @@
         "explosiveMassKg": 0.97,
         "explosiveType": "comp_b",
         "tntEquivalent": 1.232
+      },
+      {
+        "name": "105mm_type75",
+        "localizedName": "75 式",
+        "type": "hesh_tank",
+        "caliber": 105.0,
+        "mass": 10.8,
+        "muzzleVelocity": 760.0,
+        "penetration0m": 127.0,
+        "explosiveMassKg": 2.7,
+        "explosiveType": "comp_a",
+        "tntEquivalent": 3.402
       }
     ],
     "penetrationData": null,

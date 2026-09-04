@@ -67,28 +67,6 @@
         "tntEquivalent": 3.772
       },
       {
-        "name": "105mm_dm23",
-        "localizedName": "DM23",
-        "type": "apds_fs_tungsten_l10_l15_tank",
-        "caliber": 33.0,
-        "mass": 4.2,
-        "muzzleVelocity": 1455.0,
-        "lanzOdermatt": {
-          "workingLength": 327.0,
-          "density": 17500.0,
-          "material": "tungsten",
-          "Cx": 0.2676
-        },
-        "penetration0m": 337.9,
-        "penetrationData": {
-          "at0m": {
-            "angle0": 337.9,
-            "angle30": 292.6,
-            "angle60": 169.0
-          }
-        }
-      },
-      {
         "name": "105mm_dm33",
         "localizedName": "DM33",
         "type": "apds_fs_long_tank",
@@ -107,6 +85,28 @@
             "angle0": 420.7,
             "angle30": 364.3,
             "angle60": 210.4
+          }
+        }
+      },
+      {
+        "name": "105mm_dm23",
+        "localizedName": "DM23",
+        "type": "apds_fs_tungsten_l10_l15_tank",
+        "caliber": 33.0,
+        "mass": 4.2,
+        "muzzleVelocity": 1455.0,
+        "lanzOdermatt": {
+          "workingLength": 327.0,
+          "density": 17500.0,
+          "material": "tungsten",
+          "Cx": 0.2676
+        },
+        "penetration0m": 337.9,
+        "penetrationData": {
+          "at0m": {
+            "angle0": 337.9,
+            "angle30": 292.6,
+            "angle60": 169.0
           }
         }
       }

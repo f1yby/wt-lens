@@ -40,24 +40,6 @@
     },
     "ammunitions": [
       {
-        "name": "105mm_slpprj_m66",
-        "localizedName": "slpprj m/66",
-        "type": "apds_l15_tank",
-        "caliber": 61.0,
-        "mass": 4.53,
-        "muzzleVelocity": 1400.0,
-        "deMarre": {
-          "fullCaliber": 105.0,
-          "isApcbc": false,
-          "explosiveMass": 0,
-          "isApcr": true,
-          "coreCaliber": 61.0,
-          "coreMass": 3.2,
-          "Cx": 0.1761
-        },
-        "penetration0m": 205.7
-      },
-      {
         "name": "105mm_slspgr_m61",
         "localizedName": "m/61 曳​光​碎​甲​弹",
         "type": "hesh_tank",
@@ -68,28 +50,6 @@
         "explosiveMassKg": 1.97,
         "explosiveType": "rdx",
         "tntEquivalent": 2.758
-      },
-      {
-        "name": "105mm_slpprj_m80",
-        "localizedName": "m/80 曳​光​穿​甲​弹",
-        "type": "apds_fs_tungsten_l10_l15_tank",
-        "caliber": 33.0,
-        "mass": 4.2,
-        "muzzleVelocity": 1455.0,
-        "lanzOdermatt": {
-          "workingLength": 327.0,
-          "density": 17500.0,
-          "material": "tungsten",
-          "Cx": 0.2676
-        },
-        "penetration0m": 337.9,
-        "penetrationData": {
-          "at0m": {
-            "angle0": 337.9,
-            "angle30": 292.6,
-            "angle60": 169.0
-          }
-        }
       },
       {
         "name": "105mm_slsgr_m61",
@@ -112,6 +72,46 @@
         "explosiveMassKg": 0.05,
         "explosiveType": "smoke_composition",
         "tntEquivalent": 0.05
+      },
+      {
+        "name": "105mm_slpprj_m66",
+        "localizedName": "slpprj m/66",
+        "type": "apds_l15_tank",
+        "caliber": 61.0,
+        "mass": 4.53,
+        "muzzleVelocity": 1400.0,
+        "deMarre": {
+          "fullCaliber": 105.0,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "isApcr": true,
+          "coreCaliber": 61.0,
+          "coreMass": 3.2,
+          "Cx": 0.1761
+        },
+        "penetration0m": 205.7
+      },
+      {
+        "name": "105mm_slpprj_m80",
+        "localizedName": "m/80 曳​光​穿​甲​弹",
+        "type": "apds_fs_tungsten_l10_l15_tank",
+        "caliber": 33.0,
+        "mass": 4.2,
+        "muzzleVelocity": 1455.0,
+        "lanzOdermatt": {
+          "workingLength": 327.0,
+          "density": 17500.0,
+          "material": "tungsten",
+          "Cx": 0.2676
+        },
+        "penetration0m": 337.9,
+        "penetrationData": {
+          "at0m": {
+            "angle0": 337.9,
+            "angle30": 292.6,
+            "angle60": 169.0
+          }
+        }
       }
     ],
     "penetrationData": {

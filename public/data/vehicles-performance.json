@@ -437,6 +437,17 @@
       },
       "ammunitions": [
         {
+          "name": "105mm_m416",
+          "localizedName": "M416",
+          "type": "smoke_tank",
+          "caliber": 105.0,
+          "mass": 11.6,
+          "muzzleVelocity": 731.5,
+          "explosiveMassKg": 0.05,
+          "explosiveType": "smoke_composition",
+          "tntEquivalent": 0.05
+        },
+        {
           "name": "105mm_m456a2",
           "localizedName": "M456A2",
           "type": "heat_fs_tank",
@@ -518,17 +529,6 @@
             }
           ],
           "penetration0m": 292.4
-        },
-        {
-          "name": "105mm_m416",
-          "localizedName": "M416",
-          "type": "smoke_tank",
-          "caliber": 105.0,
-          "mass": 11.6,
-          "muzzleVelocity": 731.5,
-          "explosiveMassKg": 0.05,
-          "explosiveType": "smoke_composition",
-          "tntEquivalent": 0.05
         },
         {
           "name": "105mm_dm63",
@@ -893,6 +893,100 @@
         600
       ],
       "has_smoke_grenades": true,
+      "has_ess": false,
+      "has_laser_rangefinder": true
+    }
+  },
+  {
+    "id": "cn_fk_2000",
+    "performance": {
+      "horsepower": 550.0,
+      "weight": 37.0,
+      "power_to_weight": 14.86,
+      "max_reverse_speed": 100.0,
+      "reload_time": 4.0,
+      "penetration": null,
+      "max_speed": 100.0,
+      "crew_count": 5,
+      "elevation_speed": 30.0,
+      "traverse_speed": 40.0,
+      "has_stabilizer": true,
+      "stabilizer_type": "both",
+      "elevation_range": [
+        0.0,
+        67.0
+      ],
+      "traverse_range": [
+        -180.0,
+        180.0
+      ],
+      "gunner_thermal_resolution": [
+        1200,
+        800
+      ],
+      "commander_thermal_resolution": null,
+      "gunner_thermal_diagonal": 1442.2,
+      "commander_thermal_diagonal": null,
+      "stabilizer_value": 1,
+      "elevation_range_value": 67.0,
+      "mainGun": null,
+      "ammunitions": null,
+      "penetrationData": null,
+      "autoLoader": false,
+      "engine_manufacturer": null,
+      "engine_model": null,
+      "engine_type": null,
+      "engine_max_rpm": 3200.0,
+      "transmission_manufacturer": null,
+      "transmission_model": null,
+      "transmission_type": null,
+      "forward_gears": 8,
+      "reverse_gears": 8,
+      "forward_gear_speeds": [
+        8.0,
+        16.0,
+        21.2,
+        31.5,
+        41.2,
+        59.6,
+        74.7,
+        100.0
+      ],
+      "reverse_gear_speeds": [
+        8.0,
+        16.0,
+        21.2,
+        31.5,
+        41.2,
+        59.6,
+        74.7,
+        100.0
+      ],
+      "steer_type": null,
+      "empty_weight": 36.5,
+      "track_width": 0.4,
+      "secondary_weapons": [
+        {
+          "trigger": "gunner1",
+          "name": "180mm_FK_2000_rocket_launcher",
+          "caliber": 180.0,
+          "ammo": 12,
+          "reloadTime": 1.0,
+          "rateOfFire": 30,
+          "bulletType": "sam_tank",
+          "maxDistance": 25000,
+          "maxSpeed": 1350,
+          "guidanceType": "saclos",
+          "explosiveMass": 4.75,
+          "explosiveType": "hta"
+        }
+      ],
+      "main_gun_ammo": 500,
+      "driver_nv_resolution": [
+        800,
+        600
+      ],
+      "has_smoke_grenades": false,
       "has_ess": false,
       "has_laser_rangefinder": true
     }
@@ -2786,7 +2880,7 @@
       ],
       "main_gun_ammo": 48,
       "driver_nv_resolution": null,
-      "has_smoke_grenades": true,
+      "has_smoke_grenades": false,
       "has_ess": false,
       "has_laser_rangefinder": false
     }
@@ -4289,6 +4383,17 @@
       },
       "ammunitions": [
         {
+          "name": "105mm_m416",
+          "localizedName": "M416",
+          "type": "smoke_tank",
+          "caliber": 105.0,
+          "mass": 11.6,
+          "muzzleVelocity": 731.5,
+          "explosiveMassKg": 0.05,
+          "explosiveType": "smoke_composition",
+          "tntEquivalent": 0.05
+        },
+        {
           "name": "105mm_m728",
           "localizedName": "M728",
           "type": "apds_l15_tank",
@@ -4305,41 +4410,6 @@
             "Cx": 0.1761
           },
           "penetration0m": 211.2
-        },
-        {
-          "name": "105mm_m393a2",
-          "localizedName": "M393",
-          "type": "hesh_tank",
-          "caliber": 105.0,
-          "mass": 11.2,
-          "muzzleVelocity": 731.5,
-          "penetration0m": 127.0,
-          "explosiveMassKg": 2.9937,
-          "explosiveType": "comp_a",
-          "tntEquivalent": 3.772
-        },
-        {
-          "name": "105mm_m456",
-          "localizedName": "M456",
-          "type": "heat_fs_tank",
-          "caliber": 105.0,
-          "mass": 10.5,
-          "muzzleVelocity": 1173.5,
-          "penetration0m": 400.0,
-          "explosiveMassKg": 0.97,
-          "explosiveType": "comp_b",
-          "tntEquivalent": 1.232
-        },
-        {
-          "name": "105mm_m416",
-          "localizedName": "M416",
-          "type": "smoke_tank",
-          "caliber": 105.0,
-          "mass": 11.6,
-          "muzzleVelocity": 731.5,
-          "explosiveMassKg": 0.05,
-          "explosiveType": "smoke_composition",
-          "tntEquivalent": 0.05
         },
         {
           "name": "105mm_m735",
@@ -4399,6 +4469,30 @@
             }
           ],
           "penetration0m": 292.4
+        },
+        {
+          "name": "105mm_m393a2",
+          "localizedName": "M393",
+          "type": "hesh_tank",
+          "caliber": 105.0,
+          "mass": 11.2,
+          "muzzleVelocity": 731.5,
+          "penetration0m": 127.0,
+          "explosiveMassKg": 2.9937,
+          "explosiveType": "comp_a",
+          "tntEquivalent": 3.772
+        },
+        {
+          "name": "105mm_m456",
+          "localizedName": "M456",
+          "type": "heat_fs_tank",
+          "caliber": 105.0,
+          "mass": 10.5,
+          "muzzleVelocity": 1173.5,
+          "penetration0m": 400.0,
+          "explosiveMassKg": 0.97,
+          "explosiveType": "comp_b",
+          "tntEquivalent": 1.232
         },
         {
           "name": "105mm_dm33",
@@ -6379,6 +6473,133 @@
       "has_smoke_grenades": true,
       "has_ess": false,
       "has_laser_rangefinder": true
+    }
+  },
+  {
+    "id": "cn_plz_45",
+    "performance": {
+      "horsepower": 524.0,
+      "weight": 33.0,
+      "power_to_weight": 15.88,
+      "max_reverse_speed": 4.5,
+      "reload_time": 13.33,
+      "penetration": 255.2,
+      "max_speed": 55.1,
+      "crew_count": 5,
+      "elevation_speed": 5.0,
+      "traverse_speed": 10.0,
+      "has_stabilizer": false,
+      "stabilizer_type": "none",
+      "elevation_range": [
+        -3.0,
+        85.0
+      ],
+      "traverse_range": [
+        -180.0,
+        180.0
+      ],
+      "gunner_thermal_resolution": null,
+      "commander_thermal_resolution": null,
+      "gunner_thermal_diagonal": null,
+      "commander_thermal_diagonal": null,
+      "stabilizer_value": 0,
+      "elevation_range_value": 88.0,
+      "mainGun": {
+        "name": "155mm_plz45",
+        "caliber": 155.0,
+        "reloadTime": 13.33,
+        "autoLoader": true,
+        "reloadTimes": {
+          "base": 13.33,
+          "expert": 13.33,
+          "ace": 13.33
+        }
+      },
+      "ammunitions": [
+        {
+          "name": "155mm_ddb01_he",
+          "localizedName": "DDB01 HE",
+          "type": "he_frag_tank",
+          "caliber": 155.0,
+          "mass": 45.54,
+          "muzzleVelocity": 897.0,
+          "explosiveMassKg": 8.02,
+          "explosiveType": "tnt",
+          "tntEquivalent": 8.02
+        },
+        {
+          "name": "155mm_ddb01_he_vt",
+          "localizedName": "DDB01 HE(VT)",
+          "type": "he_frag_radio_fuse",
+          "caliber": 155.0,
+          "mass": 45.54,
+          "muzzleVelocity": 897.0,
+          "explosiveMassKg": 8.02,
+          "explosiveType": "tnt",
+          "tntEquivalent": 8.02
+        },
+        {
+          "name": "155mm_bea_1",
+          "localizedName": "BEA1-155",
+          "type": "sapcbc_tank",
+          "caliber": 155.0,
+          "mass": 45.5,
+          "muzzleVelocity": 933.0,
+          "deMarre": {
+            "fullCaliber": 155.0,
+            "isApcbc": true,
+            "explosiveMass": 5.1
+          },
+          "penetration0m": 255.2,
+          "explosiveMassKg": 5.1,
+          "explosiveType": "jhl_3",
+          "tntEquivalent": 7.14
+        }
+      ],
+      "penetrationData": null,
+      "autoLoader": true,
+      "engine_manufacturer": null,
+      "engine_model": null,
+      "engine_type": null,
+      "engine_max_rpm": 2500.0,
+      "transmission_manufacturer": null,
+      "transmission_model": null,
+      "transmission_type": null,
+      "forward_gears": 6,
+      "reverse_gears": 1,
+      "forward_gear_speeds": [
+        5.4,
+        16.7,
+        23.1,
+        32.9,
+        40.0,
+        55.1
+      ],
+      "reverse_gear_speeds": [
+        4.5
+      ],
+      "steer_type": "clutch_braking",
+      "empty_weight": 32.0,
+      "track_width": 0.484,
+      "secondary_weapons": [
+        {
+          "trigger": "gunner2",
+          "name": "12_7mm_QJC_88A",
+          "caliber": 12.7,
+          "ammo": 600,
+          "reloadTime": 5.0,
+          "rateOfFire": 600,
+          "bulletType": "ap_i_t_ball"
+        }
+      ],
+      "main_gun_ammo": 30,
+      "driver_nv_resolution": [
+        800,
+        600
+      ],
+      "has_smoke_grenades": true,
+      "has_ess": false,
+      "has_laser_rangefinder": false
     }
   },
   {
@@ -8514,17 +8735,6 @@
           "tntEquivalent": 2.578
         },
         {
-          "name": "125mm_3of_26",
-          "localizedName": "3OF26",
-          "type": "he_frag_fs_tank",
-          "caliber": 125.0,
-          "mass": 23.0,
-          "muzzleVelocity": 850.0,
-          "explosiveMassKg": 3.402,
-          "explosiveType": "a_ix_2",
-          "tntEquivalent": 4.763
-        },
-        {
           "name": "125mm_3bm42",
           "localizedName": "3BM42",
           "type": "apds_fs_tungsten_caliber_fins_tank",
@@ -8570,6 +8780,17 @@
             }
           ],
           "penetration0m": 457.0
+        },
+        {
+          "name": "125mm_3of_26",
+          "localizedName": "3OF26",
+          "type": "he_frag_fs_tank",
+          "caliber": 125.0,
+          "mass": 23.0,
+          "muzzleVelocity": 850.0,
+          "explosiveMassKg": 3.402,
+          "explosiveType": "a_ix_2",
+          "tntEquivalent": 4.763
         },
         {
           "name": "125mm_9m_119",
@@ -15529,13 +15750,13 @@
           "localizedName": "OFL 105 F3",
           "type": "apds_fs_long_tank",
           "caliber": 26.0,
-          "mass": 3.8,
+          "mass": 3.755,
           "muzzleVelocity": 1400.0,
           "lanzOdermatt": {
             "workingLength": 380.0,
             "density": 17500.0,
             "material": "tungsten",
-            "Cx": 0.49
+            "Cx": 0.4728
           },
           "penetration0m": 322.0,
           "penetrationData": {
@@ -16611,7 +16832,7 @@
           "trigger": "gunner2",
           "name": "7_62mm_AAN_F1",
           "caliber": 7.6,
-          "ammo": 2100,
+          "ammo": 2200,
           "reloadTime": 8.0,
           "rateOfFire": 900,
           "bulletType": "ap_ball"
@@ -16745,7 +16966,7 @@
           "trigger": "gunner2",
           "name": "7_62mm_AAN_F1",
           "caliber": 7.6,
-          "ammo": 2100,
+          "ammo": 2200,
           "reloadTime": 8.0,
           "rateOfFire": 900,
           "bulletType": "ap_ball"
@@ -16965,27 +17186,27 @@
       "forward_gears": 10,
       "reverse_gears": 10,
       "forward_gear_speeds": [
-        4.0,
-        6.9,
+        5.0,
         10.0,
-        10.8,
-        17.3,
-        17.4,
-        26.0,
+        12.6,
+        17.0,
+        20.9,
         27.1,
-        43.4,
+        33.2,
+        43.0,
+        51.8,
         65.1
       ],
       "reverse_gear_speeds": [
-        4.0,
-        6.9,
+        5.0,
         10.0,
-        10.8,
-        17.3,
-        17.4,
-        26.0,
+        12.6,
+        17.0,
+        20.9,
         27.1,
-        43.4,
+        33.2,
+        43.0,
+        51.8,
         65.1
       ],
       "steer_type": "clutch_braking",
@@ -17081,13 +17302,13 @@
           "localizedName": "OFL 105 F1",
           "type": "apds_fs_long_tank",
           "caliber": 26.0,
-          "mass": 3.8,
+          "mass": 3.755,
           "muzzleVelocity": 1525.0,
           "lanzOdermatt": {
             "workingLength": 380.0,
             "density": 17500.0,
             "material": "tungsten",
-            "Cx": 0.49
+            "Cx": 0.4728
           },
           "penetration0m": 361.0,
           "penetrationData": {
@@ -17128,27 +17349,27 @@
       "forward_gears": 10,
       "reverse_gears": 10,
       "forward_gear_speeds": [
-        4.0,
-        6.9,
+        5.0,
         10.0,
-        10.8,
-        17.3,
-        17.4,
-        26.0,
+        12.6,
+        17.0,
+        20.9,
         27.1,
-        43.4,
+        33.2,
+        43.0,
+        51.8,
         65.1
       ],
       "reverse_gear_speeds": [
-        4.0,
-        6.9,
+        5.0,
         10.0,
-        10.8,
-        17.3,
-        17.4,
-        26.0,
+        12.6,
+        17.0,
+        20.9,
         27.1,
-        43.4,
+        33.2,
+        43.0,
+        51.8,
         65.1
       ],
       "steer_type": "clutch_braking",
@@ -17256,13 +17477,13 @@
           "localizedName": "OFL 105 F1",
           "type": "apds_fs_long_tank",
           "caliber": 26.0,
-          "mass": 3.8,
+          "mass": 3.755,
           "muzzleVelocity": 1525.0,
           "lanzOdermatt": {
             "workingLength": 380.0,
             "density": 17500.0,
             "material": "tungsten",
-            "Cx": 0.49
+            "Cx": 0.4728
           },
           "penetration0m": 361.0,
           "penetrationData": {
@@ -17303,27 +17524,27 @@
       "forward_gears": 10,
       "reverse_gears": 10,
       "forward_gear_speeds": [
-        4.0,
-        6.9,
+        5.0,
         10.0,
-        10.8,
-        17.3,
-        17.4,
-        26.0,
+        12.6,
+        17.0,
+        20.9,
         27.1,
-        43.4,
+        33.2,
+        43.0,
+        51.8,
         65.1
       ],
       "reverse_gear_speeds": [
-        4.0,
-        6.9,
+        5.0,
         10.0,
-        10.8,
-        17.3,
-        17.4,
-        26.0,
+        12.6,
+        17.0,
+        20.9,
         27.1,
-        43.4,
+        33.2,
+        43.0,
+        51.8,
         65.1
       ],
       "steer_type": "clutch_braking",
@@ -17343,7 +17564,7 @@
           "trigger": "gunner2",
           "name": "7_62mm_AAN_F1",
           "caliber": 7.6,
-          "ammo": 2100,
+          "ammo": 2200,
           "reloadTime": 8.0,
           "rateOfFire": 900,
           "bulletType": "ap_ball"
@@ -17443,7 +17664,7 @@
       "stabilizer_type": "none",
       "elevation_range": [
         -10.0,
-        35.0
+        80.0
       ],
       "traverse_range": [
         -180.0,
@@ -17454,7 +17675,7 @@
       "gunner_thermal_diagonal": null,
       "commander_thermal_diagonal": null,
       "stabilizer_value": 0,
-      "elevation_range_value": 45.0,
+      "elevation_range_value": 90.0,
       "mainGun": {
         "name": "163mm_roland_launcher",
         "caliber": 163.0,
@@ -17592,13 +17813,13 @@
           "localizedName": "OFL 105 F1",
           "type": "apds_fs_long_tank",
           "caliber": 26.0,
-          "mass": 3.8,
+          "mass": 3.755,
           "muzzleVelocity": 1525.0,
           "lanzOdermatt": {
             "workingLength": 380.0,
             "density": 17500.0,
             "material": "tungsten",
-            "Cx": 0.49
+            "Cx": 0.4728
           },
           "penetration0m": 361.0,
           "penetrationData": {
@@ -17748,13 +17969,13 @@
           "localizedName": "OFL 120 G1",
           "type": "apds_fs_long_tank",
           "caliber": 26.0,
-          "mass": 3.8,
+          "mass": 3.755,
           "muzzleVelocity": 1650.0,
           "lanzOdermatt": {
             "workingLength": 380.0,
             "density": 17500.0,
             "material": "tungsten",
-            "Cx": 0.49
+            "Cx": 0.4222
           },
           "penetration0m": 394.8,
           "penetrationData": {
@@ -17784,27 +18005,27 @@
       "forward_gears": 10,
       "reverse_gears": 10,
       "forward_gear_speeds": [
-        4.0,
-        6.9,
+        5.0,
         10.0,
-        10.8,
-        17.3,
-        17.4,
-        26.0,
+        12.6,
+        17.0,
+        20.9,
         27.1,
-        43.4,
+        33.2,
+        43.0,
+        51.8,
         65.1
       ],
       "reverse_gear_speeds": [
-        4.0,
-        6.9,
+        5.0,
         10.0,
-        10.8,
-        17.3,
-        17.4,
-        26.0,
+        12.6,
+        17.0,
+        20.9,
         27.1,
-        43.4,
+        33.2,
+        43.0,
+        51.8,
         65.1
       ],
       "steer_type": "clutch_braking",
@@ -17912,13 +18133,13 @@
           "localizedName": "OFL 105 F1",
           "type": "apds_fs_long_tank",
           "caliber": 26.0,
-          "mass": 3.8,
+          "mass": 3.755,
           "muzzleVelocity": 1525.0,
           "lanzOdermatt": {
             "workingLength": 380.0,
             "density": 17500.0,
             "material": "tungsten",
-            "Cx": 0.49
+            "Cx": 0.4728
           },
           "penetration0m": 361.0,
           "penetrationData": {
@@ -17959,27 +18180,27 @@
       "forward_gears": 10,
       "reverse_gears": 10,
       "forward_gear_speeds": [
-        4.0,
-        6.9,
+        5.0,
         10.0,
-        10.8,
-        17.3,
-        17.4,
-        26.0,
+        12.6,
+        17.0,
+        20.9,
         27.1,
-        43.4,
+        33.2,
+        43.0,
+        51.8,
         65.1
       ],
       "reverse_gear_speeds": [
-        4.0,
-        6.9,
+        5.0,
         10.0,
-        10.8,
-        17.3,
-        17.4,
-        26.0,
+        12.6,
+        17.0,
+        20.9,
         27.1,
-        43.4,
+        33.2,
+        43.0,
+        51.8,
         65.1
       ],
       "steer_type": "clutch_braking",
@@ -18076,13 +18297,13 @@
           "localizedName": "OFL 120 G1",
           "type": "apds_fs_long_tank",
           "caliber": 26.0,
-          "mass": 3.8,
+          "mass": 3.755,
           "muzzleVelocity": 1650.0,
           "lanzOdermatt": {
             "workingLength": 380.0,
             "density": 17500.0,
             "material": "tungsten",
-            "Cx": 0.49
+            "Cx": 0.4222
           },
           "penetration0m": 394.8,
           "penetrationData": {
@@ -18512,7 +18733,7 @@
           "ammo": 500,
           "reloadTime": 10.0,
           "rateOfFire": 700,
-          "bulletType": "he_frag_i_t"
+          "bulletType": "frag_i_t"
         }
       ],
       "main_gun_ammo": 48,
@@ -18741,7 +18962,7 @@
           "ammo": 500,
           "reloadTime": 10.0,
           "rateOfFire": 700,
-          "bulletType": "he_frag_i_t"
+          "bulletType": "frag_i_t"
         }
       ],
       "main_gun_ammo": 51,
@@ -19409,6 +19630,127 @@
           "ammo": 5100,
           "reloadTime": 5.0,
           "rateOfFire": 550,
+          "bulletType": "ap_ball"
+        }
+      ],
+      "main_gun_ammo": 37,
+      "driver_nv_resolution": null,
+      "has_smoke_grenades": false,
+      "has_ess": false,
+      "has_laser_rangefinder": false
+    }
+  },
+  {
+    "id": "fr_arl_44_mod",
+    "performance": {
+      "horsepower": 600.0,
+      "weight": 50.0,
+      "power_to_weight": 12.0,
+      "max_reverse_speed": 7.5,
+      "reload_time": 10.0,
+      "penetration": 248.5,
+      "max_speed": 37.4,
+      "crew_count": 5,
+      "elevation_speed": 4.0,
+      "traverse_speed": 24.0,
+      "has_stabilizer": false,
+      "stabilizer_type": "none",
+      "elevation_range": [
+        -5.0,
+        20.0
+      ],
+      "traverse_range": [
+        -180.0,
+        180.0
+      ],
+      "gunner_thermal_resolution": null,
+      "commander_thermal_resolution": null,
+      "gunner_thermal_diagonal": null,
+      "commander_thermal_diagonal": null,
+      "stabilizer_value": 0,
+      "elevation_range_value": 25.0,
+      "mainGun": {
+        "name": "90mm_SA45_ARL",
+        "caliber": 90.0,
+        "reloadTime": 10.0,
+        "autoLoader": false,
+        "reloadTimes": {
+          "base": 13.0,
+          "expert": 11.5,
+          "ace": 10.0
+        }
+      },
+      "ammunitions": [
+        {
+          "name": "90mm_sa45_apc",
+          "localizedName": "PCO-50",
+          "type": "apcbc_solid_medium_caliber_tank",
+          "caliber": 90.0,
+          "mass": 11.2,
+          "muzzleVelocity": 1000.0,
+          "deMarre": {
+            "fullCaliber": 90.0,
+            "isApcbc": true,
+            "explosiveMass": 0,
+            "Cx": 0.26
+          },
+          "penetration0m": 248.5
+        },
+        {
+          "name": "90mm_sa45_he",
+          "localizedName": "榴​弹",
+          "type": "he_frag_tank",
+          "caliber": 90.0,
+          "mass": 11.3,
+          "muzzleVelocity": 700.0,
+          "explosiveMassKg": 0.945,
+          "explosiveType": "tnt",
+          "tntEquivalent": 0.945
+        }
+      ],
+      "penetrationData": null,
+      "autoLoader": false,
+      "engine_manufacturer": null,
+      "engine_model": null,
+      "engine_type": null,
+      "engine_max_rpm": 2500.0,
+      "transmission_manufacturer": null,
+      "transmission_model": null,
+      "transmission_type": null,
+      "forward_gears": 6,
+      "reverse_gears": 2,
+      "forward_gear_speeds": [
+        4.3,
+        7.5,
+        11.3,
+        15.1,
+        24.4,
+        37.4
+      ],
+      "reverse_gear_speeds": [
+        2.5,
+        7.5
+      ],
+      "steer_type": "clutch_braking",
+      "empty_weight": 49.4,
+      "track_width": 0.55,
+      "secondary_weapons": [
+        {
+          "trigger": "gunner1",
+          "name": "7_5mm_MAC_31",
+          "caliber": 7.5,
+          "ammo": 5100,
+          "reloadTime": 5.0,
+          "rateOfFire": 550,
+          "bulletType": "ap_ball"
+        },
+        {
+          "trigger": "gunner2",
+          "name": "7_62mm_L37A2",
+          "caliber": 7.6,
+          "ammo": 2000,
+          "reloadTime": 8.0,
+          "rateOfFire": 650,
           "bulletType": "ap_ball"
         }
       ],
@@ -20641,6 +20983,172 @@
         800,
         600
       ],
+      "has_smoke_grenades": true,
+      "has_ess": false,
+      "has_laser_rangefinder": true
+    }
+  },
+  {
+    "id": "fr_embt",
+    "performance": {
+      "horsepower": 1500.0,
+      "weight": 58.8,
+      "power_to_weight": 25.51,
+      "max_reverse_speed": 27.7,
+      "reload_time": 5.0,
+      "penetration": 575.9,
+      "max_speed": 61.1,
+      "crew_count": 5,
+      "elevation_speed": 30.0,
+      "traverse_speed": 40.0,
+      "has_stabilizer": true,
+      "stabilizer_type": "both",
+      "elevation_range": [
+        -8.0,
+        20.0
+      ],
+      "traverse_range": [
+        -180.0,
+        180.0
+      ],
+      "gunner_thermal_resolution": [
+        800,
+        600
+      ],
+      "commander_thermal_resolution": null,
+      "gunner_thermal_diagonal": 1000.0,
+      "commander_thermal_diagonal": null,
+      "stabilizer_value": 1,
+      "elevation_range_value": 28.0,
+      "mainGun": {
+        "name": "120mm_GIAT_CN120_26_F1",
+        "caliber": 120.0,
+        "reloadTime": 5.0,
+        "autoLoader": true,
+        "reloadTimes": {
+          "base": 5.0,
+          "expert": 5.0,
+          "ace": 5.0
+        }
+      },
+      "ammunitions": [
+        {
+          "name": "120mm_occ_120_g1",
+          "localizedName": "OCC 120 G1",
+          "type": "heat_fs_tank",
+          "caliber": 120.0,
+          "mass": 14.4,
+          "muzzleVelocity": 1100.0,
+          "penetration0m": 480.0,
+          "explosiveMassKg": 1.64,
+          "explosiveType": "comp_b",
+          "tntEquivalent": 2.083
+        },
+        {
+          "name": "120mm_ofl_120_f2",
+          "localizedName": "OFL 120 F2",
+          "type": "apds_fs_long_l30_tank",
+          "caliber": 22.0,
+          "mass": 4.4,
+          "muzzleVelocity": 1740.0,
+          "lanzOdermatt": {
+            "workingLength": 585.0,
+            "density": 18600.0,
+            "material": "depletedUranium",
+            "Cx": 0.611
+          },
+          "penetration0m": 562.1,
+          "penetrationData": {
+            "at0m": {
+              "angle0": 562.1,
+              "angle30": 486.8,
+              "angle60": 281.1
+            }
+          }
+        },
+        {
+          "name": "120mm_ofl_120_f1",
+          "localizedName": "OFL 120 F1",
+          "type": "apds_fs_long_l30_tank",
+          "caliber": 22.0,
+          "mass": 4.0,
+          "muzzleVelocity": 1790.0,
+          "lanzOdermatt": {
+            "workingLength": 585.0,
+            "density": 17500.0,
+            "material": "tungsten",
+            "Cx": 0.611
+          },
+          "penetration0m": 575.9,
+          "penetrationData": {
+            "at0m": {
+              "angle0": 575.9,
+              "angle30": 498.7,
+              "angle60": 288.0
+            }
+          }
+        },
+        {
+          "name": "120mm_f1_he",
+          "localizedName": "F1 HE",
+          "type": "he_frag_fs_tank",
+          "caliber": 120.0,
+          "mass": 16.8,
+          "muzzleVelocity": 1050.0,
+          "explosiveMassKg": 3.0,
+          "explosiveType": "comp_b",
+          "tntEquivalent": 3.81
+        }
+      ],
+      "penetrationData": {
+        "at0m": {
+          "angle0": 575.9,
+          "angle30": 498.7,
+          "angle60": 288.0
+        }
+      },
+      "autoLoader": true,
+      "engine_manufacturer": "mtu",
+      "engine_model": "mb_873_ka_501",
+      "engine_type": null,
+      "engine_max_rpm": 2600.0,
+      "transmission_manufacturer": null,
+      "transmission_model": null,
+      "transmission_type": null,
+      "forward_gears": 8,
+      "reverse_gears": 4,
+      "forward_gear_speeds": [
+        6.8,
+        13.6,
+        18.3,
+        27.7,
+        32.8,
+        40.2,
+        48.5,
+        61.1
+      ],
+      "reverse_gear_speeds": [
+        6.8,
+        13.6,
+        18.3,
+        27.7
+      ],
+      "steer_type": "double_differential",
+      "empty_weight": 57.3,
+      "track_width": 0.55,
+      "secondary_weapons": [
+        {
+          "trigger": "gunner1",
+          "name": "12_7mm_M2_HB_for_leclerc",
+          "caliber": 12.7,
+          "ammo": 6000,
+          "reloadTime": 8.0,
+          "rateOfFire": 575,
+          "bulletType": "ap_i_t_ball_M20"
+        }
+      ],
+      "main_gun_ammo": 44,
+      "driver_nv_resolution": null,
       "has_smoke_grenades": true,
       "has_ess": false,
       "has_laser_rangefinder": true
@@ -22020,7 +22528,7 @@
       "stabilizer_value": 1,
       "elevation_range_value": 29.0,
       "mainGun": {
-        "name": "105mm_L7A3_Radpanzer",
+        "name": "105mm_L7A3_leopard_1a5be",
         "caliber": 105.0,
         "reloadTime": 6.67,
         "autoLoader": false,
@@ -22032,8 +22540,8 @@
       },
       "ammunitions": [
         {
-          "name": "105mm_dm12",
-          "localizedName": "DM12",
+          "name": "105mm_m1061",
+          "localizedName": "M1061",
           "type": "heat_fs_tank",
           "caliber": 105.0,
           "mass": 10.5,
@@ -22044,8 +22552,8 @@
           "tntEquivalent": 1.232
         },
         {
-          "name": "105mm_dm502",
-          "localizedName": "DM502",
+          "name": "105mm_m393a2",
+          "localizedName": "M393",
           "type": "hesh_tank",
           "caliber": 105.0,
           "mass": 11.2,
@@ -22098,6 +22606,17 @@
               "angle60": 210.4
             }
           }
+        },
+        {
+          "name": "105mm_m_1010",
+          "localizedName": "M1010",
+          "type": "he_frag_tank",
+          "caliber": 105.0,
+          "mass": 12.1,
+          "muzzleVelocity": 700.0,
+          "explosiveMassKg": 2.0,
+          "explosiveType": "comp_b",
+          "tntEquivalent": 2.54
         }
       ],
       "penetrationData": {
@@ -22325,7 +22844,7 @@
         20.4,
         31.0
       ],
-      "steer_type": "clutch_braking",
+      "steer_type": "double_differential",
       "empty_weight": 53.85,
       "track_width": 0.55,
       "secondary_weapons": [
@@ -22517,7 +23036,7 @@
         20.4,
         31.0
       ],
-      "steer_type": "clutch_braking",
+      "steer_type": "double_differential",
       "empty_weight": 53.85,
       "track_width": 0.55,
       "secondary_weapons": [
@@ -22687,7 +23206,7 @@
         20.4,
         31.0
       ],
-      "steer_type": "clutch_braking",
+      "steer_type": "double_differential",
       "empty_weight": 58.0,
       "track_width": 0.55,
       "secondary_weapons": [
@@ -22857,7 +23376,7 @@
         20.4,
         31.0
       ],
-      "steer_type": "clutch_braking",
+      "steer_type": "double_differential",
       "empty_weight": 58.4,
       "track_width": 0.55,
       "secondary_weapons": [
@@ -23086,7 +23605,7 @@
           "ammo": 500,
           "reloadTime": 10.0,
           "rateOfFire": 700,
-          "bulletType": "he_frag_i_t"
+          "bulletType": "frag_i_t"
         }
       ],
       "main_gun_ammo": 30,
@@ -25547,13 +26066,13 @@
           "localizedName": "OFL 90 F1",
           "type": "apds_fs_long_tank",
           "caliber": 26.0,
-          "mass": 3.8,
+          "mass": 3.755,
           "muzzleVelocity": 1275.0,
           "lanzOdermatt": {
             "workingLength": 380.0,
             "density": 17500.0,
             "material": "tungsten",
-            "Cx": 0.49
+            "Cx": 0.4728
           },
           "penetration0m": 277.2,
           "penetrationData": {
@@ -25683,13 +26202,13 @@
           "localizedName": "OFL 120 G1",
           "type": "apds_fs_long_tank",
           "caliber": 26.0,
-          "mass": 3.8,
+          "mass": 3.755,
           "muzzleVelocity": 1780.0,
           "lanzOdermatt": {
             "workingLength": 380.0,
             "density": 17500.0,
             "material": "tungsten",
-            "Cx": 0.49
+            "Cx": 0.4222
           },
           "penetration0m": 425.0,
           "penetrationData": {
@@ -26905,7 +27424,7 @@
             "workingLength": 380.0,
             "density": 17500.0,
             "material": "tungsten",
-            "Cx": 0.49
+            "Cx": 0.4728
           },
           "penetration0m": 346.0,
           "penetrationData": {
@@ -27936,13 +28455,13 @@
           "localizedName": "OFL 105 F1",
           "type": "apds_fs_long_tank",
           "caliber": 26.0,
-          "mass": 3.8,
+          "mass": 3.755,
           "muzzleVelocity": 1500.0,
           "lanzOdermatt": {
             "workingLength": 380.0,
             "density": 17500.0,
             "material": "tungsten",
-            "Cx": 0.49
+            "Cx": 0.4728
           },
           "penetration0m": 353.6,
           "penetrationData": {
@@ -29092,7 +29611,7 @@
       "weight": 38.0,
       "power_to_weight": 18.95,
       "max_reverse_speed": 18.8,
-      "reload_time": 5.0,
+      "reload_time": 7.46,
       "penetration": 430.2,
       "max_speed": 103.0,
       "crew_count": 5,
@@ -29123,12 +29642,12 @@
       "mainGun": {
         "name": "105mm_cockerill_hp",
         "caliber": 105.0,
-        "reloadTime": 5.0,
+        "reloadTime": 7.46,
         "autoLoader": true,
         "reloadTimes": {
-          "base": 5.0,
-          "expert": 5.0,
-          "ace": 5.0
+          "base": 7.46,
+          "expert": 7.46,
+          "ace": 7.46
         }
       },
       "ammunitions": [
@@ -29454,6 +29973,172 @@
     }
   },
   {
+    "id": "germ_embt",
+    "performance": {
+      "horsepower": 1500.0,
+      "weight": 58.8,
+      "power_to_weight": 25.51,
+      "max_reverse_speed": 27.7,
+      "reload_time": 5.0,
+      "penetration": 575.9,
+      "max_speed": 61.1,
+      "crew_count": 5,
+      "elevation_speed": 30.0,
+      "traverse_speed": 40.0,
+      "has_stabilizer": true,
+      "stabilizer_type": "both",
+      "elevation_range": [
+        -8.0,
+        20.0
+      ],
+      "traverse_range": [
+        -180.0,
+        180.0
+      ],
+      "gunner_thermal_resolution": [
+        800,
+        600
+      ],
+      "commander_thermal_resolution": null,
+      "gunner_thermal_diagonal": 1000.0,
+      "commander_thermal_diagonal": null,
+      "stabilizer_value": 1,
+      "elevation_range_value": 28.0,
+      "mainGun": {
+        "name": "120mm_GIAT_CN120_26_F1",
+        "caliber": 120.0,
+        "reloadTime": 5.0,
+        "autoLoader": true,
+        "reloadTimes": {
+          "base": 5.0,
+          "expert": 5.0,
+          "ace": 5.0
+        }
+      },
+      "ammunitions": [
+        {
+          "name": "120mm_occ_120_g1",
+          "localizedName": "OCC 120 G1",
+          "type": "heat_fs_tank",
+          "caliber": 120.0,
+          "mass": 14.4,
+          "muzzleVelocity": 1100.0,
+          "penetration0m": 480.0,
+          "explosiveMassKg": 1.64,
+          "explosiveType": "comp_b",
+          "tntEquivalent": 2.083
+        },
+        {
+          "name": "120mm_ofl_120_f2",
+          "localizedName": "OFL 120 F2",
+          "type": "apds_fs_long_l30_tank",
+          "caliber": 22.0,
+          "mass": 4.4,
+          "muzzleVelocity": 1740.0,
+          "lanzOdermatt": {
+            "workingLength": 585.0,
+            "density": 18600.0,
+            "material": "depletedUranium",
+            "Cx": 0.611
+          },
+          "penetration0m": 562.1,
+          "penetrationData": {
+            "at0m": {
+              "angle0": 562.1,
+              "angle30": 486.8,
+              "angle60": 281.1
+            }
+          }
+        },
+        {
+          "name": "120mm_ofl_120_f1",
+          "localizedName": "OFL 120 F1",
+          "type": "apds_fs_long_l30_tank",
+          "caliber": 22.0,
+          "mass": 4.0,
+          "muzzleVelocity": 1790.0,
+          "lanzOdermatt": {
+            "workingLength": 585.0,
+            "density": 17500.0,
+            "material": "tungsten",
+            "Cx": 0.611
+          },
+          "penetration0m": 575.9,
+          "penetrationData": {
+            "at0m": {
+              "angle0": 575.9,
+              "angle30": 498.7,
+              "angle60": 288.0
+            }
+          }
+        },
+        {
+          "name": "120mm_f1_he",
+          "localizedName": "F1 HE",
+          "type": "he_frag_fs_tank",
+          "caliber": 120.0,
+          "mass": 16.8,
+          "muzzleVelocity": 1050.0,
+          "explosiveMassKg": 3.0,
+          "explosiveType": "comp_b",
+          "tntEquivalent": 3.81
+        }
+      ],
+      "penetrationData": {
+        "at0m": {
+          "angle0": 575.9,
+          "angle30": 498.7,
+          "angle60": 288.0
+        }
+      },
+      "autoLoader": true,
+      "engine_manufacturer": "mtu",
+      "engine_model": "mb_873_ka_501",
+      "engine_type": null,
+      "engine_max_rpm": 2600.0,
+      "transmission_manufacturer": null,
+      "transmission_model": null,
+      "transmission_type": null,
+      "forward_gears": 8,
+      "reverse_gears": 4,
+      "forward_gear_speeds": [
+        6.8,
+        13.6,
+        18.3,
+        27.7,
+        32.8,
+        40.2,
+        48.5,
+        61.1
+      ],
+      "reverse_gear_speeds": [
+        6.8,
+        13.6,
+        18.3,
+        27.7
+      ],
+      "steer_type": "double_differential",
+      "empty_weight": 57.3,
+      "track_width": 0.55,
+      "secondary_weapons": [
+        {
+          "trigger": "gunner1",
+          "name": "12_7mm_M2_HB_for_leclerc",
+          "caliber": 12.7,
+          "ammo": 6000,
+          "reloadTime": 8.0,
+          "rateOfFire": 575,
+          "bulletType": "ap_i_t_ball_M20"
+        }
+      ],
+      "main_gun_ammo": 44,
+      "driver_nv_resolution": null,
+      "has_smoke_grenades": true,
+      "has_ess": false,
+      "has_laser_rangefinder": true
+    }
+  },
+  {
     "id": "germ_erprobungstrager_3_achs_turm",
     "performance": {
       "horsepower": 856.0,
@@ -29725,8 +30410,32 @@
       "commander_thermal_diagonal": null,
       "stabilizer_value": 0,
       "elevation_range_value": 87.0,
-      "mainGun": null,
-      "ammunitions": null,
+      "mainGun": {
+        "name": "30mm_MK103_38",
+        "caliber": 30.0,
+        "reloadTime": 10.0,
+        "autoLoader": false,
+        "reloadTimes": {
+          "base": 13.0,
+          "expert": 11.5,
+          "ace": 10.0
+        },
+        "rateOfFire": 450,
+        "beltReloadTime": 10.0
+      },
+      "ammunitions": [
+        {
+          "name": "30mm_PzSprBrGr",
+          "localizedName": "PzSprBrGr",
+          "type": "sap_hei",
+          "caliber": 30.0,
+          "mass": 0.46,
+          "muzzleVelocity": 800.0,
+          "explosiveMassKg": 0.0052,
+          "explosiveType": "petn",
+          "tntEquivalent": 0.007
+        }
+      ],
       "penetrationData": null,
       "autoLoader": false,
       "engine_manufacturer": null,
@@ -30473,8 +31182,32 @@
       "commander_thermal_diagonal": null,
       "stabilizer_value": 0,
       "elevation_range_value": 87.0,
-      "mainGun": null,
-      "ammunitions": null,
+      "mainGun": {
+        "name": "30mm_mk103_45",
+        "caliber": 30.0,
+        "reloadTime": 4.0,
+        "autoLoader": false,
+        "reloadTimes": {
+          "base": 5.2,
+          "expert": 4.6,
+          "ace": 4.0
+        },
+        "rateOfFire": 450,
+        "beltReloadTime": 4.0
+      },
+      "ammunitions": [
+        {
+          "name": "30mm_PzSprBrGr",
+          "localizedName": "PzSprBrGr",
+          "type": "sap_hei",
+          "caliber": 30.0,
+          "mass": 0.46,
+          "muzzleVelocity": 800.0,
+          "explosiveMassKg": 0.0052,
+          "explosiveType": "petn",
+          "tntEquivalent": 0.007
+        }
+      ],
       "penetrationData": null,
       "autoLoader": false,
       "engine_manufacturer": null,
@@ -32338,15 +33071,26 @@
           "tntEquivalent": 1.881
         },
         {
-          "name": "125mm_3of_26",
-          "localizedName": "3OF26",
-          "type": "he_frag_fs_tank",
-          "caliber": 125.0,
-          "mass": 23.0,
-          "muzzleVelocity": 850.0,
-          "explosiveMassKg": 3.402,
-          "explosiveType": "a_ix_2",
-          "tntEquivalent": 4.763
+          "name": "125mm_3bm9",
+          "localizedName": "3BM9",
+          "type": "apds_fs_full_body_steel_tank",
+          "caliber": 44.0,
+          "mass": 3.6,
+          "muzzleVelocity": 1800.0,
+          "lanzOdermatt": {
+            "workingLength": 410.0,
+            "density": 7760.0,
+            "material": "steel",
+            "Cx": 0.3105
+          },
+          "penetration0m": 210.4,
+          "penetrationData": {
+            "at0m": {
+              "angle0": 210.4,
+              "angle30": 182.2,
+              "angle60": 105.2
+            }
+          }
         },
         {
           "name": "125mm_3bm15",
@@ -32443,26 +33187,15 @@
           "penetration0m": 425.0
         },
         {
-          "name": "125mm_3bm9",
-          "localizedName": "3BM9",
-          "type": "apds_fs_full_body_steel_tank",
-          "caliber": 44.0,
-          "mass": 3.6,
-          "muzzleVelocity": 1800.0,
-          "lanzOdermatt": {
-            "workingLength": 410.0,
-            "density": 7760.0,
-            "material": "steel",
-            "Cx": 0.3105
-          },
-          "penetration0m": 210.4,
-          "penetrationData": {
-            "at0m": {
-              "angle0": 210.4,
-              "angle30": 182.2,
-              "angle60": 105.2
-            }
-          }
+          "name": "125mm_3of_26",
+          "localizedName": "3OF26",
+          "type": "he_frag_fs_tank",
+          "caliber": 125.0,
+          "mass": 23.0,
+          "muzzleVelocity": 850.0,
+          "explosiveMassKg": 3.402,
+          "explosiveType": "a_ix_2",
+          "tntEquivalent": 4.763
         }
       ],
       "penetrationData": {},
@@ -32632,7 +33365,7 @@
           "trigger": "gunner1",
           "name": "7_62mm_DT",
           "caliber": 7.6,
-          "ammo": 2024,
+          "ammo": 2016,
           "reloadTime": 8.0,
           "rateOfFire": 600,
           "bulletType": "ap_i_ball"
@@ -32641,7 +33374,7 @@
           "trigger": "gunner4",
           "name": "7_62mm_DT",
           "caliber": 7.6,
-          "ammo": 1000,
+          "ammo": 1008,
           "reloadTime": 8.0,
           "rateOfFire": 600,
           "bulletType": "ap_i_ball"
@@ -33612,7 +34345,7 @@
         20.4,
         31.0
       ],
-      "steer_type": "clutch_braking",
+      "steer_type": "double_differential",
       "empty_weight": 53.85,
       "track_width": 0.55,
       "secondary_weapons": [
@@ -33804,7 +34537,7 @@
         20.4,
         31.0
       ],
-      "steer_type": "clutch_braking",
+      "steer_type": "double_differential",
       "empty_weight": 53.85,
       "track_width": 0.55,
       "secondary_weapons": [
@@ -33985,7 +34718,7 @@
         20.4,
         31.0
       ],
-      "steer_type": "clutch_braking",
+      "steer_type": "double_differential",
       "empty_weight": 56.4,
       "track_width": 0.55,
       "secondary_weapons": [
@@ -34163,7 +34896,7 @@
         20.4,
         31.0
       ],
-      "steer_type": "clutch_braking",
+      "steer_type": "double_differential",
       "empty_weight": 56.4,
       "track_width": 0.55,
       "secondary_weapons": [
@@ -34330,7 +35063,7 @@
         20.4,
         31.0
       ],
-      "steer_type": "clutch_braking",
+      "steer_type": "double_differential",
       "empty_weight": 58.0,
       "track_width": 0.55,
       "secondary_weapons": [
@@ -34685,7 +35418,7 @@
         20.4,
         31.0
       ],
-      "steer_type": "clutch_braking",
+      "steer_type": "double_differential",
       "empty_weight": 58.4,
       "track_width": 0.55,
       "secondary_weapons": [
@@ -34866,7 +35599,7 @@
         18.3,
         27.7
       ],
-      "steer_type": "clutch_braking",
+      "steer_type": "double_differential",
       "empty_weight": 62.6,
       "track_width": 0.55,
       "secondary_weapons": [
@@ -35039,7 +35772,7 @@
         20.4,
         31.0
       ],
-      "steer_type": "clutch_braking",
+      "steer_type": "double_differential",
       "empty_weight": 56.4,
       "track_width": 0.55,
       "secondary_weapons": [
@@ -35422,7 +36155,7 @@
         20.4,
         31.0
       ],
-      "steer_type": "clutch_braking",
+      "steer_type": "double_differential",
       "empty_weight": 57.9,
       "track_width": 0.55,
       "secondary_weapons": [
@@ -40231,7 +40964,7 @@
           "caliber": 76.2,
           "mass": 5.05,
           "muzzleVelocity": 450.0,
-          "penetration0m": 100.0,
+          "penetration0m": 115.0,
           "explosiveMassKg": 0.515,
           "explosiveType": "h5",
           "tntEquivalent": 0.721
@@ -49578,7 +50311,7 @@
             "workingLength": 380.0,
             "density": 17500.0,
             "material": "tungsten",
-            "Cx": 0.49
+            "Cx": 0.4728
           },
           "penetration0m": 346.0,
           "penetrationData": {
@@ -50404,7 +51137,7 @@
       "secondary_weapons": null,
       "main_gun_ammo": 54,
       "driver_nv_resolution": null,
-      "has_smoke_grenades": false,
+      "has_smoke_grenades": true,
       "has_ess": false,
       "has_laser_rangefinder": false
     }
@@ -50543,7 +51276,7 @@
       "secondary_weapons": null,
       "main_gun_ammo": 36,
       "driver_nv_resolution": null,
-      "has_smoke_grenades": false,
+      "has_smoke_grenades": true,
       "has_ess": false,
       "has_laser_rangefinder": false
     }
@@ -52921,6 +53654,84 @@
     }
   },
   {
+    "id": "il_9a33bm3",
+    "performance": {
+      "horsepower": 300.0,
+      "weight": 18.68,
+      "power_to_weight": 16.06,
+      "max_reverse_speed": 9.8,
+      "reload_time": null,
+      "penetration": null,
+      "max_speed": 60.0,
+      "crew_count": 5,
+      "elevation_speed": null,
+      "traverse_speed": null,
+      "has_stabilizer": null,
+      "stabilizer_type": "none",
+      "elevation_range": null,
+      "traverse_range": null,
+      "gunner_thermal_resolution": null,
+      "commander_thermal_resolution": null,
+      "gunner_thermal_diagonal": null,
+      "commander_thermal_diagonal": null,
+      "stabilizer_value": 0,
+      "elevation_range_value": null,
+      "mainGun": null,
+      "ammunitions": null,
+      "penetrationData": null,
+      "autoLoader": null,
+      "engine_manufacturer": null,
+      "engine_model": null,
+      "engine_type": null,
+      "engine_max_rpm": 2200.0,
+      "transmission_manufacturer": null,
+      "transmission_model": null,
+      "transmission_type": null,
+      "forward_gears": 10,
+      "reverse_gears": 2,
+      "forward_gear_speeds": [
+        6.8,
+        9.8,
+        12.6,
+        18.1,
+        18.7,
+        26.9,
+        27.8,
+        40.1,
+        41.6,
+        60.0
+      ],
+      "reverse_gear_speeds": [
+        6.8,
+        9.8
+      ],
+      "steer_type": null,
+      "empty_weight": 18.0,
+      "track_width": 0.4,
+      "secondary_weapons": [
+        {
+          "trigger": "gunner1",
+          "name": "209mm_9M33A3_launcher",
+          "caliber": 209.6,
+          "ammo": 6,
+          "reloadTime": 1.0,
+          "rateOfFire": 27,
+          "bulletType": "sam_tank",
+          "maxDistance": 10300,
+          "maxSpeed": 580,
+          "guidanceType": "saclos",
+          "explosiveMass": 5.38,
+          "explosiveType": "a_ix_2"
+        }
+      ],
+      "main_gun_ammo": null,
+      "driver_nv_resolution": null,
+      "has_smoke_grenades": false,
+      "has_ess": false,
+      "has_laser_rangefinder": false
+    }
+  },
+  {
     "id": "il_aml_90",
     "performance": {
       "horsepower": 90.0,
@@ -53372,6 +54183,18 @@
       },
       "ammunitions": [
         {
+          "name": "105mm_m456",
+          "localizedName": "M456",
+          "type": "heat_fs_tank",
+          "caliber": 105.0,
+          "mass": 10.5,
+          "muzzleVelocity": 1173.5,
+          "penetration0m": 400.0,
+          "explosiveMassKg": 0.97,
+          "explosiveType": "comp_b",
+          "tntEquivalent": 1.232
+        },
+        {
           "name": "105mm_m728",
           "localizedName": "M728",
           "type": "apds_l15_tank",
@@ -53400,18 +54223,6 @@
           "explosiveMassKg": 2.9937,
           "explosiveType": "comp_a",
           "tntEquivalent": 3.772
-        },
-        {
-          "name": "105mm_m456",
-          "localizedName": "M456",
-          "type": "heat_fs_tank",
-          "caliber": 105.0,
-          "mass": 10.5,
-          "muzzleVelocity": 1173.5,
-          "penetration0m": 400.0,
-          "explosiveMassKg": 0.97,
-          "explosiveType": "comp_b",
-          "tntEquivalent": 1.232
         },
         {
           "name": "105mm_m416",
@@ -54208,6 +55019,176 @@
         }
       ],
       "main_gun_ammo": 200,
+      "driver_nv_resolution": [
+        800,
+        600
+      ],
+      "has_smoke_grenades": true,
+      "has_ess": false,
+      "has_laser_rangefinder": true
+    }
+  },
+  {
+    "id": "il_leopard_2a6_hel",
+    "performance": {
+      "horsepower": 1500.0,
+      "weight": 59.9,
+      "power_to_weight": 25.04,
+      "max_reverse_speed": 31.0,
+      "reload_time": 6.0,
+      "penetration": 652.8,
+      "max_speed": 68.2,
+      "crew_count": 5,
+      "elevation_speed": 40.0,
+      "traverse_speed": 40.0,
+      "has_stabilizer": true,
+      "stabilizer_type": "both",
+      "elevation_range": [
+        -9.0,
+        20.0
+      ],
+      "traverse_range": [
+        -180.0,
+        180.0
+      ],
+      "gunner_thermal_resolution": [
+        500,
+        300
+      ],
+      "commander_thermal_resolution": [
+        800,
+        600
+      ],
+      "gunner_thermal_diagonal": 583.1,
+      "commander_thermal_diagonal": 1000.0,
+      "stabilizer_value": 1,
+      "elevation_range_value": 29.0,
+      "mainGun": {
+        "name": "120mm_Rheinmetall_L55",
+        "caliber": 120.0,
+        "reloadTime": 6.0,
+        "autoLoader": false,
+        "reloadTimes": {
+          "base": 7.8,
+          "expert": 6.9,
+          "ace": 6.0
+        }
+      },
+      "ammunitions": [
+        {
+          "name": "120mm_dm12a1",
+          "localizedName": "DM12A1",
+          "type": "heat_fs_tank",
+          "caliber": 120.0,
+          "mass": 13.5,
+          "muzzleVelocity": 1190.0,
+          "penetration0m": 480.0,
+          "explosiveMassKg": 1.64,
+          "explosiveType": "comp_b",
+          "tntEquivalent": 2.083
+        },
+        {
+          "name": "120mm_dm43",
+          "localizedName": "DM43",
+          "type": "apds_fs_long_l30_tank",
+          "caliber": 22.0,
+          "mass": 4.0,
+          "muzzleVelocity": 1750.0,
+          "lanzOdermatt": {
+            "workingLength": 585.0,
+            "density": 17500.0,
+            "material": "tungsten",
+            "Cx": 0.611
+          },
+          "penetration0m": 564.1,
+          "penetrationData": {
+            "at0m": {
+              "angle0": 564.1,
+              "angle30": 488.5,
+              "angle60": 282.1
+            }
+          }
+        },
+        {
+          "name": "120mm_dm53",
+          "localizedName": "DM53",
+          "type": "apds_fs_long_l30_tank",
+          "caliber": 23.0,
+          "mass": 5.0,
+          "muzzleVelocity": 1750.0,
+          "lanzOdermatt": {
+            "workingLength": 685.0,
+            "density": 17500.0,
+            "material": "tungsten",
+            "Cx": 0.74
+          },
+          "penetration0m": 652.8,
+          "penetrationData": {
+            "at0m": {
+              "angle0": 652.8,
+              "angle30": 565.3,
+              "angle60": 326.4
+            }
+          }
+        }
+      ],
+      "penetrationData": {
+        "at0m": {
+          "angle0": 652.8,
+          "angle30": 565.3,
+          "angle60": 326.4
+        }
+      },
+      "autoLoader": false,
+      "engine_manufacturer": "mtu",
+      "engine_model": "mb_873_ka_501",
+      "engine_type": null,
+      "engine_max_rpm": 2600.0,
+      "transmission_manufacturer": null,
+      "transmission_model": null,
+      "transmission_type": null,
+      "forward_gears": 8,
+      "reverse_gears": 4,
+      "forward_gear_speeds": [
+        7.6,
+        15.2,
+        20.4,
+        31.0,
+        36.7,
+        44.9,
+        54.2,
+        68.2
+      ],
+      "reverse_gear_speeds": [
+        7.6,
+        15.2,
+        20.4,
+        31.0
+      ],
+      "steer_type": "double_differential",
+      "empty_weight": 58.4,
+      "track_width": 0.55,
+      "secondary_weapons": [
+        {
+          "trigger": "gunner1",
+          "name": "7_92mm_MG3",
+          "caliber": 7.6,
+          "ammo": 4400,
+          "reloadTime": 8.0,
+          "rateOfFire": 1200,
+          "bulletType": "ap_ball"
+        },
+        {
+          "trigger": "gunner2",
+          "name": "7_92mm_MG3",
+          "caliber": 7.6,
+          "ammo": 2000,
+          "reloadTime": 8.0,
+          "rateOfFire": 1200,
+          "bulletType": "ap_ball"
+        }
+      ],
+      "main_gun_ammo": 42,
       "driver_nv_resolution": [
         800,
         600
@@ -56317,6 +57298,18 @@
       },
       "ammunitions": [
         {
+          "name": "105mm_m456",
+          "localizedName": "M456",
+          "type": "heat_fs_tank",
+          "caliber": 105.0,
+          "mass": 10.5,
+          "muzzleVelocity": 1173.5,
+          "penetration0m": 400.0,
+          "explosiveMassKg": 0.97,
+          "explosiveType": "comp_b",
+          "tntEquivalent": 1.232
+        },
+        {
           "name": "105mm_m728",
           "localizedName": "M728",
           "type": "apds_l15_tank",
@@ -56345,18 +57338,6 @@
           "explosiveMassKg": 2.9937,
           "explosiveType": "comp_a",
           "tntEquivalent": 3.772
-        },
-        {
-          "name": "105mm_m456",
-          "localizedName": "M456",
-          "type": "heat_fs_tank",
-          "caliber": 105.0,
-          "mass": 10.5,
-          "muzzleVelocity": 1173.5,
-          "penetration0m": 400.0,
-          "explosiveMassKg": 0.97,
-          "explosiveType": "comp_b",
-          "tntEquivalent": 1.232
         },
         {
           "name": "105mm_m416",
@@ -61334,6 +62315,91 @@
     }
   },
   {
+    "id": "il_tor_m1",
+    "performance": {
+      "horsepower": 780.0,
+      "weight": 37.0,
+      "power_to_weight": 21.08,
+      "max_reverse_speed": 65.0,
+      "reload_time": null,
+      "penetration": null,
+      "max_speed": 65.0,
+      "crew_count": 5,
+      "elevation_speed": null,
+      "traverse_speed": null,
+      "has_stabilizer": null,
+      "stabilizer_type": "none",
+      "elevation_range": null,
+      "traverse_range": null,
+      "gunner_thermal_resolution": null,
+      "commander_thermal_resolution": null,
+      "gunner_thermal_diagonal": null,
+      "commander_thermal_diagonal": null,
+      "stabilizer_value": 0,
+      "elevation_range_value": null,
+      "mainGun": null,
+      "ammunitions": null,
+      "penetrationData": null,
+      "autoLoader": null,
+      "engine_manufacturer": "chtz",
+      "engine_model": "v_84_DT",
+      "engine_type": null,
+      "engine_max_rpm": 2000.0,
+      "transmission_manufacturer": null,
+      "transmission_model": null,
+      "transmission_type": null,
+      "forward_gears": 8,
+      "reverse_gears": 8,
+      "forward_gear_speeds": [
+        5.2,
+        10.4,
+        13.8,
+        20.5,
+        26.8,
+        38.8,
+        48.6,
+        65.0
+      ],
+      "reverse_gear_speeds": [
+        5.2,
+        10.4,
+        13.8,
+        20.5,
+        26.8,
+        38.8,
+        48.6,
+        65.0
+      ],
+      "steer_type": "clutch_braking",
+      "empty_weight": 36.5,
+      "track_width": 0.45,
+      "secondary_weapons": [
+        {
+          "trigger": "gunner1",
+          "name": "239mm_9M331",
+          "caliber": 239.0,
+          "ammo": 8,
+          "reloadTime": 1.0,
+          "rateOfFire": 30,
+          "bulletType": "sam_tank",
+          "maxDistance": 12000,
+          "maxSpeed": 850,
+          "guidanceType": "saclos",
+          "explosiveMass": 5.3,
+          "explosiveType": "a_ix_2"
+        }
+      ],
+      "main_gun_ammo": null,
+      "driver_nv_resolution": [
+        800,
+        600
+      ],
+      "has_smoke_grenades": false,
+      "has_ess": false,
+      "has_laser_rangefinder": false
+    }
+  },
+  {
     "id": "il_zsu_23_4",
     "performance": {
       "horsepower": 280.0,
@@ -62192,12 +63258,12 @@
           "localizedName": "43.M páncélrobbantó gránát",
           "type": "heat_tank",
           "caliber": 75.0,
-          "mass": 4.4,
-          "muzzleVelocity": 550.0,
-          "penetration0m": 80.0,
-          "explosiveMassKg": 0.513,
+          "mass": 4.8,
+          "muzzleVelocity": 450.0,
+          "penetration0m": 115.0,
+          "explosiveMassKg": 0.515,
           "explosiveType": "h5",
-          "tntEquivalent": 0.718
+          "tntEquivalent": 0.721
         }
       ],
       "penetrationData": null,
@@ -62323,12 +63389,12 @@
           "localizedName": "43.M páncélrobbantó gránát",
           "type": "heat_tank",
           "caliber": 75.0,
-          "mass": 4.4,
-          "muzzleVelocity": 550.0,
-          "penetration0m": 80.0,
-          "explosiveMassKg": 0.513,
+          "mass": 4.8,
+          "muzzleVelocity": 450.0,
+          "penetration0m": 115.0,
+          "explosiveMassKg": 0.515,
           "explosiveType": "h5",
-          "tntEquivalent": 0.718
+          "tntEquivalent": 0.721
         }
       ],
       "penetrationData": null,
@@ -67621,7 +68687,7 @@
         20.4,
         31.0
       ],
-      "steer_type": "clutch_braking",
+      "steer_type": "double_differential",
       "empty_weight": 53.85,
       "track_width": 0.55,
       "secondary_weapons": [
@@ -67802,7 +68868,7 @@
         18.3,
         27.7
       ],
-      "steer_type": "clutch_braking",
+      "steer_type": "double_differential",
       "empty_weight": 63.6,
       "track_width": 0.55,
       "secondary_weapons": [
@@ -69330,7 +70396,7 @@
       ],
       "main_gun_ammo": 48,
       "driver_nv_resolution": null,
-      "has_smoke_grenades": true,
+      "has_smoke_grenades": false,
       "has_ess": false,
       "has_laser_rangefinder": false
     }
@@ -70519,6 +71585,18 @@
       },
       "ammunitions": [
         {
+          "name": "105mm_m456",
+          "localizedName": "M456",
+          "type": "heat_fs_tank",
+          "caliber": 105.0,
+          "mass": 10.5,
+          "muzzleVelocity": 1173.5,
+          "penetration0m": 400.0,
+          "explosiveMassKg": 0.97,
+          "explosiveType": "comp_b",
+          "tntEquivalent": 1.232
+        },
+        {
           "name": "105mm_m728",
           "localizedName": "M728",
           "type": "apds_l15_tank",
@@ -70547,18 +71625,6 @@
           "explosiveMassKg": 2.9937,
           "explosiveType": "comp_a",
           "tntEquivalent": 3.772
-        },
-        {
-          "name": "105mm_m456",
-          "localizedName": "M456",
-          "type": "heat_fs_tank",
-          "caliber": 105.0,
-          "mass": 10.5,
-          "muzzleVelocity": 1173.5,
-          "penetration0m": 400.0,
-          "explosiveMassKg": 0.97,
-          "explosiveType": "comp_b",
-          "tntEquivalent": 1.232
         },
         {
           "name": "105mm_m416",
@@ -70855,6 +71921,17 @@
           "tntEquivalent": 3.772
         },
         {
+          "name": "105mm_m416",
+          "localizedName": "M416",
+          "type": "smoke_tank",
+          "caliber": 105.0,
+          "mass": 11.6,
+          "muzzleVelocity": 731.5,
+          "explosiveMassKg": 0.05,
+          "explosiveType": "smoke_composition",
+          "tntEquivalent": 0.05
+        },
+        {
           "name": "105mm_m456",
           "localizedName": "M456",
           "type": "heat_fs_tank",
@@ -70865,17 +71942,6 @@
           "explosiveMassKg": 0.97,
           "explosiveType": "comp_b",
           "tntEquivalent": 1.232
-        },
-        {
-          "name": "105mm_m416",
-          "localizedName": "M416",
-          "type": "smoke_tank",
-          "caliber": 105.0,
-          "mass": 11.6,
-          "muzzleVelocity": 731.5,
-          "explosiveMassKg": 0.05,
-          "explosiveType": "smoke_composition",
-          "tntEquivalent": 0.05
         },
         {
           "name": "105mm_dm23",
@@ -71038,6 +72104,17 @@
           "tntEquivalent": 3.772
         },
         {
+          "name": "105mm_m416",
+          "localizedName": "M416",
+          "type": "smoke_tank",
+          "caliber": 105.0,
+          "mass": 11.6,
+          "muzzleVelocity": 731.5,
+          "explosiveMassKg": 0.05,
+          "explosiveType": "smoke_composition",
+          "tntEquivalent": 0.05
+        },
+        {
           "name": "105mm_m456",
           "localizedName": "M456",
           "type": "heat_fs_tank",
@@ -71048,17 +72125,6 @@
           "explosiveMassKg": 0.97,
           "explosiveType": "comp_b",
           "tntEquivalent": 1.232
-        },
-        {
-          "name": "105mm_m416",
-          "localizedName": "M416",
-          "type": "smoke_tank",
-          "caliber": 105.0,
-          "mass": 11.6,
-          "muzzleVelocity": 731.5,
-          "explosiveMassKg": 0.05,
-          "explosiveType": "smoke_composition",
-          "tntEquivalent": 0.05
         },
         {
           "name": "105mm_dm23",
@@ -72132,6 +73198,147 @@
     }
   },
   {
+    "id": "it_pzh_2000",
+    "performance": {
+      "horsepower": 1000.0,
+      "weight": 57.66,
+      "power_to_weight": 17.34,
+      "max_reverse_speed": 60.3,
+      "reload_time": 5.0,
+      "penetration": null,
+      "max_speed": 60.3,
+      "crew_count": 5,
+      "elevation_speed": 11.2,
+      "traverse_speed": 11.2,
+      "has_stabilizer": false,
+      "stabilizer_type": "none",
+      "elevation_range": [
+        -2.5,
+        65.0
+      ],
+      "traverse_range": [
+        -180.0,
+        180.0
+      ],
+      "gunner_thermal_resolution": null,
+      "commander_thermal_resolution": null,
+      "gunner_thermal_diagonal": null,
+      "commander_thermal_diagonal": null,
+      "stabilizer_value": 0,
+      "elevation_range_value": 67.5,
+      "mainGun": {
+        "name": "155mm_l52",
+        "caliber": 155.0,
+        "reloadTime": 5.0,
+        "autoLoader": true,
+        "reloadTimes": {
+          "base": 5.0,
+          "expert": 5.0,
+          "ace": 5.0
+        }
+      },
+      "ammunitions": [
+        {
+          "name": "155mm_m107",
+          "localizedName": "M107",
+          "type": "he_frag_tank",
+          "caliber": 155.0,
+          "mass": 43.1,
+          "muzzleVelocity": 945.0,
+          "explosiveMassKg": 6.98,
+          "explosiveType": "comp_b",
+          "tntEquivalent": 8.865
+        },
+        {
+          "name": "155mm_m107_pf",
+          "localizedName": "M107 (PF)",
+          "type": "he_frag_radio_fuse",
+          "caliber": 155.0,
+          "mass": 43.1,
+          "muzzleVelocity": 945.0,
+          "explosiveMassKg": 6.98,
+          "explosiveType": "comp_b",
+          "tntEquivalent": 8.865
+        },
+        {
+          "name": "155mm_oe_f3",
+          "localizedName": "155 mm OE F3",
+          "type": "he_frag_tank",
+          "caliber": 155.0,
+          "mass": 44.4,
+          "muzzleVelocity": 935.0,
+          "explosiveMassKg": 9.0,
+          "explosiveType": "tnt",
+          "tntEquivalent": 9.0
+        },
+        {
+          "name": "155mm_m110",
+          "localizedName": "M110",
+          "type": "smoke_tank",
+          "caliber": 155.0,
+          "mass": 40.8,
+          "muzzleVelocity": 945.0,
+          "explosiveMassKg": 0.05,
+          "explosiveType": "smoke_composition",
+          "tntEquivalent": 0.05
+        }
+      ],
+      "penetrationData": null,
+      "autoLoader": true,
+      "engine_manufacturer": "mtu",
+      "engine_model": "mt_881_ka_500",
+      "engine_type": null,
+      "engine_max_rpm": 2700.0,
+      "transmission_manufacturer": null,
+      "transmission_model": null,
+      "transmission_type": null,
+      "forward_gears": 8,
+      "reverse_gears": 8,
+      "forward_gear_speeds": [
+        6.7,
+        13.4,
+        18.0,
+        27.4,
+        32.4,
+        39.7,
+        47.9,
+        60.3
+      ],
+      "reverse_gear_speeds": [
+        6.7,
+        13.4,
+        18.0,
+        27.4,
+        32.4,
+        39.7,
+        47.9,
+        60.3
+      ],
+      "steer_type": "clutch_braking",
+      "empty_weight": 56.46,
+      "track_width": 0.55,
+      "secondary_weapons": [
+        {
+          "trigger": "gunner2",
+          "name": "7_92mm_MG3",
+          "caliber": 7.6,
+          "ammo": 2000,
+          "reloadTime": 8.0,
+          "rateOfFire": 1200,
+          "bulletType": "ap_ball"
+        }
+      ],
+      "main_gun_ammo": 60,
+      "driver_nv_resolution": [
+        800,
+        600
+      ],
+      "has_smoke_grenades": true,
+      "has_ess": false,
+      "has_laser_rangefinder": true
+    }
+  },
+  {
     "id": "it_pzh_2000_hu",
     "performance": {
       "horsepower": 1000.0,
@@ -72254,11 +73461,11 @@
       "secondary_weapons": [
         {
           "trigger": "gunner2",
-          "name": "7_92mm_MG3",
+          "name": "7_62mm_FN_MAG60_40",
           "caliber": 7.6,
           "ammo": 2000,
           "reloadTime": 8.0,
-          "rateOfFire": 1200,
+          "rateOfFire": 1000,
           "bulletType": "ap_ball"
         }
       ],
@@ -74871,15 +76078,26 @@
           "tntEquivalent": 1.881
         },
         {
-          "name": "125mm_3of_26",
-          "localizedName": "3OF26",
-          "type": "he_frag_fs_tank",
-          "caliber": 125.0,
-          "mass": 23.0,
-          "muzzleVelocity": 850.0,
-          "explosiveMassKg": 3.402,
-          "explosiveType": "a_ix_2",
-          "tntEquivalent": 4.763
+          "name": "125mm_3bm9",
+          "localizedName": "3BM9",
+          "type": "apds_fs_full_body_steel_tank",
+          "caliber": 44.0,
+          "mass": 3.6,
+          "muzzleVelocity": 1800.0,
+          "lanzOdermatt": {
+            "workingLength": 410.0,
+            "density": 7760.0,
+            "material": "steel",
+            "Cx": 0.3105
+          },
+          "penetration0m": 210.4,
+          "penetrationData": {
+            "at0m": {
+              "angle0": 210.4,
+              "angle30": 182.2,
+              "angle60": 105.2
+            }
+          }
         },
         {
           "name": "125mm_3bm15",
@@ -74976,26 +76194,15 @@
           "penetration0m": 425.0
         },
         {
-          "name": "125mm_3bm9",
-          "localizedName": "3BM9",
-          "type": "apds_fs_full_body_steel_tank",
-          "caliber": 44.0,
-          "mass": 3.6,
-          "muzzleVelocity": 1800.0,
-          "lanzOdermatt": {
-            "workingLength": 410.0,
-            "density": 7760.0,
-            "material": "steel",
-            "Cx": 0.3105
-          },
-          "penetration0m": 210.4,
-          "penetrationData": {
-            "at0m": {
-              "angle0": 210.4,
-              "angle30": 182.2,
-              "angle60": 105.2
-            }
-          }
+          "name": "125mm_3of_26",
+          "localizedName": "3OF26",
+          "type": "he_frag_fs_tank",
+          "caliber": 125.0,
+          "mass": 23.0,
+          "muzzleVelocity": 850.0,
+          "explosiveMassKg": 3.402,
+          "explosiveType": "a_ix_2",
+          "tntEquivalent": 4.763
         }
       ],
       "penetrationData": {},
@@ -76071,8 +77278,8 @@
       "has_stabilizer": true,
       "stabilizer_type": "both",
       "elevation_range": [
-        -4.0,
-        60.0
+        -5.0,
+        45.0
       ],
       "traverse_range": [
         -180.0,
@@ -76083,7 +77290,7 @@
       "gunner_thermal_diagonal": null,
       "commander_thermal_diagonal": null,
       "stabilizer_value": 1,
-      "elevation_range_value": 64.0,
+      "elevation_range_value": 50.0,
       "mainGun": null,
       "ammunitions": null,
       "penetrationData": null,
@@ -76255,6 +77462,185 @@
       "has_smoke_grenades": false,
       "has_ess": false,
       "has_laser_rangefinder": false
+    }
+  },
+  {
+    "id": "jp_harimau",
+    "performance": {
+      "horsepower": 711.0,
+      "weight": 30.0,
+      "power_to_weight": 23.7,
+      "max_reverse_speed": 45.1,
+      "reload_time": 7.46,
+      "penetration": 430.2,
+      "max_speed": 70.0,
+      "crew_count": 5,
+      "elevation_speed": 45.8,
+      "traverse_speed": 45.8,
+      "has_stabilizer": true,
+      "stabilizer_type": "both",
+      "elevation_range": [
+        -10.0,
+        42.0
+      ],
+      "traverse_range": [
+        -180.0,
+        180.0
+      ],
+      "gunner_thermal_resolution": [
+        1200,
+        800
+      ],
+      "commander_thermal_resolution": [
+        1200,
+        800
+      ],
+      "gunner_thermal_diagonal": 1442.2,
+      "commander_thermal_diagonal": 1442.2,
+      "stabilizer_value": 1,
+      "elevation_range_value": 52.0,
+      "mainGun": {
+        "name": "105mm_cockerill_hp",
+        "caliber": 105.0,
+        "reloadTime": 7.46,
+        "autoLoader": true,
+        "reloadTimes": {
+          "base": 7.46,
+          "expert": 7.46,
+          "ace": 7.46
+        }
+      },
+      "ammunitions": [
+        {
+          "name": "105mm_dm12",
+          "localizedName": "DM12",
+          "type": "heat_fs_tank",
+          "caliber": 105.0,
+          "mass": 10.5,
+          "muzzleVelocity": 1173.5,
+          "penetration0m": 400.0,
+          "explosiveMassKg": 0.97,
+          "explosiveType": "comp_b",
+          "tntEquivalent": 1.232
+        },
+        {
+          "name": "105mm_dm502",
+          "localizedName": "DM502",
+          "type": "hesh_tank",
+          "caliber": 105.0,
+          "mass": 11.2,
+          "muzzleVelocity": 731.5,
+          "penetration0m": 127.0,
+          "explosiveMassKg": 2.9937,
+          "explosiveType": "comp_a",
+          "tntEquivalent": 3.772
+        },
+        {
+          "name": "105mm_dm33",
+          "localizedName": "DM33",
+          "type": "apds_fs_long_tank",
+          "caliber": 26.0,
+          "mass": 3.79,
+          "muzzleVelocity": 1455.0,
+          "lanzOdermatt": {
+            "workingLength": 510.0,
+            "density": 17500.0,
+            "material": "tungsten",
+            "Cx": 0.4
+          },
+          "penetration0m": 420.7,
+          "penetrationData": {
+            "at0m": {
+              "angle0": 420.7,
+              "angle30": 364.3,
+              "angle60": 210.4
+            }
+          }
+        },
+        {
+          "name": "105mm_dm63",
+          "localizedName": "DM63",
+          "type": "apds_fs_long_l30_tank",
+          "caliber": 24.0,
+          "mass": 4.4,
+          "muzzleVelocity": 1455.0,
+          "lanzOdermatt": {
+            "workingLength": 535.0,
+            "density": 17500.0,
+            "material": "tungsten",
+            "Cx": 0.5301
+          },
+          "penetration0m": 430.2,
+          "penetrationData": {
+            "at0m": {
+              "angle0": 430.2,
+              "angle30": 372.6,
+              "angle60": 215.1
+            }
+          }
+        }
+      ],
+      "penetrationData": {
+        "at0m": {
+          "angle0": 430.2,
+          "angle30": 372.6,
+          "angle60": 215.1
+        }
+      },
+      "autoLoader": true,
+      "engine_manufacturer": null,
+      "engine_model": null,
+      "engine_type": null,
+      "engine_max_rpm": 2100.0,
+      "transmission_manufacturer": "perkins",
+      "transmission_model": "x_300",
+      "transmission_type": "auto",
+      "forward_gears": 8,
+      "reverse_gears": 4,
+      "forward_gear_speeds": [
+        6.2,
+        16.8,
+        24.7,
+        35.0,
+        45.7,
+        54.7,
+        63.6,
+        70.0
+      ],
+      "reverse_gear_speeds": [
+        6.2,
+        16.8,
+        24.7,
+        45.1
+      ],
+      "steer_type": "clutch_braking",
+      "empty_weight": 29.5,
+      "track_width": 0.584,
+      "secondary_weapons": [
+        {
+          "trigger": "gunner1",
+          "name": "7_62mm_FN_MAG60_40",
+          "caliber": 7.6,
+          "ammo": 6000,
+          "reloadTime": 8.0,
+          "rateOfFire": 1000,
+          "bulletType": "ap_ball"
+        },
+        {
+          "trigger": "gunner2",
+          "name": "7_62mm_FN_MAG60_40",
+          "caliber": 7.6,
+          "ammo": 1800,
+          "reloadTime": 8.0,
+          "rateOfFire": 1000,
+          "bulletType": "ap_ball"
+        }
+      ],
+      "main_gun_ammo": 42,
+      "driver_nv_resolution": null,
+      "has_smoke_grenades": true,
+      "has_ess": false,
+      "has_laser_rangefinder": true
     }
   },
   {
@@ -76835,7 +78221,7 @@
         20.4,
         31.0
       ],
-      "steer_type": "clutch_braking",
+      "steer_type": "double_differential",
       "empty_weight": 62.2,
       "track_width": 0.55,
       "secondary_weapons": [
@@ -77191,7 +78577,7 @@
       ],
       "main_gun_ammo": 48,
       "driver_nv_resolution": null,
-      "has_smoke_grenades": true,
+      "has_smoke_grenades": false,
       "has_ess": false,
       "has_laser_rangefinder": false
     }
@@ -78180,6 +79566,17 @@
       },
       "ammunitions": [
         {
+          "name": "105mm_m416",
+          "localizedName": "M416",
+          "type": "smoke_tank",
+          "caliber": 105.0,
+          "mass": 11.6,
+          "muzzleVelocity": 731.5,
+          "explosiveMassKg": 0.05,
+          "explosiveType": "smoke_composition",
+          "tntEquivalent": 0.05
+        },
+        {
           "name": "105mm_m728",
           "localizedName": "M728",
           "type": "apds_l15_tank",
@@ -78196,41 +79593,6 @@
             "Cx": 0.1761
           },
           "penetration0m": 211.2
-        },
-        {
-          "name": "105mm_m393a2",
-          "localizedName": "M393",
-          "type": "hesh_tank",
-          "caliber": 105.0,
-          "mass": 11.2,
-          "muzzleVelocity": 731.5,
-          "penetration0m": 127.0,
-          "explosiveMassKg": 2.9937,
-          "explosiveType": "comp_a",
-          "tntEquivalent": 3.772
-        },
-        {
-          "name": "105mm_m456",
-          "localizedName": "M456",
-          "type": "heat_fs_tank",
-          "caliber": 105.0,
-          "mass": 10.5,
-          "muzzleVelocity": 1173.5,
-          "penetration0m": 400.0,
-          "explosiveMassKg": 0.97,
-          "explosiveType": "comp_b",
-          "tntEquivalent": 1.232
-        },
-        {
-          "name": "105mm_m416",
-          "localizedName": "M416",
-          "type": "smoke_tank",
-          "caliber": 105.0,
-          "mass": 11.6,
-          "muzzleVelocity": 731.5,
-          "explosiveMassKg": 0.05,
-          "explosiveType": "smoke_composition",
-          "tntEquivalent": 0.05
         },
         {
           "name": "105mm_m735",
@@ -78290,6 +79652,30 @@
             }
           ],
           "penetration0m": 292.4
+        },
+        {
+          "name": "105mm_m393a2",
+          "localizedName": "M393",
+          "type": "hesh_tank",
+          "caliber": 105.0,
+          "mass": 11.2,
+          "muzzleVelocity": 731.5,
+          "penetration0m": 127.0,
+          "explosiveMassKg": 2.9937,
+          "explosiveType": "comp_a",
+          "tntEquivalent": 3.772
+        },
+        {
+          "name": "105mm_m456",
+          "localizedName": "M456",
+          "type": "heat_fs_tank",
+          "caliber": 105.0,
+          "mass": 10.5,
+          "muzzleVelocity": 1173.5,
+          "penetration0m": 400.0,
+          "explosiveMassKg": 0.97,
+          "explosiveType": "comp_b",
+          "tntEquivalent": 1.232
         },
         {
           "name": "105mm_dm33",
@@ -78831,6 +80217,15 @@
           "name": "7_92mm_MG34",
           "caliber": 7.9,
           "ammo": 2400,
+          "reloadTime": 8.0,
+          "rateOfFire": 900,
+          "bulletType": "ap_ball"
+        },
+        {
+          "trigger": "gunner2",
+          "name": "7_92mm_MG34",
+          "caliber": 7.9,
+          "ammo": 2100,
           "reloadTime": 8.0,
           "rateOfFire": 900,
           "bulletType": "ap_ball"
@@ -79452,6 +80847,17 @@
           "penetration0m": 204.5
         },
         {
+          "name": "105mm_m416",
+          "localizedName": "M416",
+          "type": "smoke_tank",
+          "caliber": 105.0,
+          "mass": 11.6,
+          "muzzleVelocity": 731.5,
+          "explosiveMassKg": 0.05,
+          "explosiveType": "smoke_composition",
+          "tntEquivalent": 0.05
+        },
+        {
           "name": "105mm_type75",
           "localizedName": "75 式",
           "type": "hesh_tank",
@@ -79462,17 +80868,6 @@
           "explosiveMassKg": 2.7,
           "explosiveType": "comp_a",
           "tntEquivalent": 3.402
-        },
-        {
-          "name": "105mm_m416",
-          "localizedName": "M416",
-          "type": "smoke_tank",
-          "caliber": 105.0,
-          "mass": 11.6,
-          "muzzleVelocity": 731.5,
-          "explosiveMassKg": 0.05,
-          "explosiveType": "smoke_composition",
-          "tntEquivalent": 0.05
         }
       ],
       "penetrationData": null,
@@ -79572,18 +80967,6 @@
       },
       "ammunitions": [
         {
-          "name": "105mm_m456a2",
-          "localizedName": "M456A2",
-          "type": "heat_fs_tank",
-          "caliber": 105.0,
-          "mass": 10.5,
-          "muzzleVelocity": 1173.5,
-          "penetration0m": 400.0,
-          "explosiveMassKg": 0.97,
-          "explosiveType": "comp_b",
-          "tntEquivalent": 1.232
-        },
-        {
           "name": "105mm_m393a2",
           "localizedName": "M393",
           "type": "hesh_tank",
@@ -79594,28 +80977,6 @@
           "explosiveMassKg": 2.9937,
           "explosiveType": "comp_a",
           "tntEquivalent": 3.772
-        },
-        {
-          "name": "105mm_c76a1",
-          "localizedName": "C76A1",
-          "type": "apds_fs_long_tank",
-          "caliber": 26.0,
-          "mass": 3.6,
-          "muzzleVelocity": 1509.0,
-          "lanzOdermatt": {
-            "workingLength": 375.0,
-            "density": 17500.0,
-            "material": "tungsten",
-            "Cx": 0.45
-          },
-          "penetration0m": 353.1,
-          "penetrationData": {
-            "at0m": {
-              "angle0": 353.1,
-              "angle30": 305.8,
-              "angle60": 176.6
-            }
-          }
         },
         {
           "name": "105mm_dm33",
@@ -79636,6 +80997,40 @@
               "angle0": 420.7,
               "angle30": 364.3,
               "angle60": 210.4
+            }
+          }
+        },
+        {
+          "name": "105mm_m456a2",
+          "localizedName": "M456A2",
+          "type": "heat_fs_tank",
+          "caliber": 105.0,
+          "mass": 10.5,
+          "muzzleVelocity": 1173.5,
+          "penetration0m": 400.0,
+          "explosiveMassKg": 0.97,
+          "explosiveType": "comp_b",
+          "tntEquivalent": 1.232
+        },
+        {
+          "name": "105mm_c76a1",
+          "localizedName": "C76A1",
+          "type": "apds_fs_long_tank",
+          "caliber": 26.0,
+          "mass": 3.6,
+          "muzzleVelocity": 1509.0,
+          "lanzOdermatt": {
+            "workingLength": 375.0,
+            "density": 17500.0,
+            "material": "tungsten",
+            "Cx": 0.45
+          },
+          "penetration0m": 353.1,
+          "penetrationData": {
+            "at0m": {
+              "angle0": 353.1,
+              "angle30": 305.8,
+              "angle60": 176.6
             }
           }
         }
@@ -79923,7 +81318,7 @@
         50.0,
         70.1
       ],
-      "steer_type": "clutch_braking",
+      "steer_type": "double_differential",
       "empty_weight": 43.0,
       "track_width": 0.55,
       "secondary_weapons": [
@@ -80235,7 +81630,7 @@
         50.0,
         70.1
       ],
-      "steer_type": "clutch_braking",
+      "steer_type": "double_differential",
       "empty_weight": 43.0,
       "track_width": 0.55,
       "secondary_weapons": [
@@ -80384,7 +81779,7 @@
         50.0,
         70.1
       ],
-      "steer_type": "clutch_braking",
+      "steer_type": "double_differential",
       "empty_weight": 43.0,
       "track_width": 0.55,
       "secondary_weapons": [
@@ -80462,28 +81857,15 @@
       },
       "ammunitions": [
         {
-          "name": "105mm_type91",
-          "localizedName": "91 式",
-          "type": "heat_fs_tank",
+          "name": "105mm_m416",
+          "localizedName": "M416",
+          "type": "smoke_tank",
           "caliber": 105.0,
-          "mass": 9.4,
-          "muzzleVelocity": 1150.0,
-          "penetration0m": 400.0,
-          "explosiveMassKg": 1.2,
-          "explosiveType": "comp_b",
-          "tntEquivalent": 1.524
-        },
-        {
-          "name": "105mm_type75",
-          "localizedName": "75 式",
-          "type": "hesh_tank",
-          "caliber": 105.0,
-          "mass": 10.8,
-          "muzzleVelocity": 760.0,
-          "penetration0m": 127.0,
-          "explosiveMassKg": 2.7,
-          "explosiveType": "comp_a",
-          "tntEquivalent": 3.402
+          "mass": 11.6,
+          "muzzleVelocity": 731.5,
+          "explosiveMassKg": 0.05,
+          "explosiveType": "smoke_composition",
+          "tntEquivalent": 0.05
         },
         {
           "name": "105mm_m735",
@@ -80545,15 +81927,28 @@
           "penetration0m": 292.4
         },
         {
-          "name": "105mm_m416",
-          "localizedName": "M416",
-          "type": "smoke_tank",
+          "name": "105mm_type91",
+          "localizedName": "91 式",
+          "type": "heat_fs_tank",
           "caliber": 105.0,
-          "mass": 11.6,
-          "muzzleVelocity": 731.5,
-          "explosiveMassKg": 0.05,
-          "explosiveType": "smoke_composition",
-          "tntEquivalent": 0.05
+          "mass": 9.4,
+          "muzzleVelocity": 1150.0,
+          "penetration0m": 400.0,
+          "explosiveMassKg": 1.2,
+          "explosiveType": "comp_b",
+          "tntEquivalent": 1.524
+        },
+        {
+          "name": "105mm_type75",
+          "localizedName": "75 式",
+          "type": "hesh_tank",
+          "caliber": 105.0,
+          "mass": 10.8,
+          "muzzleVelocity": 760.0,
+          "penetration0m": 127.0,
+          "explosiveMassKg": 2.7,
+          "explosiveType": "comp_a",
+          "tntEquivalent": 3.402
         },
         {
           "name": "105mm_type93",
@@ -80684,28 +82079,15 @@
       },
       "ammunitions": [
         {
-          "name": "105mm_type91",
-          "localizedName": "91 式",
-          "type": "heat_fs_tank",
+          "name": "105mm_m416",
+          "localizedName": "M416",
+          "type": "smoke_tank",
           "caliber": 105.0,
-          "mass": 9.4,
-          "muzzleVelocity": 1150.0,
-          "penetration0m": 400.0,
-          "explosiveMassKg": 1.2,
-          "explosiveType": "comp_b",
-          "tntEquivalent": 1.524
-        },
-        {
-          "name": "105mm_type75",
-          "localizedName": "75 式",
-          "type": "hesh_tank",
-          "caliber": 105.0,
-          "mass": 10.8,
-          "muzzleVelocity": 760.0,
-          "penetration0m": 127.0,
-          "explosiveMassKg": 2.7,
-          "explosiveType": "comp_a",
-          "tntEquivalent": 3.402
+          "mass": 11.6,
+          "muzzleVelocity": 731.5,
+          "explosiveMassKg": 0.05,
+          "explosiveType": "smoke_composition",
+          "tntEquivalent": 0.05
         },
         {
           "name": "105mm_m735",
@@ -80767,15 +82149,28 @@
           "penetration0m": 292.4
         },
         {
-          "name": "105mm_m416",
-          "localizedName": "M416",
-          "type": "smoke_tank",
+          "name": "105mm_type91",
+          "localizedName": "91 式",
+          "type": "heat_fs_tank",
           "caliber": 105.0,
-          "mass": 11.6,
-          "muzzleVelocity": 731.5,
-          "explosiveMassKg": 0.05,
-          "explosiveType": "smoke_composition",
-          "tntEquivalent": 0.05
+          "mass": 9.4,
+          "muzzleVelocity": 1150.0,
+          "penetration0m": 400.0,
+          "explosiveMassKg": 1.2,
+          "explosiveType": "comp_b",
+          "tntEquivalent": 1.524
+        },
+        {
+          "name": "105mm_type75",
+          "localizedName": "75 式",
+          "type": "hesh_tank",
+          "caliber": 105.0,
+          "mass": 10.8,
+          "muzzleVelocity": 760.0,
+          "penetration0m": 127.0,
+          "explosiveMassKg": 2.7,
+          "explosiveType": "comp_a",
+          "tntEquivalent": 3.402
         },
         {
           "name": "105mm_dm23",
@@ -80906,28 +82301,15 @@
       },
       "ammunitions": [
         {
-          "name": "105mm_type91",
-          "localizedName": "91 式",
-          "type": "heat_fs_tank",
+          "name": "105mm_m416",
+          "localizedName": "M416",
+          "type": "smoke_tank",
           "caliber": 105.0,
-          "mass": 9.4,
-          "muzzleVelocity": 1150.0,
-          "penetration0m": 400.0,
-          "explosiveMassKg": 1.2,
-          "explosiveType": "comp_b",
-          "tntEquivalent": 1.524
-        },
-        {
-          "name": "105mm_type75",
-          "localizedName": "75 式",
-          "type": "hesh_tank",
-          "caliber": 105.0,
-          "mass": 10.8,
-          "muzzleVelocity": 760.0,
-          "penetration0m": 127.0,
-          "explosiveMassKg": 2.7,
-          "explosiveType": "comp_a",
-          "tntEquivalent": 3.402
+          "mass": 11.6,
+          "muzzleVelocity": 731.5,
+          "explosiveMassKg": 0.05,
+          "explosiveType": "smoke_composition",
+          "tntEquivalent": 0.05
         },
         {
           "name": "105mm_m735",
@@ -80989,15 +82371,28 @@
           "penetration0m": 292.4
         },
         {
-          "name": "105mm_m416",
-          "localizedName": "M416",
-          "type": "smoke_tank",
+          "name": "105mm_type91",
+          "localizedName": "91 式",
+          "type": "heat_fs_tank",
           "caliber": 105.0,
-          "mass": 11.6,
-          "muzzleVelocity": 731.5,
-          "explosiveMassKg": 0.05,
-          "explosiveType": "smoke_composition",
-          "tntEquivalent": 0.05
+          "mass": 9.4,
+          "muzzleVelocity": 1150.0,
+          "penetration0m": 400.0,
+          "explosiveMassKg": 1.2,
+          "explosiveType": "comp_b",
+          "tntEquivalent": 1.524
+        },
+        {
+          "name": "105mm_type75",
+          "localizedName": "75 式",
+          "type": "hesh_tank",
+          "caliber": 105.0,
+          "mass": 10.8,
+          "muzzleVelocity": 760.0,
+          "penetration0m": 127.0,
+          "explosiveMassKg": 2.7,
+          "explosiveType": "comp_a",
+          "tntEquivalent": 3.402
         },
         {
           "name": "105mm_dm23",
@@ -83867,16 +85262,15 @@
       },
       "ammunitions": [
         {
-          "name": "105mm_type91",
-          "localizedName": "91 式",
-          "type": "heat_fs_tank",
+          "name": "105mm_m416",
+          "localizedName": "M416",
+          "type": "smoke_tank",
           "caliber": 105.0,
-          "mass": 9.4,
-          "muzzleVelocity": 1150.0,
-          "penetration0m": 400.0,
-          "explosiveMassKg": 1.2,
-          "explosiveType": "comp_b",
-          "tntEquivalent": 1.524
+          "mass": 11.6,
+          "muzzleVelocity": 731.5,
+          "explosiveMassKg": 0.05,
+          "explosiveType": "smoke_composition",
+          "tntEquivalent": 0.05
         },
         {
           "name": "105mm_m735",
@@ -83938,15 +85332,16 @@
           "penetration0m": 292.4
         },
         {
-          "name": "105mm_m416",
-          "localizedName": "M416",
-          "type": "smoke_tank",
+          "name": "105mm_type91",
+          "localizedName": "91 式",
+          "type": "heat_fs_tank",
           "caliber": 105.0,
-          "mass": 11.6,
-          "muzzleVelocity": 731.5,
-          "explosiveMassKg": 0.05,
-          "explosiveType": "smoke_composition",
-          "tntEquivalent": 0.05
+          "mass": 9.4,
+          "muzzleVelocity": 1150.0,
+          "penetration0m": 400.0,
+          "explosiveMassKg": 1.2,
+          "explosiveType": "comp_b",
+          "tntEquivalent": 1.524
         },
         {
           "name": "105mm_type93",
@@ -84092,18 +85487,6 @@
           "penetration0m": 204.5
         },
         {
-          "name": "105mm_type75",
-          "localizedName": "75 式",
-          "type": "hesh_tank",
-          "caliber": 105.0,
-          "mass": 10.8,
-          "muzzleVelocity": 760.0,
-          "penetration0m": 127.0,
-          "explosiveMassKg": 2.7,
-          "explosiveType": "comp_a",
-          "tntEquivalent": 3.402
-        },
-        {
           "name": "105mm_m456",
           "localizedName": "M456",
           "type": "heat_fs_tank",
@@ -84114,6 +85497,18 @@
           "explosiveMassKg": 0.97,
           "explosiveType": "comp_b",
           "tntEquivalent": 1.232
+        },
+        {
+          "name": "105mm_type75",
+          "localizedName": "75 式",
+          "type": "hesh_tank",
+          "caliber": 105.0,
+          "mass": 10.8,
+          "muzzleVelocity": 760.0,
+          "penetration0m": 127.0,
+          "explosiveMassKg": 2.7,
+          "explosiveType": "comp_a",
+          "tntEquivalent": 3.402
         }
       ],
       "penetrationData": null,
@@ -84213,16 +85608,15 @@
       },
       "ammunitions": [
         {
-          "name": "105mm_type91",
-          "localizedName": "91 式",
-          "type": "heat_fs_tank",
+          "name": "105mm_m416",
+          "localizedName": "M416",
+          "type": "smoke_tank",
           "caliber": 105.0,
-          "mass": 9.4,
-          "muzzleVelocity": 1150.0,
-          "penetration0m": 400.0,
-          "explosiveMassKg": 1.2,
-          "explosiveType": "comp_b",
-          "tntEquivalent": 1.524
+          "mass": 11.6,
+          "muzzleVelocity": 731.5,
+          "explosiveMassKg": 0.05,
+          "explosiveType": "smoke_composition",
+          "tntEquivalent": 0.05
         },
         {
           "name": "105mm_m735",
@@ -84284,15 +85678,16 @@
           "penetration0m": 292.4
         },
         {
-          "name": "105mm_m416",
-          "localizedName": "M416",
-          "type": "smoke_tank",
+          "name": "105mm_type91",
+          "localizedName": "91 式",
+          "type": "heat_fs_tank",
           "caliber": 105.0,
-          "mass": 11.6,
-          "muzzleVelocity": 731.5,
-          "explosiveMassKg": 0.05,
-          "explosiveType": "smoke_composition",
-          "tntEquivalent": 0.05
+          "mass": 9.4,
+          "muzzleVelocity": 1150.0,
+          "penetration0m": 400.0,
+          "explosiveMassKg": 1.2,
+          "explosiveType": "comp_b",
+          "tntEquivalent": 1.524
         },
         {
           "name": "105mm_type93",
@@ -84423,16 +85818,15 @@
       },
       "ammunitions": [
         {
-          "name": "105mm_type91",
-          "localizedName": "91 式",
-          "type": "heat_fs_tank",
+          "name": "105mm_m416",
+          "localizedName": "M416",
+          "type": "smoke_tank",
           "caliber": 105.0,
-          "mass": 9.4,
-          "muzzleVelocity": 1150.0,
-          "penetration0m": 400.0,
-          "explosiveMassKg": 1.2,
-          "explosiveType": "comp_b",
-          "tntEquivalent": 1.524
+          "mass": 11.6,
+          "muzzleVelocity": 731.5,
+          "explosiveMassKg": 0.05,
+          "explosiveType": "smoke_composition",
+          "tntEquivalent": 0.05
         },
         {
           "name": "105mm_m735",
@@ -84494,15 +85888,16 @@
           "penetration0m": 292.4
         },
         {
-          "name": "105mm_m416",
-          "localizedName": "M416",
-          "type": "smoke_tank",
+          "name": "105mm_type91",
+          "localizedName": "91 式",
+          "type": "heat_fs_tank",
           "caliber": 105.0,
-          "mass": 11.6,
-          "muzzleVelocity": 731.5,
-          "explosiveMassKg": 0.05,
-          "explosiveType": "smoke_composition",
-          "tntEquivalent": 0.05
+          "mass": 9.4,
+          "muzzleVelocity": 1150.0,
+          "penetration0m": 400.0,
+          "explosiveMassKg": 1.2,
+          "explosiveType": "comp_b",
+          "tntEquivalent": 1.524
         },
         {
           "name": "105mm_type93",
@@ -84649,18 +86044,6 @@
           "penetration0m": 204.5
         },
         {
-          "name": "105mm_type75",
-          "localizedName": "75 式",
-          "type": "hesh_tank",
-          "caliber": 105.0,
-          "mass": 10.8,
-          "muzzleVelocity": 760.0,
-          "penetration0m": 127.0,
-          "explosiveMassKg": 2.7,
-          "explosiveType": "comp_a",
-          "tntEquivalent": 3.402
-        },
-        {
           "name": "105mm_m456",
           "localizedName": "M456",
           "type": "heat_fs_tank",
@@ -84671,6 +86054,18 @@
           "explosiveMassKg": 0.97,
           "explosiveType": "comp_b",
           "tntEquivalent": 1.232
+        },
+        {
+          "name": "105mm_type75",
+          "localizedName": "75 式",
+          "type": "hesh_tank",
+          "caliber": 105.0,
+          "mass": 10.8,
+          "muzzleVelocity": 760.0,
+          "penetration0m": 127.0,
+          "explosiveMassKg": 2.7,
+          "explosiveType": "comp_a",
+          "tntEquivalent": 3.402
         }
       ],
       "penetrationData": null,
@@ -85868,7 +87263,7 @@
         19.3,
         33.9
       ],
-      "steer_type": "clutch_braking",
+      "steer_type": "double_differential",
       "empty_weight": 48.6,
       "track_width": 0.55,
       "secondary_weapons": [
@@ -86010,7 +87405,7 @@
         19.3,
         33.9
       ],
-      "steer_type": "clutch_braking",
+      "steer_type": "double_differential",
       "empty_weight": 48.6,
       "track_width": 0.55,
       "secondary_weapons": [
@@ -86152,7 +87547,7 @@
         19.3,
         33.9
       ],
-      "steer_type": "clutch_braking",
+      "steer_type": "double_differential",
       "empty_weight": 48.6,
       "track_width": 0.55,
       "secondary_weapons": [
@@ -86294,7 +87689,7 @@
         19.3,
         33.9
       ],
-      "steer_type": "clutch_braking",
+      "steer_type": "double_differential",
       "empty_weight": 48.6,
       "track_width": 0.55,
       "secondary_weapons": [
@@ -90478,7 +91873,7 @@
         20.4,
         31.0
       ],
-      "steer_type": "clutch_braking",
+      "steer_type": "double_differential",
       "empty_weight": 48.23,
       "track_width": 0.55,
       "secondary_weapons": null,
@@ -91632,7 +93027,7 @@
         20.4,
         31.0
       ],
-      "steer_type": "clutch_braking",
+      "steer_type": "double_differential",
       "empty_weight": 53.85,
       "track_width": 0.55,
       "secondary_weapons": [
@@ -91802,7 +93197,7 @@
         20.4,
         31.0
       ],
-      "steer_type": "clutch_braking",
+      "steer_type": "double_differential",
       "empty_weight": 58.4,
       "track_width": 0.55,
       "secondary_weapons": [
@@ -92575,7 +93970,7 @@
       "weight": 26.0,
       "power_to_weight": 21.15,
       "max_reverse_speed": 16.9,
-      "reload_time": 5.0,
+      "reload_time": 7.46,
       "penetration": 420.7,
       "max_speed": 100.1,
       "crew_count": 5,
@@ -92603,12 +93998,12 @@
       "mainGun": {
         "name": "105mm_XC8_L50",
         "caliber": 105.0,
-        "reloadTime": 5.0,
+        "reloadTime": 7.46,
         "autoLoader": true,
         "reloadTimes": {
-          "base": 5.0,
-          "expert": 5.0,
-          "ace": 5.0
+          "base": 7.46,
+          "expert": 7.46,
+          "ace": 7.46
         }
       },
       "ammunitions": [
@@ -92914,15 +94309,15 @@
       },
       "ammunitions": [
         {
-          "name": "20mm_slsgr_m42",
-          "localizedName": "m/42 曳​光​榴​弹",
+          "name": "20mm_akan_m45_b_he",
+          "localizedName": "20 mm HE",
           "type": "he_frag_i_t",
           "caliber": 20.0,
-          "mass": 0.136,
-          "muzzleVelocity": 845.0,
-          "explosiveMassKg": 0.006,
-          "explosiveType": "petn",
-          "tntEquivalent": 0.008
+          "mass": 0.122,
+          "muzzleVelocity": 850.0,
+          "explosiveMassKg": 0.015,
+          "explosiveType": "tnt",
+          "tntEquivalent": 0.015
         },
         {
           "name": "20mm_slpgr_m42",
@@ -95609,7 +97004,7 @@
         20.4,
         31.0
       ],
-      "steer_type": "clutch_braking",
+      "steer_type": "double_differential",
       "empty_weight": 53.85,
       "track_width": 0.55,
       "secondary_weapons": [
@@ -95833,24 +97228,6 @@
       },
       "ammunitions": [
         {
-          "name": "105mm_slpprj_m61",
-          "localizedName": "m/61 曳​光​穿​甲​弹",
-          "type": "apds_tank",
-          "caliber": 60.0,
-          "mass": 4.0,
-          "muzzleVelocity": 1500.0,
-          "deMarre": {
-            "fullCaliber": 105.0,
-            "isApcbc": false,
-            "explosiveMass": 0,
-            "isApcr": true,
-            "coreCaliber": 60.0,
-            "coreMass": 2.7,
-            "Cx": 0.1572
-          },
-          "penetration0m": 208.8
-        },
-        {
           "name": "105mm_slspgr_m61",
           "localizedName": "m/61 曳​光​碎​甲​弹",
           "type": "hesh_tank",
@@ -95861,24 +97238,6 @@
           "explosiveMassKg": 1.97,
           "explosiveType": "rdx",
           "tntEquivalent": 2.758
-        },
-        {
-          "name": "105mm_slpprj_m66",
-          "localizedName": "slpprj m/66",
-          "type": "apds_l15_tank",
-          "caliber": 61.0,
-          "mass": 4.53,
-          "muzzleVelocity": 1450.0,
-          "deMarre": {
-            "fullCaliber": 105.0,
-            "isApcbc": false,
-            "explosiveMass": 0,
-            "isApcr": true,
-            "coreCaliber": 61.0,
-            "coreMass": 3.2,
-            "Cx": 0.1761
-          },
-          "penetration0m": 216.3
         },
         {
           "name": "105mm_slsgr_m61",
@@ -95901,6 +97260,42 @@
           "explosiveMassKg": 0.05,
           "explosiveType": "smoke_composition",
           "tntEquivalent": 0.05
+        },
+        {
+          "name": "105mm_slpprj_m61",
+          "localizedName": "m/61 曳​光​穿​甲​弹",
+          "type": "apds_tank",
+          "caliber": 60.0,
+          "mass": 4.0,
+          "muzzleVelocity": 1500.0,
+          "deMarre": {
+            "fullCaliber": 105.0,
+            "isApcbc": false,
+            "explosiveMass": 0,
+            "isApcr": true,
+            "coreCaliber": 60.0,
+            "coreMass": 2.7,
+            "Cx": 0.1572
+          },
+          "penetration0m": 208.8
+        },
+        {
+          "name": "105mm_slpprj_m66",
+          "localizedName": "slpprj m/66",
+          "type": "apds_l15_tank",
+          "caliber": 61.0,
+          "mass": 4.53,
+          "muzzleVelocity": 1450.0,
+          "deMarre": {
+            "fullCaliber": 105.0,
+            "isApcbc": false,
+            "explosiveMass": 0,
+            "isApcr": true,
+            "coreCaliber": 61.0,
+            "coreMass": 3.2,
+            "Cx": 0.1761
+          },
+          "penetration0m": 216.3
         }
       ],
       "penetrationData": null,
@@ -96006,24 +97401,6 @@
       },
       "ammunitions": [
         {
-          "name": "105mm_slpprj_m61",
-          "localizedName": "m/61 曳​光​穿​甲​弹",
-          "type": "apds_tank",
-          "caliber": 60.0,
-          "mass": 4.0,
-          "muzzleVelocity": 1500.0,
-          "deMarre": {
-            "fullCaliber": 105.0,
-            "isApcbc": false,
-            "explosiveMass": 0,
-            "isApcr": true,
-            "coreCaliber": 60.0,
-            "coreMass": 2.7,
-            "Cx": 0.1572
-          },
-          "penetration0m": 208.8
-        },
-        {
           "name": "105mm_slspgr_m61",
           "localizedName": "m/61 曳​光​碎​甲​弹",
           "type": "hesh_tank",
@@ -96034,24 +97411,6 @@
           "explosiveMassKg": 1.97,
           "explosiveType": "rdx",
           "tntEquivalent": 2.758
-        },
-        {
-          "name": "105mm_slpprj_m66",
-          "localizedName": "slpprj m/66",
-          "type": "apds_l15_tank",
-          "caliber": 61.0,
-          "mass": 4.53,
-          "muzzleVelocity": 1450.0,
-          "deMarre": {
-            "fullCaliber": 105.0,
-            "isApcbc": false,
-            "explosiveMass": 0,
-            "isApcr": true,
-            "coreCaliber": 61.0,
-            "coreMass": 3.2,
-            "Cx": 0.1761
-          },
-          "penetration0m": 216.3
         },
         {
           "name": "105mm_slsgr_m61",
@@ -96074,6 +97433,42 @@
           "explosiveMassKg": 0.05,
           "explosiveType": "smoke_composition",
           "tntEquivalent": 0.05
+        },
+        {
+          "name": "105mm_slpprj_m61",
+          "localizedName": "m/61 曳​光​穿​甲​弹",
+          "type": "apds_tank",
+          "caliber": 60.0,
+          "mass": 4.0,
+          "muzzleVelocity": 1500.0,
+          "deMarre": {
+            "fullCaliber": 105.0,
+            "isApcbc": false,
+            "explosiveMass": 0,
+            "isApcr": true,
+            "coreCaliber": 60.0,
+            "coreMass": 2.7,
+            "Cx": 0.1572
+          },
+          "penetration0m": 208.8
+        },
+        {
+          "name": "105mm_slpprj_m66",
+          "localizedName": "slpprj m/66",
+          "type": "apds_l15_tank",
+          "caliber": 61.0,
+          "mass": 4.53,
+          "muzzleVelocity": 1450.0,
+          "deMarre": {
+            "fullCaliber": 105.0,
+            "isApcbc": false,
+            "explosiveMass": 0,
+            "isApcr": true,
+            "coreCaliber": 61.0,
+            "coreMass": 3.2,
+            "Cx": 0.1761
+          },
+          "penetration0m": 216.3
         }
       ],
       "penetrationData": null,
@@ -96211,7 +97606,7 @@
           "type": "hesh_tank",
           "caliber": 105.0,
           "mass": 11.4,
-          "muzzleVelocity": 720.0,
+          "muzzleVelocity": 760.0,
           "penetration0m": 127.0,
           "explosiveMassKg": 1.97,
           "explosiveType": "rdx",
@@ -96379,24 +97774,6 @@
       },
       "ammunitions": [
         {
-          "name": "105mm_slpprj_m66",
-          "localizedName": "slpprj m/66",
-          "type": "apds_l15_tank",
-          "caliber": 61.0,
-          "mass": 4.53,
-          "muzzleVelocity": 1400.0,
-          "deMarre": {
-            "fullCaliber": 105.0,
-            "isApcbc": false,
-            "explosiveMass": 0,
-            "isApcr": true,
-            "coreCaliber": 61.0,
-            "coreMass": 3.2,
-            "Cx": 0.1761
-          },
-          "penetration0m": 205.7
-        },
-        {
           "name": "105mm_slspgr_m61",
           "localizedName": "m/61 曳​光​碎​甲​弹",
           "type": "hesh_tank",
@@ -96407,28 +97784,6 @@
           "explosiveMassKg": 1.97,
           "explosiveType": "rdx",
           "tntEquivalent": 2.758
-        },
-        {
-          "name": "105mm_slpprj_m80",
-          "localizedName": "m/80 曳​光​穿​甲​弹",
-          "type": "apds_fs_tungsten_l10_l15_tank",
-          "caliber": 33.0,
-          "mass": 4.2,
-          "muzzleVelocity": 1455.0,
-          "lanzOdermatt": {
-            "workingLength": 327.0,
-            "density": 17500.0,
-            "material": "tungsten",
-            "Cx": 0.2676
-          },
-          "penetration0m": 337.9,
-          "penetrationData": {
-            "at0m": {
-              "angle0": 337.9,
-              "angle30": 292.6,
-              "angle60": 169.0
-            }
-          }
         },
         {
           "name": "105mm_slsgr_m61",
@@ -96451,6 +97806,46 @@
           "explosiveMassKg": 0.05,
           "explosiveType": "smoke_composition",
           "tntEquivalent": 0.05
+        },
+        {
+          "name": "105mm_slpprj_m66",
+          "localizedName": "slpprj m/66",
+          "type": "apds_l15_tank",
+          "caliber": 61.0,
+          "mass": 4.53,
+          "muzzleVelocity": 1400.0,
+          "deMarre": {
+            "fullCaliber": 105.0,
+            "isApcbc": false,
+            "explosiveMass": 0,
+            "isApcr": true,
+            "coreCaliber": 61.0,
+            "coreMass": 3.2,
+            "Cx": 0.1761
+          },
+          "penetration0m": 205.7
+        },
+        {
+          "name": "105mm_slpprj_m80",
+          "localizedName": "m/80 曳​光​穿​甲​弹",
+          "type": "apds_fs_tungsten_l10_l15_tank",
+          "caliber": 33.0,
+          "mass": 4.2,
+          "muzzleVelocity": 1455.0,
+          "lanzOdermatt": {
+            "workingLength": 327.0,
+            "density": 17500.0,
+            "material": "tungsten",
+            "Cx": 0.2676
+          },
+          "penetration0m": 337.9,
+          "penetrationData": {
+            "at0m": {
+              "angle0": 337.9,
+              "angle30": 292.6,
+              "angle60": 169.0
+            }
+          }
         }
       ],
       "penetrationData": {
@@ -96560,28 +97955,6 @@
       },
       "ammunitions": [
         {
-          "name": "105mm_slpprj_m80",
-          "localizedName": "m/80 曳​光​穿​甲​弹",
-          "type": "apds_fs_tungsten_l10_l15_tank",
-          "caliber": 33.0,
-          "mass": 4.2,
-          "muzzleVelocity": 1455.0,
-          "lanzOdermatt": {
-            "workingLength": 327.0,
-            "density": 17500.0,
-            "material": "tungsten",
-            "Cx": 0.2676
-          },
-          "penetration0m": 337.9,
-          "penetrationData": {
-            "at0m": {
-              "angle0": 337.9,
-              "angle30": 292.6,
-              "angle60": 169.0
-            }
-          }
-        },
-        {
           "name": "105mm_slspgr_m61",
           "localizedName": "m/61 曳​光​碎​甲​弹",
           "type": "hesh_tank",
@@ -96592,28 +97965,6 @@
           "explosiveMassKg": 1.97,
           "explosiveType": "rdx",
           "tntEquivalent": 2.758
-        },
-        {
-          "name": "105mm_slpprj_m90c",
-          "localizedName": "slpprj m/90c",
-          "type": "apds_fs_long_l30_tank",
-          "caliber": 24.0,
-          "mass": 4.4,
-          "muzzleVelocity": 1455.0,
-          "lanzOdermatt": {
-            "workingLength": 535.0,
-            "density": 17500.0,
-            "material": "tungsten",
-            "Cx": 0.5301
-          },
-          "penetration0m": 430.2,
-          "penetrationData": {
-            "at0m": {
-              "angle0": 430.2,
-              "angle30": 372.6,
-              "angle60": 215.1
-            }
-          }
         },
         {
           "name": "105mm_slsgr_m61",
@@ -96636,6 +97987,50 @@
           "explosiveMassKg": 0.05,
           "explosiveType": "smoke_composition",
           "tntEquivalent": 0.05
+        },
+        {
+          "name": "105mm_slpprj_m80",
+          "localizedName": "m/80 曳​光​穿​甲​弹",
+          "type": "apds_fs_tungsten_l10_l15_tank",
+          "caliber": 33.0,
+          "mass": 4.2,
+          "muzzleVelocity": 1455.0,
+          "lanzOdermatt": {
+            "workingLength": 327.0,
+            "density": 17500.0,
+            "material": "tungsten",
+            "Cx": 0.2676
+          },
+          "penetration0m": 337.9,
+          "penetrationData": {
+            "at0m": {
+              "angle0": 337.9,
+              "angle30": 292.6,
+              "angle60": 169.0
+            }
+          }
+        },
+        {
+          "name": "105mm_slpprj_m90c",
+          "localizedName": "slpprj m/90c",
+          "type": "apds_fs_long_l30_tank",
+          "caliber": 24.0,
+          "mass": 4.4,
+          "muzzleVelocity": 1455.0,
+          "lanzOdermatt": {
+            "workingLength": 535.0,
+            "density": 17500.0,
+            "material": "tungsten",
+            "Cx": 0.5301
+          },
+          "penetration0m": 430.2,
+          "penetrationData": {
+            "at0m": {
+              "angle0": 430.2,
+              "angle30": 372.6,
+              "angle60": 215.1
+            }
+          }
         }
       ],
       "penetrationData": {
@@ -96858,7 +98253,7 @@
         20.4,
         31.0
       ],
-      "steer_type": "clutch_braking",
+      "steer_type": "double_differential",
       "empty_weight": 53.85,
       "track_width": 0.55,
       "secondary_weapons": [
@@ -97027,7 +98422,7 @@
         20.4,
         31.0
       ],
-      "steer_type": "clutch_braking",
+      "steer_type": "double_differential",
       "empty_weight": 61.02,
       "track_width": 0.55,
       "secondary_weapons": [
@@ -97196,7 +98591,7 @@
         20.4,
         31.0
       ],
-      "steer_type": "clutch_braking",
+      "steer_type": "double_differential",
       "empty_weight": 61.02,
       "track_width": 0.55,
       "secondary_weapons": [
@@ -97365,7 +98760,7 @@
         13.1,
         31.1
       ],
-      "steer_type": null,
+      "steer_type": "double_differential",
       "empty_weight": 61.38,
       "track_width": 0.55,
       "secondary_weapons": [
@@ -100139,15 +101534,26 @@
           "tntEquivalent": 1.881
         },
         {
-          "name": "125mm_3of_26",
-          "localizedName": "3OF26",
-          "type": "he_frag_fs_tank",
-          "caliber": 125.0,
-          "mass": 23.0,
-          "muzzleVelocity": 850.0,
-          "explosiveMassKg": 3.402,
-          "explosiveType": "a_ix_2",
-          "tntEquivalent": 4.763
+          "name": "125mm_3bm9",
+          "localizedName": "3BM9",
+          "type": "apds_fs_full_body_steel_tank",
+          "caliber": 44.0,
+          "mass": 3.6,
+          "muzzleVelocity": 1800.0,
+          "lanzOdermatt": {
+            "workingLength": 410.0,
+            "density": 7760.0,
+            "material": "steel",
+            "Cx": 0.3105
+          },
+          "penetration0m": 210.4,
+          "penetrationData": {
+            "at0m": {
+              "angle0": 210.4,
+              "angle30": 182.2,
+              "angle60": 105.2
+            }
+          }
         },
         {
           "name": "125mm_3bm15",
@@ -100244,26 +101650,15 @@
           "penetration0m": 425.0
         },
         {
-          "name": "125mm_3bm9",
-          "localizedName": "3BM9",
-          "type": "apds_fs_full_body_steel_tank",
-          "caliber": 44.0,
-          "mass": 3.6,
-          "muzzleVelocity": 1800.0,
-          "lanzOdermatt": {
-            "workingLength": 410.0,
-            "density": 7760.0,
-            "material": "steel",
-            "Cx": 0.3105
-          },
-          "penetration0m": 210.4,
-          "penetrationData": {
-            "at0m": {
-              "angle0": 210.4,
-              "angle30": 182.2,
-              "angle60": 105.2
-            }
-          }
+          "name": "125mm_3of_26",
+          "localizedName": "3OF26",
+          "type": "he_frag_fs_tank",
+          "caliber": 125.0,
+          "mass": 23.0,
+          "muzzleVelocity": 850.0,
+          "explosiveMassKg": 3.402,
+          "explosiveType": "a_ix_2",
+          "tntEquivalent": 4.763
         }
       ],
       "penetrationData": {},
@@ -100376,17 +101771,6 @@
           "tntEquivalent": 2.578
         },
         {
-          "name": "125mm_3of_26",
-          "localizedName": "3OF26",
-          "type": "he_frag_fs_tank",
-          "caliber": 125.0,
-          "mass": 23.0,
-          "muzzleVelocity": 850.0,
-          "explosiveMassKg": 3.402,
-          "explosiveType": "a_ix_2",
-          "tntEquivalent": 4.763
-        },
-        {
           "name": "125mm_3bm42",
           "localizedName": "3BM42",
           "type": "apds_fs_tungsten_caliber_fins_tank",
@@ -100432,6 +101816,17 @@
             }
           ],
           "penetration0m": 457.0
+        },
+        {
+          "name": "125mm_3of_26",
+          "localizedName": "3OF26",
+          "type": "he_frag_fs_tank",
+          "caliber": 125.0,
+          "mass": 23.0,
+          "muzzleVelocity": 850.0,
+          "explosiveMassKg": 3.402,
+          "explosiveType": "a_ix_2",
+          "tntEquivalent": 4.763
         },
         {
           "name": "125mm_9m_119",
@@ -104267,8 +105662,8 @@
     "id": "uk_a_22f_mk_7_churchill_crocodile",
     "performance": {
       "horsepower": 355.0,
-      "weight": 45.15,
-      "power_to_weight": 7.86,
+      "weight": 47.0,
+      "power_to_weight": 7.55,
       "max_reverse_speed": 1.8,
       "reload_time": 5.0,
       "penetration": 104.0,
@@ -104279,7 +105674,7 @@
       "has_stabilizer": false,
       "stabilizer_type": "none",
       "elevation_range": [
-        -12.0,
+        -12.5,
         20.0
       ],
       "traverse_range": [
@@ -104291,7 +105686,7 @@
       "gunner_thermal_diagonal": null,
       "commander_thermal_diagonal": null,
       "stabilizer_value": 0,
-      "elevation_range_value": 32.0,
+      "elevation_range_value": 32.5,
       "mainGun": {
         "name": "75mm_QQF_MkV",
         "caliber": 75.0,
@@ -104381,7 +105776,7 @@
         1.8
       ],
       "steer_type": "clutch_braking",
-      "empty_weight": 44.65,
+      "empty_weight": 46.5,
       "track_width": 0.6,
       "secondary_weapons": [
         {
@@ -105695,6 +107090,168 @@
       "has_smoke_grenades": false,
       "has_ess": false,
       "has_laser_rangefinder": false
+    }
+  },
+  {
+    "id": "uk_arjun_mk1",
+    "performance": {
+      "horsepower": 1400.0,
+      "weight": 58.5,
+      "power_to_weight": 23.93,
+      "max_reverse_speed": 32.1,
+      "reload_time": 6.0,
+      "penetration": 396.7,
+      "max_speed": 70.2,
+      "crew_count": 5,
+      "elevation_speed": 20.0,
+      "traverse_speed": 40.0,
+      "has_stabilizer": true,
+      "stabilizer_type": "both",
+      "elevation_range": [
+        -10.0,
+        20.0
+      ],
+      "traverse_range": [
+        -180.0,
+        180.0
+      ],
+      "gunner_thermal_resolution": [
+        500,
+        300
+      ],
+      "commander_thermal_resolution": null,
+      "gunner_thermal_diagonal": 583.1,
+      "commander_thermal_diagonal": null,
+      "stabilizer_value": 1,
+      "elevation_range_value": 30.0,
+      "mainGun": {
+        "name": "120mm_arjun_mk1",
+        "caliber": 120.0,
+        "reloadTime": 6.0,
+        "autoLoader": false,
+        "reloadTimes": {
+          "base": 7.8,
+          "expert": 6.9,
+          "ace": 6.0
+        }
+      },
+      "ammunitions": [
+        {
+          "name": "120mm_Arjun_Mk1",
+          "localizedName": "120 mm Mk1 APFSDS",
+          "type": "apds_fs_long_tank",
+          "caliber": 28.0,
+          "mass": 3.8,
+          "muzzleVelocity": 1660.0,
+          "lanzOdermatt": {
+            "workingLength": 365.0,
+            "density": 17500.0,
+            "material": "tungsten",
+            "Cx": 0.3498
+          },
+          "penetration0m": 396.7,
+          "penetrationData": {
+            "at0m": {
+              "angle0": 396.7,
+              "angle30": 343.6,
+              "angle60": 198.4
+            }
+          }
+        },
+        {
+          "name": "120mm_Arjun_PCB",
+          "localizedName": "120 mm PCB",
+          "type": "sap_tank",
+          "caliber": 120.0,
+          "mass": 16.2,
+          "muzzleVelocity": 803.0,
+          "deMarre": {
+            "fullCaliber": 120.0,
+            "isApcbc": false,
+            "explosiveMass": 1.5
+          },
+          "penetration0m": 117.1,
+          "explosiveMassKg": 1.5,
+          "explosiveType": "torpex",
+          "tntEquivalent": 1.8
+        },
+        {
+          "name": "120mm_arjun_HESH",
+          "localizedName": "120 mm HESH",
+          "type": "hesh_tank",
+          "caliber": 120.0,
+          "mass": 17.34,
+          "muzzleVelocity": 670.0,
+          "penetration0m": 152.0,
+          "explosiveMassKg": 4.08,
+          "explosiveType": "rdx",
+          "tntEquivalent": 5.712
+        }
+      ],
+      "penetrationData": {
+        "at0m": {
+          "angle0": 396.7,
+          "angle30": 343.6,
+          "angle60": 198.4
+        }
+      },
+      "autoLoader": false,
+      "engine_manufacturer": null,
+      "engine_model": null,
+      "engine_type": null,
+      "engine_max_rpm": 2400.0,
+      "transmission_manufacturer": null,
+      "transmission_model": null,
+      "transmission_type": null,
+      "forward_gears": 8,
+      "reverse_gears": 4,
+      "forward_gear_speeds": [
+        9.4,
+        14.6,
+        24.2,
+        32.1,
+        37.9,
+        46.5,
+        55.9,
+        70.2
+      ],
+      "reverse_gear_speeds": [
+        8.8,
+        15.7,
+        21.1,
+        32.1
+      ],
+      "steer_type": "clutch_braking",
+      "empty_weight": 57.5,
+      "track_width": 0.55,
+      "secondary_weapons": [
+        {
+          "trigger": "gunner1",
+          "name": "7_62mm_FN_MAG60_40",
+          "caliber": 7.6,
+          "ammo": 3000,
+          "reloadTime": 8.0,
+          "rateOfFire": 1000,
+          "bulletType": "ap_ball"
+        },
+        {
+          "trigger": "gunner2",
+          "name": "12_7mm_NSV_t_80",
+          "caliber": 12.7,
+          "ammo": 1000,
+          "reloadTime": 5.0,
+          "rateOfFire": 700,
+          "bulletType": "ap_i_t_ball"
+        }
+      ],
+      "main_gun_ammo": 39,
+      "driver_nv_resolution": [
+        800,
+        600
+      ],
+      "has_smoke_grenades": true,
+      "has_ess": false,
+      "has_laser_rangefinder": true
     }
   },
   {
@@ -113099,8 +114656,8 @@
     "id": "uk_fv107_scimitar_mk2",
     "performance": {
       "horsepower": 235.0,
-      "weight": 12.26,
-      "power_to_weight": 19.17,
+      "weight": 11.0,
+      "power_to_weight": 21.36,
       "max_reverse_speed": 80.0,
       "reload_time": 0.8,
       "penetration": 110.5,
@@ -113112,7 +114669,7 @@
       "stabilizer_type": "none",
       "elevation_range": [
         -10.0,
-        35.0
+        40.0
       ],
       "traverse_range": [
         -180.0,
@@ -113129,7 +114686,7 @@
       "gunner_thermal_diagonal": 583.1,
       "commander_thermal_diagonal": 583.1,
       "stabilizer_value": 0,
-      "elevation_range_value": 45.0,
+      "elevation_range_value": 50.0,
       "mainGun": {
         "name": "30mm_L21A1_RARDEN",
         "caliber": 30.0,
@@ -113275,7 +114832,7 @@
         80.0
       ],
       "steer_type": "clutch_braking",
-      "empty_weight": 11.86,
+      "empty_weight": 10.6,
       "track_width": 0.55,
       "secondary_weapons": [
         {
@@ -114821,20 +116378,20 @@
         },
         {
           "trigger": "gunner2",
-          "name": "7_62mm_M240",
+          "name": "7_62mm_FN_MAG58_200",
           "caliber": 7.6,
           "ammo": 1400,
           "reloadTime": 8.0,
-          "rateOfFire": 940,
+          "rateOfFire": 1000,
           "bulletType": "ap_ball"
         },
         {
           "trigger": "gunner3",
-          "name": "7_62mm_M240",
+          "name": "7_62mm_FN_MAG58_200",
           "caliber": 7.6,
           "ammo": 10000,
           "reloadTime": 8.0,
-          "rateOfFire": 940,
+          "rateOfFire": 1000,
           "bulletType": "ap_ball"
         }
       ],
@@ -116560,6 +118117,28 @@
       },
       "ammunitions": [
         {
+          "name": "105mm_dm63",
+          "localizedName": "DM63",
+          "type": "apds_fs_long_l30_tank",
+          "caliber": 24.0,
+          "mass": 4.4,
+          "muzzleVelocity": 1455.0,
+          "lanzOdermatt": {
+            "workingLength": 535.0,
+            "density": 17500.0,
+            "material": "tungsten",
+            "Cx": 0.5301
+          },
+          "penetration0m": 430.2,
+          "penetrationData": {
+            "at0m": {
+              "angle0": 430.2,
+              "angle30": 372.6,
+              "angle60": 215.1
+            }
+          }
+        },
+        {
           "name": "105mm_m456",
           "localizedName": "M456",
           "type": "heat_fs_tank",
@@ -116590,28 +118169,6 @@
               "angle0": 337.9,
               "angle30": 292.6,
               "angle60": 169.0
-            }
-          }
-        },
-        {
-          "name": "105mm_dm63",
-          "localizedName": "DM63",
-          "type": "apds_fs_long_l30_tank",
-          "caliber": 24.0,
-          "mass": 4.4,
-          "muzzleVelocity": 1455.0,
-          "lanzOdermatt": {
-            "workingLength": 535.0,
-            "density": 17500.0,
-            "material": "tungsten",
-            "Cx": 0.5301
-          },
-          "penetration0m": 430.2,
-          "penetrationData": {
-            "at0m": {
-              "angle0": 430.2,
-              "angle30": 372.6,
-              "angle60": 215.1
             }
           }
         }
@@ -117196,28 +118753,6 @@
           "tntEquivalent": 3.772
         },
         {
-          "name": "105mm_dm23",
-          "localizedName": "DM23",
-          "type": "apds_fs_tungsten_l10_l15_tank",
-          "caliber": 33.0,
-          "mass": 4.2,
-          "muzzleVelocity": 1455.0,
-          "lanzOdermatt": {
-            "workingLength": 327.0,
-            "density": 17500.0,
-            "material": "tungsten",
-            "Cx": 0.2676
-          },
-          "penetration0m": 337.9,
-          "penetrationData": {
-            "at0m": {
-              "angle0": 337.9,
-              "angle30": 292.6,
-              "angle60": 169.0
-            }
-          }
-        },
-        {
           "name": "105mm_dm33",
           "localizedName": "DM33",
           "type": "apds_fs_long_tank",
@@ -117236,6 +118771,28 @@
               "angle0": 420.7,
               "angle30": 364.3,
               "angle60": 210.4
+            }
+          }
+        },
+        {
+          "name": "105mm_dm23",
+          "localizedName": "DM23",
+          "type": "apds_fs_tungsten_l10_l15_tank",
+          "caliber": 33.0,
+          "mass": 4.2,
+          "muzzleVelocity": 1455.0,
+          "lanzOdermatt": {
+            "workingLength": 327.0,
+            "density": 17500.0,
+            "material": "tungsten",
+            "Cx": 0.2676
+          },
+          "penetration0m": 337.9,
+          "penetrationData": {
+            "at0m": {
+              "angle0": 337.9,
+              "angle30": 292.6,
+              "angle60": 169.0
             }
           }
         }
@@ -117427,7 +118984,7 @@
           "bulletType": "ap_ball"
         }
       ],
-      "main_gun_ammo": 48,
+      "main_gun_ammo": 49,
       "driver_nv_resolution": [
         800,
         600
@@ -117506,28 +119063,6 @@
           "tntEquivalent": 3.772
         },
         {
-          "name": "105mm_dm23",
-          "localizedName": "DM23",
-          "type": "apds_fs_tungsten_l10_l15_tank",
-          "caliber": 33.0,
-          "mass": 4.2,
-          "muzzleVelocity": 1455.0,
-          "lanzOdermatt": {
-            "workingLength": 327.0,
-            "density": 17500.0,
-            "material": "tungsten",
-            "Cx": 0.2676
-          },
-          "penetration0m": 337.9,
-          "penetrationData": {
-            "at0m": {
-              "angle0": 337.9,
-              "angle30": 292.6,
-              "angle60": 169.0
-            }
-          }
-        },
-        {
           "name": "105mm_dm33",
           "localizedName": "DM33",
           "type": "apds_fs_long_tank",
@@ -117546,6 +119081,28 @@
               "angle0": 420.7,
               "angle30": 364.3,
               "angle60": 210.4
+            }
+          }
+        },
+        {
+          "name": "105mm_dm23",
+          "localizedName": "DM23",
+          "type": "apds_fs_tungsten_l10_l15_tank",
+          "caliber": 33.0,
+          "mass": 4.2,
+          "muzzleVelocity": 1455.0,
+          "lanzOdermatt": {
+            "workingLength": 327.0,
+            "density": 17500.0,
+            "material": "tungsten",
+            "Cx": 0.2676
+          },
+          "penetration0m": 337.9,
+          "penetrationData": {
+            "at0m": {
+              "angle0": 337.9,
+              "angle30": 292.6,
+              "angle60": 169.0
             }
           }
         }
@@ -119764,6 +121321,28 @@
       },
       "ammunitions": [
         {
+          "name": "105mm_dm63",
+          "localizedName": "DM63",
+          "type": "apds_fs_long_l30_tank",
+          "caliber": 24.0,
+          "mass": 4.4,
+          "muzzleVelocity": 1455.0,
+          "lanzOdermatt": {
+            "workingLength": 535.0,
+            "density": 17500.0,
+            "material": "tungsten",
+            "Cx": 0.5301
+          },
+          "penetration0m": 430.2,
+          "penetrationData": {
+            "at0m": {
+              "angle0": 430.2,
+              "angle30": 372.6,
+              "angle60": 215.1
+            }
+          }
+        },
+        {
           "name": "105mm_imi_m152",
           "localizedName": "M152",
           "type": "heat_fs_tank",
@@ -119794,28 +121373,6 @@
               "angle0": 337.9,
               "angle30": 292.6,
               "angle60": 169.0
-            }
-          }
-        },
-        {
-          "name": "105mm_dm63",
-          "localizedName": "DM63",
-          "type": "apds_fs_long_l30_tank",
-          "caliber": 24.0,
-          "mass": 4.4,
-          "muzzleVelocity": 1455.0,
-          "lanzOdermatt": {
-            "workingLength": 535.0,
-            "density": 17500.0,
-            "material": "tungsten",
-            "Cx": 0.5301
-          },
-          "penetration0m": 430.2,
-          "penetrationData": {
-            "at0m": {
-              "angle0": 430.2,
-              "angle30": 372.6,
-              "angle60": 215.1
             }
           }
         }
@@ -120340,18 +121897,6 @@
       },
       "ammunitions": [
         {
-          "name": "105mm_m456a2",
-          "localizedName": "M456A2",
-          "type": "heat_fs_tank",
-          "caliber": 105.0,
-          "mass": 10.5,
-          "muzzleVelocity": 1173.5,
-          "penetration0m": 400.0,
-          "explosiveMassKg": 0.97,
-          "explosiveType": "comp_b",
-          "tntEquivalent": 1.232
-        },
-        {
           "name": "105mm_m393a2",
           "localizedName": "M393",
           "type": "hesh_tank",
@@ -120362,28 +121907,6 @@
           "explosiveMassKg": 2.9937,
           "explosiveType": "comp_a",
           "tntEquivalent": 3.772
-        },
-        {
-          "name": "105mm_c76a1",
-          "localizedName": "C76A1",
-          "type": "apds_fs_long_tank",
-          "caliber": 26.0,
-          "mass": 3.6,
-          "muzzleVelocity": 1509.0,
-          "lanzOdermatt": {
-            "workingLength": 375.0,
-            "density": 17500.0,
-            "material": "tungsten",
-            "Cx": 0.45
-          },
-          "penetration0m": 353.1,
-          "penetrationData": {
-            "at0m": {
-              "angle0": 353.1,
-              "angle30": 305.8,
-              "angle60": 176.6
-            }
-          }
         },
         {
           "name": "105mm_dm33",
@@ -120404,6 +121927,40 @@
               "angle0": 420.7,
               "angle30": 364.3,
               "angle60": 210.4
+            }
+          }
+        },
+        {
+          "name": "105mm_m456a2",
+          "localizedName": "M456A2",
+          "type": "heat_fs_tank",
+          "caliber": 105.0,
+          "mass": 10.5,
+          "muzzleVelocity": 1173.5,
+          "penetration0m": 400.0,
+          "explosiveMassKg": 0.97,
+          "explosiveType": "comp_b",
+          "tntEquivalent": 1.232
+        },
+        {
+          "name": "105mm_c76a1",
+          "localizedName": "C76A1",
+          "type": "apds_fs_long_tank",
+          "caliber": 26.0,
+          "mass": 3.6,
+          "muzzleVelocity": 1509.0,
+          "lanzOdermatt": {
+            "workingLength": 375.0,
+            "density": 17500.0,
+            "material": "tungsten",
+            "Cx": 0.45
+          },
+          "penetration0m": 353.1,
+          "penetrationData": {
+            "at0m": {
+              "angle0": 353.1,
+              "angle30": 305.8,
+              "angle60": 176.6
             }
           }
         }
@@ -120760,6 +122317,18 @@
       },
       "ammunitions": [
         {
+          "name": "105mm_l35",
+          "localizedName": "L35",
+          "type": "hesh_tank",
+          "caliber": 105.0,
+          "mass": 11.4,
+          "muzzleVelocity": 720.0,
+          "penetration0m": 127.0,
+          "explosiveMassKg": 1.97,
+          "explosiveType": "rdx",
+          "tntEquivalent": 2.758
+        },
+        {
           "name": "105mm_l52a1",
           "localizedName": "Shot L52A1",
           "type": "apds_l15_tank",
@@ -120776,18 +122345,6 @@
             "Cx": 0.1761
           },
           "penetration0m": 211.2
-        },
-        {
-          "name": "105mm_l35",
-          "localizedName": "L35",
-          "type": "hesh_tank",
-          "caliber": 105.0,
-          "mass": 11.4,
-          "muzzleVelocity": 720.0,
-          "penetration0m": 127.0,
-          "explosiveMassKg": 1.97,
-          "explosiveType": "rdx",
-          "tntEquivalent": 2.758
         },
         {
           "name": "105mm_m456",
@@ -121012,7 +122569,7 @@
         21.5,
         32.7
       ],
-      "steer_type": "clutch_braking",
+      "steer_type": "double_differential",
       "empty_weight": 53.34,
       "track_width": 0.55,
       "secondary_weapons": [
@@ -121078,18 +122635,6 @@
       },
       "ammunitions": [
         {
-          "name": "105mm_m456a2",
-          "localizedName": "M456A2",
-          "type": "heat_fs_tank",
-          "caliber": 105.0,
-          "mass": 10.5,
-          "muzzleVelocity": 1173.5,
-          "penetration0m": 400.0,
-          "explosiveMassKg": 0.97,
-          "explosiveType": "comp_b",
-          "tntEquivalent": 1.232
-        },
-        {
           "name": "105mm_m393a2",
           "localizedName": "M393",
           "type": "hesh_tank",
@@ -121100,6 +122645,18 @@
           "explosiveMassKg": 2.9937,
           "explosiveType": "comp_a",
           "tntEquivalent": 3.772
+        },
+        {
+          "name": "105mm_m456a2",
+          "localizedName": "M456A2",
+          "type": "heat_fs_tank",
+          "caliber": 105.0,
+          "mass": 10.5,
+          "muzzleVelocity": 1173.5,
+          "penetration0m": 400.0,
+          "explosiveMassKg": 0.97,
+          "explosiveType": "comp_b",
+          "tntEquivalent": 1.232
         },
         {
           "name": "105mm_c76a1",
@@ -121312,6 +122869,18 @@
       },
       "ammunitions": [
         {
+          "name": "105mm_l35",
+          "localizedName": "L35",
+          "type": "hesh_tank",
+          "caliber": 105.0,
+          "mass": 11.4,
+          "muzzleVelocity": 720.0,
+          "penetration0m": 127.0,
+          "explosiveMassKg": 1.97,
+          "explosiveType": "rdx",
+          "tntEquivalent": 2.758
+        },
+        {
           "name": "105mm_l52a1",
           "localizedName": "Shot L52A1",
           "type": "apds_l15_tank",
@@ -121328,18 +122897,6 @@
             "Cx": 0.1761
           },
           "penetration0m": 211.2
-        },
-        {
-          "name": "105mm_l35",
-          "localizedName": "L35",
-          "type": "hesh_tank",
-          "caliber": 105.0,
-          "mass": 11.4,
-          "muzzleVelocity": 720.0,
-          "penetration0m": 127.0,
-          "explosiveMassKg": 1.97,
-          "explosiveType": "rdx",
-          "tntEquivalent": 2.758
         },
         {
           "name": "105mm_m456",
@@ -121623,18 +123180,6 @@
       },
       "ammunitions": [
         {
-          "name": "105mm_m456a2",
-          "localizedName": "M456A2",
-          "type": "heat_fs_tank",
-          "caliber": 105.0,
-          "mass": 10.5,
-          "muzzleVelocity": 1173.5,
-          "penetration0m": 400.0,
-          "explosiveMassKg": 0.97,
-          "explosiveType": "comp_b",
-          "tntEquivalent": 1.232
-        },
-        {
           "name": "105mm_m393a2",
           "localizedName": "M393",
           "type": "hesh_tank",
@@ -121656,6 +123201,18 @@
           "explosiveMassKg": 0.05,
           "explosiveType": "smoke_composition",
           "tntEquivalent": 0.05
+        },
+        {
+          "name": "105mm_m456a2",
+          "localizedName": "M456A2",
+          "type": "heat_fs_tank",
+          "caliber": 105.0,
+          "mass": 10.5,
+          "muzzleVelocity": 1173.5,
+          "penetration0m": 400.0,
+          "explosiveMassKg": 0.97,
+          "explosiveType": "comp_b",
+          "tntEquivalent": 1.232
         },
         {
           "name": "105mm_m774",
@@ -121812,18 +123369,6 @@
       },
       "ammunitions": [
         {
-          "name": "105mm_m456a2",
-          "localizedName": "M456A2",
-          "type": "heat_fs_tank",
-          "caliber": 105.0,
-          "mass": 10.5,
-          "muzzleVelocity": 1173.5,
-          "penetration0m": 400.0,
-          "explosiveMassKg": 0.97,
-          "explosiveType": "comp_b",
-          "tntEquivalent": 1.232
-        },
-        {
           "name": "105mm_m393a2",
           "localizedName": "M393",
           "type": "hesh_tank",
@@ -121845,6 +123390,18 @@
           "explosiveMassKg": 0.05,
           "explosiveType": "smoke_composition",
           "tntEquivalent": 0.05
+        },
+        {
+          "name": "105mm_m456a2",
+          "localizedName": "M456A2",
+          "type": "heat_fs_tank",
+          "caliber": 105.0,
+          "mass": 10.5,
+          "muzzleVelocity": 1173.5,
+          "penetration0m": 400.0,
+          "explosiveMassKg": 0.97,
+          "explosiveType": "comp_b",
+          "tntEquivalent": 1.232
         },
         {
           "name": "105mm_m735",
@@ -125509,6 +127066,17 @@
       },
       "ammunitions": [
         {
+          "name": "105mm_m416",
+          "localizedName": "M416",
+          "type": "smoke_tank",
+          "caliber": 105.0,
+          "mass": 11.6,
+          "muzzleVelocity": 731.5,
+          "explosiveMassKg": 0.05,
+          "explosiveType": "smoke_composition",
+          "tntEquivalent": 0.05
+        },
+        {
           "name": "105mm_m456a2",
           "localizedName": "M456A2",
           "type": "heat_fs_tank",
@@ -125590,17 +127158,6 @@
             }
           ],
           "penetration0m": 292.4
-        },
-        {
-          "name": "105mm_m416",
-          "localizedName": "M416",
-          "type": "smoke_tank",
-          "caliber": 105.0,
-          "mass": 11.6,
-          "muzzleVelocity": 731.5,
-          "explosiveMassKg": 0.05,
-          "explosiveType": "smoke_composition",
-          "tntEquivalent": 0.05
         },
         {
           "name": "105mm_m774",
@@ -125745,6 +127302,17 @@
       },
       "ammunitions": [
         {
+          "name": "105mm_m416",
+          "localizedName": "M416",
+          "type": "smoke_tank",
+          "caliber": 105.0,
+          "mass": 11.6,
+          "muzzleVelocity": 731.5,
+          "explosiveMassKg": 0.05,
+          "explosiveType": "smoke_composition",
+          "tntEquivalent": 0.05
+        },
+        {
           "name": "105mm_m456a2",
           "localizedName": "M456A2",
           "type": "heat_fs_tank",
@@ -125826,17 +127394,6 @@
             }
           ],
           "penetration0m": 292.4
-        },
-        {
-          "name": "105mm_m416",
-          "localizedName": "M416",
-          "type": "smoke_tank",
-          "caliber": 105.0,
-          "mass": 11.6,
-          "muzzleVelocity": 731.5,
-          "explosiveMassKg": 0.05,
-          "explosiveType": "smoke_composition",
-          "tntEquivalent": 0.05
         },
         {
           "name": "105mm_m774",
@@ -125979,6 +127536,17 @@
       },
       "ammunitions": [
         {
+          "name": "105mm_m416",
+          "localizedName": "M416",
+          "type": "smoke_tank",
+          "caliber": 105.0,
+          "mass": 11.6,
+          "muzzleVelocity": 731.5,
+          "explosiveMassKg": 0.05,
+          "explosiveType": "smoke_composition",
+          "tntEquivalent": 0.05
+        },
+        {
           "name": "105mm_m456a2",
           "localizedName": "M456A2",
           "type": "heat_fs_tank",
@@ -126001,17 +127569,6 @@
           "explosiveMassKg": 2.9937,
           "explosiveType": "comp_a",
           "tntEquivalent": 3.772
-        },
-        {
-          "name": "105mm_m416",
-          "localizedName": "M416",
-          "type": "smoke_tank",
-          "caliber": 105.0,
-          "mass": 11.6,
-          "muzzleVelocity": 731.5,
-          "explosiveMassKg": 0.05,
-          "explosiveType": "smoke_composition",
-          "tntEquivalent": 0.05
         },
         {
           "name": "105mm_m900",
@@ -126472,20 +128029,20 @@
         },
         {
           "trigger": "gunner2",
-          "name": "7_62mm_M240",
+          "name": "7_62mm_FN_MAG58_200",
           "caliber": 7.6,
           "ammo": 1400,
           "reloadTime": 8.0,
-          "rateOfFire": 940,
+          "rateOfFire": 1000,
           "bulletType": "ap_ball"
         },
         {
           "trigger": "gunner3",
-          "name": "7_62mm_M240",
+          "name": "7_62mm_FN_MAG58_200",
           "caliber": 7.6,
           "ammo": 10000,
           "reloadTime": 8.0,
-          "rateOfFire": 940,
+          "rateOfFire": 1000,
           "bulletType": "ap_ball"
         }
       ],
@@ -136016,6 +137573,18 @@
       },
       "ammunitions": [
         {
+          "name": "105mm_m456",
+          "localizedName": "M456",
+          "type": "heat_fs_tank",
+          "caliber": 105.0,
+          "mass": 10.5,
+          "muzzleVelocity": 1173.5,
+          "penetration0m": 400.0,
+          "explosiveMassKg": 0.97,
+          "explosiveType": "comp_b",
+          "tntEquivalent": 1.232
+        },
+        {
           "name": "105mm_m728",
           "localizedName": "M728",
           "type": "apds_l15_tank",
@@ -136044,18 +137613,6 @@
           "explosiveMassKg": 2.9937,
           "explosiveType": "comp_a",
           "tntEquivalent": 3.772
-        },
-        {
-          "name": "105mm_m456",
-          "localizedName": "M456",
-          "type": "heat_fs_tank",
-          "caliber": 105.0,
-          "mass": 10.5,
-          "muzzleVelocity": 1173.5,
-          "penetration0m": 400.0,
-          "explosiveMassKg": 0.97,
-          "explosiveType": "comp_b",
-          "tntEquivalent": 1.232
         },
         {
           "name": "105mm_m416",
@@ -136167,6 +137724,17 @@
       },
       "ammunitions": [
         {
+          "name": "105mm_m416",
+          "localizedName": "M416",
+          "type": "smoke_tank",
+          "caliber": 105.0,
+          "mass": 11.6,
+          "muzzleVelocity": 731.5,
+          "explosiveMassKg": 0.05,
+          "explosiveType": "smoke_composition",
+          "tntEquivalent": 0.05
+        },
+        {
           "name": "105mm_m728",
           "localizedName": "M728",
           "type": "apds_l15_tank",
@@ -136183,41 +137751,6 @@
             "Cx": 0.1761
           },
           "penetration0m": 211.2
-        },
-        {
-          "name": "105mm_m393a2",
-          "localizedName": "M393",
-          "type": "hesh_tank",
-          "caliber": 105.0,
-          "mass": 11.2,
-          "muzzleVelocity": 731.5,
-          "penetration0m": 127.0,
-          "explosiveMassKg": 2.9937,
-          "explosiveType": "comp_a",
-          "tntEquivalent": 3.772
-        },
-        {
-          "name": "105mm_m456",
-          "localizedName": "M456",
-          "type": "heat_fs_tank",
-          "caliber": 105.0,
-          "mass": 10.5,
-          "muzzleVelocity": 1173.5,
-          "penetration0m": 400.0,
-          "explosiveMassKg": 0.97,
-          "explosiveType": "comp_b",
-          "tntEquivalent": 1.232
-        },
-        {
-          "name": "105mm_m416",
-          "localizedName": "M416",
-          "type": "smoke_tank",
-          "caliber": 105.0,
-          "mass": 11.6,
-          "muzzleVelocity": 731.5,
-          "explosiveMassKg": 0.05,
-          "explosiveType": "smoke_composition",
-          "tntEquivalent": 0.05
         },
         {
           "name": "105mm_m735",
@@ -136277,6 +137810,30 @@
             }
           ],
           "penetration0m": 292.4
+        },
+        {
+          "name": "105mm_m393a2",
+          "localizedName": "M393",
+          "type": "hesh_tank",
+          "caliber": 105.0,
+          "mass": 11.2,
+          "muzzleVelocity": 731.5,
+          "penetration0m": 127.0,
+          "explosiveMassKg": 2.9937,
+          "explosiveType": "comp_a",
+          "tntEquivalent": 3.772
+        },
+        {
+          "name": "105mm_m456",
+          "localizedName": "M456",
+          "type": "heat_fs_tank",
+          "caliber": 105.0,
+          "mass": 10.5,
+          "muzzleVelocity": 1173.5,
+          "penetration0m": 400.0,
+          "explosiveMassKg": 0.97,
+          "explosiveType": "comp_b",
+          "tntEquivalent": 1.232
         }
       ],
       "penetrationData": {},
@@ -136377,6 +137934,17 @@
       },
       "ammunitions": [
         {
+          "name": "105mm_m416",
+          "localizedName": "M416",
+          "type": "smoke_tank",
+          "caliber": 105.0,
+          "mass": 11.6,
+          "muzzleVelocity": 731.5,
+          "explosiveMassKg": 0.05,
+          "explosiveType": "smoke_composition",
+          "tntEquivalent": 0.05
+        },
+        {
           "name": "105mm_m728",
           "localizedName": "M728",
           "type": "apds_l15_tank",
@@ -136393,41 +137961,6 @@
             "Cx": 0.1761
           },
           "penetration0m": 211.2
-        },
-        {
-          "name": "105mm_m393a2",
-          "localizedName": "M393",
-          "type": "hesh_tank",
-          "caliber": 105.0,
-          "mass": 11.2,
-          "muzzleVelocity": 731.5,
-          "penetration0m": 127.0,
-          "explosiveMassKg": 2.9937,
-          "explosiveType": "comp_a",
-          "tntEquivalent": 3.772
-        },
-        {
-          "name": "105mm_m456",
-          "localizedName": "M456",
-          "type": "heat_fs_tank",
-          "caliber": 105.0,
-          "mass": 10.5,
-          "muzzleVelocity": 1173.5,
-          "penetration0m": 400.0,
-          "explosiveMassKg": 0.97,
-          "explosiveType": "comp_b",
-          "tntEquivalent": 1.232
-        },
-        {
-          "name": "105mm_m416",
-          "localizedName": "M416",
-          "type": "smoke_tank",
-          "caliber": 105.0,
-          "mass": 11.6,
-          "muzzleVelocity": 731.5,
-          "explosiveMassKg": 0.05,
-          "explosiveType": "smoke_composition",
-          "tntEquivalent": 0.05
         },
         {
           "name": "105mm_m735",
@@ -136487,6 +138020,30 @@
             }
           ],
           "penetration0m": 292.4
+        },
+        {
+          "name": "105mm_m393a2",
+          "localizedName": "M393",
+          "type": "hesh_tank",
+          "caliber": 105.0,
+          "mass": 11.2,
+          "muzzleVelocity": 731.5,
+          "penetration0m": 127.0,
+          "explosiveMassKg": 2.9937,
+          "explosiveType": "comp_a",
+          "tntEquivalent": 3.772
+        },
+        {
+          "name": "105mm_m456",
+          "localizedName": "M456",
+          "type": "heat_fs_tank",
+          "caliber": 105.0,
+          "mass": 10.5,
+          "muzzleVelocity": 1173.5,
+          "penetration0m": 400.0,
+          "explosiveMassKg": 0.97,
+          "explosiveType": "comp_b",
+          "tntEquivalent": 1.232
         }
       ],
       "penetrationData": {},
@@ -136873,6 +138430,29 @@
       },
       "ammunitions": [
         {
+          "name": "105mm_m393a2",
+          "localizedName": "M393",
+          "type": "hesh_tank",
+          "caliber": 105.0,
+          "mass": 11.2,
+          "muzzleVelocity": 731.5,
+          "penetration0m": 127.0,
+          "explosiveMassKg": 2.9937,
+          "explosiveType": "comp_a",
+          "tntEquivalent": 3.772
+        },
+        {
+          "name": "105mm_m416",
+          "localizedName": "M416",
+          "type": "smoke_tank",
+          "caliber": 105.0,
+          "mass": 11.6,
+          "muzzleVelocity": 731.5,
+          "explosiveMassKg": 0.05,
+          "explosiveType": "smoke_composition",
+          "tntEquivalent": 0.05
+        },
+        {
           "name": "105mm_m728",
           "localizedName": "M728",
           "type": "apds_l15_tank",
@@ -136901,18 +138481,6 @@
           "explosiveMassKg": 0.97,
           "explosiveType": "comp_b",
           "tntEquivalent": 1.232
-        },
-        {
-          "name": "105mm_m393a2",
-          "localizedName": "M393",
-          "type": "hesh_tank",
-          "caliber": 105.0,
-          "mass": 11.2,
-          "muzzleVelocity": 731.5,
-          "penetration0m": 127.0,
-          "explosiveMassKg": 2.9937,
-          "explosiveType": "comp_a",
-          "tntEquivalent": 3.772
         },
         {
           "name": "105mm_m735",
@@ -136972,17 +138540,6 @@
             }
           ],
           "penetration0m": 292.4
-        },
-        {
-          "name": "105mm_m416",
-          "localizedName": "M416",
-          "type": "smoke_tank",
-          "caliber": 105.0,
-          "mass": 11.6,
-          "muzzleVelocity": 731.5,
-          "explosiveMassKg": 0.05,
-          "explosiveType": "smoke_composition",
-          "tntEquivalent": 0.05
         },
         {
           "name": "105mm_m774",
@@ -137376,6 +138933,143 @@
         }
       ],
       "main_gun_ammo": 60,
+      "driver_nv_resolution": null,
+      "has_smoke_grenades": false,
+      "has_ess": false,
+      "has_laser_rangefinder": false
+    }
+  },
+  {
+    "id": "us_m7",
+    "performance": {
+      "horsepower": 400.0,
+      "weight": 24.47,
+      "power_to_weight": 16.35,
+      "max_reverse_speed": 4.7,
+      "reload_time": 5.0,
+      "penetration": 104.0,
+      "max_speed": 36.1,
+      "crew_count": 5,
+      "elevation_speed": 4.0,
+      "traverse_speed": 24.0,
+      "has_stabilizer": true,
+      "stabilizer_type": "vertical",
+      "elevation_range": [
+        -8.0,
+        18.0
+      ],
+      "traverse_range": [
+        -180.0,
+        180.0
+      ],
+      "gunner_thermal_resolution": null,
+      "commander_thermal_resolution": null,
+      "gunner_thermal_diagonal": null,
+      "commander_thermal_diagonal": null,
+      "stabilizer_value": 1,
+      "elevation_range_value": 26.0,
+      "mainGun": {
+        "name": "75mm_m3",
+        "caliber": 75.0,
+        "reloadTime": 5.0,
+        "autoLoader": false,
+        "reloadTimes": {
+          "base": 6.5,
+          "expert": 5.75,
+          "ace": 5.0
+        }
+      },
+      "ammunitions": [
+        {
+          "name": "75mm_m72",
+          "localizedName": "M72",
+          "type": "ap_tank",
+          "caliber": 75.0,
+          "mass": 6.3,
+          "muzzleVelocity": 619.0,
+          "deMarre": {
+            "fullCaliber": 75.0,
+            "isApcbc": false,
+            "explosiveMass": 0,
+            "Cx": 0.5
+          },
+          "penetration0m": 91.0
+        },
+        {
+          "name": "75mm_m48",
+          "localizedName": "M48",
+          "type": "he_frag_tank",
+          "caliber": 75.0,
+          "mass": 6.3,
+          "muzzleVelocity": 463.0,
+          "explosiveMassKg": 0.666,
+          "explosiveType": "tnt",
+          "tntEquivalent": 0.666
+        },
+        {
+          "name": "75mm_m61",
+          "localizedName": "M61",
+          "type": "apcbc_tank",
+          "caliber": 75.0,
+          "mass": 6.79,
+          "muzzleVelocity": 618.0,
+          "deMarre": {
+            "fullCaliber": 75.0,
+            "isApcbc": true,
+            "explosiveMass": 0.065,
+            "Cx": 0.379
+          },
+          "penetration0m": 104.0,
+          "explosiveMassKg": 0.065,
+          "explosiveType": "exp_d",
+          "tntEquivalent": 0.064
+        }
+      ],
+      "penetrationData": null,
+      "autoLoader": false,
+      "engine_manufacturer": null,
+      "engine_model": null,
+      "engine_type": null,
+      "engine_max_rpm": 2400.0,
+      "transmission_manufacturer": null,
+      "transmission_model": null,
+      "transmission_type": null,
+      "forward_gears": 5,
+      "reverse_gears": 1,
+      "forward_gear_speeds": [
+        3.5,
+        8.5,
+        14.8,
+        23.8,
+        36.1
+      ],
+      "reverse_gear_speeds": [
+        4.7
+      ],
+      "steer_type": "clutch_braking",
+      "empty_weight": 24.0,
+      "track_width": 0.4,
+      "secondary_weapons": [
+        {
+          "trigger": "gunner1",
+          "name": "7_62mm_M1919A4",
+          "caliber": 7.6,
+          "ammo": 2000,
+          "reloadTime": 8.0,
+          "rateOfFire": 500,
+          "bulletType": "ap_ball"
+        },
+        {
+          "trigger": "gunner2",
+          "name": "7_62mm_M1919A4",
+          "caliber": 7.6,
+          "ammo": 3000,
+          "reloadTime": 8.0,
+          "rateOfFire": 500,
+          "bulletType": "ap_ball"
+        }
+      ],
+      "main_gun_ammo": 71,
       "driver_nv_resolution": null,
       "has_smoke_grenades": false,
       "has_ess": false,
@@ -139836,18 +141530,6 @@
       },
       "ammunitions": [
         {
-          "name": "105mm_m456a2",
-          "localizedName": "M456A2",
-          "type": "heat_fs_tank",
-          "caliber": 105.0,
-          "mass": 10.5,
-          "muzzleVelocity": 1173.5,
-          "penetration0m": 400.0,
-          "explosiveMassKg": 0.97,
-          "explosiveType": "comp_b",
-          "tntEquivalent": 1.232
-        },
-        {
           "name": "105mm_m393a2",
           "localizedName": "M393",
           "type": "hesh_tank",
@@ -139858,28 +141540,6 @@
           "explosiveMassKg": 2.9937,
           "explosiveType": "comp_a",
           "tntEquivalent": 3.772
-        },
-        {
-          "name": "105mm_c76a1",
-          "localizedName": "C76A1",
-          "type": "apds_fs_long_tank",
-          "caliber": 26.0,
-          "mass": 3.6,
-          "muzzleVelocity": 1509.0,
-          "lanzOdermatt": {
-            "workingLength": 375.0,
-            "density": 17500.0,
-            "material": "tungsten",
-            "Cx": 0.45
-          },
-          "penetration0m": 353.1,
-          "penetrationData": {
-            "at0m": {
-              "angle0": 353.1,
-              "angle30": 305.8,
-              "angle60": 176.6
-            }
-          }
         },
         {
           "name": "105mm_dm33",
@@ -139900,6 +141560,40 @@
               "angle0": 420.7,
               "angle30": 364.3,
               "angle60": 210.4
+            }
+          }
+        },
+        {
+          "name": "105mm_m456a2",
+          "localizedName": "M456A2",
+          "type": "heat_fs_tank",
+          "caliber": 105.0,
+          "mass": 10.5,
+          "muzzleVelocity": 1173.5,
+          "penetration0m": 400.0,
+          "explosiveMassKg": 0.97,
+          "explosiveType": "comp_b",
+          "tntEquivalent": 1.232
+        },
+        {
+          "name": "105mm_c76a1",
+          "localizedName": "C76A1",
+          "type": "apds_fs_long_tank",
+          "caliber": 26.0,
+          "mass": 3.6,
+          "muzzleVelocity": 1509.0,
+          "lanzOdermatt": {
+            "workingLength": 375.0,
+            "density": 17500.0,
+            "material": "tungsten",
+            "Cx": 0.45
+          },
+          "penetration0m": 353.1,
+          "penetrationData": {
+            "at0m": {
+              "angle0": 353.1,
+              "angle30": 305.8,
+              "angle60": 176.6
             }
           }
         }
@@ -143556,6 +145250,17 @@
       },
       "ammunitions": [
         {
+          "name": "105mm_m416",
+          "localizedName": "M416",
+          "type": "smoke_tank",
+          "caliber": 105.0,
+          "mass": 11.6,
+          "muzzleVelocity": 731.5,
+          "explosiveMassKg": 0.05,
+          "explosiveType": "smoke_composition",
+          "tntEquivalent": 0.05
+        },
+        {
           "name": "105mm_m728",
           "localizedName": "M728",
           "type": "apds_l15_tank",
@@ -143572,41 +145277,6 @@
             "Cx": 0.1761
           },
           "penetration0m": 211.2
-        },
-        {
-          "name": "105mm_m393a2",
-          "localizedName": "M393",
-          "type": "hesh_tank",
-          "caliber": 105.0,
-          "mass": 11.2,
-          "muzzleVelocity": 731.5,
-          "penetration0m": 127.0,
-          "explosiveMassKg": 2.9937,
-          "explosiveType": "comp_a",
-          "tntEquivalent": 3.772
-        },
-        {
-          "name": "105mm_m456",
-          "localizedName": "M456",
-          "type": "heat_fs_tank",
-          "caliber": 105.0,
-          "mass": 10.5,
-          "muzzleVelocity": 1173.5,
-          "penetration0m": 400.0,
-          "explosiveMassKg": 0.97,
-          "explosiveType": "comp_b",
-          "tntEquivalent": 1.232
-        },
-        {
-          "name": "105mm_m416",
-          "localizedName": "M416",
-          "type": "smoke_tank",
-          "caliber": 105.0,
-          "mass": 11.6,
-          "muzzleVelocity": 731.5,
-          "explosiveMassKg": 0.05,
-          "explosiveType": "smoke_composition",
-          "tntEquivalent": 0.05
         },
         {
           "name": "105mm_m735",
@@ -143666,6 +145336,30 @@
             }
           ],
           "penetration0m": 292.4
+        },
+        {
+          "name": "105mm_m393a2",
+          "localizedName": "M393",
+          "type": "hesh_tank",
+          "caliber": 105.0,
+          "mass": 11.2,
+          "muzzleVelocity": 731.5,
+          "penetration0m": 127.0,
+          "explosiveMassKg": 2.9937,
+          "explosiveType": "comp_a",
+          "tntEquivalent": 3.772
+        },
+        {
+          "name": "105mm_m456",
+          "localizedName": "M456",
+          "type": "heat_fs_tank",
+          "caliber": 105.0,
+          "mass": 10.5,
+          "muzzleVelocity": 1173.5,
+          "penetration0m": 400.0,
+          "explosiveMassKg": 0.97,
+          "explosiveType": "comp_b",
+          "tntEquivalent": 1.232
         }
       ],
       "penetrationData": {},
@@ -143782,6 +145476,17 @@
       },
       "ammunitions": [
         {
+          "name": "105mm_m416",
+          "localizedName": "M416",
+          "type": "smoke_tank",
+          "caliber": 105.0,
+          "mass": 11.6,
+          "muzzleVelocity": 731.5,
+          "explosiveMassKg": 0.05,
+          "explosiveType": "smoke_composition",
+          "tntEquivalent": 0.05
+        },
+        {
           "name": "105mm_m728",
           "localizedName": "M728",
           "type": "apds_l15_tank",
@@ -143798,41 +145503,6 @@
             "Cx": 0.1761
           },
           "penetration0m": 211.2
-        },
-        {
-          "name": "105mm_m393a2",
-          "localizedName": "M393",
-          "type": "hesh_tank",
-          "caliber": 105.0,
-          "mass": 11.2,
-          "muzzleVelocity": 731.5,
-          "penetration0m": 127.0,
-          "explosiveMassKg": 2.9937,
-          "explosiveType": "comp_a",
-          "tntEquivalent": 3.772
-        },
-        {
-          "name": "105mm_m456",
-          "localizedName": "M456",
-          "type": "heat_fs_tank",
-          "caliber": 105.0,
-          "mass": 10.5,
-          "muzzleVelocity": 1173.5,
-          "penetration0m": 400.0,
-          "explosiveMassKg": 0.97,
-          "explosiveType": "comp_b",
-          "tntEquivalent": 1.232
-        },
-        {
-          "name": "105mm_m416",
-          "localizedName": "M416",
-          "type": "smoke_tank",
-          "caliber": 105.0,
-          "mass": 11.6,
-          "muzzleVelocity": 731.5,
-          "explosiveMassKg": 0.05,
-          "explosiveType": "smoke_composition",
-          "tntEquivalent": 0.05
         },
         {
           "name": "105mm_m735",
@@ -143892,6 +145562,30 @@
             }
           ],
           "penetration0m": 292.4
+        },
+        {
+          "name": "105mm_m393a2",
+          "localizedName": "M393",
+          "type": "hesh_tank",
+          "caliber": 105.0,
+          "mass": 11.2,
+          "muzzleVelocity": 731.5,
+          "penetration0m": 127.0,
+          "explosiveMassKg": 2.9937,
+          "explosiveType": "comp_a",
+          "tntEquivalent": 3.772
+        },
+        {
+          "name": "105mm_m456",
+          "localizedName": "M456",
+          "type": "heat_fs_tank",
+          "caliber": 105.0,
+          "mass": 10.5,
+          "muzzleVelocity": 1173.5,
+          "penetration0m": 400.0,
+          "explosiveMassKg": 0.97,
+          "explosiveType": "comp_b",
+          "tntEquivalent": 1.232
         }
       ],
       "penetrationData": {},
@@ -144086,18 +145780,6 @@
       },
       "ammunitions": [
         {
-          "name": "105mm_m456a2",
-          "localizedName": "M456A2",
-          "type": "heat_fs_tank",
-          "caliber": 105.0,
-          "mass": 10.5,
-          "muzzleVelocity": 1173.5,
-          "penetration0m": 400.0,
-          "explosiveMassKg": 0.97,
-          "explosiveType": "comp_b",
-          "tntEquivalent": 1.232
-        },
-        {
           "name": "105mm_m393a2",
           "localizedName": "M393",
           "type": "hesh_tank",
@@ -144119,6 +145801,18 @@
           "explosiveMassKg": 0.05,
           "explosiveType": "smoke_composition",
           "tntEquivalent": 0.05
+        },
+        {
+          "name": "105mm_m456a2",
+          "localizedName": "M456A2",
+          "type": "heat_fs_tank",
+          "caliber": 105.0,
+          "mass": 10.5,
+          "muzzleVelocity": 1173.5,
+          "penetration0m": 400.0,
+          "explosiveMassKg": 0.97,
+          "explosiveType": "comp_b",
+          "tntEquivalent": 1.232
         },
         {
           "name": "105mm_m735",
@@ -144528,7 +146222,7 @@
           "bulletType": "ap_ball"
         }
       ],
-      "main_gun_ammo": 53,
+      "main_gun_ammo": 54,
       "driver_nv_resolution": [
         800,
         600
@@ -145336,17 +147030,6 @@
           "tntEquivalent": 2.578
         },
         {
-          "name": "125mm_3of_26",
-          "localizedName": "3OF26",
-          "type": "he_frag_fs_tank",
-          "caliber": 125.0,
-          "mass": 23.0,
-          "muzzleVelocity": 850.0,
-          "explosiveMassKg": 3.402,
-          "explosiveType": "a_ix_2",
-          "tntEquivalent": 4.763
-        },
-        {
           "name": "125mm_3bm60",
           "localizedName": "3BM60",
           "type": "apds_fs_long_l30_tank",
@@ -145414,6 +147097,17 @@
             }
           ],
           "penetration0m": 457.0
+        },
+        {
+          "name": "125mm_3of_26",
+          "localizedName": "3OF26",
+          "type": "he_frag_fs_tank",
+          "caliber": 125.0,
+          "mass": 23.0,
+          "muzzleVelocity": 850.0,
+          "explosiveMassKg": 3.402,
+          "explosiveType": "a_ix_2",
+          "tntEquivalent": 4.763
         },
         {
           "name": "125mm_9m_119m1",
@@ -150390,6 +152084,168 @@
     }
   },
   {
+    "id": "ussr_is_2m_kit_4rank",
+    "performance": {
+      "horsepower": 520.0,
+      "weight": 48.5,
+      "power_to_weight": 10.72,
+      "max_reverse_speed": 16.6,
+      "reload_time": 19.35,
+      "penetration": 230.6,
+      "max_speed": 40.0,
+      "crew_count": 5,
+      "elevation_speed": 4.0,
+      "traverse_speed": 14.0,
+      "has_stabilizer": false,
+      "stabilizer_type": "none",
+      "elevation_range": [
+        -3.0,
+        20.0
+      ],
+      "traverse_range": [
+        -180.0,
+        180.0
+      ],
+      "gunner_thermal_resolution": null,
+      "commander_thermal_resolution": null,
+      "gunner_thermal_diagonal": null,
+      "commander_thermal_diagonal": null,
+      "stabilizer_value": 0,
+      "elevation_range_value": 23.0,
+      "mainGun": {
+        "name": "122mm_D25T",
+        "caliber": 122.0,
+        "reloadTime": 19.35,
+        "autoLoader": false,
+        "reloadTimes": {
+          "base": 25.16,
+          "expert": 22.25,
+          "ace": 19.35
+        }
+      },
+      "ammunitions": [
+        {
+          "name": "122mm_br_471",
+          "localizedName": "BR-471",
+          "type": "aphe_tank",
+          "caliber": 122.0,
+          "mass": 25.0,
+          "muzzleVelocity": 795.0,
+          "deMarre": {
+            "fullCaliber": 122.0,
+            "isApcbc": false,
+            "explosiveMass": 0.16,
+            "Cx": 0.5947
+          },
+          "penetration0m": 205.7,
+          "explosiveMassKg": 0.16,
+          "explosiveType": "a_ix_2",
+          "tntEquivalent": 0.224
+        },
+        {
+          "name": "122mm_of_471",
+          "localizedName": "OF-471",
+          "type": "he_frag_tank",
+          "caliber": 122.0,
+          "mass": 25.0,
+          "muzzleVelocity": 795.0,
+          "explosiveMassKg": 3.6,
+          "explosiveType": "tnt",
+          "tntEquivalent": 3.6
+        },
+        {
+          "name": "122mm_br_471b",
+          "localizedName": "BR-471B",
+          "type": "aphebc_tank",
+          "caliber": 122.0,
+          "mass": 25.0,
+          "muzzleVelocity": 795.0,
+          "deMarre": {
+            "fullCaliber": 122.0,
+            "isApcbc": false,
+            "explosiveMass": 0.16,
+            "Cx": 0.3496
+          },
+          "penetration0m": 205.7,
+          "explosiveMassKg": 0.16,
+          "explosiveType": "a_ix_2",
+          "tntEquivalent": 0.224
+        },
+        {
+          "name": "122mm_br_471d",
+          "localizedName": "BR-471D",
+          "type": "apcbc_tank",
+          "caliber": 122.0,
+          "mass": 25.0,
+          "muzzleVelocity": 800.0,
+          "deMarre": {
+            "fullCaliber": 122.0,
+            "isApcbc": true,
+            "explosiveMass": 0.125,
+            "Cx": 0.35
+          },
+          "penetration0m": 230.6,
+          "explosiveMassKg": 0.125,
+          "explosiveType": "a_ix_2",
+          "tntEquivalent": 0.175
+        }
+      ],
+      "penetrationData": null,
+      "autoLoader": false,
+      "engine_manufacturer": null,
+      "engine_model": null,
+      "engine_type": null,
+      "engine_max_rpm": 2000.0,
+      "transmission_manufacturer": null,
+      "transmission_model": null,
+      "transmission_type": null,
+      "forward_gears": 8,
+      "reverse_gears": 2,
+      "forward_gear_speeds": [
+        4.0,
+        5.7,
+        8.2,
+        11.3,
+        13.3,
+        20.2,
+        28.9,
+        40.0
+      ],
+      "reverse_gear_speeds": [
+        4.4,
+        16.6
+      ],
+      "steer_type": "clutch_braking",
+      "empty_weight": 48.0,
+      "track_width": 0.7,
+      "secondary_weapons": [
+        {
+          "trigger": "gunner1",
+          "name": "7_62mm_DT",
+          "caliber": 7.6,
+          "ammo": 1890,
+          "reloadTime": 8.0,
+          "rateOfFire": 600,
+          "bulletType": "ap_i_ball"
+        },
+        {
+          "trigger": "gunner2",
+          "name": "12_7mm_DShK",
+          "caliber": 12.7,
+          "ammo": 300,
+          "reloadTime": 8.0,
+          "rateOfFire": 600,
+          "bulletType": "ap_i_t_ball"
+        }
+      ],
+      "main_gun_ammo": 35,
+      "driver_nv_resolution": null,
+      "has_smoke_grenades": true,
+      "has_ess": false,
+      "has_laser_rangefinder": false
+    }
+  },
+  {
     "id": "ussr_is_3",
     "performance": {
       "horsepower": 520.0,
@@ -151556,7 +153412,7 @@
           "bulletType": "ap_i_ball"
         }
       ],
-      "main_gun_ammo": 15,
+      "main_gun_ammo": 16,
       "driver_nv_resolution": [
         800,
         600
@@ -151813,7 +153669,7 @@
           "trigger": "gunner1",
           "name": "7_62mm_DT",
           "caliber": 7.6,
-          "ammo": 2024,
+          "ammo": 2016,
           "reloadTime": 8.0,
           "rateOfFire": 600,
           "bulletType": "ap_i_ball"
@@ -151822,7 +153678,7 @@
           "trigger": "gunner4",
           "name": "7_62mm_DT",
           "caliber": 7.6,
-          "ammo": 1000,
+          "ammo": 1008,
           "reloadTime": 8.0,
           "rateOfFire": 600,
           "bulletType": "ap_i_ball"
@@ -151957,7 +153813,7 @@
           "trigger": "gunner1",
           "name": "7_62mm_DT",
           "caliber": 7.6,
-          "ammo": 2024,
+          "ammo": 2016,
           "reloadTime": 8.0,
           "rateOfFire": 600,
           "bulletType": "ap_i_ball"
@@ -151966,7 +153822,7 @@
           "trigger": "gunner4",
           "name": "7_62mm_DT",
           "caliber": 7.6,
-          "ammo": 1000,
+          "ammo": 1008,
           "reloadTime": 8.0,
           "rateOfFire": 600,
           "bulletType": "ap_i_ball"
@@ -152101,7 +153957,7 @@
           "trigger": "gunner1",
           "name": "7_62mm_DT",
           "caliber": 7.6,
-          "ammo": 2024,
+          "ammo": 2016,
           "reloadTime": 8.0,
           "rateOfFire": 600,
           "bulletType": "ap_i_ball"
@@ -152110,7 +153966,7 @@
           "trigger": "gunner4",
           "name": "7_62mm_DT",
           "caliber": 7.6,
-          "ammo": 1000,
+          "ammo": 1008,
           "reloadTime": 8.0,
           "rateOfFire": 600,
           "bulletType": "ap_i_ball"
@@ -152250,7 +154106,7 @@
           "trigger": "gunner1",
           "name": "7_62mm_DT",
           "caliber": 7.6,
-          "ammo": 2087,
+          "ammo": 2079,
           "reloadTime": 8.0,
           "rateOfFire": 600,
           "bulletType": "ap_i_ball"
@@ -152259,7 +154115,7 @@
           "trigger": "gunner4",
           "name": "7_62mm_DT",
           "caliber": 7.6,
-          "ammo": 1000,
+          "ammo": 1008,
           "reloadTime": 8.0,
           "rateOfFire": 600,
           "bulletType": "ap_i_ball"
@@ -153583,6 +155439,115 @@
     }
   },
   {
+    "id": "ussr_m53_59_kit_4rank",
+    "performance": {
+      "horsepower": 110.0,
+      "weight": 10.3,
+      "power_to_weight": 10.68,
+      "max_reverse_speed": 9.3,
+      "reload_time": 6.0,
+      "penetration": 91.8,
+      "max_speed": 60.0,
+      "crew_count": 5,
+      "elevation_speed": 35.0,
+      "traverse_speed": 40.0,
+      "has_stabilizer": false,
+      "stabilizer_type": "none",
+      "elevation_range": [
+        -10.0,
+        85.0
+      ],
+      "traverse_range": [
+        -180.0,
+        180.0
+      ],
+      "gunner_thermal_resolution": null,
+      "commander_thermal_resolution": null,
+      "gunner_thermal_diagonal": null,
+      "commander_thermal_diagonal": null,
+      "stabilizer_value": 0,
+      "elevation_range_value": 95.0,
+      "mainGun": {
+        "name": "30mm_ZK_453",
+        "caliber": 30.0,
+        "reloadTime": 6.0,
+        "autoLoader": false,
+        "reloadTimes": {
+          "base": 7.8,
+          "expert": 6.9,
+          "ace": 6.0
+        },
+        "rateOfFire": 450,
+        "beltReloadTime": 6.0
+      },
+      "ammunitions": [
+        {
+          "name": "30mm_jfsv_53_he",
+          "localizedName": "30-JFSv-53",
+          "type": "frag_i_t",
+          "caliber": 30.0,
+          "mass": 0.453,
+          "muzzleVelocity": 1000.0,
+          "explosiveMassKg": 0.041,
+          "explosiveType": "a_ix_2",
+          "tntEquivalent": 0.057
+        },
+        {
+          "name": "30mm_jpzsv_53_59",
+          "localizedName": "30-JPZSv-53/59",
+          "type": "apcr_t",
+          "caliber": 16.1,
+          "mass": 0.425,
+          "muzzleVelocity": 1000.0,
+          "deMarre": {
+            "fullCaliber": 30.0,
+            "isApcbc": false,
+            "explosiveMass": 0,
+            "isApcr": true,
+            "coreCaliber": 16.1,
+            "coreMass": 0.231,
+            "Cx": 0.2873
+          },
+          "penetration0m": 91.8
+        }
+      ],
+      "penetrationData": null,
+      "autoLoader": false,
+      "engine_manufacturer": null,
+      "engine_model": null,
+      "engine_type": null,
+      "engine_max_rpm": 2200.0,
+      "transmission_manufacturer": null,
+      "transmission_model": null,
+      "transmission_type": null,
+      "forward_gears": 8,
+      "reverse_gears": 2,
+      "forward_gear_speeds": [
+        3.2,
+        6.5,
+        9.5,
+        12.8,
+        18.7,
+        20.6,
+        33.5,
+        60.0
+      ],
+      "reverse_gear_speeds": [
+        3.2,
+        9.3
+      ],
+      "steer_type": null,
+      "empty_weight": 10.0,
+      "track_width": 0.1,
+      "secondary_weapons": null,
+      "main_gun_ammo": 200,
+      "driver_nv_resolution": null,
+      "has_smoke_grenades": false,
+      "has_ess": false,
+      "has_laser_rangefinder": false
+    }
+  },
+  {
     "id": "ussr_object_120",
     "performance": {
       "horsepower": 480.0,
@@ -154384,6 +156349,184 @@
       "has_smoke_grenades": false,
       "has_ess": true,
       "has_laser_rangefinder": true
+    }
+  },
+  {
+    "id": "ussr_object_416",
+    "performance": {
+      "horsepower": 400.0,
+      "weight": 24.0,
+      "power_to_weight": 16.67,
+      "max_reverse_speed": 7.5,
+      "reload_time": 10.0,
+      "penetration": 239.6,
+      "max_speed": 50.0,
+      "crew_count": 5,
+      "elevation_speed": 4.5,
+      "traverse_speed": 13.0,
+      "has_stabilizer": false,
+      "stabilizer_type": "none",
+      "elevation_range": [
+        -3.0,
+        15.0
+      ],
+      "traverse_range": [
+        -180.0,
+        180.0
+      ],
+      "gunner_thermal_resolution": null,
+      "commander_thermal_resolution": null,
+      "gunner_thermal_diagonal": null,
+      "commander_thermal_diagonal": null,
+      "stabilizer_value": 0,
+      "elevation_range_value": 18.0,
+      "mainGun": {
+        "name": "100mm_D10T_416",
+        "caliber": 100.0,
+        "reloadTime": 10.0,
+        "autoLoader": false,
+        "reloadTimes": {
+          "base": 13.0,
+          "expert": 11.5,
+          "ace": 10.0
+        }
+      },
+      "ammunitions": [
+        {
+          "name": "100mm_br_412",
+          "localizedName": "BR-412",
+          "type": "aphe_tank",
+          "caliber": 100.0,
+          "mass": 15.88,
+          "muzzleVelocity": 895.0,
+          "deMarre": {
+            "fullCaliber": 100.0,
+            "isApcbc": false,
+            "explosiveMass": 0.065,
+            "Cx": 0.658
+          },
+          "penetration0m": 218.4,
+          "explosiveMassKg": 0.065,
+          "explosiveType": "a_ix_2",
+          "tntEquivalent": 0.091
+        },
+        {
+          "name": "100mm_of_412",
+          "localizedName": "OF-412",
+          "type": "he_frag_tank",
+          "caliber": 100.0,
+          "mass": 15.6,
+          "muzzleVelocity": 900.0,
+          "explosiveMassKg": 1.462,
+          "explosiveType": "tnt",
+          "tntEquivalent": 1.462
+        },
+        {
+          "name": "100mm_br_412b",
+          "localizedName": "BR-412B",
+          "type": "aphebc_tank",
+          "caliber": 100.0,
+          "mass": 15.88,
+          "muzzleVelocity": 895.0,
+          "deMarre": {
+            "fullCaliber": 100.0,
+            "isApcbc": false,
+            "explosiveMass": 0.065,
+            "Cx": 0.395
+          },
+          "penetration0m": 218.4,
+          "explosiveMassKg": 0.065,
+          "explosiveType": "a_ix_2",
+          "tntEquivalent": 0.091
+        },
+        {
+          "name": "100mm_br_412d",
+          "localizedName": "BR-412D",
+          "type": "apcbc_tank",
+          "caliber": 100.0,
+          "mass": 15.88,
+          "muzzleVelocity": 887.0,
+          "deMarre": {
+            "fullCaliber": 100.0,
+            "isApcbc": true,
+            "explosiveMass": 0.065,
+            "Cx": 0.395
+          },
+          "penetration0m": 239.6,
+          "explosiveMassKg": 0.065,
+          "explosiveType": "a_ix_2",
+          "tntEquivalent": 0.091
+        },
+        {
+          "name": "100mm_br_412p",
+          "localizedName": "BR-412P",
+          "type": "apcr_tank",
+          "caliber": 42.0,
+          "mass": 8.53,
+          "muzzleVelocity": 1050.0,
+          "deMarre": {
+            "fullCaliber": 100.0,
+            "isApcbc": false,
+            "explosiveMass": 0,
+            "isApcr": true,
+            "coreCaliber": 42.0,
+            "coreMass": 2.13,
+            "Cx": 0.47
+          },
+          "penetration0m": 233.2
+        },
+        {
+          "name": "100mm_3d3",
+          "localizedName": "3D3",
+          "type": "smoke_tank",
+          "caliber": 100.0,
+          "mass": 15.6,
+          "muzzleVelocity": 880.0,
+          "explosiveMassKg": 0.05,
+          "explosiveType": "smoke_composition",
+          "tntEquivalent": 0.05
+        }
+      ],
+      "penetrationData": null,
+      "autoLoader": false,
+      "engine_manufacturer": null,
+      "engine_model": null,
+      "engine_type": null,
+      "engine_max_rpm": 2000.0,
+      "transmission_manufacturer": null,
+      "transmission_model": null,
+      "transmission_type": null,
+      "forward_gears": 5,
+      "reverse_gears": 1,
+      "forward_gear_speeds": [
+        7.5,
+        16.1,
+        22.5,
+        31.5,
+        50.0
+      ],
+      "reverse_gear_speeds": [
+        7.5
+      ],
+      "steer_type": "clutch_braking",
+      "empty_weight": 23.5,
+      "track_width": 0.584,
+      "secondary_weapons": [
+        {
+          "trigger": "gunner1",
+          "name": "7_62mm_SGMT",
+          "caliber": 7.6,
+          "ammo": 6000,
+          "reloadTime": 8.0,
+          "rateOfFire": 600,
+          "bulletType": "ap_i_ball"
+        }
+      ],
+      "main_gun_ammo": 35,
+      "driver_nv_resolution": null,
+      "has_smoke_grenades": true,
+      "has_ess": false,
+      "has_laser_rangefinder": false
     }
   },
   {
@@ -162441,6 +164584,191 @@
     }
   },
   {
+    "id": "ussr_t_44_kit_4rank",
+    "performance": {
+      "horsepower": 520.0,
+      "weight": 31.0,
+      "power_to_weight": 16.77,
+      "max_reverse_speed": 8.8,
+      "reload_time": 7.41,
+      "penetration": 222.6,
+      "max_speed": 58.8,
+      "crew_count": 5,
+      "elevation_speed": 4.0,
+      "traverse_speed": 25.0,
+      "has_stabilizer": false,
+      "stabilizer_type": "none",
+      "elevation_range": [
+        -5.0,
+        20.0
+      ],
+      "traverse_range": [
+        -180.0,
+        180.0
+      ],
+      "gunner_thermal_resolution": null,
+      "commander_thermal_resolution": null,
+      "gunner_thermal_diagonal": null,
+      "commander_thermal_diagonal": null,
+      "stabilizer_value": 0,
+      "elevation_range_value": 25.0,
+      "mainGun": {
+        "name": "85mm_ZiS_S_53",
+        "caliber": 85.0,
+        "reloadTime": 7.41,
+        "autoLoader": false,
+        "reloadTimes": {
+          "base": 9.63,
+          "expert": 8.52,
+          "ace": 7.41
+        }
+      },
+      "ammunitions": [
+        {
+          "name": "85mm_br_365k",
+          "localizedName": "BR-365K",
+          "type": "aphe_tank",
+          "caliber": 85.0,
+          "mass": 9.2,
+          "muzzleVelocity": 792.0,
+          "deMarre": {
+            "fullCaliber": 85.0,
+            "isApcbc": false,
+            "explosiveMass": 0.05,
+            "Cx": 0.6106
+          },
+          "penetration0m": 148.1,
+          "explosiveMassKg": 0.05,
+          "explosiveType": "a_ix_2",
+          "tntEquivalent": 0.07
+        },
+        {
+          "name": "85mm_o_365k",
+          "localizedName": "O-365K",
+          "type": "he_frag_tank",
+          "caliber": 85.0,
+          "mass": 9.54,
+          "muzzleVelocity": 785.0,
+          "explosiveMassKg": 0.741,
+          "explosiveType": "tnt",
+          "tntEquivalent": 0.741
+        },
+        {
+          "name": "85mm_br_365a",
+          "localizedName": "BR-365",
+          "type": "aphebc_tank",
+          "caliber": 85.0,
+          "mass": 9.2,
+          "muzzleVelocity": 792.0,
+          "deMarre": {
+            "fullCaliber": 85.0,
+            "isApcbc": false,
+            "explosiveMass": 0.164,
+            "Cx": 0.3308
+          },
+          "penetration0m": 135.7,
+          "explosiveMassKg": 0.164,
+          "explosiveType": "tnt",
+          "tntEquivalent": 0.164
+        },
+        {
+          "name": "85mm_br_367",
+          "localizedName": "BR-367",
+          "type": "apcbc_tank",
+          "caliber": 85.0,
+          "mass": 9.2,
+          "muzzleVelocity": 792.0,
+          "deMarre": {
+            "fullCaliber": 85.0,
+            "isApcbc": true,
+            "explosiveMass": 0.05,
+            "Cx": 0.378
+          },
+          "penetration0m": 164.6,
+          "explosiveMassKg": 0.05,
+          "explosiveType": "a_ix_2",
+          "tntEquivalent": 0.07
+        },
+        {
+          "name": "85mm_br_365p",
+          "localizedName": "BR-365P",
+          "type": "apcr_tank",
+          "caliber": 28.0,
+          "mass": 4.99,
+          "muzzleVelocity": 1050.0,
+          "deMarre": {
+            "fullCaliber": 85.0,
+            "isApcbc": false,
+            "explosiveMass": 0,
+            "isApcr": true,
+            "coreCaliber": 28.0,
+            "coreMass": 0.648,
+            "Cx": 0.4779
+          },
+          "penetration0m": 222.6
+        },
+        {
+          "name": "85mm_br_367p",
+          "localizedName": "BR-367P",
+          "type": "apcr_tank",
+          "caliber": 30.0,
+          "mass": 5.3,
+          "muzzleVelocity": 1020.0,
+          "deMarre": {
+            "fullCaliber": 85.0,
+            "isApcbc": false,
+            "explosiveMass": 0,
+            "isApcr": true,
+            "coreCaliber": 30.0,
+            "coreMass": 1.1,
+            "Cx": 0.3608
+          },
+          "penetration0m": 221.2
+        }
+      ],
+      "penetrationData": null,
+      "autoLoader": false,
+      "engine_manufacturer": "chtz",
+      "engine_model": "v_44",
+      "engine_type": null,
+      "engine_max_rpm": 2000.0,
+      "transmission_manufacturer": null,
+      "transmission_model": null,
+      "transmission_type": null,
+      "forward_gears": 5,
+      "reverse_gears": 1,
+      "forward_gear_speeds": [
+        8.8,
+        18.9,
+        26.5,
+        37.0,
+        58.8
+      ],
+      "reverse_gear_speeds": [
+        8.8
+      ],
+      "steer_type": "clutch_braking",
+      "empty_weight": 30.5,
+      "track_width": 0.58,
+      "secondary_weapons": [
+        {
+          "trigger": "gunner1",
+          "name": "7_62mm_DT",
+          "caliber": 7.6,
+          "ammo": 1890,
+          "reloadTime": 8.0,
+          "rateOfFire": 600,
+          "bulletType": "ap_i_ball"
+        }
+      ],
+      "main_gun_ammo": 58,
+      "driver_nv_resolution": null,
+      "has_smoke_grenades": false,
+      "has_ess": false,
+      "has_laser_rangefinder": false
+    }
+  },
+  {
     "id": "ussr_t_44_po",
     "performance": {
       "horsepower": 500.0,
@@ -165219,15 +167547,26 @@
           "tntEquivalent": 1.881
         },
         {
-          "name": "125mm_3of_26",
-          "localizedName": "3OF26",
-          "type": "he_frag_fs_tank",
-          "caliber": 125.0,
-          "mass": 23.0,
-          "muzzleVelocity": 850.0,
-          "explosiveMassKg": 3.402,
-          "explosiveType": "a_ix_2",
-          "tntEquivalent": 4.763
+          "name": "125mm_3bm9",
+          "localizedName": "3BM9",
+          "type": "apds_fs_full_body_steel_tank",
+          "caliber": 44.0,
+          "mass": 3.6,
+          "muzzleVelocity": 1800.0,
+          "lanzOdermatt": {
+            "workingLength": 410.0,
+            "density": 7760.0,
+            "material": "steel",
+            "Cx": 0.3105
+          },
+          "penetration0m": 210.4,
+          "penetrationData": {
+            "at0m": {
+              "angle0": 210.4,
+              "angle30": 182.2,
+              "angle60": 105.2
+            }
+          }
         },
         {
           "name": "125mm_3bm15",
@@ -165324,26 +167663,15 @@
           "penetration0m": 425.0
         },
         {
-          "name": "125mm_3bm9",
-          "localizedName": "3BM9",
-          "type": "apds_fs_full_body_steel_tank",
-          "caliber": 44.0,
-          "mass": 3.6,
-          "muzzleVelocity": 1800.0,
-          "lanzOdermatt": {
-            "workingLength": 410.0,
-            "density": 7760.0,
-            "material": "steel",
-            "Cx": 0.3105
-          },
-          "penetration0m": 210.4,
-          "penetrationData": {
-            "at0m": {
-              "angle0": 210.4,
-              "angle30": 182.2,
-              "angle60": 105.2
-            }
-          }
+          "name": "125mm_3of_26",
+          "localizedName": "3OF26",
+          "type": "he_frag_fs_tank",
+          "caliber": 125.0,
+          "mass": 23.0,
+          "muzzleVelocity": 850.0,
+          "explosiveMassKg": 3.402,
+          "explosiveType": "a_ix_2",
+          "tntEquivalent": 4.763
         }
       ],
       "penetrationData": {},
@@ -167507,39 +169835,6 @@
           "tntEquivalent": 2.578
         },
         {
-          "name": "125mm_3of_26",
-          "localizedName": "3OF26",
-          "type": "he_frag_fs_tank",
-          "caliber": 125.0,
-          "mass": 23.0,
-          "muzzleVelocity": 850.0,
-          "explosiveMassKg": 3.402,
-          "explosiveType": "a_ix_2",
-          "tntEquivalent": 4.763
-        },
-        {
-          "name": "125mm_3bm46",
-          "localizedName": "3BM46",
-          "type": "apds_fs_long_l30_tank",
-          "caliber": 25.0,
-          "mass": 4.85,
-          "muzzleVelocity": 1700.0,
-          "lanzOdermatt": {
-            "workingLength": 546.0,
-            "density": 18600.0,
-            "material": "depletedUranium",
-            "Cx": 0.5382
-          },
-          "penetration0m": 532.6,
-          "penetrationData": {
-            "at0m": {
-              "angle0": 532.6,
-              "angle30": 461.2,
-              "angle60": 266.3
-            }
-          }
-        },
-        {
           "name": "125mm_3bm42",
           "localizedName": "3BM42",
           "type": "apds_fs_tungsten_caliber_fins_tank",
@@ -167585,6 +169880,39 @@
             }
           ],
           "penetration0m": 457.0
+        },
+        {
+          "name": "125mm_3bm46",
+          "localizedName": "3BM46",
+          "type": "apds_fs_long_l30_tank",
+          "caliber": 25.0,
+          "mass": 4.85,
+          "muzzleVelocity": 1700.0,
+          "lanzOdermatt": {
+            "workingLength": 546.0,
+            "density": 18600.0,
+            "material": "depletedUranium",
+            "Cx": 0.5382
+          },
+          "penetration0m": 532.6,
+          "penetrationData": {
+            "at0m": {
+              "angle0": 532.6,
+              "angle30": 461.2,
+              "angle60": 266.3
+            }
+          }
+        },
+        {
+          "name": "125mm_3of_26",
+          "localizedName": "3OF26",
+          "type": "he_frag_fs_tank",
+          "caliber": 125.0,
+          "mass": 23.0,
+          "muzzleVelocity": 850.0,
+          "explosiveMassKg": 3.402,
+          "explosiveType": "a_ix_2",
+          "tntEquivalent": 4.763
         },
         {
           "name": "125mm_9m_119",
@@ -167714,17 +170042,6 @@
           "tntEquivalent": 2.578
         },
         {
-          "name": "125mm_3of_26",
-          "localizedName": "3OF26",
-          "type": "he_frag_fs_tank",
-          "caliber": 125.0,
-          "mass": 23.0,
-          "muzzleVelocity": 850.0,
-          "explosiveMassKg": 3.402,
-          "explosiveType": "a_ix_2",
-          "tntEquivalent": 4.763
-        },
-        {
           "name": "125mm_3bm42",
           "localizedName": "3BM42",
           "type": "apds_fs_tungsten_caliber_fins_tank",
@@ -167770,6 +170087,17 @@
             }
           ],
           "penetration0m": 457.0
+        },
+        {
+          "name": "125mm_3of_26",
+          "localizedName": "3OF26",
+          "type": "he_frag_fs_tank",
+          "caliber": 125.0,
+          "mass": 23.0,
+          "muzzleVelocity": 850.0,
+          "explosiveMassKg": 3.402,
+          "explosiveType": "a_ix_2",
+          "tntEquivalent": 4.763
         },
         {
           "name": "125mm_9m_119",
@@ -167905,28 +170233,6 @@
           "tntEquivalent": 4.763
         },
         {
-          "name": "125mm_3bm46",
-          "localizedName": "3BM46",
-          "type": "apds_fs_long_l30_tank",
-          "caliber": 25.0,
-          "mass": 4.85,
-          "muzzleVelocity": 1700.0,
-          "lanzOdermatt": {
-            "workingLength": 546.0,
-            "density": 18600.0,
-            "material": "depletedUranium",
-            "Cx": 0.5382
-          },
-          "penetration0m": 532.6,
-          "penetrationData": {
-            "at0m": {
-              "angle0": 532.6,
-              "angle30": 461.2,
-              "angle60": 266.3
-            }
-          }
-        },
-        {
           "name": "125mm_3bm42",
           "localizedName": "3BM42",
           "type": "apds_fs_tungsten_caliber_fins_tank",
@@ -167972,6 +170278,28 @@
             }
           ],
           "penetration0m": 457.0
+        },
+        {
+          "name": "125mm_3bm46",
+          "localizedName": "3BM46",
+          "type": "apds_fs_long_l30_tank",
+          "caliber": 25.0,
+          "mass": 4.85,
+          "muzzleVelocity": 1700.0,
+          "lanzOdermatt": {
+            "workingLength": 546.0,
+            "density": 18600.0,
+            "material": "depletedUranium",
+            "Cx": 0.5382
+          },
+          "penetration0m": 532.6,
+          "penetrationData": {
+            "at0m": {
+              "angle0": 532.6,
+              "angle30": 461.2,
+              "angle60": 266.3
+            }
+          }
         },
         {
           "name": "125mm_9m_119m1",
@@ -168115,28 +170443,6 @@
           "tntEquivalent": 4.763
         },
         {
-          "name": "125mm_3bm46",
-          "localizedName": "3BM46",
-          "type": "apds_fs_long_l30_tank",
-          "caliber": 25.0,
-          "mass": 4.85,
-          "muzzleVelocity": 1700.0,
-          "lanzOdermatt": {
-            "workingLength": 546.0,
-            "density": 18600.0,
-            "material": "depletedUranium",
-            "Cx": 0.5382
-          },
-          "penetration0m": 532.6,
-          "penetrationData": {
-            "at0m": {
-              "angle0": 532.6,
-              "angle30": 461.2,
-              "angle60": 266.3
-            }
-          }
-        },
-        {
           "name": "125mm_3bm42",
           "localizedName": "3BM42",
           "type": "apds_fs_tungsten_caliber_fins_tank",
@@ -168182,6 +170488,28 @@
             }
           ],
           "penetration0m": 457.0
+        },
+        {
+          "name": "125mm_3bm46",
+          "localizedName": "3BM46",
+          "type": "apds_fs_long_l30_tank",
+          "caliber": 25.0,
+          "mass": 4.85,
+          "muzzleVelocity": 1700.0,
+          "lanzOdermatt": {
+            "workingLength": 546.0,
+            "density": 18600.0,
+            "material": "depletedUranium",
+            "Cx": 0.5382
+          },
+          "penetration0m": 532.6,
+          "penetrationData": {
+            "at0m": {
+              "angle0": 532.6,
+              "angle30": 461.2,
+              "angle60": 266.3
+            }
+          }
         },
         {
           "name": "125mm_9m_119m1",
@@ -168314,39 +170642,6 @@
           "tntEquivalent": 2.578
         },
         {
-          "name": "125mm_3of_26_edkv",
-          "localizedName": "3OF26 (可​编​程​引​信)",
-          "type": "he_frag_dist_fuse",
-          "caliber": 125.0,
-          "mass": 23.0,
-          "muzzleVelocity": 850.0,
-          "explosiveMassKg": 3.402,
-          "explosiveType": "a_ix_2",
-          "tntEquivalent": 4.763
-        },
-        {
-          "name": "125mm_3bm46",
-          "localizedName": "3BM46",
-          "type": "apds_fs_long_l30_tank",
-          "caliber": 25.0,
-          "mass": 4.85,
-          "muzzleVelocity": 1700.0,
-          "lanzOdermatt": {
-            "workingLength": 546.0,
-            "density": 18600.0,
-            "material": "depletedUranium",
-            "Cx": 0.5382
-          },
-          "penetration0m": 532.6,
-          "penetrationData": {
-            "at0m": {
-              "angle0": 532.6,
-              "angle30": 461.2,
-              "angle60": 266.3
-            }
-          }
-        },
-        {
           "name": "125mm_3bm42",
           "localizedName": "3BM42",
           "type": "apds_fs_tungsten_caliber_fins_tank",
@@ -168392,6 +170687,39 @@
             }
           ],
           "penetration0m": 457.0
+        },
+        {
+          "name": "125mm_3bm46",
+          "localizedName": "3BM46",
+          "type": "apds_fs_long_l30_tank",
+          "caliber": 25.0,
+          "mass": 4.85,
+          "muzzleVelocity": 1700.0,
+          "lanzOdermatt": {
+            "workingLength": 546.0,
+            "density": 18600.0,
+            "material": "depletedUranium",
+            "Cx": 0.5382
+          },
+          "penetration0m": 532.6,
+          "penetrationData": {
+            "at0m": {
+              "angle0": 532.6,
+              "angle30": 461.2,
+              "angle60": 266.3
+            }
+          }
+        },
+        {
+          "name": "125mm_3of_26_edkv",
+          "localizedName": "3OF26 (可​编​程​引​信)",
+          "type": "he_frag_dist_fuse",
+          "caliber": 125.0,
+          "mass": 23.0,
+          "muzzleVelocity": 850.0,
+          "explosiveMassKg": 3.402,
+          "explosiveType": "a_ix_2",
+          "tntEquivalent": 4.763
         },
         {
           "name": "125mm_9m_119",
@@ -168521,39 +170849,6 @@
           "tntEquivalent": 2.578
         },
         {
-          "name": "125mm_3of_26",
-          "localizedName": "3OF26",
-          "type": "he_frag_fs_tank",
-          "caliber": 125.0,
-          "mass": 23.0,
-          "muzzleVelocity": 850.0,
-          "explosiveMassKg": 3.402,
-          "explosiveType": "a_ix_2",
-          "tntEquivalent": 4.763
-        },
-        {
-          "name": "125mm_3bm46",
-          "localizedName": "3BM46",
-          "type": "apds_fs_long_l30_tank",
-          "caliber": 25.0,
-          "mass": 4.85,
-          "muzzleVelocity": 1700.0,
-          "lanzOdermatt": {
-            "workingLength": 546.0,
-            "density": 18600.0,
-            "material": "depletedUranium",
-            "Cx": 0.5382
-          },
-          "penetration0m": 532.6,
-          "penetrationData": {
-            "at0m": {
-              "angle0": 532.6,
-              "angle30": 461.2,
-              "angle60": 266.3
-            }
-          }
-        },
-        {
           "name": "125mm_3bm42",
           "localizedName": "3BM42",
           "type": "apds_fs_tungsten_caliber_fins_tank",
@@ -168599,6 +170894,39 @@
             }
           ],
           "penetration0m": 457.0
+        },
+        {
+          "name": "125mm_3bm46",
+          "localizedName": "3BM46",
+          "type": "apds_fs_long_l30_tank",
+          "caliber": 25.0,
+          "mass": 4.85,
+          "muzzleVelocity": 1700.0,
+          "lanzOdermatt": {
+            "workingLength": 546.0,
+            "density": 18600.0,
+            "material": "depletedUranium",
+            "Cx": 0.5382
+          },
+          "penetration0m": 532.6,
+          "penetrationData": {
+            "at0m": {
+              "angle0": 532.6,
+              "angle30": 461.2,
+              "angle60": 266.3
+            }
+          }
+        },
+        {
+          "name": "125mm_3of_26",
+          "localizedName": "3OF26",
+          "type": "he_frag_fs_tank",
+          "caliber": 125.0,
+          "mass": 23.0,
+          "muzzleVelocity": 850.0,
+          "explosiveMassKg": 3.402,
+          "explosiveType": "a_ix_2",
+          "tntEquivalent": 4.763
         },
         {
           "name": "125mm_9m_119",
@@ -168975,6 +171303,15 @@
           }
         },
         {
+          "name": "125mm_9m_119m1",
+          "localizedName": "9M119M1​“反​射”",
+          "type": "atgm_tandem_tank",
+          "caliber": 125.0,
+          "mass": 17.2,
+          "muzzleVelocity": 470.0,
+          "penetration0m": 850.0
+        },
+        {
           "name": "125mm_3bm42_2",
           "localizedName": "3BM42-2",
           "type": "apds_fs_long_l30_tank",
@@ -168995,15 +171332,6 @@
               "angle60": 272.1
             }
           }
-        },
-        {
-          "name": "125mm_9m_119m1",
-          "localizedName": "9M119M1​“反​射”",
-          "type": "atgm_tandem_tank",
-          "caliber": 125.0,
-          "mass": 17.2,
-          "muzzleVelocity": 470.0,
-          "penetration0m": 850.0
         },
         {
           "name": "125mm_3of_82",
@@ -169172,6 +171500,15 @@
           }
         },
         {
+          "name": "125mm_9m_119m1",
+          "localizedName": "9M119M1​“反​射”",
+          "type": "atgm_tandem_tank",
+          "caliber": 125.0,
+          "mass": 17.2,
+          "muzzleVelocity": 470.0,
+          "penetration0m": 850.0
+        },
+        {
           "name": "125mm_3bm42_2",
           "localizedName": "3BM42-2",
           "type": "apds_fs_long_l30_tank",
@@ -169192,15 +171529,6 @@
               "angle60": 272.1
             }
           }
-        },
-        {
-          "name": "125mm_9m_119m1",
-          "localizedName": "9M119M1​“反​射”",
-          "type": "atgm_tandem_tank",
-          "caliber": 125.0,
-          "mass": 17.2,
-          "muzzleVelocity": 470.0,
-          "penetration0m": 850.0
         },
         {
           "name": "125mm_3of_82",

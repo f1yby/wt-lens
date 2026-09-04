@@ -55,39 +55,6 @@
         "tntEquivalent": 2.578
       },
       {
-        "name": "125mm_3of_26_edkv",
-        "localizedName": "3OF26 (可​编​程​引​信)",
-        "type": "he_frag_dist_fuse",
-        "caliber": 125.0,
-        "mass": 23.0,
-        "muzzleVelocity": 850.0,
-        "explosiveMassKg": 3.402,
-        "explosiveType": "a_ix_2",
-        "tntEquivalent": 4.763
-      },
-      {
-        "name": "125mm_3bm46",
-        "localizedName": "3BM46",
-        "type": "apds_fs_long_l30_tank",
-        "caliber": 25.0,
-        "mass": 4.85,
-        "muzzleVelocity": 1700.0,
-        "lanzOdermatt": {
-          "workingLength": 546.0,
-          "density": 18600.0,
-          "material": "depletedUranium",
-          "Cx": 0.5382
-        },
-        "penetration0m": 532.6,
-        "penetrationData": {
-          "at0m": {
-            "angle0": 532.6,
-            "angle30": 461.2,
-            "angle60": 266.3
-          }
-        }
-      },
-      {
         "name": "125mm_3bm42",
         "localizedName": "3BM42",
         "type": "apds_fs_tungsten_caliber_fins_tank",
@@ -133,6 +100,39 @@
           }
         ],
         "penetration0m": 457.0
+      },
+      {
+        "name": "125mm_3bm46",
+        "localizedName": "3BM46",
+        "type": "apds_fs_long_l30_tank",
+        "caliber": 25.0,
+        "mass": 4.85,
+        "muzzleVelocity": 1700.0,
+        "lanzOdermatt": {
+          "workingLength": 546.0,
+          "density": 18600.0,
+          "material": "depletedUranium",
+          "Cx": 0.5382
+        },
+        "penetration0m": 532.6,
+        "penetrationData": {
+          "at0m": {
+            "angle0": 532.6,
+            "angle30": 461.2,
+            "angle60": 266.3
+          }
+        }
+      },
+      {
+        "name": "125mm_3of_26_edkv",
+        "localizedName": "3OF26 (可​编​程​引​信)",
+        "type": "he_frag_dist_fuse",
+        "caliber": 125.0,
+        "mass": 23.0,
+        "muzzleVelocity": 850.0,
+        "explosiveMassKg": 3.402,
+        "explosiveType": "a_ix_2",
+        "tntEquivalent": 4.763
       },
       {
         "name": "125mm_9m_119",

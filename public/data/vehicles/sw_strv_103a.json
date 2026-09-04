@@ -40,24 +40,6 @@
     },
     "ammunitions": [
       {
-        "name": "105mm_slpprj_m61",
-        "localizedName": "m/61 曳​光​穿​甲​弹",
-        "type": "apds_tank",
-        "caliber": 60.0,
-        "mass": 4.0,
-        "muzzleVelocity": 1500.0,
-        "deMarre": {
-          "fullCaliber": 105.0,
-          "isApcbc": false,
-          "explosiveMass": 0,
-          "isApcr": true,
-          "coreCaliber": 60.0,
-          "coreMass": 2.7,
-          "Cx": 0.1572
-        },
-        "penetration0m": 208.8
-      },
-      {
         "name": "105mm_slspgr_m61",
         "localizedName": "m/61 曳​光​碎​甲​弹",
         "type": "hesh_tank",
@@ -68,24 +50,6 @@
         "explosiveMassKg": 1.97,
         "explosiveType": "rdx",
         "tntEquivalent": 2.758
-      },
-      {
-        "name": "105mm_slpprj_m66",
-        "localizedName": "slpprj m/66",
-        "type": "apds_l15_tank",
-        "caliber": 61.0,
-        "mass": 4.53,
-        "muzzleVelocity": 1450.0,
-        "deMarre": {
-          "fullCaliber": 105.0,
-          "isApcbc": false,
-          "explosiveMass": 0,
-          "isApcr": true,
-          "coreCaliber": 61.0,
-          "coreMass": 3.2,
-          "Cx": 0.1761
-        },
-        "penetration0m": 216.3
       },
       {
         "name": "105mm_slsgr_m61",
@@ -108,6 +72,42 @@
         "explosiveMassKg": 0.05,
         "explosiveType": "smoke_composition",
         "tntEquivalent": 0.05
+      },
+      {
+        "name": "105mm_slpprj_m61",
+        "localizedName": "m/61 曳​光​穿​甲​弹",
+        "type": "apds_tank",
+        "caliber": 60.0,
+        "mass": 4.0,
+        "muzzleVelocity": 1500.0,
+        "deMarre": {
+          "fullCaliber": 105.0,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "isApcr": true,
+          "coreCaliber": 60.0,
+          "coreMass": 2.7,
+          "Cx": 0.1572
+        },
+        "penetration0m": 208.8
+      },
+      {
+        "name": "105mm_slpprj_m66",
+        "localizedName": "slpprj m/66",
+        "type": "apds_l15_tank",
+        "caliber": 61.0,
+        "mass": 4.53,
+        "muzzleVelocity": 1450.0,
+        "deMarre": {
+          "fullCaliber": 105.0,
+          "isApcbc": false,
+          "explosiveMass": 0,
+          "isApcr": true,
+          "coreCaliber": 61.0,
+          "coreMass": 3.2,
+          "Cx": 0.1761
+        },
+        "penetration0m": 216.3
       }
     ],
     "penetrationData": null,

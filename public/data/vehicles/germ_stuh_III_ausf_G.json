@@ -132,7 +132,7 @@
     "secondary_weapons": null,
     "main_gun_ammo": 36,
     "driver_nv_resolution": null,
-    "has_smoke_grenades": false,
+    "has_smoke_grenades": true,
     "has_ess": false,
     "has_laser_rangefinder": false
   },
@@ -145,15 +145,15 @@
     "aceTrainingRP": 190000,
     "repairCost": {
       "arcade": [
-        545,
+        517,
         737
       ],
       "realistic": [
-        645,
+        612,
         873
       ],
       "simulator": [
-        756,
+        717,
         1023
       ]
     },

@@ -27,8 +27,32 @@
     "commander_thermal_diagonal": null,
     "stabilizer_value": 0,
     "elevation_range_value": 87.0,
-    "mainGun": null,
-    "ammunitions": null,
+    "mainGun": {
+      "name": "30mm_MK103_38",
+      "caliber": 30.0,
+      "reloadTime": 10.0,
+      "autoLoader": false,
+      "reloadTimes": {
+        "base": 13.0,
+        "expert": 11.5,
+        "ace": 10.0
+      },
+      "rateOfFire": 450,
+      "beltReloadTime": 10.0
+    },
+    "ammunitions": [
+      {
+        "name": "30mm_PzSprBrGr",
+        "localizedName": "PzSprBrGr",
+        "type": "sap_hei",
+        "caliber": 30.0,
+        "mass": 0.46,
+        "muzzleVelocity": 800.0,
+        "explosiveMassKg": 0.0052,
+        "explosiveType": "petn",
+        "tntEquivalent": 0.007
+      }
+    ],
     "penetrationData": null,
     "autoLoader": false,
     "engine_manufacturer": null,
