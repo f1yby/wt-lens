@@ -20992,8 +20992,8 @@
     "id": "fr_embt",
     "performance": {
       "horsepower": 1500.0,
-      "weight": 58.8,
-      "power_to_weight": 25.51,
+      "weight": 59.6,
+      "power_to_weight": 25.17,
       "max_reverse_speed": 27.7,
       "reload_time": 5.0,
       "penetration": 575.9,
@@ -21134,7 +21134,7 @@
         27.7
       ],
       "steer_type": "double_differential",
-      "empty_weight": 57.3,
+      "empty_weight": 58.1,
       "track_width": 0.55,
       "secondary_weapons": [
         {
@@ -29976,8 +29976,8 @@
     "id": "germ_embt",
     "performance": {
       "horsepower": 1500.0,
-      "weight": 58.8,
-      "power_to_weight": 25.51,
+      "weight": 59.6,
+      "power_to_weight": 25.17,
       "max_reverse_speed": 27.7,
       "reload_time": 5.0,
       "penetration": 575.9,
@@ -30118,7 +30118,7 @@
         27.7
       ],
       "steer_type": "double_differential",
-      "empty_weight": 57.3,
+      "empty_weight": 58.1,
       "track_width": 0.55,
       "secondary_weapons": [
         {
@@ -55052,14 +55052,14 @@
         180.0
       ],
       "gunner_thermal_resolution": [
-        500,
-        300
+        800,
+        600
       ],
       "commander_thermal_resolution": [
         800,
         600
       ],
-      "gunner_thermal_diagonal": 583.1,
+      "gunner_thermal_diagonal": 1000.0,
       "commander_thermal_diagonal": 1000.0,
       "stabilizer_value": 1,
       "elevation_range_value": 29.0,
