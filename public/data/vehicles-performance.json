@@ -74213,19 +74213,19 @@
       "has_stabilizer": false,
       "stabilizer_type": "none",
       "elevation_range": [
-        -4.0,
+        -5.0,
         21.0
       ],
       "traverse_range": [
-        -145.0,
-        145.0
+        -90.0,
+        90.0
       ],
       "gunner_thermal_resolution": null,
       "commander_thermal_resolution": null,
       "gunner_thermal_diagonal": null,
       "commander_thermal_diagonal": null,
       "stabilizer_value": 0,
-      "elevation_range_value": 25.0,
+      "elevation_range_value": 26.0,
       "mainGun": {
         "name": "90mm_90_53_mod41",
         "caliber": 90.0,
@@ -107100,7 +107100,7 @@
       "power_to_weight": 23.93,
       "max_reverse_speed": 32.1,
       "reload_time": 6.0,
-      "penetration": 396.7,
+      "penetration": 458.8,
       "max_speed": 70.2,
       "crew_count": 5,
       "elevation_speed": 20.0,
@@ -107138,7 +107138,7 @@
       "ammunitions": [
         {
           "name": "120mm_Arjun_Mk1",
-          "localizedName": "120 mm Mk1 APFSDS",
+          "localizedName": "120 mm MK-I FSAPDS",
           "type": "apds_fs_long_tank",
           "caliber": 28.0,
           "mass": 3.8,
@@ -107176,6 +107176,28 @@
           "tntEquivalent": 1.8
         },
         {
+          "name": "120mm_Arjun_Mk2",
+          "localizedName": "120 mm MK-II FSAPDS",
+          "type": "apds_fs_long_tank",
+          "caliber": 25.4,
+          "mass": 3.89,
+          "muzzleVelocity": 1670.0,
+          "lanzOdermatt": {
+            "workingLength": 465.0,
+            "density": 17500.0,
+            "material": "tungsten",
+            "Cx": 0.55
+          },
+          "penetration0m": 458.8,
+          "penetrationData": {
+            "at0m": {
+              "angle0": 458.8,
+              "angle30": 397.3,
+              "angle60": 229.4
+            }
+          }
+        },
+        {
           "name": "120mm_arjun_HESH",
           "localizedName": "120 mm HESH",
           "type": "hesh_tank",
@@ -107190,9 +107212,9 @@
       ],
       "penetrationData": {
         "at0m": {
-          "angle0": 396.7,
-          "angle30": 343.6,
-          "angle60": 198.4
+          "angle0": 458.8,
+          "angle30": 397.3,
+          "angle60": 229.4
         }
       },
       "autoLoader": false,
@@ -138945,10 +138967,10 @@
       "horsepower": 400.0,
       "weight": 24.47,
       "power_to_weight": 16.35,
-      "max_reverse_speed": 4.7,
+      "max_reverse_speed": 6.2,
       "reload_time": 5.0,
       "penetration": 104.0,
-      "max_speed": 36.1,
+      "max_speed": 48.0,
       "crew_count": 5,
       "elevation_speed": 4.0,
       "traverse_speed": 24.0,
@@ -139037,14 +139059,14 @@
       "forward_gears": 5,
       "reverse_gears": 1,
       "forward_gear_speeds": [
-        3.5,
-        8.5,
-        14.8,
-        23.8,
-        36.1
+        4.7,
+        11.4,
+        19.6,
+        31.7,
+        48.0
       ],
       "reverse_gear_speeds": [
-        4.7
+        6.2
       ],
       "steer_type": "clutch_braking",
       "empty_weight": 24.0,

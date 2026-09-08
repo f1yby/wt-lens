@@ -14,19 +14,19 @@
     "has_stabilizer": false,
     "stabilizer_type": "none",
     "elevation_range": [
-      -4.0,
+      -5.0,
       21.0
     ],
     "traverse_range": [
-      -145.0,
-      145.0
+      -90.0,
+      90.0
     ],
     "gunner_thermal_resolution": null,
     "commander_thermal_resolution": null,
     "gunner_thermal_diagonal": null,
     "commander_thermal_diagonal": null,
     "stabilizer_value": 0,
-    "elevation_range_value": 25.0,
+    "elevation_range_value": 26.0,
     "mainGun": {
       "name": "90mm_90_53_mod41",
       "caliber": 90.0,
