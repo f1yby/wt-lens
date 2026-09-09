@@ -908,8 +908,8 @@
       "penetration": null,
       "max_speed": 100.0,
       "crew_count": 5,
-      "elevation_speed": 30.0,
-      "traverse_speed": 40.0,
+      "elevation_speed": 50.0,
+      "traverse_speed": 70.0,
       "has_stabilizer": true,
       "stabilizer_type": "both",
       "elevation_range": [
@@ -94311,7 +94311,7 @@
         {
           "name": "20mm_akan_m45_b_he",
           "localizedName": "20 mm HE",
-          "type": "he_frag_i_t",
+          "type": "he_frag",
           "caliber": 20.0,
           "mass": 0.122,
           "muzzleVelocity": 850.0,
@@ -107116,11 +107116,11 @@
         180.0
       ],
       "gunner_thermal_resolution": [
-        500,
-        300
+        800,
+        600
       ],
       "commander_thermal_resolution": null,
-      "gunner_thermal_diagonal": 583.1,
+      "gunner_thermal_diagonal": 1000.0,
       "commander_thermal_diagonal": null,
       "stabilizer_value": 1,
       "elevation_range_value": 30.0,

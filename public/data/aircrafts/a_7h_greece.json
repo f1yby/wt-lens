@@ -32,6 +32,23 @@
     "fixed_weapons": [],
     "payloads": [
       {
+        "name": "a_7h_default",
+        "weapons": [
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          },
+          {
+            "trigger": "",
+            "name": "",
+            "localizedName": "",
+            "count": 1
+          }
+        ]
+      },
+      {
         "name": "a_7e_default_aim9d",
         "weapons": [
           {
@@ -476,64 +493,6 @@
         ]
       },
       {
-        "name": "a_7e_rocket_agm_62",
-        "weapons": [
-          {
-            "trigger": "",
-            "name": "",
-            "localizedName": "",
-            "count": 1
-          },
-          {
-            "trigger": "",
-            "name": "",
-            "localizedName": "",
-            "count": 1
-          },
-          {
-            "trigger": "",
-            "name": "",
-            "localizedName": "",
-            "count": 1
-          },
-          {
-            "trigger": "",
-            "name": "",
-            "localizedName": "",
-            "count": 1
-          },
-          {
-            "trigger": "",
-            "name": "",
-            "localizedName": "",
-            "count": 1
-          },
-          {
-            "trigger": "",
-            "name": "",
-            "localizedName": "",
-            "count": 1
-          }
-        ]
-      },
-      {
-        "name": "a_7e_rocket_agm_62_walleye_2_erdl",
-        "weapons": [
-          {
-            "trigger": "",
-            "name": "",
-            "localizedName": "",
-            "count": 1
-          },
-          {
-            "trigger": "",
-            "name": "",
-            "localizedName": "",
-            "count": 1
-          }
-        ]
-      },
-      {
         "name": "a_7e_guns_suu_23",
         "weapons": [
           {
@@ -568,17 +527,6 @@
         ]
       },
       {
-        "name": "a_7e_lana_flir",
-        "weapons": [
-          {
-            "trigger": "",
-            "name": "",
-            "localizedName": "",
-            "count": 1
-          }
-        ]
-      },
-      {
         "name": "a_7e_bomb_mk84_air",
         "weapons": [
           {
@@ -593,64 +541,6 @@
             "localizedName": "",
             "count": 1
           },
-          {
-            "trigger": "",
-            "name": "",
-            "localizedName": "",
-            "count": 1
-          },
-          {
-            "trigger": "",
-            "name": "",
-            "localizedName": "",
-            "count": 1
-          },
-          {
-            "trigger": "",
-            "name": "",
-            "localizedName": "",
-            "count": 1
-          },
-          {
-            "trigger": "",
-            "name": "",
-            "localizedName": "",
-            "count": 1
-          }
-        ]
-      },
-      {
-        "name": "a_7e_agm_45b_9",
-        "weapons": [
-          {
-            "trigger": "",
-            "name": "",
-            "localizedName": "",
-            "count": 1
-          },
-          {
-            "trigger": "",
-            "name": "",
-            "localizedName": "",
-            "count": 1
-          },
-          {
-            "trigger": "",
-            "name": "",
-            "localizedName": "",
-            "count": 1
-          },
-          {
-            "trigger": "",
-            "name": "",
-            "localizedName": "",
-            "count": 1
-          }
-        ]
-      },
-      {
-        "name": "a_7e_agm_45b_10",
-        "weapons": [
           {
             "trigger": "",
             "name": "",
