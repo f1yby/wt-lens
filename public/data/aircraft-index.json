@@ -18347,7 +18347,7 @@
     },
     "aircraftType": "assault",
     "economicType": "regular",
-    "imageUrl": null,
+    "imageUrl": "aircrafts/a_7h_greece.webp",
     "groundBattleRating": 10.0,
     "releaseDate": "2026-09-08",
     "weapons": {
@@ -33891,7 +33891,7 @@
     },
     "aircraftType": "helicopter",
     "economicType": "regular",
-    "imageUrl": null,
+    "imageUrl": "aircrafts/aw_159.webp",
     "releaseDate": "2026-09-08",
     "weapons": {
       "fixed_weapons": [],
@@ -51207,7 +51207,7 @@
     },
     "aircraftType": "fighter",
     "economicType": "regular",
-    "imageUrl": null,
+    "imageUrl": "aircrafts/ca_27_mk32_malaysia.webp",
     "groundBattleRating": 8.7,
     "releaseDate": "2026-09-08",
     "weapons": {
@@ -51445,7 +51445,7 @@
     },
     "aircraftType": "fighter",
     "economicType": "regular",
-    "imageUrl": null,
+    "imageUrl": "aircrafts/ca_27_mk32_raaf.webp",
     "groundBattleRating": 8.7,
     "releaseDate": "2026-09-08",
     "weapons": {
@@ -88567,7 +88567,7 @@
     },
     "aircraftType": "assault",
     "economicType": "regular",
-    "imageUrl": null,
+    "imageUrl": "aircrafts/f-84g_greece.webp",
     "releaseDate": "2026-09-08",
     "weapons": {
       "fixed_weapons": [],
@@ -100401,7 +100401,7 @@
     },
     "aircraftType": "fighter",
     "economicType": "regular",
-    "imageUrl": null,
+    "imageUrl": "aircrafts/f_102a_greece.webp",
     "groundBattleRating": 8.7,
     "releaseDate": "2026-09-08",
     "weapons": {
@@ -100516,7 +100516,7 @@
     },
     "aircraftType": "fighter",
     "economicType": "regular",
-    "imageUrl": null,
+    "imageUrl": "aircrafts/f_102a_late.webp",
     "groundBattleRating": 8.7,
     "releaseDate": "2026-09-08",
     "weapons": {
@@ -104672,7 +104672,7 @@
     },
     "aircraftType": "fighter",
     "economicType": "regular",
-    "imageUrl": null,
+    "imageUrl": "aircrafts/f_14d_vf_11.webp",
     "groundBattleRating": 11.7,
     "releaseDate": "2026-09-08",
     "weapons": {
@@ -129168,7 +129168,7 @@
     },
     "aircraftType": "fighter",
     "economicType": "regular",
-    "imageUrl": null,
+    "imageUrl": "aircrafts/f_4e_aup_greece.webp",
     "groundBattleRating": 12.0,
     "releaseDate": "2026-09-08",
     "weapons": {
@@ -129799,6 +129799,35 @@
               "count": 1
             }
           ]
+        },
+        {
+          "name": "f_4e_aup_greece_agm_45b_9",
+          "weapons": [
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            },
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            },
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            },
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            }
+          ]
         }
       ]
     }
@@ -129943,7 +129972,7 @@
     },
     "aircraftType": "fighter",
     "economicType": "regular",
-    "imageUrl": null,
+    "imageUrl": "aircrafts/f_86em_greece.webp",
     "groundBattleRating": 8.7,
     "releaseDate": "2026-09-08",
     "weapons": {
@@ -151143,7 +151172,7 @@
     },
     "aircraftType": "helicopter",
     "economicType": "regular",
-    "imageUrl": null,
+    "imageUrl": "aircrafts/h145m.webp",
     "releaseDate": "2026-09-08",
     "weapons": {
       "fixed_weapons": [],
@@ -158091,7 +158120,7 @@
     },
     "aircraftType": "assault",
     "economicType": "regular",
-    "imageUrl": null,
+    "imageUrl": "aircrafts/hawk_t1a_early.webp",
     "releaseDate": "2026-09-08",
     "weapons": {
       "fixed_weapons": [],
@@ -181210,7 +181239,7 @@
     },
     "aircraftType": "fighter",
     "economicType": "regular",
-    "imageUrl": null,
+    "imageUrl": "aircrafts/j_16.webp",
     "groundBattleRating": 13.0,
     "releaseDate": "2026-09-08",
     "weapons": {
@@ -246454,7 +246483,7 @@
   {
     "id": "mig_35",
     "name": "mig_35",
-    "localizedName": "MiG-35S",
+    "localizedName": "MiG-35",
     "nation": "ussr",
     "rank": 9,
     "battleRating": 14.3,
@@ -246465,7 +246494,7 @@
     },
     "aircraftType": "fighter",
     "economicType": "regular",
-    "imageUrl": null,
+    "imageUrl": "aircrafts/mig_35.webp",
     "groundBattleRating": 13.0,
     "releaseDate": "2026-09-08",
     "weapons": {
@@ -247701,7 +247730,7 @@
     },
     "aircraftType": "fighter",
     "economicType": "regular",
-    "imageUrl": null,
+    "imageUrl": "aircrafts/mirage_2000_5eg_mk2_greece.webp",
     "groundBattleRating": 12.7,
     "releaseDate": "2026-09-08",
     "weapons": {
@@ -254146,7 +254175,7 @@
     },
     "aircraftType": "fighter",
     "economicType": "regular",
-    "imageUrl": null,
+    "imageUrl": "aircrafts/mirage_f1cg_greece.webp",
     "groundBattleRating": 11.0,
     "releaseDate": "2026-09-08",
     "weapons": {
@@ -282432,6 +282461,17 @@
               "count": 1
             }
           ]
+        },
+        {
+          "name": "rafale_c_f3_am39",
+          "weapons": [
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            }
+          ]
         }
       ]
     }
@@ -282450,7 +282490,7 @@
     },
     "aircraftType": "fighter",
     "economicType": "regular",
-    "imageUrl": null,
+    "imageUrl": "aircrafts/rafale_eg_greece.webp",
     "groundBattleRating": 13.0,
     "releaseDate": "2026-09-08",
     "weapons": {
@@ -282772,6 +282812,17 @@
               "localizedName": "",
               "count": 1
             },
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "name": "rafale_c_f3_am39",
+          "weapons": [
             {
               "trigger": "",
               "name": "",
@@ -283119,6 +283170,17 @@
               "localizedName": "",
               "count": 1
             },
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "name": "rafale_c_f3_am39",
+          "weapons": [
             {
               "trigger": "",
               "name": "",
@@ -299158,7 +299220,7 @@
     },
     "aircraftType": "bomber",
     "economicType": "regular",
-    "imageUrl": null,
+    "imageUrl": "aircrafts/sb2c_5_greece.webp",
     "releaseDate": "2026-09-08",
     "weapons": {
       "fixed_weapons": [],

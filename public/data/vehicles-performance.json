@@ -114865,6 +114865,13 @@
           "reloadTime": 8.0,
           "rateOfFire": 650,
           "bulletType": "ap_ball"
+        },
+        {
+          "trigger": "gunner3",
+          "name": "66mm_modern_uk_smoke_grenade_launcher",
+          "caliber": 0,
+          "ammo": 8,
+          "rateOfFire": 2400
         }
       ],
       "main_gun_ammo": 165,

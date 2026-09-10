@@ -189,6 +189,13 @@
         "reloadTime": 8.0,
         "rateOfFire": 650,
         "bulletType": "ap_ball"
+      },
+      {
+        "trigger": "gunner3",
+        "name": "66mm_modern_uk_smoke_grenade_launcher",
+        "caliber": 0,
+        "ammo": 8,
+        "rateOfFire": 2400
       }
     ],
     "main_gun_ammo": 165,
@@ -209,15 +216,15 @@
     "aceTrainingRP": 830000,
     "repairCost": {
       "arcade": [
-        2679,
+        2874,
         5123
       ],
       "realistic": [
-        2885,
+        3095,
         5517
       ],
       "simulator": [
-        3445,
+        3695,
         6587
       ]
     },
