@@ -129169,7 +129169,7 @@
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/f_4e_aup_greece.webp",
-    "groundBattleRating": 12.0,
+    "groundBattleRating": 12.3,
     "releaseDate": "2026-09-08",
     "weapons": {
       "fixed_weapons": [],
@@ -247202,12 +247202,6 @@
               "name": "",
               "localizedName": "",
               "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
             }
           ]
         },
@@ -247237,24 +247231,12 @@
               "name": "",
               "localizedName": "",
               "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
             }
           ]
         },
         {
           "name": "mig_35_4x_kh_29l",
           "weapons": [
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
             {
               "trigger": "",
               "name": "",
@@ -247313,12 +247295,6 @@
         {
           "name": "mig_35_4x_kh_38ml",
           "weapons": [
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
             {
               "trigger": "",
               "name": "",
@@ -290950,6 +290926,35 @@
           ]
         },
         {
+          "name": "saab_j35j_rb28",
+          "weapons": [
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            },
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            },
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            },
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            }
+          ]
+        },
+        {
           "name": "saab_j35j_135mm_rockets",
           "weapons": [
             {
@@ -291189,6 +291194,76 @@
         },
         {
           "name": "saab_j35xs_rb27_rb24j",
+          "weapons": [
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            },
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            },
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            },
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            },
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            },
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "name": "saab_j35xs_rb28",
+          "weapons": [
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            },
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            },
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            },
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "name": "saab_j35xs_rb28_rb24j",
           "weapons": [
             {
               "trigger": "",
