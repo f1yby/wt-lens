@@ -5,7 +5,7 @@
     "weight": 48.5,
     "power_to_weight": 10.72,
     "max_reverse_speed": 16.6,
-    "reload_time": 19.35,
+    "reload_time": 20.83,
     "penetration": 230.6,
     "max_speed": 40.0,
     "crew_count": 5,
@@ -30,12 +30,12 @@
     "mainGun": {
       "name": "122mm_D25T",
       "caliber": 122.0,
-      "reloadTime": 19.35,
+      "reloadTime": 20.83,
       "autoLoader": false,
       "reloadTimes": {
-        "base": 25.16,
-        "expert": 22.25,
-        "ace": 19.35
+        "base": 27.08,
+        "expert": 23.95,
+        "ace": 20.83
       }
     },
     "ammunitions": [
@@ -169,22 +169,22 @@
     "aceTrainingRP": 1140000,
     "repairCost": {
       "arcade": [
-        2980,
-        2980
+        2803,
+        2803
       ],
       "realistic": [
-        3068,
-        3068
+        3073,
+        3073
       ],
       "simulator": [
-        4216,
-        4216
+        4196,
+        4196
       ]
     },
     "rewardMultiplier": {
-      "arcade": 2.73,
-      "realistic": 3.81,
-      "simulator": 4.36
+      "arcade": 2.58,
+      "realistic": 3.84,
+      "simulator": 4.3
     },
     "expMultiplier": 1.78,
     "freeRepairs": 30

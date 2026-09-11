@@ -152119,7 +152119,7 @@
       "weight": 48.5,
       "power_to_weight": 10.72,
       "max_reverse_speed": 16.6,
-      "reload_time": 19.35,
+      "reload_time": 20.83,
       "penetration": 230.6,
       "max_speed": 40.0,
       "crew_count": 5,
@@ -152144,12 +152144,12 @@
       "mainGun": {
         "name": "122mm_D25T",
         "caliber": 122.0,
-        "reloadTime": 19.35,
+        "reloadTime": 20.83,
         "autoLoader": false,
         "reloadTimes": {
-          "base": 25.16,
-          "expert": 22.25,
-          "ace": 19.35
+          "base": 27.08,
+          "expert": 23.95,
+          "ace": 20.83
         }
       },
       "ammunitions": [
