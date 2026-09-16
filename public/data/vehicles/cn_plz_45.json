@@ -1,9 +1,9 @@
 {
   "id": "cn_plz_45",
   "performance": {
-    "horsepower": 524.0,
+    "horsepower": 525.0,
     "weight": 33.0,
-    "power_to_weight": 15.88,
+    "power_to_weight": 15.91,
     "max_reverse_speed": 4.5,
     "reload_time": 13.33,
     "penetration": 255.2,
@@ -15,7 +15,7 @@
     "stabilizer_type": "none",
     "elevation_range": [
       -3.0,
-      85.0
+      72.0
     ],
     "traverse_range": [
       -180.0,
@@ -26,7 +26,7 @@
     "gunner_thermal_diagonal": null,
     "commander_thermal_diagonal": null,
     "stabilizer_value": 0,
-    "elevation_range_value": 88.0,
+    "elevation_range_value": 75.0,
     "mainGun": {
       "name": "155mm_plz45",
       "caliber": 155.0,

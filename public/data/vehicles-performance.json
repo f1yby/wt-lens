@@ -6478,9 +6478,9 @@
   {
     "id": "cn_plz_45",
     "performance": {
-      "horsepower": 524.0,
+      "horsepower": 525.0,
       "weight": 33.0,
-      "power_to_weight": 15.88,
+      "power_to_weight": 15.91,
       "max_reverse_speed": 4.5,
       "reload_time": 13.33,
       "penetration": 255.2,
@@ -6492,7 +6492,7 @@
       "stabilizer_type": "none",
       "elevation_range": [
         -3.0,
-        85.0
+        72.0
       ],
       "traverse_range": [
         -180.0,
@@ -6503,7 +6503,7 @@
       "gunner_thermal_diagonal": null,
       "commander_thermal_diagonal": null,
       "stabilizer_value": 0,
-      "elevation_range_value": 88.0,
+      "elevation_range_value": 75.0,
       "mainGun": {
         "name": "155mm_plz45",
         "caliber": 155.0,
@@ -21133,7 +21133,7 @@
         18.3,
         27.7
       ],
-      "steer_type": "double_differential",
+      "steer_type": "clutch_braking",
       "empty_weight": 58.1,
       "track_width": 0.55,
       "secondary_weapons": [
@@ -22844,7 +22844,7 @@
         20.4,
         31.0
       ],
-      "steer_type": "double_differential",
+      "steer_type": "clutch_braking",
       "empty_weight": 53.85,
       "track_width": 0.55,
       "secondary_weapons": [
@@ -23036,7 +23036,7 @@
         20.4,
         31.0
       ],
-      "steer_type": "double_differential",
+      "steer_type": "clutch_braking",
       "empty_weight": 53.85,
       "track_width": 0.55,
       "secondary_weapons": [
@@ -23206,7 +23206,7 @@
         20.4,
         31.0
       ],
-      "steer_type": "double_differential",
+      "steer_type": "clutch_braking",
       "empty_weight": 58.0,
       "track_width": 0.55,
       "secondary_weapons": [
@@ -23376,7 +23376,7 @@
         20.4,
         31.0
       ],
-      "steer_type": "double_differential",
+      "steer_type": "clutch_braking",
       "empty_weight": 58.4,
       "track_width": 0.55,
       "secondary_weapons": [
@@ -30117,7 +30117,7 @@
         18.3,
         27.7
       ],
-      "steer_type": "double_differential",
+      "steer_type": "clutch_braking",
       "empty_weight": 58.1,
       "track_width": 0.55,
       "secondary_weapons": [
@@ -34345,7 +34345,7 @@
         20.4,
         31.0
       ],
-      "steer_type": "double_differential",
+      "steer_type": "clutch_braking",
       "empty_weight": 53.85,
       "track_width": 0.55,
       "secondary_weapons": [
@@ -34537,7 +34537,7 @@
         20.4,
         31.0
       ],
-      "steer_type": "double_differential",
+      "steer_type": "clutch_braking",
       "empty_weight": 53.85,
       "track_width": 0.55,
       "secondary_weapons": [
@@ -34718,7 +34718,7 @@
         20.4,
         31.0
       ],
-      "steer_type": "double_differential",
+      "steer_type": "clutch_braking",
       "empty_weight": 56.4,
       "track_width": 0.55,
       "secondary_weapons": [
@@ -34896,7 +34896,7 @@
         20.4,
         31.0
       ],
-      "steer_type": "double_differential",
+      "steer_type": "clutch_braking",
       "empty_weight": 56.4,
       "track_width": 0.55,
       "secondary_weapons": [
@@ -35063,7 +35063,7 @@
         20.4,
         31.0
       ],
-      "steer_type": "double_differential",
+      "steer_type": "clutch_braking",
       "empty_weight": 58.0,
       "track_width": 0.55,
       "secondary_weapons": [
@@ -35418,7 +35418,7 @@
         20.4,
         31.0
       ],
-      "steer_type": "double_differential",
+      "steer_type": "clutch_braking",
       "empty_weight": 58.4,
       "track_width": 0.55,
       "secondary_weapons": [
@@ -35599,7 +35599,7 @@
         18.3,
         27.7
       ],
-      "steer_type": "double_differential",
+      "steer_type": "clutch_braking",
       "empty_weight": 62.6,
       "track_width": 0.55,
       "secondary_weapons": [
@@ -35772,7 +35772,7 @@
         20.4,
         31.0
       ],
-      "steer_type": "double_differential",
+      "steer_type": "clutch_braking",
       "empty_weight": 56.4,
       "track_width": 0.55,
       "secondary_weapons": [
@@ -36155,7 +36155,7 @@
         20.4,
         31.0
       ],
-      "steer_type": "double_differential",
+      "steer_type": "clutch_braking",
       "empty_weight": 57.9,
       "track_width": 0.55,
       "secondary_weapons": [
@@ -47950,25 +47950,30 @@
       "transmission_manufacturer": null,
       "transmission_model": null,
       "transmission_type": null,
-      "forward_gears": 10,
-      "reverse_gears": 5,
+      "forward_gears": 12,
+      "reverse_gears": 8,
       "forward_gear_speeds": [
         5.0,
-        8.0,
-        15.0,
-        22.0,
-        30.1,
-        42.1,
-        48.7,
-        54.3,
-        63.4,
+        6.4,
+        8.1,
+        10.3,
+        13.1,
+        16.6,
+        21.1,
+        26.9,
+        34.1,
+        43.4,
+        55.1,
         70.2
       ],
       "reverse_gear_speeds": [
         5.0,
-        8.0,
-        15.0,
-        22.0,
+        6.5,
+        8.4,
+        10.8,
+        14.0,
+        18.0,
+        23.3,
         30.1
       ],
       "steer_type": "clutch_braking",
@@ -48122,25 +48127,30 @@
       "transmission_manufacturer": null,
       "transmission_model": null,
       "transmission_type": null,
-      "forward_gears": 10,
-      "reverse_gears": 5,
+      "forward_gears": 12,
+      "reverse_gears": 8,
       "forward_gear_speeds": [
         5.0,
-        8.0,
-        15.0,
-        22.0,
-        30.1,
-        42.1,
-        48.7,
-        54.3,
-        63.4,
+        6.4,
+        8.1,
+        10.3,
+        13.1,
+        16.6,
+        21.1,
+        26.9,
+        34.1,
+        43.4,
+        55.1,
         70.2
       ],
       "reverse_gear_speeds": [
         5.0,
-        8.0,
-        15.0,
-        22.0,
+        6.5,
+        8.4,
+        10.8,
+        14.0,
+        18.0,
+        23.3,
         30.1
       ],
       "steer_type": "clutch_braking",
@@ -48309,25 +48319,30 @@
       "transmission_manufacturer": null,
       "transmission_model": null,
       "transmission_type": null,
-      "forward_gears": 10,
-      "reverse_gears": 5,
+      "forward_gears": 12,
+      "reverse_gears": 8,
       "forward_gear_speeds": [
         5.0,
-        8.0,
-        15.0,
-        22.0,
-        30.1,
-        42.1,
-        48.7,
-        54.3,
-        63.4,
+        6.4,
+        8.1,
+        10.3,
+        13.1,
+        16.6,
+        21.1,
+        26.9,
+        34.1,
+        43.4,
+        55.1,
         70.2
       ],
       "reverse_gear_speeds": [
         5.0,
-        8.0,
-        15.0,
-        22.0,
+        6.5,
+        8.4,
+        10.8,
+        14.0,
+        18.0,
+        23.3,
         30.1
       ],
       "steer_type": "clutch_braking",
@@ -55165,7 +55180,7 @@
         20.4,
         31.0
       ],
-      "steer_type": "double_differential",
+      "steer_type": "clutch_braking",
       "empty_weight": 58.4,
       "track_width": 0.55,
       "secondary_weapons": [
@@ -68687,7 +68702,7 @@
         20.4,
         31.0
       ],
-      "steer_type": "double_differential",
+      "steer_type": "clutch_braking",
       "empty_weight": 53.85,
       "track_width": 0.55,
       "secondary_weapons": [
@@ -68868,7 +68883,7 @@
         18.3,
         27.7
       ],
-      "steer_type": "double_differential",
+      "steer_type": "clutch_braking",
       "empty_weight": 63.6,
       "track_width": 0.55,
       "secondary_weapons": [
@@ -78221,7 +78236,7 @@
         20.4,
         31.0
       ],
-      "steer_type": "double_differential",
+      "steer_type": "clutch_braking",
       "empty_weight": 62.2,
       "track_width": 0.55,
       "secondary_weapons": [
@@ -81318,7 +81333,7 @@
         50.0,
         70.1
       ],
-      "steer_type": "double_differential",
+      "steer_type": "clutch_braking",
       "empty_weight": 43.0,
       "track_width": 0.55,
       "secondary_weapons": [
@@ -81630,7 +81645,7 @@
         50.0,
         70.1
       ],
-      "steer_type": "double_differential",
+      "steer_type": "clutch_braking",
       "empty_weight": 43.0,
       "track_width": 0.55,
       "secondary_weapons": [
@@ -81779,7 +81794,7 @@
         50.0,
         70.1
       ],
-      "steer_type": "double_differential",
+      "steer_type": "clutch_braking",
       "empty_weight": 43.0,
       "track_width": 0.55,
       "secondary_weapons": [
@@ -87263,7 +87278,7 @@
         19.3,
         33.9
       ],
-      "steer_type": "double_differential",
+      "steer_type": "clutch_braking",
       "empty_weight": 48.6,
       "track_width": 0.55,
       "secondary_weapons": [
@@ -87405,7 +87420,7 @@
         19.3,
         33.9
       ],
-      "steer_type": "double_differential",
+      "steer_type": "clutch_braking",
       "empty_weight": 48.6,
       "track_width": 0.55,
       "secondary_weapons": [
@@ -87547,7 +87562,7 @@
         19.3,
         33.9
       ],
-      "steer_type": "double_differential",
+      "steer_type": "clutch_braking",
       "empty_weight": 48.6,
       "track_width": 0.55,
       "secondary_weapons": [
@@ -87689,7 +87704,7 @@
         19.3,
         33.9
       ],
-      "steer_type": "double_differential",
+      "steer_type": "clutch_braking",
       "empty_weight": 48.6,
       "track_width": 0.55,
       "secondary_weapons": [
@@ -91873,7 +91888,7 @@
         20.4,
         31.0
       ],
-      "steer_type": "double_differential",
+      "steer_type": "clutch_braking",
       "empty_weight": 48.23,
       "track_width": 0.55,
       "secondary_weapons": null,
@@ -93027,7 +93042,7 @@
         20.4,
         31.0
       ],
-      "steer_type": "double_differential",
+      "steer_type": "clutch_braking",
       "empty_weight": 53.85,
       "track_width": 0.55,
       "secondary_weapons": [
@@ -93197,7 +93212,7 @@
         20.4,
         31.0
       ],
-      "steer_type": "double_differential",
+      "steer_type": "clutch_braking",
       "empty_weight": 58.4,
       "track_width": 0.55,
       "secondary_weapons": [
@@ -97004,7 +97019,7 @@
         20.4,
         31.0
       ],
-      "steer_type": "double_differential",
+      "steer_type": "clutch_braking",
       "empty_weight": 53.85,
       "track_width": 0.55,
       "secondary_weapons": [
@@ -98253,7 +98268,7 @@
         20.4,
         31.0
       ],
-      "steer_type": "double_differential",
+      "steer_type": "clutch_braking",
       "empty_weight": 53.85,
       "track_width": 0.55,
       "secondary_weapons": [
@@ -98422,7 +98437,7 @@
         20.4,
         31.0
       ],
-      "steer_type": "double_differential",
+      "steer_type": "clutch_braking",
       "empty_weight": 61.02,
       "track_width": 0.55,
       "secondary_weapons": [
@@ -98591,7 +98606,7 @@
         20.4,
         31.0
       ],
-      "steer_type": "double_differential",
+      "steer_type": "clutch_braking",
       "empty_weight": 61.02,
       "track_width": 0.55,
       "secondary_weapons": [
@@ -98760,7 +98775,7 @@
         13.1,
         31.1
       ],
-      "steer_type": "double_differential",
+      "steer_type": "clutch_braking",
       "empty_weight": 61.38,
       "track_width": 0.55,
       "secondary_weapons": [
@@ -122598,7 +122613,7 @@
         21.5,
         32.7
       ],
-      "steer_type": "double_differential",
+      "steer_type": "clutch_braking",
       "empty_weight": 53.34,
       "track_width": 0.55,
       "secondary_weapons": [
