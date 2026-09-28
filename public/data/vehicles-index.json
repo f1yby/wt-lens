@@ -11351,6 +11351,24 @@
     "releaseDate": "2023-08-08"
   },
   {
+    "id": "sw_patria_bmp_3",
+    "name": "sw_patria_bmp_3",
+    "localizedName": "AMV (BMP-3)",
+    "nation": "sweden",
+    "rank": 6,
+    "battle_rating": 9.3,
+    "br": {
+      "arcade": 9.3,
+      "realistic": 9.3,
+      "simulator": 9.3
+    },
+    "vehicle_type": "light_tank",
+    "economic_type": "regular",
+    "imageUrl": "vehicles/sw_patria_bmp_3.webp",
+    "unreleased": true,
+    "releaseDate": "2026-10-01"
+  },
+  {
     "id": "sw_pbil_m40",
     "name": "sw_pbil_m40",
     "localizedName": "Pbil m/40",

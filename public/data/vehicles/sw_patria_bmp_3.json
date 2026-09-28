@@ -1,13 +1,13 @@
 {
-  "id": "ussr_bmp_3",
+  "id": "sw_patria_bmp_3",
   "performance": {
-    "horsepower": 500.0,
-    "weight": 18.7,
-    "power_to_weight": 26.74,
-    "max_reverse_speed": 20.4,
+    "horsepower": 550.0,
+    "weight": 28.0,
+    "power_to_weight": 19.64,
+    "max_reverse_speed": 16.9,
     "reload_time": 1.0,
     "penetration": null,
-    "max_speed": 70.1,
+    "max_speed": 100.1,
     "crew_count": 5,
     "elevation_speed": 35.0,
     "traverse_speed": 35.0,
@@ -21,9 +21,12 @@
       -180.0,
       180.0
     ],
-    "gunner_thermal_resolution": null,
+    "gunner_thermal_resolution": [
+      800,
+      600
+    ],
     "commander_thermal_resolution": null,
-    "gunner_thermal_diagonal": null,
+    "gunner_thermal_diagonal": 1000.0,
     "commander_thermal_diagonal": null,
     "stabilizer_value": 1,
     "elevation_range_value": 66.0,
@@ -31,34 +34,31 @@
     "ammunitions": null,
     "penetrationData": null,
     "autoLoader": false,
-    "engine_manufacturer": "transmash",
-    "engine_model": "utd_29",
+    "engine_manufacturer": null,
+    "engine_model": null,
     "engine_type": null,
-    "engine_max_rpm": 2600.0,
+    "engine_max_rpm": 2100.0,
     "transmission_manufacturer": null,
     "transmission_model": null,
     "transmission_type": null,
-    "forward_gears": 8,
-    "reverse_gears": 4,
+    "forward_gears": 7,
+    "reverse_gears": 2,
     "forward_gear_speeds": [
-      9.3,
-      14.0,
-      24.0,
-      41.0,
-      51.5,
-      58.0,
-      63.5,
-      70.1
+      10.0,
+      16.9,
+      28.9,
+      40.9,
+      58.1,
+      70.3,
+      100.1
     ],
     "reverse_gear_speeds": [
-      9.3,
-      11.9,
-      17.2,
-      20.4
+      10.0,
+      16.9
     ],
-    "steer_type": "clutch_braking",
-    "empty_weight": 18.4,
-    "track_width": 0.38,
+    "steer_type": null,
+    "empty_weight": 27.5,
+    "track_width": 0.4,
     "secondary_weapons": [
       {
         "trigger": "gunner1",
@@ -84,7 +84,7 @@
       600
     ],
     "has_smoke_grenades": true,
-    "has_ess": true,
+    "has_ess": false,
     "has_laser_rangefinder": true
   },
   "economy": {
@@ -96,22 +96,22 @@
     "aceTrainingRP": 950000,
     "repairCost": {
       "arcade": [
-        2844,
-        5376
+        3281,
+        5553
       ],
       "realistic": [
-        2968,
-        5610
+        3156,
+        5340
       ],
       "simulator": [
-        3438,
-        6500
+        4043,
+        6842
       ]
     },
     "rewardMultiplier": {
-      "arcade": 1.29,
-      "realistic": 1.65,
-      "simulator": 2.1
+      "arcade": 1.31,
+      "realistic": 1.64,
+      "simulator": 2.12
     },
     "expMultiplier": 2.2
   }
