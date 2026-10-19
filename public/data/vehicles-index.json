@@ -4804,6 +4804,24 @@
     "imageUrl": "vehicles/germ_panzerjager_panther.webp"
   },
   {
+    "id": "germ_panzerjager_panther_g2",
+    "name": "germ_panzerjager_panther_g2",
+    "localizedName": "Jagdpanther G2",
+    "nation": "germany",
+    "rank": 4,
+    "battle_rating": 6.3,
+    "br": {
+      "arcade": 6.3,
+      "realistic": 6.3,
+      "simulator": 6.3
+    },
+    "vehicle_type": "tank_destroyer",
+    "economic_type": "premium",
+    "imageUrl": "vehicles/germ_panzerjager_panther_g2.webp",
+    "unreleased": true,
+    "releaseDate": "2026-10-21"
+  },
+  {
     "id": "germ_panzerjager_tiger",
     "name": "germ_panzerjager_tiger",
     "localizedName": "猎​虎",
@@ -17814,6 +17832,24 @@
     "economic_type": "regular",
     "imageUrl": "vehicles/ussr_bt_7_m.webp",
     "releaseDate": "2021-03-10"
+  },
+  {
+    "id": "ussr_bt_7_m_816",
+    "name": "ussr_bt_7_m_816",
+    "localizedName": "BT-7M TD",
+    "nation": "ussr",
+    "rank": 1,
+    "battle_rating": 2.0,
+    "br": {
+      "arcade": 2.0,
+      "realistic": 2.0,
+      "simulator": 2.0
+    },
+    "vehicle_type": "light_tank",
+    "economic_type": "regular",
+    "imageUrl": "vehicles/ussr_bt_7_m_816.webp",
+    "unreleased": true,
+    "releaseDate": "2026-10-22"
   },
   {
     "id": "ussr_bt_7a_f32",

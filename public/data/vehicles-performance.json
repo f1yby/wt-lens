@@ -39559,6 +39559,151 @@
     }
   },
   {
+    "id": "germ_panzerjager_panther_g2",
+    "performance": {
+      "horsepower": 600.0,
+      "weight": 46.0,
+      "power_to_weight": 13.04,
+      "max_reverse_speed": 3.5,
+      "reload_time": 6.99,
+      "penetration": 287.1,
+      "max_speed": 45.8,
+      "crew_count": 5,
+      "elevation_speed": 4.0,
+      "traverse_speed": 8.0,
+      "has_stabilizer": false,
+      "stabilizer_type": "none",
+      "elevation_range": [
+        -8.0,
+        14.0
+      ],
+      "traverse_range": [
+        -11.0,
+        11.0
+      ],
+      "gunner_thermal_resolution": null,
+      "commander_thermal_resolution": null,
+      "gunner_thermal_diagonal": null,
+      "commander_thermal_diagonal": null,
+      "stabilizer_value": 0,
+      "elevation_range_value": 22.0,
+      "mainGun": {
+        "name": "88mm_PaK43",
+        "caliber": 88.0,
+        "reloadTime": 6.99,
+        "autoLoader": false,
+        "reloadTimes": {
+          "base": 9.09,
+          "expert": 8.04,
+          "ace": 6.99
+        }
+      },
+      "ammunitions": [
+        {
+          "name": "88mm_pzrg_39_43",
+          "localizedName": "PzGr. 39/43",
+          "type": "apcbc_tank",
+          "caliber": 88.0,
+          "mass": 10.16,
+          "muzzleVelocity": 1000.0,
+          "deMarre": {
+            "fullCaliber": 88.0,
+            "isApcbc": true,
+            "explosiveMass": 0.064,
+            "Cx": 0.2623
+          },
+          "penetration0m": 237.5,
+          "explosiveMassKg": 0.064,
+          "explosiveType": "h10",
+          "tntEquivalent": 0.09
+        },
+        {
+          "name": "88mm_sprgr_43",
+          "localizedName": "SprGr. 43",
+          "type": "he_frag_tank",
+          "caliber": 88.0,
+          "mass": 9.4,
+          "muzzleVelocity": 820.0,
+          "explosiveMassKg": 1.0,
+          "explosiveType": "fp02",
+          "tntEquivalent": 1.0
+        },
+        {
+          "name": "88mm_grhl39",
+          "localizedName": "Gr. 39 Hl",
+          "type": "heat_tank",
+          "caliber": 88.0,
+          "mass": 7.64,
+          "muzzleVelocity": 600.0,
+          "penetration0m": 110.0,
+          "explosiveMassKg": 0.646,
+          "explosiveType": "h5",
+          "tntEquivalent": 0.904
+        },
+        {
+          "name": "88mm_pzrg_40_43",
+          "localizedName": "PzGr. 40/43",
+          "type": "apcr_tank",
+          "caliber": 35.0,
+          "mass": 7.3,
+          "muzzleVelocity": 1130.0,
+          "deMarre": {
+            "fullCaliber": 88.0,
+            "isApcbc": false,
+            "explosiveMass": 0,
+            "isApcr": true,
+            "coreCaliber": 35.0,
+            "coreMass": 2.0,
+            "Cx": 0.28
+          },
+          "penetration0m": 287.1
+        }
+      ],
+      "penetrationData": null,
+      "autoLoader": false,
+      "engine_manufacturer": null,
+      "engine_model": null,
+      "engine_type": null,
+      "engine_max_rpm": 2500.0,
+      "transmission_manufacturer": null,
+      "transmission_model": null,
+      "transmission_type": null,
+      "forward_gears": 7,
+      "reverse_gears": 1,
+      "forward_gear_speeds": [
+        3.4,
+        6.9,
+        11.0,
+        17.3,
+        24.9,
+        35.1,
+        45.8
+      ],
+      "reverse_gear_speeds": [
+        3.5
+      ],
+      "steer_type": "clutch_braking",
+      "empty_weight": 45.5,
+      "track_width": 0.66,
+      "secondary_weapons": [
+        {
+          "trigger": "gunner1",
+          "name": "7_92mm_MG34",
+          "caliber": 7.9,
+          "ammo": 3000,
+          "reloadTime": 8.0,
+          "rateOfFire": 900,
+          "bulletType": "ap_ball"
+        }
+      ],
+      "main_gun_ammo": 49,
+      "driver_nv_resolution": null,
+      "has_smoke_grenades": true,
+      "has_ess": false,
+      "has_laser_rangefinder": false
+    }
+  },
+  {
     "id": "germ_panzerjager_tiger",
     "performance": {
       "horsepower": 600.0,
@@ -149990,6 +150135,121 @@
   },
   {
     "id": "ussr_bt_7_m",
+    "performance": {
+      "horsepower": 500.0,
+      "weight": 14.65,
+      "power_to_weight": 34.13,
+      "max_reverse_speed": 10.2,
+      "reload_time": 2.94,
+      "penetration": 73.1,
+      "max_speed": 62.1,
+      "crew_count": 5,
+      "elevation_speed": 4.0,
+      "traverse_speed": 16.0,
+      "has_stabilizer": false,
+      "stabilizer_type": "none",
+      "elevation_range": [
+        -5.0,
+        20.0
+      ],
+      "traverse_range": [
+        -180.0,
+        180.0
+      ],
+      "gunner_thermal_resolution": null,
+      "commander_thermal_resolution": null,
+      "gunner_thermal_diagonal": null,
+      "commander_thermal_diagonal": null,
+      "stabilizer_value": 0,
+      "elevation_range_value": 25.0,
+      "mainGun": {
+        "name": "45mm_20K",
+        "caliber": 45.0,
+        "reloadTime": 2.94,
+        "autoLoader": false,
+        "reloadTimes": {
+          "base": 3.82,
+          "expert": 3.38,
+          "ace": 2.94
+        }
+      },
+      "ammunitions": [
+        {
+          "name": "45mm_br_243",
+          "localizedName": "BR-240",
+          "type": "aphebc_tank",
+          "caliber": 45.0,
+          "mass": 1.43,
+          "muzzleVelocity": 760.0,
+          "deMarre": {
+            "fullCaliber": 45.0,
+            "isApcbc": false,
+            "explosiveMass": 0.019,
+            "Cx": 0.3984
+          },
+          "penetration0m": 69.9,
+          "explosiveMassKg": 0.019,
+          "explosiveType": "a_ix_2",
+          "tntEquivalent": 0.027
+        },
+        {
+          "name": "45mm_br_243sp",
+          "localizedName": "BR-240SP",
+          "type": "apbc_usa_tank",
+          "caliber": 45.0,
+          "mass": 1.43,
+          "muzzleVelocity": 757.0,
+          "deMarre": {
+            "fullCaliber": 45.0,
+            "isApcbc": false,
+            "explosiveMass": 0,
+            "Cx": 0.3984
+          },
+          "penetration0m": 73.1
+        }
+      ],
+      "penetrationData": null,
+      "autoLoader": false,
+      "engine_manufacturer": null,
+      "engine_model": null,
+      "engine_type": null,
+      "engine_max_rpm": 1800.0,
+      "transmission_manufacturer": null,
+      "transmission_model": null,
+      "transmission_type": null,
+      "forward_gears": 3,
+      "reverse_gears": 1,
+      "forward_gear_speeds": [
+        13.4,
+        27.2,
+        62.1
+      ],
+      "reverse_gear_speeds": [
+        10.2
+      ],
+      "steer_type": "clutch_braking",
+      "empty_weight": 14.45,
+      "track_width": 0.25,
+      "secondary_weapons": [
+        {
+          "trigger": "gunner1",
+          "name": "7_62mm_DT",
+          "caliber": 7.6,
+          "ammo": 1890,
+          "reloadTime": 8.0,
+          "rateOfFire": 600,
+          "bulletType": "ap_i_ball"
+        }
+      ],
+      "main_gun_ammo": 188,
+      "driver_nv_resolution": null,
+      "has_smoke_grenades": false,
+      "has_ess": false,
+      "has_laser_rangefinder": false
+    }
+  },
+  {
+    "id": "ussr_bt_7_m_816",
     "performance": {
       "horsepower": 500.0,
       "weight": 14.65,

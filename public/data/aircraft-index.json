@@ -44212,6 +44212,97 @@
     }
   },
   {
+    "id": "bf-109e-3_tl",
+    "name": "bf-109e-3_tl",
+    "localizedName": "Bf 109 E-3 (TL)",
+    "nation": "germany",
+    "rank": 2,
+    "battleRating": 2.3,
+    "br": {
+      "arcade": 2.7,
+      "realistic": 2.3,
+      "simulator": 2.7
+    },
+    "aircraftType": "fighter",
+    "economicType": "regular",
+    "imageUrl": "aircrafts/bf-109e-3_tl.webp",
+    "unreleased": true,
+    "releaseDate": "2026-10-22",
+    "weapons": {
+      "fixed_weapons": [
+        {
+          "name": "gunMG17",
+          "localizedName": "7.92 毫​米 MG 17 机​枪",
+          "count": 2,
+          "bullets": 2000,
+          "caliber": 7.9,
+          "fireRate": 1200
+        },
+        {
+          "name": "cannonMGFF",
+          "localizedName": "20 毫​米 MG FF 机​炮",
+          "count": 2,
+          "bullets": 120,
+          "caliber": 20.0,
+          "fireRate": 520
+        }
+      ],
+      "payloads": [
+        {
+          "name": "Bf-109E-3_4xSC50",
+          "weapons": [
+            {
+              "trigger": "bombs",
+              "name": "de_sc50",
+              "localizedName": "50 千​克 SC50JA 炸​弹",
+              "count": 1
+            },
+            {
+              "trigger": "bombs",
+              "name": "de_sc50",
+              "localizedName": "50 千​克 SC50JA 炸​弹",
+              "count": 1
+            },
+            {
+              "trigger": "bombs",
+              "name": "de_sc50",
+              "localizedName": "50 千​克 SC50JA 炸​弹",
+              "count": 1
+            },
+            {
+              "trigger": "bombs",
+              "name": "de_sc50",
+              "localizedName": "50 千​克 SC50JA 炸​弹",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "name": "Bf-109E-3_SC250",
+          "weapons": [
+            {
+              "trigger": "bombs",
+              "name": "de_sc250",
+              "localizedName": "250 千​克 SC260JA 炸​弹",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "name": "Bf-109E-3_SC500",
+          "weapons": [
+            {
+              "trigger": "bombs",
+              "name": "de_sc500",
+              "localizedName": "500 千​克 SC500K 炸​弹",
+              "count": 1
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
     "id": "bf-109e-4",
     "name": "bf-109e-4",
     "localizedName": "Bf 109 E-4",
