@@ -50673,7 +50673,7 @@
       "elevation_range_value": 82.0,
       "mainGun": {
         "name": "106mm_M40A1_LGS",
-        "caliber": 106.0,
+        "caliber": 105.0,
         "reloadTime": 10.0,
         "autoLoader": false,
         "reloadTimes": {
@@ -50687,7 +50687,7 @@
           "name": "106mm_m344a1",
           "localizedName": "M344A1",
           "type": "heat_grenade_tank",
-          "caliber": 106.0,
+          "caliber": 105.0,
           "mass": 7.96,
           "muzzleVelocity": 502.9,
           "penetration0m": 433.0,
@@ -50699,7 +50699,7 @@
           "name": "106mm_m361a1",
           "localizedName": "M361A1",
           "type": "hesh_tank",
-          "caliber": 106.0,
+          "caliber": 105.0,
           "mass": 7.95,
           "muzzleVelocity": 498.3,
           "penetration0m": 152.0,
@@ -66918,7 +66918,7 @@
       "elevation_range_value": 82.0,
       "mainGun": {
         "name": "106mm_106_SR",
-        "caliber": 106.0,
+        "caliber": 105.0,
         "reloadTime": 10.0,
         "autoLoader": false,
         "reloadTimes": {
@@ -66932,7 +66932,7 @@
           "name": "106mm_m344a1",
           "localizedName": "M344A1",
           "type": "heat_grenade_tank",
-          "caliber": 106.0,
+          "caliber": 105.0,
           "mass": 7.96,
           "muzzleVelocity": 502.9,
           "penetration0m": 433.0,
@@ -66944,7 +66944,7 @@
           "name": "106mm_m361a1",
           "localizedName": "M361A1",
           "type": "hesh_tank",
-          "caliber": 106.0,
+          "caliber": 105.0,
           "mass": 7.95,
           "muzzleVelocity": 498.3,
           "penetration0m": 152.0,
@@ -72428,7 +72428,7 @@
       "elevation_range_value": 17.0,
       "mainGun": {
         "name": "106mm_106_SR",
-        "caliber": 106.0,
+        "caliber": 105.0,
         "reloadTime": 10.0,
         "autoLoader": false,
         "reloadTimes": {
@@ -72442,7 +72442,7 @@
           "name": "106mm_m344a1",
           "localizedName": "M344A1",
           "type": "heat_grenade_tank",
-          "caliber": 106.0,
+          "caliber": 105.0,
           "mass": 7.96,
           "muzzleVelocity": 502.9,
           "penetration0m": 433.0,
@@ -72454,7 +72454,7 @@
           "name": "106mm_m361a1",
           "localizedName": "M361A1",
           "type": "hesh_tank",
-          "caliber": 106.0,
+          "caliber": 105.0,
           "mass": 7.95,
           "muzzleVelocity": 498.3,
           "penetration0m": 152.0,
@@ -72491,7 +72491,7 @@
         {
           "trigger": "gunner1",
           "name": "106mm_106_SR",
-          "caliber": 106.0,
+          "caliber": 105.0,
           "ammo": 5,
           "rateOfFire": 6,
           "bulletType": "heat_grenade_tank"
@@ -84952,7 +84952,7 @@
       "elevation_range_value": 35.0,
       "mainGun": {
         "name": "106mm_Type_60B",
-        "caliber": 106.0,
+        "caliber": 105.0,
         "reloadTime": 10.0,
         "autoLoader": false,
         "reloadTimes": {
@@ -84966,7 +84966,7 @@
           "name": "106mm_type_64_heat",
           "localizedName": "Type 64 HEAT",
           "type": "heat_grenade_tank",
-          "caliber": 106.0,
+          "caliber": 105.0,
           "mass": 7.96,
           "muzzleVelocity": 502.9,
           "penetration0m": 433.0,
@@ -84978,7 +84978,7 @@
           "name": "106mm_type_68_hesh",
           "localizedName": "Type 68 HESH",
           "type": "hesh_tank",
-          "caliber": 106.0,
+          "caliber": 105.0,
           "mass": 7.95,
           "muzzleVelocity": 498.3,
           "penetration0m": 152.0,
@@ -85019,7 +85019,7 @@
         {
           "trigger": "gunner1",
           "name": "106mm_Type_60B",
-          "caliber": 106.0,
+          "caliber": 105.0,
           "ammo": 5,
           "rateOfFire": 6,
           "bulletType": "heat_grenade_tank"
@@ -124063,7 +124063,7 @@
       "power_to_weight": 16.44,
       "max_reverse_speed": 17.4,
       "reload_time": 2.0,
-      "penetration": 48.2,
+      "penetration": 48.0,
       "max_speed": 75.7,
       "crew_count": 5,
       "elevation_speed": 20.0,
@@ -124114,14 +124114,15 @@
           "localizedName": "M59A1",
           "type": "apc_t",
           "caliber": 37.0,
-          "mass": 0.87,
-          "muzzleVelocity": 625.0,
+          "mass": 0.866,
+          "muzzleVelocity": 624.8,
           "deMarre": {
             "fullCaliber": 37.0,
             "isApcbc": false,
-            "explosiveMass": 0
+            "explosiveMass": 0,
+            "Cx": 0.6267
           },
-          "penetration0m": 48.2
+          "penetration0m": 48.0
         }
       ],
       "penetrationData": null,
@@ -136404,7 +136405,7 @@
       "elevation_range_value": 30.0,
       "mainGun": {
         "name": "106mm_M40A1C",
-        "caliber": 106.0,
+        "caliber": 105.0,
         "reloadTime": 0.5,
         "autoLoader": false,
         "reloadTimes": {
@@ -136418,7 +136419,7 @@
           "name": "106mm_m344a1",
           "localizedName": "M344A1",
           "type": "heat_grenade_tank",
-          "caliber": 106.0,
+          "caliber": 105.0,
           "mass": 7.96,
           "muzzleVelocity": 502.9,
           "penetration0m": 433.0,
@@ -136430,7 +136431,7 @@
           "name": "106mm_m361a1",
           "localizedName": "M361A1",
           "type": "hesh_tank",
-          "caliber": 106.0,
+          "caliber": 105.0,
           "mass": 7.95,
           "muzzleVelocity": 498.3,
           "penetration0m": 152.0,
@@ -141973,7 +141974,7 @@
       "elevation_range_value": 30.0,
       "mainGun": {
         "name": "106mm_M40A1C_T114",
-        "caliber": 106.0,
+        "caliber": 105.0,
         "reloadTime": 2.5,
         "autoLoader": false,
         "reloadTimes": {
@@ -141987,9 +141988,9 @@
           "name": "106mm_m344a1",
           "localizedName": "M344A1",
           "type": "heat_grenade_tank",
-          "caliber": 106.0,
-          "mass": 10.0,
-          "muzzleVelocity": 502.0,
+          "caliber": 105.0,
+          "mass": 7.96,
+          "muzzleVelocity": 502.9,
           "penetration0m": 433.0,
           "explosiveMassKg": 1.26,
           "explosiveType": "comp_b",

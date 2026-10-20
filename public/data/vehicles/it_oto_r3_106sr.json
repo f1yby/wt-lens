@@ -29,7 +29,7 @@
     "elevation_range_value": 17.0,
     "mainGun": {
       "name": "106mm_106_SR",
-      "caliber": 106.0,
+      "caliber": 105.0,
       "reloadTime": 10.0,
       "autoLoader": false,
       "reloadTimes": {
@@ -43,7 +43,7 @@
         "name": "106mm_m344a1",
         "localizedName": "M344A1",
         "type": "heat_grenade_tank",
-        "caliber": 106.0,
+        "caliber": 105.0,
         "mass": 7.96,
         "muzzleVelocity": 502.9,
         "penetration0m": 433.0,
@@ -55,7 +55,7 @@
         "name": "106mm_m361a1",
         "localizedName": "M361A1",
         "type": "hesh_tank",
-        "caliber": 106.0,
+        "caliber": 105.0,
         "mass": 7.95,
         "muzzleVelocity": 498.3,
         "penetration0m": 152.0,
@@ -92,7 +92,7 @@
       {
         "trigger": "gunner1",
         "name": "106mm_106_SR",
-        "caliber": 106.0,
+        "caliber": 105.0,
         "ammo": 5,
         "rateOfFire": 6,
         "bulletType": "heat_grenade_tank"

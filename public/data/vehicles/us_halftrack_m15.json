@@ -6,7 +6,7 @@
     "power_to_weight": 16.44,
     "max_reverse_speed": 17.4,
     "reload_time": 2.0,
-    "penetration": 48.2,
+    "penetration": 48.0,
     "max_speed": 75.7,
     "crew_count": 5,
     "elevation_speed": 20.0,
@@ -57,14 +57,15 @@
         "localizedName": "M59A1",
         "type": "apc_t",
         "caliber": 37.0,
-        "mass": 0.87,
-        "muzzleVelocity": 625.0,
+        "mass": 0.866,
+        "muzzleVelocity": 624.8,
         "deMarre": {
           "fullCaliber": 37.0,
           "isApcbc": false,
-          "explosiveMass": 0
+          "explosiveMass": 0,
+          "Cx": 0.6267
         },
-        "penetration0m": 48.2
+        "penetration0m": 48.0
       }
     ],
     "penetrationData": null,
