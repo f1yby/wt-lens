@@ -1,0 +1,49 @@
+{
+  "id": "fw_190a_8_mistel",
+  "economy": {
+    "researchCost": 26000,
+    "purchaseCost": 0,
+    "purchaseCostGold": 1450,
+    "crewTraining": 10000,
+    "expertTraining": 115000,
+    "aceTrainingGE": 500,
+    "aceTrainingRP": 640000,
+    "repairCost": {
+      "arcade": [
+        824,
+        824
+      ],
+      "realistic": [
+        1506,
+        1506
+      ],
+      "simulator": [
+        2811,
+        2811
+      ]
+    },
+    "rewardMultiplier": {
+      "arcade": 1.56,
+      "realistic": 3.43,
+      "simulator": 5.78
+    },
+    "expMultiplier": 1.42,
+    "freeRepairs": 30
+  },
+  "weapons": {
+    "fixed_weapons": [],
+    "payloads": [
+      {
+        "name": "fw_190a_8_mistel_default",
+        "weapons": [
+          {
+            "trigger": "bombs",
+            "name": "de_ju_88g_1_mistel",
+            "localizedName": "Aircraft-bomb Mistel",
+            "count": 1
+          }
+        ]
+      }
+    ]
+  }
+}

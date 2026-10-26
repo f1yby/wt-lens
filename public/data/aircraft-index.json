@@ -148703,6 +148703,40 @@
     }
   },
   {
+    "id": "fw_190a_8_mistel",
+    "name": "fw_190a_8_mistel",
+    "localizedName": "Mistel 3C",
+    "nation": "germany",
+    "rank": 3,
+    "battleRating": 4.0,
+    "br": {
+      "arcade": 4.0,
+      "realistic": 4.0,
+      "simulator": 4.0
+    },
+    "aircraftType": "bomber",
+    "economicType": "premium",
+    "imageUrl": "aircrafts/fw_190a_8_mistel.webp",
+    "unreleased": true,
+    "releaseDate": "2026-11-01",
+    "weapons": {
+      "fixed_weapons": [],
+      "payloads": [
+        {
+          "name": "fw_190a_8_mistel_default",
+          "weapons": [
+            {
+              "trigger": "bombs",
+              "name": "de_ju_88g_1_mistel",
+              "localizedName": "Aircraft-bomb Mistel",
+              "count": 1
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
     "id": "fw_190f_8_hungary",
     "name": "fw_190f_8_hungary",
     "localizedName": "◔​Fw 190 F-8",
@@ -192286,6 +192320,24 @@
         }
       ]
     }
+  },
+  {
+    "id": "ju_88g_1_mistel",
+    "name": "ju_88g_1_mistel",
+    "localizedName": "Mistel 3C",
+    "nation": "germany",
+    "rank": 3,
+    "battleRating": 4.0,
+    "br": {
+      "arcade": 4.0,
+      "realistic": 4.0,
+      "simulator": 4.0
+    },
+    "aircraftType": "bomber",
+    "economicType": "premium",
+    "imageUrl": null,
+    "unreleased": true,
+    "releaseDate": "2026-11-01"
   },
   {
     "id": "ka_29",
