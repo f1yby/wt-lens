@@ -4141,6 +4141,7 @@
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/a6m3_mod22_zero.webp",
+    "groundBattleRating": 5.0,
     "weapons": {
       "fixed_weapons": [
         {
@@ -7757,6 +7758,7 @@
     "aircraftType": "fighter",
     "economicType": "premium",
     "imageUrl": "aircrafts/a7he1.webp",
+    "groundBattleRating": 2.3,
     "weapons": {
       "fixed_weapons": [
         {
@@ -8592,10 +8594,10 @@
     "localizedName": "A109 EOA-2",
     "nation": "italy",
     "rank": 6,
-    "battleRating": 8.7,
+    "battleRating": 9.0,
     "br": {
       "arcade": 8.7,
-      "realistic": 8.7,
+      "realistic": 9.0,
       "simulator": 9.3
     },
     "aircraftType": "helicopter",
@@ -8686,6 +8688,7 @@
     "aircraftType": "assault",
     "economicType": "premium",
     "imageUrl": "aircrafts/a_10a_early.webp",
+    "groundBattleRating": 11.0,
     "releaseDate": "2022-03-22",
     "weapons": {
       "fixed_weapons": [],
@@ -9386,6 +9389,7 @@
     "aircraftType": "assault",
     "economicType": "regular",
     "imageUrl": "aircrafts/a_10a_late.webp",
+    "groundBattleRating": 11.3,
     "releaseDate": "2022-03-22",
     "weapons": {
       "fixed_weapons": [],
@@ -9934,6 +9938,7 @@
     "aircraftType": "assault",
     "economicType": "regular",
     "imageUrl": "aircrafts/a_10c.webp",
+    "groundBattleRating": 12.0,
     "releaseDate": "2024-09-10",
     "weapons": {
       "fixed_weapons": [],
@@ -11134,10 +11139,10 @@
     "localizedName": "A129CBT",
     "nation": "italy",
     "rank": 7,
-    "battleRating": 11.0,
+    "battleRating": 11.3,
     "br": {
       "arcade": 9.7,
-      "realistic": 11.0,
+      "realistic": 11.3,
       "simulator": 9.7
     },
     "aircraftType": "helicopter",
@@ -11340,10 +11345,10 @@
     "localizedName": "AH-129D",
     "nation": "italy",
     "rank": 7,
-    "battleRating": 12.7,
+    "battleRating": 13.0,
     "br": {
       "arcade": 11.0,
-      "realistic": 12.7,
+      "realistic": 13.0,
       "simulator": 11.7
     },
     "aircraftType": "helicopter",
@@ -12249,7 +12254,7 @@
     "aircraftType": "assault",
     "economicType": "clan",
     "imageUrl": "aircrafts/a_4e_early.webp",
-    "groundBattleRating": 9.3,
+    "groundBattleRating": 10.0,
     "weapons": {
       "fixed_weapons": [],
       "payloads": [
@@ -12693,7 +12698,7 @@
     "aircraftType": "assault",
     "economicType": "regular",
     "imageUrl": "aircrafts/a_4e_early_iaf.webp",
-    "groundBattleRating": 9.3,
+    "groundBattleRating": 10.0,
     "releaseDate": "2021-12-17",
     "weapons": {
       "fixed_weapons": [],
@@ -13051,7 +13056,7 @@
     "aircraftType": "assault",
     "economicType": "premium",
     "imageUrl": "aircrafts/a_4e_late_iaf.webp",
-    "groundBattleRating": 9.3,
+    "groundBattleRating": 10.0,
     "releaseDate": "2021-10-26",
     "weapons": {
       "fixed_weapons": [],
@@ -13850,13 +13855,14 @@
     "rank": 6,
     "battleRating": 10.0,
     "br": {
-      "arcade": 9.7,
+      "arcade": 10.0,
       "realistic": 10.0,
       "simulator": 9.7
     },
     "aircraftType": "assault",
     "economicType": "regular",
     "imageUrl": "aircrafts/a_4n.webp",
+    "groundBattleRating": 10.7,
     "releaseDate": "2021-12-17",
     "weapons": {
       "fixed_weapons": [],
@@ -14703,11 +14709,11 @@
     "localizedName": "强​-5III",
     "nation": "china",
     "rank": 7,
-    "battleRating": 10.7,
+    "battleRating": 11.0,
     "br": {
-      "arcade": 11.0,
-      "realistic": 10.7,
-      "simulator": 10.7
+      "arcade": 11.3,
+      "realistic": 11.0,
+      "simulator": 11.0
     },
     "aircraftType": "assault",
     "economicType": "premium",
@@ -15151,7 +15157,7 @@
     "aircraftType": "assault",
     "economicType": "premium",
     "imageUrl": "aircrafts/a_6e_tram.webp",
-    "groundBattleRating": 11.0,
+    "groundBattleRating": 11.3,
     "releaseDate": "2022-12-20",
     "weapons": {
       "fixed_weapons": [],
@@ -15855,6 +15861,7 @@
     "aircraftType": "assault",
     "economicType": "regular",
     "imageUrl": "aircrafts/a_7d.webp",
+    "groundBattleRating": 11.0,
     "releaseDate": "2020-12-17",
     "weapons": {
       "fixed_weapons": [],
@@ -16341,7 +16348,7 @@
     "aircraftType": "assault",
     "economicType": "regular",
     "imageUrl": "aircrafts/a_7e.webp",
-    "groundBattleRating": 10.7,
+    "groundBattleRating": 11.3,
     "releaseDate": "2021-10-26",
     "weapons": {
       "fixed_weapons": [],
@@ -17010,7 +17017,7 @@
     "aircraftType": "assault",
     "economicType": "premium",
     "imageUrl": "aircrafts/a_7e_greece.webp",
-    "groundBattleRating": 10.7,
+    "groundBattleRating": 11.3,
     "releaseDate": "2026-09-16",
     "weapons": {
       "fixed_weapons": [],
@@ -17679,7 +17686,7 @@
     "aircraftType": "assault",
     "economicType": "regular",
     "imageUrl": "aircrafts/a_7e_thailand.webp",
-    "groundBattleRating": 10.7,
+    "groundBattleRating": 11.3,
     "releaseDate": "2024-12-22",
     "weapons": {
       "fixed_weapons": [],
@@ -18907,7 +18914,7 @@
     "aircraftType": "assault",
     "economicType": "regular",
     "imageUrl": "aircrafts/a_7k.webp",
-    "groundBattleRating": 11.0,
+    "groundBattleRating": 11.3,
     "releaseDate": "2023-04-06",
     "weapons": {
       "fixed_weapons": [],
@@ -19570,10 +19577,10 @@
     "localizedName": "AH-1F",
     "nation": "usa",
     "rank": 6,
-    "battleRating": 9.7,
+    "battleRating": 10.0,
     "br": {
       "arcade": 9.7,
-      "realistic": 9.7,
+      "realistic": 10.0,
       "simulator": 9.7
     },
     "aircraftType": "helicopter",
@@ -19650,10 +19657,10 @@
     "localizedName": "蝰​蛇 D/E",
     "nation": "israel",
     "rank": 6,
-    "battleRating": 9.7,
+    "battleRating": 10.0,
     "br": {
       "arcade": 9.7,
-      "realistic": 9.7,
+      "realistic": 10.0,
       "simulator": 9.7
     },
     "aircraftType": "helicopter",
@@ -19946,10 +19953,10 @@
     "localizedName": "蝰​蛇 B",
     "nation": "israel",
     "rank": 6,
-    "battleRating": 9.0,
+    "battleRating": 9.7,
     "br": {
       "arcade": 9.0,
-      "realistic": 9.0,
+      "realistic": 9.7,
       "simulator": 9.0
     },
     "aircraftType": "helicopter",
@@ -20043,10 +20050,10 @@
     "localizedName": "AH-1S 木​更​津",
     "nation": "japan",
     "rank": 6,
-    "battleRating": 9.7,
+    "battleRating": 10.0,
     "br": {
       "arcade": 9.7,
-      "realistic": 9.7,
+      "realistic": 10.0,
       "simulator": 9.7
     },
     "aircraftType": "helicopter",
@@ -20140,10 +20147,10 @@
     "localizedName": "AH-1E",
     "nation": "japan",
     "rank": 6,
-    "battleRating": 9.3,
+    "battleRating": 9.7,
     "br": {
       "arcade": 9.7,
-      "realistic": 9.3,
+      "realistic": 9.7,
       "simulator": 9.3
     },
     "aircraftType": "helicopter",
@@ -20237,10 +20244,10 @@
     "localizedName": "AH-1S",
     "nation": "japan",
     "rank": 6,
-    "battleRating": 9.7,
+    "battleRating": 10.0,
     "br": {
       "arcade": 9.7,
-      "realistic": 9.7,
+      "realistic": 10.0,
       "simulator": 9.7
     },
     "aircraftType": "helicopter",
@@ -20804,10 +20811,10 @@
     "localizedName": "AH-1Z",
     "nation": "usa",
     "rank": 7,
-    "battleRating": 12.0,
+    "battleRating": 12.3,
     "br": {
       "arcade": 10.3,
-      "realistic": 12.0,
+      "realistic": 12.3,
       "simulator": 10.0
     },
     "aircraftType": "helicopter",
@@ -21039,10 +21046,10 @@
     "localizedName": "石​茶​隼 Mk 1F CSH",
     "nation": "britain",
     "rank": 6,
-    "battleRating": 11.7,
+    "battleRating": 12.3,
     "br": {
       "arcade": 10.7,
-      "realistic": 11.7,
+      "realistic": 12.3,
       "simulator": 10.7
     },
     "aircraftType": "helicopter",
@@ -21300,10 +21307,10 @@
     "localizedName": "AH-56A",
     "nation": "usa",
     "rank": 6,
-    "battleRating": 9.7,
+    "battleRating": 10.0,
     "br": {
       "arcade": 9.7,
-      "realistic": 9.7,
+      "realistic": 10.0,
       "simulator": 9.7
     },
     "aircraftType": "helicopter",
@@ -21409,10 +21416,10 @@
     "localizedName": "​AH-60",
     "nation": "israel",
     "rank": 7,
-    "battleRating": 12.7,
+    "battleRating": 13.0,
     "br": {
       "arcade": 10.7,
-      "realistic": 12.7,
+      "realistic": 13.0,
       "simulator": 10.7
     },
     "aircraftType": "helicopter",
@@ -21680,10 +21687,10 @@
     "localizedName": "AH-64A",
     "nation": "usa",
     "rank": 6,
-    "battleRating": 11.3,
+    "battleRating": 11.7,
     "br": {
       "arcade": 10.3,
-      "realistic": 11.3,
+      "realistic": 11.7,
       "simulator": 10.3
     },
     "aircraftType": "helicopter",
@@ -21963,10 +21970,10 @@
     "localizedName": "▃​AH-64A (希​腊)",
     "nation": "usa",
     "rank": 6,
-    "battleRating": 11.3,
+    "battleRating": 11.7,
     "br": {
       "arcade": 10.3,
-      "realistic": 11.3,
+      "realistic": 11.7,
       "simulator": 10.3
     },
     "aircraftType": "helicopter",
@@ -22224,10 +22231,10 @@
     "localizedName": "眼​镜​蛇",
     "nation": "israel",
     "rank": 6,
-    "battleRating": 11.3,
+    "battleRating": 11.7,
     "br": {
       "arcade": 10.3,
-      "realistic": 11.3,
+      "realistic": 11.7,
       "simulator": 10.3
     },
     "aircraftType": "helicopter",
@@ -22367,10 +22374,10 @@
     "localizedName": "▃​AH-64A",
     "nation": "usa",
     "rank": 6,
-    "battleRating": 11.3,
+    "battleRating": 11.7,
     "br": {
       "arcade": 10.3,
-      "realistic": 11.3,
+      "realistic": 11.7,
       "simulator": 10.3
     },
     "aircraftType": "helicopter",
@@ -22529,10 +22536,10 @@
     "localizedName": "​AH-64A 眼​镜​蛇",
     "nation": "israel",
     "rank": 6,
-    "battleRating": 11.3,
+    "battleRating": 11.7,
     "br": {
       "arcade": 10.3,
-      "realistic": 11.3,
+      "realistic": 11.7,
       "simulator": 10.3
     },
     "aircraftType": "helicopter",
@@ -22691,10 +22698,10 @@
     "localizedName": "AH-64D",
     "nation": "usa",
     "rank": 7,
-    "battleRating": 11.7,
+    "battleRating": 12.0,
     "br": {
       "arcade": 10.7,
-      "realistic": 11.7,
+      "realistic": 12.0,
       "simulator": 10.7
     },
     "aircraftType": "helicopter",
@@ -22909,10 +22916,10 @@
     "localizedName": "穴​蝰",
     "nation": "israel",
     "rank": 7,
-    "battleRating": 12.7,
+    "battleRating": 13.0,
     "br": {
       "arcade": 10.7,
-      "realistic": 12.7,
+      "realistic": 13.0,
       "simulator": 10.7
     },
     "aircraftType": "helicopter",
@@ -23087,10 +23094,10 @@
     "localizedName": "AH-64DJP",
     "nation": "japan",
     "rank": 7,
-    "battleRating": 11.3,
+    "battleRating": 11.7,
     "br": {
       "arcade": 10.7,
-      "realistic": 11.3,
+      "realistic": 11.7,
       "simulator": 10.3
     },
     "aircraftType": "helicopter",
@@ -23230,10 +23237,10 @@
     "localizedName": "AH-64DJP (AT)",
     "nation": "japan",
     "rank": 7,
-    "battleRating": 11.3,
+    "battleRating": 11.7,
     "br": {
       "arcade": 10.7,
-      "realistic": 11.3,
+      "realistic": 11.7,
       "simulator": 10.3
     },
     "aircraftType": "helicopter",
@@ -23373,10 +23380,10 @@
     "localizedName": "◘​AH-64D",
     "nation": "france",
     "rank": 7,
-    "battleRating": 11.3,
+    "battleRating": 11.7,
     "br": {
       "arcade": 10.7,
-      "realistic": 11.3,
+      "realistic": 11.7,
       "simulator": 10.7
     },
     "aircraftType": "helicopter",
@@ -23709,10 +23716,10 @@
     "localizedName": "AH-64E",
     "nation": "usa",
     "rank": 7,
-    "battleRating": 13.0,
+    "battleRating": 13.3,
     "br": {
       "arcade": 11.0,
-      "realistic": 13.0,
+      "realistic": 13.3,
       "simulator": 11.0
     },
     "aircraftType": "helicopter",
@@ -23980,10 +23987,10 @@
     "localizedName": "AH Mk.2 阿​帕​奇",
     "nation": "britain",
     "rank": 7,
-    "battleRating": 13.0,
+    "battleRating": 13.3,
     "br": {
       "arcade": 11.0,
-      "realistic": 13.0,
+      "realistic": 13.3,
       "simulator": 11.0
     },
     "aircraftType": "helicopter",
@@ -24251,10 +24258,10 @@
     "localizedName": "␗​AH-64E",
     "nation": "china",
     "rank": 7,
-    "battleRating": 13.0,
+    "battleRating": 13.3,
     "br": {
       "arcade": 11.0,
-      "realistic": 13.0,
+      "realistic": 13.3,
       "simulator": 11.0
     },
     "aircraftType": "helicopter",
@@ -24630,10 +24637,10 @@
     "localizedName": "◥​AH-64E",
     "nation": "japan",
     "rank": 7,
-    "battleRating": 13.0,
+    "battleRating": 13.3,
     "br": {
       "arcade": 11.0,
-      "realistic": 13.0,
+      "realistic": 13.3,
       "simulator": 11.0
     },
     "aircraftType": "helicopter",
@@ -24901,10 +24908,10 @@
     "localizedName": "◘​AH-64E",
     "nation": "france",
     "rank": 7,
-    "battleRating": 13.0,
+    "battleRating": 13.3,
     "br": {
       "arcade": 11.0,
-      "realistic": 13.0,
+      "realistic": 13.3,
       "simulator": 11.0
     },
     "aircraftType": "helicopter",
@@ -25172,10 +25179,10 @@
     "localizedName": "AH-6M",
     "nation": "usa",
     "rank": 6,
-    "battleRating": 10.3,
+    "battleRating": 10.7,
     "br": {
       "arcade": 9.7,
-      "realistic": 10.3,
+      "realistic": 10.7,
       "simulator": 10.0
     },
     "aircraftType": "helicopter",
@@ -25330,10 +25337,10 @@
     "localizedName": "AH Mk.1",
     "nation": "britain",
     "rank": 7,
-    "battleRating": 11.7,
+    "battleRating": 12.3,
     "br": {
       "arcade": 10.7,
-      "realistic": 11.7,
+      "realistic": 12.3,
       "simulator": 10.7
     },
     "aircraftType": "helicopter",
@@ -25490,10 +25497,10 @@
     "localizedName": "AHS",
     "nation": "sweden",
     "rank": 7,
-    "battleRating": 11.3,
+    "battleRating": 11.7,
     "br": {
       "arcade": 10.3,
-      "realistic": 11.3,
+      "realistic": 11.7,
       "simulator": 10.3
     },
     "aircraftType": "helicopter",
@@ -26929,7 +26936,7 @@
     "rank": 6,
     "battleRating": 10.7,
     "br": {
-      "arcade": 10.7,
+      "arcade": 11.0,
       "realistic": 10.7,
       "simulator": 10.7
     },
@@ -27593,7 +27600,7 @@
     "aircraftType": "assault",
     "economicType": "regular",
     "imageUrl": "aircrafts/amx.webp",
-    "groundBattleRating": 11.0,
+    "groundBattleRating": 11.3,
     "releaseDate": "2023-12-14",
     "weapons": {
       "fixed_weapons": [],
@@ -30037,7 +30044,7 @@
     "aircraftType": "assault",
     "economicType": "premium",
     "imageUrl": "aircrafts/av_8b_na.webp",
-    "groundBattleRating": 11.7,
+    "groundBattleRating": 12.3,
     "releaseDate": "2024-09-10",
     "weapons": {
       "fixed_weapons": [],
@@ -30982,7 +30989,7 @@
     "aircraftType": "assault",
     "economicType": "regular",
     "imageUrl": "aircrafts/av_8b_plus.webp",
-    "groundBattleRating": 12.0,
+    "groundBattleRating": 12.7,
     "releaseDate": "2024-06-19",
     "weapons": {
       "fixed_weapons": [],
@@ -31826,7 +31833,7 @@
     "aircraftType": "assault",
     "economicType": "regular",
     "imageUrl": "aircrafts/av_8b_plus_italy.webp",
-    "groundBattleRating": 12.0,
+    "groundBattleRating": 12.7,
     "releaseDate": "2023-09-19",
     "weapons": {
       "fixed_weapons": [],
@@ -33883,10 +33890,10 @@
     "localizedName": "野​猫 HMA2",
     "nation": "britain",
     "rank": 7,
-    "battleRating": 12.3,
+    "battleRating": 12.7,
     "br": {
       "arcade": 10.7,
-      "realistic": 12.3,
+      "realistic": 12.7,
       "simulator": 10.7
     },
     "aircraftType": "helicopter",
@@ -37670,7 +37677,7 @@
     "rank": 3,
     "battleRating": 4.0,
     "br": {
-      "arcade": 4.0,
+      "arcade": 4.3,
       "realistic": 4.0,
       "simulator": 4.0
     },
@@ -38076,7 +38083,7 @@
     "rank": 3,
     "battleRating": 4.0,
     "br": {
-      "arcade": 4.0,
+      "arcade": 4.3,
       "realistic": 4.0,
       "simulator": 4.0
     },
@@ -38802,6 +38809,7 @@
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/b_239_finland.webp",
+    "groundBattleRating": 3.3,
     "releaseDate": "2022-10-26",
     "weapons": {
       "fixed_weapons": [
@@ -44605,6 +44613,7 @@
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/bf-109f-2.webp",
+    "groundBattleRating": 3.3,
     "weapons": {
       "fixed_weapons": [
         {
@@ -46631,7 +46640,7 @@
     "aircraftType": "assault",
     "economicType": "regular",
     "imageUrl": "aircrafts/bf-110g-2.webp",
-    "groundBattleRating": 3.3,
+    "groundBattleRating": 3.0,
     "releaseDate": "2018-06-06",
     "weapons": {
       "fixed_weapons": [],
@@ -47533,10 +47542,10 @@
     "localizedName": "Bo 105 CB-2",
     "nation": "germany",
     "rank": 5,
-    "battleRating": 9.3,
+    "battleRating": 9.7,
     "br": {
       "arcade": 9.7,
-      "realistic": 9.3,
+      "realistic": 9.7,
       "simulator": 9.7
     },
     "aircraftType": "helicopter",
@@ -47669,10 +47678,10 @@
     "localizedName": "Bo 105 PAH-1",
     "nation": "germany",
     "rank": 6,
-    "battleRating": 9.3,
+    "battleRating": 9.7,
     "br": {
       "arcade": 9.7,
-      "realistic": 9.3,
+      "realistic": 9.7,
       "simulator": 9.7
     },
     "aircraftType": "helicopter",
@@ -47783,10 +47792,10 @@
     "localizedName": "Bo 105 PAH-1A1",
     "nation": "germany",
     "rank": 6,
-    "battleRating": 9.3,
+    "battleRating": 9.7,
     "br": {
       "arcade": 9.7,
-      "realistic": 9.3,
+      "realistic": 9.7,
       "simulator": 9.7
     },
     "aircraftType": "helicopter",
@@ -48775,7 +48784,7 @@
     "rank": 1,
     "battleRating": 2.0,
     "br": {
-      "arcade": 2.3,
+      "arcade": 2.7,
       "realistic": 2.0,
       "simulator": 1.7
     },
@@ -49735,7 +49744,7 @@
     "rank": 6,
     "battleRating": 8.3,
     "br": {
-      "arcade": 9.7,
+      "arcade": 9.3,
       "realistic": 8.3,
       "simulator": 9.0
     },
@@ -50327,6 +50336,7 @@
     "aircraftType": "assault",
     "economicType": "regular",
     "imageUrl": "aircrafts/buccaneer_s2b.webp",
+    "groundBattleRating": 11.7,
     "releaseDate": "2024-03-13",
     "weapons": {
       "fixed_weapons": [],
@@ -51289,10 +51299,10 @@
     "localizedName": "▄​CA-27 Mk.32",
     "nation": "japan",
     "rank": 6,
-    "battleRating": 9.0,
+    "battleRating": 9.3,
     "br": {
       "arcade": 9.3,
-      "realistic": 9.0,
+      "realistic": 9.3,
       "simulator": 9.3
     },
     "aircraftType": "fighter",
@@ -51527,10 +51537,10 @@
     "localizedName": "CA-27 Mk.32",
     "nation": "britain",
     "rank": 6,
-    "battleRating": 9.0,
+    "battleRating": 9.3,
     "br": {
       "arcade": 9.3,
-      "realistic": 9.0,
+      "realistic": 9.3,
       "simulator": 9.3
     },
     "aircraftType": "fighter",
@@ -52090,7 +52100,7 @@
     "aircraftType": "fighter",
     "economicType": "premium",
     "imageUrl": "aircrafts/cf_188a_canada.webp",
-    "groundBattleRating": 12.0,
+    "groundBattleRating": 12.3,
     "releaseDate": "2025-09-23",
     "weapons": {
       "fixed_weapons": [],
@@ -57591,7 +57601,7 @@
     "rank": 5,
     "battleRating": 9.0,
     "br": {
-      "arcade": 8.0,
+      "arcade": 8.3,
       "realistic": 9.0,
       "simulator": 8.3
     },
@@ -59505,16 +59515,16 @@
     "localizedName": "Do 335 A-0",
     "nation": "germany",
     "rank": 3,
-    "battleRating": 4.7,
+    "battleRating": 4.3,
     "br": {
       "arcade": 4.3,
-      "realistic": 4.7,
+      "realistic": 4.3,
       "simulator": 5.0
     },
     "aircraftType": "assault",
     "economicType": "regular",
     "imageUrl": "aircrafts/do_335a_0.webp",
-    "groundBattleRating": 4.3,
+    "groundBattleRating": 4.0,
     "weapons": {
       "fixed_weapons": [
         {
@@ -59570,16 +59580,16 @@
     "localizedName": "Do 335 A-1",
     "nation": "germany",
     "rank": 3,
-    "battleRating": 4.3,
+    "battleRating": 4.0,
     "br": {
       "arcade": 4.0,
-      "realistic": 4.3,
+      "realistic": 4.0,
       "simulator": 5.0
     },
     "aircraftType": "assault",
     "economicType": "regular",
     "imageUrl": "aircrafts/do_335a_1.webp",
-    "groundBattleRating": 4.0,
+    "groundBattleRating": 3.7,
     "weapons": {
       "fixed_weapons": [
         {
@@ -63696,16 +63706,16 @@
     "localizedName": "◄​EF-2000 (AESA)",
     "nation": "germany",
     "rank": 9,
-    "battleRating": 14.7,
+    "battleRating": 15.0,
     "br": {
-      "arcade": 14.7,
-      "realistic": 14.7,
-      "simulator": 14.7
+      "arcade": 15.0,
+      "realistic": 15.0,
+      "simulator": 15.0
     },
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/ef_2000_aesa.webp",
-    "groundBattleRating": 13.0,
+    "groundBattleRating": 14.0,
     "releaseDate": "2025-12-16",
     "weapons": {
       "fixed_weapons": [],
@@ -64274,16 +64284,16 @@
     "localizedName": "◄​EF-2000",
     "nation": "germany",
     "rank": 9,
-    "battleRating": 14.3,
+    "battleRating": 14.7,
     "br": {
-      "arcade": 14.3,
-      "realistic": 14.3,
-      "simulator": 14.3
+      "arcade": 14.7,
+      "realistic": 14.7,
+      "simulator": 14.7
     },
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/ef_2000_block_10.webp",
-    "groundBattleRating": 13.0,
+    "groundBattleRating": 14.0,
     "releaseDate": "2024-12-16",
     "weapons": {
       "fixed_weapons": [],
@@ -64835,16 +64845,16 @@
     "localizedName": "台​风 FGR.4",
     "nation": "britain",
     "rank": 9,
-    "battleRating": 14.3,
+    "battleRating": 14.7,
     "br": {
-      "arcade": 14.3,
-      "realistic": 14.3,
-      "simulator": 14.3
+      "arcade": 14.7,
+      "realistic": 14.7,
+      "simulator": 14.7
     },
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/ef_2000_fgr4.webp",
-    "groundBattleRating": 13.0,
+    "groundBattleRating": 14.0,
     "releaseDate": "2024-12-16",
     "weapons": {
       "fixed_weapons": [],
@@ -65414,16 +65424,16 @@
     "localizedName": "台​风 (AESA)",
     "nation": "britain",
     "rank": 9,
-    "battleRating": 14.7,
+    "battleRating": 15.0,
     "br": {
-      "arcade": 14.7,
-      "realistic": 14.7,
-      "simulator": 14.7
+      "arcade": 15.0,
+      "realistic": 15.0,
+      "simulator": 15.0
     },
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/ef_2000_typhoon_aesa.webp",
-    "groundBattleRating": 13.0,
+    "groundBattleRating": 14.0,
     "releaseDate": "2025-12-16",
     "weapons": {
       "fixed_weapons": [],
@@ -66039,16 +66049,16 @@
     "localizedName": "F-2000A",
     "nation": "italy",
     "rank": 9,
-    "battleRating": 14.3,
+    "battleRating": 14.7,
     "br": {
-      "arcade": 14.3,
-      "realistic": 14.3,
-      "simulator": 14.3
+      "arcade": 14.7,
+      "realistic": 14.7,
+      "simulator": 14.7
     },
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/ef_2000a.webp",
-    "groundBattleRating": 13.0,
+    "groundBattleRating": 14.0,
     "releaseDate": "2024-12-16",
     "weapons": {
       "fixed_weapons": [],
@@ -66530,16 +66540,16 @@
     "localizedName": "F-2000A (AESA)",
     "nation": "italy",
     "rank": 9,
-    "battleRating": 14.7,
+    "battleRating": 15.0,
     "br": {
-      "arcade": 14.7,
-      "realistic": 14.7,
-      "simulator": 14.7
+      "arcade": 15.0,
+      "realistic": 15.0,
+      "simulator": 15.0
     },
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/ef_2000a_aesa.webp",
-    "groundBattleRating": 13.0,
+    "groundBattleRating": 14.0,
     "releaseDate": "2025-12-16",
     "weapons": {
       "fixed_weapons": [],
@@ -68296,7 +68306,7 @@
     "rank": 6,
     "battleRating": 9.3,
     "br": {
-      "arcade": 9.7,
+      "arcade": 9.3,
       "realistic": 9.3,
       "simulator": 9.7
     },
@@ -68845,7 +68855,7 @@
     "rank": 6,
     "battleRating": 9.3,
     "br": {
-      "arcade": 9.7,
+      "arcade": 9.3,
       "realistic": 9.3,
       "simulator": 9.7
     },
@@ -69200,7 +69210,7 @@
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/f-104c.webp",
-    "groundBattleRating": 9.3,
+    "groundBattleRating": 9.0,
     "releaseDate": "2020-06-01",
     "weapons": {
       "fixed_weapons": [],
@@ -69309,7 +69319,7 @@
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/f-104g.webp",
-    "groundBattleRating": 9.7,
+    "groundBattleRating": 9.3,
     "releaseDate": "2020-06-01",
     "weapons": {
       "fixed_weapons": [],
@@ -69653,7 +69663,7 @@
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/f-104g_belgium.webp",
-    "groundBattleRating": 9.7,
+    "groundBattleRating": 9.3,
     "releaseDate": "2024-06-19",
     "weapons": {
       "fixed_weapons": [],
@@ -69906,7 +69916,7 @@
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/f-104g_china.webp",
-    "groundBattleRating": 9.7,
+    "groundBattleRating": 9.3,
     "releaseDate": "2020-06-01",
     "weapons": {
       "fixed_weapons": [],
@@ -70198,7 +70208,7 @@
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/f-104g_italy.webp",
-    "groundBattleRating": 9.7,
+    "groundBattleRating": 9.3,
     "releaseDate": "2021-09-07",
     "weapons": {
       "fixed_weapons": [],
@@ -70415,7 +70425,7 @@
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/f-104j.webp",
-    "groundBattleRating": 9.7,
+    "groundBattleRating": 9.3,
     "releaseDate": "2020-06-01",
     "weapons": {
       "fixed_weapons": [],
@@ -70612,7 +70622,7 @@
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/f-104s.webp",
-    "groundBattleRating": 10.0,
+    "groundBattleRating": 9.7,
     "releaseDate": "2020-06-01",
     "weapons": {
       "fixed_weapons": [],
@@ -71790,7 +71800,7 @@
     "aircraftType": "fighter",
     "economicType": "premium",
     "imageUrl": "aircrafts/f-104s_cb.webp",
-    "groundBattleRating": 10.0,
+    "groundBattleRating": 9.7,
     "releaseDate": "2022-12-20",
     "weapons": {
       "fixed_weapons": [],
@@ -73061,7 +73071,6 @@
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/f-4c.webp",
-    "groundBattleRating": 9.7,
     "releaseDate": "2019-09-10",
     "weapons": {
       "fixed_weapons": [],
@@ -73744,6 +73753,7 @@
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/f-4e.webp",
+    "groundBattleRating": 12.0,
     "releaseDate": "2020-03-10",
     "weapons": {
       "fixed_weapons": [],
@@ -74436,6 +74446,7 @@
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/f-4e_iaf.webp",
+    "groundBattleRating": 12.0,
     "releaseDate": "2021-12-17",
     "weapons": {
       "fixed_weapons": [],
@@ -75112,7 +75123,6 @@
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/f-4e_kurnass_2000.webp",
-    "groundBattleRating": 11.7,
     "releaseDate": "2023-03-07",
     "weapons": {
       "fixed_weapons": [],
@@ -76848,7 +76858,7 @@
     "rank": 8,
     "battleRating": 12.3,
     "br": {
-      "arcade": 12.0,
+      "arcade": 12.3,
       "realistic": 12.3,
       "simulator": 12.3
     },
@@ -77725,16 +77735,16 @@
     "localizedName": "◄​F-4F KWS LV",
     "nation": "germany",
     "rank": 8,
-    "battleRating": 13.0,
+    "battleRating": 13.3,
     "br": {
-      "arcade": 13.0,
-      "realistic": 13.0,
-      "simulator": 13.0
+      "arcade": 13.3,
+      "realistic": 13.3,
+      "simulator": 13.3
     },
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/f-4f_kws_lv.webp",
-    "groundBattleRating": 12.0,
+    "groundBattleRating": 12.3,
     "releaseDate": "2024-06-19",
     "weapons": {
       "fixed_weapons": [],
@@ -78301,7 +78311,7 @@
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/f-4f_late.webp",
-    "groundBattleRating": 10.3,
+    "groundBattleRating": 10.7,
     "releaseDate": "2021-06-02",
     "weapons": {
       "fixed_weapons": [],
@@ -83229,7 +83239,7 @@
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/f-5e.webp",
-    "groundBattleRating": 11.3,
+    "groundBattleRating": 11.7,
     "releaseDate": "2021-06-02",
     "weapons": {
       "fixed_weapons": [],
@@ -83569,7 +83579,7 @@
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/f-5e_aidc.webp",
-    "groundBattleRating": 11.3,
+    "groundBattleRating": 11.7,
     "releaseDate": "2022-06-15",
     "weapons": {
       "fixed_weapons": [],
@@ -83892,6 +83902,7 @@
     "aircraftType": "fighter",
     "economicType": "clan",
     "imageUrl": "aircrafts/f-5e_fcu_thailand.webp",
+    "groundBattleRating": 12.0,
     "releaseDate": "2024-03-13",
     "weapons": {
       "fixed_weapons": [],
@@ -84226,7 +84237,7 @@
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/f-5e_switzerland.webp",
-    "groundBattleRating": 11.3,
+    "groundBattleRating": 11.7,
     "releaseDate": "2025-06-25",
     "weapons": {
       "fixed_weapons": [],
@@ -84555,6 +84566,7 @@
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/f-5t_thailand.webp",
+    "groundBattleRating": 12.0,
     "releaseDate": "2024-12-16",
     "weapons": {
       "fixed_weapons": [],
@@ -84808,7 +84820,7 @@
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/f-5th_thailand.webp",
-    "groundBattleRating": 12.0,
+    "groundBattleRating": 12.7,
     "releaseDate": "2025-09-23",
     "weapons": {
       "fixed_weapons": [],
@@ -91575,7 +91587,7 @@
     "rank": 5,
     "battleRating": 7.0,
     "br": {
-      "arcade": 6.7,
+      "arcade": 7.0,
       "realistic": 7.0,
       "simulator": 7.3
     },
@@ -95455,10 +95467,10 @@
     "localizedName": "F3H-2",
     "nation": "usa",
     "rank": 6,
-    "battleRating": 9.0,
+    "battleRating": 9.3,
     "br": {
       "arcade": 9.3,
-      "realistic": 9.0,
+      "realistic": 9.3,
       "simulator": 9.3
     },
     "aircraftType": "fighter",
@@ -95846,13 +95858,14 @@
     "rank": 6,
     "battleRating": 9.0,
     "br": {
-      "arcade": 9.3,
+      "arcade": 9.0,
       "realistic": 9.0,
       "simulator": 9.3
     },
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/f4d_1.webp",
+    "groundBattleRating": 8.7,
     "releaseDate": "2022-08-23",
     "weapons": {
       "fixed_weapons": [],
@@ -99238,7 +99251,7 @@
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/f8u-2.webp",
-    "groundBattleRating": 9.7,
+    "groundBattleRating": 9.3,
     "releaseDate": "2021-03-10",
     "weapons": {
       "fixed_weapons": [],
@@ -100461,7 +100474,7 @@
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/f_101c.webp",
-    "groundBattleRating": 9.0,
+    "groundBattleRating": 8.7,
     "releaseDate": "2026-06-24",
     "weapons": {
       "fixed_weapons": [
@@ -100546,11 +100559,58 @@
               "name": "",
               "localizedName": "",
               "count": 1
+            },
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            },
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
             }
           ]
         },
         {
           "name": "f_102a_late_aim_4f",
+          "weapons": [
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            },
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            },
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            },
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            },
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "name": "f_102a_late_aim_26b",
           "weapons": [
             {
               "trigger": "",
@@ -100575,6 +100635,18 @@
         {
           "name": "f_102a_late_ffar",
           "weapons": [
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            },
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            },
             {
               "trigger": "",
               "name": "",
@@ -100661,11 +100733,58 @@
               "name": "",
               "localizedName": "",
               "count": 1
+            },
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            },
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
             }
           ]
         },
         {
           "name": "f_102a_late_aim_4f",
+          "weapons": [
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            },
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            },
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            },
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            },
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "name": "f_102a_late_aim_26b",
           "weapons": [
             {
               "trigger": "",
@@ -100690,6 +100809,18 @@
         {
           "name": "f_102a_late_ffar",
           "weapons": [
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            },
+            {
+              "trigger": "",
+              "name": "",
+              "localizedName": "",
+              "count": 1
+            },
             {
               "trigger": "",
               "name": "",
@@ -100832,7 +100963,7 @@
     "aircraftType": "assault",
     "economicType": "regular",
     "imageUrl": "aircrafts/f_111a.webp",
-    "groundBattleRating": 9.7,
+    "groundBattleRating": 10.0,
     "releaseDate": "2023-10-31",
     "weapons": {
       "fixed_weapons": [],
@@ -101797,7 +101928,6 @@
     "aircraftType": "assault",
     "economicType": "regular",
     "imageUrl": "aircrafts/f_111c_raaf.webp",
-    "groundBattleRating": 11.3,
     "releaseDate": "2024-09-10",
     "weapons": {
       "fixed_weapons": [],
@@ -102134,6 +102264,7 @@
     "aircraftType": "assault",
     "economicType": "regular",
     "imageUrl": "aircrafts/f_111f.webp",
+    "groundBattleRating": 12.0,
     "releaseDate": "2024-09-10",
     "weapons": {
       "fixed_weapons": [],
@@ -102585,7 +102716,7 @@
     "aircraftType": "assault",
     "economicType": "clan",
     "imageUrl": "aircrafts/f_117.webp",
-    "groundBattleRating": 10.0,
+    "groundBattleRating": 10.3,
     "releaseDate": "2024-11-19",
     "weapons": {
       "fixed_weapons": [],
@@ -103081,7 +103212,7 @@
     "rank": 8,
     "battleRating": 13.7,
     "br": {
-      "arcade": 13.0,
+      "arcade": 12.7,
       "realistic": 13.7,
       "simulator": 13.0
     },
@@ -103437,7 +103568,7 @@
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/f_14b.webp",
-    "groundBattleRating": 11.7,
+    "groundBattleRating": 12.3,
     "releaseDate": "2023-06-14",
     "weapons": {
       "fixed_weapons": [],
@@ -103942,7 +104073,7 @@
     "aircraftType": "fighter",
     "economicType": "premium",
     "imageUrl": "aircrafts/f_14d.webp",
-    "groundBattleRating": 11.7,
+    "groundBattleRating": 12.3,
     "releaseDate": "2026-06-24",
     "weapons": {
       "fixed_weapons": [],
@@ -104763,7 +104894,7 @@
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/f_14d_vf_11.webp",
-    "groundBattleRating": 11.7,
+    "groundBattleRating": 12.3,
     "releaseDate": "2026-09-16",
     "weapons": {
       "fixed_weapons": [],
@@ -105268,7 +105399,7 @@
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/f_15a.webp",
-    "groundBattleRating": 11.7,
+    "groundBattleRating": 12.0,
     "releaseDate": "2023-12-14",
     "weapons": {
       "fixed_weapons": [],
@@ -105545,7 +105676,7 @@
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/f_15a_iaf.webp",
-    "groundBattleRating": 11.7,
+    "groundBattleRating": 12.0,
     "releaseDate": "2023-12-14",
     "weapons": {
       "fixed_weapons": [],
@@ -105842,16 +105973,16 @@
     "localizedName": "战​隼​改​进​型",
     "nation": "israel",
     "rank": 8,
-    "battleRating": 13.7,
+    "battleRating": 14.0,
     "br": {
-      "arcade": 13.7,
-      "realistic": 13.7,
-      "simulator": 13.7
+      "arcade": 14.0,
+      "realistic": 14.0,
+      "simulator": 14.0
     },
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/f_15c_baz_msip.webp",
-    "groundBattleRating": 12.7,
+    "groundBattleRating": 13.7,
     "releaseDate": "2024-06-19",
     "weapons": {
       "fixed_weapons": [],
@@ -106433,16 +106564,16 @@
     "localizedName": "F-15C 金​鹰",
     "nation": "usa",
     "rank": 9,
-    "battleRating": 14.3,
+    "battleRating": 15.0,
     "br": {
-      "arcade": 14.3,
-      "realistic": 14.3,
-      "simulator": 14.3
+      "arcade": 15.0,
+      "realistic": 15.0,
+      "simulator": 15.0
     },
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/f_15c_golden_eagle.webp",
-    "groundBattleRating": 13.0,
+    "groundBattleRating": 14.0,
     "releaseDate": "2025-11-11",
     "weapons": {
       "fixed_weapons": [],
@@ -107185,16 +107316,16 @@
     "localizedName": "F-15C MSIP II",
     "nation": "usa",
     "rank": 8,
-    "battleRating": 13.7,
+    "battleRating": 14.0,
     "br": {
-      "arcade": 13.7,
-      "realistic": 13.7,
-      "simulator": 13.7
+      "arcade": 14.0,
+      "realistic": 14.0,
+      "simulator": 14.0
     },
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/f_15c_msip2.webp",
-    "groundBattleRating": 12.7,
+    "groundBattleRating": 13.7,
     "releaseDate": "2024-06-19",
     "weapons": {
       "fixed_weapons": [],
@@ -107803,16 +107934,16 @@
     "localizedName": "F-15E",
     "nation": "usa",
     "rank": 8,
-    "battleRating": 14.0,
+    "battleRating": 14.3,
     "br": {
-      "arcade": 14.0,
-      "realistic": 14.0,
-      "simulator": 14.0
+      "arcade": 14.3,
+      "realistic": 14.3,
+      "simulator": 14.3
     },
     "aircraftType": "assault",
     "economicType": "regular",
     "imageUrl": "aircrafts/f_15e.webp",
-    "groundBattleRating": 12.7,
+    "groundBattleRating": 14.0,
     "releaseDate": "2024-11-19",
     "weapons": {
       "fixed_weapons": [],
@@ -109219,16 +109350,16 @@
     "localizedName": "F-15I",
     "nation": "israel",
     "rank": 8,
-    "battleRating": 14.0,
+    "battleRating": 14.3,
     "br": {
-      "arcade": 14.0,
-      "realistic": 14.0,
-      "simulator": 14.0
+      "arcade": 14.3,
+      "realistic": 14.3,
+      "simulator": 14.3
     },
     "aircraftType": "assault",
     "economicType": "regular",
     "imageUrl": "aircrafts/f_15i_raam.webp",
-    "groundBattleRating": 13.0,
+    "groundBattleRating": 14.0,
     "releaseDate": "2024-11-19",
     "weapons": {
       "fixed_weapons": [],
@@ -110709,16 +110840,16 @@
     "localizedName": "F-15J(M)",
     "nation": "japan",
     "rank": 8,
-    "battleRating": 13.7,
+    "battleRating": 14.0,
     "br": {
       "arcade": 14.0,
-      "realistic": 13.7,
-      "simulator": 13.7
+      "realistic": 14.0,
+      "simulator": 14.0
     },
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/f_15j_kai.webp",
-    "groundBattleRating": 12.7,
+    "groundBattleRating": 13.3,
     "releaseDate": "2024-06-19",
     "weapons": {
       "fixed_weapons": [],
@@ -111083,7 +111214,6 @@
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/f_16a_block_10.webp",
-    "groundBattleRating": 12.0,
     "releaseDate": "2022-12-20",
     "weapons": {
       "fixed_weapons": [],
@@ -111455,12 +111585,11 @@
     "br": {
       "arcade": 12.3,
       "realistic": 12.3,
-      "simulator": 12.3
+      "simulator": 12.7
     },
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/f_16a_block_10_iaf.webp",
-    "groundBattleRating": 12.0,
     "releaseDate": "2022-12-20",
     "weapons": {
       "fixed_weapons": [],
@@ -111815,12 +111944,11 @@
     "br": {
       "arcade": 12.3,
       "realistic": 12.3,
-      "simulator": 12.3
+      "simulator": 12.7
     },
     "aircraftType": "fighter",
     "economicType": "premium",
     "imageUrl": "aircrafts/f_16a_block_10_netz_mod.webp",
-    "groundBattleRating": 12.0,
     "releaseDate": "2025-03-18",
     "weapons": {
       "fixed_weapons": [],
@@ -112389,7 +112517,6 @@
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/f_16a_block_10_norway.webp",
-    "groundBattleRating": 12.0,
     "releaseDate": "2026-03-18",
     "weapons": {
       "fixed_weapons": [],
@@ -112786,16 +112913,16 @@
     "localizedName": "F-16A ADF",
     "nation": "usa",
     "rank": 8,
-    "battleRating": 13.3,
+    "battleRating": 13.7,
     "br": {
       "arcade": 13.7,
-      "realistic": 13.3,
-      "simulator": 13.3
+      "realistic": 13.7,
+      "simulator": 13.7
     },
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/f_16a_block_15_adf.webp",
-    "groundBattleRating": 12.3,
+    "groundBattleRating": 13.0,
     "releaseDate": "2022-12-20",
     "weapons": {
       "fixed_weapons": [],
@@ -112960,16 +113087,16 @@
     "localizedName": "▄​F-16A ADF",
     "nation": "italy",
     "rank": 8,
-    "battleRating": 13.3,
+    "battleRating": 13.7,
     "br": {
       "arcade": 13.7,
-      "realistic": 13.3,
-      "simulator": 13.3
+      "realistic": 13.7,
+      "simulator": 13.7
     },
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/f_16a_block_15_adf_italy.webp",
-    "groundBattleRating": 12.3,
+    "groundBattleRating": 13.0,
     "releaseDate": "2022-12-20",
     "weapons": {
       "fixed_weapons": [],
@@ -113143,7 +113270,7 @@
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/f_16a_block_15_belgium.webp",
-    "groundBattleRating": 12.0,
+    "groundBattleRating": 12.3,
     "releaseDate": "2024-06-19",
     "weapons": {
       "fixed_weapons": [],
@@ -113988,7 +114115,7 @@
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/f_16a_block_15_ocu_thailand.webp",
-    "groundBattleRating": 12.7,
+    "groundBattleRating": 13.3,
     "releaseDate": "2024-12-16",
     "weapons": {
       "fixed_weapons": [],
@@ -114433,16 +114560,16 @@
     "localizedName": "␗​F-16A  MLU",
     "nation": "china",
     "rank": 8,
-    "battleRating": 13.3,
+    "battleRating": 13.7,
     "br": {
       "arcade": 13.7,
-      "realistic": 13.3,
-      "simulator": 13.3
+      "realistic": 13.7,
+      "simulator": 14.0
     },
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/f_16a_block_20_mlu.webp",
-    "groundBattleRating": 12.7,
+    "groundBattleRating": 13.3,
     "releaseDate": "2022-12-20",
     "weapons": {
       "fixed_weapons": [],
@@ -114906,7 +115033,6 @@
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/f_16a_block_5_netherlands.webp",
-    "groundBattleRating": 12.0,
     "releaseDate": "2026-02-19",
     "weapons": {
       "fixed_weapons": [],
@@ -115254,7 +115380,7 @@
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/f_16a_block_72v_china.webp",
-    "groundBattleRating": 13.0,
+    "groundBattleRating": 14.0,
     "releaseDate": "2026-06-24",
     "weapons": {
       "fixed_weapons": [],
@@ -116599,12 +116725,12 @@
     "br": {
       "arcade": 12.7,
       "realistic": 12.7,
-      "simulator": 13.0
+      "simulator": 12.7
     },
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/f_16aj.webp",
-    "groundBattleRating": 12.0,
+    "groundBattleRating": 12.3,
     "releaseDate": "2023-03-07",
     "weapons": {
       "fixed_weapons": [],
@@ -116911,7 +117037,7 @@
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/f_16am_block_15_mlu_belgium.webp",
-    "groundBattleRating": 12.7,
+    "groundBattleRating": 13.3,
     "releaseDate": "2024-06-19",
     "weapons": {
       "fixed_weapons": [],
@@ -118088,7 +118214,7 @@
     "aircraftType": "fighter",
     "economicType": "premium",
     "imageUrl": "aircrafts/f_16am_block_20_mlu_netherlands.webp",
-    "groundBattleRating": 12.7,
+    "groundBattleRating": 13.3,
     "releaseDate": "2026-06-24",
     "weapons": {
       "fixed_weapons": [],
@@ -119776,7 +119902,7 @@
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/f_16am_block_20_mlu_norway.webp",
-    "groundBattleRating": 12.7,
+    "groundBattleRating": 13.3,
     "releaseDate": "2025-11-11",
     "weapons": {
       "fixed_weapons": [],
@@ -120939,16 +121065,16 @@
     "localizedName": "F-16C 闪​电 II",
     "nation": "israel",
     "rank": 8,
-    "battleRating": 13.7,
+    "battleRating": 14.0,
     "br": {
       "arcade": 13.7,
-      "realistic": 13.7,
-      "simulator": 13.7
+      "realistic": 14.0,
+      "simulator": 14.0
     },
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/f_16c_block_40_barak_2.webp",
-    "groundBattleRating": 12.7,
+    "groundBattleRating": 13.3,
     "releaseDate": "2024-09-10",
     "weapons": {
       "fixed_weapons": [],
@@ -121609,16 +121735,16 @@
     "localizedName": "F-16CM",
     "nation": "usa",
     "rank": 8,
-    "battleRating": 13.7,
+    "battleRating": 14.0,
     "br": {
       "arcade": 13.7,
-      "realistic": 13.7,
-      "simulator": 13.7
+      "realistic": 14.0,
+      "simulator": 14.0
     },
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/f_16c_block_50.webp",
-    "groundBattleRating": 12.7,
+    "groundBattleRating": 13.7,
     "releaseDate": "2023-09-19",
     "weapons": {
       "fixed_weapons": [],
@@ -122475,7 +122601,7 @@
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/f_16c_block_52_aesa.webp",
-    "groundBattleRating": 13.0,
+    "groundBattleRating": 14.0,
     "releaseDate": "2026-03-18",
     "weapons": {
       "fixed_weapons": [],
@@ -123816,16 +123942,16 @@
     "localizedName": "F-16D 闪​电 II",
     "nation": "israel",
     "rank": 8,
-    "battleRating": 13.3,
+    "battleRating": 13.7,
     "br": {
       "arcade": 13.7,
-      "realistic": 13.3,
+      "realistic": 13.7,
       "simulator": 13.7
     },
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/f_16d_block_40_barak_2.webp",
-    "groundBattleRating": 12.7,
+    "groundBattleRating": 13.3,
     "releaseDate": "2023-09-19",
     "weapons": {
       "fixed_weapons": [],
@@ -124559,16 +124685,16 @@
     "localizedName": "F-16I 风​暴",
     "nation": "israel",
     "rank": 8,
-    "battleRating": 13.7,
+    "battleRating": 14.0,
     "br": {
       "arcade": 14.0,
-      "realistic": 13.7,
+      "realistic": 14.0,
       "simulator": 14.0
     },
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/f_16i_sufa.webp",
-    "groundBattleRating": 13.0,
+    "groundBattleRating": 13.7,
     "releaseDate": "2025-09-23",
     "weapons": {
       "fixed_weapons": [],
@@ -125556,16 +125682,16 @@
     "localizedName": "F-16XL",
     "nation": "usa",
     "rank": 8,
-    "battleRating": 13.0,
+    "battleRating": 13.3,
     "br": {
-      "arcade": 13.0,
-      "realistic": 13.0,
-      "simulator": 13.0
+      "arcade": 13.3,
+      "realistic": 13.3,
+      "simulator": 13.3
     },
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/f_16xl.webp",
-    "groundBattleRating": 12.3,
+    "groundBattleRating": 13.0,
     "releaseDate": "2026-09-16",
     "weapons": {
       "fixed_weapons": [],
@@ -125911,7 +126037,7 @@
     "aircraftType": "fighter",
     "economicType": "premium",
     "imageUrl": "aircrafts/f_20a.webp",
-    "groundBattleRating": 11.7,
+    "groundBattleRating": 12.0,
     "releaseDate": "2024-03-13",
     "weapons": {
       "fixed_weapons": [],
@@ -127123,16 +127249,16 @@
     "localizedName": "F-2A",
     "nation": "japan",
     "rank": 8,
-    "battleRating": 13.7,
+    "battleRating": 14.0,
     "br": {
-      "arcade": 13.7,
-      "realistic": 13.7,
-      "simulator": 13.7
+      "arcade": 14.0,
+      "realistic": 14.0,
+      "simulator": 14.0
     },
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/f_2a.webp",
-    "groundBattleRating": 12.7,
+    "groundBattleRating": 13.0,
     "releaseDate": "2025-06-25",
     "weapons": {
       "fixed_weapons": [],
@@ -127890,7 +128016,7 @@
     "aircraftType": "fighter",
     "economicType": "premium",
     "imageUrl": "aircrafts/f_2a_adtw.webp",
-    "groundBattleRating": 12.3,
+    "groundBattleRating": 12.7,
     "releaseDate": "2025-06-25",
     "weapons": {
       "fixed_weapons": [],
@@ -129250,16 +129376,15 @@
     "localizedName": "◐​F-4E AUP",
     "nation": "israel",
     "rank": 8,
-    "battleRating": 13.0,
+    "battleRating": 13.3,
     "br": {
-      "arcade": 13.0,
-      "realistic": 13.0,
-      "simulator": 13.0
+      "arcade": 13.3,
+      "realistic": 13.3,
+      "simulator": 13.3
     },
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/f_4e_aup_greece.webp",
-    "groundBattleRating": 12.3,
     "releaseDate": "2026-09-16",
     "weapons": {
       "fixed_weapons": [],
@@ -129930,14 +130055,14 @@
     "rank": 6,
     "battleRating": 9.7,
     "br": {
-      "arcade": 10.0,
+      "arcade": 9.7,
       "realistic": 9.7,
       "simulator": 9.7
     },
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/f_6c_pakistan.webp",
-    "groundBattleRating": 9.3,
+    "groundBattleRating": 9.0,
     "releaseDate": "2026-04-15",
     "weapons": {
       "fixed_weapons": [],
@@ -130236,7 +130361,6 @@
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/fa_18a.webp",
-    "groundBattleRating": 12.0,
     "releaseDate": "2025-03-18",
     "weapons": {
       "fixed_weapons": [],
@@ -130794,7 +130918,7 @@
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/fa_18a_hug_2_raaf.webp",
-    "groundBattleRating": 12.7,
+    "groundBattleRating": 13.3,
     "releaseDate": "2025-09-23",
     "weapons": {
       "fixed_weapons": [],
@@ -131819,7 +131943,6 @@
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/fa_18a_raaf.webp",
-    "groundBattleRating": 12.0,
     "releaseDate": "2025-09-23",
     "weapons": {
       "fixed_weapons": [],
@@ -132330,7 +132453,7 @@
     "aircraftType": "fighter",
     "economicType": "premium",
     "imageUrl": "aircrafts/fa_18c_early.webp",
-    "groundBattleRating": 12.0,
+    "groundBattleRating": 12.3,
     "releaseDate": "2025-03-18",
     "weapons": {
       "fixed_weapons": [],
@@ -133858,7 +133981,7 @@
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/fa_18c_finland.webp",
-    "groundBattleRating": 12.7,
+    "groundBattleRating": 13.3,
     "releaseDate": "2025-03-18",
     "weapons": {
       "fixed_weapons": [],
@@ -134027,7 +134150,7 @@
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/fa_18c_late.webp",
-    "groundBattleRating": 12.7,
+    "groundBattleRating": 13.3,
     "releaseDate": "2025-03-18",
     "weapons": {
       "fixed_weapons": [],
@@ -135133,7 +135256,7 @@
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/fa_18c_late_switzerland.webp",
-    "groundBattleRating": 12.7,
+    "groundBattleRating": 13.3,
     "releaseDate": "2025-06-25",
     "weapons": {
       "fixed_weapons": [],
@@ -136170,7 +136293,7 @@
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/fa_18c_mlu_2_finland.webp",
-    "groundBattleRating": 12.7,
+    "groundBattleRating": 13.3,
     "releaseDate": "2025-06-25",
     "weapons": {
       "fixed_weapons": [],
@@ -136653,7 +136776,7 @@
     "aircraftType": "fighter",
     "economicType": "premium",
     "imageUrl": "aircrafts/fa_18c_switzerland.webp",
-    "groundBattleRating": 12.0,
+    "groundBattleRating": 12.3,
     "releaseDate": "2025-06-25",
     "weapons": {
       "fixed_weapons": [],
@@ -137899,7 +138022,7 @@
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/fa_18d_late_malaysia.webp",
-    "groundBattleRating": 12.7,
+    "groundBattleRating": 13.3,
     "releaseDate": "2025-12-16",
     "weapons": {
       "fixed_weapons": [],
@@ -138886,16 +139009,16 @@
     "localizedName": "F/A-18E",
     "nation": "usa",
     "rank": 9,
-    "battleRating": 14.3,
+    "battleRating": 14.7,
     "br": {
-      "arcade": 14.3,
-      "realistic": 14.3,
-      "simulator": 14.3
+      "arcade": 14.7,
+      "realistic": 14.7,
+      "simulator": 14.7
     },
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/fa_18e_block_2.webp",
-    "groundBattleRating": 13.0,
+    "groundBattleRating": 14.0,
     "releaseDate": "2025-12-16",
     "weapons": {
       "fixed_weapons": [],
@@ -140280,16 +140403,16 @@
     "localizedName": "▄​F/A-18F",
     "nation": "britain",
     "rank": 9,
-    "battleRating": 14.3,
+    "battleRating": 14.7,
     "br": {
-      "arcade": 14.3,
-      "realistic": 14.3,
-      "simulator": 14.3
+      "arcade": 14.7,
+      "realistic": 14.7,
+      "simulator": 14.7
     },
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/fa_18f_block_2_raaf.webp",
-    "groundBattleRating": 13.0,
+    "groundBattleRating": 14.0,
     "releaseDate": "2026-03-18",
     "weapons": {
       "fixed_weapons": [],
@@ -146494,6 +146617,7 @@
     "aircraftType": "fighter",
     "economicType": "premium",
     "imageUrl": "aircrafts/fokker_d21_mod20.webp",
+    "groundBattleRating": 2.3,
     "releaseDate": "2021-03-10",
     "weapons": {
       "fixed_weapons": [
@@ -146585,13 +146709,14 @@
     "rank": 2,
     "battleRating": 2.7,
     "br": {
-      "arcade": 2.7,
+      "arcade": 3.0,
       "realistic": 2.7,
       "simulator": 2.7
     },
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/fokker_d23.webp",
+    "groundBattleRating": 3.0,
     "releaseDate": "2025-11-11",
     "weapons": {
       "fixed_weapons": [
@@ -146823,7 +146948,7 @@
     "rank": 3,
     "battleRating": 4.3,
     "br": {
-      "arcade": 4.0,
+      "arcade": 3.7,
       "realistic": 4.3,
       "simulator": 4.3
     },
@@ -150411,10 +150536,10 @@
     "localizedName": "G-​山​猫",
     "nation": "britain",
     "rank": 6,
-    "battleRating": 10.7,
+    "battleRating": 11.3,
     "br": {
       "arcade": 9.7,
-      "realistic": 10.7,
+      "realistic": 11.3,
       "simulator": 10.0
     },
     "aircraftType": "helicopter",
@@ -151288,10 +151413,10 @@
     "localizedName": "H145M",
     "nation": "germany",
     "rank": 7,
-    "battleRating": 12.7,
+    "battleRating": 13.0,
     "br": {
       "arcade": 10.0,
-      "realistic": 12.7,
+      "realistic": 13.0,
       "simulator": 12.7
     },
     "aircraftType": "helicopter",
@@ -152548,10 +152673,10 @@
     "localizedName": "H-34",
     "nation": "usa",
     "rank": 5,
-    "battleRating": 8.0,
+    "battleRating": 8.7,
     "br": {
       "arcade": 8.0,
-      "realistic": 8.0,
+      "realistic": 8.7,
       "simulator": 8.3
     },
     "aircraftType": "helicopter",
@@ -154870,7 +154995,6 @@
     "aircraftType": "assault",
     "economicType": "regular",
     "imageUrl": "aircrafts/harrier_gr7.webp",
-    "groundBattleRating": 12.0,
     "releaseDate": "2022-09-14",
     "weapons": {
       "fixed_weapons": [],
@@ -155550,7 +155674,7 @@
     "aircraftType": "assault",
     "economicType": "premium",
     "imageUrl": "aircrafts/harrier_t10.webp",
-    "groundBattleRating": 11.7,
+    "groundBattleRating": 12.3,
     "releaseDate": "2025-03-18",
     "weapons": {
       "fixed_weapons": [],
@@ -156774,6 +156898,7 @@
     "aircraftType": "assault",
     "economicType": "regular",
     "imageUrl": "aircrafts/hawk_200.webp",
+    "groundBattleRating": 11.3,
     "releaseDate": "2025-11-11",
     "weapons": {
       "fixed_weapons": [],
@@ -157168,7 +157293,6 @@
     "aircraftType": "assault",
     "economicType": "regular",
     "imageUrl": "aircrafts/hawk_200_rda.webp",
-    "groundBattleRating": 10.7,
     "releaseDate": "2025-11-11",
     "weapons": {
       "fixed_weapons": [],
@@ -157592,6 +157716,7 @@
     "aircraftType": "assault",
     "economicType": "premium",
     "imageUrl": "aircrafts/hawk_209_indonesia.webp",
+    "groundBattleRating": 11.7,
     "releaseDate": "2025-12-16",
     "weapons": {
       "fixed_weapons": [],
@@ -160256,6 +160381,7 @@
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/he_112a_0.webp",
+    "groundBattleRating": 2.3,
     "weapons": {
       "fixed_weapons": [
         {
@@ -160285,6 +160411,7 @@
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/he_112b_0.webp",
+    "groundBattleRating": 2.3,
     "weapons": {
       "fixed_weapons": [
         {
@@ -160322,6 +160449,7 @@
     "aircraftType": "fighter",
     "economicType": "premium",
     "imageUrl": "aircrafts/he_112b_1.webp",
+    "groundBattleRating": 2.3,
     "weapons": {
       "fixed_weapons": [
         {
@@ -160359,6 +160487,7 @@
     "aircraftType": "fighter",
     "economicType": "premium",
     "imageUrl": "aircrafts/he_112b_1_italy.webp",
+    "groundBattleRating": 2.3,
     "releaseDate": "2022-06-15",
     "weapons": {
       "fixed_weapons": [
@@ -160397,6 +160526,7 @@
     "aircraftType": "fighter",
     "economicType": "premium",
     "imageUrl": "aircrafts/he_112b_2.webp",
+    "groundBattleRating": 2.3,
     "weapons": {
       "fixed_weapons": [
         {
@@ -161084,10 +161214,10 @@
     "localizedName": "HKP 2",
     "nation": "sweden",
     "rank": 5,
-    "battleRating": 8.3,
+    "battleRating": 9.0,
     "br": {
       "arcade": 8.7,
-      "realistic": 8.3,
+      "realistic": 9.0,
       "simulator": 8.7
     },
     "aircraftType": "helicopter",
@@ -161198,10 +161328,10 @@
     "localizedName": "HKP 9A",
     "nation": "sweden",
     "rank": 6,
-    "battleRating": 9.3,
+    "battleRating": 9.7,
     "br": {
       "arcade": 9.7,
-      "realistic": 9.3,
+      "realistic": 9.7,
       "simulator": 9.7
     },
     "aircraftType": "helicopter",
@@ -161325,10 +161455,10 @@
     "localizedName": "HKP 9A (FC)",
     "nation": "sweden",
     "rank": 6,
-    "battleRating": 9.3,
+    "battleRating": 10.0,
     "br": {
       "arcade": 9.7,
-      "realistic": 9.3,
+      "realistic": 10.0,
       "simulator": 10.0
     },
     "aircraftType": "helicopter",
@@ -163085,7 +163215,7 @@
     "aircraftType": "fighter",
     "economicType": "clan",
     "imageUrl": "aircrafts/hunter_f58_switzerland.webp",
-    "groundBattleRating": 9.7,
+    "groundBattleRating": 10.3,
     "releaseDate": "2023-03-07",
     "weapons": {
       "fixed_weapons": [],
@@ -164611,7 +164741,7 @@
     "rank": 2,
     "battleRating": 3.0,
     "br": {
-      "arcade": 3.3,
+      "arcade": 3.7,
       "realistic": 3.0,
       "simulator": 3.0
     },
@@ -167881,16 +168011,16 @@
     "localizedName": "IA-58A 堡​垒",
     "nation": "germany",
     "rank": 4,
-    "battleRating": 4.7,
+    "battleRating": 5.0,
     "br": {
-      "arcade": 4.7,
-      "realistic": 4.7,
+      "arcade": 5.0,
+      "realistic": 5.0,
       "simulator": 4.3
     },
     "aircraftType": "assault",
     "economicType": "premium",
     "imageUrl": "aircrafts/ia_58a_pucara.webp",
-    "groundBattleRating": 4.3,
+    "groundBattleRating": 4.7,
     "releaseDate": "2026-06-24",
     "weapons": {
       "fixed_weapons": [],
@@ -168179,10 +168309,10 @@
     "localizedName": "IAR 316B",
     "nation": "france",
     "rank": 5,
-    "battleRating": 8.3,
+    "battleRating": 9.0,
     "br": {
       "arcade": 8.7,
-      "realistic": 8.3,
+      "realistic": 9.0,
       "simulator": 9.3
     },
     "aircraftType": "helicopter",
@@ -168367,7 +168497,7 @@
     "rank": 2,
     "battleRating": 2.7,
     "br": {
-      "arcade": 2.7,
+      "arcade": 3.0,
       "realistic": 2.7,
       "simulator": 2.7
     },
@@ -168433,15 +168563,16 @@
     "localizedName": "IAR-81C (DB 605)",
     "nation": "italy",
     "rank": 3,
-    "battleRating": 3.0,
+    "battleRating": 3.3,
     "br": {
-      "arcade": 3.0,
-      "realistic": 3.0,
+      "arcade": 3.3,
+      "realistic": 3.3,
       "simulator": 3.0
     },
     "aircraftType": "fighter",
     "economicType": "premium",
     "imageUrl": "aircrafts/iar_81c_db_605.webp",
+    "groundBattleRating": 3.0,
     "releaseDate": "2026-07-22",
     "weapons": {
       "fixed_weapons": [],
@@ -171904,15 +172035,16 @@
     "localizedName": "伊​尔​-2/NS-37",
     "nation": "ussr",
     "rank": 2,
-    "battleRating": 2.7,
+    "battleRating": 2.3,
     "br": {
       "arcade": 3.0,
-      "realistic": 2.7,
+      "realistic": 2.3,
       "simulator": 3.7
     },
     "aircraftType": "assault",
     "economicType": "regular",
     "imageUrl": "aircrafts/il_2_37_1943.webp",
+    "groundBattleRating": 2.7,
     "weapons": {
       "fixed_weapons": [
         {
@@ -172601,6 +172733,7 @@
     "aircraftType": "fighter",
     "economicType": "premium",
     "imageUrl": "aircrafts/itp_m1.webp",
+    "groundBattleRating": 4.7,
     "releaseDate": "2021-02-24",
     "weapons": {
       "fixed_weapons": [
@@ -176922,16 +177055,16 @@
     "localizedName": "歼​-10A",
     "nation": "china",
     "rank": 8,
-    "battleRating": 13.7,
+    "battleRating": 14.0,
     "br": {
-      "arcade": 13.7,
-      "realistic": 13.7,
-      "simulator": 13.7
+      "arcade": 14.0,
+      "realistic": 14.0,
+      "simulator": 14.0
     },
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/j_10a.webp",
-    "groundBattleRating": 12.3,
+    "groundBattleRating": 13.3,
     "releaseDate": "2024-09-10",
     "weapons": {
       "fixed_weapons": [],
@@ -177581,16 +177714,16 @@
     "localizedName": "歼​-10C",
     "nation": "china",
     "rank": 9,
-    "battleRating": 14.3,
+    "battleRating": 14.7,
     "br": {
-      "arcade": 14.3,
-      "realistic": 14.3,
-      "simulator": 14.3
+      "arcade": 14.7,
+      "realistic": 14.7,
+      "simulator": 14.7
     },
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/j_10c.webp",
-    "groundBattleRating": 13.0,
+    "groundBattleRating": 14.0,
     "releaseDate": "2025-12-16",
     "weapons": {
       "fixed_weapons": [],
@@ -179009,16 +179142,16 @@
     "localizedName": "歼​-11A",
     "nation": "china",
     "rank": 8,
-    "battleRating": 13.3,
+    "battleRating": 13.7,
     "br": {
-      "arcade": 13.3,
-      "realistic": 13.3,
-      "simulator": 13.3
+      "arcade": 13.7,
+      "realistic": 13.7,
+      "simulator": 13.7
     },
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/j_11a.webp",
-    "groundBattleRating": 12.7,
+    "groundBattleRating": 13.0,
     "releaseDate": "2024-06-19",
     "weapons": {
       "fixed_weapons": [],
@@ -179621,16 +179754,16 @@
     "localizedName": "歼​-11B",
     "nation": "china",
     "rank": 8,
-    "battleRating": 13.7,
+    "battleRating": 14.0,
     "br": {
       "arcade": 14.0,
-      "realistic": 13.7,
-      "simulator": 13.7
+      "realistic": 14.0,
+      "simulator": 14.0
     },
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/j_11b.webp",
-    "groundBattleRating": 12.7,
+    "groundBattleRating": 13.3,
     "releaseDate": "2025-03-18",
     "weapons": {
       "fixed_weapons": [],
@@ -180397,16 +180530,16 @@
     "localizedName": "歼​-15T",
     "nation": "china",
     "rank": 9,
-    "battleRating": 14.7,
+    "battleRating": 15.0,
     "br": {
-      "arcade": 14.7,
-      "realistic": 14.7,
-      "simulator": 14.7
+      "arcade": 15.0,
+      "realistic": 15.0,
+      "simulator": 15.0
     },
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/j_15t.webp",
-    "groundBattleRating": 13.0,
+    "groundBattleRating": 14.0,
     "releaseDate": "2026-03-18",
     "weapons": {
       "fixed_weapons": [],
@@ -181357,16 +181490,16 @@
     "localizedName": "歼​-16",
     "nation": "china",
     "rank": 9,
-    "battleRating": 14.7,
+    "battleRating": 15.0,
     "br": {
-      "arcade": 14.7,
-      "realistic": 14.7,
-      "simulator": 14.7
+      "arcade": 15.0,
+      "realistic": 15.0,
+      "simulator": 15.0
     },
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/j_16.webp",
-    "groundBattleRating": 13.0,
+    "groundBattleRating": 14.0,
     "releaseDate": "2026-09-16",
     "weapons": {
       "fixed_weapons": [],
@@ -182443,7 +182576,7 @@
     "aircraftType": "assault",
     "economicType": "premium",
     "imageUrl": "aircrafts/j_22m1a.webp",
-    "groundBattleRating": 11.0,
+    "groundBattleRating": 11.7,
     "releaseDate": "2026-06-24",
     "weapons": {
       "fixed_weapons": [],
@@ -184172,7 +184305,7 @@
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/j_8f.webp",
-    "groundBattleRating": 11.7,
+    "groundBattleRating": 12.3,
     "releaseDate": "2023-06-14",
     "weapons": {
       "fixed_weapons": [],
@@ -184496,6 +184629,7 @@
     "aircraftType": "assault",
     "economicType": "regular",
     "imageUrl": "aircrafts/jaguar_a.webp",
+    "groundBattleRating": 11.3,
     "releaseDate": "2020-09-08",
     "weapons": {
       "fixed_weapons": [],
@@ -185835,7 +185969,7 @@
     "aircraftType": "assault",
     "economicType": "regular",
     "imageUrl": "aircrafts/jaguar_gr1a.webp",
-    "groundBattleRating": 10.3,
+    "groundBattleRating": 11.0,
     "releaseDate": "2021-10-26",
     "weapons": {
       "fixed_weapons": [],
@@ -186164,7 +186298,6 @@
     "aircraftType": "assault",
     "economicType": "regular",
     "imageUrl": "aircrafts/jaguar_is.webp",
-    "groundBattleRating": 11.0,
     "releaseDate": "2024-02-22",
     "weapons": {
       "fixed_weapons": [],
@@ -186616,7 +186749,7 @@
     "aircraftType": "assault",
     "economicType": "clan",
     "imageUrl": "aircrafts/jf_17.webp",
-    "groundBattleRating": 12.3,
+    "groundBattleRating": 13.0,
     "releaseDate": "2024-09-10",
     "weapons": {
       "fixed_weapons": [],
@@ -187195,7 +187328,7 @@
     "rank": 7,
     "battleRating": 11.7,
     "br": {
-      "arcade": 11.7,
+      "arcade": 12.0,
       "realistic": 11.7,
       "simulator": 11.3
     },
@@ -187514,7 +187647,6 @@
     "aircraftType": "assault",
     "economicType": "regular",
     "imageUrl": "aircrafts/jh_7a.webp",
-    "groundBattleRating": 12.0,
     "releaseDate": "2023-10-31",
     "weapons": {
       "fixed_weapons": [],
@@ -188339,7 +188471,7 @@
     "aircraftType": "assault",
     "economicType": "regular",
     "imageUrl": "aircrafts/jh_7a2.webp",
-    "groundBattleRating": 12.3,
+    "groundBattleRating": 13.3,
     "releaseDate": "2026-06-24",
     "weapons": {
       "fixed_weapons": [],
@@ -189239,7 +189371,6 @@
     "aircraftType": "assault",
     "economicType": "premium",
     "imageUrl": "aircrafts/jh_7a_prototype.webp",
-    "groundBattleRating": 12.0,
     "releaseDate": "2025-11-11",
     "weapons": {
       "fixed_weapons": [],
@@ -192345,10 +192476,10 @@
     "localizedName": "卡​-29",
     "nation": "ussr",
     "rank": 6,
-    "battleRating": 9.7,
+    "battleRating": 10.0,
     "br": {
       "arcade": 9.7,
-      "realistic": 9.7,
+      "realistic": 10.0,
       "simulator": 9.7
     },
     "aircraftType": "helicopter",
@@ -192465,10 +192596,10 @@
     "localizedName": "卡​-50",
     "nation": "ussr",
     "rank": 6,
-    "battleRating": 11.3,
+    "battleRating": 11.7,
     "br": {
       "arcade": 10.7,
-      "realistic": 11.3,
+      "realistic": 11.7,
       "simulator": 10.3
     },
     "aircraftType": "helicopter",
@@ -192619,10 +192750,10 @@
     "localizedName": "卡​-52",
     "nation": "ussr",
     "rank": 7,
-    "battleRating": 12.0,
+    "battleRating": 12.3,
     "br": {
       "arcade": 11.0,
-      "realistic": 12.0,
+      "realistic": 12.3,
       "simulator": 10.7
     },
     "aircraftType": "helicopter",
@@ -192842,16 +192973,16 @@
     "localizedName": "◡​幼​狮 C.10",
     "nation": "israel",
     "rank": 8,
-    "battleRating": 13.3,
+    "battleRating": 13.7,
     "br": {
-      "arcade": 13.0,
-      "realistic": 13.3,
-      "simulator": 13.0
+      "arcade": 13.7,
+      "realistic": 13.7,
+      "simulator": 13.7
     },
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/kfir_c10_colombia.webp",
-    "groundBattleRating": 12.0,
+    "groundBattleRating": 12.7,
     "releaseDate": "2024-12-20",
     "weapons": {
       "fixed_weapons": [],
@@ -194305,16 +194436,16 @@
     "localizedName": "幼​狮 (鸭​翼)",
     "nation": "israel",
     "rank": 7,
-    "battleRating": 11.0,
+    "battleRating": 11.3,
     "br": {
       "arcade": 11.0,
-      "realistic": 11.0,
-      "simulator": 11.0
+      "realistic": 11.3,
+      "simulator": 11.3
     },
     "aircraftType": "fighter",
     "economicType": "premium",
     "imageUrl": "aircrafts/kfir_canard.webp",
-    "groundBattleRating": 10.3,
+    "groundBattleRating": 10.0,
     "releaseDate": "2022-12-20",
     "weapons": {
       "fixed_weapons": [],
@@ -198200,10 +198331,10 @@
     "localizedName": "Ki-102 乙",
     "nation": "japan",
     "rank": 2,
-    "battleRating": 3.3,
+    "battleRating": 3.0,
     "br": {
       "arcade": 2.7,
-      "realistic": 3.3,
+      "realistic": 3.0,
       "simulator": 3.3
     },
     "aircraftType": "fighter",
@@ -205279,7 +205410,7 @@
     "rank": 5,
     "battleRating": 7.0,
     "br": {
-      "arcade": 7.0,
+      "arcade": 7.3,
       "realistic": 7.0,
       "simulator": 6.7
     },
@@ -209850,7 +209981,7 @@
     "aircraftType": "fighter",
     "economicType": "premium",
     "imageUrl": "aircrafts/lightning_f53.webp",
-    "groundBattleRating": 9.0,
+    "groundBattleRating": 8.7,
     "releaseDate": "2022-06-15",
     "weapons": {
       "fixed_weapons": [],
@@ -210207,7 +210338,7 @@
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/lightning_f6.webp",
-    "groundBattleRating": 9.0,
+    "groundBattleRating": 8.7,
     "releaseDate": "2020-03-10",
     "weapons": {
       "fixed_weapons": [
@@ -210789,10 +210920,10 @@
     "localizedName": "山​猫 AH.Mk.1",
     "nation": "britain",
     "rank": 6,
-    "battleRating": 10.7,
+    "battleRating": 11.3,
     "br": {
       "arcade": 9.7,
-      "realistic": 10.7,
+      "realistic": 11.3,
       "simulator": 10.0
     },
     "aircraftType": "helicopter",
@@ -210945,7 +211076,6 @@
     "aircraftType": "assault",
     "economicType": "regular",
     "imageUrl": "aircrafts/m_346fa.webp",
-    "groundBattleRating": 12.3,
     "releaseDate": "2026-06-24",
     "weapons": {
       "fixed_weapons": [],
@@ -214069,7 +214199,7 @@
     "rank": 5,
     "battleRating": 8.0,
     "br": {
-      "arcade": 7.3,
+      "arcade": 7.7,
       "realistic": 8.0,
       "simulator": 7.0
     },
@@ -217380,10 +217510,10 @@
     "localizedName": "杂​技",
     "nation": "israel",
     "rank": 5,
-    "battleRating": 9.0,
+    "battleRating": 9.3,
     "br": {
       "arcade": 8.7,
-      "realistic": 9.0,
+      "realistic": 9.3,
       "simulator": 8.7
     },
     "aircraftType": "helicopter",
@@ -221882,10 +222012,10 @@
     "localizedName": "MH-60L DAP",
     "nation": "usa",
     "rank": 7,
-    "battleRating": 11.0,
+    "battleRating": 11.3,
     "br": {
       "arcade": 10.7,
-      "realistic": 11.0,
+      "realistic": 11.3,
       "simulator": 10.7
     },
     "aircraftType": "helicopter",
@@ -222175,10 +222305,10 @@
     "localizedName": "米​-24A",
     "nation": "ussr",
     "rank": 5,
-    "battleRating": 8.7,
+    "battleRating": 9.0,
     "br": {
       "arcade": 9.3,
-      "realistic": 8.7,
+      "realistic": 9.0,
       "simulator": 9.0
     },
     "aircraftType": "helicopter",
@@ -222301,10 +222431,10 @@
     "localizedName": "米​-24D",
     "nation": "ussr",
     "rank": 5,
-    "battleRating": 8.7,
+    "battleRating": 9.0,
     "br": {
       "arcade": 9.3,
-      "realistic": 8.7,
+      "realistic": 9.0,
       "simulator": 9.3
     },
     "aircraftType": "helicopter",
@@ -222666,10 +222796,10 @@
     "localizedName": "◊​米​-24D",
     "nation": "germany",
     "rank": 6,
-    "battleRating": 8.7,
+    "battleRating": 9.0,
     "br": {
       "arcade": 9.3,
-      "realistic": 8.7,
+      "realistic": 9.0,
       "simulator": 9.3
     },
     "aircraftType": "helicopter",
@@ -222838,10 +222968,10 @@
     "localizedName": "◔​米​-24D",
     "nation": "italy",
     "rank": 5,
-    "battleRating": 8.7,
+    "battleRating": 9.0,
     "br": {
       "arcade": 9.3,
-      "realistic": 8.7,
+      "realistic": 9.0,
       "simulator": 9.3
     },
     "aircraftType": "helicopter",
@@ -223010,10 +223140,10 @@
     "localizedName": "米​-24P",
     "nation": "ussr",
     "rank": 6,
-    "battleRating": 9.7,
+    "battleRating": 10.0,
     "br": {
       "arcade": 10.0,
-      "realistic": 9.7,
+      "realistic": 10.0,
       "simulator": 9.7
     },
     "aircraftType": "helicopter",
@@ -223308,10 +223438,10 @@
     "localizedName": "◊​米​-24P",
     "nation": "germany",
     "rank": 6,
-    "battleRating": 9.7,
+    "battleRating": 10.0,
     "br": {
       "arcade": 10.0,
-      "realistic": 9.7,
+      "realistic": 10.0,
       "simulator": 9.7
     },
     "aircraftType": "helicopter",
@@ -223577,10 +223707,10 @@
     "localizedName": "◄​米​-24P (陆​航​第 80 中​队)",
     "nation": "germany",
     "rank": 6,
-    "battleRating": 9.7,
+    "battleRating": 10.0,
     "br": {
       "arcade": 10.0,
-      "realistic": 9.7,
+      "realistic": 10.0,
       "simulator": 9.7
     },
     "aircraftType": "helicopter",
@@ -224039,10 +224169,10 @@
     "localizedName": "◔​米​-24P",
     "nation": "italy",
     "rank": 6,
-    "battleRating": 9.7,
+    "battleRating": 10.0,
     "br": {
       "arcade": 10.0,
-      "realistic": 9.7,
+      "realistic": 10.0,
       "simulator": 9.7
     },
     "aircraftType": "helicopter",
@@ -224337,10 +224467,10 @@
     "localizedName": "米​-24V",
     "nation": "ussr",
     "rank": 6,
-    "battleRating": 9.7,
+    "battleRating": 10.0,
     "br": {
       "arcade": 10.0,
-      "realistic": 9.7,
+      "realistic": 10.0,
       "simulator": 9.7
     },
     "aircraftType": "helicopter",
@@ -224606,10 +224736,10 @@
     "localizedName": "◔​米​-24V",
     "nation": "italy",
     "rank": 6,
-    "battleRating": 9.7,
+    "battleRating": 10.0,
     "br": {
       "arcade": 10.0,
-      "realistic": 9.7,
+      "realistic": 10.0,
       "simulator": 9.7
     },
     "aircraftType": "helicopter",
@@ -224875,10 +225005,10 @@
     "localizedName": "米​-28A",
     "nation": "sweden",
     "rank": 6,
-    "battleRating": 10.7,
+    "battleRating": 11.0,
     "br": {
       "arcade": 10.3,
-      "realistic": 10.7,
+      "realistic": 11.0,
       "simulator": 10.0
     },
     "aircraftType": "helicopter",
@@ -224972,10 +225102,10 @@
     "localizedName": "米​-28N",
     "nation": "ussr",
     "rank": 7,
-    "battleRating": 11.0,
+    "battleRating": 11.3,
     "br": {
       "arcade": 10.7,
-      "realistic": 11.0,
+      "realistic": 11.3,
       "simulator": 10.7
     },
     "aircraftType": "helicopter",
@@ -225069,10 +225199,10 @@
     "localizedName": "米​-28NM",
     "nation": "ussr",
     "rank": 7,
-    "battleRating": 13.0,
+    "battleRating": 13.3,
     "br": {
       "arcade": 11.0,
-      "realistic": 13.0,
+      "realistic": 13.3,
       "simulator": 11.0
     },
     "aircraftType": "helicopter",
@@ -225270,10 +225400,10 @@
     "localizedName": "米​-35M",
     "nation": "ussr",
     "rank": 6,
-    "battleRating": 10.7,
+    "battleRating": 11.0,
     "br": {
       "arcade": 10.7,
-      "realistic": 10.7,
+      "realistic": 11.0,
       "simulator": 10.3
     },
     "aircraftType": "helicopter",
@@ -225355,10 +225485,10 @@
     "localizedName": "▄​米​-35M",
     "nation": "china",
     "rank": 6,
-    "battleRating": 10.7,
+    "battleRating": 11.0,
     "br": {
       "arcade": 10.7,
-      "realistic": 10.7,
+      "realistic": 11.0,
       "simulator": 10.3
     },
     "aircraftType": "helicopter",
@@ -225580,10 +225710,10 @@
     "localizedName": "米​-35P",
     "nation": "ussr",
     "rank": 7,
-    "battleRating": 11.7,
+    "battleRating": 12.0,
     "br": {
       "arcade": 11.0,
-      "realistic": 11.7,
+      "realistic": 12.0,
       "simulator": 10.7
     },
     "aircraftType": "helicopter",
@@ -225763,10 +225893,10 @@
     "localizedName": "◥​米​-35",
     "nation": "japan",
     "rank": 6,
-    "battleRating": 9.7,
+    "battleRating": 10.0,
     "br": {
       "arcade": 10.0,
-      "realistic": 9.7,
+      "realistic": 10.0,
       "simulator": 9.7
     },
     "aircraftType": "helicopter",
@@ -226061,10 +226191,10 @@
     "localizedName": "米​-4AV",
     "nation": "ussr",
     "rank": 5,
-    "battleRating": 8.0,
+    "battleRating": 8.3,
     "br": {
       "arcade": 8.7,
-      "realistic": 8.0,
+      "realistic": 8.3,
       "simulator": 8.3
     },
     "aircraftType": "helicopter",
@@ -226276,10 +226406,10 @@
     "localizedName": "米​-8AMTSh",
     "nation": "ussr",
     "rank": 6,
-    "battleRating": 9.7,
+    "battleRating": 10.0,
     "br": {
       "arcade": 10.0,
-      "realistic": 9.7,
+      "realistic": 10.0,
       "simulator": 9.7
     },
     "aircraftType": "helicopter",
@@ -226605,10 +226735,10 @@
     "localizedName": "米​-8AMTSh-VN",
     "nation": "ussr",
     "rank": 7,
-    "battleRating": 11.0,
+    "battleRating": 11.3,
     "br": {
       "arcade": 10.7,
-      "realistic": 11.0,
+      "realistic": 11.3,
       "simulator": 10.7
     },
     "aircraftType": "helicopter",
@@ -227241,10 +227371,10 @@
     "localizedName": "米​-8TV",
     "nation": "ussr",
     "rank": 5,
-    "battleRating": 8.0,
+    "battleRating": 8.3,
     "br": {
       "arcade": 9.0,
-      "realistic": 8.0,
+      "realistic": 8.3,
       "simulator": 8.7
     },
     "aircraftType": "helicopter",
@@ -230623,7 +230753,7 @@
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/mig-21_bis.webp",
-    "groundBattleRating": 10.3,
+    "groundBattleRating": 10.0,
     "releaseDate": "2020-11-15",
     "weapons": {
       "fixed_weapons": [],
@@ -231045,7 +231175,7 @@
     "aircraftType": "fighter",
     "economicType": "premium",
     "imageUrl": "aircrafts/mig-21_bis_lazur.webp",
-    "groundBattleRating": 10.3,
+    "groundBattleRating": 10.0,
     "releaseDate": "2022-12-20",
     "weapons": {
       "fixed_weapons": [],
@@ -231515,7 +231645,7 @@
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/mig-21_bis_sau.webp",
-    "groundBattleRating": 10.3,
+    "groundBattleRating": 10.0,
     "releaseDate": "2021-10-26",
     "weapons": {
       "fixed_weapons": [],
@@ -231948,7 +232078,7 @@
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/mig-21_bis_sau_hungary.webp",
-    "groundBattleRating": 10.3,
+    "groundBattleRating": 10.0,
     "releaseDate": "2024-03-13",
     "weapons": {
       "fixed_weapons": [],
@@ -233856,6 +233986,7 @@
     "aircraftType": "fighter",
     "economicType": "premium",
     "imageUrl": "aircrafts/mig-21_s.webp",
+    "groundBattleRating": 9.3,
     "releaseDate": "2021-12-17",
     "weapons": {
       "fixed_weapons": [],
@@ -234939,7 +235070,6 @@
     "aircraftType": "fighter",
     "economicType": "clan",
     "imageUrl": "aircrafts/mig_21_2000_iaf.webp",
-    "groundBattleRating": 11.3,
     "releaseDate": "2026-06-24",
     "weapons": {
       "fixed_weapons": [],
@@ -235337,7 +235467,7 @@
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/mig_21_bis_finland.webp",
-    "groundBattleRating": 10.3,
+    "groundBattleRating": 10.0,
     "releaseDate": "2022-10-26",
     "weapons": {
       "fixed_weapons": [],
@@ -236080,16 +236210,16 @@
     "localizedName": "米​格​-23M",
     "nation": "ussr",
     "rank": 7,
-    "battleRating": 11.0,
+    "battleRating": 10.7,
     "br": {
       "arcade": 11.3,
-      "realistic": 11.0,
+      "realistic": 10.7,
       "simulator": 11.0
     },
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/mig_23m.webp",
-    "groundBattleRating": 10.3,
+    "groundBattleRating": 10.0,
     "releaseDate": "2021-06-02",
     "weapons": {
       "fixed_weapons": [],
@@ -236552,16 +236682,16 @@
     "localizedName": "◊​米​格​-23MF",
     "nation": "germany",
     "rank": 7,
-    "battleRating": 11.0,
+    "battleRating": 10.7,
     "br": {
       "arcade": 11.3,
-      "realistic": 11.0,
+      "realistic": 10.7,
       "simulator": 11.0
     },
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/mig_23mf_germany.webp",
-    "groundBattleRating": 10.3,
+    "groundBattleRating": 10.0,
     "releaseDate": "2021-12-17",
     "weapons": {
       "fixed_weapons": [],
@@ -237007,16 +237137,16 @@
     "localizedName": "◔​米​格​-23MF",
     "nation": "italy",
     "rank": 7,
-    "battleRating": 11.0,
+    "battleRating": 10.7,
     "br": {
       "arcade": 11.3,
-      "realistic": 11.0,
+      "realistic": 10.7,
       "simulator": 11.0
     },
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/mig_23mf_hungary.webp",
-    "groundBattleRating": 10.3,
+    "groundBattleRating": 10.0,
     "releaseDate": "2024-03-13",
     "weapons": {
       "fixed_weapons": [],
@@ -239311,9 +239441,9 @@
     "rank": 7,
     "battleRating": 11.0,
     "br": {
-      "arcade": 11.0,
+      "arcade": 11.3,
       "realistic": 11.0,
-      "simulator": 11.0
+      "simulator": 10.7
     },
     "aircraftType": "fighter",
     "economicType": "regular",
@@ -239439,7 +239569,7 @@
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/mig_27k.webp",
-    "groundBattleRating": 11.3,
+    "groundBattleRating": 11.7,
     "releaseDate": "2021-12-17",
     "weapons": {
       "fixed_weapons": [],
@@ -240093,6 +240223,7 @@
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/mig_27m.webp",
+    "groundBattleRating": 11.3,
     "releaseDate": "2021-09-07",
     "weapons": {
       "fixed_weapons": [],
@@ -244146,16 +244277,16 @@
     "localizedName": "米​格​-29KR",
     "nation": "ussr",
     "rank": 8,
-    "battleRating": 13.7,
+    "battleRating": 14.0,
     "br": {
-      "arcade": 13.7,
-      "realistic": 13.7,
-      "simulator": 13.7
+      "arcade": 14.0,
+      "realistic": 14.0,
+      "simulator": 14.0
     },
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/mig_29kr_9_41r.webp",
-    "groundBattleRating": 12.3,
+    "groundBattleRating": 13.3,
     "releaseDate": "2026-06-24",
     "weapons": {
       "fixed_weapons": [],
@@ -244850,16 +244981,16 @@
     "localizedName": "米​格​-29M",
     "nation": "ussr",
     "rank": 8,
-    "battleRating": 13.7,
+    "battleRating": 14.0,
     "br": {
-      "arcade": 13.7,
-      "realistic": 13.7,
-      "simulator": 13.7
+      "arcade": 14.0,
+      "realistic": 14.0,
+      "simulator": 14.0
     },
     "aircraftType": "fighter",
     "economicType": "clan",
     "imageUrl": "aircrafts/mig_29m_9_15.webp",
-    "groundBattleRating": 12.3,
+    "groundBattleRating": 13.0,
     "releaseDate": "2026-03-18",
     "weapons": {
       "fixed_weapons": [],
@@ -245575,16 +245706,16 @@
     "localizedName": "▄​米​格​-29N",
     "nation": "japan",
     "rank": 8,
-    "battleRating": 13.3,
+    "battleRating": 13.7,
     "br": {
-      "arcade": 13.0,
-      "realistic": 13.3,
-      "simulator": 13.3
+      "arcade": 13.7,
+      "realistic": 13.7,
+      "simulator": 13.7
     },
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/mig_29n.webp",
-    "groundBattleRating": 12.0,
+    "groundBattleRating": 12.3,
     "releaseDate": "2025-12-16",
     "weapons": {
       "fixed_weapons": [],
@@ -246170,16 +246301,16 @@
     "localizedName": "米​格​-29SMT",
     "nation": "ussr",
     "rank": 8,
-    "battleRating": 13.3,
+    "battleRating": 13.7,
     "br": {
       "arcade": 13.7,
-      "realistic": 13.3,
-      "simulator": 13.3
+      "realistic": 13.7,
+      "simulator": 13.7
     },
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/mig_29smt_9_19.webp",
-    "groundBattleRating": 12.3,
+    "groundBattleRating": 12.7,
     "releaseDate": "2023-09-19",
     "weapons": {
       "fixed_weapons": [],
@@ -246784,7 +246915,7 @@
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/mig_35.webp",
-    "groundBattleRating": 13.0,
+    "groundBattleRating": 14.0,
     "releaseDate": "2026-09-16",
     "weapons": {
       "fixed_weapons": [],
@@ -248044,16 +248175,16 @@
     "localizedName": "◐​幻​影 2000-5EG",
     "nation": "israel",
     "rank": 8,
-    "battleRating": 14.0,
+    "battleRating": 14.3,
     "br": {
       "arcade": 14.0,
-      "realistic": 14.0,
-      "simulator": 14.0
+      "realistic": 14.3,
+      "simulator": 14.3
     },
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/mirage_2000_5eg_mk2_greece.webp",
-    "groundBattleRating": 12.7,
+    "groundBattleRating": 13.7,
     "releaseDate": "2026-09-16",
     "weapons": {
       "fixed_weapons": [],
@@ -248223,16 +248354,16 @@
     "localizedName": "␗​幻​影 2000-5Ei",
     "nation": "china",
     "rank": 8,
-    "battleRating": 14.0,
+    "battleRating": 14.3,
     "br": {
       "arcade": 14.0,
-      "realistic": 14.0,
-      "simulator": 14.0
+      "realistic": 14.3,
+      "simulator": 14.3
     },
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/mirage_2000_5ei.webp",
-    "groundBattleRating": 12.7,
+    "groundBattleRating": 13.7,
     "releaseDate": "2024-11-19",
     "weapons": {
       "fixed_weapons": [],
@@ -248356,16 +248487,16 @@
     "localizedName": "幻​影 2000-5F",
     "nation": "france",
     "rank": 8,
-    "battleRating": 14.0,
+    "battleRating": 14.3,
     "br": {
       "arcade": 14.0,
-      "realistic": 14.0,
-      "simulator": 14.0
+      "realistic": 14.3,
+      "simulator": 14.3
     },
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/mirage_2000_5f.webp",
-    "groundBattleRating": 12.7,
+    "groundBattleRating": 13.7,
     "releaseDate": "2023-06-14",
     "weapons": {
       "fixed_weapons": [],
@@ -249014,7 +249145,7 @@
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/mirage_2000c_s4.webp",
-    "groundBattleRating": 11.3,
+    "groundBattleRating": 11.7,
     "releaseDate": "2023-12-14",
     "weapons": {
       "fixed_weapons": [],
@@ -249263,12 +249394,12 @@
     "br": {
       "arcade": 12.3,
       "realistic": 12.3,
-      "simulator": 12.7
+      "simulator": 12.3
     },
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/mirage_2000c_s5.webp",
-    "groundBattleRating": 11.3,
+    "groundBattleRating": 11.7,
     "releaseDate": "2022-09-14",
     "weapons": {
       "fixed_weapons": [],
@@ -249522,7 +249653,7 @@
     "aircraftType": "assault",
     "economicType": "regular",
     "imageUrl": "aircrafts/mirage_2000d_r1.webp",
-    "groundBattleRating": 11.3,
+    "groundBattleRating": 12.0,
     "releaseDate": "2022-12-20",
     "weapons": {
       "fixed_weapons": [],
@@ -250015,7 +250146,7 @@
     "aircraftType": "assault",
     "economicType": "regular",
     "imageUrl": "aircrafts/mirage_2000d_rmv.webp",
-    "groundBattleRating": 13.0,
+    "groundBattleRating": 13.7,
     "releaseDate": "2024-11-19",
     "weapons": {
       "fixed_weapons": [],
@@ -251996,18 +252127,6 @@
         {
           "name": "mirage_4000_as37",
           "weapons": [
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
-            {
-              "trigger": "",
-              "name": "",
-              "localizedName": "",
-              "count": 1
-            },
             {
               "trigger": "",
               "name": "",
@@ -255763,7 +255882,7 @@
     "rank": 3,
     "battleRating": 3.7,
     "br": {
-      "arcade": 3.7,
+      "arcade": 4.0,
       "realistic": 3.7,
       "simulator": 3.7
     },
@@ -258172,6 +258291,7 @@
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/n1k2_j.webp",
+    "groundBattleRating": 6.7,
     "weapons": {
       "fixed_weapons": [
         {
@@ -258498,6 +258618,7 @@
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/n1k2_jko.webp",
+    "groundBattleRating": 6.7,
     "weapons": {
       "fixed_weapons": [
         {
@@ -259514,7 +259635,7 @@
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/nesher.webp",
-    "groundBattleRating": 9.7,
+    "groundBattleRating": 9.3,
     "releaseDate": "2021-12-17",
     "weapons": {
       "fixed_weapons": [],
@@ -264105,10 +264226,10 @@
     "localizedName": "OH-58D",
     "nation": "usa",
     "rank": 6,
-    "battleRating": 10.3,
+    "battleRating": 11.0,
     "br": {
       "arcade": 9.7,
-      "realistic": 10.3,
+      "realistic": 11.0,
       "simulator": 10.3
     },
     "aircraftType": "helicopter",
@@ -264262,10 +264383,10 @@
     "localizedName": "␗​OH-58D",
     "nation": "china",
     "rank": 6,
-    "battleRating": 10.3,
+    "battleRating": 11.0,
     "br": {
       "arcade": 9.7,
-      "realistic": 10.3,
+      "realistic": 11.0,
       "simulator": 10.3
     },
     "aircraftType": "helicopter",
@@ -270736,6 +270857,7 @@
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/p-61c_1.webp",
+    "groundBattleRating": 3.7,
     "weapons": {
       "fixed_weapons": [],
       "payloads": [
@@ -281386,7 +281508,7 @@
     "aircraftType": "assault",
     "economicType": "regular",
     "imageUrl": "aircrafts/q_5l.webp",
-    "groundBattleRating": 10.3,
+    "groundBattleRating": 11.0,
     "releaseDate": "2022-10-26",
     "weapons": {
       "fixed_weapons": [],
@@ -282446,16 +282568,16 @@
     "localizedName": "阵​风 C F3",
     "nation": "france",
     "rank": 9,
-    "battleRating": 14.7,
+    "battleRating": 15.0,
     "br": {
-      "arcade": 14.7,
-      "realistic": 14.7,
-      "simulator": 14.7
+      "arcade": 15.0,
+      "realistic": 15.0,
+      "simulator": 15.0
     },
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/rafale_c_f3.webp",
-    "groundBattleRating": 13.0,
+    "groundBattleRating": 14.0,
     "releaseDate": "2024-12-16",
     "weapons": {
       "fixed_weapons": [],
@@ -282804,16 +282926,16 @@
     "localizedName": "◐​阵​风 EG",
     "nation": "israel",
     "rank": 9,
-    "battleRating": 14.7,
+    "battleRating": 15.0,
     "br": {
-      "arcade": 14.7,
-      "realistic": 14.7,
-      "simulator": 14.7
+      "arcade": 15.0,
+      "realistic": 15.0,
+      "simulator": 15.0
     },
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/rafale_eg_greece.webp",
-    "groundBattleRating": 13.0,
+    "groundBattleRating": 14.0,
     "releaseDate": "2026-09-16",
     "weapons": {
       "fixed_weapons": [],
@@ -283162,16 +283284,16 @@
     "localizedName": "阵​风 M F3-R",
     "nation": "france",
     "rank": 9,
-    "battleRating": 14.7,
+    "battleRating": 15.0,
     "br": {
-      "arcade": 14.7,
-      "realistic": 14.7,
-      "simulator": 14.7
+      "arcade": 15.0,
+      "realistic": 15.0,
+      "simulator": 15.0
     },
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/rafale_m_f3r.webp",
-    "groundBattleRating": 13.0,
+    "groundBattleRating": 14.0,
     "releaseDate": "2025-12-16",
     "weapons": {
       "fixed_weapons": [],
@@ -283520,10 +283642,10 @@
     "localizedName": "RAH-66",
     "nation": "usa",
     "rank": 6,
-    "battleRating": 11.3,
+    "battleRating": 11.7,
     "br": {
       "arcade": 10.3,
-      "realistic": 11.3,
+      "realistic": 11.7,
       "simulator": 10.3
     },
     "aircraftType": "helicopter",
@@ -283973,7 +284095,7 @@
     "rank": 1,
     "battleRating": 2.3,
     "br": {
-      "arcade": 2.3,
+      "arcade": 2.7,
       "realistic": 2.3,
       "simulator": 2.0
     },
@@ -285345,10 +285467,10 @@
     "localizedName": "◄​SA 313B 云​雀 II",
     "nation": "germany",
     "rank": 5,
-    "battleRating": 8.3,
+    "battleRating": 9.0,
     "br": {
       "arcade": 8.7,
-      "realistic": 8.3,
+      "realistic": 9.0,
       "simulator": 8.7
     },
     "aircraftType": "helicopter",
@@ -285405,10 +285527,10 @@
     "localizedName": "SA 313B",
     "nation": "france",
     "rank": 5,
-    "battleRating": 8.3,
+    "battleRating": 9.0,
     "br": {
       "arcade": 8.7,
-      "realistic": 8.3,
+      "realistic": 9.0,
       "simulator": 8.7
     },
     "aircraftType": "helicopter",
@@ -285465,10 +285587,10 @@
     "localizedName": "SA 316B",
     "nation": "france",
     "rank": 5,
-    "battleRating": 8.3,
+    "battleRating": 9.0,
     "br": {
       "arcade": 8.7,
-      "realistic": 8.3,
+      "realistic": 9.0,
       "simulator": 9.0
     },
     "aircraftType": "helicopter",
@@ -285516,10 +285638,10 @@
     "localizedName": "SA.341F",
     "nation": "france",
     "rank": 6,
-    "battleRating": 9.0,
+    "battleRating": 9.3,
     "br": {
       "arcade": 9.0,
-      "realistic": 9.0,
+      "realistic": 9.3,
       "simulator": 9.7
     },
     "aircraftType": "helicopter",
@@ -285606,10 +285728,10 @@
     "localizedName": "SA.342L",
     "nation": "china",
     "rank": 5,
-    "battleRating": 9.3,
+    "battleRating": 9.7,
     "br": {
       "arcade": 8.7,
-      "realistic": 9.3,
+      "realistic": 9.7,
       "simulator": 8.7
     },
     "aircraftType": "helicopter",
@@ -285730,10 +285852,10 @@
     "localizedName": "SA.342M",
     "nation": "france",
     "rank": 6,
-    "battleRating": 9.7,
+    "battleRating": 10.0,
     "br": {
       "arcade": 9.3,
-      "realistic": 9.7,
+      "realistic": 10.0,
       "simulator": 9.7
     },
     "aircraftType": "helicopter",
@@ -287619,6 +287741,7 @@
     "aircraftType": "assault",
     "economicType": "regular",
     "imageUrl": "aircrafts/saab_aj37.webp",
+    "groundBattleRating": 10.7,
     "releaseDate": "2021-10-26",
     "weapons": {
       "fixed_weapons": [],
@@ -287853,7 +287976,7 @@
     "aircraftType": "assault",
     "economicType": "regular",
     "imageUrl": "aircrafts/saab_ajs37.webp",
-    "groundBattleRating": 10.7,
+    "groundBattleRating": 11.7,
     "releaseDate": "2023-06-14",
     "weapons": {
       "fixed_weapons": [],
@@ -288177,7 +288300,7 @@
     "aircraftType": "assault",
     "economicType": "premium",
     "imageUrl": "aircrafts/saab_ajs37_early.webp",
-    "groundBattleRating": 10.7,
+    "groundBattleRating": 11.7,
     "releaseDate": "2026-06-24",
     "weapons": {
       "fixed_weapons": [],
@@ -289146,6 +289269,7 @@
     "aircraftType": "assault",
     "economicType": "clan",
     "imageUrl": "aircrafts/saab_f35_wdns.webp",
+    "groundBattleRating": 10.0,
     "releaseDate": "2025-06-25",
     "weapons": {
       "fixed_weapons": [],
@@ -290782,6 +290906,7 @@
     "aircraftType": "fighter",
     "economicType": "premium",
     "imageUrl": "aircrafts/saab_j35a.webp",
+    "groundBattleRating": 9.0,
     "releaseDate": "2021-09-07",
     "weapons": {
       "fixed_weapons": [],
@@ -290866,7 +290991,7 @@
     "rank": 7,
     "battleRating": 10.0,
     "br": {
-      "arcade": 10.0,
+      "arcade": 9.7,
       "realistic": 10.0,
       "simulator": 10.3
     },
@@ -291014,7 +291139,7 @@
     "rank": 7,
     "battleRating": 10.3,
     "br": {
-      "arcade": 10.3,
+      "arcade": 10.0,
       "realistic": 10.3,
       "simulator": 10.7
     },
@@ -291240,7 +291365,7 @@
     "rank": 7,
     "battleRating": 10.3,
     "br": {
-      "arcade": 10.3,
+      "arcade": 10.0,
       "realistic": 10.3,
       "simulator": 10.3
     },
@@ -292075,16 +292200,16 @@
     "localizedName": "JA 37DI",
     "nation": "sweden",
     "rank": 8,
-    "battleRating": 13.0,
+    "battleRating": 13.3,
     "br": {
       "arcade": 13.3,
-      "realistic": 13.0,
-      "simulator": 13.0
+      "realistic": 13.3,
+      "simulator": 13.3
     },
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/saab_ja37di.webp",
-    "groundBattleRating": 11.7,
+    "groundBattleRating": 12.3,
     "releaseDate": "2024-11-19",
     "weapons": {
       "fixed_weapons": [],
@@ -292232,16 +292357,16 @@
     "localizedName": "JA 37DI (F 21)",
     "nation": "sweden",
     "rank": 8,
-    "battleRating": 13.0,
+    "battleRating": 13.3,
     "br": {
       "arcade": 13.3,
-      "realistic": 13.0,
-      "simulator": 13.0
+      "realistic": 13.3,
+      "simulator": 13.3
     },
     "aircraftType": "fighter",
     "economicType": "premium",
     "imageUrl": "aircrafts/saab_ja37di_f21.webp",
-    "groundBattleRating": 11.7,
+    "groundBattleRating": 12.3,
     "releaseDate": "2024-11-19",
     "weapons": {
       "fixed_weapons": [],
@@ -292422,7 +292547,7 @@
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/saab_jas39a.webp",
-    "groundBattleRating": 12.0,
+    "groundBattleRating": 12.3,
     "releaseDate": "2023-12-14",
     "weapons": {
       "fixed_weapons": [],
@@ -293032,7 +293157,7 @@
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/saab_jas39c.webp",
-    "groundBattleRating": 12.7,
+    "groundBattleRating": 13.3,
     "releaseDate": "2024-06-19",
     "weapons": {
       "fixed_weapons": [],
@@ -293980,7 +294105,7 @@
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/saab_jas39c_hungary.webp",
-    "groundBattleRating": 12.7,
+    "groundBattleRating": 13.3,
     "releaseDate": "2024-03-13",
     "weapons": {
       "fixed_weapons": [],
@@ -294836,7 +294961,7 @@
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/saab_jas39c_south_africa.webp",
-    "groundBattleRating": 12.7,
+    "groundBattleRating": 13.3,
     "releaseDate": "2023-12-14",
     "weapons": {
       "fixed_weapons": [],
@@ -295692,7 +295817,7 @@
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/saab_jas39c_thailand.webp",
-    "groundBattleRating": 12.7,
+    "groundBattleRating": 13.3,
     "releaseDate": "2024-12-16",
     "weapons": {
       "fixed_weapons": [],
@@ -296548,7 +296673,7 @@
     "aircraftType": "fighter",
     "economicType": "clan",
     "imageUrl": "aircrafts/saab_jas39d.webp",
-    "groundBattleRating": 12.7,
+    "groundBattleRating": 13.3,
     "releaseDate": "2026-03-18",
     "weapons": {
       "fixed_weapons": [],
@@ -297487,16 +297612,16 @@
     "localizedName": "JAS 39E",
     "nation": "sweden",
     "rank": 9,
-    "battleRating": 14.3,
+    "battleRating": 14.7,
     "br": {
-      "arcade": 14.3,
-      "realistic": 14.3,
-      "simulator": 14.3
+      "arcade": 14.7,
+      "realistic": 14.7,
+      "simulator": 14.7
     },
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/saab_jas39e.webp",
-    "groundBattleRating": 13.0,
+    "groundBattleRating": 14.0,
     "releaseDate": "2025-12-16",
     "weapons": {
       "fixed_weapons": [],
@@ -301874,10 +301999,10 @@
     "localizedName": "侦​察​兵 AH.Mk.1",
     "nation": "britain",
     "rank": 5,
-    "battleRating": 8.3,
+    "battleRating": 9.0,
     "br": {
       "arcade": 8.7,
-      "realistic": 8.3,
+      "realistic": 9.0,
       "simulator": 8.7
     },
     "aircraftType": "helicopter",
@@ -302537,7 +302662,7 @@
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/sea_harrier_fa2.webp",
-    "groundBattleRating": 12.0,
+    "groundBattleRating": 12.3,
     "releaseDate": "2024-06-19",
     "weapons": {
       "fixed_weapons": [],
@@ -304657,7 +304782,7 @@
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/seafire_mk17.webp",
-    "groundBattleRating": 5.7,
+    "groundBattleRating": 6.0,
     "weapons": {
       "fixed_weapons": [],
       "payloads": [
@@ -310415,7 +310540,7 @@
     "aircraftType": "bomber",
     "economicType": "premium",
     "imageUrl": "aircrafts/so_4050_vautour_2n.webp",
-    "groundBattleRating": 8.0,
+    "groundBattleRating": 8.3,
     "releaseDate": "2021-12-17",
     "weapons": {
       "fixed_weapons": [],
@@ -311552,6 +311677,7 @@
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/spitfire_f24.webp",
+    "groundBattleRating": 7.0,
     "weapons": {
       "fixed_weapons": [],
       "payloads": [
@@ -313962,7 +314088,7 @@
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/spitfire_mk18e.webp",
-    "groundBattleRating": 6.0,
+    "groundBattleRating": 6.7,
     "weapons": {
       "fixed_weapons": [
         {
@@ -314714,6 +314840,7 @@
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/spitfire_mk5c.webp",
+    "groundBattleRating": 5.0,
     "weapons": {
       "fixed_weapons": [],
       "payloads": [
@@ -314824,7 +314951,7 @@
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/spitfire_mk5c_notrop.webp",
-    "groundBattleRating": 5.3,
+    "groundBattleRating": 5.7,
     "releaseDate": "2018-03-13",
     "weapons": {
       "fixed_weapons": [],
@@ -315047,6 +315174,7 @@
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/spitfire_mk9c_iaf.webp",
+    "groundBattleRating": 5.0,
     "releaseDate": "2021-12-17",
     "weapons": {
       "fixed_weapons": [
@@ -319447,6 +319575,7 @@
     "aircraftType": "assault",
     "economicType": "regular",
     "imageUrl": "aircrafts/su_17m4.webp",
+    "groundBattleRating": 11.3,
     "releaseDate": "2022-06-15",
     "weapons": {
       "fixed_weapons": [],
@@ -321453,6 +321582,7 @@
     "aircraftType": "assault",
     "economicType": "regular",
     "imageUrl": "aircrafts/su_22m4.webp",
+    "groundBattleRating": 11.3,
     "releaseDate": "2023-06-14",
     "weapons": {
       "fixed_weapons": [],
@@ -322171,6 +322301,7 @@
     "aircraftType": "assault",
     "economicType": "premium",
     "imageUrl": "aircrafts/su_22m4_de_wtd61.webp",
+    "groundBattleRating": 11.3,
     "releaseDate": "2024-11-19",
     "weapons": {
       "fixed_weapons": [],
@@ -324037,6 +324168,7 @@
     "aircraftType": "assault",
     "economicType": "regular",
     "imageUrl": "aircrafts/su_24m.webp",
+    "groundBattleRating": 11.7,
     "releaseDate": "2024-09-10",
     "weapons": {
       "fixed_weapons": [],
@@ -325879,7 +326011,7 @@
     "aircraftType": "assault",
     "economicType": "regular",
     "imageUrl": "aircrafts/su_25_558arz.webp",
-    "groundBattleRating": 10.7,
+    "groundBattleRating": 11.3,
     "releaseDate": "2023-08-08",
     "weapons": {
       "fixed_weapons": [],
@@ -327764,7 +327896,7 @@
     "aircraftType": "assault",
     "economicType": "regular",
     "imageUrl": "aircrafts/su_25sm3.webp",
-    "groundBattleRating": 12.7,
+    "groundBattleRating": 13.0,
     "releaseDate": "2024-03-13",
     "weapons": {
       "fixed_weapons": [],
@@ -328610,13 +328742,14 @@
     "rank": 7,
     "battleRating": 11.3,
     "br": {
-      "arcade": 11.7,
+      "arcade": 12.0,
       "realistic": 11.3,
       "simulator": 11.7
     },
     "aircraftType": "assault",
     "economicType": "regular",
     "imageUrl": "aircrafts/su_25t.webp",
+    "groundBattleRating": 11.7,
     "releaseDate": "2023-06-14",
     "weapons": {
       "fixed_weapons": [],
@@ -329442,14 +329575,14 @@
     "rank": 7,
     "battleRating": 11.3,
     "br": {
-      "arcade": 11.7,
+      "arcade": 12.0,
       "realistic": 11.3,
       "simulator": 11.7
     },
     "aircraftType": "assault",
     "economicType": "premium",
     "imageUrl": "aircrafts/su_25tm.webp",
-    "groundBattleRating": 11.7,
+    "groundBattleRating": 12.0,
     "releaseDate": "2023-06-14",
     "weapons": {
       "fixed_weapons": [],
@@ -331507,16 +331640,16 @@
     "localizedName": "苏​-27SM",
     "nation": "ussr",
     "rank": 8,
-    "battleRating": 13.7,
+    "battleRating": 14.0,
     "br": {
-      "arcade": 13.7,
-      "realistic": 13.7,
-      "simulator": 13.7
+      "arcade": 14.0,
+      "realistic": 14.0,
+      "simulator": 14.0
     },
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/su_27sm.webp",
-    "groundBattleRating": 12.7,
+    "groundBattleRating": 13.3,
     "releaseDate": "2024-06-19",
     "weapons": {
       "fixed_weapons": [],
@@ -332246,16 +332379,16 @@
     "localizedName": "▄​苏​-30MK2 AMV",
     "nation": "ussr",
     "rank": 8,
-    "battleRating": 13.3,
+    "battleRating": 13.7,
     "br": {
-      "arcade": 13.3,
-      "realistic": 13.3,
-      "simulator": 13.3
+      "arcade": 13.7,
+      "realistic": 13.7,
+      "simulator": 13.7
     },
     "aircraftType": "fighter",
     "economicType": "premium",
     "imageUrl": "aircrafts/su_30mk2v_venezuela.webp",
-    "groundBattleRating": 12.3,
+    "groundBattleRating": 13.0,
     "releaseDate": "2025-11-11",
     "weapons": {
       "fixed_weapons": [],
@@ -333912,16 +334045,16 @@
     "localizedName": "␗​苏​-30MKK",
     "nation": "china",
     "rank": 8,
-    "battleRating": 13.3,
+    "battleRating": 13.7,
     "br": {
-      "arcade": 13.3,
-      "realistic": 13.3,
-      "simulator": 13.3
+      "arcade": 13.7,
+      "realistic": 13.7,
+      "simulator": 13.7
     },
     "aircraftType": "fighter",
     "economicType": "premium",
     "imageUrl": "aircrafts/su_30mkk.webp",
-    "groundBattleRating": 12.3,
+    "groundBattleRating": 13.3,
     "releaseDate": "2025-12-16",
     "weapons": {
       "fixed_weapons": [],
@@ -335672,16 +335805,16 @@
     "localizedName": "▄​苏​-30MKM",
     "nation": "japan",
     "rank": 9,
-    "battleRating": 14.3,
+    "battleRating": 14.7,
     "br": {
-      "arcade": 14.3,
-      "realistic": 14.3,
-      "simulator": 14.3
+      "arcade": 14.7,
+      "realistic": 14.7,
+      "simulator": 14.7
     },
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/su_30mkm.webp",
-    "groundBattleRating": 13.0,
+    "groundBattleRating": 14.0,
     "releaseDate": "2025-12-16",
     "weapons": {
       "fixed_weapons": [],
@@ -336974,16 +337107,16 @@
     "localizedName": "苏​-30SM",
     "nation": "ussr",
     "rank": 9,
-    "battleRating": 14.3,
+    "battleRating": 14.7,
     "br": {
-      "arcade": 14.3,
-      "realistic": 14.3,
-      "simulator": 14.3
+      "arcade": 14.7,
+      "realistic": 14.7,
+      "simulator": 14.7
     },
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/su_30sm.webp",
-    "groundBattleRating": 13.0,
+    "groundBattleRating": 14.0,
     "releaseDate": "2025-03-18",
     "weapons": {
       "fixed_weapons": [],
@@ -338241,16 +338374,16 @@
     "localizedName": "苏​-30SM2",
     "nation": "ussr",
     "rank": 9,
-    "battleRating": 14.7,
+    "battleRating": 15.0,
     "br": {
-      "arcade": 14.7,
-      "realistic": 14.7,
-      "simulator": 14.7
+      "arcade": 15.0,
+      "realistic": 15.0,
+      "simulator": 15.0
     },
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/su_30sm2.webp",
-    "groundBattleRating": 13.0,
+    "groundBattleRating": 14.0,
     "releaseDate": "2025-12-16",
     "weapons": {
       "fixed_weapons": [],
@@ -340009,16 +340142,16 @@
     "localizedName": "苏​-34",
     "nation": "ussr",
     "rank": 8,
-    "battleRating": 13.7,
+    "battleRating": 14.0,
     "br": {
-      "arcade": 13.7,
-      "realistic": 13.7,
-      "simulator": 13.3
+      "arcade": 14.0,
+      "realistic": 14.0,
+      "simulator": 14.0
     },
     "aircraftType": "assault",
     "economicType": "regular",
     "imageUrl": "aircrafts/su_34.webp",
-    "groundBattleRating": 13.0,
+    "groundBattleRating": 13.7,
     "releaseDate": "2024-11-19",
     "weapons": {
       "fixed_weapons": [],
@@ -342046,7 +342179,7 @@
     "aircraftType": "assault",
     "economicType": "regular",
     "imageUrl": "aircrafts/super_etendard_97.webp",
-    "groundBattleRating": 11.0,
+    "groundBattleRating": 11.3,
     "releaseDate": "2023-09-19",
     "weapons": {
       "fixed_weapons": [],
@@ -342525,10 +342658,10 @@
     "localizedName": "超​级​雌​鹿",
     "nation": "britain",
     "rank": 6,
-    "battleRating": 10.3,
+    "battleRating": 10.7,
     "br": {
       "arcade": 10.3,
-      "realistic": 10.3,
+      "realistic": 10.7,
       "simulator": 10.3
     },
     "aircraftType": "helicopter",
@@ -343750,10 +343883,10 @@
     "localizedName": "T129",
     "nation": "italy",
     "rank": 6,
-    "battleRating": 10.7,
+    "battleRating": 11.0,
     "br": {
       "arcade": 9.7,
-      "realistic": 10.7,
+      "realistic": 11.0,
       "simulator": 9.7
     },
     "aircraftType": "helicopter",
@@ -345647,10 +345780,10 @@
     "localizedName": "虎 HAC",
     "nation": "france",
     "rank": 7,
-    "battleRating": 12.7,
+    "battleRating": 13.0,
     "br": {
       "arcade": 11.0,
-      "realistic": 12.7,
+      "realistic": 13.0,
       "simulator": 11.7
     },
     "aircraftType": "helicopter",
@@ -345831,10 +345964,10 @@
     "localizedName": "虎 HAD Block 2",
     "nation": "france",
     "rank": 7,
-    "battleRating": 12.7,
+    "battleRating": 13.0,
     "br": {
       "arcade": 11.0,
-      "realistic": 12.7,
+      "realistic": 13.0,
       "simulator": 11.7
     },
     "aircraftType": "helicopter",
@@ -345989,10 +346122,10 @@
     "localizedName": "虎 HAD",
     "nation": "france",
     "rank": 7,
-    "battleRating": 11.0,
+    "battleRating": 11.3,
     "br": {
       "arcade": 10.7,
-      "realistic": 11.0,
+      "realistic": 11.3,
       "simulator": 10.7
     },
     "aircraftType": "helicopter",
@@ -346147,10 +346280,10 @@
     "localizedName": "◄​虎 HAD-E",
     "nation": "germany",
     "rank": 7,
-    "battleRating": 11.0,
+    "battleRating": 11.3,
     "br": {
       "arcade": 10.7,
-      "realistic": 11.0,
+      "realistic": 11.3,
       "simulator": 10.7
     },
     "aircraftType": "helicopter",
@@ -346302,10 +346435,10 @@
     "localizedName": "EC-665 虎 HAP",
     "nation": "france",
     "rank": 6,
-    "battleRating": 10.0,
+    "battleRating": 10.7,
     "br": {
       "arcade": 10.0,
-      "realistic": 10.0,
+      "realistic": 10.7,
       "simulator": 10.3
     },
     "aircraftType": "helicopter",
@@ -346525,10 +346658,10 @@
     "localizedName": "EC-665 虎 UHT",
     "nation": "germany",
     "rank": 7,
-    "battleRating": 12.7,
+    "battleRating": 13.0,
     "br": {
       "arcade": 10.0,
-      "realistic": 12.7,
+      "realistic": 13.0,
       "simulator": 10.7
     },
     "aircraftType": "helicopter",
@@ -347211,16 +347344,16 @@
     "localizedName": "狂​风 F.3 后​期​型",
     "nation": "britain",
     "rank": 8,
-    "battleRating": 13.0,
+    "battleRating": 13.3,
     "br": {
       "arcade": 13.3,
-      "realistic": 13.0,
+      "realistic": 13.3,
       "simulator": 13.3
     },
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/tornado_f3_late.webp",
-    "groundBattleRating": 12.0,
+    "groundBattleRating": 12.3,
     "releaseDate": "2024-06-19",
     "weapons": {
       "fixed_weapons": [],
@@ -347356,6 +347489,7 @@
     "aircraftType": "assault",
     "economicType": "regular",
     "imageUrl": "aircrafts/tornado_gr1.webp",
+    "groundBattleRating": 12.0,
     "releaseDate": "2022-12-20",
     "weapons": {
       "fixed_weapons": [],
@@ -348188,6 +348322,7 @@
     "aircraftType": "assault",
     "economicType": "regular",
     "imageUrl": "aircrafts/tornado_gr4.webp",
+    "groundBattleRating": 13.0,
     "releaseDate": "2024-11-19",
     "weapons": {
       "fixed_weapons": [],
@@ -349190,6 +349325,7 @@
     "aircraftType": "assault",
     "economicType": "regular",
     "imageUrl": "aircrafts/tornado_ids_de_assta1.webp",
+    "groundBattleRating": 11.7,
     "releaseDate": "2022-12-20",
     "weapons": {
       "fixed_weapons": [],
@@ -349596,6 +349732,7 @@
     "aircraftType": "assault",
     "economicType": "regular",
     "imageUrl": "aircrafts/tornado_ids_de_assta3_sle.webp",
+    "groundBattleRating": 12.7,
     "releaseDate": "2025-11-11",
     "weapons": {
       "fixed_weapons": [],
@@ -351501,6 +351638,7 @@
     "aircraftType": "assault",
     "economicType": "regular",
     "imageUrl": "aircrafts/tornado_ids_it_mod95.webp",
+    "groundBattleRating": 11.7,
     "releaseDate": "2022-12-20",
     "weapons": {
       "fixed_weapons": [],
@@ -352048,6 +352186,7 @@
     "aircraftType": "assault",
     "economicType": "regular",
     "imageUrl": "aircrafts/tornado_ids_it_ret8.webp",
+    "groundBattleRating": 12.0,
     "releaseDate": "2025-03-18",
     "weapons": {
       "fixed_weapons": [],
@@ -358210,10 +358349,10 @@
     "localizedName": "UH-1B",
     "nation": "usa",
     "rank": 5,
-    "battleRating": 8.3,
+    "battleRating": 9.0,
     "br": {
       "arcade": 9.0,
-      "realistic": 8.3,
+      "realistic": 9.0,
       "simulator": 8.7
     },
     "aircraftType": "helicopter",
@@ -358397,10 +358536,10 @@
     "localizedName": "UH-1C",
     "nation": "usa",
     "rank": 5,
-    "battleRating": 8.7,
+    "battleRating": 9.3,
     "br": {
       "arcade": 9.0,
-      "realistic": 8.7,
+      "realistic": 9.3,
       "simulator": 8.7
     },
     "aircraftType": "helicopter",
@@ -358533,10 +358672,10 @@
     "localizedName": "UH-1C/XM30",
     "nation": "usa",
     "rank": 5,
-    "battleRating": 8.7,
+    "battleRating": 9.3,
     "br": {
       "arcade": 9.0,
-      "realistic": 8.7,
+      "realistic": 9.3,
       "simulator": 8.7
     },
     "aircraftType": "helicopter",
@@ -358652,10 +358791,10 @@
     "localizedName": "◄​UH-1D",
     "nation": "germany",
     "rank": 5,
-    "battleRating": 8.3,
+    "battleRating": 9.0,
     "br": {
       "arcade": 9.0,
-      "realistic": 8.3,
+      "realistic": 9.0,
       "simulator": 8.7
     },
     "aircraftType": "helicopter",
@@ -361536,6 +361675,7 @@
     "aircraftType": "fighter",
     "economicType": "premium",
     "imageUrl": "aircrafts/vl_myrsky_2_late.webp",
+    "groundBattleRating": 2.7,
     "releaseDate": "2021-08-06",
     "weapons": {
       "fixed_weapons": [
@@ -362265,10 +362405,10 @@
     "localizedName": "黄​蜂 HAS.Mk.1",
     "nation": "britain",
     "rank": 5,
-    "battleRating": 9.0,
+    "battleRating": 9.3,
     "br": {
       "arcade": 9.0,
-      "realistic": 9.0,
+      "realistic": 9.3,
       "simulator": 9.0
     },
     "aircraftType": "helicopter",
@@ -365623,7 +365763,7 @@
     "aircraftType": "fighter",
     "economicType": "premium",
     "imageUrl": "aircrafts/xp-55.webp",
-    "groundBattleRating": 4.7,
+    "groundBattleRating": 5.0,
     "weapons": {
       "fixed_weapons": [
         {
@@ -365652,10 +365792,10 @@
     "localizedName": "YAH-64",
     "nation": "usa",
     "rank": 6,
-    "battleRating": 11.3,
+    "battleRating": 11.7,
     "br": {
       "arcade": 10.3,
-      "realistic": 11.3,
+      "realistic": 11.7,
       "simulator": 10.3
     },
     "aircraftType": "helicopter",
@@ -365787,6 +365927,7 @@
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/yak-15.webp",
+    "groundBattleRating": 7.0,
     "weapons": {
       "fixed_weapons": [
         {
@@ -365845,6 +365986,7 @@
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/yak-17.webp",
+    "groundBattleRating": 7.0,
     "weapons": {
       "fixed_weapons": [
         {
@@ -366560,6 +366702,7 @@
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/yak-3.webp",
+    "groundBattleRating": 5.0,
     "weapons": {
       "fixed_weapons": [
         {
@@ -367486,7 +367629,7 @@
     "aircraftType": "fighter",
     "economicType": "premium",
     "imageUrl": "aircrafts/yak-3_eremin.webp",
-    "groundBattleRating": 4.7,
+    "groundBattleRating": 5.0,
     "releaseDate": "2024-05-08",
     "weapons": {
       "fixed_weapons": [
@@ -367632,6 +367775,7 @@
     "aircraftType": "fighter",
     "economicType": "premium",
     "imageUrl": "aircrafts/yak-3_france.webp",
+    "groundBattleRating": 5.0,
     "releaseDate": "2018-03-13",
     "weapons": {
       "fixed_weapons": [
@@ -367815,7 +367959,7 @@
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/yak-3p.webp",
-    "groundBattleRating": 5.3,
+    "groundBattleRating": 5.7,
     "weapons": {
       "fixed_weapons": [
         {
@@ -367853,7 +367997,7 @@
     "aircraftType": "fighter",
     "economicType": "premium",
     "imageUrl": "aircrafts/yak-3t.webp",
-    "groundBattleRating": 5.3,
+    "groundBattleRating": 5.7,
     "weapons": {
       "fixed_weapons": [
         {
@@ -367891,7 +368035,7 @@
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/yak-3u.webp",
-    "groundBattleRating": 6.0,
+    "groundBattleRating": 6.7,
     "releaseDate": "2019-05-28",
     "weapons": {
       "fixed_weapons": [
@@ -369095,7 +369239,7 @@
     "aircraftType": "fighter",
     "economicType": "regular",
     "imageUrl": "aircrafts/yak-9ut.webp",
-    "groundBattleRating": 6.7,
+    "groundBattleRating": 7.0,
     "weapons": {
       "fixed_weapons": [
         {
@@ -369126,14 +369270,14 @@
     "rank": 6,
     "battleRating": 9.0,
     "br": {
-      "arcade": 9.3,
+      "arcade": 9.7,
       "realistic": 9.0,
       "simulator": 9.0
     },
     "aircraftType": "assault",
     "economicType": "regular",
     "imageUrl": "aircrafts/yak_130_early.webp",
-    "groundBattleRating": 9.7,
+    "groundBattleRating": 10.3,
     "releaseDate": "2026-06-24",
     "weapons": {
       "fixed_weapons": [],
@@ -370406,10 +370550,10 @@
     "localizedName": "直​-10",
     "nation": "china",
     "rank": 7,
-    "battleRating": 11.7,
+    "battleRating": 12.3,
     "br": {
       "arcade": 10.7,
-      "realistic": 11.7,
+      "realistic": 12.3,
       "simulator": 10.7
     },
     "aircraftType": "helicopter",
@@ -370869,10 +371013,10 @@
     "localizedName": "直​-10A",
     "nation": "china",
     "rank": 7,
-    "battleRating": 11.7,
+    "battleRating": 12.3,
     "br": {
       "arcade": 10.7,
-      "realistic": 11.7,
+      "realistic": 12.3,
       "simulator": 10.7
     },
     "aircraftType": "helicopter",
@@ -371028,10 +371172,10 @@
     "localizedName": "直​-10ME",
     "nation": "china",
     "rank": 7,
-    "battleRating": 13.0,
+    "battleRating": 13.3,
     "br": {
       "arcade": 11.0,
-      "realistic": 13.0,
+      "realistic": 13.3,
       "simulator": 11.0
     },
     "aircraftType": "helicopter",
@@ -371233,10 +371377,10 @@
     "localizedName": "直​-11WA",
     "nation": "china",
     "rank": 5,
-    "battleRating": 9.0,
+    "battleRating": 9.7,
     "br": {
       "arcade": 8.7,
-      "realistic": 9.0,
+      "realistic": 9.7,
       "simulator": 8.7
     },
     "aircraftType": "helicopter",
@@ -371340,10 +371484,10 @@
     "localizedName": "直​-19",
     "nation": "china",
     "rank": 6,
-    "battleRating": 11.7,
+    "battleRating": 12.3,
     "br": {
       "arcade": 10.3,
-      "realistic": 11.7,
+      "realistic": 12.3,
       "simulator": 10.3
     },
     "aircraftType": "helicopter",
@@ -371482,10 +371626,10 @@
     "localizedName": "直​-19E",
     "nation": "china",
     "rank": 6,
-    "battleRating": 11.7,
+    "battleRating": 12.3,
     "br": {
       "arcade": 10.3,
-      "realistic": 11.7,
+      "realistic": 12.3,
       "simulator": 10.3
     },
     "aircraftType": "helicopter",
@@ -371700,10 +371844,10 @@
     "localizedName": "直​-9W",
     "nation": "china",
     "rank": 6,
-    "battleRating": 10.3,
+    "battleRating": 10.7,
     "br": {
       "arcade": 9.3,
-      "realistic": 10.3,
+      "realistic": 10.7,
       "simulator": 9.3
     },
     "aircraftType": "helicopter",
@@ -371858,10 +372002,10 @@
     "localizedName": "直​-9WA",
     "nation": "china",
     "rank": 6,
-    "battleRating": 11.0,
+    "battleRating": 11.3,
     "br": {
       "arcade": 9.7,
-      "realistic": 11.0,
+      "realistic": 11.3,
       "simulator": 9.7
     },
     "aircraftType": "helicopter",

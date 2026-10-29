@@ -1,32 +1,32 @@
 {
   "id": "p1y1_mod11",
   "economy": {
-    "researchCost": 18000,
-    "purchaseCost": 47000,
-    "crewTraining": 13000,
-    "expertTraining": 47000,
-    "aceTrainingGE": 400,
-    "aceTrainingRP": 280000,
+    "researchCost": 26000,
+    "purchaseCost": 76000,
+    "crewTraining": 22000,
+    "expertTraining": 76000,
+    "aceTrainingGE": 500,
+    "aceTrainingRP": 320000,
     "repairCost": {
       "arcade": [
-        1054,
-        1464
+        1210,
+        1681
       ],
       "realistic": [
-        1769,
-        2381
+        2040,
+        2746
       ],
       "simulator": [
-        3628,
-        4883
+        4217,
+        5676
       ]
     },
     "rewardMultiplier": {
-      "arcade": 0.74,
-      "realistic": 1.54,
-      "simulator": 2.55
+      "arcade": 0.84,
+      "realistic": 1.75,
+      "simulator": 2.89
     },
-    "expMultiplier": 1.36
+    "expMultiplier": 1.42
   },
   "weapons": {
     "fixed_weapons": [

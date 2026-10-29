@@ -1,32 +1,32 @@
 {
   "id": "b7a2",
   "economy": {
-    "researchCost": 26000,
-    "purchaseCost": 76000,
-    "crewTraining": 22000,
-    "expertTraining": 76000,
-    "aceTrainingGE": 500,
-    "aceTrainingRP": 320000,
+    "researchCost": 33000,
+    "purchaseCost": 105000,
+    "crewTraining": 30000,
+    "expertTraining": 105000,
+    "aceTrainingGE": 590,
+    "aceTrainingRP": 360000,
     "repairCost": {
       "arcade": [
-        1202,
-        1578
+        1350,
+        1772
       ],
       "realistic": [
-        2237,
-        2850
+        2495,
+        3178
       ],
       "simulator": [
-        4455,
-        5676
+        4971,
+        6333
       ]
     },
     "rewardMultiplier": {
-      "arcade": 0.8,
-      "realistic": 1.71,
-      "simulator": 2.89
+      "arcade": 0.89,
+      "realistic": 1.91,
+      "simulator": 3.23
     },
-    "expMultiplier": 1.42
+    "expMultiplier": 1.48
   },
   "weapons": {
     "fixed_weapons": [

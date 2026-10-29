@@ -109668,7 +109668,7 @@
       "power_to_weight": 21.02,
       "max_reverse_speed": 36.5,
       "reload_time": 5.0,
-      "penetration": 410.0,
+      "penetration": 396.9,
       "max_speed": 55.8,
       "crew_count": 5,
       "elevation_speed": 22.5,
@@ -109705,67 +109705,26 @@
       },
       "ammunitions": [
         {
-          "name": "120mm_l23",
-          "localizedName": "L23",
+          "name": "120mm_l23a1",
+          "localizedName": "L23A1",
           "type": "apds_fs_long_tank",
           "caliber": 29.0,
           "mass": 3.89,
           "muzzleVelocity": 1535.0,
-          "armorPowerTable": [
-            {
-              "penetration": 410.0,
-              "distance": 10.0
-            },
-            {
-              "penetration": 408.0,
-              "distance": 100.0
-            },
-            {
-              "penetration": 405.0,
-              "distance": 500.0
-            },
-            {
-              "penetration": 400.0,
-              "distance": 1000.0
-            },
-            {
-              "penetration": 390.0,
-              "distance": 1500.0
-            },
-            {
-              "penetration": 380.0,
-              "distance": 2000.0
-            },
-            {
-              "penetration": 360.0,
-              "distance": 2500.0
-            },
-            {
-              "penetration": 350.0,
-              "distance": 3000.0
-            },
-            {
-              "penetration": 320.0,
-              "distance": 3500.0
-            },
-            {
-              "penetration": 310.0,
-              "distance": 4000.0
-            },
-            {
-              "penetration": 300.0,
-              "distance": 4500.0
-            },
-            {
-              "penetration": 50.0,
-              "distance": 10000.0
-            },
-            {
-              "penetration": 0.0,
-              "distance": 20000.0
+          "lanzOdermatt": {
+            "workingLength": 410.0,
+            "density": 17500.0,
+            "material": "tungsten",
+            "Cx": 0.3498
+          },
+          "penetration0m": 396.9,
+          "penetrationData": {
+            "at0m": {
+              "angle0": 396.9,
+              "angle30": 343.7,
+              "angle60": 198.5
             }
-          ],
-          "penetration0m": 410.0
+          }
         },
         {
           "name": "120mm_l37a7",
@@ -109789,31 +109748,15 @@
           "explosiveMassKg": 0.05,
           "explosiveType": "smoke_composition",
           "tntEquivalent": 0.05
-        },
-        {
-          "name": "120mm_l23a1",
-          "localizedName": "L23A1",
-          "type": "apds_fs_long_tank",
-          "caliber": 29.0,
-          "mass": 3.89,
-          "muzzleVelocity": 1535.0,
-          "lanzOdermatt": {
-            "workingLength": 410.0,
-            "density": 17500.0,
-            "material": "tungsten",
-            "Cx": 0.3498
-          },
-          "penetration0m": 396.9,
-          "penetrationData": {
-            "at0m": {
-              "angle0": 396.9,
-              "angle30": 343.7,
-              "angle60": 198.5
-            }
-          }
         }
       ],
-      "penetrationData": {},
+      "penetrationData": {
+        "at0m": {
+          "angle0": 396.9,
+          "angle30": 343.7,
+          "angle60": 198.5
+        }
+      },
       "autoLoader": false,
       "engine_manufacturer": null,
       "engine_model": null,
@@ -111918,7 +111861,7 @@
       "power_to_weight": 16.29,
       "max_reverse_speed": 12.1,
       "reload_time": 7.46,
-      "penetration": 410.0,
+      "penetration": 396.9,
       "max_speed": 52.2,
       "crew_count": 5,
       "elevation_speed": 5.0,
@@ -111982,67 +111925,26 @@
           "tntEquivalent": 5.712
         },
         {
-          "name": "120mm_l23",
-          "localizedName": "L23",
+          "name": "120mm_l23a1",
+          "localizedName": "L23A1",
           "type": "apds_fs_long_tank",
           "caliber": 29.0,
           "mass": 3.89,
           "muzzleVelocity": 1535.0,
-          "armorPowerTable": [
-            {
-              "penetration": 410.0,
-              "distance": 10.0
-            },
-            {
-              "penetration": 408.0,
-              "distance": 100.0
-            },
-            {
-              "penetration": 405.0,
-              "distance": 500.0
-            },
-            {
-              "penetration": 400.0,
-              "distance": 1000.0
-            },
-            {
-              "penetration": 390.0,
-              "distance": 1500.0
-            },
-            {
-              "penetration": 380.0,
-              "distance": 2000.0
-            },
-            {
-              "penetration": 360.0,
-              "distance": 2500.0
-            },
-            {
-              "penetration": 350.0,
-              "distance": 3000.0
-            },
-            {
-              "penetration": 320.0,
-              "distance": 3500.0
-            },
-            {
-              "penetration": 310.0,
-              "distance": 4000.0
-            },
-            {
-              "penetration": 300.0,
-              "distance": 4500.0
-            },
-            {
-              "penetration": 50.0,
-              "distance": 10000.0
-            },
-            {
-              "penetration": 0.0,
-              "distance": 20000.0
+          "lanzOdermatt": {
+            "workingLength": 410.0,
+            "density": 17500.0,
+            "material": "tungsten",
+            "Cx": 0.3498
+          },
+          "penetration0m": 396.9,
+          "penetrationData": {
+            "at0m": {
+              "angle0": 396.9,
+              "angle30": 343.7,
+              "angle60": 198.5
             }
-          ],
-          "penetration0m": 410.0
+          }
         },
         {
           "name": "120mm_smoke_l34",
@@ -112056,7 +111958,13 @@
           "tntEquivalent": 0.05
         }
       ],
-      "penetrationData": {},
+      "penetrationData": {
+        "at0m": {
+          "angle0": 396.9,
+          "angle30": 343.7,
+          "angle60": 198.5
+        }
+      },
       "autoLoader": false,
       "engine_manufacturer": "rolls-royce",
       "engine_model": "condor_900e",
@@ -112219,7 +112127,7 @@
       "power_to_weight": 13.29,
       "max_reverse_speed": 11.1,
       "reload_time": 7.46,
-      "penetration": 410.0,
+      "penetration": 396.9,
       "max_speed": 48.1,
       "crew_count": 5,
       "elevation_speed": 22.5,
@@ -112283,67 +112191,26 @@
           "tntEquivalent": 5.712
         },
         {
-          "name": "120mm_l23",
-          "localizedName": "L23",
+          "name": "120mm_l23a1",
+          "localizedName": "L23A1",
           "type": "apds_fs_long_tank",
           "caliber": 29.0,
           "mass": 3.89,
           "muzzleVelocity": 1535.0,
-          "armorPowerTable": [
-            {
-              "penetration": 410.0,
-              "distance": 10.0
-            },
-            {
-              "penetration": 408.0,
-              "distance": 100.0
-            },
-            {
-              "penetration": 405.0,
-              "distance": 500.0
-            },
-            {
-              "penetration": 400.0,
-              "distance": 1000.0
-            },
-            {
-              "penetration": 390.0,
-              "distance": 1500.0
-            },
-            {
-              "penetration": 380.0,
-              "distance": 2000.0
-            },
-            {
-              "penetration": 360.0,
-              "distance": 2500.0
-            },
-            {
-              "penetration": 350.0,
-              "distance": 3000.0
-            },
-            {
-              "penetration": 320.0,
-              "distance": 3500.0
-            },
-            {
-              "penetration": 310.0,
-              "distance": 4000.0
-            },
-            {
-              "penetration": 300.0,
-              "distance": 4500.0
-            },
-            {
-              "penetration": 50.0,
-              "distance": 10000.0
-            },
-            {
-              "penetration": 0.0,
-              "distance": 20000.0
+          "lanzOdermatt": {
+            "workingLength": 410.0,
+            "density": 17500.0,
+            "material": "tungsten",
+            "Cx": 0.3498
+          },
+          "penetration0m": 396.9,
+          "penetrationData": {
+            "at0m": {
+              "angle0": 396.9,
+              "angle30": 343.7,
+              "angle60": 198.5
             }
-          ],
-          "penetration0m": 410.0
+          }
         },
         {
           "name": "120mm_smoke_l34",
@@ -112357,7 +112224,13 @@
           "tntEquivalent": 0.05
         }
       ],
-      "penetrationData": {},
+      "penetrationData": {
+        "at0m": {
+          "angle0": 396.9,
+          "angle30": 343.7,
+          "angle60": 198.5
+        }
+      },
       "autoLoader": false,
       "engine_manufacturer": null,
       "engine_model": null,
@@ -116195,7 +116068,7 @@
       "power_to_weight": 22.66,
       "max_reverse_speed": 36.5,
       "reload_time": 7.46,
-      "penetration": 410.0,
+      "penetration": 396.9,
       "max_speed": 55.8,
       "crew_count": 5,
       "elevation_speed": 22.5,
@@ -116259,67 +116132,26 @@
           "tntEquivalent": 5.712
         },
         {
-          "name": "120mm_l23",
-          "localizedName": "L23",
+          "name": "120mm_l23a1",
+          "localizedName": "L23A1",
           "type": "apds_fs_long_tank",
           "caliber": 29.0,
           "mass": 3.89,
           "muzzleVelocity": 1535.0,
-          "armorPowerTable": [
-            {
-              "penetration": 410.0,
-              "distance": 10.0
-            },
-            {
-              "penetration": 408.0,
-              "distance": 100.0
-            },
-            {
-              "penetration": 405.0,
-              "distance": 500.0
-            },
-            {
-              "penetration": 400.0,
-              "distance": 1000.0
-            },
-            {
-              "penetration": 390.0,
-              "distance": 1500.0
-            },
-            {
-              "penetration": 380.0,
-              "distance": 2000.0
-            },
-            {
-              "penetration": 360.0,
-              "distance": 2500.0
-            },
-            {
-              "penetration": 350.0,
-              "distance": 3000.0
-            },
-            {
-              "penetration": 320.0,
-              "distance": 3500.0
-            },
-            {
-              "penetration": 310.0,
-              "distance": 4000.0
-            },
-            {
-              "penetration": 300.0,
-              "distance": 4500.0
-            },
-            {
-              "penetration": 50.0,
-              "distance": 10000.0
-            },
-            {
-              "penetration": 0.0,
-              "distance": 20000.0
+          "lanzOdermatt": {
+            "workingLength": 410.0,
+            "density": 17500.0,
+            "material": "tungsten",
+            "Cx": 0.3498
+          },
+          "penetration0m": 396.9,
+          "penetrationData": {
+            "at0m": {
+              "angle0": 396.9,
+              "angle30": 343.7,
+              "angle60": 198.5
             }
-          ],
-          "penetration0m": 410.0
+          }
         },
         {
           "name": "120mm_smoke_l34",
@@ -116333,7 +116165,13 @@
           "tntEquivalent": 0.05
         }
       ],
-      "penetrationData": {},
+      "penetrationData": {
+        "at0m": {
+          "angle0": 396.9,
+          "angle30": 343.7,
+          "angle60": 198.5
+        }
+      },
       "autoLoader": false,
       "engine_manufacturer": null,
       "engine_model": null,
@@ -120310,7 +120148,7 @@
       "power_to_weight": 21.02,
       "max_reverse_speed": 36.5,
       "reload_time": 5.0,
-      "penetration": 410.0,
+      "penetration": 396.9,
       "max_speed": 55.8,
       "crew_count": 5,
       "elevation_speed": 22.5,
@@ -120385,70 +120223,35 @@
           "tntEquivalent": 0.05
         },
         {
-          "name": "120mm_l23",
-          "localizedName": "L23",
+          "name": "120mm_l23a1",
+          "localizedName": "L23A1",
           "type": "apds_fs_long_tank",
           "caliber": 29.0,
           "mass": 3.89,
           "muzzleVelocity": 1535.0,
-          "armorPowerTable": [
-            {
-              "penetration": 410.0,
-              "distance": 10.0
-            },
-            {
-              "penetration": 408.0,
-              "distance": 100.0
-            },
-            {
-              "penetration": 405.0,
-              "distance": 500.0
-            },
-            {
-              "penetration": 400.0,
-              "distance": 1000.0
-            },
-            {
-              "penetration": 390.0,
-              "distance": 1500.0
-            },
-            {
-              "penetration": 380.0,
-              "distance": 2000.0
-            },
-            {
-              "penetration": 360.0,
-              "distance": 2500.0
-            },
-            {
-              "penetration": 350.0,
-              "distance": 3000.0
-            },
-            {
-              "penetration": 320.0,
-              "distance": 3500.0
-            },
-            {
-              "penetration": 310.0,
-              "distance": 4000.0
-            },
-            {
-              "penetration": 300.0,
-              "distance": 4500.0
-            },
-            {
-              "penetration": 50.0,
-              "distance": 10000.0
-            },
-            {
-              "penetration": 0.0,
-              "distance": 20000.0
+          "lanzOdermatt": {
+            "workingLength": 410.0,
+            "density": 17500.0,
+            "material": "tungsten",
+            "Cx": 0.3498
+          },
+          "penetration0m": 396.9,
+          "penetrationData": {
+            "at0m": {
+              "angle0": 396.9,
+              "angle30": 343.7,
+              "angle60": 198.5
             }
-          ],
-          "penetration0m": 410.0
+          }
         }
       ],
-      "penetrationData": {},
+      "penetrationData": {
+        "at0m": {
+          "angle0": 396.9,
+          "angle30": 343.7,
+          "angle60": 198.5
+        }
+      },
       "autoLoader": false,
       "engine_manufacturer": null,
       "engine_model": null,
